@@ -1,17 +1,17 @@
 # Site settings
-title: 기계인간 John Grib
-url: "https://johngrib.github.io"
+title: 홍가뤼의 개인위키
+url: "https://honggaruy.github.io"
 baseurl: ""
 description: >
-    기계인간 블로그
+    홍가리의 블로그
 
 # My information
-email: johngrib82@gmail.com
-author: 기계인간 John Grib
-profile: 유물론자
-twitter_username: John_Grib
-github_username: johngrib
-disqus_shortname: johngrib
+email: honggaruy@gmail.com
+author: honggaruy
+profile: 가득차기전에 움직인다 
+twitter_username: honggaruy 
+github_username: honggaruy
+disqus_shortname: honggaruy
 
 # Build settings
 plugins:
@@ -38,8 +38,8 @@ collections:
 
 # Comment Service
 disqus:
-  id: johngrib
-  shortname: johngrib
+  id: h0nggari@naver.com
+  shortname: h0nggari
 
 google_analytics:
   ua: UA-110224147-1
@@ -47,8 +47,8 @@ google_analytics:
 google_adsense:
   client: ca-pub-3675948545737694
 
-blame: "https://github.com/johngrib/johngrib.github.io/blame/master/_wiki"
-edit: "https://github.com/johngrib/johngrib.github.io/edit/master/_wiki"
-issue: "https://github.com/johngrib/johngrib.github.io/issues/new"
+blame: "https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki"
+edit: "https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki"
+issue: "https://github.com/honggaruy/honggaruy.github.io/issues/new"
 
 timezone: "Asia/Seoul"
