@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2018-03-05 22:57:44 +0900
+updated : 2020-03-15 10:18:28 +0900
 tags    : index
 toc     : true
 public  : true
@@ -18,7 +18,9 @@ comment : false
 * [[how-to]]
     * [[mathjax-latex]]
 * [[Vim]]
+  * [[vimrc-related]] 
     * [[vim-conceallevel]]{conceallevel (Vim)}
+    * [[vim-folding]]{제목1}
 * [[YAML]]
 
 
