@@ -1,10 +1,10 @@
 ---
 layout  : wiki
-title   : vim 폴딩 정리 
+title   : vimrc 파일 폴딩하기
 summary : vimrc가 점점 커진다면 폴딩을 적용해보자. 
 date    : 2020-03-14 23:34:02 +0900
-updated : 2020-03-16 09:57:53 +0900
-tags    : vim folding vimrc 
+updated : 2020-03-25 17:55:46 +0900
+tag     : vim  folding  vimrc 
 toc     : true
 public  : true
 parent  : vimrc-related 
@@ -33,11 +33,15 @@ latex   : false
 ### [#38 Writing a custom fold expression](http://vimcasts.org/episodes/writing-a-custom-fold-expression/#stq=ftplugin&stp=1) 설명 요약
 
 #### 폴딩을 적용하는 **3가지 방법**이 있음
->:heavy_check_mark: 참고, VIMCAST 내용에서 아래 처럼 3가지 방법이 있다라고 구분한건 아니고 요약하다 보니 구분하는게 편해서 내가 구분함. 
+
+>:heavy_check_mark: 참고, VIMCAST 내용에서 아래 처럼 3가지 방법이 있다라고 명확하게 구분한건 아니고 요약하다 보니 구분하는게 요약하기 편해서 내가 구분함.
+
+{% raw %}
 * **Method 1.** 명령어를 사용하여 즉시 적용하는 방법
-  * vim 명령줄에 다음 명령을 연속 적용 (vimcast 동영상 참조) 
+  * vim 명령줄에 다음 명령을 연속 적용 (vimcast 동영상 참조)
   * :set foldcolumn=3 / :set foldmethod=marker / 파일에 default marker `{{{` 적용 / 폴드 명령 za zM
   * 단점: 이 방법은 저장되지 않으므로 vi를 나갔다 들어오면 사용할 수 없음
+{% endraw %}
 * **Method 2.** 특정 파일에서 자동으로 항상 적용되도록 저장 하는 방법(modeline magic)
   * 참조링크: [Modeline magic](https://vim.fandom.com/wiki/Modeline_magic)
   * 해당 파일 맨위나 맨 아래에 다음 줄 추가
@@ -54,9 +58,10 @@ latex   : false
     * after/ftplugin/markdown 아래 작성된 vim 파일은 ...
       * vim의 default 플러그인인 ftplugin/markdown.vim 의 적용후에 추가적으로 적용된다. 
   * 이후 내용은 custom fold expression을 작성하는 내용으로 ...
-    * 해당 VIM의 [trnascript](http://vimcasts.org/transcripts/38/en/), 
+    * 해당 VIMCAST의 [trnascript](http://vimcasts.org/transcripts/38/en/)와.. 
     * [shownote](http://vimcasts.org/episodes/writing-a-custom-fold-expression/#shownotes)를 참고할것
-  
+
+{% raw %}
 #### 폴딩관련 vim 테크닉
 * foldmethod가 marker 일때 `{{{`로 열었으면 `}}}`로 닫을수 있다.
 * `}}}`로 닫지 않더라도 `{{{1`, `{{{2`로 레벨을 줘서 구분할수 있다. 
@@ -66,13 +71,14 @@ latex   : false
   * zO : 현재 커서아래의 모든 폴드를 연속적으로 연다.
   * zc : 현재 커서아래의 폴드 한개를 닫는다. count 옵션 가능
   * zC : 현재 커서아래의 모든 폴드를 연속적으로 닫는다.
+{% endraw %}
 
 ## 위에서 언급한 [VI exchange 답변](https://vi.stackexchange.com/a/6608/27406) 적용 이슈 
 
 ### 적용과정
 * Step 1. 위 VIMCAST 에피소드의 **Method 3 방법** 을 적용하기로 결정
 * Step 2. vim 실행 
-* Step 3. :e ~/vimfiles/after/ftplugin/vim/folding.vim 
+* Step 3. :e ~/vimfiles/after/ftplugin/**vim**/folding.vim (위에선 `markdown`이었지만 여기선 `vim`인것에 주의)
 * Step 4. 위 답변에서 제공되는 vim script Copy & Paste
   * 전부 그대로 한것 아니고 VimFolds()와 VimFoldText()만 따옴.
   * 답변 내용은 vimrc에 구현하는 것을 가정한것으로 augroup을 사용.
@@ -98,19 +104,25 @@ latex   : false
 
 ## 적용 결과물
 * ~/vimfiles/after/ftplugin/vim/folding.vim
-* ~/vimfiles/after/ftplugin/vim/vim.vim
-* 이외에는 모두 default 설정 사용. 주의!! ~/_vimrc 는 건드리지 않았음
+  * 이외에는 모두 default 설정 사용. 
+  * 주의!! ~/_vimrc 는 건드리지 않았음
+  * 혹시 folding 관련 이외의 vim 파일관련 설정을 넣고자 한다면...
+    * 위의 ~/vimfiles/after/ftplugin/vim/ 파일내에 ~.vim 확장자로 추가하면됨.
+
 ## 사용법
+
 ### 편집시
 * 가장 윗 단계 카테고리를 만들때 ...
-  * 'box'를 치고 insert mode에서 <tab>을 누름
+  * 'box'를 치고 insert mode에서 `tab`을 누름
   * ultisnip이 적용되어 있으므로 "로 둘러싼 box가 생김.(vimfile only) 
 * 그 다음단계 만들때 ...
   * "" 이면 2단계, """ 이면 3단계임.
   * "" 뒤에 스페이스 한칸 까지 감지하므로 다른 문자 붙이면 안됨.
+
 ### 폴드 열고 닫고
 * vim 명령줄에서 :help zo (혹은 :help zc )열고 찾아볼것
 * 쟤네들 다 모여있음...
+
 ## 적용 소감
 
 ### 배운 내용
@@ -124,5 +136,12 @@ latex   : false
   * 즉, 기본 설정들을 after에서 overwrite 하므로 최종적으로 기존설정위에..
   * after에서 변경되는 설정으로 적용되는 방식임.
 * vim 에서 특수 문자 입력하기 ( :digraphs ) ,[참조링크](https://vim.fandom.com/wiki/Entering_special_characters)
+
+{% raw %}
+* Markdown 작성 관련
+  * [[wiki-troubleshooting#curly braces 에러]] 문서에 정리  
+{% endraw %}
+
 ### ToDos
-* 이젠 없음.
+* jekyll에서 `typora`, `github`에서 지원하는 [이모지](https://gist.github.com/rxaviers/7360908)가 표시안됨. 방법있나 찾아볼 것 (2020-03-24 ~ )
+  * 아마 markdown 엔진관련 이슈일 것 같음. 

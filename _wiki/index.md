@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-03-15 10:18:28 +0900
+updated : 2020-03-25 14:07:47 +0900
 tags    : index
 toc     : true
 public  : true
@@ -18,10 +18,11 @@ comment : false
 * [[how-to]]
     * [[mathjax-latex]]
 * [[Vim]]
-  * [[vimrc-related]] 
-    * [[vim-conceallevel]]{conceallevel (Vim)}
-    * [[vim-folding]]{제목1}
+  * [[vimrc-related]]{vimrc 설정 관련}
+    * [[vim-folding]]{vimrc 파일 폴딩하기}
 * [[YAML]]
+* [[wiki-setting]]{개인위키 설정 관련}
+  * [[wiki-troubleshooting]]{개인위키 문제점 해결} 
 
 
 ---
