@@ -1,13 +1,13 @@
 ---
 layout  : wiki
-title   : 개인위키 문제점 해결
-summary : 개인 위키 운영하면서 생기는 문제 정리 
+title   : 위키 문제점 해결
+summary : 위키 운영하면서 생기는 문제 정리 
 date    : 2020-03-16 16:16:06 +0900
-updated : 2020-03-26 10:21:07 +0900
+updated : 2020-04-12 01:06:48 +0900
 tag     : vimwiki 
 toc     : true
 public  : true
-parent  : wiki-setting 
+parent  : [[Wiki-Setting-Category]]
 latex   : false
 ---
 * TOC

@@ -2,18 +2,22 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-04-10 17:37:23 +0900
+updated : 2020-04-12 01:06:19 +0900
 tags    : index
 toc     : true
 public  : true
 comment : false
 ---
 
-* [[Vim]]
-  * [[vimrc-related]]{vimrc 설정 관련}
-    * [[vim-folding]]{vimrc 파일 폴딩하기}
-* [[wiki-setting]]{개인위키 설정 관련}
-  * [[wiki-troubleshooting]]{개인위키 문제점 해결} 
+## [[Vim-Category]]{Vim 관련 Category}
+
+### [[Vimrc-Category]]{vimrc 설정 관련 Category}
+
+* [[vim-folding]]{vimrc 파일 폴딩하기}
+
+##  [[Wiki-Setting-Category]]{위키 설정 관련 Category}
+
+* [[wiki-troubleshooting]]{위키 문제점 해결} 
 
 
 ---
