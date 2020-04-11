@@ -5,15 +5,34 @@ adsense: false
 
 <div class="home">
     <div>
-        <H3>
-            <a href="https://github.com/vimwiki/vimwiki">Vimwiki</a>
-            +
-            <a href="https://jekyllrb.com/">Jekyll</a>
-            +
-            <a href="https://pages.github.com/">Github.io</a>
-        </H3>
+        <pre>
+            <code class="language-ascii-art">
+ _       __     _ __                   _ __   _                            
+| |     / /____(_) /____     _      __(_) /__(_)                           
+| | /| / / ___/ / __/ _ \   | | /| / / / //_/ /                            
+| |/ |/ / /  / / /_/  __/   | |/ |/ / / , (/ /                             
+|__/|__/_/  /_/\__/\___/    |__/|__/_/_/|_/_/                              
+                                                                           
+    ___   __     __  __                                     __         ____
+   /   | / /_   / /_/ /_  ___     _________  ___  ___  ____/ /  ____  / __/
+  / /| |/ __/  / __/ __ \/ _ \   / ___/ __ \/ _ \/ _ \/ __  /  / __ \/ /_  
+ / ___ / /_   / /_/ / / /  __/  (__  ) /_/ /  __/  __/ /_/ /  / /_/ / __/  
+/_/  |_\__/   \__/_/ /_/\___/  /____/ .___/\___/\___/\__,_/   \____/_/     
+                                   /_/                                     
+  ________                      __    __                                   
+ /_  __/ /_  ____  __  ______ _/ /_  / /_                                  
+  / / / __ \/ __ \/ / / / __ `/ __ \/ __/                                  
+ / / / / / / /_/ / /_/ / /_/ / / / / /_                                    
+/_/ /_/ /_/\____/\__,_/\__, /_/ /_/\__/                                    
+                      /____/                                               
+            </code>
+        </pre>
     </div>
-        기억 보조용 위키
+    <p class="powered-by">
+      <a href="https://pragprog.com/book/dnvim2/practical-vim-second-edition">Inspired by Practicval Vim 2nd Ed.</a> for <strong>title</strong>,
+      <a href="http://patorjk.com/software/taag/#p=display&v=0&f=Slant&t=Write%20wiki%0AAt%20the%20speed%20of%0AThought">Powered by patorjk.com/software/taag</a> for <strong>ascii-art</strong>
+    </p>
+        <p>생각 나는대로 기록 하기</p>
     <div>
     </div>
     <div>
@@ -31,7 +50,9 @@ adsense: false
 {% if site.email %}
         <a href="mailto:{{ site.email }}">Email</a>
 {% endif %}
+<!--  어떻게 확인하는지 확인 못해서 제외  2020.04.11
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+-->
     </div>
 </div>
 <div>
