@@ -3,8 +3,8 @@ layout  : wiki
 title   : vimrc 파일 폴딩하기
 summary : vimrc가 점점 커진다면 폴딩을 적용해보자. 
 date    : 2020-03-14 23:34:02 +0900
-updated : 2020-04-12 00:37:21 +0900
-tag     : vim  folding  vimrc 
+updated : 2020-04-12 16:25:57 +0900
+tag     : vim folding vimrc 
 toc     : true
 public  : true
 parent  : [[Vimrc-Category]] 

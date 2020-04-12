@@ -2,8 +2,8 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-04-12 01:06:19 +0900
-tags    : index
+updated : 2020-04-12 16:27:14 +0900
+tag     : index
 toc     : true
 public  : true
 comment : false
