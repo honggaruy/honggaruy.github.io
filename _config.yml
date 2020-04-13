@@ -11,7 +11,7 @@ author: honggaruy
 profile: 가득차기전에 움직인다 
 twitter_username: null 
 github_username: honggaruy
-disqus_shortname: honggaruy
+comment-support: utterances
 
 # Build settings
 plugins:
@@ -40,6 +40,12 @@ collections:
 disqus:
   id: h0nggari@naver.com
   shortname: h0nggari
+utterances:
+  repo: honggaruy/honggaruy.github.io
+  issue-term: pathname
+  label: Comment
+  theme: github-light # photon-dark, github-light
+  crossorigin: anonymous
 
 google_analytics:
   ua: UA-110224147-1
