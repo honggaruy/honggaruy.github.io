@@ -60,10 +60,6 @@ table.gsc-search-box {
     }
 }
 
-.home {
-    text-align: center;
-}
-
 .post {
 
     overflow-x: auto;
@@ -98,23 +94,6 @@ table.gsc-search-box {
 @media (max-width: 1120px) {
     .page-content .wrapper:before {
         display: none;
-    }
-}
-.contact {
-    margin-top: 10px;
-    text-align: center;
-    a {
-        background: $theme-color;
-        color: #FFFFFF;
-        padding: 5px 10px;
-        text-decoration: none;
-        border-radius: 8px;
-        white-space: nowrap;
-
-        &:hover {
-            transition: background 0.3s ease;
-            background: #666;
-        }
     }
 }
 
@@ -157,8 +136,15 @@ ul.tag-list {
   border-radius: 3px;
 }
 
-.edit-date {
+.history-button {
     text-align: right;
+    font-size: 0.8em;
+}
+
+.title-summary {
+    font-size: 1.6em;
+    font-style: italic;
+    color: gray;
 }
 
 .visible {
