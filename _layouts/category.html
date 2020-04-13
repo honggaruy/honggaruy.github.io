@@ -3,51 +3,33 @@ layout: document
 ---
 
 {% assign thisName = page.id | remove: '/wiki/' %}
-
 <input type="hidden" id="thisName" value="{{ thisName }}"/>
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-
-{% raw %}
-        <div id="parent-list">
-            <p v-if="list.length > 0">상위 문서:
-                <span v-for="(item, ind) in list">
-                    <a v-bind="{ href : item.url }">{{ item.title }}</a>
-                    <span v-if="ind < list.length - 1"> - </span>
-                </span>
+    {% if page.summary %}
+        <p class="title-summary">{{ page.summary }}</p>
+    {% endif %}
+        <div class="history-button">
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
+            <p>
+                <a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a>
+                /
+                <a href="{{ site.issue }}?title={{ page.title | url_encode }}&body=의견을%20남겨주세요">의견 남기기</a>
             </p>
         </div>
-{% endraw %}
+        <div id="parent-list"></div>
 
 {% if page.tags %}
     {% include post-tags.html %}
 {% endif %}
 
-        <h2>{{ page.summary }}</h2>
 
     </header>
     <article class="post-content">
         {{ content }}
-{% raw %}
-        <div id="document-list">
-            <template>
-                <ul class="post-list" v-for="item in list">
-                        <li>
-                            <a class="post-link" v-bind="{ href: item.url }">
-                                <span>{{ item.title }}</span>
-                                <div class="post-meta" style="float: right;">
-                                    {{ item.updated }}
-                                </div>
-                                <div class="post-excerpt" v-if="item.summary">
-                                    - {{ item.summary }}
-                                </div>
-                            </a>
-                        </li>
-                </ul>
-            </template>
-        </div>
-{% endraw %}
+        <div id="document-list"></div>
     </article>
 {% if page.comment != false %}
     {% include comment.html %}
@@ -55,7 +37,6 @@ layout: document
 </div>
 {% include createLink.html %}
 
-<script src="/js/vue.js"></script>
 <script src="/js/axios.min.js"></script>
 <script async src="/js/parent.js"></script>
 <script async src="/js/category.js"></script>
