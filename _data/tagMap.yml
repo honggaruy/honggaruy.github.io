@@ -1,1 +1,17 @@
-{}
+index:
+    - {fileName: index}
+vim:
+    - {fileName: vim-folding}
+    - {fileName: Vimrc-Category}
+folding:
+    - {fileName: vim-folding}
+vimrc:
+    - {fileName: vim-folding}
+    - {fileName: Vimrc-Category}
+vimwiki:
+    - {fileName: Wiki-Setting-Category}
+    - {fileName: wiki-troubleshooting}
+githubio:
+    - {fileName: Wiki-Setting-Category}
+jekyll:
+    - {fileName: Wiki-Setting-Category}
