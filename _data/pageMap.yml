@@ -1,7 +1,7 @@
 2020-04-10-test-post:
     type: blog
     title: '테스트 포스팅'
-    summary: null
+    summary: '이것도 테스트 포스팅'
     parent: null
     url: /blog/2020/04/10/test-post
     updated: '2020-04-10 17:42:27 +0900'
