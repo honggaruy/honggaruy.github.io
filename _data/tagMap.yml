@@ -1,5 +1,29 @@
+language:
+    - {fileName: CSS-Category}
+    - {fileName: Language-Category}
+css:
+    - {fileName: CSS-Category}
+    - {fileName: css-meaning}
+    - {fileName: Language-Category}
+    - {fileName: wiki-toc2side}
+git:
+    - {fileName: Git-Category}
+    - {fileName: git-commands}
+gray:
+    - {fileName: Gray-Category}
 index:
     - {fileName: index}
+linux:
+    - {fileName: Linux-Category}
+    - {fileName: sed-problem-solving}
+sed:
+    - {fileName: sed-problem-solving}
+shell:
+    - {fileName: sed-problem-solving}
+regex:
+    - {fileName: sed-problem-solving}
+tool:
+    - {fileName: Tools-Category}
 vim:
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
@@ -8,6 +32,8 @@ folding:
 vimrc:
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
+font:
+    - {fileName: wiki-font}
 vimwiki:
     - {fileName: Wiki-Setting-Category}
     - {fileName: wiki-troubleshooting}
@@ -15,3 +41,9 @@ githubio:
     - {fileName: Wiki-Setting-Category}
 jekyll:
     - {fileName: Wiki-Setting-Category}
+wiki:
+    - {fileName: wiki-toc2side}
+toc:
+    - {fileName: wiki-toc2side}
+scss:
+    - {fileName: wiki-toc2side}

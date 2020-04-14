@@ -6,21 +6,93 @@
     url: /blog/2020/04/10/test-post
     updated: '2020-04-10 17:42:27 +0900'
     children: []
+CSS-Category:
+    type: wiki
+    title: CSS
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/CSS-Category
+    updated: '2020-04-14 08:34:28 +0900'
+    children: [css-meaning]
+css-meaning:
+    type: wiki
+    title: '갑자기 깨달은 CSS 단어의 의미'
+    summary: 'toc의 css를 조정하다가 우연히 깨닫게 된 CSS 어원의 의미'
+    parent: CSS-Category
+    url: /wiki/css-meaning
+    updated: '2020-04-14 08:33:35 +0900'
+    children: []
+Git-Category:
+    type: wiki
+    title: Git
+    summary: '카테고리 2단계 (끝)'
+    parent: Tools-Category
+    url: /wiki/Git-Category
+    updated: '2020-04-13 20:56:43 +0900'
+    children: [git-commands]
+git-commands:
+    type: wiki
+    title: '자주 쓰는 git 명령'
+    summary: 'git 명령어 상황별 레시피'
+    parent: Git-Category
+    url: /wiki/git-commands
+    updated: '2020-04-13 23:27:49 +0900'
+    children: []
+Gray-Category:
+    type: wiki
+    title: Gray
+    summary: '카테고리 1단계 (끝)'
+    parent: index
+    url: /wiki/Gray-Category
+    updated: '2020-04-14 08:32:09 +0900'
+    children: []
 index:
     type: wiki
     title: wiki
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-04-12 16:27:14 +0900'
+    updated: '2020-04-14 08:45:44 +0900'
     children: []
+Language-Category:
+    type: wiki
+    title: '프로그래밍 언어'
+    summary: '카테고리 문서 1단계 - 프로그래밍 언어 관련'
+    parent: index
+    url: /wiki/Language-Category
+    updated: '2020-04-13 20:46:01 +0900'
+    children: [CSS-Category]
+Linux-Category:
+    type: wiki
+    title: Linux
+    summary: '카테고리 2단계 (끝)'
+    parent: Tools-Category
+    url: /wiki/Linux-Category
+    updated: '2020-04-14 08:24:16 +0900'
+    children: [sed-problem-solving]
+sed-problem-solving:
+    type: wiki
+    title: 'GNU sed의 이상한 정규식 처리'
+    summary: '제목과 관련된 내용이 15% 정도만 있는 이상한 페이지'
+    parent: Linux-Category
+    url: /wiki/sed-problem-solving
+    updated: '2020-04-14 08:11:36 +0900'
+    children: []
+Tools-Category:
+    type: wiki
+    title: '프로그래밍 도구'
+    summary: '카테고리 1단계'
+    parent: index
+    url: /wiki/Tools-Category
+    updated: '2020-04-13 20:52:38 +0900'
+    children: [Git-Category, Linux-Category, Vim-Category]
 Vim-Category:
     type: wiki
     title: Vim
-    summary: 'Vim 관련 1단계 카테고리 문서'
-    parent: index
+    summary: '카테고리 문서 1단계'
+    parent: Tools-Category
     url: /wiki/Vim-Category
-    updated: '2020-04-12 00:48:31 +0900'
+    updated: '2020-04-13 20:50:31 +0900'
     children: [Vimrc-Category]
 vim-folding:
     type: wiki
@@ -32,20 +104,44 @@ vim-folding:
     children: []
 Vimrc-Category:
     type: wiki
-    title: 'vimrc 설정'
-    summary: '2단계 카테고리 문서 - vimrc 설정 관련'
+    title: Vimrc
+    summary: '카테고리 2단계 (끝)'
     parent: Vim-Category
     url: /wiki/Vimrc-Category
-    updated: '2020-04-13 11:30:04 +0900'
+    updated: '2020-04-14 08:38:42 +0900'
     children: [vim-folding]
+wiki-font:
+    type: wiki
+    title: '위키 폰트 변경'
+    summary: ""
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-font
+    updated: '2020-04-14 08:43:59 +0900'
+    children: []
+wiki-inWindows:
+    type: wiki
+    title: '윈도우즈에서 V+J+G 따라하기'
+    summary: ""
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-inWindows
+    updated: '2020-04-13 22:32:10 +0900'
+    children: []
 Wiki-Setting-Category:
     type: wiki
     title: '위키 설정'
-    summary: '1단계 카테고리 문서 - 위키 설정 관련'
+    summary: '카테고리 1단계 (끝)'
     parent: index
     url: /wiki/Wiki-Setting-Category
-    updated: '2020-04-13 11:29:22 +0900'
-    children: [wiki-troubleshooting]
+    updated: '2020-04-13 22:37:43 +0900'
+    children: [wiki-font, wiki-inWindows, wiki-toc2side, wiki-troubleshooting]
+wiki-toc2side:
+    type: wiki
+    title: '위키페이지에서 toc 위치 조정'
+    summary: 'CSS및 SCSS에 대한 정리'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-toc2side
+    updated: '2020-04-14 08:50:31 +0900'
+    children: []
 wiki-troubleshooting:
     type: wiki
     title: '위키 문제점 해결'
