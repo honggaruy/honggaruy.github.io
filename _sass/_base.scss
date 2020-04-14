@@ -2,6 +2,12 @@ body {
     margin: 0;
     height: 100%;
 }
+
+/* 목차에 사용되는 ul 들여쓰기를 폰트 2자 크기로 지정 */
+ul {
+    padding-inline-start: 2em;
+}
+
 body, th, td, div, p, li {
     font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     line-height: 1.5;
