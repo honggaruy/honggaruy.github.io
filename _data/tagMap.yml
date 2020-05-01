@@ -1,5 +1,13 @@
 test:
     - {fileName: 2020-04-10-test-post}
+    - {fileName: 2020-04-28-todays-ideas}
+todaysideas:
+    - {fileName: 2020-04-15-todays-ideas}
+    - {fileName: 2020-04-18-todays-ideas}
+dot-leaders:
+    - {fileName: 2020-04-30-todays-ideas}
+CSS:
+    - {fileName: 2020-04-30-todays-ideas}
 language:
     - {fileName: CSS-Category}
     - {fileName: Language-Category}
@@ -8,13 +16,25 @@ css:
     - {fileName: css-meaning}
     - {fileName: Language-Category}
     - {fileName: wiki-toc2side}
+excel:
+    - {fileName: excel2gsheet}
+gsheet:
+    - {fileName: excel2gsheet}
 git:
     - {fileName: Git-Category}
     - {fileName: git-commands}
+google:
+    - {fileName: GoogleAppsScript-Category}
+apps:
+    - {fileName: GoogleAppsScript-Category}
+script:
+    - {fileName: GoogleAppsScript-Category}
 gray:
     - {fileName: Gray-Category}
 index:
     - {fileName: index}
+keyword:
+    - {fileName: keyword_collection}
 linux:
     - {fileName: Linux-Category}
     - {fileName: sed-problem-solving}
@@ -34,6 +54,10 @@ folding:
 vimrc:
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
+특수문자:
+    - {fileName: vim-folding}
+digraphs:
+    - {fileName: vim-folding}
 font:
     - {fileName: wiki-font}
 vimwiki:

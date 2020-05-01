@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-04-14 08:45:44 +0900
+updated : 2020-05-01 00:03:23 +0900
 tag     : index
 toc     : true
 public  : true
@@ -43,14 +43,15 @@ comment : false
 
 ---
 
-# blog
+# [blog](/blog/)
 <div>
-    <ul>
+    <ul class="leaders">
 {% for post in site.posts %}
     {% if post.public != false %}
         <li>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
+                <span>{{ post.title }}</span>
+                <div>{{ post.date | date: "%Y.%m.%d" }}</div>
             </a>
         </li>
     {% endif %}

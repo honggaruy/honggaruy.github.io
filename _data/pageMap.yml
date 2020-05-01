@@ -6,6 +6,38 @@
     url: /blog/2020/04/10/test-post
     updated: '2020-04-10 17:42:27 +0900'
     children: []
+2020-04-15-todays-ideas:
+    type: blog
+    title: '오늘의 영감'
+    summary: 'sample summary'
+    parent: null
+    url: /blog/2020/04/15/todays-ideas
+    updated: '2020-04-15 09:59:32 +0900'
+    children: []
+2020-04-18-todays-ideas:
+    type: blog
+    title: '오늘의 영감'
+    summary: 'excel to google sheet, useful sites'
+    parent: null
+    url: /blog/2020/04/18/todays-ideas
+    updated: '2020-04-18 00:28:32 +0900'
+    children: []
+2020-04-28-todays-ideas:
+    type: blog
+    title: '오늘의 영감'
+    summary: 'sample summary'
+    parent: null
+    url: /blog/2020/04/28/todays-ideas
+    updated: '2020-04-28 00:35:32 +0900'
+    children: []
+2020-04-30-todays-ideas:
+    type: blog
+    title: '제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어 아직도 끝까지 안갔네 이제 갔을려나'
+    summary: 'CSS로 dot leaders 표기하기'
+    parent: null
+    url: /blog/2020/04/30/todays-ideas
+    updated: '2020-04-30 13:43:32 +0900'
+    children: []
 CSS-Category:
     type: wiki
     title: CSS
@@ -21,6 +53,14 @@ css-meaning:
     parent: CSS-Category
     url: /wiki/css-meaning
     updated: '2020-04-14 08:33:35 +0900'
+    children: []
+excel2gsheet:
+    type: wiki
+    title: '엑셀 파일을 구글 시트로 바꾸기'
+    summary: '아직 고민중'
+    parent: GoogleAppsScript-Category
+    url: /wiki/excel2gsheet
+    updated: '2020-04-27 21:47:29 +0900'
     children: []
 Git-Category:
     type: wiki
@@ -38,6 +78,14 @@ git-commands:
     url: /wiki/git-commands
     updated: '2020-04-13 23:27:49 +0900'
     children: []
+GoogleAppsScript-Category:
+    type: wiki
+    title: 'Google Apps Script'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/GoogleAppsScript-Category
+    updated: '2020-04-27 10:57:39 +0900'
+    children: [excel2gsheet]
 Gray-Category:
     type: wiki
     title: Gray
@@ -45,14 +93,22 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: []
+    children: [keyword_collection]
 index:
     type: wiki
     title: wiki
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-04-14 08:45:44 +0900'
+    updated: '2020-05-01 00:03:23 +0900'
+    children: []
+keyword_collection:
+    type: wiki
+    title: '용어 설명 모음'
+    summary: '아직 안정함'
+    parent: Gray-Category
+    url: /wiki/keyword_collection
+    updated: '2020-04-27 11:43:10 +0900'
     children: []
 Language-Category:
     type: wiki
@@ -61,7 +117,7 @@ Language-Category:
     parent: index
     url: /wiki/Language-Category
     updated: '2020-04-13 20:46:01 +0900'
-    children: [CSS-Category]
+    children: [CSS-Category, GoogleAppsScript-Category]
 Linux-Category:
     type: wiki
     title: Linux
@@ -92,7 +148,7 @@ Vim-Category:
     summary: '카테고리 문서 1단계'
     parent: Tools-Category
     url: /wiki/Vim-Category
-    updated: '2020-04-13 20:50:31 +0900'
+    updated: '2020-04-29 21:39:07 +0900'
     children: [Vimrc-Category]
 vim-folding:
     type: wiki
@@ -100,7 +156,7 @@ vim-folding:
     summary: 'vimrc가 점점 커진다면 폴딩을 적용해보자.'
     parent: Vimrc-Category
     url: /wiki/vim-folding
-    updated: '2020-04-12 16:25:57 +0900'
+    updated: '2020-05-01 13:42:57 +0900'
     children: []
 Vimrc-Category:
     type: wiki

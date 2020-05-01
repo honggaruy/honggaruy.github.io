@@ -23,3 +23,30 @@
         }
     }
 }
+
+/* index의 blog 목차에 "dot leader" 형식 적용 */
+/* 참조 링크: https://www.w3.org/Style/Examples/007/leaders.en.html */
+ul.leaders {
+	overflow-x: hidden;
+}
+ul.leaders span:after {
+	float: left;
+	width: 0;
+	white-space: pre;
+	content:
+  "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · "
+  "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · "
+  "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · "
+}
+ul.leaders span:first-child {
+	padding-right: 0.33em;
+	background: $page-content-bgcolor;
+}
+ul.leaders span + div {
+	float: right;
+	padding-left: 0.33em;
+	background: $page-content-bgcolor;
+	position: relative;
+	z-index: 1;
+}
+
