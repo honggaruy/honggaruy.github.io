@@ -11,11 +11,17 @@ comment : false
 
 ## [[Gray-Category]]{어디에 둘 지 모를때 Category}
 
+* [[keyword_collection]]{용어 설명 모음}
+
 ## [[Language-Category]]{Language 관련 Category}
 
 ### [[CSS-Category]]{CSS 관련 Category}
 
 * [[css-meaning]]{갑자기 깨달은 CSS 단어 의미}
+
+### [[GoogleAppsScript-Category]]{Google Apps Script 관련 Category}
+
+* [[excel2gsheet]]{엑셀 파일을 구글 시트로 바꾸기}
 
 ## [[Tools-Category]]{프로그래밍 도구 관련 Category}
 

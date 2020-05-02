@@ -2,12 +2,22 @@ test:
     - {fileName: 2020-04-10-test-post}
 todaysideas:
     - {fileName: 2020-04-15-todays-ideas}
+excel:
     - {fileName: 2020-04-18-todays-ideas}
+    - {fileName: excel2gsheet}
+google-apps-script:
+    - {fileName: 2020-04-18-todays-ideas}
+    - {fileName: GoogleAppsScript-Category}
+gsheet:
+    - {fileName: 2020-04-18-todays-ideas}
+    - {fileName: excel2gsheet}
 github:
     - {fileName: 2020-04-28-todays-ideas}
 gif:
     - {fileName: 2020-04-28-todays-ideas}
 png:
+    - {fileName: 2020-04-28-todays-ideas}
+drop-ice:
     - {fileName: 2020-04-28-todays-ideas}
 dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
@@ -24,16 +34,10 @@ wiki-setting:
 language:
     - {fileName: CSS-Category}
     - {fileName: Language-Category}
-excel:
-    - {fileName: excel2gsheet}
-gsheet:
-    - {fileName: excel2gsheet}
 git:
     - {fileName: Git-Category}
     - {fileName: git-commands}
 google:
-    - {fileName: GoogleAppsScript-Category}
-apps:
     - {fileName: GoogleAppsScript-Category}
 script:
     - {fileName: GoogleAppsScript-Category}

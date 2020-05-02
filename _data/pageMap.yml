@@ -41,7 +41,7 @@
 2020-05-02-todays-ideas:
     type: blog
     title: '오늘의 영감'
-    summary: 'CSS로 dot leaders 표기하기'
+    summary: '태그 표시 관련'
     parent: null
     url: /blog/2020/05/02/todays-ideas
     updated: '2020-05-02 13:09:32 +0900'
@@ -68,7 +68,7 @@ excel2gsheet:
     summary: '아직 고민중'
     parent: GoogleAppsScript-Category
     url: /wiki/excel2gsheet
-    updated: '2020-04-27 21:47:29 +0900'
+    updated: '2020-05-02 13:58:11 +0900'
     children: []
 Git-Category:
     type: wiki
@@ -92,7 +92,7 @@ GoogleAppsScript-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/GoogleAppsScript-Category
-    updated: '2020-04-27 10:57:39 +0900'
+    updated: '2020-05-02 14:44:08 +0900'
     children: [excel2gsheet]
 Gray-Category:
     type: wiki
@@ -156,7 +156,7 @@ Vim-Category:
     summary: '카테고리 문서 1단계'
     parent: Tools-Category
     url: /wiki/Vim-Category
-    updated: '2020-04-29 21:39:07 +0900'
+    updated: '2020-05-02 14:15:44 +0900'
     children: [Vimrc-Category]
 vim-folding:
     type: wiki
