@@ -1,12 +1,13 @@
 - apps
-- CSS
 - css
 - digraphs
 - dot-leaders
 - excel
 - folding
 - font
+- gif
 - git
+- github
 - githubio
 - google
 - gray
@@ -16,11 +17,13 @@
 - keyword
 - language
 - linux
+- png
 - regex
 - script
 - scss
 - sed
 - shell
+- tag
 - test
 - toc
 - todaysideas
@@ -29,4 +32,5 @@
 - vimrc
 - vimwiki
 - wiki
+- wiki-setting
 - 특수문자

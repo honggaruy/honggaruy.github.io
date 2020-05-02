@@ -1,21 +1,29 @@
 test:
     - {fileName: 2020-04-10-test-post}
-    - {fileName: 2020-04-28-todays-ideas}
 todaysideas:
     - {fileName: 2020-04-15-todays-ideas}
     - {fileName: 2020-04-18-todays-ideas}
+github:
+    - {fileName: 2020-04-28-todays-ideas}
+gif:
+    - {fileName: 2020-04-28-todays-ideas}
+png:
+    - {fileName: 2020-04-28-todays-ideas}
 dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
-CSS:
-    - {fileName: 2020-04-30-todays-ideas}
-language:
-    - {fileName: CSS-Category}
-    - {fileName: Language-Category}
 css:
+    - {fileName: 2020-04-30-todays-ideas}
     - {fileName: CSS-Category}
     - {fileName: css-meaning}
     - {fileName: Language-Category}
     - {fileName: wiki-toc2side}
+tag:
+    - {fileName: 2020-05-02-todays-ideas}
+wiki-setting:
+    - {fileName: 2020-05-02-todays-ideas}
+language:
+    - {fileName: CSS-Category}
+    - {fileName: Language-Category}
 excel:
     - {fileName: excel2gsheet}
 gsheet:

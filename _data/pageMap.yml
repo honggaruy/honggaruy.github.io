@@ -32,11 +32,19 @@
     children: []
 2020-04-30-todays-ideas:
     type: blog
-    title: '제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어 아직도 끝까지 안갔네 이제 갔을려나'
+    title: '원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네'
     summary: 'CSS로 dot leaders 표기하기'
     parent: null
     url: /blog/2020/04/30/todays-ideas
     updated: '2020-04-30 13:43:32 +0900'
+    children: []
+2020-05-02-todays-ideas:
+    type: blog
+    title: '오늘의 영감'
+    summary: 'CSS로 dot leaders 표기하기'
+    parent: null
+    url: /blog/2020/05/02/todays-ideas
+    updated: '2020-05-02 13:09:32 +0900'
     children: []
 CSS-Category:
     type: wiki
