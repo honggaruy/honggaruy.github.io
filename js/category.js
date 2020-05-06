@@ -45,7 +45,7 @@
             }
             var list = getChildren(resp.data);
             var html = getChildrenHTML(list);
-            document.getElementById('document-list').innerHTML = `<ul class="post-list">${html}</ul>`
+            document.getElementById('document-list').innerHTML = `<ul class="post-list leaders">${html}</ul>`
 
             return;
         });

@@ -25,7 +25,7 @@ public: true
 
         <h3 id="{{tag}}">{{ tag }}</h3>
 
-        <ul class="post-list">
+        <ul class="post-list leaders">
     {% assign list = tagMap[tag]  %}
     {% for postObj in list %}
         {% assign post = site.data.pageMap[postObj.fileName] %}
