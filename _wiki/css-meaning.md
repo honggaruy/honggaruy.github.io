@@ -7,7 +7,7 @@ updated : 2020-04-14 08:33:35 +0900
 tag     : css 
 toc     : true
 public  : true
-parent  : [[CSS-Category]]
+parent  : [[Web-Category]]
 latex   : false
 ---
 * TOC

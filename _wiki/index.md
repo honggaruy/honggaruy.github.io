@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-05-01 00:03:23 +0900
+updated : 2020-05-06 14:06:21 +0900
 tag     : index
 toc     : true
 public  : true
@@ -15,7 +15,7 @@ comment : false
 
 ## [[Language-Category]]{Language 관련 Category}
 
-### [[CSS-Category]]{CSS 관련 Category}
+### [[Web-Category]]{Web 관련 Category}
 
 * [[css-meaning]]{갑자기 깨달은 CSS 단어 의미}
 

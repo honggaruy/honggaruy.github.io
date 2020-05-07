@@ -23,17 +23,14 @@ dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
 css:
     - {fileName: 2020-04-30-todays-ideas}
-    - {fileName: CSS-Category}
     - {fileName: css-meaning}
     - {fileName: Language-Category}
+    - {fileName: Web-Category}
     - {fileName: wiki-toc2side}
 tag:
     - {fileName: 2020-05-02-todays-ideas}
 wiki-setting:
     - {fileName: 2020-05-02-todays-ideas}
-language:
-    - {fileName: CSS-Category}
-    - {fileName: Language-Category}
 git:
     - {fileName: Git-Category}
     - {fileName: git-commands}
@@ -47,6 +44,9 @@ index:
     - {fileName: index}
 keyword:
     - {fileName: keyword_collection}
+language:
+    - {fileName: Language-Category}
+    - {fileName: Web-Category}
 linux:
     - {fileName: Linux-Category}
     - {fileName: sed-problem-solving}
@@ -70,6 +70,12 @@ vimrc:
     - {fileName: vim-folding}
 digraphs:
     - {fileName: vim-folding}
+web:
+    - {fileName: Web-Category}
+html:
+    - {fileName: Web-Category}
+javascript:
+    - {fileName: Web-Category}
 font:
     - {fileName: wiki-font}
 vimwiki:

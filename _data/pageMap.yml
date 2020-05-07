@@ -46,19 +46,11 @@
     url: /blog/2020/05/02/todays-ideas
     updated: '2020-05-02 13:09:32 +0900'
     children: []
-CSS-Category:
-    type: wiki
-    title: CSS
-    summary: '카테고리 2단계 (끝)'
-    parent: Language-Category
-    url: /wiki/CSS-Category
-    updated: '2020-04-14 08:34:28 +0900'
-    children: [css-meaning]
 css-meaning:
     type: wiki
     title: '갑자기 깨달은 CSS 단어의 의미'
     summary: 'toc의 css를 조정하다가 우연히 깨닫게 된 CSS 어원의 의미'
-    parent: CSS-Category
+    parent: Web-Category
     url: /wiki/css-meaning
     updated: '2020-04-14 08:33:35 +0900'
     children: []
@@ -108,7 +100,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-01 00:03:23 +0900'
+    updated: '2020-05-06 14:06:21 +0900'
     children: []
 keyword_collection:
     type: wiki
@@ -125,7 +117,7 @@ Language-Category:
     parent: index
     url: /wiki/Language-Category
     updated: '2020-04-13 20:46:01 +0900'
-    children: [CSS-Category, GoogleAppsScript-Category]
+    children: [GoogleAppsScript-Category, Web-Category]
 Linux-Category:
     type: wiki
     title: Linux
@@ -174,6 +166,14 @@ Vimrc-Category:
     url: /wiki/Vimrc-Category
     updated: '2020-04-14 08:38:42 +0900'
     children: [vim-folding]
+Web-Category:
+    type: wiki
+    title: 'Web (Frontend)'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/Web-Category
+    updated: '2020-05-07 12:18:24 +0900'
+    children: [css-meaning]
 wiki-font:
     type: wiki
     title: '위키 폰트 변경'
