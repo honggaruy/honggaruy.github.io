@@ -46,6 +46,14 @@
     url: /blog/2020/05/02/todays-ideas
     updated: '2020-05-02 13:09:32 +0900'
     children: []
+2020-05-07-google-custom-search:
+    type: blog
+    title: '구글 맞춤 검색 안됨 [해결]'
+    summary: '장기 미해결 과제'
+    parent: null
+    url: /blog/2020/05/07/google-custom-search
+    updated: '2020-05-07 13:26:32 +0900'
+    children: []
 css-meaning:
     type: wiki
     title: '갑자기 깨달은 CSS 단어의 의미'

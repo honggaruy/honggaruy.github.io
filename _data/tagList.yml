@@ -1,4 +1,5 @@
 - css
+- custom
 - digraphs
 - dot-leaders
 - drop-ice
@@ -24,6 +25,7 @@
 - regex
 - script
 - scss
+- search
 - sed
 - shell
 - tag
