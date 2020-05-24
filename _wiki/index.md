@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-05-06 14:06:21 +0900
+updated : 2020-05-16 16:07:30 +0900
 tag     : index
 toc     : true
 public  : true
@@ -12,6 +12,8 @@ comment : false
 ## [[Gray-Category]]{어디에 둘 지 모를때 Category}
 
 * [[keyword_collection]]{용어 설명 모음}
+* [[stackoverflow_searchhelp]]{스택 오버플로우에서 검색하기}
+* [[google_photo_slideshow]]{구글 포토의 슬라이드쇼 콘트롤하기}
 
 ## [[Language-Category]]{Language 관련 Category}
 
