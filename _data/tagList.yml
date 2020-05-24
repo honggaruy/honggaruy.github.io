@@ -3,6 +3,7 @@
 - digraphs
 - dot-leaders
 - drop-ice
+- escaping
 - excel
 - folding
 - font
@@ -12,10 +13,16 @@
 - githubio
 - google
 - google-apps-script
+- google-calendar
+- google-keep
+- google-photos
+- google-slides
+- google-tasks
 - gray
 - gsheet
 - html
 - index
+- inline-html
 - javascript
 - jekyll
 - keyword
@@ -28,7 +35,9 @@
 - search
 - sed
 - shell
+- 'stack-overflow,'
 - tag
+- tags
 - test
 - toc
 - todaysideas
@@ -39,4 +48,6 @@
 - web
 - wiki
 - wiki-setting
+- '검색,'
+- 생산성
 - 특수문자

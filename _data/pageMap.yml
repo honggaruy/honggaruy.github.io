@@ -54,6 +54,14 @@
     url: /blog/2020/05/07/google-custom-search
     updated: '2020-05-07 13:26:32 +0900'
     children: []
+2020-05-11-todays-ideas:
+    type: blog
+    title: '오늘의 영감'
+    summary: '생산성 향상'
+    parent: null
+    url: /blog/2020/05/11/todays-ideas
+    updated: '2020-05-11 19:52:32 +0900'
+    children: []
 css-meaning:
     type: wiki
     title: '갑자기 깨달은 CSS 단어의 의미'
@@ -68,7 +76,7 @@ excel2gsheet:
     summary: '아직 고민중'
     parent: GoogleAppsScript-Category
     url: /wiki/excel2gsheet
-    updated: '2020-05-02 13:58:11 +0900'
+    updated: '2020-05-16 16:05:18 +0900'
     children: []
 Git-Category:
     type: wiki
@@ -86,13 +94,21 @@ git-commands:
     url: /wiki/git-commands
     updated: '2020-04-13 23:27:49 +0900'
     children: []
+google_photo_slideshow:
+    type: wiki
+    title: '구글 포토의 슬라이드쇼 콘트롤하기'
+    summary: '구글 포토로만 하는 건 아님...'
+    parent: Gray-Category
+    url: /wiki/google_photo_slideshow
+    updated: '2020-05-19 17:00:32 +0900'
+    children: []
 GoogleAppsScript-Category:
     type: wiki
     title: 'Google Apps Script'
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/GoogleAppsScript-Category
-    updated: '2020-05-02 14:44:08 +0900'
+    updated: '2020-05-24 11:32:44 +0900'
     children: [excel2gsheet]
 Gray-Category:
     type: wiki
@@ -101,14 +117,14 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: [keyword_collection]
+    children: [google_photo_slideshow, keyword_collection, stackoverflow_searchhelp]
 index:
     type: wiki
     title: wiki
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-05-06 14:06:21 +0900'
+    updated: '2020-05-16 16:07:30 +0900'
     children: []
 keyword_collection:
     type: wiki
@@ -141,6 +157,14 @@ sed-problem-solving:
     parent: Linux-Category
     url: /wiki/sed-problem-solving
     updated: '2020-04-14 08:11:36 +0900'
+    children: []
+stackoverflow_searchhelp:
+    type: wiki
+    title: '스택 오버플로우에서 검색 하기'
+    summary: '누구보다 빠르게 난 남들과는 다르게 ...'
+    parent: Gray-Category
+    url: /wiki/stackoverflow_searchhelp
+    updated: '2020-05-15 15:09:05 +0900'
     children: []
 Tools-Category:
     type: wiki

@@ -33,14 +33,32 @@ wiki-setting:
     - {fileName: 2020-05-02-todays-ideas}
 google:
     - {fileName: 2020-05-07-google-custom-search}
+    - {fileName: 2020-05-11-todays-ideas}
+    - {fileName: google_photo_slideshow}
     - {fileName: GoogleAppsScript-Category}
 custom:
     - {fileName: 2020-05-07-google-custom-search}
 search:
     - {fileName: 2020-05-07-google-custom-search}
+google-calendar:
+    - {fileName: 2020-05-11-todays-ideas}
+google-tasks:
+    - {fileName: 2020-05-11-todays-ideas}
+google-keep:
+    - {fileName: 2020-05-11-todays-ideas}
+생산성:
+    - {fileName: 2020-05-11-todays-ideas}
+escaping:
+    - {fileName: 2020-05-11-todays-ideas}
+tags:
+    - {fileName: 2020-05-11-todays-ideas}
 git:
     - {fileName: Git-Category}
     - {fileName: git-commands}
+google-photos:
+    - {fileName: google_photo_slideshow}
+google-slides:
+    - {fileName: google_photo_slideshow}
 script:
     - {fileName: GoogleAppsScript-Category}
 gray:
@@ -61,6 +79,12 @@ shell:
     - {fileName: sed-problem-solving}
 regex:
     - {fileName: sed-problem-solving}
+'stack-overflow,':
+    - {fileName: stackoverflow_searchhelp}
+'검색,':
+    - {fileName: stackoverflow_searchhelp}
+inline-html:
+    - {fileName: stackoverflow_searchhelp}
 tool:
     - {fileName: Tools-Category}
 vim:
