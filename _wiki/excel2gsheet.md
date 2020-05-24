@@ -3,7 +3,7 @@ layout  : wiki
 title   : 엑셀 파일을 구글 시트로 바꾸기 
 summary : 아직 고민중 
 date    : 2020-04-25 18:48:06 +0900
-updated : 2020-05-02 13:58:11 +0900
+updated : 2020-05-16 16:05:18 +0900
 tag     : excel gsheet 
 toc     : true
 public  : true
@@ -48,7 +48,7 @@ latex   : false
   * 여기서 사용된 gsi, efi 반복형태는 [이 곳](https://developers.google.com/apps-script/reference/drive/file-iterator)을 참조한듯 하다.
   * `gsi`는 google sheet iterator, `efi`는 excel file iterator의 약자 일거라고 나름대로 생각한다.
   * 코드상에 `일일 코드 실행량 (quota limits)`에 대한 언급이 있는데 현황은 [여기](https://developers.google.com/apps-script/guides/services/quotas)에 있다
-* 위 답변을 `stand alone script`로 만들어 실행해봤다.
+* 위 답변을 [`stand alone script`](https://script.google.com/d/1hXTwkOlL_vXyPA3eLr2m_v2ODr9xywaXM_iRxwyzXINC_ON8r9j8fUxs/edit)로 만들어 실행해봤다.
   1. 위에서 언급한 1~3과정을 이용해 구글 드라이브 내 폴더 두개를 지정한다. ( 엑셀파일폴더, 구글시트로 변환하여 저장할 폴더) 
     * 서로 같아도 상관없다.
     * [Introducin the Spreadsheet service](https://codelabs.developers.google.com/codelabs/apps-script-fundamentals-2/#1) 페이지의 중간의 `Key Point`에 `id`를 추출하는 방법이 있다.
@@ -65,4 +65,12 @@ latex   : false
   var dest = DriveApp.getFolderById("16K05Rlm....jdpCMsAUOf8");
   ```
   1. 한번 실행해본다. 실행하는 방법도 [stand alone script](https://developers.google.com/apps-script/guides/standalone#running_a_standalone_script) 요기에 나와있다
-    
+ 
+## 앞으로 진행할 내용 ( 진행한 내용은 제거할 것)
+
+* 현재는 엑셀에서 구글시트로 무조건 변환하는 내용만 되어있음
+* 변환된 구글시트에서 새로운 내용을 가져오고 
+* 사용한 엑셀파일및 구글시트 파일은 저장소에 보내고, 일정시간(2달?)후 제거하는 
+* 내용의 자동화가 필요할 듯
+* time 트리거를 걸 경우 로그로 남기도록 할것
+
