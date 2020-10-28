@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-05-16 16:07:30 +0900
+updated : 2020-10-08 22:08:42 +0900
 tag     : index
 toc     : true
 public  : true
@@ -11,21 +11,36 @@ comment : false
 
 ## [[Gray-Category]]{어디에 둘 지 모를때 Category}
 
-* [[keyword_collection]]{용어 설명 모음}
 * [[stackoverflow_searchhelp]]{스택 오버플로우에서 검색하기}
 * [[google_photo_slideshow]]{구글 포토의 슬라이드쇼 콘트롤하기}
+* [[exact-size-photo-print]]{정확한 사이즈로 사진 인쇄하기}
+* [[new-windows-installation]]{새로 윈도우 설치할 때 순서}
+
+## [[Term-Category]]{용어 정리 Category}
+
+* [[keyword_collection]]{용어 설명 모음}
+* [[term-string-interpolation]]{String interpolation}
+* [[term-short-circuit-evaluation]]{Short-circuit evaluation}
 
 ## [[Language-Category]]{Language 관련 Category}
 
 ### [[Web-Category]]{Web 관련 Category}
-
 * [[css-meaning]]{갑자기 깨달은 CSS 단어 의미}
+* [[javascript-myCookBook]]{Javascript 초급 코딩 요령}
 
 ### [[GoogleAppsScript-Category]]{Google Apps Script 관련 Category}
 
 * [[excel2gsheet]]{엑셀 파일을 구글 시트로 바꾸기}
+* [[gas_library]]{구글 스크립트 라이브러리 사용법}
+* [[apps-script-starter]]{로컬에서 구글 Apps Script 개발하기}
+* [[code-isolation]]{typescript로 개발시 파일 순서 문제}
 
 ## [[Tools-Category]]{프로그래밍 도구 관련 Category}
+
+### [[Cross-Category]]{공통적으로 쓰는 도구 Category}
+
+* [[windows-terminal-config]]{윈도우즈 터미널 설정하기}
+* [[korean-font]]{무료 한글 서체}
 
 ### [[Vim-Category]]{Vim 관련 Category}
 

@@ -3,21 +3,35 @@ layout  : wiki
 title   : 용어 설명 모음 
 summary : 아직 안정함  
 date    : 2020-04-27 11:15:09 +0900
-updated : 2020-04-27 11:43:10 +0900
-tag     : keyword 
+updated : 2020-06-05 21:00:33 +0900
+tag     : keyword hash string-interpolation 
 toc     : true
 public  : true
-parent  : [[Gray-Category]] 
+parent  : [[Term-Category]] 
 latex   : false
 ---
 * TOC
 {:toc}
 
+용어 문서 정리 계획
+
+* 1차로 이곳에 정리
+* 용어에 따른 설명이 길어지면 별도 Category로 분리하여 문서로 정리
+* 표준 용어 여부 확인 방법
+  * 정보 검색에 실용성이 높을수록 표준 용어에 가깝다고 판단한다.
+  * stack overflow에 태그로 등록되었는지 확인
+
+
 # H로 시작
 
 ## Hash
 
+### 표준 용어 여부 확인
+
+* [stackoverflow 태그여부 확인 완료](https://stackoverflow.com/questions/tagged/hash)
+
 ### 관련 링크
+
 * [해시와 해시함수가 뭔지 알아보자](https://steemit.com/kr/@twinbraid/4yjj7b): 쉬운 설명 버전
 * [해시, 해시넷설명](http://wiki.hash.kr/index.php/%ED%95%B4%EC%8B%9C): 딱딱하지만 정확한 설명 버전
 

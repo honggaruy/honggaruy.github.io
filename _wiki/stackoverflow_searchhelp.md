@@ -3,8 +3,8 @@ layout  : wiki
 title   : 스택 오버플로우에서 검색 하기 
 summary : 누구보다 빠르게 난 남들과는 다르게 ...
 date    : 2020-05-12 13:28:08 +0900
-updated : 2020-05-15 15:09:05 +0900
-tag     : stack-overflow, 검색, inline-html 
+updated : 2020-07-13 12:22:36 +0900
+tag     : stack-overflow, 검색, inline-html, kbd태그, css
 toc     : true
 public  : true
 parent  : [[Gray-Category]]
@@ -13,8 +13,7 @@ latex   : false
 * TOC
 {:toc}
 
-아직 작업중 ...
-
+아마 계속 작업중 ...
 
 # 1. 발단
 
@@ -38,7 +37,7 @@ latex   : false
   * 써먹을 게 많이 나올줄 알았는데 `Enter` 한 개 있네
 
 # 3. 번역결과
-* 원본 링크 : [https://stackoverflow.com/help/searching](https://stackoverflow.com/help/searching)
+* 원본 링크 : [https://stackoverflow.com/help/searching](https://stackoverflow.com/help/searching) ,2020년 5월 15일자 번역이후 업데이트 안함.
 
 ## 어떻게 검색 하나요?
 
@@ -141,9 +140,11 @@ latex   : false
 ## 같이 알면 좋은 링크
 
 * [Stack Overflow에는 어떤 태그가 있는지 알고 싶을때](https://stackoverflow.com/tags) : 2020년 5월 현재 1719 (9x4=36개/페이지, 61,884개정도?)페이지나 된다. 검색 해보자.
-  * 20202 5월 15일 현재 가장 Popular한 태그는 javascript ( 태그를 단 article이 2,007,023개 )
+  * 2020년 5월 15일 현재 가장 Popular한 태그는 javascript ( 태그를 단 article이 2,007,023개 )
+* [번역글, 내가 StackOverflow를 사용하는 방법, 2017/04/15](https://rinae.dev/posts/how-i-use-stackoverflow-kor) : StackOverflow 사용 경험 공유
+* [나를 위한 StackOverflow 명성(Reputiona) 쌓기](https://blog.kimkevin.net/how_to_earn_reputation_stackoverflow/) : StackOverflow 에서 명성 올리는 방법
 
-## Stack Overflow에서 검색시 써볼만한 옵션
+## Stack Overflow에서 검색시 써볼만한 옵션 응용
 
 * `[tag1] [tag2]` : 태그 중첩으로 범위 좁히기
 
