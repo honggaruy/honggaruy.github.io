@@ -3,7 +3,9 @@ _site
 .jekyll-metadata
 tags
 *.swp
+*.bak
 Gemfile.lock
 /node_modules
 package-lock.json
+.jekyll-cache/
 *~
