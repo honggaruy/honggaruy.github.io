@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.summary }}">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="{{ site.url }}/resources/icon/apple-touch-icon.png">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
     <meta name="twitter:card" content="summary" />
@@ -21,6 +21,11 @@
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.summary }}" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
 {% if site.google_analytics.ua %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
