@@ -3,7 +3,7 @@ layout  : wiki
 title   : 엑셀 파일을 구글 시트로 바꾸기 
 summary : google-apps-script를 배우는 좋은 시작점 
 date    : 2020-04-25 18:48:06 +0900
-updated : 2020-06-04 07:47:18 +0900
+updated : 2020-10-31 00:25:04 +0900
 tag     : excel gsheet google-apps-script 
 toc     : true
 public  : true
@@ -33,7 +33,7 @@ latex   : false
 
 # 2. 전개
 
-*  일단 [알아본 바]( /blog/2020/04/18/todays-ideas/index.html )로는 다음과 같은 흐름이 가장 적당한것 같다
+*  일단 [알아본 바]( /blog/2020/04/17/todays-ideas/index.html )로는 다음과 같은 흐름이 가장 적당한것 같다
   1. [구글 드라이브 백업및 동기화 프로그램](https://www.google.com/intl/ko_ALL/drive/download/backup-and-sync/)을 다운로드 받아 로컬 PC에 설치한다
   2. 은행 사이트에서 엑셀 파일을 다운로드 받을때 동기화 폴더로 직접 다운받는다
   3. 다운받는 순간 자동으로 진행되는 동기화가 끝나면 구글 드라이브에서 해당 파일을 볼 수 있다.

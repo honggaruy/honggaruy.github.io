@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-10-08 22:08:42 +0900
+updated : 2020-11-05 12:01:55 +0900
 tag     : index
 toc     : true
 public  : true
@@ -39,6 +39,7 @@ comment : false
 
 ### [[Cross-Category]]{공통적으로 쓰는 도구 Category}
 
+* [[dotfiles]]{dotfiles 관련 정리}
 * [[windows-terminal-config]]{윈도우즈 터미널 설정하기}
 * [[korean-font]]{무료 한글 서체}
 
@@ -52,6 +53,12 @@ comment : false
 
 * [[git-commands]]{자주 쓰는 git 명령}
 
+### [[Windows-Category]]{Windows 도구 관련 Category}
+
+* [[Windows-Sysinternals]]{Sysinternals 도구}
+* [[PowerShell-Scripting]]{Powershell 스크립팅}
+
+
 ### [[Linux-Category]]{Linux 도구 관련 Category}
 
 * [[sed-problem-solving]]{GNU sed의 이상한 정규식 처리}
@@ -62,7 +69,7 @@ comment : false
 * [[wiki-inWindows]]{윈도우즈에서 V+J+G 따라하기}
 * [[wiki-toc2side]]{위키페이지에서 toc 위치 조정}
 * [[wiki-font]]{위키페이지 폰트 변경} 
-
+* [[wiki-favicon]]{위키에 파비콘 추가}
 
 ---
 

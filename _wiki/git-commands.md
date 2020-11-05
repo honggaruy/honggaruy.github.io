@@ -3,7 +3,7 @@ layout  : wiki
 title   : 자주 쓰는 git 명령 
 summary : git 명령어 상황별 레시피 
 date    : 2020-04-01 13:34:02 +0900
-updated : 2020-04-13 23:27:49 +0900
+updated : 2020-11-04 23:54:29 +0900
 tag     : git 
 toc     : true
 public  : true
@@ -13,10 +13,56 @@ latex   : false
 * TOC
 {:toc}
 
-# 제목 어떡하지
+# Git 기본 
 
 * 여기에 레시피를 쭉 넣고 싶은데..
 * 레시피 제목은 2단계 제목으로..
+*
+
+
+## 아직 add 하기 전 작업중인 파일을 되돌린다 - restore
+
+* 원래 이 작업은 `checkout`으로 했었는데...
+* 2019년 08월 16일 배포된 git 2.23.0 버전부터 checkout의 기능이 `switch`와 `restore`로 분리 되었다
+* 관련 포스팅 : [Git 2.23.0 출시: checkout 기능 분리](http://honeymon.io/tech/2019/08/30/git-2.23-release.html)
+* checkout이라는 이름으로 두가지 작업을 하던 것을 기능별로 이름을 다시 지은 것으로 올바른 방향의 변화로 보인다.
+* 사용법 : 아래와 같이 입력하면 작업중인 내용을 현재 commit 상태로 되돌린다
+```sh
+> git restore 파일이름
+```
+
+### 관련 글들
+
+* [How to reset all files from working directory but not from staging area? 답변](https://stackoverflow.com/a/57066072/9457247)
+* [What is the 'git restore' command and what is th diff betwen 'restore' and 'reset'](https://stackoverflow.com/a/58003889/9457247) 
+
+## 로컬 온리 저장소를 리모트 저장소에 연결한다.
+
+* 로컬에서 `git init`로 시작하여 사용하던 저장소를 github에 올리고 싶을 때 따라한다.
+* 우선 `git remote`를 입력하여 연결된 `리모트 저장소`가 있는지 확인한다.
+  ```sh
+  > git remote -v
+  # 아무것도 안 나옴. 연결이 안된 상태임
+  ```
+* github에 접속하여 신규 프로젝트를 만들면..
+  * 다음으로 진행할 3가지 정도 추천 Step이 나오는 데 이것들 중 두번째인 ..
+  * `...or push an existing repository from the command line`을 살펴보면 ..
+    ```sh
+    > git remote add origin <github 프로젝트 url>
+    > git branch -M main
+    > git push -u origin main
+    ```
+    ..와 같이 나오는데..
+  * 위에서 첫번째 명령을 실행하면 된다.
+* 다시 `git remote -v`를 실행해보면 ..
+  ```sh
+  > git remote -v
+  origin  https://github.com/honggaruy/dotfiles.git (fetch)
+  origin  https://github.com/honggaruy/dotfiles.git (push)
+  ```
+  와 같이 연결된 것을 볼 수 있다.
+
+# Git 중급
 
 ## git diff 골라서 하기 
 
