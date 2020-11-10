@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-11-05 12:01:55 +0900
+updated : 2020-11-06 16:43:21 +0900
 tag     : index
 toc     : true
 public  : true
@@ -57,6 +57,7 @@ comment : false
 
 * [[Windows-Sysinternals]]{Sysinternals 도구}
 * [[PowerShell-Scripting]]{Powershell 스크립팅}
+* [[Windows-Terminal-Setting]]{Windows Terminal 설정하기}
 
 
 ### [[Linux-Category]]{Linux 도구 관련 Category}
