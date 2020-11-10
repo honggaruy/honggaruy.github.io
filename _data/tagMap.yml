@@ -10,8 +10,8 @@ google-apps-script:
     - {fileName: 2020-06-04-todays-ideas}
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-07-13-week-29th}
-    - {fileName: 2020-07-20-week-30th}
     - {fileName: apps-script-starter}
+    - {fileName: code-isolation}
     - {fileName: excel2gsheet}
     - {fileName: gas_library}
     - {fileName: GoogleAppsScript-Category}
@@ -26,6 +26,11 @@ png:
     - {fileName: 2020-04-28-todays-ideas}
 drop-ice:
     - {fileName: 2020-04-28-todays-ideas}
+번역:
+    - {fileName: 2020-04-28-todays-ideas}
+    - {fileName: stackoverflow_searchhelp}
+markdown-table:
+    - {fileName: 2020-04-28-todays-ideas}
 dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
 css:
@@ -37,8 +42,12 @@ css:
     - {fileName: wiki-toc2side}
 tag:
     - {fileName: 2020-05-02-todays-ideas}
+    - {fileName: 2020-05-11-todays-ideas}
 wiki-setting:
     - {fileName: 2020-05-02-todays-ideas}
+    - {fileName: wiki-favicon}
+    - {fileName: wiki-inWindows}
+    - {fileName: wiki-toc2side}
 google:
     - {fileName: 2020-05-07-google-custom-search}
     - {fileName: 2020-05-11-todays-ideas}
@@ -57,8 +66,6 @@ google-keep:
 생산성:
     - {fileName: 2020-05-11-todays-ideas}
 escaping:
-    - {fileName: 2020-05-11-todays-ideas}
-tags:
     - {fileName: 2020-05-11-todays-ideas}
 week-diary:
     - {fileName: 2020-06-15-week-25th}
@@ -88,6 +95,7 @@ new-item:
     - {fileName: 2020-07-06-week-28th}
 recipe:
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2020-07-06-week-28th}
 grep:
     - {fileName: 2020-07-06-week-28th}
 vim:
@@ -97,16 +105,81 @@ vim:
 windows-terminal:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: windows-terminal-config}
+    - {fileName: Windows-Terminal-Setting}
+minpac:
+    - {fileName: 2020-07-06-week-28th}
+powershell:
+    - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2020-10-26-week-44th}
+    - {fileName: dotfiles}
+dotfile:
+    - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2020-11-02-week-45th}
+    - {fileName: dotfiles}
+    - {fileName: Windows-Terminal-Setting}
+ruby:
+    - {fileName: 2020-07-06-week-28th}
+windows:
+    - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: wiki-inWindows}
+    - {fileName: Windows-Category}
+    - {fileName: Windows-Sysinternals}
+command-line:
+    - {fileName: 2020-07-06-week-28th}
+한글:
+    - {fileName: 2020-07-06-week-28th}
 clasp:
     - {fileName: 2020-07-13-week-29th}
-    - {fileName: 2020-07-20-week-30th}
 kite:
     - {fileName: 2020-07-13-week-29th}
+site:
     - {fileName: 2020-07-20-week-30th}
-'cross,':
+    - {fileName: 2020-07-27-week-31th}
+project:
+    - {fileName: 2020-07-27-week-31th}
+idea:
+    - {fileName: 2020-07-27-week-31th}
+overloading:
+    - {fileName: 2020-08-24-week-35th}
+wsl:
+    - {fileName: 2020-10-26-week-44th}
+ubuntu:
+    - {fileName: 2020-10-26-week-44th}
+update:
+    - {fileName: 2020-10-26-week-44th}
+upgrade:
+    - {fileName: 2020-10-26-week-44th}
+jekyll:
+    - {fileName: 2020-10-26-week-44th}
+    - {fileName: wiki-inWindows}
+    - {fileName: Wiki-Setting-Category}
+binding:
+    - {fileName: 2020-10-26-week-44th}
+port:
+    - {fileName: 2020-10-26-week-44th}
+cmd:
+    - {fileName: 2020-11-09-week-46th}
+keyboard-shortcuts:
+    - {fileName: 2020-11-09-week-46th}
+git:
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: Git-Category}
+    - {fileName: git-commands}
+pre-commit:
+    - {fileName: 2020-11-09-week-46th}
+troubleshooting:
+    - {fileName: code-isolation}
+typescript:
+    - {fileName: code-isolation}
+    - {fileName: javascript-myCookBook}
+cross:
     - {fileName: Cross-Category}
 regex:
     - {fileName: Cross-Category}
+    - {fileName: sed-problem-solving}
+shell:
+    - {fileName: dotfiles}
     - {fileName: sed-problem-solving}
 google-slides:
     - {fileName: exact-size-photo-print}
@@ -114,9 +187,6 @@ google-slides:
     - {fileName: new-windows-installation}
 library:
     - {fileName: gas_library}
-git:
-    - {fileName: Git-Category}
-    - {fileName: git-commands}
 google-photos:
     - {fileName: google_photo_slideshow}
 script:
@@ -125,8 +195,6 @@ gray:
     - {fileName: Gray-Category}
 index:
     - {fileName: index}
-typescript:
-    - {fileName: javascript-myCookBook}
 falsy:
     - {fileName: javascript-myCookBook}
 truthy:
@@ -138,6 +206,9 @@ hash:
 string-interpolation:
     - {fileName: keyword_collection}
     - {fileName: term-string-interpolation}
+font:
+    - {fileName: korean-font}
+    - {fileName: wiki-font}
 language:
     - {fileName: Language-Category}
     - {fileName: Web-Category}
@@ -146,18 +217,26 @@ linux:
     - {fileName: sed-problem-solving}
 sed:
     - {fileName: sed-problem-solving}
-shell:
-    - {fileName: sed-problem-solving}
-'stack-overflow,':
+stack-overflow:
     - {fileName: stackoverflow_searchhelp}
-'검색,':
+검색:
     - {fileName: stackoverflow_searchhelp}
-'inline-html,':
+inline-html:
     - {fileName: stackoverflow_searchhelp}
-'kbd태그,':
+kbd태그:
     - {fileName: stackoverflow_searchhelp}
 term:
     - {fileName: Term-Category}
+    - {fileName: term-short-circuit-evaluation}
+    - {fileName: term-string-interpolation}
+Short-circuit-evaluation:
+    - {fileName: term-short-circuit-evaluation}
+short-circuiting:
+    - {fileName: term-short-circuit-evaluation}
+minimal-evaluation:
+    - {fileName: term-short-circuit-evaluation}
+McCarthy-evaluation:
+    - {fileName: term-short-circuit-evaluation}
 template-literals:
     - {fileName: term-string-interpolation}
 variable-expansion:
@@ -179,18 +258,23 @@ web:
     - {fileName: Web-Category}
 html:
     - {fileName: Web-Category}
-font:
-    - {fileName: wiki-font}
+favicon:
+    - {fileName: wiki-favicon}
+timezone:
+    - {fileName: wiki-inWindows}
+tzinfo:
+    - {fileName: wiki-inWindows}
+yaml-front-matter:
+    - {fileName: wiki-inWindows}
 vimwiki:
     - {fileName: Wiki-Setting-Category}
     - {fileName: wiki-troubleshooting}
 githubio:
     - {fileName: Wiki-Setting-Category}
-jekyll:
-    - {fileName: Wiki-Setting-Category}
-wiki:
-    - {fileName: wiki-toc2side}
 toc:
     - {fileName: wiki-toc2side}
 scss:
     - {fileName: wiki-toc2side}
+sysinternals:
+    - {fileName: Windows-Category}
+    - {fileName: Windows-Sysinternals}

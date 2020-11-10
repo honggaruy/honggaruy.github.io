@@ -110,6 +110,62 @@
     url: /blog/2020/07/20/week-30th
     updated: '2020-07-20 23:14:32 +0900'
     children: []
+2020-07-27-week-31th:
+    type: blog
+    title: '31주차 기록'
+    summary: '7/27(월) ~ 8/02(일)'
+    parent: null
+    url: /blog/2020/07/27/week-31th
+    updated: '2020-07-27 22:45:32 +0900'
+    children: []
+2020-08-10-week-33th:
+    type: blog
+    title: '33주차 기록'
+    summary: '8/10(월) ~ 8/16(일)'
+    parent: null
+    url: /blog/2020/08/10/week-33th
+    updated: '2020-08-10 00:32:32 +0900'
+    children: []
+2020-08-24-week-35th:
+    type: blog
+    title: '35주차 기록'
+    summary: '8/24(월) ~ 8/30(일)'
+    parent: null
+    url: /blog/2020/08/28/week-35th
+    updated: '2020-08-28 13:05:32 +0900'
+    children: []
+2020-08-31-week-36th:
+    type: blog
+    title: '36주차 기록'
+    summary: '8/31(월) ~ 9/06(일)'
+    parent: null
+    url: /blog/2020/08/31/week-36th
+    updated: '2020-08-31 09:26:32 +0900'
+    children: []
+2020-10-26-week-44th:
+    type: blog
+    title: '44주차 기록'
+    summary: '10/26(월) ~ 11/01(일)'
+    parent: null
+    url: /blog/2020/10/26/week-44th
+    updated: '2020-10-26 09:26:32 +0900'
+    children: []
+2020-11-02-week-45th:
+    type: blog
+    title: '45주차 기록'
+    summary: '11/02(월) ~ 11/08(일)'
+    parent: null
+    url: /blog/2020/11/02/week-45th
+    updated: '2020-11-02 09:26:32 +0900'
+    children: []
+2020-11-09-week-46th:
+    type: blog
+    title: '46주차 기록'
+    summary: '11/09(월) ~ 11/15(일)'
+    parent: null
+    url: /blog/2020/11/09/week-46th
+    updated: '2020-11-09 08:07:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -118,14 +174,22 @@ apps-script-starter:
     url: /wiki/apps-script-starter
     updated: '2020-07-15 22:06:32 +0900'
     children: []
+code-isolation:
+    type: wiki
+    title: 'typescript로 개발시 파일 순서 문제'
+    summary: troubleshooting
+    parent: GoogleAppsScript-Category
+    url: /wiki/code-isolation
+    updated: '2020-10-07 14:20:51 +0900'
+    children: []
 Cross-Category:
     type: wiki
     title: '공통 도구'
     summary: '카테고리 문서 1단계'
     parent: Tools-Category
     url: /wiki/Cross-Category
-    updated: '2020-05-26 14:28:49 +0900'
-    children: [windows-terminal-config]
+    updated: '2020-11-10 21:21:47 +0900'
+    children: [korean-font, windows-terminal-config]
 css-meaning:
     type: wiki
     title: '갑자기 깨달은 CSS 단어의 의미'
@@ -133,6 +197,14 @@ css-meaning:
     parent: Web-Category
     url: /wiki/css-meaning
     updated: '2020-04-14 08:33:35 +0900'
+    children: []
+dotfiles:
+    type: wiki
+    title: 'dotfiles 관련 정리'
+    summary: '아직 정리중...'
+    parent: Cross-Categry
+    url: /wiki/dotfiles
+    updated: '2020-10-31 09:22:03 +0900'
     children: []
 exact-size-photo-print:
     type: wiki
@@ -148,7 +220,7 @@ excel2gsheet:
     summary: 'google-apps-script를 배우는 좋은 시작점'
     parent: GoogleAppsScript-Category
     url: /wiki/excel2gsheet
-    updated: '2020-06-04 07:47:18 +0900'
+    updated: '2020-10-31 00:25:04 +0900'
     children: []
 gas_library:
     type: wiki
@@ -156,7 +228,7 @@ gas_library:
     summary: 'beyond battery-included, 추가배터리 구하기'
     parent: GoogleAppsScript-Category
     url: /wiki/gas_library
-    updated: '2020-06-04 23:14:11 +0900'
+    updated: '2020-08-06 14:48:58 +0900'
     children: []
 Git-Category:
     type: wiki
@@ -164,7 +236,7 @@ Git-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Tools-Category
     url: /wiki/Git-Category
-    updated: '2020-04-13 20:56:43 +0900'
+    updated: '2020-10-12 12:38:21 +0900'
     children: [git-commands]
 git-commands:
     type: wiki
@@ -172,7 +244,7 @@ git-commands:
     summary: 'git 명령어 상황별 레시피'
     parent: Git-Category
     url: /wiki/git-commands
-    updated: '2020-04-13 23:27:49 +0900'
+    updated: '2020-11-04 23:54:29 +0900'
     children: []
 google_photo_slideshow:
     type: wiki
@@ -188,8 +260,8 @@ GoogleAppsScript-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/GoogleAppsScript-Category
-    updated: '2020-05-27 22:44:52 +0900'
-    children: [apps-script-starter, excel2gsheet, gas_library]
+    updated: '2020-10-07 13:21:08 +0900'
+    children: [apps-script-starter, code-isolation, excel2gsheet, gas_library]
 Gray-Category:
     type: wiki
     title: Gray
@@ -204,7 +276,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-07-20 23:03:57 +0900'
+    updated: '2020-11-06 16:43:21 +0900'
     children: []
 javascript-myCookBook:
     type: wiki
@@ -212,7 +284,7 @@ javascript-myCookBook:
     summary: 'js/ts 뉴비가 생각하는 ...'
     parent: Web-Category
     url: /wiki/javascript-myCookBook
-    updated: '2020-06-06 13:24:45 +0900'
+    updated: '2020-10-25 16:41:03 +0900'
     children: []
 keyword_collection:
     type: wiki
@@ -221,6 +293,14 @@ keyword_collection:
     parent: Term-Category
     url: /wiki/keyword_collection
     updated: '2020-06-05 21:00:33 +0900'
+    children: []
+korean-font:
+    type: wiki
+    title: '무료 한글 서체'
+    summary: 무료..
+    parent: Cross-Category
+    url: /wiki/korean-font
+    updated: '2020-10-08 23:41:38 +0900'
     children: []
 Language-Category:
     type: wiki
@@ -246,6 +326,14 @@ new-windows-installation:
     url: /wiki/new-windows-installation
     updated: '2020-06-08 20:54:07 +0900'
     children: []
+PowerShell-Scripting:
+    type: wiki
+    title: 'Powershell 스크립팅'
+    summary: ""
+    parent: ""
+    url: /wiki/PowerShell-Scripting
+    updated: '2020-11-03 00:17:12 +0900'
+    children: []
 sed-problem-solving:
     type: wiki
     title: 'GNU sed의 이상한 정규식 처리'
@@ -260,7 +348,7 @@ stackoverflow_searchhelp:
     summary: '누구보다 빠르게 난 남들과는 다르게 ...'
     parent: Gray-Category
     url: /wiki/stackoverflow_searchhelp
-    updated: '2020-07-13 12:22:36 +0900'
+    updated: '2020-11-09 21:52:05 +0900'
     children: []
 Term-Category:
     type: wiki
@@ -269,14 +357,22 @@ Term-Category:
     parent: index
     url: /wiki/Term-Category
     updated: '2020-06-05 12:54:08 +0900'
-    children: [keyword_collection, term-string-interpolation]
+    children: [keyword_collection, term-short-circuit-evaluation, term-string-interpolation]
+term-short-circuit-evaluation:
+    type: wiki
+    title: 'Short-circuit evalution'
+    summary: 단축평가
+    parent: Term-Category
+    url: /wiki/term-short-circuit-evaluation
+    updated: '2020-11-10 21:28:07 +0900'
+    children: []
 term-string-interpolation:
     type: wiki
     title: 'String interpolation'
     summary: '템플릿 문자열, 백틱 문자열, f문자열'
     parent: Term-Category
     url: /wiki/term-string-interpolation
-    updated: '2020-06-05 20:32:29 +0900'
+    updated: '2020-11-10 21:28:19 +0900'
     children: []
 Tools-Category:
     type: wiki
@@ -285,14 +381,14 @@ Tools-Category:
     parent: index
     url: /wiki/Tools-Category
     updated: '2020-04-13 20:52:38 +0900'
-    children: [Cross-Category, Git-Category, Linux-Category, Vim-Category]
+    children: [Cross-Category, Git-Category, Linux-Category, Vim-Category, Windows-Category]
 Vim-Category:
     type: wiki
     title: Vim
     summary: '카테고리 문서 1단계'
     parent: Tools-Category
     url: /wiki/Vim-Category
-    updated: '2020-05-02 14:15:44 +0900'
+    updated: '2020-11-02 12:02:39 +0900'
     children: [Vimrc-Category]
 vim-folding:
     type: wiki
@@ -318,6 +414,14 @@ Web-Category:
     url: /wiki/Web-Category
     updated: '2020-05-07 12:18:24 +0900'
     children: [css-meaning, javascript-myCookBook]
+wiki-favicon:
+    type: wiki
+    title: '위키에 favicon 추가'
+    summary: 'favicon 추가 방법, 관련 링크'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-favicon
+    updated: '2020-11-05 12:28:25 +0900'
+    children: []
 wiki-font:
     type: wiki
     title: '위키 폰트 변경'
@@ -332,7 +436,7 @@ wiki-inWindows:
     summary: ""
     parent: Wiki-Setting-Category
     url: /wiki/wiki-inWindows
-    updated: '2020-04-13 22:32:10 +0900'
+    updated: '2020-11-10 21:47:11 +0900'
     children: []
 Wiki-Setting-Category:
     type: wiki
@@ -341,14 +445,14 @@ Wiki-Setting-Category:
     parent: index
     url: /wiki/Wiki-Setting-Category
     updated: '2020-04-13 22:37:43 +0900'
-    children: [wiki-font, wiki-inWindows, wiki-toc2side, wiki-troubleshooting]
+    children: [wiki-favicon, wiki-font, wiki-inWindows, wiki-toc2side, wiki-troubleshooting]
 wiki-toc2side:
     type: wiki
     title: '위키페이지에서 toc 위치 조정'
     summary: 'CSS및 SCSS에 대한 정리'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-toc2side
-    updated: '2020-04-14 08:50:31 +0900'
+    updated: '2020-11-09 21:48:17 +0900'
     children: []
 wiki-troubleshooting:
     type: wiki
@@ -358,6 +462,22 @@ wiki-troubleshooting:
     url: /wiki/wiki-troubleshooting
     updated: '2020-04-12 01:06:48 +0900'
     children: []
+Windows-Category:
+    type: wiki
+    title: Windows
+    summary: '카테고리 2단계 (끝)'
+    parent: Tools-Category
+    url: /wiki/Windows-Category
+    updated: '2020-11-07 13:53:39 +0900'
+    children: [Windows-Sysinternals, Windows-Terminal-Setting]
+Windows-Sysinternals:
+    type: wiki
+    title: 'Sysinternals 도구'
+    summary: 'troubleshooting용 도구'
+    parent: Windows-Category
+    url: /wiki/Windows-Sysinternals
+    updated: '2020-11-03 02:28:36 +0900'
+    children: []
 windows-terminal-config:
     type: wiki
     title: '윈도우즈 터미널 설정하기'
@@ -365,4 +485,12 @@ windows-terminal-config:
     parent: Cross-Category
     url: /wiki/windows-terminal-config
     updated: '2020-07-17 22:48:55 +0900'
+    children: []
+Windows-Terminal-Setting:
+    type: wiki
+    title: 'Windows Terminal 설정하기'
+    summary: ""
+    parent: Windows-Category
+    url: /wiki/Windows-Terminal-Setting
+    updated: '2020-11-07 14:11:10 +0900'
     children: []
