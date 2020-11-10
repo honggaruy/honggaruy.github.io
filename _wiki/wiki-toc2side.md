@@ -3,8 +3,8 @@ layout  : wiki
 title   : 위키페이지에서 toc 위치 조정  
 summary : CSS및 SCSS에 대한 정리 
 date    : 2020-03-26 16:45:20 +0900
-updated : 2020-04-14 08:50:31 +0900
-tag     : wiki toc css scss
+updated : 2020-11-09 21:48:17 +0900
+tag     : wiki-setting toc css scss
 toc     : true
 public  : true
 parent  : [[Wiki-Setting-Category]]

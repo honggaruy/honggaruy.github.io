@@ -3,8 +3,8 @@ layout  : wiki
 title   : Short-circuit evalution 
 summary : 단축평가 
 date    : 2020-08-04 15:35:02 +0900
-updated : 2020-08-04 16:13:58 +0900
-tag     : Short-circuit-evaluation short-circuiting minimal-evaluation, McCarthy-evaluation
+updated : 2020-11-10 21:28:07 +0900
+tag     : term Short-circuit-evaluation short-circuiting minimal-evaluation McCarthy-evaluation
 toc     : true
 public  : true
 parent  : [[Term-Category]] 

@@ -3,8 +3,8 @@ layout  : wiki
 title   : 스택 오버플로우에서 검색 하기 
 summary : 누구보다 빠르게 난 남들과는 다르게 ...
 date    : 2020-05-12 13:28:08 +0900
-updated : 2020-07-13 12:22:36 +0900
-tag     : stack-overflow, 검색, inline-html, kbd태그, css
+updated : 2020-11-09 21:52:05 +0900
+tag     : stack-overflow 검색 inline-html kbd태그 css 번역
 toc     : true
 public  : true
 parent  : [[Gray-Category]]

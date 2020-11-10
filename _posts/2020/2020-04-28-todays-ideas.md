@@ -3,7 +3,7 @@ layout  : post
 title   : 오늘의 영감 
 summary : sample summary
 date    : 2020-04-28 00:35:32 +0900
-tag     : github gif png drop-ice
+tag     : github gif png drop-ice 번역 markdown-table
 toc     : true
 comment : true
 public  : true
