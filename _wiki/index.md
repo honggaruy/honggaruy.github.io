@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-11-06 16:43:21 +0900
+updated : 2020-12-01 11:27:52 +0900
 tag     : index
 toc     : true
 public  : true
@@ -34,6 +34,10 @@ comment : false
 * [[gas_library]]{구글 스크립트 라이브러리 사용법}
 * [[apps-script-starter]]{로컬에서 구글 Apps Script 개발하기}
 * [[code-isolation]]{typescript로 개발시 파일 순서 문제}
+
+### [[Python-Categroy]]{Python 관련 Category}
+
+* [[pyscaffold]]{PyScaffold로 시작하기}
 
 ## [[Tools-Category]]{프로그래밍 도구 관련 Category}
 
@@ -71,6 +75,11 @@ comment : false
 * [[wiki-toc2side]]{위키페이지에서 toc 위치 조정}
 * [[wiki-font]]{위키페이지 폰트 변경} 
 * [[wiki-favicon]]{위키에 파비콘 추가}
+
+## [[Books-Category]]{책읽고 정리한 Category}
+
+* [[book-developer-writing]]{개발자의 글쓰기}
+* [[book-how-javascript-works]]{자바스크립트는 왜 그 모양일까}
 
 ---
 

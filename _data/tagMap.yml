@@ -79,6 +79,9 @@ useful-sites:
     - {fileName: 2020-06-15-week-25th}
 python:
     - {fileName: 2020-06-15-week-25th}
+    - {fileName: 2020-11-16-week-47th}
+    - {fileName: pyscaffold}
+    - {fileName: Python-Categroy}
 csv:
     - {fileName: 2020-06-15-week-25th}
 google-data-studio:
@@ -100,10 +103,12 @@ grep:
     - {fileName: 2020-07-06-week-28th}
 vim:
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2020-11-23-week-48th}
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
 windows-terminal:
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: pyscaffold}
     - {fileName: windows-terminal-config}
     - {fileName: Windows-Terminal-Setting}
 minpac:
@@ -168,6 +173,61 @@ git:
     - {fileName: git-commands}
 pre-commit:
     - {fileName: 2020-11-09-week-46th}
+vim-help:
+    - {fileName: 2020-11-09-week-46th}
+vimrc:
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: vim-folding}
+    - {fileName: Vimrc-Category}
+linux:
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: Linux-Category}
+    - {fileName: sed-problem-solving}
+term:
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: Term-Category}
+    - {fileName: term-short-circuit-evaluation}
+    - {fileName: term-string-interpolation}
+spin-up:
+    - {fileName: 2020-11-09-week-46th}
+pyscaffold:
+    - {fileName: 2020-11-09-week-46th}
+    - {fileName: pyscaffold}
+chrome:
+    - {fileName: 2020-11-16-week-47th}
+billmaker:
+    - {fileName: 2020-11-16-week-47th}
+vim-devicons:
+    - {fileName: 2020-11-23-week-48th}
+nerd:
+    - {fileName: 2020-11-23-week-48th}
+font:
+    - {fileName: 2020-11-23-week-48th}
+    - {fileName: 2020-11-23-week-48th}
+    - {fileName: korean-font}
+    - {fileName: wiki-font}
+d2coding:
+    - {fileName: 2020-11-23-week-48th}
+zsh:
+    - {fileName: 2020-11-23-week-48th}
+icon:
+    - {fileName: 2020-11-23-week-48th}
+puppeteer:
+    - {fileName: 2020-11-23-week-48th}
+async:
+    - {fileName: 2020-11-23-week-48th}
+await:
+    - {fileName: 2020-11-23-week-48th}
+비동기:
+    - {fileName: 2020-11-23-week-48th}
+axios:
+    - {fileName: 2020-11-23-week-48th}
+promise:
+    - {fileName: 2020-11-23-week-48th}
+symbol:
+    - {fileName: 2020-11-23-week-48th}
+books:
+    - {fileName: Books-Category}
 troubleshooting:
     - {fileName: code-isolation}
 typescript:
@@ -185,6 +245,8 @@ google-slides:
     - {fileName: exact-size-photo-print}
     - {fileName: google_photo_slideshow}
     - {fileName: new-windows-installation}
+A4용지크기:
+    - {fileName: exact-size-photo-print}
 library:
     - {fileName: gas_library}
 google-photos:
@@ -206,15 +268,10 @@ hash:
 string-interpolation:
     - {fileName: keyword_collection}
     - {fileName: term-string-interpolation}
-font:
-    - {fileName: korean-font}
-    - {fileName: wiki-font}
 language:
     - {fileName: Language-Category}
+    - {fileName: Python-Categroy}
     - {fileName: Web-Category}
-linux:
-    - {fileName: Linux-Category}
-    - {fileName: sed-problem-solving}
 sed:
     - {fileName: sed-problem-solving}
 stack-overflow:
@@ -225,10 +282,6 @@ inline-html:
     - {fileName: stackoverflow_searchhelp}
 kbd태그:
     - {fileName: stackoverflow_searchhelp}
-term:
-    - {fileName: Term-Category}
-    - {fileName: term-short-circuit-evaluation}
-    - {fileName: term-string-interpolation}
 Short-circuit-evaluation:
     - {fileName: term-short-circuit-evaluation}
 short-circuiting:
@@ -247,9 +300,6 @@ tool:
     - {fileName: Tools-Category}
 folding:
     - {fileName: vim-folding}
-vimrc:
-    - {fileName: vim-folding}
-    - {fileName: Vimrc-Category}
 특수문자:
     - {fileName: vim-folding}
 digraphs:
@@ -278,3 +328,5 @@ scss:
 sysinternals:
     - {fileName: Windows-Category}
     - {fileName: Windows-Sysinternals}
+GUID:
+    - {fileName: Windows-Terminal-Setting}

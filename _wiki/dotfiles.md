@@ -3,7 +3,7 @@ layout  : wiki
 title   : dotfiles 관련 정리 
 summary : 아직 정리중... 
 date    : 2020-10-29 15:49:07 +0900
-updated : 2020-10-31 09:22:03 +0900
+updated : 2020-11-11 11:39:27 +0900
 tag     : dotfile shell powershell
 toc     : true
 public  : true
@@ -18,7 +18,7 @@ latex   : false
 * 7월초에 local에서 작업하고 있던 dotfiles 프로젝트를 [얼마전 날려먹었다.](/wiki/Windows-Sysinternals/)
 * git으로 저장했어야 했는데..
 * 일단 복구하면서 정리하기로 했다
-* 참고 링크 : [작업하면서 정리했던 내용: 2020년 28주차 기록](/blog/2020/07/05/week-28th#dotfiles)
+* 참고 링크 : [작업하면서 정리했던 내용: 2020년 28주차 기록](/blog/2020/07/06/week-28th#dotfiles)
 
 # 2. 전개
 

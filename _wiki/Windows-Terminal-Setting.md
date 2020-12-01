@@ -3,8 +3,8 @@ layout  : wiki
 title   : Windows Terminal 설정하기 
 summary : 
 date    : 2020-11-06 16:43:24 +0900
-updated : 2020-11-07 14:11:10 +0900
-tag     : windows-terminal dotfile 
+updated : 2020-11-19 12:12:34 +0900
+tag     : windows-terminal dotfile GUID  
 toc     : true
 public  : true
 parent  : [[Windows-Category]] 
@@ -12,6 +12,11 @@ latex   : false
 ---
 * TOC
 {:toc}
+
+# 설정 관련 참고 링크
+
+* [Terminal Splash](https://terminalsplash.com/) - 컬러스킴 관련 설정모음
+* [Powerlevel 10k](https://github.com/romkatv/powerlevel10k) - WSL 창에서 zsh 설치한 이후 사용하는 리눅스 테마
 
 # GUID는 어떻게 설정해야 하나?
 

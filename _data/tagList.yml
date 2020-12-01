@@ -1,9 +1,17 @@
 - 검색
 - 번역
+- 비동기
 - 생산성
 - 특수문자
 - 한글
+- A4용지크기
+- async
+- await
+- axios
+- billmaker
 - binding
+- books
+- chrome
 - clasp
 - cmd
 - command-line
@@ -11,6 +19,7 @@
 - css
 - csv
 - custom
+- d2coding
 - digraphs
 - dot-leaders
 - dotfile
@@ -38,8 +47,10 @@
 - greencar
 - grep
 - gsheet
+- GUID
 - hash
 - html
+- icon
 - idea
 - index
 - inline-html
@@ -57,6 +68,7 @@
 - minimal-evaluation
 - minpac
 - multi-player
+- nerd
 - new-item
 - overloading
 - png
@@ -64,6 +76,9 @@
 - powershell
 - pre-commit
 - project
+- promise
+- puppeteer
+- pyscaffold
 - python
 - recipe
 - regex
@@ -77,8 +92,10 @@
 - short-circuiting
 - site
 - socar
+- spin-up
 - stack-overflow
 - string-interpolation
+- symbol
 - sysinternals
 - tag
 - template-literals
@@ -99,6 +116,8 @@
 - variable-expansion
 - variable-substitution
 - vim
+- vim-devicons
+- vim-help
 - vimrc
 - vimwiki
 - vs
@@ -109,3 +128,4 @@
 - windows-terminal
 - wsl
 - yaml-front-matter
+- zsh
