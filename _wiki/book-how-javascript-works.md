@@ -3,7 +3,7 @@ layout  : wiki
 title   : 자바스크립트는 왜 그 모양일까? 
 summary : 더글라스 크락포드가 알려주는 ... 
 date    : 2020-12-01 11:27:56 +0900
-updated : 2020-12-01 13:47:44 +0900
+updated : 2020-12-18 14:23:16 +0900
 tag     : br*** book 
 toc     : true
 public  : false
@@ -147,3 +147,40 @@ latex   : false
 * 0으로 무언가를 나누거나 Object.is()를 굳이 사용할 필요도 없으니 무시해도 됨
 
 ## 숫자 리터럴
+
+* 자바스크립트에는 18437736874454810627개의 불변 숫자 객체가 내장되어 있음
+  * 어떤 경우에는 딱 맞는 값이고
+  * 또 어떤 경우는 9.979...e+291만큼 차이가 나기도 함
+* 정수에 대한 숫자 리터럴은 연속한 10진수 숫자들
+* 다음 표현은 2018이라는 숫자에 대한 참조를 생성
+  * 2진수: 0b11111100010
+  * 8진수: 0o3742
+  * 10진수: 2018.00
+  * 16진수: 0x7E2
+* Infinity는 표현하기에는 너무 큰 모든 숫자
+  * [Infinity, MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+  * ∞ 와 Infinity는 같지 않다 - 자세한 내용은 [Number.POSITIVE_INFINITY](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY) 참조
+* NaN은 숫자가 아닌 숫자 - 'Not a Number'
+  * typeof 연산자가 NaN을 "number"형으로 표시하여 혼동을 줌
+  * 문자열을 숫자로 변경하려다 실패하는 경우 반환되기도 함
+  * 가장 혼동을 주는 부분
+    * NaN과 NaN을 동등연산자로 비교하면 항상 실패함 ( IEEE 754 때문임 )
+    * 값이 NaN인지를 테스트 하려면 Number.isNaN(value)를 사용해야함
+    * [Number.isFinite(value)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/isFinite)는 value = NaN, Infinity, -Infinity인 경우 false를 반환
+
+## Number
+
+* Number : 숫자를 만드는 함수
+  * Number에 new를 사용하면 안됨 - 기대하는 결과가 나오지 않음
+* number : 수에 대한 typeof 연산자가 반환하는 type
+* 몇가지 상수
+  * [Number.EPSILON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
+    * 가장 작은 양수 - 이보다 작으면 0으로 취급 
+  * [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+    * 약 9천조의 값, 9007199254740991
+    * +,- 로 이 값의 범위에서만 안전한 연산이 가능
+    * Number.isSafeInteger(number)로 숫자의 연산안전성 확인가능
+  * [Number.MAX_VALUE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE), [Number.MIN_VALUE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE)
+    * 계산 결과로 Safe를 넘는 값은 안전하지 않으므로 주의해야함
+
+## 연산자

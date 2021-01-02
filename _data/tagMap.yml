@@ -10,6 +10,7 @@ google-apps-script:
     - {fileName: 2020-06-04-todays-ideas}
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-07-13-week-29th}
+    - {fileName: 2020-12-28-week-53th}
     - {fileName: apps-script-starter}
     - {fileName: code-isolation}
     - {fileName: excel2gsheet}
@@ -35,6 +36,7 @@ dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
 css:
     - {fileName: 2020-04-30-todays-ideas}
+    - {fileName: css-default-style}
     - {fileName: css-meaning}
     - {fileName: Language-Category}
     - {fileName: stackoverflow_searchhelp}
@@ -71,6 +73,7 @@ week-diary:
     - {fileName: 2020-06-15-week-25th}
 javascript:
     - {fileName: 2020-06-15-week-25th}
+    - {fileName: css-default-style}
     - {fileName: javascript-myCookBook}
     - {fileName: Web-Category}
 multi-player:
@@ -106,6 +109,7 @@ vim:
     - {fileName: 2020-11-23-week-48th}
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
+    - {fileName: vscode-configurations}
 windows-terminal:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: pyscaffold}
@@ -127,6 +131,7 @@ ruby:
 windows:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: 2020-11-30-week-49th}
     - {fileName: wiki-inWindows}
     - {fileName: Windows-Category}
     - {fileName: Windows-Sysinternals}
@@ -149,6 +154,7 @@ overloading:
     - {fileName: 2020-08-24-week-35th}
 wsl:
     - {fileName: 2020-10-26-week-44th}
+    - {fileName: 2020-11-30-week-49th}
 ubuntu:
     - {fileName: 2020-10-26-week-44th}
 update:
@@ -167,10 +173,12 @@ cmd:
     - {fileName: 2020-11-09-week-46th}
 keyboard-shortcuts:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: 2020-11-30-week-49th}
 git:
     - {fileName: 2020-11-09-week-46th}
     - {fileName: Git-Category}
     - {fileName: git-commands}
+    - {fileName: git-upstream-meaning}
 pre-commit:
     - {fileName: 2020-11-09-week-46th}
 vim-help:
@@ -212,6 +220,7 @@ zsh:
     - {fileName: 2020-11-23-week-48th}
 icon:
     - {fileName: 2020-11-23-week-48th}
+    - {fileName: 2020-11-30-week-49th}
 puppeteer:
     - {fileName: 2020-11-23-week-48th}
 async:
@@ -226,6 +235,51 @@ promise:
     - {fileName: 2020-11-23-week-48th}
 symbol:
     - {fileName: 2020-11-23-week-48th}
+bluetooth:
+    - {fileName: 2020-11-30-week-49th}
+youtube:
+    - {fileName: 2020-11-30-week-49th}
+desktop-shortcut:
+    - {fileName: 2020-11-30-week-49th}
+windows-shortcut:
+    - {fileName: 2020-11-30-week-49th}
+used-book:
+    - {fileName: 2020-11-30-week-49th}
+surgeon:
+    - {fileName: 2020-11-30-week-49th}
+playwright:
+    - {fileName: 2020-11-30-week-49th}
+api:
+    - {fileName: 2020-11-30-week-49th}
+bios:
+    - {fileName: 2020-11-30-week-49th}
+vimwiki:
+    - {fileName: 2020-12-07-week-50th}
+    - {fileName: Wiki-Setting-Category}
+    - {fileName: wiki-troubleshooting}
+Tashi:
+    - {fileName: 2020-12-14-week-51th}
+English:
+    - {fileName: 2020-12-14-week-51th}
+lofi:
+    - {fileName: 2020-12-21-week-52th}
+regex:
+    - {fileName: 2020-12-21-week-52th}
+    - {fileName: Cross-Category}
+    - {fileName: re2-translation}
+    - {fileName: sed-problem-solving}
+exec:
+    - {fileName: 2020-12-21-week-52th}
+markdown-css:
+    - {fileName: 2020-12-28-week-53th}
+custom-css-in-markdown:
+    - {fileName: 2020-12-28-week-53th}
+translation:
+    - {fileName: 2020-12-28-week-53th}
+    - {fileName: isbn10-to-isbn13}
+    - {fileName: re2-translation}
+new-year:
+    - {fileName: 2021-01-01-week-01th}
 books:
     - {fileName: Books-Category}
 troubleshooting:
@@ -235,9 +289,8 @@ typescript:
     - {fileName: javascript-myCookBook}
 cross:
     - {fileName: Cross-Category}
-regex:
-    - {fileName: Cross-Category}
-    - {fileName: sed-problem-solving}
+http:
+    - {fileName: css-default-style}
 shell:
     - {fileName: dotfiles}
     - {fileName: sed-problem-solving}
@@ -249,14 +302,28 @@ A4용지크기:
     - {fileName: exact-size-photo-print}
 library:
     - {fileName: gas_library}
+git-commit:
+    - {fileName: git-commit-messages}
+commit:
+    - {fileName: git-commit-messages}
+upstream:
+    - {fileName: git-upstream-meaning}
 google-photos:
     - {fileName: google_photo_slideshow}
+sketchup:
+    - {fileName: Google-sketchup}
 script:
     - {fileName: GoogleAppsScript-Category}
 gray:
     - {fileName: Gray-Category}
+HDMI:
+    - {fileName: HDMI2dot1-device}
 index:
     - {fileName: index}
+isbn:
+    - {fileName: isbn10-to-isbn13}
+it-device:
+    - {fileName: IT-Device-Category}
 falsy:
     - {fileName: javascript-myCookBook}
 truthy:
@@ -272,6 +339,15 @@ language:
     - {fileName: Language-Category}
     - {fileName: Python-Categroy}
     - {fileName: Web-Category}
+re2:
+    - {fileName: re2-translation}
+latex:
+    - {fileName: re2-translation}
+yaml-front-matter:
+    - {fileName: re2-translation}
+    - {fileName: wiki-inWindows}
+mathjax:
+    - {fileName: re2-translation}
 sed:
     - {fileName: sed-problem-solving}
 stack-overflow:
@@ -304,6 +380,10 @@ folding:
     - {fileName: vim-folding}
 digraphs:
     - {fileName: vim-folding}
+visual-studio-code:
+    - {fileName: vscode-configurations}
+vscode-settings:
+    - {fileName: vscode-configurations}
 web:
     - {fileName: Web-Category}
 html:
@@ -314,11 +394,6 @@ timezone:
     - {fileName: wiki-inWindows}
 tzinfo:
     - {fileName: wiki-inWindows}
-yaml-front-matter:
-    - {fileName: wiki-inWindows}
-vimwiki:
-    - {fileName: Wiki-Setting-Category}
-    - {fileName: wiki-troubleshooting}
 githubio:
     - {fileName: Wiki-Setting-Category}
 toc:

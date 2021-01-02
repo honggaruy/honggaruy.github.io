@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-12-01 11:27:52 +0900
+updated : 2020-12-29 00:08:40 +0900
 tag     : index
 toc     : true
 public  : true
@@ -15,6 +15,8 @@ comment : false
 * [[google_photo_slideshow]]{구글 포토의 슬라이드쇼 콘트롤하기}
 * [[exact-size-photo-print]]{정확한 사이즈로 사진 인쇄하기}
 * [[new-windows-installation]]{새로 윈도우 설치할 때 순서}
+* [[isbn10-to-isbn13]]{ISBN-10 에서 ISBN-13으로 바꾸기}
+* [[Google-sketchup]]{구글 스케치업 정리}
 
 ## [[Term-Category]]{용어 정리 Category}
 
@@ -27,6 +29,7 @@ comment : false
 ### [[Web-Category]]{Web 관련 Category}
 * [[css-meaning]]{갑자기 깨달은 CSS 단어 의미}
 * [[javascript-myCookBook]]{Javascript 초급 코딩 요령}
+* [[css-default-style]]{Default CSS Style 적용하기}
 
 ### [[GoogleAppsScript-Category]]{Google Apps Script 관련 Category}
 
@@ -34,6 +37,7 @@ comment : false
 * [[gas_library]]{구글 스크립트 라이브러리 사용법}
 * [[apps-script-starter]]{로컬에서 구글 Apps Script 개발하기}
 * [[code-isolation]]{typescript로 개발시 파일 순서 문제}
+* [[re2-translation]]{RE2 번역}
 
 ### [[Python-Categroy]]{Python 관련 Category}
 
@@ -46,6 +50,7 @@ comment : false
 * [[dotfiles]]{dotfiles 관련 정리}
 * [[windows-terminal-config]]{윈도우즈 터미널 설정하기}
 * [[korean-font]]{무료 한글 서체}
+* [[vscode-configurations]]{VS Code 설정하기}
 
 ### [[Vim-Category]]{Vim 관련 Category}
 
@@ -56,6 +61,8 @@ comment : false
 ### [[Git-Category]]{Git 관련 Category}
 
 * [[git-commands]]{자주 쓰는 git 명령}
+* [[git-commit-messages]]{Git Commit 메시지}
+* [[git-upstream-meaning]]{git에서 upstream의 의미}
 
 ### [[Windows-Category]]{Windows 도구 관련 Category}
 
@@ -63,12 +70,15 @@ comment : false
 * [[PowerShell-Scripting]]{Powershell 스크립팅}
 * [[Windows-Terminal-Setting]]{Windows Terminal 설정하기}
 
-
 ### [[Linux-Category]]{Linux 도구 관련 Category}
 
 * [[sed-problem-solving]]{GNU sed의 이상한 정규식 처리}
 
-##  [[Wiki-Setting-Category]]{위키 설정 관련 Category}
+## [[IT-Device-Category]]{IT 장비 관련 Category}
+
+* [[HDMI2dot1-device]]{HDMI 2.1 장비 관련 정보} 
+  
+## [[Wiki-Setting-Category]]{위키 설정 관련 Category}
 
 * [[wiki-troubleshooting]]{위키 문제점 해결} 
 * [[wiki-inWindows]]{윈도우즈에서 V+J+G 따라하기}
@@ -80,6 +90,7 @@ comment : false
 
 * [[book-developer-writing]]{개발자의 글쓰기}
 * [[book-how-javascript-works]]{자바스크립트는 왜 그 모양일까}
+* [[book-refactoring-2nd]]{리팩토링 2판}
 
 ---
 

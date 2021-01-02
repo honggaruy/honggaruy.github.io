@@ -3,7 +3,7 @@ layout  : wiki
 title   : vimrc 파일 폴딩하기
 summary : vimrc가 점점 커진다면 폴딩을 적용해보자. 
 date    : 2020-03-14 23:34:02 +0900
-updated : 2020-05-01 13:42:57 +0900
+updated : 2020-12-19 09:34:40 +0900
 tag     : vim folding vimrc 특수문자 digraphs
 toc     : true
 public  : true
@@ -99,6 +99,8 @@ latex   : false
     * step1. : vim 명령줄에서 ':digraphs' 명령으로 어떤 문자 적용할지 확인
       * 현재 vim 메인 폰트로 채택된 font에서 지원되는 특수문자 일람확인 (표시 여부 확인가능) 
     * step2. : vim insert mode에서 ctrl + k 누른후 위에서 찾아낸 문자코드 두자리 입력
+  * 어두운 테마를 사용하니 digraphs 명령 결과로 나온 `digraph table`의 문자를 알아보기 힘들다.
+    * 요기에서 찾아보도록 하자. [Vim digraphs](https://devhints.io/vim-digraphs)
 
 # 3. 결말
 
