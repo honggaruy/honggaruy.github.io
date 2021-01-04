@@ -232,7 +232,7 @@
     children: []
 2021-01-04-week-01th:
     type: blog
-    title: '2021년 01주차 기록'
+    title: '2021년 (구글 캘린더상) 01주차  기록'
     summary: '01/04 (월) ~ 01/10 (일)'
     parent: null
     url: /blog/2021/01/04/week-01th

@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2020-12-29 00:08:40 +0900
+updated : 2021-01-02 23:50:53 +0900
 tag     : index
 toc     : true
 public  : true
@@ -85,6 +85,7 @@ comment : false
 * [[wiki-toc2side]]{위키페이지에서 toc 위치 조정}
 * [[wiki-font]]{위키페이지 폰트 변경} 
 * [[wiki-favicon]]{위키에 파비콘 추가}
+* [[wiki-jekyll-spaceship]]{위키에 jekyll-spaceship 적용}
 
 ## [[Books-Category]]{책읽고 정리한 Category}
 
