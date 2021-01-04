@@ -30,6 +30,7 @@
 - dot-leaders
 - dotfile
 - drop-ice
+- emoji
 - English
 - escaping
 - excel
@@ -69,6 +70,8 @@
 - it-device
 - javascript
 - jekyll
+- jekyll-spaceship
+- jemoji
 - kbd태그
 - keyboard-shortcuts
 - keyword

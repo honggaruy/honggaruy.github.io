@@ -17,7 +17,7 @@ comment-support: utterances
 plugins:
   - jekyll-paginate
   - jekyll-gist
-  - jemoji
+  - jekyll-spaceship
 
 permalink: /blog/:year/:month/:day/:title/
 

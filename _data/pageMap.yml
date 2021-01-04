@@ -230,6 +230,14 @@
     url: /blog/2021/01/01/week-01th
     updated: '2021-01-01 10:00:32 +0900'
     children: []
+2021-01-04-week-01th:
+    type: blog
+    title: '2021년 01주차 기록'
+    summary: '01/04 (월) ~ 01/10 (일)'
+    parent: null
+    url: /blog/2021/01/04/week-01th
+    updated: '2021-01-04 08:10:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -396,7 +404,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2020-12-29 00:08:40 +0900'
+    updated: '2021-01-02 23:50:53 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -606,6 +614,14 @@ wiki-inWindows:
     url: /wiki/wiki-inWindows
     updated: '2020-11-10 21:47:11 +0900'
     children: []
+wiki-jekyll-spaceship:
+    type: wiki
+    title: '위키에 jekyll-spaceship 적용'
+    summary: '다양한 table 작성, emoji and more...'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-jekyll-spaceship
+    updated: '2021-01-04 11:05:40 +0900'
+    children: []
 Wiki-Setting-Category:
     type: wiki
     title: '위키 설정'
@@ -613,7 +629,7 @@ Wiki-Setting-Category:
     parent: index
     url: /wiki/Wiki-Setting-Category
     updated: '2020-04-13 22:37:43 +0900'
-    children: [wiki-favicon, wiki-font, wiki-inWindows, wiki-toc2side, wiki-troubleshooting]
+    children: [wiki-favicon, wiki-font, wiki-inWindows, wiki-jekyll-spaceship, wiki-toc2side, wiki-troubleshooting]
 wiki-toc2side:
     type: wiki
     title: '위키페이지에서 toc 위치 조정'
