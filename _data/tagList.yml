@@ -1,5 +1,6 @@
 - 검색
 - 번역
+- 비교
 - 비동기
 - 생산성
 - 특수문자
@@ -19,12 +20,17 @@
 - cmd
 - command-line
 - commit
+- compare
+- config-js
 - cross
 - css
 - csv
 - custom
 - custom-css-in-markdown
 - d2coding
+- danfojs
+- debug-js
+- desk-setup
 - desktop-shortcut
 - digraphs
 - dot-leaders
@@ -40,6 +46,7 @@
 - flutter
 - folding
 - font
+- free-asset
 - gif
 - git
 - git-commit
@@ -78,6 +85,7 @@
 - kite
 - language
 - latex
+- lego
 - library
 - linux
 - lofi
@@ -87,10 +95,13 @@
 - McCarthy-evaluation
 - minimal-evaluation
 - minpac
+- mocha
 - multi-player
 - nerd
 - new-item
 - new-year
+- npm-trends
+- open-api
 - overloading
 - playwright
 - png
@@ -127,10 +138,12 @@
 - template-literals
 - term
 - test
+- test-console
 - timezone
 - toc
 - todaysideas
 - tool
+- tour
 - translation
 - troubleshooting
 - truthy

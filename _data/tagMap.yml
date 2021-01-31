@@ -1,5 +1,6 @@
 test:
     - {fileName: 2020-04-10-test-post}
+    - {fileName: 2021-01-25-week-04th}
 todaysideas:
     - {fileName: 2020-04-15-todays-ideas}
 excel:
@@ -224,6 +225,7 @@ icon:
     - {fileName: 2020-11-30-week-49th}
 puppeteer:
     - {fileName: 2020-11-23-week-48th}
+    - {fileName: meet-puppeteer}
 async:
     - {fileName: 2020-11-23-week-48th}
 await:
@@ -277,6 +279,8 @@ custom-css-in-markdown:
     - {fileName: 2020-12-28-week-53th}
 translation:
     - {fileName: 2020-12-28-week-53th}
+    - {fileName: 2021-01-18-week-03th}
+    - {fileName: 2021-01-25-week-04th}
     - {fileName: isbn10-to-isbn13}
     - {fileName: re2-translation}
 emoji:
@@ -290,6 +294,24 @@ jekyll-spaceship:
 new-year:
     - {fileName: 2021-01-01-week-01th}
     - {fileName: 2021-01-04-week-01th}
+danfojs:
+    - {fileName: 2021-01-11-week-02th}
+lego:
+    - {fileName: 2021-01-18-week-03th}
+free-asset:
+    - {fileName: 2021-01-18-week-03th}
+tour:
+    - {fileName: 2021-01-18-week-03th}
+test-console:
+    - {fileName: 2021-01-25-week-04th}
+mocha:
+    - {fileName: 2021-01-25-week-04th}
+compare:
+    - {fileName: 2021-01-25-week-04th}
+비교:
+    - {fileName: 2021-01-25-week-04th}
+npm-trends:
+    - {fileName: 2021-01-25-week-04th}
 books:
     - {fileName: Books-Category}
 troubleshooting:
@@ -301,6 +323,8 @@ cross:
     - {fileName: Cross-Category}
 http:
     - {fileName: css-default-style}
+desk-setup:
+    - {fileName: desk-setup}
 shell:
     - {fileName: dotfiles}
     - {fileName: sed-problem-solving}
@@ -349,6 +373,12 @@ language:
     - {fileName: Language-Category}
     - {fileName: Python-Categroy}
     - {fileName: Web-Category}
+open-api:
+    - {fileName: OpenApi-usage}
+config-js:
+    - {fileName: OpenApi-usage}
+debug-js:
+    - {fileName: OpenApi-usage}
 re2:
     - {fileName: re2-translation}
 latex:

@@ -238,6 +238,30 @@
     url: /blog/2021/01/04/week-01th
     updated: '2021-01-04 08:10:32 +0900'
     children: []
+2021-01-11-week-02th:
+    type: blog
+    title: '2021년 02주차 기록'
+    summary: '01/11 (월) ~ 01/17 (일)'
+    parent: null
+    url: /blog/2021/01/11/week-02th
+    updated: '2021-01-11 09:03:32 +0900'
+    children: []
+2021-01-18-week-03th:
+    type: blog
+    title: '2021년 03주차 기록'
+    summary: '01/18 (월) ~ 01/24 (일)'
+    parent: null
+    url: /blog/2021/01/18/week-03th
+    updated: '2021-01-18 09:03:32 +0900'
+    children: []
+2021-01-25-week-04th:
+    type: blog
+    title: '2021년 04주차 기록'
+    summary: '01/25 (월) ~ 01/31 (일)'
+    parent: null
+    url: /blog/2021/01/25/week-04th
+    updated: '2021-01-25 08:38:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -285,6 +309,14 @@ css-meaning:
     parent: Web-Category
     url: /wiki/css-meaning
     updated: '2020-04-14 08:33:35 +0900'
+    children: []
+desk-setup:
+    type: wiki
+    title: '데스크 셋업 구경하기'
+    summary: '인제 시작!!'
+    parent: Gray-Category
+    url: /wiki/desk-setup
+    updated: '2021-01-06 13:31:42 +0900'
     children: []
 dotfiles:
     type: wiki
@@ -364,7 +396,7 @@ google_photo_slideshow:
     summary: '구글 포토로만 하는 건 아님...'
     parent: Gray-Category
     url: /wiki/google_photo_slideshow
-    updated: '2020-05-19 17:00:32 +0900'
+    updated: '2021-01-31 09:41:23 +0900'
     children: []
 Google-sketchup:
     type: wiki
@@ -389,7 +421,7 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: [exact-size-photo-print, google_photo_slideshow, Google-sketchup, isbn10-to-isbn13, new-windows-installation, stackoverflow_searchhelp]
+    children: [desk-setup, exact-size-photo-print, google_photo_slideshow, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp]
 HDMI2dot1-device:
     type: wiki
     title: 'HDMI2.1 관련 장비 정보'
@@ -404,7 +436,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-01-02 23:50:53 +0900'
+    updated: '2021-01-26 13:05:27 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -462,6 +494,14 @@ Linux-Category:
     url: /wiki/Linux-Category
     updated: '2020-04-14 08:24:16 +0900'
     children: [sed-problem-solving]
+meet-puppeteer:
+    type: wiki
+    title: 'Puppeteer 시작하기'
+    summary: 'javascript로 브라우저 자동화'
+    parent: Web-Category
+    url: /wiki/meet-puppeteer
+    updated: '2021-01-30 01:17:24 +0900'
+    children: []
 new-windows-installation:
     type: wiki
     title: '새로 윈도우 설치할 때 순서'
@@ -469,6 +509,14 @@ new-windows-installation:
     parent: Gray-Category
     url: /wiki/new-windows-installation
     updated: '2020-06-08 20:54:07 +0900'
+    children: []
+OpenApi-usage:
+    type: wiki
+    title: 'Open API 사용하기'
+    summary: '실제 사용법 정리'
+    parent: Gray-Category
+    url: /wiki/OpenApi-usage
+    updated: '2021-01-26 15:09:34 +0900'
     children: []
 PowerShell-Scripting:
     type: wiki
@@ -500,7 +548,7 @@ re2-translation:
     summary: '구글 RE2'
     parent: GoogleAppsScript-Category
     url: /wiki/re2-translation
-    updated: '2020-12-14 21:52:31 +0900'
+    updated: '2021-01-25 20:58:48 +0900'
     children: []
 sed-problem-solving:
     type: wiki
@@ -589,7 +637,7 @@ Web-Category:
     parent: Language-Category
     url: /wiki/Web-Category
     updated: '2020-05-07 12:18:24 +0900'
-    children: [css-default-style, css-meaning, javascript-myCookBook]
+    children: [css-default-style, css-meaning, javascript-myCookBook, meet-puppeteer]
 wiki-favicon:
     type: wiki
     title: '위키에 favicon 추가'
@@ -604,7 +652,7 @@ wiki-font:
     summary: ""
     parent: Wiki-Setting-Category
     url: /wiki/wiki-font
-    updated: '2020-04-14 08:43:59 +0900'
+    updated: '2021-01-25 13:49:37 +0900'
     children: []
 wiki-inWindows:
     type: wiki

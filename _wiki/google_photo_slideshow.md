@@ -3,7 +3,7 @@ layout  : wiki
 title   : 구글 포토의 슬라이드쇼 콘트롤하기  
 summary : 구글 포토로만 하는 건 아님... 
 date    : 2020-05-16 16:07:30 +0900
-updated : 2020-05-19 17:00:32 +0900
+updated : 2021-01-31 09:41:23 +0900
 tag     : google google-photos google-slides
 toc     : true
 public  : true
@@ -53,7 +53,7 @@ When you add photos to an album you can sort from older to newer (3-dots > Edit 
 
 ## 구글 포토를 자동으로 슬라이드에 넣어주는 확장프로그램
 
-* 위에서 말했던 프로그램이 실제로 있었다.. [Photos To Slides](https://docs.google.com/presentation/d/1JJK_alvKbPXoSNad7sgVGVDAkqswczz7oZetiFp0fAE/edit#slide=id.a8c2551a-7783-4ea4-ae1a-46fc96576f13)
+* 위에서 말했던 프로그램이 실제로 있었다.. [Photos To Slides](https://gsuite.google.com/marketplace/app/photos_to_slides/859164198261)
 * 해보니 잘되긴 하는데.... [테스트 문서 링크](https://docs.google.com/presentation/d/1JJK_alvKbPXoSNad7sgVGVDAkqswczz7oZetiFp0fAE/edit#slide=id.a8c2551a-7783-4ea4-ae1a-46fc96576f13)
   * 앨범당 50장으로 제한이 있고 ... ( 돈주면 1000장까지)
   * 개인 앨범만 된다 (유료는 공유앨범도 지원)
