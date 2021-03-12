@@ -3,8 +3,8 @@ layout  : wiki
 title   : 용어 설명 모음 
 summary : 아직 안정함  
 date    : 2020-04-27 11:15:09 +0900
-updated : 2020-06-05 21:00:33 +0900
-tag     : keyword hash string-interpolation 
+updated : 2021-03-12 12:00:17 +0900
+tag     : keyword hash string-interpolation terminology 
 toc     : true
 public  : true
 parent  : [[Term-Category]] 

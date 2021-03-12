@@ -3,8 +3,8 @@ layout  : wiki
 title   : String interpolation 
 summary : 템플릿 문자열, 백틱 문자열, f문자열 
 date    : 2020-06-05 20:25:17 +0900
-updated : 2020-11-10 21:28:19 +0900
-tag     : term string-interpolation template-literals variable-expansion variable-substitution 
+updated : 2021-03-12 12:00:51 +0900
+tag     : terminology string-interpolation template-literals variable-expansion variable-substitution 
 toc     : true
 public  : true
 parent  : [[Term-Category]] 

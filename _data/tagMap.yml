@@ -44,7 +44,7 @@ css:
     - {fileName: stackoverflow_searchhelp}
     - {fileName: Web-Category}
     - {fileName: wiki-toc2side}
-tag:
+tags:
     - {fileName: 2020-05-02-todays-ideas}
     - {fileName: 2020-05-11-todays-ideas}
 wiki-setting:
@@ -193,8 +193,9 @@ linux:
     - {fileName: 2020-11-09-week-46th}
     - {fileName: Linux-Category}
     - {fileName: sed-problem-solving}
-term:
+terminology:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: keyword_collection}
     - {fileName: Term-Category}
     - {fileName: term-short-circuit-evaluation}
     - {fileName: term-string-interpolation}
@@ -237,6 +238,8 @@ axios:
 promise:
     - {fileName: 2020-11-23-week-48th}
 symbol:
+    - {fileName: 2020-11-23-week-48th}
+commanderjs:
     - {fileName: 2020-11-23-week-48th}
 bluetooth:
     - {fileName: 2020-11-30-week-49th}
@@ -312,6 +315,10 @@ compare:
     - {fileName: 2021-01-25-week-04th}
 npm-trends:
     - {fileName: 2021-01-25-week-04th}
+jquery-selectors:
+    - {fileName: 2021-02-01-week-05th}
+css-selectors:
+    - {fileName: 2021-02-01-week-05th}
 books:
     - {fileName: Books-Category}
 troubleshooting:
@@ -440,6 +447,8 @@ toc:
     - {fileName: wiki-toc2side}
 scss:
     - {fileName: wiki-toc2side}
+liguid:
+    - {fileName: wiki-update-guide}
 sysinternals:
     - {fileName: Windows-Category}
     - {fileName: Windows-Sysinternals}

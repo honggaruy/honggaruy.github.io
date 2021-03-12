@@ -3,7 +3,7 @@ layout  : post
 title   : 오늘의 영감 
 summary : 생산성 향상  
 date    : 2020-05-11 19:52:32 +0900
-tag     : google google-calendar google-tasks google-keep 생산성 escaping tag
+tag     : google google-calendar google-tasks google-keep 생산성 escaping tags
 toc     : true
 comment : true
 public  : true

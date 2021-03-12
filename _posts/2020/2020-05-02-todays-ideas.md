@@ -3,7 +3,7 @@ layout  : post
 title   : 오늘의 영감
 summary : 태그 표시 관련 
 date    : 2020-05-02 13:09:32 +0900
-tag     : tag wiki-setting 
+tag     : tags wiki-setting 
 toc     : true
 comment : true
 public  : true

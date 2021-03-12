@@ -19,11 +19,13 @@
 - clasp
 - cmd
 - command-line
+- commanderjs
 - commit
 - compare
 - config-js
 - cross
 - css
+- css-selectors
 - csv
 - custom
 - custom-css-in-markdown
@@ -79,6 +81,7 @@
 - jekyll
 - jekyll-spaceship
 - jemoji
+- jquery-selectors
 - kbd태그
 - keyboard-shortcuts
 - keyword
@@ -87,6 +90,7 @@
 - latex
 - lego
 - library
+- liguid
 - linux
 - lofi
 - markdown-css
@@ -133,10 +137,10 @@
 - surgeon
 - symbol
 - sysinternals
-- tag
+- tags
 - Tashi
 - template-literals
-- term
+- terminology
 - test
 - test-console
 - timezone
