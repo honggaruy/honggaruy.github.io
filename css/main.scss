@@ -7,8 +7,13 @@
 // 참조 링크: https://fonts.google.com/
 @import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean&effect=shadow-multiple|3d|fire-animation');
 
-// 눈누 링크: https://noonnu.cc/ 다 좋은데 폰트가 좀 넓어서 .. 
-@font-face { font-family: 'Handon3gyeopsal300g'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff'); font-weight: normal; font-style: normal; }
+// 눈누 링크: https://noonnu.cc/font_page/42 나눔바른펜
+@font-face {
+    font-family: 'NanumBarunpen';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 $base-font-family  : Arial;
 $default-font-size : 0.9rem;
