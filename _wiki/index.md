@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-01-02 23:50:53 +0900
+updated : 2021-03-10 15:14:18 +0900
 tag     : index
 toc     : true
 public  : true
@@ -17,6 +17,8 @@ comment : false
 * [[new-windows-installation]]{새로 윈도우 설치할 때 순서}
 * [[isbn10-to-isbn13]]{ISBN-10 에서 ISBN-13으로 바꾸기}
 * [[Google-sketchup]]{구글 스케치업 정리}
+* [[OpenApi-usage]]{Open API 사용하기}
+* [[desk-setup]]{데스크 셋업 구경하기}
 
 ## [[Term-Category]]{용어 정리 Category}
 
@@ -30,6 +32,7 @@ comment : false
 * [[css-meaning]]{갑자기 깨달은 CSS 단어 의미}
 * [[javascript-myCookBook]]{Javascript 초급 코딩 요령}
 * [[css-default-style]]{Default CSS Style 적용하기}
+* [[meet-puppeteer]]{Puppeteer 시작하기}
 
 ### [[GoogleAppsScript-Category]]{Google Apps Script 관련 Category}
 
@@ -86,6 +89,7 @@ comment : false
 * [[wiki-font]]{위키페이지 폰트 변경} 
 * [[wiki-favicon]]{위키에 파비콘 추가}
 * [[wiki-jekyll-spaceship]]{위키에 jekyll-spaceship 적용}
+* [[wiki-update-guide]]{위키 편집 안내서}
 
 ## [[Books-Category]]{책읽고 정리한 Category}
 
