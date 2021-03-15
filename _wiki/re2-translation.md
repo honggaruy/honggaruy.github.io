@@ -3,7 +3,7 @@ layout  : wiki
 title   : RE2 번역 
 summary : 구글 RE2 
 date    : 2020-12-05 11:25:29 +0900
-updated : 2020-12-14 21:52:31 +0900
+updated : 2021-01-25 20:58:48 +0900
 tag     : re2 regex latex yaml-front-matter mathjax translation
 toc     : true
 public  : true
@@ -78,13 +78,13 @@ latex   : true
   * 메타 문자와 match하려면, backslash로 escape합니다
     * 즉, `\+`는 literal 플러스 문자와 match됩니다
 * 두 개의 정규 표현식은 서로 대체 되거나 연결하여 새로운 정규표현식을 구성할 수 있습니다
-  * 즉, $$e_1$$가 $$s$$에 match하고 $$e_2$$가 $$t$$와 match한다면..
-    * $$e_1$$`|`$$e_2$$도 $$s$$나 $$t$$에 match하고 $$e_1e_2$$도 $$st$$에 match한다
+  * 즉, $e_1$가 $s$에 match하고 $e_2$가 $t$와 match한다면..
+    * $e_1$`|`$e_2$도 $s$나 $t$에 match하고 $e_1e_2$도 $st$에 match한다
 * 메타문자 `*`,`+`,`?`는 반복 연산자입니다:
-  * $$e_1$$`*`는 0개 이상의 (아마도 다른)strings의 sequence와 match됩니다
-    * 위에서 각각의 string은 표현식 $$e_1$$과 match됩니다 
-  * $$e_1$$`+`는 1개 이상과 match되며
-  * $$e_1$$`?`는 0 혹은 1개와 match됩니다
+  * $e_1$`*`는 0개 이상의 (아마도 다른)strings의 sequence와 match됩니다
+    * 위에서 각각의 string은 표현식 $e_1$과 match됩니다 
+  * $e_1$`+`는 1개 이상과 match되며
+  * $e_1$`?`는 0 혹은 1개와 match됩니다
 * 약한 binding부터 강한 binding 순서로 연산자 우선순위는..
   * 첫번째가 교대(alternation, `|`), 그 다음이 연결(concatenation) 마지막이 반복(repetition) 연산자입니다
   * 명시적 괄호(Explicit parentheses)는 이 우선순위에 예외를 줄 수 있습니다.
@@ -96,7 +96,7 @@ latex   : true
   * 이 부분집합(subset)은 모든 정규식 언어을 묘사하는데 충분합니다
   * 느슨하게 말하면, 정규식 언어(regular language)는 ... 
     * text를 고정된 크기의 메모리를 사용하여 한번 통과하여 일치시킬수 있는 ..
-    * 문자열 집합니다.
+    * 문자열 집합입니다.
   * 최신의 정규 표현식 기능(특히 Perl과 그 복제품들)은 ..
     * 많은 신규 연산자와 escape squence를 추가했는데.. 
     * 이들은 정규식을 간결하게 만들기도 하지만..
@@ -237,17 +237,109 @@ latex   : true
 
 ### Empty strings
 
-|     | 빈 문자열                       |
-| :-- | :--                             |
-| `^` | line이나 text의 시작 (`m`=true) |
-| `$` |                                 |
+<style>
+.notsupport-empty-strings tr:nth-child(n+6):nth-child(-n+8) { background: lightgrey; }
+.notsupport-empty-strings tr:nth-child(n+10) { background: lightgrey; }
+</style>
+
+{: .notsupport-empty-strings}
+|           | 공백  문자열                                                                                                |
+| :--       | :--                                                                                                         |
+| `^`       | line(`m`이 true일때) 이나 text의 시작                                                                       |
+| `$`       | line(`m`이 true일때) 이나 text의 끝 (`\Z`이 아니고 `\z`과 같음)                                             |
+| `\A`      | text의 시작                                                                                                 |
+| `\b`      | ASCII 단어의 경계 (한 쪽은 `\w`이고 다른한 쪽은 `\W`, `\A` 혹은 `\z`가 됨                                   |
+| `\B`      | ASCII 단어의 경계에 있지 않을때                                                                             |
+| `\g`      | 찾는 sbutext의 시작 (지원 안됨) PCRE                                                                        |
+| `\G`      | 마지막 match의 끝 (지원 안됨) PERL                                                                          |
+| `\Z`      | text의 끝이거나, text의 끝에서 새 줄이 시작하기 전 (지원 안됨)                                              |
+| `\z`      | text의 끝                                                                                                   |
+| `(?=re)`  | `re`에 match되는 text 바로 전 (지원 안됨)                                                                   |
+| `(?!re)`  | `re`에 match되지 않는 text 바로 전 (지원 안됨)                                                              |
+| `(?<=re)` | `re`에 match되는 text 이후 (지원 안됨)                                                                      |
+| `(?<!re)` | `re`에 match되지 않는 text 이후 (지원 안됨)                                                                 |
+| `re&`     | `re`에 match되는 text 이전  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/%5C&)     |
+| `re@=`    | `re`에 match되는 text 이전  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@=)      |
+| `re@!`    | `re`에 match되지않는 text 이전  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@!)  |
+| `re@<=`   | `re`에 match되는 text 이후  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@<=)     |
+| `re@<!`   | `re`에 match되지않는 text 이후  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@<!) |
+| `\zs`     | match 시작의 sets (= `\K`) (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs)       |
+| `\ze`     | match 끝의 sets  (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\ze)                 |
+| `\%^`     | file의 시작 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%^)                      |
+| `\%$`     | file의 끝 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%$)                        |
+| `\%V`     | screen 상에서 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%V)                    |
+| `\%#`     | cursor 위치에서 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%#)                  |
+| `\%'m`    | mark `m` 위치에서 (지원 안됨) VIM (링크는 표 아랫쪽 참조)                                                   |
+| `\%23l`   | line 23 위치에서 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%l)                 |
+| `\%23c`   | column 23 위치에서 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%c)               |
+| `\%23v`   | virtual column 23 위치에서 (지원 안됨) [VIM](http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%<v)      |
+
+`\%'m` 링크는 [이 곳][linkid1]을 참조하세요. 테이블내에서 링크 안됨
+
+[linkid1]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%'m "VIM"
+
+### Escape sequences
+
+* [이스케이프 시퀀스란 ?](https://docs.microsoft.com/ko-kr/cpp/c-language/escape-sequences?view=msvc-160)
+
+|      | 이스케이프 시퀀스        |
+| :--  | :--                      |
+| `\a` | bell (≡`╲007`)           |
+| `\f` | form feed (≡`╲014`)      |
+| `\t` | horizontal tab (≡`╲011`) |
+
+* 안쓸것 같아 대부분 생략
 
 ### Perl 문자 클래스
 
-|      | Perl 문자 클래스 ( all ASCII-only) |
-| `\d` | 숫자 (≡ `[0-9]`)                   |
-|      |                                    |
-|      |                                    |
-|      |                                    |
+|      | Perl 문자 클래스 ( all ASCII-only)     |
+| :--  | :--                                    |
+| `\d` | 숫자 (≡ `[0-9]`)                       |
+| `\D` | 숫자아닌 문자  (≡ `[^0-9]`)            |
+| `\s` | 공백 문자  (≡ `[\t\n\f\r ]`)           |
+| `\S` | 공백아닌 문자  (≡ `[^\t\n\f\r ]`)      |
+| `\w` | 일반단어 문자  (≡ `[0-9A-Za-z_]`)      |
+| `\W` | 일반단어아닌 문자  (≡ `[^0-9A-Za-z_]`) |
+|      |                                        |
+|      |                                        |
+|      |                                        |
+
+### ASCII 문자 클래스
+
+* 편집시 팁: 연속된 `[[` 앞에 `╲`를 붙여서 링크를 만들지 않도록 한다
+
+|                 | ASCII 문자 클래스                                                       |
+| :--             | :--                                                                     |
+| `\[[:alnum:]]`  | 알파누메릭 (≡ `[0-9A-Za-z]`)                                            |
+| `\[[:alpha:]]`  | 알파베틱 (≡ `[A-Za-z]`)                                                 |
+| `\[[:ascii:]]`  | ASCII (≡ `[\x00-\x7F]`)                                                 |
+| `\[[:blank:]]`  | 빈칸문자  (≡ `[\t ]`)                                                   |
+| `\[[:cntrl:]]`  | control (≡ `[\x00-\x1F\x7F]`)                                           |
+| `\[[:digit:]]`  | 숫자  (≡ `[0-9]`)                                                       |
+| `\[[:graph:]]`  | graphical (≡ `[!-~]` ≡ `[A-Za-z0-9!"#$%&'()*+,\-./:;<=>?@[\\\]^_{|}~]`) |
+| `\[[:lower:]]`  | 소문자 (≡ `[a-z]`)                                                      |
+| `\[[:print:]]`  | 프린트되는 문자 (≡ `[ -~]` ≡ `[ [:graph:]]`)                            |
+| `\[[:punct:]]`  | 구두점  (≡ `[!-/:-@[- ' {-~]`)                                          |
+| `\[[:space:]]`  | 공백문자 (≡ `[\t\n\v\f\r ]`)                                            |
+| `\[[:upeer:]]`  | 대문자 (≡ `[A-Z]`)                                                      |
+| `\[[:word:]]`   | 단어문자 (≡ `[0-9A-Za-z_]`)                                             |
+| `\[[:xdigit:]]` | 16진수  (≡ `[0-9A-Fa-f]`)                                               |
+
+### Unicode character class names--general category
+
+* 어떻게 사용하는지 모르겠어서 생략
+
+### Unicode character class names--scripts
+
+* 어떻게 사용하는지 모르겠어서 생략
+
+### Vim character classes
+
+* 대부분이 Not Supported라 생략
+* Not supported가 아닌것은 앞에 나왔음
+
+### Magic
+
+* 일단 생략
 
 ### 끝
