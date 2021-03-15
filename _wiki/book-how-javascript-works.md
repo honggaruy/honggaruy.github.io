@@ -3,12 +3,13 @@ layout  : wiki
 title   : 자바스크립트는 왜 그 모양일까? 
 summary : 더글라스 크락포드가 알려주는 ... 
 date    : 2020-12-01 11:27:56 +0900
-updated : 2020-12-18 14:23:16 +0900
+updated : 2021-03-15 23:43:01 +0900
 tag     : br*** book 
 toc     : true
 public  : false
 parent  : [[Books-Category]] 
 latex   : false
+comment : false
 ---
 * TOC
 {:toc}

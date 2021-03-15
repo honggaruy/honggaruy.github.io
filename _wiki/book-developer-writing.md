@@ -3,12 +3,13 @@ layout  : wiki
 title   : 개발자의 글쓰기 
 summary : 변수 네이밍부터 릴리스노트, ... 
 date    : 2020-11-26 09:25:18 +0900
-updated : 2020-11-27 20:07:01 +0900
+updated : 2021-03-14 10:19:28 +0900
 tag     : br*** book 
 toc     : true
 public  : false
 parent  : [[Books-Category]] 
 latex   : false
+comment : false
 ---
 * TOC
 {:toc}

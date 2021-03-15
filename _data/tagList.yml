@@ -97,6 +97,7 @@
 - markdown-table
 - mathjax
 - McCarthy-evaluation
+- mermaid
 - minimal-evaluation
 - minpac
 - mocha
@@ -107,6 +108,7 @@
 - npm-trends
 - open-api
 - overloading
+- plantuml
 - playwright
 - png
 - port
@@ -143,6 +145,7 @@
 - terminology
 - test
 - test-console
+- thequeensgambit
 - timezone
 - toc
 - todaysideas

@@ -3,12 +3,13 @@ layout  : wiki
 title   : 리팩토링 2판 
 summary : 코드 구조를 체계적으로 개선하여 효율적인 리팩터링 구현하기 
 date    : 2020-12-09 12:37:56 +0900
-updated : 2020-12-31 01:42:13 +0900
+updated : 2021-03-15 23:43:16 +0900
 tag     : br*** book 
 toc     : true
 public  : false
 parent  : [[Books-Category]] 
 latex   : false
+comment : false
 ---
 * TOC
 {:toc}

@@ -684,7 +684,7 @@ wiki-jekyll-spaceship:
     summary: '다양한 table 작성, emoji and more...'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-jekyll-spaceship
-    updated: '2021-02-04 11:27:08 +0900'
+    updated: '2021-03-13 20:13:10 +0900'
     children: []
 Wiki-Setting-Category:
     type: wiki

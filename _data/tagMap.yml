@@ -441,6 +441,12 @@ timezone:
     - {fileName: wiki-inWindows}
 tzinfo:
     - {fileName: wiki-inWindows}
+plantuml:
+    - {fileName: wiki-jekyll-spaceship}
+mermaid:
+    - {fileName: wiki-jekyll-spaceship}
+thequeensgambit:
+    - {fileName: wiki-jekyll-spaceship}
 githubio:
     - {fileName: Wiki-Setting-Category}
 toc:
