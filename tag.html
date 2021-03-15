@@ -46,9 +46,15 @@ public: true
         {% endif %}
     {% endfor %}
         </ul>
+
+        <h3 id="stackoverflow">Checking ... "#{{ tag }}" in StackOverflow</h3>
+
+
     </div>
 {% endfor %}
 </div>
+<script src="../js/axios.min.js"></script>
+<script src="../js/taginstackoverflow.js"></script>
 <script>
     function showTag(selector) {
 
@@ -61,6 +67,8 @@ public: true
         var list = document.querySelector(selector);
         list.classList.add('visible');
         list.classList.remove('invisible');
+        const onlyTagString = selector.slice(1)
+        document.dispatchEvent(new CustomEvent('showtag', { detail: onlyTagString }));
     }
 
     ;(function showInitTag() {
