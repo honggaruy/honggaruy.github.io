@@ -3,8 +3,8 @@ layout  : wiki
 title   : 위키에 jekyll-spaceship 적용 
 summary : 다양한 table 작성, emoji and more... 
 date    : 2021-01-02 23:51:07 +0900
-updated : 2021-01-04 11:05:40 +0900
-tag     : jekyll-spaceship markdown-table emoji 
+updated : 2021-03-13 20:13:10 +0900
+tag     : jekyll-spaceship markdown-table plantuml mermaid emoji thequeensgambit
 toc     : true
 public  : true
 parent  : [[Wiki-Setting-Category]] 
@@ -106,12 +106,26 @@ latex   : false
 .big-chess-table tr:nth-child(-2n+8) td:nth-child(-2n+7) {background: burlywood;}
 .big-chess-table tr:nth-child(-2n+7) td:nth-child(-2n+7) {background: blanchedalmond;}
 .big-chess-table tr:nth-child(-2n+8) td:nth-child(-2n+8) {background: blanchedalmond;}
-.chess-container {display: flex; align-items: center; justify-content: center;}
+.chess-container {display: flex; align-items: center; justify-content: space-around;}
 </style>
+
+* 원래 위 링크에 있던 체스 보드는 이랬지만...
+  * 기물이 너무 작아 잘 안보이고 체스판이 너무 길쭉하다.
+
+|---|---|---|---|---|---|---|---|---|
+| ♜ | ♞ | ♝ | ♛ | ♚ | ♝ | ♞ | ♜ | 8 |
+| ♟ | ♟ | ♟ |   | ♟ | ♟ | ♟ | ♟ | 7 |
+|   |   |   |   |   |   |   |   | 6 |
+|   |   |   | ♟ |   |   |   |   | 5 |
+|   |   | ♙ | ♙ |   |   |   |   | 4 |
+|   |   |   |   |   |   |   |   | 3 |
+| ♙ | ♙ |   |   | ♙ | ♙ | ♙ | ♙ | 2 |
+| ♖ | ♘ | ♗ | ♕ | ♔ | ♗ | ♘ | ♖ | 1 |
+| a | b | c | d | e | f | g | h | x |
 
 * custom table css 설정으로 확대한 체스보드 테이블을 그릴 수 있다.
   * 위에서 소개했던 테이블 스타일링을 활용했다
-* 요즘 넷플릭스 영화로 유명한 [**퀸즈 갬빗** 오프닝](https://en.wikipedia.org/wiki/Queen%27s_Gambit) 이다
+* 요즘 넷플릭스 영화로 유명한 [**퀸즈 갬빗** 오프닝](https://en.wikipedia.org/wiki/Queen%27s_Gambit) 이다. #thequeensgambit
 
 <div markdown="1" class="chess-container">
 
@@ -137,7 +151,7 @@ latex   : false
   * 아래와 같이 구성하면 markdown 문법과 HTML 문법을 동시에 사용하여 문서를 작성할 수 있다. 
     ```html
     <style>
-    .chess-container {display: flex; align-items: center; justify-content: center;}
+    .chess-container {display: flex; align-items: center; justify-content: space-around;}
     </style>
     
     <div markdown="1" class="chess-container">
@@ -148,11 +162,12 @@ latex   : false
     
     </div>
     ```
+  * 위 코드에서 `justify-content`를 `center`로 설정하면 체스보드와 그림 사이에 여유가 없이 딱 붙게됨. 
   * 위에서 테이블과 포스터의 키를 맞추는 것은 `td` 태그의 `line-height` attr을 미세조정하여 맞춤. 
     * line-height: 1.32em 으로 맞춤
   * CSS flexbox 문법을 찾아볼 것
 
-[poster-img]: https://upload.wikimedia.org/wikipedia/en/d/d3/The_Queen%27s_Gambit.jpg "The Queen's Gambit Poster"
+[poster-img]: https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png "The Queen's Gambit Poster"
 
 #### Cell Alignment
 
@@ -256,14 +271,34 @@ latex   : false
  
 ### 2. MathJax Usage
 
+* 예제
+
 $ a*b = c^b $
 
 $ 2^{\frac{n-1}{3}} $
 
 $ \int\_a^b f(x)\,dx. $
 
+* [원래 johngrib님 가이드](https://johngrib.github.io/wiki/mathjax-latex/)대로 `$`를 두 개씩 써서 감쌌는데..
+* `jekyll-spaceship`을 사용하면서 ...
+  * 두개씩 쓰면 그 줄은 그 수식만 존재하게 되며 
+  * 하나씩만 쓰면 다른 글자와도 어울릴수 있게됨.
+  * 원래부터 이런 것은 아니었음.
+    * [이 문서](/wiki/re2-translation/#syntax)에서 `$`를 두 개써도 다른 글자와 어울릴 수 있었음
+    * 해당 문서 히스토리를 보면 알겠지만 jekyll-spaceship 적용이후 틀려져서 하나짜리로 변경하게 됨
+    * 왜 이렇게 되는지는 아직 알아보지 않음. 
+
+* `$` 하나로 감싼 예제 
+
+example 1) 이 수식 $ a*b = c^b $을 다른 문자열과 같이 써 본다.
+
+* `$` 두 개로 감싼 예제 
+
+example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
+
 ### 3. PlantUML Usage
 
+* #platuml
 * [PlantUML 설명서](https://plantuml.com/)
 
 * plantuml 예제
@@ -280,6 +315,8 @@ $ \int\_a^b f(x)\,dx. $
 
 ### 4. Mermaid Usage
 
+* #mermaid
+* [mermaid-js 문서 홈페이지](https://mermaid-js.github.io/mermaid/#/)
 * mermaid 예제
 
   ```mermaid!
@@ -344,10 +381,8 @@ $ \int\_a^b f(x)\,dx. $
 
 * General Audio Usage
 
-  ![](//www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3)
+  ![](https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3)
   
-  ![](//www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3?autoplay=1&loop=1) 
- 
   * <span style="background:pink;">Audio는 안되는 듯.. 아직은 필요없어서 왜 안되는지는 확인안해봄.</span>
  
  
@@ -377,6 +412,7 @@ Escaped:
 
 ### 8. Emoji Usage :+1:
 
+* #emoji
 * I give this plugin two :+1:!
  
 <style>
