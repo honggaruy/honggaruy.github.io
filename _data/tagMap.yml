@@ -319,10 +319,15 @@ jquery-selectors:
     - {fileName: 2021-02-01-week-05th}
 css-selectors:
     - {fileName: 2021-02-01-week-05th}
+troubleshooting:
+    - {fileName: 2021-03-15-week-11th}
+    - {fileName: code-isolation}
+'br***':
+    - {fileName: book-effective-python-2nd}
+book:
+    - {fileName: book-effective-python-2nd}
 books:
     - {fileName: Books-Category}
-troubleshooting:
-    - {fileName: code-isolation}
 typescript:
     - {fileName: code-isolation}
     - {fileName: javascript-myCookBook}

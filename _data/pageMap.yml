@@ -286,6 +286,14 @@
     url: /blog/2021/03/15/week-11th
     updated: '2021-03-15 17:01:32 +0900'
     children: []
+2021-03-22-week-12th:
+    type: blog
+    title: '2021년 12주차 기록'
+    summary: '03/22 (월) ~ 03/28 (일)'
+    parent: null
+    url: /blog/2021/03/22/week-12th
+    updated: '2021-03-22 10:55:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -294,14 +302,22 @@ apps-script-starter:
     url: /wiki/apps-script-starter
     updated: '2020-07-15 22:06:32 +0900'
     children: []
+book-effective-python-2nd:
+    type: wiki
+    title: '파이썬 코딩의 기술 2판'
+    summary: '똑똑하게 코딩하는 법'
+    parent: Books-Category
+    url: /wiki/book-effective-python-2nd
+    updated: '2021-03-19 23:03:43 +0900'
+    children: []
 Books-Category:
     type: wiki
-    title: '위키 설정'
+    title: '책읽고 정리한 카테고리'
     summary: '카테고리 1단계 (끝)'
     parent: index
     url: /wiki/Books-Category
-    updated: '2020-11-26 09:22:03 +0900'
-    children: []
+    updated: '2021-03-19 23:06:51 +0900'
+    children: [book-effective-python-2nd]
 code-isolation:
     type: wiki
     title: 'typescript로 개발시 파일 순서 문제'
@@ -460,7 +476,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-03-10 15:14:18 +0900'
+    updated: '2021-03-19 17:53:41 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
