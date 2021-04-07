@@ -130,6 +130,7 @@ dotfile:
     - {fileName: Windows-Terminal-Setting}
 ruby:
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2021-04-05-week-14th}
 windows:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-09-week-46th}
@@ -227,9 +228,9 @@ icon:
 puppeteer:
     - {fileName: 2020-11-23-week-48th}
     - {fileName: meet-puppeteer}
-async:
+async.js:
     - {fileName: 2020-11-23-week-48th}
-await:
+async-await:
     - {fileName: 2020-11-23-week-48th}
 비동기:
     - {fileName: 2020-11-23-week-48th}
@@ -322,10 +323,15 @@ css-selectors:
 troubleshooting:
     - {fileName: 2021-03-15-week-11th}
     - {fileName: code-isolation}
-'br***':
-    - {fileName: book-effective-python-2nd}
-book:
-    - {fileName: book-effective-python-2nd}
+favicon:
+    - {fileName: 2021-03-15-week-11th}
+    - {fileName: wiki-favicon}
+google-custom-search:
+    - {fileName: 2021-03-15-week-11th}
+subtitle:
+    - {fileName: 2021-03-22-week-12th}
+bundler:
+    - {fileName: 2021-04-05-week-14th}
 books:
     - {fileName: Books-Category}
 typescript:
@@ -440,8 +446,6 @@ web:
     - {fileName: Web-Category}
 html:
     - {fileName: Web-Category}
-favicon:
-    - {fileName: wiki-favicon}
 timezone:
     - {fileName: wiki-inWindows}
 tzinfo:

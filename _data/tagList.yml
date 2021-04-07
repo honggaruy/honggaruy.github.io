@@ -7,16 +7,15 @@
 - 한글
 - A4용지크기
 - api
-- async
-- await
+- async-await
+- async.js
 - axios
 - billmaker
 - binding
 - bios
 - bluetooth
-- book
 - books
-- 'br***'
+- bundler
 - chrome
 - clasp
 - cmd
@@ -59,6 +58,7 @@
 - google
 - google-apps-script
 - google-calendar
+- google-custom-search
 - google-data-studio
 - google-keep
 - google-photos
@@ -138,6 +138,7 @@
 - spin-up
 - stack-overflow
 - string-interpolation
+- subtitle
 - surgeon
 - symbol
 - sysinternals
