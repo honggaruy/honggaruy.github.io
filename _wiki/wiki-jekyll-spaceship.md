@@ -3,7 +3,7 @@ layout  : wiki
 title   : 위키에 jekyll-spaceship 적용 
 summary : 다양한 table 작성, emoji and more... 
 date    : 2021-01-02 23:51:07 +0900
-updated : 2021-03-13 20:13:10 +0900
+updated : 2021-04-07 22:50:35 +0900
 tag     : jekyll-spaceship markdown-table plantuml mermaid emoji thequeensgambit
 toc     : true
 public  : true
@@ -13,13 +13,15 @@ latex   : false
 * TOC
 {:toc}
 
-# 1. 발단
+# 1. 사전 작성 문서
 
 * [2021년 1주차 블로그](/blog/2021/01/01/week-01th/#jekyll-spaceship-테스트) 에서 위키문서로 빼기로 하고 넘어옴 
 * [2020년 50주차 블로그](/blog/2020/12/07/week-50th/#Markdown-table-작성시-table-셀-styling-하기)에 적었던 테이블 스타일링 기법도 여기로 모아 정리하기로 했다.
 
 
-# 2. 전개
+# 2. 마크다운 테이블 스타일링
+
+* 이 부분은 `jekyll-spaceship`과 상관없이 별도로 적용가능한 부분임
 
 ## Markdown table 작성시 table 셀 styling 하기
 
@@ -56,14 +58,14 @@ latex   : false
     | 노란줄  | 노란줄 | 노란줄 |
     |         | 파란열 |        |
 
-## jekyll-spaceship 테스트
+# 3.  jekyll-spaceship 테스트
 
 
 * github : [https://github.com/jeffreytse/jekyll-spaceship](https://github.com/jeffreytse/jekyll-spaceship)
 
-### 1. Table Usage
+## 1. Table Usage
 
-#### Rowspan and Colsapn
+### Rowspan and Colsapn
 
 * 예제 
   
@@ -82,7 +84,7 @@ latex   : false
   * 우선 vimwiki 포맷에 따라 편집한다 (모든 delimiter 줄이 맞도록 한다)
   * 그다음 jekyll-spaceship 포맷에 따라 공백을 제거한다 
     
-#### MultiLine    
+### MultiLine    
 
 * 줄 마지막의 backslash는 내용이 다음줄과 Join 한다는 표시이다
  
@@ -95,7 +97,7 @@ latex   : false
   | Apple | Banana | Orange |
   | Apple | Banana | Orange |
 
-#### Headerless
+### Headerless
 
 <style>
 .big-chess-table {font-size: 2.0rem;}
@@ -169,7 +171,7 @@ latex   : false
 
 [poster-img]: https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png "The Queen's Gambit Poster"
 
-#### Cell Alignment
+### Cell Alignment
 
 * 예제
   
@@ -183,7 +185,7 @@ latex   : false
   | ^^ B. Orange      || ^^ 2. Bad |
   | ^^ C. Banana      || It's OK!  |
 
-#### Cell Markdown
+### Cell Markdown
 
 <style>
 .td-img img { width: 138px; }
@@ -233,7 +235,7 @@ latex   : false
 {:height="138px"}
 
 
-#### Cell Inline Attributes
+### Cell Inline Attributes
 
 * attribute definitions (ALDs) 를 사용하는 방법
   ```
@@ -269,7 +271,7 @@ latex   : false
 * [Block Inline Attribute Lists](https://kramdown.gettalong.org/syntax.html#block-ials) - 이곳에서 IAL에 대해 자세하게 배울 수 있다. 
   
  
-### 2. MathJax Usage
+## 2. MathJax Usage
 
 * 예제
 
@@ -296,7 +298,7 @@ example 1) 이 수식 $ a*b = c^b $을 다른 문자열과 같이 써 본다.
 
 example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
 
-### 3. PlantUML Usage
+## 3. PlantUML Usage
 
 * #platuml
 * [PlantUML 설명서](https://plantuml.com/)
@@ -313,7 +315,7 @@ example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
   @enduml
 
 
-### 4. Mermaid Usage
+## 4. Mermaid Usage
 
 * #mermaid
 * [mermaid-js 문서 홈페이지](https://mermaid-js.github.io/mermaid/#/)
@@ -334,7 +336,7 @@ example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
     "Rats" : 35
   @endmermaid
   
-### 5. Media Usage
+## 5. Media Usage
 
 * two ways to embed a video/audio in your jekyll blog page
   * inline-style
@@ -349,7 +351,8 @@ example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
   * sample
   
     ![](https://www.youtube.com/watch?v=Ptk_1Dc2iPY?width=800&height=500)
-    ![](https://www.dailymotion.com/video/x7tfyq3?width=100%&height=400&autoplay=1)
+    ![](https://www.dailymotion.com/video/x7tfyq3?width=100%&height=400)
+    * 원래 위 영상은 autoplay 속성이 들어가 있었는데 빼버림.
     
 * Youtube Usage 
 
@@ -386,14 +389,14 @@ example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.
   * <span style="background:pink;">Audio는 안되는 듯.. 아직은 필요없어서 왜 안되는지는 확인안해봄.</span>
  
  
-### 6. Hybrid HTML with Markdown
+## 6. Hybrid HTML with Markdown
 
 * script block은 무시되는 듯함 HTML로 렌더링 되지 않음
 * 일단 Usage 예제는 삭제함
 
-### 7. Markdown Polyfill 
+## 7. Markdown Polyfill 
 
-#### 7.1 Escape Ordered List
+### 7.1 Escape Ordered List
 
 Normal:
 
@@ -410,9 +413,11 @@ Escaped:
 * <span style="background:pink;">이건 잘 안되고 있음</span>
 * `<li>` tag 로 렌더링 되어야 하는데 그냥 `<p>` tag로 렌더링 됨 
 
-### 8. Emoji Usage :+1:
+## 8. Emoji Usage :+1:
 
 * #emoji
+  * [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908) : github에서 사용하는 emoji 목록
+  * [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) : 이모지 치트 시트 
 * I give this plugin two :+1:!
  
 <style>
@@ -432,8 +437,48 @@ Escaped:
     * [stackoverflow에 이 건으로 질문을 올리고 자문자답함](https://stackoverflow.com/a/65550809/9457247)...:sweat_smile:
 
 
-### 9. Modifying Element Usage
+## 9. Modifying Element Usage
 
 * _config.yml에 jekyll-spaceship 옵션을 설정하여 element 설정을 바꿀 수 있는건데.. 아직은 사용할 계획이 없어서 Pass.
 
+# 4. jekyll-spaceship을 github에 적용하기
 
+* 로컬 Ruby 환경에서 `jekyll-spaceship`이 문제없이 적용되었기에 github에 그대로 올려서 잘될줄 알았다면 큰 오산이다.
+* [Jekyll-spaceship Inatallation: github](https://github.com/jeffreytse/jekyll-spaceship#installation)의 **:bulb:Tip** 을 잘 읽어보자
+  > **:bulb:Tip:** Note that GiHub Pages runs in `safe` mode and only allows [a set of whitelisted plugins](https://pages.github.com/versions/). To use the gem in GitHub Pages, you need to build locally or use CI (e.g. [travis](https://travis-ci.org/), [github workflow](https://docs.github.com/en/actions/learn-github-actions) and delply to your `gh-pages` branch.
+  * 즉, github whitelist에 없는 플러그인들을 사용하는 jekyll-spaceship이 그냥 순순히 실행되지는 않는다는 얘기.
+  * 위에서 CI 도구들 ( travis, Github workflow )을 언급했는데 이건 무슨 툴인가?
+    * [지속적 통합 : Continuous Integration](https://ko.wikipedia.org/wiki/지속적 _통합)
+    * 단순하게, 자동으로 배포하는 툴이다.
+    * [Plugins < About GitHub Pages and jekyll < GitHub Pages Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins)
+      * 아래에는 위 링크에서 맨 마지막 Paragraph 번역 
+      * `GitHub Pages`에서는 지원되지 않는 plugins으로 사이트를 만들 수 없다.
+      * 지원되지 않는 plugin을 꼭 사용하고 싶다면, 사이트를 로컬머신에서 빌드한 다음, 빌드된 static files들을 GitHub에 push하라.
+       
+## JEKYLL Deploy Action
+
+[![](https://user-images.githubusercontent.com/9413601/107134556-211ea280-692e-11eb-9d13-afb253db5c67.png)](https://github.com/jeffreytse/jekyll-deploy-action)
+A GitHub Action to deploy the jekyll site conveniently for GitHub Pages.
+
+* 이 Tool은 `jekyll-spaceship`을 만든 `jeffreytse`가 만든 도구
+* 위에서 로컬에서 미리 빌드해서 Push하는 것처럼 CI 도구를 이용하면 온라인상에서, 자동으로 빌드하고 Push할 수 있다.
+  * 즉, 환경만 만들어 놓으면 기존에 포스트 작성하고, git push 하듯이 할 수 있다. 
+  * honggaruy.github.io의 마스터가 기존에 소스코드와 사이트 static file을 모두 포함했다면..
+  * 이제 마스터는 소스파일만 관리하고 다른 git branch에서 사이트 정적파일을 관리한다고 보면된다
+* Jekyll Deploy Action을 이용하면 GitHub Action (CI 도구)를 이용한다.
+* 근데 `jeffreytse`는 [자신의 블로그](https://github.com/jeffreytse/jekyll-jeffreytse-blog)는 `travis`를 이용한다.
+
+## 적용방법
+
+[JEKYLL Delplay Action Usage 참조](https://github.com/jeffreytse/jekyll-deploy-action#-usage)
+ 
+1. github page repository의 master 브랜치에 github workflow file을 만든다. ( 예. `.github/workflows/build-jekyll.yml`)
+  * 위의 `Usage` example대로 설정하면 `push`될 때마다 자동으로 빌드하고, 빌드된 static file들이 배포할 브랜치( 예: gh-pages)에 등록된다. 
+  * [이 사항을 적용한 commit](https://github.com/honggaruy/honggaruy.github.io/commit/e9431282cbf0e8bcb56461ce6b4d81accc058e57)
+  * 로컬 사양과 맞춘다고 `runs-on`을 `windows-latest`로 바꾸지 말것. `ubuntu-latest`에서만 실행됨
+1. [Personal Token](https://github.com/settings/tokens) 사이트에 접속하여 토큰을 만들어야 한다.
+  * 이건 일종의 인증키 같은 것인가? 
+  * GitHub Action은 GitHub 내부에 속하지 않고 외부에서 접속하는 느낌
+1. `Github Repository's Settings`에 가서 `Secrets` tab으로 전환
+1. 거기서 `GH_TOKEN` 이라는 이름으로 토큰을 만들것
+1. 마지막으로, `Github Repository's Settings`로 가서 `GitHub Pages section`까지 scroll down 하고 `gh-pages` branch를 `GitHub Pages` source로 선택하라.
