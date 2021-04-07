@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-03-10 15:14:18 +0900
+updated : 2021-03-26 15:10:12 +0900
 tag     : index
 toc     : true
 public  : true
@@ -96,6 +96,8 @@ comment : false
 * [[book-developer-writing]]{개발자의 글쓰기}
 * [[book-how-javascript-works]]{자바스크립트는 왜 그 모양일까}
 * [[book-refactoring-2nd]]{리팩토링 2판}
+* [[book-effective-python-2nd]]{파이썬 코딩의 기술 2판}
+* [[book-regex-cookbook]]{한 권으로 끝내는 정규표현식}
 
 ---
 

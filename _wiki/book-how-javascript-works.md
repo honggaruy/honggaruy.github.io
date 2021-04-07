@@ -3,7 +3,7 @@ layout  : wiki
 title   : 자바스크립트는 왜 그 모양일까? 
 summary : 더글라스 크락포드가 알려주는 ... 
 date    : 2020-12-01 11:27:56 +0900
-updated : 2021-03-15 23:43:01 +0900
+updated : 2021-04-04 15:42:36 +0900
 tag     : br*** book 
 toc     : true
 public  : false
@@ -27,6 +27,10 @@ comment : false
 * JSON 창시자, JSLint, JSMin 도구 개발
 * [Douglas Crockford, 영문위키](https://en.wikipedia.org/wiki/Douglas_Crockford)
 * [더글러스 크록포드, 한글위키](https://ko.wikipedia.org/wiki/더글라스_크록포드)
+* [관련기사 : Douglas Crockford and his book "How JavaScript works"](https://www.codemotion.com/magazine/dev-hub/web-developer/douglas-crockford-presents-his-new-book-how-javascript-works/)
+* [Douglas Crockford, github](https://github.com/douglascrockford)
+* [Douglas Crockford, homepage](https://www.crockford.com/isbn-13.html)
+  * [Douglas Crockford, 소개페이지](https://www.crockford.com/about.html)
 
 # {"number": 0, "chapter": "시작하기 전에"}
 
@@ -183,5 +187,144 @@ comment : false
     * Number.isSafeInteger(number)로 숫자의 연산안전성 확인가능
   * [Number.MAX_VALUE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE), [Number.MIN_VALUE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE)
     * 계산 결과로 Safe를 넘는 값은 안전하지 않으므로 주의해야함
+    * Safe의 기준 : [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+    * Number.MIN_VALUE는 0보다 큰 가장 작은 양수, 보다 작은 양수는 영과 구별이 안됨 
+* 그 외 Number.prototype의 메서드들은 그다지 유용하지 않음 ( 내 생각: 정말 그런가 ? )
+  * [Number.isSafeInteger()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger) 는 어떻지?
+    * Safe Integer란 ?
+      * IEEE-754 double precision으로 정확히 표현가능한 수
+      * 그 수의 IEEE-754 표현이 다른 정수를 IEEE-754 사양으로 반올림한 결과가 나오지 않는 수
+    * 예를 들면, $ 2 ^ {53} - 1 $ 은 Safe Integer임
+      * 이 숫자는 정확히 표현될 수 있는 숫자이며
+      * IEEE-754 rounding 모드에서 다른 정수가 이 숫자로 반올림 되지 않음.
+    * 반면에, $ 2 ^ {53} $ 은 Safe Interger가 아님.
+      * 이 숫자는 IEEE-754로 정확히 표현될 수는 있지만, 
+      * $ 2 ^ {53} + 1 $ 이 `round-to-nearset`와 `round-to-zero` rounding  모드에서 $ 2 ^ {53} $ 으로 반올림 되기 때문
+    * 여기에 사용한 `Mathjax`가 렌더링 안되고 있는데 [현재 문의중임](https://github.com/jeffreytse/jekyll-spaceship/issues/50). 
+      * [2021-04-02 고쳐짐](https://github.com/jeffreytse/jekyll-spaceship/issues/50#issuecomment-812444737)
 
 ## 연산자
+
+### 전위 연산자
+
+* [Unary plus (+), MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) , 전위 연산자 타입
+  * 문자열 숫자를 숫자타입으로 바꾸는 가장 빠르고 선호되는 방법 ( unary negation 보다 선호됨)
+    * 책에는 [Number 함수, MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)가 명확하기 때문에 더 선호된다고 나옴
+  * 피연산자를 숫자로 바꾸는 것외에 다른 동작을 하지 않는다.
+  * 변환에 실패하면 NaN을 반환
+* [Unary negation (-), MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation) , 전위 연산자 타입
+  * 부호 변환이 주요 동작
+  * Javascript의 숫자 리터럴은 부호가 없음
+    * (-1) 표현식에서 - 부호는 연산자이지 숫자 리터럴의 일부가 아님 
+* [typeof, MDN Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#typeof), [typeof, MDN Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), 전위 연산자 타입
+  * 피연산자의 타입을 알려주는 문자열을 반환함
+  * 피연산자가 [NaN(Not a Number)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)일 때도 "number"를 반환한다는 것을 주의할 것. `Number.NaN` 과 같은 값. 
+
+###  중위 연산자
+
+* [ Addition (+) 연산자, MDN Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+  * `+` 연산자는 문자열 연결에도 사용하기 때문에 아주 위험함
+  * 하나의 피연산자가 문자열이면 `묻지도 따지지도 않고` 나머지 연산자를 문자열로 변환하여 연결함
+  * 자바스크립트에는 더하기를 할 수있는 다른 방법도 없음
+  * 피 연산자들이 숫자로서 제대로 더하기 연산이 되는지 확인하려면 Number 함수를 사용할 것
+* [ Division (/) 연산자, MDN Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+  * `정수` 나누기가 아님에 주의. 예를 들면 5/2 는 2가 아니라 2.5임에 주의
+* [ Remainder (%) 연산자, MDN Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+  * [Modulo 연산자, Real Python](https://realpython.com/python-modulo-operator/#modulo-operator-with-a-negative-operand)가 아님에 주의. Remainder(나머지) 연산자임 (Javascript는 Modulo 연산자가 없음)
+  * 더글라스 크락포드는 Modulo 연산자가 훨씬 쓸모있다고 생각
+    * Javascript의 Remainder 연산자의 결과는 divideend(피제수, 나눠지는 수)의 부호를 따름
+      * 예를 들면, 8 % -3 = 2 
+    * Python및 다른 언어의 Modulo 연산 결과는 divisor(제수, 나누는 수)의 부호를 따름. 
+      * 예를 들면, 8 % -3 = -1
+  * 설명을 읽어봐도 어느게 더 좋은지는 잘 모르겠지만...
+    * 결과가 달라지는 부분에 대한 설명은 위의 Real Python 링크를 읽어볼것 
+   
+### 참고링크
+
+* [Expressions and operators, MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+  * 전위 / 후위 연산자 = unary operator
+  * 중위 연산자 = binary operator
+
+## 비트 단위 연산자
+
+* [Bitwise operators, MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+  * 피연산자들을 32 bits binary 수 (zeros and ones)로 변환.
+  * 결과는 표쥰 Javascript numerical values로 반환
+
+### Javascript의 Bitwise Operator가 잘 쓰이지 않는 이유
+
+* 안전하게 하려면 54 bit 정수형으로 변환해서 사용하는게 좋은데 Javascript는 안 그러고 있음
+  * 그 결과 상위 22 bit는 경고없이 사라질 수 있음
+  * 참고 : [Bitwise logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_logical_Operators)
+
+#### 다른 언어에서는 되는데 Javascript에서는 안되는 것들
+
+* [몇몇 언어에서 Shift는 곱하기나 나누기의 대용으로 사용됨, Python의 예, Real Python](https://realpython.com/python-bitwise-operators/#bitwise-shift-operators)
+* [bitwise `and`는 modulot 연산자로 사용하기도 함](https://mziccard.me/2015/05/08/modulo-and-division-vs-bitwise-operations/)
+* 하지만, Javascript에서는 이렇게 할 수 없음.
+  * 최상위 22개비트를 버리는 꼴
+
+#### 심지어 사용하지 않는데도 위험을 초래
+
+* `&`(앰퍼샌드)와 `|`(수직바)는 `&&`(앰퍼샌드 두개)와 `||`(수직바 두개)와 혼동하기 쉬움
+* `<<`와 `>>`역시 `<`, `>`와 헷갈림
+* (더글라스 크록포드 생각) `>>`가 왜 부호를 확장하는 오른쪽 Shift 연산자이고 `>>>`는 왜 아닌지 모르겠음.
+* C 언어의 경우, 부호의 확장은 자료형에 따라 결정됨. [Sign Extension, C User's Guide, Oracle](https://docs.oracle.com/cd/E19205-01/819-5265/bjamz/index.html)
+* Java의 경우, 부호의 확장은 연산자에 의해 정해짐. [Java Sign Extension, mkyong's blog](https://mkyong.com/java/java-sign-extension/)
+  * Javascript는 Java의 잘못된 결정을 그대로 따름. 조심해야 함. [Unsigned right shift (>>>), MDN Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+
+# {"number": 7, "chapter": "배열"}
+
+* 배열에 관한 몇가지 흥미로운 사실
+  * 자바스크립트 초기 배포시에는 배열이 없었다
+    * 객체가 너무 강력했고, 성능문제만 뺀다면 객체는 배열이 할 수 있는 모든것을 할 수 있다. 
+  * 배열의 색인으로 어떤 문자열이나 사용가능
+  * 배열은 real 객체
+* Javascript의 배열이 객체와 다른 4가지 포인트 
+  1. 배열은 length 속성을 가짐
+    * Array.length는 요소의 갯수가 아님 - 가장의 큰 index보다 1 큰 수
+      * Javascript의 배열이 진짜 배열인 것 같은 환상을 보여줌. for 문 처리 가능
+  1. 배열은 Object.prototype 보다 훨씬 더 좋은 메서드들을 가진 Array.prototype을 상속 
+  1. 배열은 Object literal이 아닌 Array literal로 생성됨
+    * Array literal이 훨씬 더 간단, [ ] 혹은 [1, 2] 로 간단하게 생성됨 
+  1. JSON은 배열과 객체를 다르게 취급, Javascript는 둘을 비슷하게 처리
+* Javascript로 배열과 객체를 구분하는 법
+  * typedof 연산자로는 배열과 객체를 구분할 수 없음. 모두 실질적으로 객체임 
+  * 배열이 배열인지 확인하려면 Array.isArray(value)를 사용해야 함
+
+## 배열의 원점
+
+* 인덱스를 0 부터 시작해야하는지 1 부터 시작해야하는지에 대한 논쟁
+  * 배열을 처리할 때 하나씩 처리하기보다, 함수로 처리하면 원점에 대한 논쟁이 필요없음
+  * 배열의 첫번째 요소를 지칭할 때 `first` 보다는 `zeroth` 라는 용어가 적당 (저자의 개인적 의견..)
+
+## 초기화
+
+* 배열을 만드는 두 가지 방법
+  ```js
+  let my_little_array = new Array(10).fill(0);      // 방법 1. new Array(정수)
+                      // my_little_arra is [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  let same_thing = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   // 방법 2. 배열 리터럴
+
+  my_little_array === same_thing      // false
+  ```
+* 같은 값으로 초기화되지만, 따로 선언되어 서로 다른 배열임
+* 다른 객체와 마찬가지로 실제 같은 배열인 경우에만 같은 것으로 판정
+
+## 스택과 큐
+
+* push, pop 메서드로 배열을 stack처럼 쓸 수 있음
+* 스택의 사용법, 아래 처럼 스택은 인터프리터나 계산기에서 주로 사용
+<script async src="//jsfiddle.net/honggaruy/3wc9ybht/12/embed/js,result/dark/"></script>
+
+* shift, unshift 메소드
+  * shift : pop 메서드와 유사, 배열의 마지막 요소대신 0번째 요소를 제거하고 반환
+  * unshift : push와는 달리 배열의 가장 앞에 새로운 요소를 추가 
+  * shift / unshift 는 pop과 push에 비해 많이 느림. 배열이 길수록 심하게 느림
+  * shift / push를 사용하여 배열의 가장 뒤에 새로운 아이템을 추가하고 가장 앞에서 아이템을 꺼내 쓰는 Queue를 구현할 수 있음. 
+  * 관련링크
+    * [push와 shift로 구현한 queue, 퍼포먼스를 논하는 댓글들을 확인할것](https://stackoverflow.com/a/1590262/9457247) 
+    * [JavaScript queues, shift를 사용하지 않고 performance를 높인 Queue](https://code.iamkate.com/javascript/queues/)
+    
+
+# 다른 채프터
