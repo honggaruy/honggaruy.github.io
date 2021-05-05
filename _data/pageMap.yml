@@ -788,7 +788,7 @@ wiki-update-guide:
     summary: '위키 구조 파악및 위키 기능 개선'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2021-05-06 00:25:17 +0900'
+    updated: '2021-05-06 01:32:53 +0900'
     children: []
 Windows-Category:
     type: wiki

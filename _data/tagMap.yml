@@ -344,9 +344,9 @@ standardjs:
     - {fileName: 2021-04-05-week-14th}
 pwa:
     - {fileName: 2021-04-26-week-17th}
-vue.js:
+vue_js:
     - {fileName: 2021-04-26-week-17th}
-vuetify.js:
+vuetify_js:
     - {fileName: 2021-04-26-week-17th}
 firebase:
     - {fileName: 2021-04-26-week-17th}

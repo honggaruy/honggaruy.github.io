@@ -3,7 +3,7 @@ layout  : wiki
 title   : 위키 편집 안내서 
 summary : 위키 구조 파악및 위키 기능 개선 
 date    : 2021-03-10 15:14:25 +0900
-updated : 2021-05-06 00:25:17 +0900
+updated : 2021-05-06 01:32:53 +0900
 tag     : liquid tags jekyll 
 toc     : true
 public  : true
@@ -47,6 +47,36 @@ latex   : false
 * anonymous quota가 있어 몇번하니까 bad request 에러남
 * 등록하고 써야함 : [내 app 링크](https://stackapps.com/apps/oauth/view/19796)
 * 대충 등록하면 위의 app 링크 페이지로 리다이렉트 되는데 여기에서 `key`를 요청하는 파라메터중 하나로 넣으면 quota가 풀림.
+
+## 태그 편집시 참고할 사항
+
+* 중요한 사항임. (:star: :star2: )
+ 
+### 에러 상황
+
+* `stackoverflow` 태그 중에서는 태그 가운데 `.`이 들어가는 태그가 종종 있다.
+  * 예: [`vue.js`](https://stackoverflow.com/questions/tagged/vue.js) , [`vuetify.js`](https://stackoverflow.com/questions/tagged/vuetify.js)
+* 가운데 `.`이 들어가는 태그를 사용할 경우 태그페이지에서 태그를 클릭할 때 아래에 위키 링크가 나타나지 않는다.
+  * 디버그 창을 보면 뭔가 에러가 나고 있다.
+
+### 해결책
+
+* 위와 같이 `vue.js`를 태그로 사용하고 싶으면 대신 `vue_js`를 사용하라 ( :star: :star2: )
+* 위키내의 태그링크도 문제가 없으며, `stackoverflow`의 태그 페이지도 잘 연결된다
+
+### 태그 변경후 수동 확인 방법
+
+* 매번 필요할 때 마다 까먹어서 다시 적는다..
+* 태그 변경 사항은 `./generateData.js`를 `git hook`을 걸어서 `commit`시에 자동으로 반영되도록 하고 있다.
+* 수동으로 확인하려면 다음과 같이 command line에서 입력한다.
+  ```sh
+  > node ./generateData.js
+  tagMap saved.
+  pageMap saved.
+  tagList saved.
+  ```
+* `_data/tagLists.yml`, `_data/tagMap.yml`, `tag.html`이 편집된다.
+* 다시 되돌리려면 `git restore` 명령을 사용한다.
 
 # 4. 블로그 포스트에 이전 포스트, 다음 포스트로 가는 링크를 넣고 싶다.
 
