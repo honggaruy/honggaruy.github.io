@@ -1,3 +1,11 @@
+jekyll:
+    - {fileName: 2017-11-24-welcome-to-jekyll}
+    - {fileName: 2020-10-26-week-44th}
+    - {fileName: wiki-inWindows}
+    - {fileName: Wiki-Setting-Category}
+update:
+    - {fileName: 2017-11-24-welcome-to-jekyll}
+    - {fileName: 2020-10-26-week-44th}
 test:
     - {fileName: 2020-04-10-test-post}
     - {fileName: 2021-01-25-week-04th}
@@ -160,14 +168,8 @@ wsl:
     - {fileName: 2020-11-30-week-49th}
 ubuntu:
     - {fileName: 2020-10-26-week-44th}
-update:
-    - {fileName: 2020-10-26-week-44th}
 upgrade:
     - {fileName: 2020-10-26-week-44th}
-jekyll:
-    - {fileName: 2020-10-26-week-44th}
-    - {fileName: wiki-inWindows}
-    - {fileName: Wiki-Setting-Category}
 binding:
     - {fileName: 2020-10-26-week-44th}
 port:
@@ -332,6 +334,8 @@ subtitle:
     - {fileName: 2021-03-22-week-12th}
 bundler:
     - {fileName: 2021-04-05-week-14th}
+standardjs:
+    - {fileName: 2021-04-05-week-14th}
 books:
     - {fileName: Books-Category}
 typescript:
@@ -408,6 +412,8 @@ mathjax:
     - {fileName: re2-translation}
 sed:
     - {fileName: sed-problem-solving}
+ellystand:
+    - {fileName: Smart-Device-Stand}
 stack-overflow:
     - {fileName: stackoverflow_searchhelp}
 검색:

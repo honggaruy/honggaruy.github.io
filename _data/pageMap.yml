@@ -1,3 +1,11 @@
+2017-11-24-welcome-to-jekyll:
+    type: blog
+    title: 'Welcome to Jekyll!'
+    summary: '테스트 페이지'
+    parent: null
+    url: /blog/2017/11/24/welcome-to-jekyll
+    updated: '2017-11-24 19:31:27 +0900'
+    children: []
 2020-04-10-test-post:
     type: blog
     title: '테스트 포스팅'
@@ -310,6 +318,30 @@
     url: /blog/2021/04/05/week-14th
     updated: '2021-04-05 22:17:32 +0900'
     children: []
+2021-04-12-week-15th:
+    type: blog
+    title: '2021년 15주차 기록'
+    summary: '04/12 (월) ~ 04/18 (일)'
+    parent: null
+    url: /blog/2021/04/12/week-15th
+    updated: '2021-04-12 12:48:32 +0900'
+    children: []
+2021-04-26-week-17th:
+    type: blog
+    title: '2021년 17주차 기록'
+    summary: '04/26 (월) ~ 05/02 (일)'
+    parent: null
+    url: /blog/2021/04/26/week-17th
+    updated: '2021-04-26 05:02:32 +0900'
+    children: []
+2021-05-03-week-18th:
+    type: blog
+    title: '2021년 18주차 기록'
+    summary: '05/03 (월) ~ 05/09 (일)'
+    parent: null
+    url: /blog/2021/05/03/week-18th
+    updated: '2021-05-03 14:23:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -484,7 +516,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-03-26 15:10:12 +0900'
+    updated: '2021-04-15 10:52:58 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -605,6 +637,14 @@ sed-problem-solving:
     parent: Linux-Category
     url: /wiki/sed-problem-solving
     updated: '2020-04-14 08:11:36 +0900'
+    children: []
+Smart-Device-Stand:
+    type: wiki
+    title: '스마트폰 스캔 거치대'
+    summary: 'Ellystand 부터 시작'
+    parent: IT-Device-Categroy
+    url: /wiki/Smart-Device-Stand
+    updated: '2021-04-15 17:45:13 +0900'
     children: []
 stackoverflow_searchhelp:
     type: wiki
@@ -748,7 +788,7 @@ wiki-update-guide:
     summary: '위키 구조 파악및 위키 기능 개선'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2021-03-23 11:07:24 +0900'
+    updated: '2021-05-05 11:42:13 +0900'
     children: []
 Windows-Category:
     type: wiki
