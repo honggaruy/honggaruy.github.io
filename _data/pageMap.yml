@@ -532,8 +532,8 @@ IT-Device-Category:
     summary: '카테고리 1단계 (끝)'
     parent: index
     url: /wiki/IT-Device-Category
-    updated: '2020-12-19 09:40:19 +0900'
-    children: [HDMI2dot1-device]
+    updated: '2021-05-06 00:35:34 +0900'
+    children: [HDMI2dot1-device, Smart-Device-Stand]
 javascript-myCookBook:
     type: wiki
     title: 'Javascript 초급 코딩 요령'
@@ -642,9 +642,9 @@ Smart-Device-Stand:
     type: wiki
     title: '스마트폰 스캔 거치대'
     summary: 'Ellystand 부터 시작'
-    parent: IT-Device-Categroy
+    parent: IT-Device-Category
     url: /wiki/Smart-Device-Stand
-    updated: '2021-04-15 17:45:13 +0900'
+    updated: '2021-05-06 00:31:32 +0900'
     children: []
 stackoverflow_searchhelp:
     type: wiki

@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-03-26 15:10:12 +0900
+updated : 2021-05-05 11:54:51 +0900
 tag     : index
 toc     : true
 public  : true
@@ -80,6 +80,7 @@ comment : false
 ## [[IT-Device-Category]]{IT 장비 관련 Category}
 
 * [[HDMI2dot1-device]]{HDMI 2.1 장비 관련 정보} 
+* [[Smart-Device-Stand]]{스마트폰 스캔 거치대} 
   
 ## [[Wiki-Setting-Category]]{위키 설정 관련 Category}
 

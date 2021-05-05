@@ -396,6 +396,8 @@ index:
     - {fileName: index}
 isbn:
     - {fileName: isbn10-to-isbn13}
+category:
+    - {fileName: IT-Device-Category}
 it-device:
     - {fileName: IT-Device-Category}
 falsy:
