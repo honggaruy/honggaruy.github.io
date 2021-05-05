@@ -47,6 +47,7 @@
 - exec
 - falsy
 - favicon
+- firebase
 - flutter
 - folding
 - font
@@ -93,9 +94,10 @@
 - latex
 - lego
 - library
-- liguid
 - linux
+- liquid
 - lofi
+- lorem-ipsum
 - markdown-css
 - markdown-table
 - mathjax
@@ -120,6 +122,7 @@
 - project
 - promise
 - puppeteer
+- pwa
 - pyscaffold
 - python
 - re2
@@ -177,12 +180,16 @@
 - visual-studio-code
 - vs
 - vscode-settings
+- vue.js
+- vuetify.js
 - web
 - week-diary
 - wiki-setting
+- wikipedia
 - windows
 - windows-shortcut
 - windows-terminal
+- workbox
 - wsl
 - yaml-front-matter
 - youtube

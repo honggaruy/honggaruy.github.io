@@ -1,8 +1,10 @@
 jekyll:
     - {fileName: 2017-11-24-welcome-to-jekyll}
     - {fileName: 2020-10-26-week-44th}
+    - {fileName: 2021-05-03-week-18th}
     - {fileName: wiki-inWindows}
     - {fileName: Wiki-Setting-Category}
+    - {fileName: wiki-update-guide}
 update:
     - {fileName: 2017-11-24-welcome-to-jekyll}
     - {fileName: 2020-10-26-week-44th}
@@ -55,6 +57,7 @@ css:
 tags:
     - {fileName: 2020-05-02-todays-ideas}
     - {fileName: 2020-05-11-todays-ideas}
+    - {fileName: wiki-update-guide}
 wiki-setting:
     - {fileName: 2020-05-02-todays-ideas}
     - {fileName: wiki-favicon}
@@ -334,8 +337,23 @@ subtitle:
     - {fileName: 2021-03-22-week-12th}
 bundler:
     - {fileName: 2021-04-05-week-14th}
+wikipedia:
+    - {fileName: 2021-04-05-week-14th}
+    - {fileName: 2021-04-12-week-15th}
 standardjs:
     - {fileName: 2021-04-05-week-14th}
+pwa:
+    - {fileName: 2021-04-26-week-17th}
+vue.js:
+    - {fileName: 2021-04-26-week-17th}
+vuetify.js:
+    - {fileName: 2021-04-26-week-17th}
+firebase:
+    - {fileName: 2021-04-26-week-17th}
+workbox:
+    - {fileName: 2021-04-26-week-17th}
+lorem-ipsum:
+    - {fileName: 2021-04-26-week-17th}
 books:
     - {fileName: Books-Category}
 typescript:
@@ -468,7 +486,7 @@ toc:
     - {fileName: wiki-toc2side}
 scss:
     - {fileName: wiki-toc2side}
-liguid:
+liquid:
     - {fileName: wiki-update-guide}
 sysinternals:
     - {fileName: Windows-Category}

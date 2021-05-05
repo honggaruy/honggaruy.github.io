@@ -1,10 +1,10 @@
 ---
 layout  : wiki
 title   : 위키 편집 안내서 
-summary : 위키 구조 파악및 ... 
+summary : 위키 구조 파악및 위키 기능 개선 
 date    : 2021-03-10 15:14:25 +0900
-updated : 2021-03-12 12:40:07 +0900
-tag     : liguid 
+updated : 2021-05-06 00:25:17 +0900
+tag     : liquid tags jekyll 
 toc     : true
 public  : true
 parent  : [[Wiki-Setting-Category]] 
@@ -28,7 +28,7 @@ latex   : false
 * 그럼 일단 axios를 써야 하는데.. 이걸 참조 [JavaScript: using axios in the browser to make API requests](https://gabrieleromanato.name/javascript-using-axios-in-the-browser-to-make-api-requests)
 
 
-# 3. tag 페이지에 stackoverflow tag 정보도 같이 넣기
+# 3. tag 페이지에 stackoverflow tag 정보도 같이 넣기 (개선 사항)
 
 ## insertAfter 기능 구현하기
 
@@ -47,3 +47,28 @@ latex   : false
 * anonymous quota가 있어 몇번하니까 bad request 에러남
 * 등록하고 써야함 : [내 app 링크](https://stackapps.com/apps/oauth/view/19796)
 * 대충 등록하면 위의 app 링크 페이지로 리다이렉트 되는데 여기에서 `key`를 요청하는 파라메터중 하나로 넣으면 quota가 풀림.
+
+# 4. 블로그 포스트에 이전 포스트, 다음 포스트로 가는 링크를 넣고 싶다.
+
+## 필요성
+
+* 2021년 현재 블로그는 주차별로 기록하고 있다.
+* 어느 시점에 어떤 작업을 했는지 정확히 기억이 안날 때 앞 뒤로 검색해보면서 뒤져야 한다.
+* 목록으로 다시 나갔다가 콘텐츠로 돌아오기는 귀찮다.
+* 포스팅 콘텐츠 페이지에서 이전과 이후 포스팅으로 연결해주는 링크가 필요했다.
+
+## 구글링 
+
+* [Jekyll - how to link to next/previous post on your blog](http://david.elbe.me/jekyll/2015/06/20/how-to-link-to-next-and-previous-post-with-jekyll.html)
+  * 찾았다. 거의 그대로 소스를 복사했다.
+    * 댓글을 보면 CSS관련하여 다른 의견이 많던데 나중에 확인해볼것 
+  * 제목을 이전과 다음링크 사이에 위치하도록 CSS를 추가했다.
+* [How to Link to Next and previous Posts for Same Blog Category](https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629)
+  * 위 링크를 찾게된 소스이다. 
+* [page.previous, page.next 문서가 없다는 이슈에 달린 답글 참조](https://github.com/jekyll/jekyll/issues/1545)
+  * 초반에 달린 답글의 링크는 2021년 5월 현재 없음
+  * [Jekyll Variables 에 있긴 있음](https://jekyllrb.com/docs/variables/)
+
+## 반영
+
+* [반영한 commit](https://github.com/honggaruy/honggaruy.github.io/commit/fcfde15c600a2258b9dc445b96fbb01e37fa3cf4)
