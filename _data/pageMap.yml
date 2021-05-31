@@ -342,6 +342,30 @@
     url: /blog/2021/05/03/week-18th
     updated: '2021-05-03 14:23:32 +0900'
     children: []
+2021-05-10-week-19th:
+    type: blog
+    title: '2021년 19주차 기록'
+    summary: '05/10 (월) ~ 05/16 (일)'
+    parent: null
+    url: /blog/2021/05/10/week-19th
+    updated: '2021-05-10 10:08:32 +0900'
+    children: []
+2021-05-17-week-20th:
+    type: blog
+    title: '2021년 20주차 기록'
+    summary: '05/17 (월) ~ 05/23 (일)'
+    parent: null
+    url: /blog/2021/05/17/week-20th
+    updated: '2021-05-17 12:36:32 +0900'
+    children: []
+2021-05-31-week-22th:
+    type: blog
+    title: '2021년 22주차 기록'
+    summary: '05/31 (월) ~ 06/06 (일)'
+    parent: null
+    url: /blog/2021/05/31/week-22th
+    updated: '2021-05-31 11:08:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -516,7 +540,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-05-05 11:54:51 +0900'
+    updated: '2021-05-19 14:27:33 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -548,7 +572,7 @@ keyword_collection:
     summary: '아직 안정함'
     parent: Term-Category
     url: /wiki/keyword_collection
-    updated: '2021-03-12 12:00:17 +0900'
+    updated: '2021-05-19 15:04:05 +0900'
     children: []
 korean-font:
     type: wiki
@@ -664,11 +688,11 @@ Term-Category:
     children: [keyword_collection, term-short-circuit-evaluation, term-string-interpolation]
 term-short-circuit-evaluation:
     type: wiki
-    title: 'Short-circuit evalution'
+    title: 'Short-circuit evaluation'
     summary: 단축평가
     parent: Term-Category
     url: /wiki/term-short-circuit-evaluation
-    updated: '2021-03-12 12:01:08 +0900'
+    updated: '2021-05-19 14:15:24 +0900'
     children: []
 term-string-interpolation:
     type: wiki
@@ -686,6 +710,14 @@ Tools-Category:
     url: /wiki/Tools-Category
     updated: '2020-04-13 20:52:38 +0900'
     children: [Cross-Category, Git-Category, Linux-Category, Vim-Category, Windows-Category]
+vim-basic:
+    type: wiki
+    title: 'vim 기초 사용법'
+    summary: '매번 잊어버려서 참고할 장소를 만들었다.'
+    parent: Vim-Category
+    url: /wiki/vim-basic
+    updated: '2021-05-20 00:13:14 +0900'
+    children: []
 Vim-Category:
     type: wiki
     title: Vim
@@ -693,7 +725,7 @@ Vim-Category:
     parent: Tools-Category
     url: /wiki/Vim-Category
     updated: '2020-11-02 12:02:39 +0900'
-    children: [Vimrc-Category]
+    children: [vim-basic, Vimrc-Category]
 vim-folding:
     type: wiki
     title: 'vimrc 파일 폴딩하기'
@@ -785,10 +817,10 @@ wiki-troubleshooting:
 wiki-update-guide:
     type: wiki
     title: '위키 편집 안내서'
-    summary: '위키 구조 파악및 위키 기능 개선'
+    summary: '위키의 기본 작성법및 기능 추가 방법'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2021-05-06 01:32:53 +0900'
+    updated: '2021-05-20 00:33:54 +0900'
     children: []
 Windows-Category:
     type: wiki

@@ -120,6 +120,7 @@ grep:
 vim:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-23-week-48th}
+    - {fileName: vim-basic}
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
     - {fileName: vscode-configurations}
@@ -201,6 +202,8 @@ linux:
     - {fileName: sed-problem-solving}
 terminology:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: 2021-05-10-week-19th}
+    - {fileName: 2021-05-17-week-20th}
     - {fileName: keyword_collection}
     - {fileName: Term-Category}
     - {fileName: term-short-circuit-evaluation}
@@ -290,6 +293,7 @@ translation:
     - {fileName: 2020-12-28-week-53th}
     - {fileName: 2021-01-18-week-03th}
     - {fileName: 2021-01-25-week-04th}
+    - {fileName: 2021-05-10-week-19th}
     - {fileName: isbn10-to-isbn13}
     - {fileName: re2-translation}
 emoji:
@@ -353,6 +357,8 @@ firebase:
 workbox:
     - {fileName: 2021-04-26-week-17th}
 lorem-ipsum:
+    - {fileName: 2021-04-26-week-17th}
+ngrok:
     - {fileName: 2021-04-26-week-17th}
 books:
     - {fileName: Books-Category}
@@ -458,6 +464,10 @@ variable-substitution:
     - {fileName: term-string-interpolation}
 tool:
     - {fileName: Tools-Category}
+hlghlight:
+    - {fileName: vim-basic}
+unimpared:
+    - {fileName: vim-basic}
 folding:
     - {fileName: vim-folding}
 특수문자:
