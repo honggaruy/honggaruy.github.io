@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vim 기초 사용법 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="매번 잊어버려서 참고할 장소를 만들었다.">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/vim-basic/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="vim 기초 사용법">
+    <meta property="og:description" content="매번 잊어버려서 참고할 장소를 만들었다.">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/vim-basic/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/vim-basic/">
+    <meta name="twitter:title" content="vim 기초 사용법">
+    <meta name="twitter:description" content="매번 잊어버려서 참고할 장소를 만들었다.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110224147-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110224147-1');
+    </script>
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="vim-basic">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">vim 기초 사용법</h1>
+    
+        <p class="title-summary">매번 잊어버려서 참고할 장소를 만들었다.</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-basic.md" target="_blank">created: 2021.05.19</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-basic.md" target="_blank">updated: 2021.05.20</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/vim-basic.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=vim+%EA%B8%B0%EC%B4%88+%EC%82%AC%EC%9A%A9%EB%B2%95&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    vim hlghlight unimpared
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#tip-1-hightlight-search-%EB%81%84%EA%B8%B0" id="markdown-toc-tip-1-hightlight-search-끄기">Tip 1. <code class="language-plaintext highlighter-rouge">hightlight search</code> 끄기</a>    <ul>
+      <li><a href="#%EB%AC%B8%EC%A0%9C-%EC%83%81%ED%99%A9" id="markdown-toc-문제-상황">문제 상황</a></li>
+      <li><a href="#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC" id="markdown-toc-관련-링크">관련 링크</a></li>
+      <li><a href="#plugin%EC%9D%B4-%EC%84%A4%EC%B9%98%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%80-vim%EC%97%90%EC%84%9C%EC%9D%98-%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-plugin이-설치되지-않은-vim에서의-해결책">plugin이 설치되지 않은 vim에서의 해결책</a></li>
+      <li><a href="#plugin%EC%9D%B4-%EC%84%A4%EC%B9%98%EB%90%9C-%EC%83%81%ED%83%9C%EC%9D%BC%EB%95%8C" id="markdown-toc-plugin이-설치된-상태일때">plugin이 설치된 상태일때</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tip-1-hightlight-search-끄기">Tip 1. <code class="language-plaintext highlighter-rouge">hightlight search</code> 끄기</h1>
+
+<ul>
+  <li>#hightlight, #unimpared</li>
+</ul>
+
+<h2 id="문제-상황">문제 상황</h2>
+
+<ul>
+  <li>vim에서 특정 단어 위에서 <code class="language-plaintext highlighter-rouge">*</code>을 하거나 serach를 하게되면 찾은단어에 highlight 색상이 표기된다.</li>
+  <li>찾은 목적이 완료된 뒤에 highlight가 너무 눈에 튀어 끄고 싶을 때 어떻게 하지?</li>
+</ul>
+
+<h2 id="관련-링크">관련 링크</h2>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting">Vim clear last search hightlighting - stackoverflow</a></li>
+</ul>
+
+<h2 id="plugin이-설치되지-않은-vim에서의-해결책">plugin이 설치되지 않은 vim에서의 해결책</h2>
+
+<ul>
+  <li>다음번 서치까지 highlight를 끄고자 할 때
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>:noh
+</code></pre></div>    </div>
+  </li>
+  <li>hightlight 기능을 완전히 끄고 싶을 때
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>set nohlsearch
+</code></pre></div>    </div>
+  </li>
+  <li>토글하려면 ( <kbd>F3</kbd> 키에 할당한 예제 )
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>set hlsearch!
+nnoremap &lt;F3&gt; :set hlsearch!&lt;CR&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="plugin이-설치된-상태일때">plugin이 설치된 상태일때</h2>
+
+<ul>
+  <li>관련 답변 링크: <a href="https://stackoverflow.com/a/35982459/9457247">there are two <code class="language-plaintext highlighter-rouge">must have</code> plugins for this:</a>
+</li>
+  <li>나는 <a href="https://github.com/tpope/vim-unimpaired"><code class="language-plaintext highlighter-rouge">unimpared</code></a>를 설치했기 때문에…
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">[oh</code> - <code class="language-plaintext highlighter-rouge">:set hlsearch</code>
+</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">]oh</code> - <code class="language-plaintext highlighter-rouge">:set nohlsearch</code>
+</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">yoh</code> - <code class="language-plaintext highlighter-rouge">hlsearch</code> 토글 ( 위 답변에는 <code class="language-plaintext highlighter-rouge">coh</code>로 되어있지만, 최근 버전에서  댓글과 같이 <code class="language-plaintext highlighter-rouge">yoh</code>로 변경됨 )</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

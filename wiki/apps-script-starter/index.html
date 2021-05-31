@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>로컬에서 구글 Apps Script 개발하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="튜토리얼 따라하기">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/apps-script-starter/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="로컬에서 구글 Apps Script 개발하기">
+    <meta property="og:description" content="튜토리얼 따라하기">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/apps-script-starter/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/apps-script-starter/">
+    <meta name="twitter:title" content="로컬에서 구글 Apps Script 개발하기">
+    <meta name="twitter:description" content="튜토리얼 따라하기">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110224147-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110224147-1');
+    </script>
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="apps-script-starter">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">로컬에서 구글 Apps Script 개발하기</h1>
+    
+        <p class="title-summary">튜토리얼 따라하기</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/apps-script-starter.md" target="_blank">created: 2020.06.06</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/apps-script-starter.md" target="_blank">updated: 2020.07.15</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/apps-script-starter.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C+%EA%B5%AC%EA%B8%80+Apps+Script+%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    google-apps-script
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C-amit-agarwal" id="markdown-toc-2-전개-amit-agarwal">2. 전개 (Amit Agarwal)</a>    <ul>
+      <li><a href="#%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98" id="markdown-toc-환경-설치">환경 설치</a></li>
+      <li><a href="#%EC%BD%94%EB%94%A9-%EC%8B%9C%EC%9E%91%EC%A0%84" id="markdown-toc-코딩-시작전">코딩 시작전</a></li>
+      <li><a href="#%EC%BD%94%EB%94%A9" id="markdown-toc-코딩">코딩</a></li>
+      <li><a href="#%EC%86%8C%EA%B0%90" id="markdown-toc-소감">소감</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-%EB%B0%9C%EB%8B%A8-2" id="markdown-toc-3-발단-2">3. 발단 2</a></li>
+  <li>
+<a href="#4-%EC%A0%84%EA%B0%9C-2" id="markdown-toc-4-전개-2">4. 전개 2</a>    <ul>
+      <li>
+<a href="#%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95" id="markdown-toc-환경-설정">환경 설정</a>        <ul>
+          <li><a href="#%EA%B8%B0%EB%B3%B8-%EC%84%A4%EC%B9%98" id="markdown-toc-기본-설치">기본 설치</a></li>
+          <li><a href="#%EC%82%AC%EC%A0%84-%EC%84%A4%EC%A0%95" id="markdown-toc-사전-설정">사전 설정</a></li>
+        </ul>
+      </li>
+      <li><a href="#typescript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-typescript-프로젝트-만들기">TypeScript 프로젝트 만들기</a></li>
+      <li>
+<a href="#%EB%AA%A8%EB%93%88-exports-%EC%99%80-imports" id="markdown-toc-모듈-exports-와-imports">모듈, exports 와 imports</a>        <ul>
+          <li><a href="#exports-%EC%84%A0%EC%96%B8-%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-exports-선언-해결책"><code class="language-plaintext highlighter-rouge">exports</code> 선언 해결책</a></li>
+          <li><a href="#third-party-build-chain-%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-third-party-build-chain-해결책">third party build-chain 해결책</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#5-%EC%86%8C%EA%B0%90-2" id="markdown-toc-5-소감-2">5. 소감 2</a></li>
+  <li>
+<a href="#6-%EC%84%A4%EC%A0%95" id="markdown-toc-6-설정">6. 설정</a>    <ul>
+      <li><a href="#clasp-github%EC%97%90%EC%84%9C-%EA%B1%B4%EC%A7%84-vscode-%EC%84%A4%EC%A0%95" id="markdown-toc-clasp-github에서-건진-vscode-설정">clasp github에서 건진 VSCode 설정</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>최근에 google-apps-script 프로젝트를 한 개 끝냈는데 …
+    <ul>
+      <li>
+<a href="https://github.com/pyscaffold/pyscaffold">pyscaffold</a> 처럼 초기에 환경을 설정해주는 툴이 있을것 같아 찾아봤다.</li>
+    </ul>
+  </li>
+  <li>찾았는데 .. <a href="https://github.com/labnol/apps-script-starter">Google Apps Script Development</a> 인 것 갈다.
+    <ul>
+      <li>작성자는 Amit Agarwal이라는 인도사람이며 <a href="https://www.labnol.org/about">인도 최초의 전업 블로거</a>라고 한다.</li>
+      <li>블로그 내용에 Google Apps Script 관련내용이 많고 직접 개발한 add-on도 많아 왠지 믿음이 간다.</li>
+      <li>
+<a href="https://www.labnol.org/internet/google-apps-script-developers/32305/">Google Apps Script for Developers</a> 는 블로그에 관련글을 쓴내용이며 직접 설명한 유튜브 링크도 포함하고 있다.</li>
+    </ul>
+  </li>
+  <li>한번 유튜브 비디오를 따라해보면서 익혀보기로 했다.</li>
+</ul>
+
+<h1 id="2-전개-amit-agarwal">2. 전개 (Amit Agarwal)</h1>
+
+<h2 id="환경-설치">환경 설치</h2>
+
+<ul>
+  <li>일단 첨에 해당 git을 클론해온다. 비디오에서 하라는 대로 이름을 <code class="language-plaintext highlighter-rouge">mailman</code>으로 해본다.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git clone</code>을 하면 <code class="language-plaintext highlighter-rouge">.git</code> 폴더가 생기는데, 일단 지운다
+    <ul>
+      <li>신규 프로젝트를 하려고 클론을 하는거기 때문에, 필요없는 history를 지우기 위함이다.</li>
+      <li>현재 폴더가 <code class="language-plaintext highlighter-rouge">mailman</code>인 상황에서 <code class="language-plaintext highlighter-rouge">rm -rf .git</code>
+</li>
+    </ul>
+  </li>
+  <li>아무것도 없는 상태로 시작하기 위해, 샘플 프로그램이 있는 <code class="language-plaintext highlighter-rouge">src</code> 폴더도 제거한다.
+    <ul>
+      <li>현재 폴더가 <code class="language-plaintext highlighter-rouge">mailman</code>인 상황에서 <code class="language-plaintext highlighter-rouge">rm -rf src</code>
+</li>
+    </ul>
+  </li>
+  <li>node가 깔려있는 상태에서 시작하는걸로 가정한다.
+    <ul>
+      <li>노드 버전 확인 명령 : <code class="language-plaintext highlighter-rouge">node -v</code>
+</li>
+    </ul>
+  </li>
+  <li>다음에 개발하는데 필요한 모든 dependency를 설치한다
+    <ul>
+      <li>명령 : <code class="language-plaintext highlighter-rouge">npm install</code>
+</li>
+      <li>참조링크 <a href="https://docs.npmjs.com/cli/install">npm-install</a>
+        <ul>
+          <li>참조하는 파일 - 해당 git에 미리 등록되어 있다.
+            <ul>
+              <li>
+<a href="https://docs.npmjs.com/files/package.json">package.json</a> : depencies를 선언하는 파일</li>
+              <li>
+<a href="https://docs.npmjs.com/files/package-lock.json">package-lock.json</a> : npm을 사용해서 <code class="language-plaintext highlighter-rouge">node_modules</code> 트리나 <code class="language-plaintext highlighter-rouge">package.json</code> 파일을 수정하면 자동으로 생성. 파일이 생성되는 시점의 의존성 트리에 대한 정확한 정보를 <strong>고정(lock)</strong>함</li>
+              <li><a href="https://hyunjun19.github.io/2018/03/23/package-lock-why-need/">package-lock.json 파일을 저장소에 같이 commit 해야하는 이유</a></li>
+              <li>설치해보면 다음과 같은데..</li>
+            </ul>
+
+            <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install
+</span>npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 <span class="o">(</span>node_modules<span class="se">\f</span>sevents<span class="o">)</span>:
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="k">for </span>fsevents@1.2.11: wanted <span class="o">{</span><span class="s2">"os"</span>:<span class="s2">"darwin"</span>,<span class="s2">"arch"</span>:<span class="s2">"any"</span><span class="o">}</span> <span class="o">(</span>current: <span class="o">{</span><span class="s2">"os"</span>:<span class="s2">"win32"</span>,<span class="s2">"arch"</span>:<span class="s2">"x64"</span><span class="o">})</span>
+added 1048 packages from 451 contributors and audited 1119 packages <span class="k">in </span>166.52s
+      
+43 packages are looking <span class="k">for </span>funding
+  run <span class="sb">`</span>npm fund<span class="sb">`</span> <span class="k">for </span>details
+        
+found 6 low severity vulnerabilities
+  run <span class="sb">`</span>npm audit fix<span class="sb">`</span> to fix them, or <span class="sb">`</span>npm audit<span class="sb">`</span> <span class="k">for </span>details
+</code></pre></div>            </div>
+            <ul>
+              <li>
+<a href="https://www.npmjs.com/package/fsevents">fsevents</a> : MacOS의 FSEvents 관련 라이브러리
+                <ul>
+                  <li>“os”:”darwin”을 원하는데.. 현재는 “os”:”win32”라고 나오고.. 현재 플랫폼이 지원되지 않는다고 나온다.</li>
+                  <li>
+<a href="https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%9C%88_(%EC%9A%B4%EC%98%81_%EC%B2%B4%EC%A0%9C)#.EC.B6.9C.EC.8B.9C">darwin</a>은 MacOS의 기본 OS이다.</li>
+                  <li>Windows 환경에서 필요없는 라이브러리이므로 무시한다</li>
+                </ul>
+              </li>
+              <li>취약점(vulnerabilities) 관련
+                <ul>
+                  <li>참고 : <a href="https://blog.outsider.ne.kr/1375">npm에 새로 추가된 audit 기능</a>
+</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="코딩-시작전">코딩 시작전</h2>
+
+<ul>
+  <li>clasp login후 clasp create로 프로젝트 만들기
+    <ul>
+      <li>명령 : <code class="language-plaintext highlighter-rouge">clasp create --type sheets --title "MailMan" --rootDir ./dist</code>
+</li>
+      <li>시트와 관련 script를 한꺼번에 만드는 명령</li>
+    </ul>
+  </li>
+  <li>Cloud script editor 에서 안된다고 하는 명령이 일부 되는듯함.</li>
+  <li>root에 <code class="language-plaintext highlighter-rouge">src</code> 디렉토리를 새로 만듬 ( subfoloder로 <code class="language-plaintext highlighter-rouge">html</code>도 만듬)</li>
+  <li>코딩 시작전에 ./webpack.config.js 편집
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nx">cons</span> <span class="nx">isProduction</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// 위값을 'none' 으로 변경 , none 이 development mdoe라고 함.</span>
+<span class="c1">// production mode로 되어 있으면 코드가 최적화 되지만 읽기불편하고 debug하기가 어려움</span>
+</code></pre></div>    </div>
+    <ul>
+      <li><a href="http://jeonghwan-kim.github.io/js/2017/05/15/webpack.html">웹팩의 기본 개념</a></li>
+    </ul>
+  </li>
+  <li>다음으로 appsscript.json을 편집
+    <ul>
+      <li>appsscript.json 편집시에 권한을 조정했는데 자세한 사항은 <a href="https://developers.google.com/oauthplayground/">google developer playground</a>를 참조하면 모든 권한이 나옴</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="코딩">코딩</h2>
+
+<ul>
+  <li>따라 하는 html path 설정관련해서 에러가 남</li>
+  <li>webpack.config.js에서 다음부분을 수정함
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nx">CopyWebpackPlugin</span><span class="p">({</span>
+<span class="na">patterns</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">from</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">src</span><span class="p">}</span><span class="s2">/html/index.html`</span><span class="p">,</span> <span class="c1">// 원래는 `${src}/**/*.html`로 되어있었음</span>
+    <span class="na">flatten</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">to</span><span class="p">:</span> <span class="nx">destination</span><span class="p">,</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>이후에는 쭉 따라하면 별 문제없이 잘된다</li>
+</ul>
+
+<h2 id="소감">소감</h2>
+
+<ul>
+  <li>체계적이긴 하나, 좀 예전에 작성된 느낌</li>
+  <li>webpack으로 빌드하는데 너무 오래 걸림 ( 느리면 50초 이상, 빠르면 20초 이상)</li>
+  <li>일단 다른 방법을 좀 찾아보기로 함</li>
+  <li><a href="https://www.copypastecharacter.com/">특수문자 복사하는 사이트</a></li>
+</ul>
+
+<h1 id="3-발단-2">3. 발단 2</h1>
+
+<ul>
+  <li>내가 한 번 만들어 보기로 함</li>
+  <li>참조한 자료
+    <ul>
+      <li>개인 유튜브  <a href="https://youtu.be/4Qlt3p6N0es">CLASP Tutorial</a>
+</li>
+      <li><a href="https://github.com/google/clasp/blob/master/docs/typescript.md">clasp github중 TypeScript doc</a></li>
+      <li>Google Apps Script - Guide
+        <ul>
+          <li><a href="https://developers.google.com/apps-script/guides/clasp">Command Line Interface using clasp</a></li>
+          <li><a href="https://developers.google.com/apps-script/guides/typescript">Using TypeScript</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="4-전개-2">4. 전개 2</h1>
+
+<h2 id="환경-설정">환경 설정</h2>
+
+<h3 id="기본-설치">기본 설치</h3>
+
+<ul>
+  <li>VS Code 및 node.js 설치</li>
+  <li>npm으로 clasp 설치및 Google Apps Script API <code class="language-plaintext highlighter-rouge">On</code>
+    <ul>
+      <li>유튜브에서는  이 내용이 여기까지임 <a href="https://youtu.be/4Qlt3p6N0es?t=209">11:31/25:55</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="사전-설정">사전 설정</h3>
+
+<ol>
+  <li>프로젝트를 저장할 폴더 생성
+    <ul>
+      <li>이름을 잘 고민할 것</li>
+    </ul>
+  </li>
+  <li>git init 실행
+    <ul>
+      <li>일단 이거 넣어야 할지 고민할 것</li>
+    </ul>
+  </li>
+  <li>npm init 실행
+    <ul>
+      <li>node package 배포용 환경을 만들기 위한것이지만 여기선 <code class="language-plaintext highlighter-rouge">package.json</code>을 만들기 위해 실행
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="c">#아무것도 묻지 않고 실행완료</span>
+  npm init <span class="nt">-y</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Apps Script 용 Type definition 설치
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  npm i <span class="nt">-D</span> @types/google-apps-script
+</code></pre></div>    </div>
+  </li>
+  <li>프로젝트 루트에 <code class="language-plaintext highlighter-rouge">tsconfig.json</code> 파일을 다음과 같이 작성하여 TypeScript feature를 활성화 한다.
+    <ul>
+      <li>만들기 전에 바로 윗 단계인 <code class="language-plaintext highlighter-rouge">Type definition</code>을 설치하면 tsconfig.json 편집시 <code class="language-plaintext highlighter-rouge">auto completion</code>이 지원된다.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">.clasp.json</code> 파일과 같은 곳에 위치시킨다.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">"compilerOptions"</code> 섹션만 의미 있고 다른 설정은 무시된다.</li>
+      <li>Apps Script Project가 <code class="language-plaintext highlighter-rouge">V8 Engine</code>을 사용하도록 설정되었다면, “target”: “ES2019”로 설정한다. (default: “ES3”)
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="p">{</span>
+   <span class="dl">"</span><span class="s2">comilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="dl">"</span><span class="s2">lib</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">esnext</span><span class="dl">"</span><span class="p">],</span>
+   <span class="dl">"</span><span class="s2">target</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ES2019</span><span class="dl">"</span><span class="p">,</span>
+   <span class="dl">"</span><span class="s2">experimentalDecorators</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+   <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="typescript-프로젝트-만들기">TypeScript 프로젝트 만들기</h2>
+
+<ol>
+  <li>script.google.com 사이트에 접속하기 전에 <code class="language-plaintext highlighter-rouge">clasp create</code> 방식으로 설정</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prompt<span class="nv">$ </span>clasp create <span class="nt">--title</span> <span class="s2">"Name of Project"</span> <span class="nt">--rootDir</span> src 
+</code></pre></div></div>
+
+<ul>
+  <li>위와 같이 실행시 <code class="language-plaintext highlighter-rouge">? Create which script?</code> 로 물어봄. 여기서 script 종류를 선택해도 되고…</li>
+  <li>아래와 같이 처음부터 종류를 선택하고 들어갈수 도 있음.</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  prompt<span class="nv">$ </span>clasp create <span class="nt">--type</span> sheets <span class="nt">--title</span> <span class="s2">"sheet Project"</span> <span class="nt">--rootDir</span> src
+</code></pre></div></div>
+
+<ul>
+  <li>이 방식 말고  script.google.com 사이트에 미리 프로젝트 만들어놓고 clone 하는 방식이 있는데 내 취향이 아님.</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prompt<span class="nv">$ </span>clasp clone <span class="s2">"&lt;script_Id&gt;"</span> <span class="nt">--rootDir</span> src
+</code></pre></div></div>
+
+<ul>
+  <li>프로젝트 폴더밑에 <code class="language-plaintext highlighter-rouge">src</code> 디렉토리를 만들면 나중에 만들게 될 배포및 테스트 폴더와 구분 되어 좋음.</li>
+</ul>
+
+<h2 id="모듈-exports-와-imports">모듈, exports 와 imports</h2>
+
+<ul>
+  <li>Google Apps Script는 ES 모듈은 현재 지원하지 않음. 일반적인 <code class="language-plaintext highlighter-rouge">export</code>/<code class="language-plaintext highlighter-rouge">import</code> 패턴은 실패함.</li>
+  <li>실패하는 패턴은 다음과 같다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// module.ts</span>
+  <span class="c1">// 'fool' is added to the 'exports' object in the global namespace</span>
+  <span class="k">export</span> <span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello form Module</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// main.ts</span>
+  <span class="k">import</span> <span class="p">{</span> <span class="nx">foo</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./module</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// this statement is ignored</span>
+  
+  <span class="c1">// the variable 'fool` does not exist in the global namespace</span>
+  <span class="nx">cons</span> <span class="nx">bar</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">;</span>
+</code></pre></div></div>
+<h3 id="exports-선언-해결책">
+<code class="language-plaintext highlighter-rouge">exports</code> 선언 해결책</h3>
+
+<ul>
+  <li>이 해결책은 일반적인 모듈이 지원하는 code isolation조차 지원하지 않으므로, 찾기 어려운 버그를 낼수 있음을 주의</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">declare</span> <span class="kd">const</span> <span class="nx">exports</span><span class="p">:</span> <span class="k">typeof</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">./module</span><span class="dl">'</span><span class="p">);</span>
+  
+  <span class="nx">exports</span><span class="p">.</span><span class="nx">foo</span><span class="p">;</span>  <span class="c1">// address "imported" content as it will be visible when transpiled</span>
+</code></pre></div></div>
+
+<p>###  <code class="language-plaintext highlighter-rouge">namespace</code> 실행문 해결책</p>
+
+<ul>
+  <li>이전에 “internal module”로 알려졌던, TypeScript의 “namespaces”를 이용하며, 적절한 code isolation의 목적을 이룬다</li>
+  <li>Namespace definition은 중첩될수 있으며, 여러 파일에서 사용될수 있고, <code class="language-plaintext highlighter-rouge">import</code>/<code class="language-plaintext highlighter-rouge">require</code> 문장이 필요하지 않다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// module.ts</span>
+ <span class="nx">namespace</span> <span class="nx">Module</span> <span class="p">{</span>
+    <span class="k">export</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{}</span>
+    <span class="kd">function</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{}</span>  <span class="c1">// this function can only be addressed from within the 'Module' namespace</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// anyFiles.ts</span>
+ <span class="nx">Module</span><span class="p">.</span><span class="nx">foo</span><span class="p">();</span>   <span class="c1">// address a namespace's exported content directly</span>
+ 
+ <span class="kd">const</span> <span class="nx">nameIWantForMyImports</span> <span class="o">=</span> <span class="nx">Module</span><span class="p">.</span><span class="nx">foo</span><span class="p">;</span>   <span class="c1">// to simulate 'import' with renaming</span>
+ <span class="nx">nameIWantForMyImports</span><span class="p">();</span>
+</code></pre></div></div>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">namespace</code>의 좀 더 자세한 예제는 <a href="https://github.com/PopGoesTheWza/ts-gas-project-starter">ts-gas-project-starter</a>에 나와있다.</li>
+</ul>
+
+<h3 id="third-party-build-chain-해결책">third party build-chain 해결책</h3>
+
+<ul>
+  <li>webpack, rollup.js, gulp 등등의 써드 파티 도구를 이용한 방법</li>
+  <li>다음 단계와 같이 수행한다</li>
+</ul>
+
+<ol>
+  <li>코드를 파싱해서 사용된 모듈을 확인한다. ( export 와 import 사용)</li>
+  <li>(선택적) 사용하지 않는 코드를 제거하기 위해 나무 흔들기?를 한다.</li>
+  <li>결과를 한개의 javascript 패키지로 모은다.</li>
+</ol>
+
+<h1 id="5-소감-2">5. 소감 2</h1>
+
+<ul>
+  <li>너무 간단.. 지워버릴까?</li>
+</ul>
+
+<h1 id="6-설정">6. 설정</h1>
+
+<h2 id="clasp-github에서-건진-vscode-설정">clasp github에서 건진 VSCode 설정</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/google/clasp/blob/master/docs/settings.md">clasp github/docs/settings.md</a> 에서 건진 VSCode 설정</li>
+  <li>일단 써진대로 <code class="language-plaintext highlighter-rouge">Code &gt; Prefereces &gt; Settings</code> 로 들어간다</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">User &gt; Extensions</code> 메뉴에 <code class="language-plaintext highlighter-rouge">JSON</code>을 찾아 <code class="language-plaintext highlighter-rouge">Schemas</code>에 <code class="language-plaintext highlighter-rouge">Edit in settings.json</code>을 찾는다.</li>
+  <li>들어 가서 추천하는 명령은 선택하면 일단 넣을수 있는 템플릿이 완성된다.</li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PyScaffold로 파이썬 프로젝트 시작하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/pyscaffold/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PyScaffold로 파이썬 프로젝트 시작하기">
+    <meta property="og:description" content="...">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/pyscaffold/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/pyscaffold/">
+    <meta name="twitter:title" content="PyScaffold로 파이썬 프로젝트 시작하기">
+    <meta name="twitter:description" content="...">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110224147-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110224147-1');
+    </script>
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="pyscaffold">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">PyScaffold로 파이썬 프로젝트 시작하기</h1>
+    
+        <p class="title-summary">...</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/pyscaffold.md" target="_blank">created: 2020.11.15</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/pyscaffold.md" target="_blank">updated: 2020.11.16</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/pyscaffold.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=PyScaffold%EB%A1%9C+%ED%8C%8C%EC%9D%B4%EC%8D%AC+%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    python pyscaffold windows-terminal
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#%EA%B8%B0%EB%B3%B8-%ED%99%98%EA%B2%BD" id="markdown-toc-기본-환경">기본 환경</a>        <ul>
+          <li><a href="#windows-%ED%99%98%EA%B2%BD" id="markdown-toc-windows-환경">Windows 환경</a></li>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A1%9C-console-application-%EB%A7%8C%EB%93%A4%EC%96%B4-%EB%B3%B4%EA%B8%B0" id="markdown-toc-테스트로-console-application-만들어-보기">테스트로 Console application 만들어 보기</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>BillMaker를 PyScaffold로 시작했는데.. 정리해놓은 문서가 없음</li>
+  <li>처음부터 다시 만들며 정리해보기로 함.</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="기본-환경">기본 환경</h2>
+
+<h3 id="windows-환경">Windows 환경</h3>
+
+<ul>
+  <li>Windows Terminal로 Anaconda 환경을 꾸밈
+    <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">참고</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">https://dev.to/voodu/windows-terminal-conda-d</span><span class="mi">3</span><span class="err">e</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anaconda with Powershell"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suppressApplicationTitle"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"startingDirectory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D:/App/Anaconda3/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"commandline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"powershell.exe -ExecutionPolicy ByPass -NoExit -Command </span><span class="se">\"</span><span class="s2">&amp; 'D:/App/Anaconda3/shell/condabin/conda-hook.ps1' ; conda activate 'D:/App/Anaconda3'; conda env list </span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"%OneDrive%/사진/WindowsTerminalImages/anaconda.png"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"backgroundImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"%OneDrive%/사진/WindowsTerminalImages/conda_cheat_sheet.png"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"backgroundImageStretchMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"backgroundImageAlignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"topRight"</span><span class="w"> 
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre></div>    </div>
+    <ul>
+      <li>참고 : <a href="https://dev.to/voodu/windows-terminal-conda-d3e">Windows Terminal ❤ conda</a>
+</li>
+    </ul>
+  </li>
+  <li>환경 설정
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> conda create <span class="nt">--name</span> BillMaker2 <span class="nv">python</span><span class="o">=</span>3.7
+<span class="o">&gt;</span> conda activate BillMaker2
+<span class="o">&gt;</span> conda <span class="nb">install</span> <span class="nt">-c</span> conda-forge pyscaffold
+<span class="o">&gt;</span> putup billmaker2
+<span class="o">&gt;</span> python setup.py develop
+</code></pre></div>    </div>
+    <ul>
+      <li>참고 : <a href="https://github.com/pyscaffold/pyscaffold">pyscaffold github</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트로-console-application-만들어-보기">테스트로 Console application 만들어 보기</h3>
+
+<ul>
+  <li>위에서 기본적인 설정을 완료했다면..
+    <ul>
+      <li>Pyscaffold에서 기본제공하는 fibonacci console application을 만들어볼 수 있다.</li>
+    </ul>
+  </li>
+  <li>project root &gt; src &gt; billmaekr2 &gt; skeleton.py 로 가서 제일 위의 주석을 읽어본다.
+    <ul>
+      <li>project root &gt; setup.cfg 수정해보라고 나온다.
+        <ul>
+          <li>setup.cfg &gt; [options.entry_points] 에서 다음 주석처리된 부분 활성화하도록 수정
+            <pre><code class="language-cfg">console_scripts =
+    fibonacci = billmaker2.skeleton:run
+</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>프로젝트 root위치 cmd에서 <code class="language-plaintext highlighter-rouge">python setup.py install</code>을 실행
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="o">&gt;</span> python setup.py <span class="nb">install</span>
+</code></pre></div>    </div>
+  </li>
+  <li>cmd에서 아래와 같이 실행하면 결과가 나옴
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="o">&gt;</span> fibonacci 3
+  The 3-th Fibonacci number is 2
+</code></pre></div>    </div>
+  </li>
+  <li>../Anaconda3/envs/<env_name>/Scripts 에 "fibonacci.exe"가 만들어진 것을 확인한다.</env_name>
+</li>
+  <li>완료 !!</li>
+</ol>
+
+<p>###</p>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Open API 사용하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="실제 사용법 정리">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/OpenApi-usage/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Open API 사용하기">
+    <meta property="og:description" content="실제 사용법 정리">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/OpenApi-usage/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/OpenApi-usage/">
+    <meta name="twitter:title" content="Open API 사용하기">
+    <meta name="twitter:description" content="실제 사용법 정리">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110224147-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110224147-1');
+    </script>
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="OpenApi-usage">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Open API 사용하기</h1>
+    
+        <p class="title-summary">실제 사용법 정리</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/OpenApi-usage.md" target="_blank">created: 2021.01.06</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/OpenApi-usage.md" target="_blank">updated: 2021.01.26</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/OpenApi-usage.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Open+API+%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    open-api config-js debug-js
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#%EC%9D%B4%EC%8A%88%EB%93%A4" id="markdown-toc-이슈들">이슈들</a>        <ul>
+          <li><a href="#api-key%EA%B0%80-url-encoding-%EC%B2%98%EB%A6%AC%EA%B0%80-%EB%90%98%EC%96%B4-%EC%8A%B9%EC%9D%B8%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%80-%ED%82%A4-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%82%98%EB%8A%94-%EB%AC%B8%EC%A0%9C" id="markdown-toc-api-key가-url-encoding-처리가-되어-승인되지-않은-키-에러가-나는-문제">API Key가 URL encoding 처리가 되어 승인되지 않은 키 에러가 나는 문제</a></li>
+          <li><a href="#request-deprecated--sob" id="markdown-toc-request-deprecated--sob">request deprecated …<img class="emoji" title=":sob:" alt=":sob:" raw="😭" src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"></a></li>
+          <li>
+<a href="#config-js-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" id="markdown-toc-config-js-사용하기">config-js 사용하기</a>            <ul>
+              <li>
+<a href="#commonjs-%EB%B0%A9%EC%8B%9D%EA%B3%BC-es-modues-%EB%B0%A9%EC%8B%9D%EC%9D%98-%EC%A1%B0%ED%95%A9" id="markdown-toc-commonjs-방식과-es-modues-방식의-조합">CommonJS 방식과 ES Modues 방식의 조합</a>                <ul>
+                  <li>
+<a href="#mainjs-%EC%97%90%EC%84%9C-config-js-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0" id="markdown-toc-mainjs-에서-config-js-불러오기">main.js 에서 config-js 불러오기</a>                    <ul>
+                      <li><a href="#debugjs-%EC%9D%98-%EC%82%AC%EC%9A%A9" id="markdown-toc-debugjs-의-사용">debug.js 의 사용</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%EC%9D%98-%ED%99%95%EC%9E%A5%EC%9E%90-%EB%AC%B8%EC%A0%9C" id="markdown-toc-설정파일의-확장자-문제">설정파일의 확장자 문제</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>가족과 같이 특정 영화를 보고자할 때..
+    <ul>
+      <li>애들과 같이 봐도 될지 등급은 어떻게 매겨진건지 알고 싶을때가 있다.</li>
+    </ul>
+  </li>
+  <li>우리나라 영화 등급은 <a href="https://www.kmrb.or.kr/">영상물등급위원회</a>에서 설정한다.
+    <ul>
+      <li>영등위는 <a href="https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=3043382">open api</a> 도 제공한다.</li>
+    </ul>
+  </li>
+  <li>사용하는 예제를 만들어보자</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="이슈들">이슈들</h2>
+
+<h3 id="api-key가-url-encoding-처리가-되어-승인되지-않은-키-에러가-나는-문제">API Key가 URL encoding 처리가 되어 승인되지 않은 키 에러가 나는 문제</h3>
+
+<ul>
+  <li>
+<a href="https://www.w3schools.com/tags/ref_urlencode.ASP">기본 부족 보충</a>
+    <ul>
+      <li>URL - Uniform Resource Locator
+        <ul>
+          <li>웹 브라우저는 웹서버로 부터 페이지를 요청할 때 URL을 사용한다</li>
+          <li>URL은 웹 페이지의 주소이다.</li>
+        </ul>
+      </li>
+      <li>URL Encoding (<a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding</a>)
+        <ul>
+          <li>URL encoding은 URL에 사용되는 문자를 인터넷을 통해 전달할 수 있는 format으로 변환한다</li>
+          <li>URL은 <a href="https://www.w3schools.com/charsets/ref_html_ascii.asp">ASCII 문자셋</a> 만 사용할 수 있다.</li>
+          <li>URL은 종종 ASCII set외의 문자를 포함하기 때문에, URL은 유효한 ASCII format으로 변환될 필요가 있다.</li>
+          <li>URL encoding은 unsafe ASCII 문자를 “%”와 16진수 숫자 두개로 변경한다.</li>
+          <li>URL은 공백을 포함할 수 없다. URL encoding은  보통 space를 plus(+) 나 %20 으로 변환한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>request 혹은 axios를 사용하여 URL을 구성할 때 서비스 키가 없다면 다음과 같이 구성하게 된다
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">query</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">뱀파이어</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">start</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">display</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">yearfrom</span> <span class="p">:</span> <span class="mi">2014</span><span class="p">,</span>
+  <span class="na">yearto</span> <span class="p">:</span> <span class="mi">2014</span>
+<span class="p">}</span>
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">({</span>
+  <span class="na">uri</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/serach_json2.jsp</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">qs</span><span class="p">:</span> <span class="nx">option</span>
+  <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">})</span>
+</code></pre></div>    </div>
+    <ul>
+      <li>그런데 서비스 키가 있다면 단순히 option에 ServiceKey를 넣으면 될거라고 생각하게 된다.
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">option</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">ServiceKey</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">나는서비스키</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">query</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">뱀파이어</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>승인받은 키에 “..%3D..” 문자가 섞여 있는데 “..%253D..”로 변환되어 승인되지 않은 키라는 에러가 계속 나옴
+    <ul>
+      <li>해당 키가 이미 URLencoding된 상태이지만 한 번 더 encoding되면서 나오는 문제임</li>
+      <li>
+<a href="https://owasp.org/www-community/Double_Encoding">double encoding</a>이라는 공격기법에도 언급되는 내용?
+        <ul>
+          <li>”%”를 인코딩하면 “%25”로 변환됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://stackoverflow.com/a/39152383/9457247">해결책은 한번 더 인코딩되지 않도록 URI에 직접 포함시킴</a></li>
+</ul>
+
+<h3 id="request-deprecated--sob">request deprecated …<img class="emoji" title=":sob:" alt=":sob:" raw="😭" src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">
+</h3>
+
+<ul>
+  <li>node.js 생태계에서 오래된 package인 <a href="https://github.com/request/request/issues/3142">request가 deprecate 되었다, request github</a>.
+    <ul>
+      <li>예제로 많이 보였는데…</li>
+      <li>
+<a href="https://github.com/request/request/issues/3143">Alternative libraries to request, request github</a>
+        <ul>
+          <li>대체재로 axios가 있다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="config-js-사용하기">config-js 사용하기</h3>
+
+<ul>
+  <li>open api를 사용하다보면 필연적으로 credentials를 사용하게 된다.</li>
+  <li>이런 정보들은 남에게 공개되면 안되는 정보들이므로 github에 올릴때 제외해야 한다.</li>
+  <li>제외하는 방법에 대한 글 : <a href="https://www.ibm.com/cloud/blog/keeping-secrets-cloud-application-access-credentials-private-data?mhsrc=ibmsearch_a&mhq=keeping%20secrets">Keeping secrets</a>
+    <ul>
+      <li>윗 글을 발췌번역한 국내 글 : <a href="https://poiemaweb.com/nodejs-keeping-secrets">9.5 Node.js에서 비밀 설정 정보 관리</a>
+</li>
+    </ul>
+  </li>
+  <li>나는 설정파일 사용하는 방법을 사용하기로 하고 <a href="https://www.npmjs.com/package/config-js"><code class="language-plaintext highlighter-rouge">config-js</code></a>를 찾아내었다.</li>
+</ul>
+
+<h4 id="commonjs-방식과-es-modues-방식의-조합">CommonJS 방식과 ES Modues 방식의 조합</h4>
+
+<ul>
+  <li>나는 OpenApiTest 프로젝트에서 module 방식을 사용하고 있다.
+    <ul>
+      <li><a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js 는 디폴트로 CommonJs를 지원하며 package.json 설정으로 ES Module을 Enable 한다.</a></li>
+    </ul>
+  </li>
+  <li>config-js는 CommonJS 방식으로의 사용법만 기술하고 있기에 현재 내환경에서 사용하려면 몇가지 수정이 필요하다.</li>
+</ul>
+
+<h5 id="mainjs-에서-config-js-불러오기">main.js 에서 config-js 불러오기</h5>
+
+<ul>
+  <li>CommonJS 방식
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">config-js</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Config</span><span class="p">(</span><span class="dl">'</span><span class="s1">...</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>ES module 방식
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Config</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">config-js</span><span class="dl">'</span>
+<span class="kd">let</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Config</span><span class="p">(</span><span class="dl">'</span><span class="s1">...</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>이 부분의 실패
+    <ul>
+      <li>처음에는 <code class="language-plaintext highlighter-rouge">new</code> 없이 <code class="language-plaintext highlighter-rouge">let config = Config('...')</code> 으로만 호출하여 다음과 같은 에러가 계속 났다.
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>~/node_module/config-js/index.js:56
+this.pathToDefaults <span class="o">=</span> path.join<span class="o">(</span>path.dirname<span class="o">(</span>pathToConfig.FileIn<span class="o">)</span>
+                    ^
+TypeError: Cannot <span class="nb">set </span>property <span class="s1">'pathToDefaults'</span> of undefined
+</code></pre></div>        </div>
+      </li>
+      <li>즉, <code class="language-plaintext highlighter-rouge">this</code>가 <code class="language-plaintext highlighter-rouge">undefined</code>인 상태에서 <code class="language-plaintext highlighter-rouge">this</code>의 propety인 <code class="language-plaintext highlighter-rouge">pathToDefaults</code>에 접근하려고 했다.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">this</code>가 <code class="language-plaintext highlighter-rouge">undefined</code>인 이유는 <code class="language-plaintext highlighter-rouge">Config</code>을 <code class="language-plaintext highlighter-rouge">new</code>로 생성하지 않았기 때문</li>
+    </ul>
+  </li>
+</ul>
+
+<h6 id="debugjs-의-사용">debug.js 의 사용</h6>
+
+<ul>
+  <li>위 섹션의 실패를 경험하면서 <code class="language-plaintext highlighter-rouge">config-js</code> 패키지 내부에서 사용한 <code class="language-plaintext highlighter-rouge">debug.js</code> 모듈의 출력을 보고 싶었다.
+    <ul>
+      <li><a href="https://www.npmjs.com/package/debug">npm debug</a></li>
+      <li><a href="https://github.com/visionmedia/debug">github debug.js</a></li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">debug.js</code>의 github에 설명이 잘되어 있는데 ..
+    <ul>
+      <li>내가 사용중인 <code class="language-plaintext highlighter-rouge">node.js</code> + <code class="language-plaintext highlighter-rouge">windows powershell</code> 환경에 관한 설정도 나와있다.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">package.json</code>의 <code class="language-plaintext highlighter-rouge">scripts</code> 옵션에 다음과 같이 추가한다
+        <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@powershell -Command $env:DEBUG='';node ./src/main.js"</span><span class="w">
+  </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@powershell -Command $env:DEBUG='*';node ./src/main.js"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>        </div>
+        <ul>
+          <li>위와 같이 설정하고 쉘에서 <code class="language-plaintext highlighter-rouge">npm run debug</code>하면 쉘에 디버그로그가 출력된다.
+            <ul>
+              <li>웹에서 사용하면 브라우저 디버그 모드에서 컬러링된 출력을 지원한다고 한다</li>
+            </ul>
+          </li>
+          <li>위에서 <code class="language-plaintext highlighter-rouge">DEBUG='*'</code> 부분에 <code class="language-plaintext highlighter-rouge">*</code> 대신 원하는 로그를 지정할 수 있는듯 하다.</li>
+          <li>color를 지원하는 쉘에서 보면 debug로그가 이쁘게 나온다.</li>
+          <li>해당세션에서 임시로 <code class="language-plaintext highlighter-rouge">DEBUG</code> 변수를 선언했기에 해당 세션이 죽기전까지 계속 DEBUG 활성화상태이다.
+            <ul>
+              <li>
+<code class="language-plaintext highlighter-rouge">npm run main</code>시에 디버그로그를 죽이고 싶다면 <code class="language-plaintext highlighter-rouge">main</code>을 위와 같이 바꾼다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="설정파일의-확장자-문제">설정파일의 확장자 문제</h5>
+
+<ul>
+  <li>이 부분에서 많이 헤맸는데 아래 링크를 잘 참조해보자
+    <ul>
+      <li><a href="https://nodejs.org/api/esm.html#esm_interoperability_with_commonjs">Interoperability with CommonJS</a></li>
+    </ul>
+  </li>
+  <li>이 부분의 실패
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">cfg_secret.js</code>로 <code class="language-plaintext highlighter-rouge">config file</code>을 만들었는데…
+        <ul>
+          <li>파일 경로에는 문제가 없지만 <code class="language-plaintext highlighter-rouge">require</code>로 config file을 불러올 때 계속 다음 에러가 난다
+            <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> npm run debug
+      
+...<span class="o">(</span>debug.js 출력<span class="o">)</span>
+config-js Could not load target config: <span class="s2">"~/OpenApiTest/src/cfg_secret.js"</span> +1ms
+...
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>문제가 되는 <code class="language-plaintext highlighter-rouge">config-js</code>의 코드 부분은 다음과 같다.
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">{</span>
+  <span class="nx">targetConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">pathToConfigFile</span><span class="p">);</span>
+  <span class="nx">debug</span><span class="p">(</span><span class="dl">'</span><span class="s1">Required config: </span><span class="dl">'</span><span class="o">+</span><span class="nx">pathToConfigFile</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">debug</span><span class="p">(</span><span class="dl">'</span><span class="s1">Could not load target config: "</span><span class="dl">'</span><span class="o">+</span><span class="nx">pathToConfigFile</span><span class="o">+</span><span class="dl">'</span><span class="s1">"</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>위 catch 블럭에 err 찍는 내용이 없어 추가해서 찍어보니 다음과 같았다.
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>...<span class="o">(</span>debug.js 출력<span class="o">)</span>
+config-js err: Error <span class="o">[</span>ERR_REQUIRE_ESM]: Must use import to load ES Module: ~/OpenApiTest/src/cfg_secret.js
+config-js require<span class="o">()</span> of /OpenApiTest/src/cfg_secret.js from ~/OpenApiTest/node_modules/config-js/index.js is an ES module file as it is a .js file whose nearest parent package.json contains <span class="s2">"type"</span>: <span class="s2">"module"</span> which defines 
+config-js Instead rename cfg_secret.js to end <span class="k">in</span> .cjs, change the requiring code to use import<span class="o">()</span>, or remove <span class="s2">"type"</span>: <span class="s2">"module"</span> from ~/OpenApiTest/package.json.
+config-js  +1ms
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>해결
+    <ul>
+      <li>위 지시사항대로 <code class="language-plaintext highlighter-rouge">cfg_secret.js</code>를 <code class="language-plaintext highlighter-rouge">cfg_secret.cjs</code>로 수정하고, 관련코드를 수정하고 실행해보니 잘 되었다.</li>
+    </ul>
+  </li>
+  <li>소감
+    <ul>
+      <li>결과적으로 CommonJS와 ES Module은 호환은 가능하지만 신경을 써줘야한다.</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

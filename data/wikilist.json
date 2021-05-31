@@ -1,0 +1,245 @@
+
+{
+
+"Books-Category":{
+"title":"책읽고 정리한 카테고리","summary":"카테고리 1단계 (끝)",
+"updated":"2021-03-19 23:06:51 +0900",
+"parent":"index"},
+"Cross-Category":{
+"title":"공통 도구","summary":"카테고리 문서 1단계",
+"updated":"2021-03-25 02:14:10 +0900",
+"parent":"Tools-Category"},
+"Git-Category":{
+"title":"Git","summary":"카테고리 2단계 (끝)",
+"updated":"2020-10-12 12:38:21 +0900",
+"parent":"Tools-Category"},
+"Google%20SchechUp":{
+"title":"구글 스케치업 정리","summary":"단축키 정리?",
+"updated":"2020-12-21 23:12:40 +0900",
+"parent":""},
+"Google-sketchup":{
+"title":"구글 스케치업 정리","summary":"단축키 정리?",
+"updated":"2020-12-23 01:17:33 +0900",
+"parent":"Gray-Category"},
+"GoogleAppsScript-Category":{
+"title":"Google Apps Script","summary":"카테고리 2단계 (끝)",
+"updated":"2020-10-07 13:21:08 +0900",
+"parent":"Language-Category"},
+"Gray-Category":{
+"title":"Gray","summary":"카테고리 1단계 (끝)",
+"updated":"2020-04-14 08:32:09 +0900",
+"parent":"index"},
+"HDMI2dot1-device":{
+"title":"HDMI2.1 관련 장비 정보","summary":"HDMI2.1 + 8K TV + 4K 120Hz",
+"updated":"2020-12-19 23:54:06 +0900",
+"parent":"IT-Device-Category"},
+"IT-Device-Category":{
+"title":"IT 장비 관련","summary":"카테고리 1단계 (끝)",
+"updated":"2021-05-06 00:35:34 +0900",
+"parent":"index"},
+"Language-Category":{
+"title":"프로그래밍 언어","summary":"카테고리 문서 1단계 - 프로그래밍 언어 관련",
+"updated":"2020-04-13 20:46:01 +0900",
+"parent":"index"},
+"Linux-Category":{
+"title":"Linux","summary":"카테고리 2단계 (끝)",
+"updated":"2020-04-14 08:24:16 +0900",
+"parent":"Tools-Category"},
+"OpenApi-usage":{
+"title":"Open API 사용하기","summary":"실제 사용법 정리",
+"updated":"2021-01-26 15:09:34 +0900",
+"parent":"Gray-Category"},
+"PowerShell-Scripting":{
+"title":"Powershell 스크립팅",
+"updated":"2020-11-03 00:17:12 +0900",
+"parent":""},
+"Python-Categroy":{
+"title":"Python","summary":"카테고리 2단계 (끝)",
+"updated":"2020-11-15 12:45:58 +0900",
+"parent":"Language-Category"},
+"Smart-Device-Stand":{
+"title":"스마트폰 스캔 거치대","summary":"Ellystand 부터 시작",
+"updated":"2021-05-06 00:31:32 +0900",
+"parent":"IT-Device-Category"},
+"Term-Category":{
+"title":"용어 정리","summary":"카테고리 문서 1단계 (끝)",
+"updated":"2021-03-12 11:59:52 +0900",
+"parent":"index"},
+"Tools-Category":{
+"title":"프로그래밍 도구","summary":"카테고리 1단계",
+"updated":"2020-04-13 20:52:38 +0900",
+"parent":"index"},
+"Vim-Category":{
+"title":"Vim","summary":"카테고리 문서 1단계",
+"updated":"2020-11-02 12:02:39 +0900",
+"parent":"Tools-Category"},
+"Vimrc-Category":{
+"title":"Vimrc","summary":"카테고리 2단계 (끝)",
+"updated":"2020-04-14 08:38:42 +0900",
+"parent":"Vim-Category"},
+"Web-Category":{
+"title":"Web (Frontend)","summary":"카테고리 2단계 (끝)",
+"updated":"2020-05-07 12:18:24 +0900",
+"parent":"Language-Category"},
+"Wiki-Setting-Category":{
+"title":"위키 설정","summary":"카테고리 1단계 (끝)",
+"updated":"2021-03-10 14:58:46 +0900",
+"parent":"index"},
+"Windows-Category":{
+"title":"Windows","summary":"카테고리 2단계 (끝)",
+"updated":"2020-11-07 13:53:39 +0900",
+"parent":"Tools-Category"},
+"Windows-Sysinternals":{
+"title":"Sysinternals 도구","summary":"troubleshooting용 도구",
+"updated":"2020-11-03 02:28:36 +0900",
+"parent":"Windows-Category"},
+"Windows-Terminal-Setting":{
+"title":"Windows Terminal 설정하기",
+"updated":"2020-11-19 12:12:34 +0900",
+"parent":"Windows-Category"},
+"apps-script-starter":{
+"title":"로컬에서 구글 Apps Script 개발하기","summary":"튜토리얼 따라하기",
+"updated":"2020-07-15 22:06:32 +0900",
+"parent":"GoogleAppsScript-Category"},
+"code-isolation":{
+"title":"typescript로 개발시 파일 순서 문제","summary":"troubleshooting",
+"updated":"2020-10-07 14:20:51 +0900",
+"parent":"GoogleAppsScript-Category"},
+"css-default-style":{
+"title":"Default CSS Style 적용하기","summary":"쓰다보니 제목과 내용이 달라졌다..",
+"updated":"2020-12-29 01:27:47 +0900",
+"parent":"Web-Category"},
+"css-meaning":{
+"title":"갑자기 깨달은 CSS 단어의 의미","summary":"toc의 css를 조정하다가 우연히 깨닫게 된 CSS 어원의 의미",
+"updated":"2020-04-14 08:33:35 +0900",
+"parent":"Web-Category"},
+"desk-setup":{
+"title":"데스크 셋업 구경하기","summary":"인제 시작!!",
+"updated":"2021-01-06 13:31:42 +0900",
+"parent":"Gray-Category"},
+"dotfiles":{
+"title":"dotfiles 관련 정리","summary":"아직 정리중...",
+"updated":"2020-11-11 11:39:27 +0900",
+"parent":"Cross-Categry"},
+"exact-size-photo-print":{
+"title":"정확한 크기로 사진 인쇄하기","summary":"구글 슬라이드로..",
+"updated":"2020-12-01 11:20:20 +0900",
+"parent":"Gray-Category"},
+"excel2gsheet":{
+"title":"엑셀 파일을 구글 시트로 바꾸기","summary":"google-apps-script를 배우는 좋은 시작점",
+"updated":"2020-11-17 07:18:18 +0900",
+"parent":"GoogleAppsScript-Category"},
+"gas_library":{
+"title":"구글 스크립트 라이브러리 사용법","summary":"beyond battery-included, 추가배터리 구하기",
+"updated":"2020-08-06 14:48:58 +0900",
+"parent":"GoogleAppsScript-Category"},
+"git-commands":{
+"title":"자주 쓰는 git 명령","summary":"git 명령어 상황별 레시피",
+"updated":"2020-11-04 23:54:29 +0900",
+"parent":"Git-Category"},
+"git-commit-messages":{
+"title":"Git Commit 메시지","summary":"쓰는법",
+"updated":"2020-12-26 12:16:55 +0900",
+"parent":"Git-Category"},
+"git-upstream-meaning":{
+"title":"Git에서 upstream의 의미","summary":"매뉴얼 원본 해석에 중요함",
+"updated":"2020-12-26 11:29:49 +0900",
+"parent":"Git-Category"},
+"google_photo_slideshow":{
+"title":"구글 포토의 슬라이드쇼 콘트롤하기","summary":"구글 포토로만 하는 건 아님...",
+"updated":"2021-01-31 09:41:23 +0900",
+"parent":"Gray-Category"},
+"isbn10-to-isbn13":{
+"title":"ISBN-10 에서 ISBN-13으로 바꾸기","summary":"책관련",
+"updated":"2020-12-21 23:14:15 +0900",
+"parent":"Gray-Category"},
+"javascript-myCookBook":{
+"title":"Javascript 초급 코딩 요령","summary":"js/ts 뉴비가 생각하는 ...",
+"updated":"2020-10-25 16:41:03 +0900",
+"parent":"Web-Category"},
+"keyword_collection":{
+"title":"용어 설명 모음","summary":"아직 안정함",
+"updated":"2021-05-19 15:04:05 +0900",
+"parent":"Term-Category"},
+"korean-font":{
+"title":"무료 한글 서체","summary":"무료..",
+"updated":"2020-10-08 23:41:38 +0900",
+"parent":"Cross-Category"},
+"meet-puppeteer":{
+"title":"Puppeteer 시작하기","summary":"javascript로 브라우저 자동화",
+"updated":"2021-01-30 01:17:24 +0900",
+"parent":"Web-Category"},
+"new-windows-installation":{
+"title":"새로 윈도우 설치할 때 순서","summary":"구글 슬라이드로..",
+"updated":"2020-06-08 20:54:07 +0900",
+"parent":"Gray-Category"},
+"pyscaffold":{
+"title":"PyScaffold로 파이썬 프로젝트 시작하기","summary":"...",
+"updated":"2020-11-16 01:16:15 +0900",
+"parent":"Python-Category"},
+"re2-translation":{
+"title":"RE2 번역","summary":"구글 RE2",
+"updated":"2021-01-25 20:58:48 +0900",
+"parent":"GoogleAppsScript-Category"},
+"sed-problem-solving":{
+"title":"GNU sed의 이상한 정규식 처리","summary":"제목과 관련된 내용이 15% 정도만 있는 이상한 페이지",
+"updated":"2020-04-14 08:11:36 +0900",
+"parent":"Linux-Category"},
+"stackoverflow_searchhelp":{
+"title":"스택 오버플로우에서 검색 하기","summary":"누구보다 빠르게 난 남들과는 다르게 ...",
+"updated":"2020-11-09 21:52:05 +0900",
+"parent":"Gray-Category"},
+"term-short-circuit-evaluation":{
+"title":"Short-circuit evaluation","summary":"단축평가",
+"updated":"2021-05-19 14:15:24 +0900",
+"parent":"Term-Category"},
+"term-string-interpolation":{
+"title":"String interpolation","summary":"템플릿 문자열, 백틱 문자열, f문자열",
+"updated":"2021-03-12 12:00:51 +0900",
+"parent":"Term-Category"},
+"vim-basic":{
+"title":"vim 기초 사용법","summary":"매번 잊어버려서 참고할 장소를 만들었다.",
+"updated":"2021-05-20 00:13:14 +0900",
+"parent":"Vim-Category"},
+"vim-folding":{
+"title":"vimrc 파일 폴딩하기","summary":"vimrc가 점점 커진다면 폴딩을 적용해보자.",
+"updated":"2020-12-19 09:34:40 +0900",
+"parent":"Vimrc-Category"},
+"vscode-configurations":{
+"title":"Visual Studio Code 설정하기","summary":"요약",
+"updated":"2020-12-28 17:39:39 +0900",
+"parent":"Cross-Category"},
+"wiki-favicon":{
+"title":"위키에 favicon 추가","summary":"favicon 추가 방법, 관련 링크",
+"updated":"2020-11-05 12:28:25 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-font":{
+"title":"위키 폰트 변경",
+"updated":"2021-01-25 13:49:37 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-inWindows":{
+"title":"윈도우즈에서 V+J+G 따라하기",
+"updated":"2020-11-10 21:47:11 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-jekyll-spaceship":{
+"title":"위키에 jekyll-spaceship 적용","summary":"다양한 table 작성, emoji and more...",
+"updated":"2021-04-07 22:50:35 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-toc2side":{
+"title":"위키페이지에서 toc 위치 조정","summary":"CSS및 SCSS에 대한 정리",
+"updated":"2020-11-09 21:48:17 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-troubleshooting":{
+"title":"위키 문제점 해결","summary":"위키 운영하면서 생기는 문제 정리",
+"updated":"2020-04-12 01:06:48 +0900",
+"parent":"Wiki-Setting-Category"},
+"wiki-update-guide":{
+"title":"위키 편집 안내서","summary":"위키의 기본 작성법및 기능 추가 방법",
+"updated":"2021-05-20 00:33:54 +0900",
+"parent":"Wiki-Setting-Category"},
+"windows-terminal-config":{
+"title":"윈도우즈 터미널 설정하기","summary":"요즘 핫한 터미널",
+"updated":"2020-07-17 22:48:55 +0900",
+"parent":"Cross-Category"},
+"":{}
+}

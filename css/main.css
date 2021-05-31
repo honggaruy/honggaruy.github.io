@@ -1,0 +1,320 @@
+@charset "UTF-8";
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
+@import url("https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean&effect=shadow-multiple|3d|fire-animation");
+@font-face { font-family: 'NanumBarunpen'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+body { margin: 0; height: 100%; }
+
+/* 목차에 사용되는 ul 들여쓰기를 폰트 2자 크기로 지정 */
+ul { padding-inline-start: 2em; }
+
+body, th, td, div, p, li { font-family: "NanumBarunpen", "sunflower", "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif; line-height: 1.5; word-break: keep-all; }
+
+.powered-by { font-size: 0.7rem; }
+
+a:visited { color: #344B83; }
+
+.blog-only-title { text-align: center; }
+
+.post-content { line-height: 2; }
+
+blockquote { background: #FFFFFF; margin: 0; margin-top: 2px; padding: 4px 0px 4px 8px; border-left: 4px solid #CCCCCC; }
+
+blockquote p { line-height: 2; color: #503e2b; }
+
+code, pre { font-family: "D2Coding", Consolas, "Courier New", Courier; }
+
+code { color: #47146C; background-color: #e7e9ee80; padding: 1px 3px; border-radius: 3px; }
+
+pre { overflow-x: auto; padding: 10px 10px; }
+
+pre, pre code { color: #fafafa; background-color: #223; }
+
+pre code { padding: 0; }
+
+.hide { display: none; }
+
+.center { text-align: center; }
+
+.language-html table { background: transparent; margin: 0; }
+
+.language-html td { padding: 0; border: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; text-shadow: 4px 4px 4px #aaa; }
+
+.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { color: #47146C; }
+
+h1 { font-size: 2.2rem; margin: 0px; }
+
+.post-content h1 { border-bottom: 1px solid #47146C; }
+
+h2 { font-size: 1.8em; border-bottom: 1px solid #d0d0d0; }
+
+.post-content h2:before { content: "⠁"; }
+
+h3 { font-size: 1.6em; font-style: italic; }
+
+.post-content h3:before { content: "⠃"; }
+
+h4 { font-size: 1.4em; padding-left: 5px; font-style: italic; }
+
+.post-content h4:before { content: "⠋"; }
+
+h5 { font-size: 1.2em; padding-left: 10px; font-style: italic; }
+
+.post-content h5:before { content: "⠛"; }
+
+h6 { font-size: 1.0em; padding-left: 15px; font-weight: bold; font-style: italic; }
+
+.post-content h6:before { content: "⠟"; }
+
+kbd { background-color: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset; color: #333; display: inline-block; font-size: 1.1em; font-weight: 700; line-height: 1; padding: 2px 4px; white-space: nowrap; }
+
+.PageNavigation { font-size: 14px; display: block; width: auto; oveflow: hidden; }
+
+.PageNavigation a { display: block; float: left; margin: 1em 0; }
+
+.PageNavigation .next { float: right; }
+
+.wrapper { margin: 0 auto; }
+
+@media (min-width: 800px) { body { width: 800px; margin: auto; border: 1px solid #d0d0d0; } }
+
+div.gsc-control-cse { padding: 0; }
+
+.search form.gsc-search-box { margin: 0; }
+
+table.gsc-search-box { margin: 0px; }
+
+.header { background-color: #47146C; }
+
+.header:after { clear: both; content: ' '; display: block; }
+
+.header .site-title { float: left; text-decoration: none; color: #FFFFFF; line-height: 1.5; padding-left: 10px; }
+
+.header .site-title-right { float: right; text-decoration: none; color: #FFFFFF; line-height: 1.5; padding-right: 10px; }
+
+.page-content { background: #FAFAFA; }
+
+.page-content img { max-width: 100%; }
+
+.post { overflow-x: auto; padding: 5px; }
+
+.post table { border-collapse: collapse; border-spacing: 0; border-color: #000000; }
+
+.post table td, .post table th { border: 1px solid #9e948a; padding: 5px 5px; }
+
+.post table th { font-weight: normal; color: #FFFFFF; background: #47146C; }
+
+.post table tr:hover { background: #BEE7F6; }
+
+.toc { background: #EEE; }
+
+.post-tag a { color: #888888; text-decoration: none; }
+
+@media (max-width: 1120px) { .page-content .wrapper:before { display: none; } }
+
+.footer { text-align: center; }
+
+ul.tag-list { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
+
+ul.tag-list li { float: left; }
+
+ul.tag-list li a { padding-right: 5px; text-decoration: none; }
+
+.post-link { text-decoration: none; }
+
+.no-text-deco a { text-decoration: none; }
+
+.section-nav { background-color: #FFF; margin: 5px 0; padding: 10px 30px; border: 1px solid #E8E8E8; border-radius: 3px; }
+
+.history-button { text-align: right; font-size: 0.8em; }
+
+.title-summary { font-size: 1.6em; font-style: italic; color: gray; }
+
+.visible { display: block; }
+
+.invisible { display: none; }
+
+.pagination { text-align: center; }
+
+.pagination a { font-size: 1em; margin: 2px; padding: 2px; text-decoration: none; border-radius: 10px; border: 0px solid #47146C; background-color: #47146C; color: #FFFFFF; }
+
+.pagination a.active { border: 0px solid transparent; background-color: transparent; color: #000000; }
+
+.pagination li { display: inline-block; }
+
+.tag-list li { display: inline-block; }
+
+div.search { background-color: #f6f5ea; width: 100%; position: relative; height: 1.3em; border-bottom: 1px solid #47146C; }
+
+.searchInput { background-color: transparent; width: 100%; height: 100%; top: 0; position: relative; padding: 0px; padding-left: 5px; border: 0px; margin: 0px; font-size: 13px; direction: ltr; -webkit-appearance: textfield; border-radius: 0px; }
+
+.searchButton { border: 0px; border-radius: 0px; background-color: transparent; position: absolute; top: 0; right: 0; height: 100%; z-index: 2; }
+
+.post-header h2 { border: 0px; }
+
+.post-header p { margin: 0; }
+
+.post-excerpt { color: #808094; }
+
+/* based on Monokai Theme from https://github.com/richleland/pygments-css/blob/master/monokai.css */
+code { font-family: "D2Coding", Consolas, "Courier New", Courier; }
+
+code a { color: inherit; text-decoration: none; }
+
+.highlight { /* Comment */ /* Error */ /* Keyword */ /* Literal */ /* Name */ /* Operator */ /* Punctuation */ /* Comment.Multiline */ /* Comment.Preproc */ /* Comment.Single */ /* Comment.Special */ /* Generic.Emph */ /* Generic.Strong */ /* Keyword.Constant */ /* Keyword.Declaration */ /* Keyword.Namespace */ /* Keyword.Pseudo */ /* Keyword.Reserved */ /* Keyword.Type */ /* Literal.Date */ /* Literal.Number */ /* Literal.String */ /* Name.Attribute */ /* Name.Builtin */ /* Name.Class */ /* Name.Constant */ /* Name.Decorator */ /* Name.Entity */ /* Name.Exception */ /* Name.Function */ /* Name.Label */ /* Name.Namespace */ /* Name.Other */ /* Name.Property */ /* Name.Tag */ /* Name.Variable */ /* Operator.Word */ /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */ /* Literal.Number.Integer */ /* Literal.Number.Oct */ /* Literal.String.Backtick */ /* Literal.String.Char */ /* Literal.String.Doc */ /* Literal.String.Double */ /* Literal.String.Escape */ /* Literal.String.Heredoc */ /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */ /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */ /* Name.Variable.Instance */ /* Literal.Number.Integer.Long */ /* Generic Heading & Diff Header */ /* Generic.Subheading & Diff Unified/Comment? */ /* Generic.Deleted & Diff Deleted */ /* Generic.Inserted & Diff Inserted */ }
+
+.highlight .hll { background-color: #49483e; }
+
+.highlight .c { color: #75715e; }
+
+.highlight .err { color: #960050; background-color: #1e0010; }
+
+.highlight .k { color: #66d9ef; }
+
+.highlight .l { color: #ae81ff; }
+
+.highlight .n { color: #f8f8f2; }
+
+.highlight .o { color: #cc7832; }
+
+.highlight .p { color: #f8f8f2; }
+
+.highlight .cm { color: #fcba03; }
+
+.highlight .cp { color: #75715e; }
+
+.highlight .c1 { color: #acca8b; }
+
+.highlight .cs { color: #75715e; }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .kc { color: #66d9ef; }
+
+.highlight .kd { color: #00d0a5; }
+
+.highlight .kn { color: #f92672; }
+
+.highlight .kp { color: #66d9ef; }
+
+.highlight .kr { color: #66d9ef; }
+
+.highlight .kt { color: #66d9ef; }
+
+.highlight .ld { color: #e6db74; }
+
+.highlight .m { color: #ae81ff; }
+
+.highlight .s { color: #e6db74; }
+
+.highlight .na { color: #a6e22e; }
+
+.highlight .nb { color: #f8f8f2; }
+
+.highlight .nc { color: #ff8080; }
+
+.highlight .no { color: #66d9ef; }
+
+.highlight .nd { color: #a6e22e; }
+
+.highlight .ni { color: #f8f8f2; }
+
+.highlight .ne { color: #a6e22e; }
+
+.highlight .nf { color: #bed6ff; }
+
+.highlight .nl { color: #f8f8f2; }
+
+.highlight .nn { color: #f8f8f2; }
+
+.highlight .nx { color: #a6e22e; }
+
+.highlight .py { color: #f8f8f2; }
+
+.highlight .nt { color: #f92672; }
+
+.highlight .nv { color: #bed6ff; }
+
+.highlight .ow { color: #f92672; }
+
+.highlight .w { color: #d0d0d0; }
+
+.highlight .mf { color: #ae81ff; }
+
+.highlight .mh { color: #ae81ff; }
+
+.highlight .mi { color: #f8ff30; }
+
+.highlight .mo { color: #ae81ff; }
+
+.highlight .sb { color: #e6db74; }
+
+.highlight .sc { color: #e6db74; }
+
+.highlight .sd { color: #e6db74; }
+
+.highlight .s2 { color: #e6db74; }
+
+.highlight .se { color: #ae81ff; }
+
+.highlight .sh { color: #e6db74; }
+
+.highlight .si { color: #e6db74; }
+
+.highlight .sx { color: #e6db74; }
+
+.highlight .sr { color: #e6db74; }
+
+.highlight .s1 { color: #e6db74; }
+
+.highlight .ss { color: #e6db74; }
+
+.highlight .bp { color: #f8f8f2; }
+
+.highlight .vc { color: #f8f8f2; }
+
+.highlight .vg { color: #f8f8f2; }
+
+.highlight .vi { color: #f8f8f2; }
+
+.highlight .il { color: #ae81ff; }
+
+.highlight .gu { color: #75715e; }
+
+.highlight .gd { color: #f92672; }
+
+.highlight .gi { color: #a6e22e; }
+
+.highlight .lineno { color: #ffe5a0; }
+
+.language-ascii-art { display: inline-block; letter-spacing: -0.1em; line-height: 1.0em; }
+
+.blog-face { text-align: center; }
+
+.indent { margin-left: 30px; }
+
+.contact { margin-top: 10px; text-align: center; }
+
+.contact a { background: #47146C; color: #FFFFFF; padding: 5px 10px; text-decoration: none; border-radius: 8px; white-space: nowrap; }
+
+.contact a:hover { transition: background 0.3s ease; background: #666; }
+
+/* index의 blog 목차에 "dot leader" 형식 적용 */
+/* 참조 링크: https://www.w3.org/Style/Examples/007/leaders.en.html */
+ul.leaders { overflow-x: hidden; }
+
+ul.leaders span:after { float: left; width: 0; white-space: pre; content: "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · "; }
+
+ul.leaders span:first-child { padding-right: 0.33em; background: #FAFAFA; }
+
+ul.leaders span + div { float: right; padding-left: 0.33em; background: #FAFAFA; position: relative; z-index: 1; }
+
+@media (min-width: 1700px) { ul#markdown-toc { position: fixed; top: 0; bottom: 0; left: calc(50vw + 410px); width: 380px; background-color: white; z-index: 9999; font-size: 0.8em; overflow-y: scroll; overflow-x: hidden; border: 0px solid; line-height: 1.5; } }
+
+#markdown-toc { border: 1px solid; padding: 10px; padding-left: 30px; background-color: #FFFFFF; line-height: 1.5; }
+
+/*# sourceMappingURL=main.css.map */
