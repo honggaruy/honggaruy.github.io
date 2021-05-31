@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : Short-circuit evalution 
+title   : Short-circuit evaluation 
 summary : 단축평가 
 date    : 2020-08-04 15:35:02 +0900
-updated : 2021-03-12 12:01:08 +0900
+updated : 2021-05-19 14:15:24 +0900
 tag     : terminology Short-circuit-evaluation short-circuiting minimal-evaluation McCarthy-evaluation
 toc     : true
 public  : true
