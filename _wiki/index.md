@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-05 11:54:51 +0900
+updated : 2021-05-19 14:27:33 +0900
 tag     : index
 toc     : true
 public  : true
@@ -57,6 +57,8 @@ comment : false
 
 ### [[Vim-Category]]{Vim 관련 Category}
 
+* [[vim-basic]]{vim 기초 사용법}
+
 #### [[Vimrc-Category]]{vimrc 설정 관련 Category}
 
 * [[vim-folding]]{vimrc 파일 폴딩하기}
@@ -99,6 +101,8 @@ comment : false
 * [[book-refactoring-2nd]]{리팩토링 2판}
 * [[book-effective-python-2nd]]{파이썬 코딩의 기술 2판}
 * [[book-regex-cookbook]]{한 권으로 끝내는 정규표현식}
+* [[book-simplifying-javascript]]{자바스크립트 코딩의 기술}
+* [[book-practical-vim]]{Practical Vim}
 
 ---
 
