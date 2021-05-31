@@ -1,9 +1,9 @@
 ---
 layout  : wiki
 title   : 위키 편집 안내서 
-summary : 위키 구조 파악및 위키 기능 개선 
+summary : 위키의 기본 작성법및 기능 추가 방법
 date    : 2021-03-10 15:14:25 +0900
-updated : 2021-05-06 01:32:53 +0900
+updated : 2021-05-20 00:33:54 +0900
 tag     : liquid tags jekyll 
 toc     : true
 public  : true
@@ -13,7 +13,7 @@ latex   : false
 * TOC
 {:toc}
 
-# 1. 일단 시작
+# 일단 시작
 
 * 최상단 폴더의 index.html 부터 분석 시작
 * 사용중인 템플릿팅 언어는 jekyll에서 채용한 [Liquid](https://shopify.github.io/liquid/)
@@ -22,13 +22,29 @@ latex   : false
   * 이 [include 문법](https://jekyllrb.com/docs/includes/)을 사용
   * 이 내용은 [johngrib님 위키](https://johngrib.github.io/wiki/my-wiki/#test형식의-vimwiki-링크를-html-a-태그로-보여준다)에 잘 설명 되어있다
 
-# 2. 넣고 싶은 기능
+# 기본 편집 방법
+
+## 마크다운 작성법 가이드 모음
+
+* [Markdown Basic Syntax, Makrdown Guide ](https://www.markdownguide.org/basic-syntax/) :star: :star: :star: :star: :star:
+* [markdown-guide, readthdocs](https://markdown-guide.readthedocs.io/en/latest/index.html) :
+* [Mardown Reference, typora.io](https://support.typora.io/Markdown-Reference/#blockquotes)
+
+## 사이트내 문서에 링크하는 방법
+
+* 같은 페이지내에서의 참조
+  * 제목은 `#<제목문자열>`으로 참조가 가능하다.
+  * 아래 마크다운 코드는 현재 페이지에서 가장 첫번째 제목인 `일단 시작` 세션에 링크된다.
+    ```markdown
+    [일단 시작](#일단-시작)
+    ```
+  * 스페이스는 보통 가운데 대쉬로 변환된다.
+
+# tag 페이지에 stackoverflow tag 정보도 같이 넣기 (개선 사항)
 
 * tag 페이지에 같은 태그로 검색한 stackoverflow의 결과도 넣고 싶다.
 * 그럼 일단 axios를 써야 하는데.. 이걸 참조 [JavaScript: using axios in the browser to make API requests](https://gabrieleromanato.name/javascript-using-axios-in-the-browser-to-make-api-requests)
-
-
-# 3. tag 페이지에 stackoverflow tag 정보도 같이 넣기 (개선 사항)
+* 구현 후 실제 반영한 [commit](https://github.com/honggaruy/honggaruy.github.io/commit/ae64485c090a045baf1d10142741a246d4a39c96)
 
 ## insertAfter 기능 구현하기
 
@@ -78,7 +94,16 @@ latex   : false
 * `_data/tagLists.yml`, `_data/tagMap.yml`, `tag.html`이 편집된다.
 * 다시 되돌리려면 `git restore` 명령을 사용한다.
 
-# 4. 블로그 포스트에 이전 포스트, 다음 포스트로 가는 링크를 넣고 싶다.
+## 추가하고 싶은 기능 (2021-05-20)
+
+* 현재 default로 StackExcahgne 의 태그만 가져오고 있는데..
+* [vi.stackexchange.com/tags](https://vi.stackexchange.com/tags)에 등록된 태그들도 있다.
+* 요것도 하고 싶은데..
+  * default로 SO 것 먼저하고 SE 것을 선택할 수 있도록 할지..
+  * 아님 자동으로 순회해서 갯수가 제일 많은 것으로 선택하도록 할지..
+  * 고민중인데.. 아무거나 먼저 구현하고 다른것도 구현해보자 
+
+# 블로그 포스트에 이전 포스트, 다음 포스트로 가는 링크를 넣고 싶다.
 
 ## 필요성
 
