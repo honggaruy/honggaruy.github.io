@@ -14,6 +14,7 @@
 - binding
 - bios
 - bluetooth
+- book-scanner
 - books
 - bundler
 - category
@@ -122,6 +123,7 @@
 - port
 - powershell
 - pre-commit
+- productivity
 - project
 - promise
 - puppeteer
@@ -162,6 +164,7 @@
 - todaysideas
 - tool
 - tour
+- translate
 - translation
 - troubleshooting
 - truthy
@@ -176,6 +179,7 @@
 - useful-sites
 - variable-expansion
 - variable-substitution
+- vFlat
 - vim
 - vim-devicons
 - vim-help

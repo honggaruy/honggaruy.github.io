@@ -366,6 +366,38 @@
     url: /blog/2021/05/31/week-22th
     updated: '2021-05-31 11:08:32 +0900'
     children: []
+2021-06-07-week-23th:
+    type: blog
+    title: '2021년 23주차 기록'
+    summary: '06/07 (월) ~ 06/13 (일)'
+    parent: null
+    url: /blog/2021/06/07/week-23th
+    updated: '2021-06-07 12:02:32 +0900'
+    children: []
+2021-06-21-week-25th:
+    type: blog
+    title: '2021년 25주차 기록'
+    summary: '06/21 (월) ~ 06/27 (일)'
+    parent: null
+    url: /blog/2021/06/21/week-25th
+    updated: '2021-06-21 12:40:32 +0900'
+    children: []
+2021-06-28-week-26th:
+    type: blog
+    title: '2021년 26주차 기록'
+    summary: '06/28 (월) ~ 07/04 (일)'
+    parent: null
+    url: /blog/2021/06/28/week-26th
+    updated: '2021-06-28 14:23:32 +0900'
+    children: []
+2021-07-05-week-27th:
+    type: blog
+    title: '2021년 27주차 기록'
+    summary: '07/05 (월) ~ 07/11 (일)'
+    parent: null
+    url: /blog/2021/07/05/week-27th
+    updated: '2021-07-05 10:44:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -374,6 +406,14 @@ apps-script-starter:
     url: /wiki/apps-script-starter
     updated: '2020-07-15 22:06:32 +0900'
     children: []
+beginning-flutter:
+    type: wiki
+    title: '플러터 시작하기'
+    summary: '일단은 Do it! 플러터 앱 프로그래밍으로 시작'
+    parent: Flutter-Category
+    url: /wiki/beginning-flutter
+    updated: '2021-07-08 00:03:24 +0900'
+    children: []
 Books-Category:
     type: wiki
     title: '책읽고 정리한 카테고리'
@@ -381,6 +421,14 @@ Books-Category:
     parent: index
     url: /wiki/Books-Category
     updated: '2021-03-19 23:06:51 +0900'
+    children: []
+bookscan-process:
+    type: wiki
+    title: '북스캔 처리하기'
+    summary: ""
+    parent: Gray-Category
+    url: /wiki/bookscan-process
+    updated: '2021-06-11 03:13:13 +0900'
     children: []
 code-isolation:
     type: wiki
@@ -446,6 +494,14 @@ excel2gsheet:
     url: /wiki/excel2gsheet
     updated: '2020-11-17 07:18:18 +0900'
     children: []
+Flutter-Category:
+    type: wiki
+    title: 'Flutter Category'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/Flutter-Category
+    updated: '2021-07-10 23:51:40 +0900'
+    children: [beginning-flutter]
 gas_library:
     type: wiki
     title: '구글 스크립트 라이브러리 사용법'
@@ -525,7 +581,7 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: [desk-setup, exact-size-photo-print, google_photo_slideshow, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp]
+    children: [bookscan-process, desk-setup, exact-size-photo-print, google_photo_slideshow, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp]
 HDMI2dot1-device:
     type: wiki
     title: 'HDMI2.1 관련 장비 정보'
@@ -540,7 +596,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-05-19 14:27:33 +0900'
+    updated: '2021-07-07 14:04:31 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -589,7 +645,7 @@ Language-Category:
     parent: index
     url: /wiki/Language-Category
     updated: '2020-04-13 20:46:01 +0900'
-    children: [GoogleAppsScript-Category, Python-Categroy, Web-Category]
+    children: [Flutter-Category, GoogleAppsScript-Category, Python-Category, Web-Category]
 Linux-Category:
     type: wiki
     title: Linux
@@ -638,14 +694,14 @@ pyscaffold:
     url: /wiki/pyscaffold
     updated: '2020-11-16 01:16:15 +0900'
     children: []
-Python-Categroy:
+Python-Category:
     type: wiki
     title: Python
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
-    url: /wiki/Python-Categroy
+    url: /wiki/Python-Category
     updated: '2020-11-15 12:45:58 +0900'
-    children: []
+    children: [pyscaffold]
 re2-translation:
     type: wiki
     title: 'RE2 번역'

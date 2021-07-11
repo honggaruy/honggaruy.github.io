@@ -97,7 +97,7 @@ python:
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-11-16-week-47th}
     - {fileName: pyscaffold}
-    - {fileName: Python-Categroy}
+    - {fileName: Python-Category}
 csv:
     - {fileName: 2020-06-15-week-25th}
 google-data-studio:
@@ -110,6 +110,8 @@ vs:
     - {fileName: 2020-06-15-week-25th}
 flutter:
     - {fileName: 2020-06-22-week-26th}
+    - {fileName: beginning-flutter}
+    - {fileName: Flutter-Category}
 new-item:
     - {fileName: 2020-07-06-week-28th}
 recipe:
@@ -346,6 +348,7 @@ wikipedia:
     - {fileName: 2021-04-12-week-15th}
 standardjs:
     - {fileName: 2021-04-05-week-14th}
+    - {fileName: 2021-06-28-week-26th}
 pwa:
     - {fileName: 2021-04-26-week-17th}
 vue_js:
@@ -360,8 +363,19 @@ lorem-ipsum:
     - {fileName: 2021-04-26-week-17th}
 ngrok:
     - {fileName: 2021-04-26-week-17th}
+translate:
+    - {fileName: 2021-06-07-week-23th}
+productivity:
+    - {fileName: 2021-06-21-week-25th}
+vFlat:
+    - {fileName: 2021-06-28-week-26th}
+mathjax:
+    - {fileName: 2021-06-28-week-26th}
+    - {fileName: re2-translation}
 books:
     - {fileName: Books-Category}
+book-scanner:
+    - {fileName: bookscan-process}
 typescript:
     - {fileName: code-isolation}
     - {fileName: javascript-myCookBook}
@@ -380,6 +394,11 @@ google-slides:
     - {fileName: new-windows-installation}
 A4용지크기:
     - {fileName: exact-size-photo-print}
+language:
+    - {fileName: Flutter-Category}
+    - {fileName: Language-Category}
+    - {fileName: Python-Category}
+    - {fileName: Web-Category}
 library:
     - {fileName: gas_library}
 git-commit:
@@ -417,10 +436,6 @@ hash:
 string-interpolation:
     - {fileName: keyword_collection}
     - {fileName: term-string-interpolation}
-language:
-    - {fileName: Language-Category}
-    - {fileName: Python-Categroy}
-    - {fileName: Web-Category}
 open-api:
     - {fileName: OpenApi-usage}
 config-js:
@@ -434,8 +449,6 @@ latex:
 yaml-front-matter:
     - {fileName: re2-translation}
     - {fileName: wiki-inWindows}
-mathjax:
-    - {fileName: re2-translation}
 sed:
     - {fileName: sed-problem-solving}
 ellystand:
