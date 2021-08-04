@@ -398,6 +398,30 @@
     url: /blog/2021/07/05/week-27th
     updated: '2021-07-05 10:44:32 +0900'
     children: []
+2021-07-12-week-28th:
+    type: blog
+    title: '2021년 28주차 기록'
+    summary: '07/12 (월) ~ 07/18 (일)'
+    parent: null
+    url: /blog/2021/07/12/week-28th
+    updated: '2021-07-12 10:44:32 +0900'
+    children: []
+2021-07-19-week-29th:
+    type: blog
+    title: '2021년 29주차 기록'
+    summary: '07/19 (월) ~ 07/25 (일)'
+    parent: null
+    url: /blog/2021/07/19/week-29th
+    updated: '2021-07-19 10:44:32 +0900'
+    children: []
+2021-07-26-week-30th:
+    type: blog
+    title: '2021년 30주차 기록'
+    summary: '07/26 (월) ~ 08/01 (일)'
+    parent: null
+    url: /blog/2021/07/26/week-30th
+    updated: '2021-07-26 14:44:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
@@ -596,7 +620,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-07-07 14:04:31 +0900'
+    updated: '2021-07-15 01:03:00 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -678,6 +702,22 @@ OpenApi-usage:
     url: /wiki/OpenApi-usage
     updated: '2021-01-26 15:09:34 +0900'
     children: []
+pandas-basic:
+    type: wiki
+    title: 'pandas 기초 사용법'
+    summary: '필요하여 찾다가 알게된 기초 사용법 적음'
+    parent: Pandas-Category
+    url: /wiki/pandas-basic
+    updated: '2021-08-04 02:18:08 +0900'
+    children: []
+Pandas-Category:
+    type: wiki
+    title: Pandas
+    summary: '카테고리 3단계 (끝)'
+    parent: Python-Category
+    url: /wiki/Pandas-Category
+    updated: '2021-07-13 09:59:04 +0900'
+    children: [pandas-basic]
 PowerShell-Scripting:
     type: wiki
     title: 'Powershell 스크립팅'
@@ -692,7 +732,7 @@ pyscaffold:
     summary: ...
     parent: Python-Category
     url: /wiki/pyscaffold
-    updated: '2020-11-16 01:16:15 +0900'
+    updated: '2021-07-23 22:39:22 +0900'
     children: []
 Python-Category:
     type: wiki
@@ -701,7 +741,7 @@ Python-Category:
     parent: Language-Category
     url: /wiki/Python-Category
     updated: '2020-11-15 12:45:58 +0900'
-    children: [pyscaffold]
+    children: [Pandas-Category, pyscaffold]
 re2-translation:
     type: wiki
     title: 'RE2 번역'

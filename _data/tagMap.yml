@@ -86,6 +86,7 @@ week-diary:
     - {fileName: 2020-06-15-week-25th}
 javascript:
     - {fileName: 2020-06-15-week-25th}
+    - {fileName: 2021-07-12-week-28th}
     - {fileName: css-default-style}
     - {fileName: javascript-myCookBook}
     - {fileName: Web-Category}
@@ -96,6 +97,8 @@ useful-sites:
 python:
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-11-16-week-47th}
+    - {fileName: 2021-07-12-week-28th}
+    - {fileName: Pandas-Category}
     - {fileName: pyscaffold}
     - {fileName: Python-Category}
 csv:
@@ -219,6 +222,7 @@ chrome:
     - {fileName: 2020-11-16-week-47th}
 billmaker:
     - {fileName: 2020-11-16-week-47th}
+    - {fileName: 2021-07-12-week-28th}
 vim-devicons:
     - {fileName: 2020-11-23-week-48th}
 nerd:
@@ -372,6 +376,22 @@ vFlat:
 mathjax:
     - {fileName: 2021-06-28-week-26th}
     - {fileName: re2-translation}
+book_cover:
+    - {fileName: 2021-07-12-week-28th}
+jupyter_notebook:
+    - {fileName: 2021-07-12-week-28th}
+gist:
+    - {fileName: 2021-07-12-week-28th}
+pandas:
+    - {fileName: 2021-07-12-week-28th}
+    - {fileName: pandas-basic}
+    - {fileName: Pandas-Category}
+refactoring:
+    - {fileName: 2021-07-19-week-29th}
+iterable_unpacking:
+    - {fileName: 2021-07-26-week-30th}
+argument_unpacking:
+    - {fileName: 2021-07-26-week-30th}
 books:
     - {fileName: Books-Category}
 book-scanner:

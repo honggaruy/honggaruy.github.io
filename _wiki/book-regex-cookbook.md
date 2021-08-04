@@ -3,7 +3,7 @@ layout  : wiki
 title   : 한 권으로 끝내는 정규표현식 
 summary : 여덟 가지 프로그래밍 언어별 완벽 해설 
 date    : 2021-03-25 10:19:35 +0900
-updated : 2021-03-26 02:40:13 +0900
+updated : 2021-07-11 16:50:32 +0900
 tag     : br*** book regex 
 toc     : true
 public  : false
@@ -115,9 +115,57 @@ comment : false
 
 #### Ruby
 
-## 2. 정규표현식을 이용한 검색치환
+## 2. Search and Replace with Regular Expressions
+
+* 용어
+  * 치환 텍스트 ( Replacement Text ) : 정규식은 아니지만 일부 정규식 문법을 사용하여 동적인 치환을 가능케 함
+   
+### Many Flavors of Replacement Text
+
+* 각자 개발하다보니 문법과 기능이 다른 여러가지 정규식 스타일이 파생됨
+
+
+## 3. 정규표현식 작성 툴
 
 # 2장. 정규표현식 기본 기술
+
+## 1. 리터럴 텍스트에 일치
+
+* [Match Literal Text 예제 실행](https://regex101.com/r/kgY65G/1)
+  * 메타 문자는 기본적으로 **back slash( ∖ )** 로 escape 한다. 
+  * 위의 예제에서 책의 해결책과 다른점은 **slash( ⁄ )**문자도 escape 했다는 것
+    * **slash( ⁄ )**는 regex 문자열을 구분하는 delimiter 인듯한데..메타문자에는 포함되지 않아 확실치 않음.
+  * Flavor별 차이
+    * Flavor를 Python으로 변경하면 **double quote ( ‟ )** 문자를 인식못함. escape 필요
+    * Flavor를 Golang으로 변경하면 백틱문자를 인식못함.
+      * **back slash** 로 escape도 불가함 , 백틱문자대신 `\x60` 으로 대체해야함 
+* 12개의 특수문자(메타문자)를 포함하는 문장을 어떻게 매치시킬수 있는지 알아봄
+* 문자의 특수기능을 escape 해야함
+* 짝이 필요한 특수문자 ( `]`, `-`, `}` )는 앞선 짝문자가 있어야 특수문자로 인식됨
+* 블록 이스케이프는 Java 6, PCRE, Perl에서 사용할수 있지만,...
+  * Java 4, 5에서는 버그가 있어 사용하면 안되는 등 사용법이 까다로움
+  * [블록 이스케이프 예제](https://regex101.com/r/11QqqF/1)
+* 대소문자 구분 없이 일치
+  * [예제 실행](https://regex101.com/r/ZebkBI/1)
+  * 모드 변경자 `<(?i)>`를 사용함?
+  * 자체 모드 변경자 예제
+  * sensitive(?i)caseless(?-i)sensitive 
+
+## 3. 여러 문자 중 하나와 일치 
+
+* [Match One of Many Characters , calendar 예제](https://regex101.com/r/UvkSK7/1)
+* 용어
+  * 문자 클래스, character class : [Character Classes, regular-Expressions.info](https://www.regular-expressions.info/refcharclass.html)
+* 기본적으로 12개의 메타 문자가 있지만, 문자 클래스 내부에서는 4개 문자만 인정됨
+  * Flavor에 따라, Java, .NET 스타일은 `[`도 메타문자로 인식됨 
+    
+### 응용 - 약기 문자 클래스
+
+* 약기 문자 클래스 (shorthands)
+* [16진수 문자(hexadecimal character)를 표현하는 regex](https://regex101.com/r/4kBV3U/1/) 
+* 다음 Flavor에서 `<\w>` 는  `<[a-zA-Z0-9_]>`와 언제나 결과가 같다.
+  * Java, JavaScript, PCRE, Ruby
+ 
 # 3장. 프로그래밍을 위한 정규 표현식
 # 4장. 유효검사와 형식화
 

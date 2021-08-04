@@ -7,6 +7,7 @@
 - 한글
 - A4용지크기
 - api
+- argument_unpacking
 - async-await
 - async.js
 - axios
@@ -14,6 +15,7 @@
 - binding
 - bios
 - bluetooth
+- book_cover
 - book-scanner
 - books
 - bundler
@@ -55,6 +57,7 @@
 - font
 - free-asset
 - gif
+- gist
 - git
 - git-commit
 - github
@@ -84,11 +87,13 @@
 - inline-html
 - isbn
 - it-device
+- iterable_unpacking
 - javascript
 - jekyll
 - jekyll-spaceship
 - jemoji
 - jquery-selectors
+- jupyter_notebook
 - kbd태그
 - keyboard-shortcuts
 - keyword
@@ -117,6 +122,7 @@
 - npm-trends
 - open-api
 - overloading
+- pandas
 - plantuml
 - playwright
 - png
@@ -132,6 +138,7 @@
 - python
 - re2
 - recipe
+- refactoring
 - regex
 - ruby
 - script
