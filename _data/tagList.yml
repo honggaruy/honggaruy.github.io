@@ -23,6 +23,7 @@
 - chrome
 - clasp
 - cmd
+- code-snippets
 - command-line
 - commanderjs
 - commit
@@ -36,10 +37,12 @@
 - custom-css-in-markdown
 - d2coding
 - danfojs
+- dataframe
 - debug-js
 - desk-setup
 - desktop-shortcut
 - digraphs
+- docstring
 - dot-leaders
 - dotfile
 - drop-ice
@@ -121,6 +124,7 @@
 - ngrok
 - npm-trends
 - open-api
+- operator_precedence
 - overloading
 - pandas
 - plantuml
@@ -136,6 +140,7 @@
 - pwa
 - pyscaffold
 - python
+- python-module-unicodedata
 - re2
 - recipe
 - refactoring
@@ -151,11 +156,13 @@
 - site
 - sketchup
 - socar
+- southeast-asian-languages
 - spin-up
 - stack-overflow
 - standardjs
 - string-interpolation
 - subtitle
+- sudoku
 - surgeon
 - symbol
 - sysinternals
@@ -175,6 +182,7 @@
 - translation
 - troubleshooting
 - truthy
+- type-annotation
 - typescript
 - tzinfo
 - ubuntu

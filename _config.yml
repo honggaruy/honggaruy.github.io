@@ -48,11 +48,11 @@ utterances:
   theme: github-light # photon-dark, github-light
   crossorigin: anonymous
 
-google_analytics:
-  ua: UA-110224147-1
+# google_analytics:
+#  ua: UA-110224147-1  : Todo: Johngrib 님 것을  그대로 사용하고 있었음. 사용방법 숙지후 변경할 것
 
-google_adsense:
-  client: ca-pub-3675948545737694
+# google_adsense:
+#  client: ca-pub-3675948545737694 : Todo : Johngribh 님 것을 그대로 사용하고 있었음. 사용방법 숙지후 변경할 것
 
 blame: "https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki"
 edit: "https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki"

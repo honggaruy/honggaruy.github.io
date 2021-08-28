@@ -101,6 +101,7 @@ python:
     - {fileName: Pandas-Category}
     - {fileName: pyscaffold}
     - {fileName: Python-Category}
+    - {fileName: snippets-py}
 csv:
     - {fileName: 2020-06-15-week-25th}
 google-data-studio:
@@ -384,14 +385,31 @@ gist:
     - {fileName: 2021-07-12-week-28th}
 pandas:
     - {fileName: 2021-07-12-week-28th}
+    - {fileName: 2021-08-09-week-32th}
+    - {fileName: 2021-08-16-week-33th}
     - {fileName: pandas-basic}
     - {fileName: Pandas-Category}
+    - {fileName: snippets-py}
 refactoring:
     - {fileName: 2021-07-19-week-29th}
 iterable_unpacking:
     - {fileName: 2021-07-26-week-30th}
 argument_unpacking:
     - {fileName: 2021-07-26-week-30th}
+docstring:
+    - {fileName: 2021-08-02-week-31th}
+python-module-unicodedata:
+    - {fileName: 2021-08-02-week-31th}
+southeast-asian-languages:
+    - {fileName: 2021-08-02-week-31th}
+type-annotation:
+    - {fileName: 2021-08-02-week-31th}
+operator_precedence:
+    - {fileName: 2021-08-09-week-32th}
+dataframe:
+    - {fileName: 2021-08-09-week-32th}
+sudoku:
+    - {fileName: 2021-08-16-week-33th}
 books:
     - {fileName: Books-Category}
 book-scanner:
@@ -473,6 +491,8 @@ sed:
     - {fileName: sed-problem-solving}
 ellystand:
     - {fileName: Smart-Device-Stand}
+code-snippets:
+    - {fileName: snippets-py}
 stack-overflow:
     - {fileName: stackoverflow_searchhelp}
 검색:
