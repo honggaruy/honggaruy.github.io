@@ -3,7 +3,7 @@ layout  : wiki
 title   : 위키 편집 안내서 
 summary : 위키의 기본 작성법및 기능 추가 방법
 date    : 2021-03-10 15:14:25 +0900
-updated : 2021-05-20 00:33:54 +0900
+updated : 2021-10-03 02:28:54 +0900
 tag     : liquid tags jekyll 
 toc     : true
 public  : true
@@ -24,21 +24,100 @@ latex   : false
 
 # 기본 편집 방법
 
-## 마크다운 작성법 가이드 모음
+## 마크다운 작성법 가이드 모음 {#guide-collection}
 
 * [Markdown Basic Syntax, Makrdown Guide ](https://www.markdownguide.org/basic-syntax/) :star: :star: :star: :star: :star:
+* [Markdown Extended Syntax, Makrdown Guide ](https://www.markdownguide.org/extended-syntax/) :star: :star: :star: :star: :star:
+  * [Tables](https://www.markdownguide.org/extended-syntax/#tables) : 테이블 마크다운
+  * [Fenced Code Blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) : Basic의 Code Block과 문법이 다름 , 백틱 세개를 연속으로 구분함 
+  * [Footnotes](https://www.markdownguide.org/extended-syntax/#footnotes) : 각주 달기
+  * :star: :star: :star: [Heading IDs](https://www.markdownguide.org/extended-syntax/#heading-ids) : html에 id를 임의로 달수 있게 해줌. 현재 위키에서 가능함. 매우 유용할 듯 :star: :star: :star:
+  * [Definition Lists](https://www.markdownguide.org/extended-syntax/#definition-lists) : definition 태그및 목록을 달아줌. 현재 위키에서 동작함. dl, dt 태그에 대한 CSS 설정필요함 (안 이쁨)
+  * [Strikethrough](https://www.markdownguide.org/extended-syntax/#strikethrough) : ~~취소줄 긋기~~ 
+  * [Task Lists](https://www.markdownguide.org/extended-syntax/#task-lists) : 체크 박스 생성하기 
+    - [x] 체크박스 넣기 
+    - [ ] 안 넣기
+  * Automatic URL Linking, Disable Automatic URL Linking은 안 되는듯 한데, 딱히 쓸 일도 없음
 * [markdown-guide, readthdocs](https://markdown-guide.readthedocs.io/en/latest/index.html) :
 * [Mardown Reference, typora.io](https://support.typora.io/Markdown-Reference/#blockquotes)
 
+## 기타 작성법
+
+### 텍스트 highlighting 하기
+
+* 참고링크 : [text highlight in markdown 질문의 답변, stackoverflow](https://stackoverflow.com/a/36039773/9457247)
+* code block의 Syntax highlighting 과는 별개로, 문서의 특정 부분에 형광펜 칠한 것 처럼 할수 있는지 질문
+* 몇 가지 방법 ( 본문을 [raw 보기](https://raw.githubusercontent.com/honggaruy/honggaruy.github.io/master/_wiki/wiki-update-guide.md) 로 확인할 것)
+  * mark 태그로 <mark>highlighting</mark> 하기 (mark 태그 기본 컬러는 yellow) 
+  * span 태그로 지정 컬러로  <span style="background-color: #00FFFF">hightlighting</span> 하기 
+  * 근데 mark 태그도 지정 컬러로 <mark style="background-color: lightblue">highlighting</mark> 하기 가능함
+
+### markdown 내용 접기 (Folding 하기)
+
+<style>
+  details > summary {
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+  }
+</style>
+<details open markdown="1">
+  <summary> 직접 raw 코드를 보고 참고할 수 있도록 본 내용 자체에 폴딩 하기를 걸어둠. 내용을 접으려면 Click!! </summary>
+
+* 옛날에 작성한 내용중 더 이상 유효하지 않거나 , 오래된 내용이지만 제거하기는 아까울 때가 있다
+* 이 때 해당 내용을 잠시 접어 둘 수 있다면 좋을 것이다.
+* 찾아보니 [details html 태그, mdn](https://developer.mozilla.org/ko/docs/Web/HTML/Element/details) 가 있었다
+* 그런데 html 태그도 사용하면서 마크다운도 같이 사용할 수 있을까?
+
+#### 참고한 사이트
+
+* [How can I fold content in Github markdown?](https://stackoverflow.com/a/52215506) : 여기서 `details` 태그와 `summary` 태그를 사용하면 된다는 것을 캐치
+* [Kramdown Systax , html-blocks](https://kramdown.gettalong.org/syntax.html#html-blocks) : `details` 태그에 `markdown` attibute을 `1`로 설정하면 내부 마크다운이 유지됨 확인
+* [Two Issues Styling the Details Element and How to Solve Them, CSS-Tricks](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) : detail 태그 사용시 고려해야할 style 관련 설명
+* [details element, mdn](https://developer.mozilla.org/ko/docs/Web/HTML/Element/details#외형_바꾸기) : `details` 태그 적용시 고려해볼만한 CSS Style 소개
+
+#### 실제 적용 사례
+
+* 실제 적용 페이지 : [로컬에서 구글 Apps Script 개발하기의 Amit 방식을 Folding 함](/wiki/apps-script-starter#amit-agarwal-way)
+* Amit 방식을 현재는 사용하지 않아서 제거할까 하다가 정리한게 아까워서 접어두기로 함
+
+#### 적용 방식 톺아보기
+
+* 직접 참고 할수 있도록 본 내용 자체에 접기 기술을 사용해보았다
+* 적용 포인트
+  * folding 적용할 부분을 `<details>`, `</details>` 태그로 둘러싼다
+  * 셋트로 `<summary>` 태그를 사용하는데 접히는 부분의 설명을 적어넣을 수 있다 (이 부분은 안 접힌다)
+    * `<summary>` 태그는 Folding을 적용했다는 것을 인지하도록 눈에 띄게 styling 하는 것이 좋다
+    * 여기에 꼭 적용해야할 style중 하나는 `cursor` 속성이다 ( `pointer`를 적용하여 cursor를 손가락으로 변환시킨다) 
+  * detail 태그에 markdown="1" attribute을 적용해야 한다 (kramdown 문법)
+    * 적용하지 않거나 markdown="0"으로 적용하면 detail 태그로 둘러싼 부분의 markdown 파싱이 적용되지 않는다
+  * detail 태그의 default 상태는 접혀 있는 상태이지만 열림을 default 상태로 하려면 `open` attribute을 추가한다
+    * 현재 이곳에 적용중
+  
+</details>
+
 ## 사이트내 문서에 링크하는 방법
 
-* 같은 페이지내에서의 참조
+* 링크는 `[링크 문구](링크 주소)` 형식인데 `링크 주소`의 문자열에 따라 내부 링크인지 외부링크인지가 구분된다
+  * 외부 링크는 `링크 주소`가 "http..."로 시작한다
+  * 내부 링크는 `같은 페이지`인지 `다른 내부 문서`인지로 구분된다
+* `같은 페이지`내에서의 참조
   * 제목은 `#<제목문자열>`으로 참조가 가능하다.
   * 아래 마크다운 코드는 현재 페이지에서 가장 첫번째 제목인 `일단 시작` 세션에 링크된다.
     ```markdown
     [일단 시작](#일단-시작)
     ```
   * 스페이스는 보통 가운데 대쉬로 변환된다.
+  * 물론, 위에서 소개한 [`Heding-ID`](#guide-collection)를 써도 된다  ◀ 셀프 예제
+* `다른 내부 문서` 참조
+  * `wiki 참조`와 `blog 참조`가 조금 다르다
+  * `wiki 참조`의 `링크 주소`는 `/wiki/`로 시작한다
+    * 다음은 해당 페이지의 영문 파일명, 섹션 제목을 붙이면 된다 (영문 제목명 다음 `.md`는 붇이지 않는다)
+    * 실제 사례 : [로컬에서 구글 Apps Script 개발하기의 Amit 방식 링크](/wiki/apps-script-starter#amit-agarwal-way)
+  * `blog 참조`의 `링크 주소`는 `/blog/`로 시작한다
+    * 다음은 블로그 작성 날짜를 `yyyy/mm/dd/`형태로 붙이고, 영문제목, 섹션 제목을 차례로 붙인다 
+    * 실제 사례 : [20년 48주차 블로그 포스팅#meet-puppeteer](/blog/2020/11/23/week-48th/#meet-puppeteer--2020-11-25)
 
 # tag 페이지에 stackoverflow tag 정보도 같이 넣기 (개선 사항)
 
@@ -127,3 +206,14 @@ latex   : false
 ## 반영
 
 * [반영한 commit](https://github.com/honggaruy/honggaruy.github.io/commit/fcfde15c600a2258b9dc445b96fbb01e37fa3cf4)
+
+# ToDos
+
+## github 페이지에 private 공간 만들기? 
+
+* 아직 해본건 없지만 일단 자료 조사한 건 적어보자
+* [Types of GitHub Pages sites, GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites)
+* [Github Pages and authentication, we are not that far](https://rmannibucau.metawerx.net/github-pages-authentication.html)
+* [Jekyll Auth](https://github.com/benbalter/jekyll-auth)
+* [Is it possible to create a login system for GitHub pages?](https://www.quora.com/Is-it-possible-to-create-a-login-system-for-GitHub-pages)
+* [How do I provide authntication on GitHub Pages?, ASK.CYBERINFRASTRUCTURE](https://ask.cyberinfrastructure.org/t/how-do-i-provide-authentication-on-github-pages/950)
