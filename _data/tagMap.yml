@@ -26,6 +26,7 @@ google-apps-script:
     - {fileName: code-isolation}
     - {fileName: excel2gsheet}
     - {fileName: gas_library}
+    - {fileName: gas-unit-testing}
     - {fileName: GoogleAppsScript-Category}
 gsheet:
     - {fileName: 2020-04-18-todays-ideas}
@@ -74,6 +75,7 @@ search:
     - {fileName: 2020-05-07-google-custom-search}
 google-calendar:
     - {fileName: 2020-05-11-todays-ideas}
+    - {fileName: google-calendar-flair-korean-keyword}
 google-tasks:
     - {fileName: 2020-05-11-todays-ideas}
 google-keep:
@@ -114,6 +116,7 @@ vs:
     - {fileName: 2020-06-15-week-25th}
 flutter:
     - {fileName: 2020-06-22-week-26th}
+    - {fileName: 2021-07-05-week-27th}
     - {fileName: beginning-flutter}
     - {fileName: Flutter-Category}
 new-item:
@@ -127,6 +130,7 @@ vim:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-23-week-48th}
     - {fileName: vim-basic}
+    - {fileName: vim-basic-plugin}
     - {fileName: vim-folding}
     - {fileName: Vimrc-Category}
     - {fileName: vscode-configurations}
@@ -326,6 +330,8 @@ test-console:
     - {fileName: 2021-01-25-week-04th}
 mocha:
     - {fileName: 2021-01-25-week-04th}
+chai:
+    - {fileName: 2021-01-25-week-04th}
 compare:
     - {fileName: 2021-01-25-week-04th}
 비교:
@@ -377,6 +383,10 @@ vFlat:
 mathjax:
     - {fileName: 2021-06-28-week-26th}
     - {fileName: re2-translation}
+google-sheets:
+    - {fileName: 2021-07-05-week-27th}
+android-studio:
+    - {fileName: 2021-07-05-week-27th}
 book_cover:
     - {fileName: 2021-07-12-week-28th}
 jupyter_notebook:
@@ -410,6 +420,16 @@ dataframe:
     - {fileName: 2021-08-09-week-32th}
 sudoku:
     - {fileName: 2021-08-16-week-33th}
+unit-testing:
+    - {fileName: 2021-08-30-week-35th}
+    - {fileName: gas-unit-testing}
+    - {fileName: jsts-unit-testing}
+악보:
+    - {fileName: 2021-08-30-week-35th}
+'google-apps-script,':
+    - {fileName: 2021-09-20-week-38th}
+xls:
+    - {fileName: 2021-09-20-week-38th}
 books:
     - {fileName: Books-Category}
 book-scanner:
@@ -439,6 +459,12 @@ language:
     - {fileName: Web-Category}
 library:
     - {fileName: gas_library}
+qunit:
+    - {fileName: gas-unit-testing}
+tap:
+    - {fileName: gas-unit-testing}
+gitignore:
+    - {fileName: Git-Category}
 git-commit:
     - {fileName: git-commit-messages}
 commit:
@@ -466,6 +492,10 @@ it-device:
 falsy:
     - {fileName: javascript-myCookBook}
 truthy:
+    - {fileName: javascript-myCookBook}
+npm-install:
+    - {fileName: javascript-myCookBook}
+package_json:
     - {fileName: javascript-myCookBook}
 keyword:
     - {fileName: keyword_collection}

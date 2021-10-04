@@ -3,9 +3,11 @@
 - 비교
 - 비동기
 - 생산성
+- 악보
 - 특수문자
 - 한글
 - A4용지크기
+- android-studio
 - api
 - argument_unpacking
 - async-await
@@ -20,6 +22,7 @@
 - books
 - bundler
 - category
+- chai
 - chrome
 - clasp
 - cmd
@@ -65,13 +68,16 @@
 - git-commit
 - github
 - githubio
+- gitignore
 - google
 - google-apps-script
+- 'google-apps-script,'
 - google-calendar
 - google-custom-search
 - google-data-studio
 - google-keep
 - google-photos
+- google-sheets
 - google-slides
 - google-tasks
 - gray
@@ -122,10 +128,12 @@
 - new-item
 - new-year
 - ngrok
+- npm-install
 - npm-trends
 - open-api
 - operator_precedence
 - overloading
+- package_json
 - pandas
 - plantuml
 - playwright
@@ -141,6 +149,7 @@
 - pyscaffold
 - python
 - python-module-unicodedata
+- qunit
 - re2
 - recipe
 - refactoring
@@ -167,6 +176,7 @@
 - symbol
 - sysinternals
 - tags
+- tap
 - Tashi
 - template-literals
 - terminology
@@ -187,6 +197,7 @@
 - tzinfo
 - ubuntu
 - unimpared
+- unit-testing
 - update
 - upgrade
 - upstream
@@ -214,6 +225,7 @@
 - windows-terminal
 - workbox
 - wsl
+- xls
 - yaml-front-matter
 - youtube
 - zsh

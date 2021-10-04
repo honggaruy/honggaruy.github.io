@@ -454,13 +454,53 @@
     url: /blog/2021/08/23/week-34th
     updated: '2021-08-23 10:53:32 +0900'
     children: []
+2021-08-30-week-35th:
+    type: blog
+    title: '2021년 35주차 기록'
+    summary: '08/30 (월) ~ 09/05 (일)'
+    parent: null
+    url: /blog/2021/08/30/week-35th
+    updated: '2021-08-30 16:36:32 +0900'
+    children: []
+2021-09-06-week-36th:
+    type: blog
+    title: '2021년 36주차 기록'
+    summary: '09/06 (월) ~ 09/12 (일)'
+    parent: null
+    url: /blog/2021/09/06/week-36th
+    updated: '2021-09-06 16:36:32 +0900'
+    children: []
+2021-09-14-week-37th:
+    type: blog
+    title: '2021년 37주차 기록'
+    summary: '09/13 (월) ~ 09/19 (일)'
+    parent: null
+    url: /blog/2021/09/13/week-37th
+    updated: '2021-09-13 16:36:32 +0900'
+    children: []
+2021-09-20-week-38th:
+    type: blog
+    title: '2021년 38주차 기록'
+    summary: '09/20 (월) ~ 09/26 (일)'
+    parent: null
+    url: /blog/2021/09/20/week-38th
+    updated: '2021-09-20 16:36:32 +0900'
+    children: []
+2021-10-04-week-40th:
+    type: blog
+    title: '2021년 40주차 기록'
+    summary: '10/04 (월) ~ 10/10 (일)'
+    parent: null
+    url: /blog/2021/10/04/week-40th
+    updated: '2021-10-04 22:51:32 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
     summary: '튜토리얼 따라하기'
     parent: GoogleAppsScript-Category
     url: /wiki/apps-script-starter
-    updated: '2021-08-23 10:59:57 +0900'
+    updated: '2021-10-03 01:16:30 +0900'
     children: []
 beginning-flutter:
     type: wiki
@@ -566,13 +606,21 @@ gas_library:
     url: /wiki/gas_library
     updated: '2020-08-06 14:48:58 +0900'
     children: []
+gas-unit-testing:
+    type: wiki
+    title: 'Google Apps Script에서 Unit Testing 하기'
+    summary: 'QUnitGS2, GatT 등등...'
+    parent: GoogleAppsScript-Category
+    url: /wiki/gas-unit-testing
+    updated: '2021-09-06 14:30:45 +0900'
+    children: []
 Git-Category:
     type: wiki
     title: Git
     summary: '카테고리 2단계 (끝)'
     parent: Tools-Category
     url: /wiki/Git-Category
-    updated: '2020-10-12 12:38:21 +0900'
+    updated: '2021-09-10 21:45:14 +0900'
     children: [git-commands, git-commit-messages, git-upstream-meaning]
 git-commands:
     type: wiki
@@ -612,7 +660,15 @@ google_photo_slideshow:
     summary: '구글 포토로만 하는 건 아님...'
     parent: Gray-Category
     url: /wiki/google_photo_slideshow
-    updated: '2021-08-22 15:08:00 +0900'
+    updated: '2021-01-31 09:41:23 +0900'
+    children: []
+google-calendar-flair-korean-keyword:
+    type: wiki
+    title: '구글 캘린더 flair 한글 키워드 목록'
+    summary: '구글 캘린더 일정 배경 이미지'
+    parent: Gray-Category
+    url: /wiki/google-calendar-flair-korean-keyword
+    updated: '2021-10-03 14:14:03 +0900'
     children: []
 Google-sketchup:
     type: wiki
@@ -628,8 +684,8 @@ GoogleAppsScript-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/GoogleAppsScript-Category
-    updated: '2020-10-07 13:21:08 +0900'
-    children: [apps-script-starter, code-isolation, excel2gsheet, gas_library, re2-translation]
+    updated: '2021-09-10 14:44:15 +0900'
+    children: [apps-script-starter, code-isolation, excel2gsheet, gas_library, gas-unit-testing, re2-translation]
 Gray-Category:
     type: wiki
     title: Gray
@@ -637,7 +693,7 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: [bookscan-process, desk-setup, exact-size-photo-print, google_photo_slideshow, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp]
+    children: [bookscan-process, desk-setup, exact-size-photo-print, google_photo_slideshow, google-calendar-flair-korean-keyword, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp, the-answer-42]
 HDMI2dot1-device:
     type: wiki
     title: 'HDMI2.1 관련 장비 정보'
@@ -652,7 +708,7 @@ index:
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-08-20 21:25:56 +0900'
+    updated: '2021-10-02 14:14:36 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -676,7 +732,15 @@ javascript-myCookBook:
     summary: 'js/ts 뉴비가 생각하는 ...'
     parent: Web-Category
     url: /wiki/javascript-myCookBook
-    updated: '2020-10-25 16:41:03 +0900'
+    updated: '2021-10-05 00:05:02 +0900'
+    children: []
+jsts-unit-testing:
+    type: wiki
+    title: 'JavaScript/TypeScript Unit Testing 하기'
+    summary: '우선 mocha & chai로 ..'
+    parent: Web-Category
+    url: /wiki/jsts-unit-testing
+    updated: '2021-09-06 23:31:33 +0900'
     children: []
 keyword_collection:
     type: wiki
@@ -804,7 +868,7 @@ snippets-py:
     summary: '바로 사용가능한 조각 코드 모음'
     parent: Python-Category
     url: /wiki/snippets-py
-    updated: '2021-08-04 20:33:31 +0900'
+    updated: '2021-10-04 23:38:16 +0900'
     children: []
 stackoverflow_searchhelp:
     type: wiki
@@ -820,7 +884,7 @@ Term-Category:
     summary: '카테고리 문서 1단계 (끝)'
     parent: index
     url: /wiki/Term-Category
-    updated: '2021-03-12 11:59:52 +0900'
+    updated: '2021-09-06 22:54:07 +0900'
     children: [keyword_collection, term-short-circuit-evaluation, term-string-interpolation]
 term-short-circuit-evaluation:
     type: wiki
@@ -838,6 +902,14 @@ term-string-interpolation:
     url: /wiki/term-string-interpolation
     updated: '2021-03-12 12:00:51 +0900'
     children: []
+the-answer-42:
+    type: wiki
+    title: '42에 대하여'
+    summary: '그냥 읽을거리'
+    parent: Gray-Category
+    url: /wiki/the-answer-42
+    updated: '2021-09-04 05:14:34 +0900'
+    children: []
 Tools-Category:
     type: wiki
     title: '프로그래밍 도구'
@@ -854,6 +926,14 @@ vim-basic:
     url: /wiki/vim-basic
     updated: '2021-08-06 21:08:01 +0900'
     children: []
+vim-basic-plugin:
+    type: wiki
+    title: 'vim 필수 플러그인 사용법'
+    summary: '자주 잊어버리는 플러그인 사용법'
+    parent: Vim-Category
+    url: /wiki/vim-basic-plugin
+    updated: '2021-09-01 23:52:19 +0900'
+    children: []
 Vim-Category:
     type: wiki
     title: Vim
@@ -861,7 +941,7 @@ Vim-Category:
     parent: Tools-Category
     url: /wiki/Vim-Category
     updated: '2020-11-02 12:02:39 +0900'
-    children: [vim-basic, Vimrc-Category]
+    children: [vim-basic, vim-basic-plugin, Vimrc-Category]
 vim-folding:
     type: wiki
     title: 'vimrc 파일 폴딩하기'
@@ -893,7 +973,7 @@ Web-Category:
     parent: Language-Category
     url: /wiki/Web-Category
     updated: '2020-05-07 12:18:24 +0900'
-    children: [css-default-style, css-meaning, javascript-myCookBook, meet-puppeteer]
+    children: [css-default-style, css-meaning, javascript-myCookBook, jsts-unit-testing, meet-puppeteer]
 wiki-favicon:
     type: wiki
     title: '위키에 favicon 추가'
@@ -924,7 +1004,7 @@ wiki-jekyll-spaceship:
     summary: '다양한 table 작성, emoji and more...'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-jekyll-spaceship
-    updated: '2021-04-07 22:50:35 +0900'
+    updated: '2021-09-13 22:55:32 +0900'
     children: []
 Wiki-Setting-Category:
     type: wiki
@@ -956,7 +1036,7 @@ wiki-update-guide:
     summary: '위키의 기본 작성법및 기능 추가 방법'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2021-08-21 01:51:21 +0900'
+    updated: '2021-10-03 02:28:54 +0900'
     children: []
 Windows-Category:
     type: wiki
@@ -964,7 +1044,7 @@ Windows-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Tools-Category
     url: /wiki/Windows-Category
-    updated: '2020-11-07 13:53:39 +0900'
+    updated: '2021-09-10 14:25:25 +0900'
     children: [Windows-Sysinternals, Windows-Terminal-Setting]
 Windows-Sysinternals:
     type: wiki
