@@ -1,9 +1,9 @@
 ---
-layout  : wiki
+layout  : category
 title   : Pandas 
 summary : 카테고리 3단계 (끝) 
 date    : 2021-07-12 23:17:08 +0900
-updated : 2021-07-13 09:59:04 +0900
+updated : 2021-10-05 01:40:23 +0900
 tag     : python pandas 
 toc     : true
 public  : true
