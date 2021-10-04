@@ -3,7 +3,7 @@ layout  : category
 title   : Google Apps Script 
 summary : 카테고리 2단계 (끝) 
 date    : 2020-04-25 18:35:43 +0900
-updated : 2020-10-07 13:21:08 +0900
+updated : 2021-09-10 14:44:15 +0900
 tag     : google-apps-script google script 
 toc     : true
 public  : true
@@ -37,10 +37,17 @@ latex   : false
 
 * [Google Apps Script 대쉬보드](https://script.google.com/home) : 구글 앱스 스크립트 대쉬 보드, 요기서 스크립트를 직접 편집할 수 있다.
 
+# 기타 사이트
+
+* [Google Apps Script List, github/contributorpw](https://github.com/contributorpw/google-apps-script-awesome-list) : 관련 리소스 목록 모음
+
 # 관련 인물
 
 * PopGoesTheWza
   * [stack overflow](https://stackoverflow.com/users/10904993/popgoesthewza)
+  * [github](https://github.com/PopGoesTheWza)
+    * repository에 `google/clasp`가 있는데 `clasp` contributors 중 1인으로 끼어있음
+    * 기여를 거의 도맡아 하는데 구글 엔지니어인가? 
   * [clasp github 리포지토리에서 프로젝트가 언급됨](https://github.com/google/clasp/blob/master/docs/typescript.md#the-namespace-statement-workaround) : [언급된 프로젝트](https://github.com/PopGoesTheWza/ts-gas-project-starter) - 실제 프로젝트에서 쓸 수 있는 프로젝트를 만들어줌 (scafoldning)
   * [내 문제 해결에 힌트를 준 답변 작성](https://stackoverflow.com/a/59809677/9457247)
 
