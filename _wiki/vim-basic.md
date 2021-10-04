@@ -3,7 +3,7 @@ layout  : wiki
 title   : vim 기초 사용법 
 summary : 매번 잊어버려서 참고할 장소를 만들었다.
 date    : 2021-05-19 14:24:31 +0900
-updated : 2021-05-20 00:13:14 +0900
+updated : 2021-08-06 21:08:01 +0900
 tag     : vim hlghlight unimpared 
 toc     : true
 public  : true
@@ -49,3 +49,24 @@ latex   : false
   * `[oh` - `:set hlsearch` 
   * `]oh` - `:set nohlsearch` 
   * `yoh` - `hlsearch` 토글 ( 위 답변에는 `coh`로 되어있지만, 최근 버전에서  댓글과 같이 `yoh`로 변경됨 )
+
+# Tip 2. Blank line (빈 줄)간에 이동하고 싶을 때는 어떻게 ?
+
+## 문제 상황
+
+* 여러 Paragraph로 나뉜 함수 바디를 한덩이로 뭉쳐 선택해서 옮기고 싶다.
+  * 그러러면, 함수 바디 내에서 blank line 사이를 뛰어 다니며 제거 해야 하는데..
+  * 빈 줄에서 빈 줄로 뛰는 vim 명령은?
+* 한덩이로 뭉쳐있으면 `vip` 명령으로 쉽게 선택하고 마음대로 할 수 있는데..
+
+## 관련 링크
+
+* [Vim - navigate between paragraphs by blank lines, stackexchange / Unix & Linux](https://unix.stackexchange.com/a/232093)
+* [cursor motions or navigation, vimhelp.org](https://vimhelp.org/motion.txt.html#navigation)
+  * [5. Text object motions, vimhelp.org](https://vimhelp.org/motion.txt.html#object-motions)
+
+## 해결책
+
+* `{` : paragraphs backward
+* `}` : paragraphs forward
+
