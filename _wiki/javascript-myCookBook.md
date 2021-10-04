@@ -3,8 +3,8 @@ layout  : wiki
 title   : Javascript 초급 코딩 요령 
 summary : js/ts 뉴비가 생각하는 ... 
 date    : 2020-06-05 23:30:03 +0900
-updated : 2020-10-25 16:41:03 +0900
-tag     : javascript typescript falsy truthy 
+updated : 2021-10-05 00:05:02 +0900
+tag     : javascript typescript falsy truthy npm-install package_json
 toc     : true
 public  : true
 parent  : [[Web-Category]] 
@@ -60,4 +60,26 @@ const isOdd = n => Math.abs(n % 2) == 1
 * 요즘 solution : [bind()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Specifying_this_using_bind())
 * 다른 solution : 화살표 함수 
 * 자세한 내용은 위 참조링크 본문 참조
+
+## git 에서 javascript 프로젝트 clone 하고나서 뭐 해야 하지 ?
+
+* google 개발자는 gas unit-testing 어떻게 하나 보려고 [apps-script-oauth2, github](https://github.com/googleworkspace/apps-script-oauth2)를 다운받아 봤다.
+* package.json을 보니 mocha와 chai를 쓰는군..
+* 근데 clone 하고 나서 뭐 해야 하지? (오랜만에 다시해서..) ▶ `npm install`을 한다 !! 
+
+### npm install
+
+* #npm-install #package_json
+* 참고 링크 : [npm-install](https://docs.npmjs.com/cli/v7/commands/npm-install)
+* `npm install` (in a package directory, no arguments):
+  * (이 명령으로) 로컬 `node_modules` folder에 의존하는 패키지들을 모두 설치한다
+  * 여기에 global mode를 추가하면 (즉, command에 `-g` 나 `--global`을 덧붙이면)
+    * 현재 package context (즉, 현재 working directory)를 global package로 설치한다 
+  * 기본적으로 `npm install` 명령은 `package.json`에 들어있는 모든 의존 모듈(dependencies)을 설치한다
+  * `--production` flag이 추가되면 (혹은 `NODE_ENV` 환경 변수가 `production`으로 설정되어있으면)
+    * npm은 `devDependencies`에 등록된 모듈을 설치하지 않는다
+  * `NODE_ENV` 환경 변수가 `production`으로 설정된 상황에서 
+    * `dependencies`와 `devDependencies`의 모든 모듈을 설치하려면 
+    * `--production=false` 옵션을 추가해라
+    > NOTE : `--production` flag은 프로젝트에 dependency 추가할 때는 별 의미가 없다
 
