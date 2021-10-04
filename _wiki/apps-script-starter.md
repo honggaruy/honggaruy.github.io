@@ -3,7 +3,7 @@ layout  : wiki
 title   : 로컬에서 구글 Apps Script 개발하기
 summary : 튜토리얼 따라하기
 date    : 2020-06-06 14:28:52 +0900
-updated : 2020-07-15 22:06:32 +0900
+updated : 2021-10-03 01:16:30 +0900
 tag     : google-apps-script 
 toc     : true
 public  : true
@@ -23,9 +23,22 @@ latex   : false
   * [Google Apps Script for Developers](https://www.labnol.org/internet/google-apps-script-developers/32305/) 는 블로그에 관련글을 쓴내용이며 직접 설명한 유튜브 링크도 포함하고 있다.
 * 한번 유튜브 비디오를 따라해보면서 익혀보기로 했다.
 
-# 2. 전개 (Amit Agarwal)
+# 2. 전개
 
-## 환경 설치
+## Amit Agarwal 방식 (현재 사용하지 않음) {#amit-agarwal-way} 
+
+<style>
+  details > summary {
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+  }
+</style>
+<details markdown="1">
+  <summary> 처음에 한 번 해봤지만 현재 사용하지 않는 방식이라 접어둠. 내용 보려면 Click !! </summary>
+  
+### 환경 설치
 
 * 일단 첨에 해당 git을 클론해온다. 비디오에서 하라는 대로 이름을 `mailman`으로 해본다.
 * `git clone`을 하면 `.git` 폴더가 생기는데, 일단 지운다
@@ -63,7 +76,7 @@ latex   : false
       * 취약점(vulnerabilities) 관련
         * 참고 : [npm에 새로 추가된 audit 기능](https://blog.outsider.ne.kr/1375)
 
-## 코딩 시작전
+### 코딩 시작전
 
 * clasp login후 clasp create로 프로젝트 만들기
   * 명령 : `clasp create --type sheets --title "MailMan" --rootDir ./dist`
@@ -80,7 +93,7 @@ latex   : false
 * 다음으로 appsscript.json을 편집
   * appsscript.json 편집시에 권한을 조정했는데 자세한 사항은 [google developer playground](https://developers.google.com/oauthplayground/)를 참조하면 모든 권한이 나옴
 
-## 코딩
+### 코딩
 
 * 따라 하는 html path 설정관련해서 에러가 남
 * webpack.config.js에서 다음부분을 수정함
@@ -95,40 +108,59 @@ latex   : false
   ```
 * 이후에는 쭉 따라하면 별 문제없이 잘된다
 
-## 소감
+### 소감
 
 * 체계적이긴 하나, 좀 예전에 작성된 느낌
 * webpack으로 빌드하는데 너무 오래 걸림 ( 느리면 50초 이상, 빠르면 20초 이상)
 * 일단 다른 방법을 좀 찾아보기로 함
 * [특수문자 복사하는 사이트](https://www.copypastecharacter.com/) 
 
-# 3. 발단 2
+</details>
 
-* 내가 한 번 만들어 보기로 함
+## Clasp + Typescript로 GAS 프로젝트 시작하기 (현재 사용중인 방법) {#clasp-and-typescript}
+
+* 본 섹션은 custom-id 사용중입니다. (링크 걸 때 주의)
+* 목적 : 오랜만에 Google Apps Script 를 다시 시작할때 도움이 될 정보 정리
 * 참조한 자료
-  * 개인 유튜브  [CLASP Tutorial](https://youtu.be/4Qlt3p6N0es) 
   * [clasp github중 TypeScript doc](https://github.com/google/clasp/blob/master/docs/typescript.md)
   * Google Apps Script - Guide
     * [Command Line Interface using clasp](https://developers.google.com/apps-script/guides/clasp)
     * [Using TypeScript](https://developers.google.com/apps-script/guides/typescript)
+    * codelabs: [clasp - The Apps Script CLI](https://codelabs.developers.google.com/codelabs/clasp/) - clasp 따라해보기
      
-# 4. 전개 2
+### 개념정리
 
-## 환경 설정
+* GAS 의 2가지 개발 시작 방법
+  * 온라인 : 구글 문서(Sheets, Docs, Presentations, Forms,..)에서 `스크립트 편집기`를 열어 온라인으로 작업
+  * 오프라인 : `clasp`을 다운로받아 로컬에서 작업후 온라인에 연동시키기
+* `clasp`을 쓸 때 유리한 점
+  * 온라인이 아닌 상황에서도 개발할 수 있다. (실행할 때는 연결해야 겠지만)
+  * `git`등을 사용하여 코드 버전 관리를 할 수 있다
+  * 폴더를 사용해 구조적으로 코드를 분리할 수 있다
+  * `Typescript`를 사용하여 개발할 수 있다
+    * `Typescript`를 사용하면 유리한 점
+      * Autocomplete을 지원하는 로컬 IDE 사용가능
+      * `class`나 `arrow function`등을 지원하는 ES6 특징을 이용할 수 있다 
+    * 주의 : 일단 한 번 `Typescript`를 이용한 프로젝트는 계속 Typescript를 이용해야 한다 (서버에 올라가면서 transfile 되기 때문)
+    * 주의 : GAS에서 허용되는 Typescript는 Node나 Web browser에서 허용되는 Typescript와 정확히 같지는 않다
+      * `export`나 `require`등의 용어를 사용할 수 없다. 
+      * `window`등의 용어를 사용할 수 없다. 
 
-### 기본 설치
+### 환경 설정
 
-* VS Code 및 node.js 설치
-* npm으로 clasp 설치및 Google Apps Script API `On`
-  * 유튜브에서는  이 내용이 여기까지임 [11:31/25:55](https://youtu.be/4Qlt3p6N0es?t=209)
+* 자세한 설명이 필요하면 개인 유튜브 영상([CLASP Tutorial](https://youtu.be/4Qlt3p6N0es))을 확인 한다 
+* [clasp 설치](https://developers.google.com/apps-script/guides/clasp#installation)
+* [clasp 초기기동](https://developers.google.com/apps-script/guides/clasp#using_clasp)
+* 오랜만에 돌아왔을 때는..
+  * `clasp -v` 명령으로 clasp이 설치 되어있는지 확인하자 
 
-### 사전 설정
+#### 신규 프로젝트 생성 루트 
 
 1. 프로젝트를 저장할 폴더 생성 
   *  이름을 잘 고민할 것
    
 1. git init 실행
-  *  일단 이거 넣어야 할지 고민할 것
+  * git으로 관리할 필요가 있을 때
     
 1. npm init 실행
   * node package 배포용 환경을 만들기 위한것이지만 여기선 `package.json`을 만들기 위해 실행
@@ -157,7 +189,9 @@ latex   : false
   }
   ```
 
-## TypeScript 프로젝트 만들기 
+1. 다음은 생성한 폴더를 `clasp project`로 만들어야 하는데 
+
+### TypeScript 프로젝트 만들기 
 
 1. script.google.com 사이트에 접속하기 전에 `clasp create` 방식으로 설정
 
@@ -180,7 +214,7 @@ prompt$ clasp clone "<script_Id>" --rootDir src
 
 * 프로젝트 폴더밑에 `src` 디렉토리를 만들면 나중에 만들게 될 배포및 테스트 폴더와 구분 되어 좋음. 
 
-## 모듈, exports 와 imports
+### 모듈, exports 와 imports
  
   * Google Apps Script는 ES 모듈은 현재 지원하지 않음. 일반적인 `export`/`import` 패턴은 실패함.
   * 실패하는 패턴은 다음과 같다. 
@@ -197,7 +231,7 @@ prompt$ clasp clone "<script_Id>" --rootDir src
   // the variable 'fool` does not exist in the global namespace
   cons bar = foo;
   ```
-###  `exports` 선언 해결책
+####  `exports` 선언 해결책
 
   * 이 해결책은 일반적인 모듈이 지원하는 code isolation조차 지원하지 않으므로, 찾기 어려운 버그를 낼수 있음을 주의
  
@@ -207,7 +241,7 @@ prompt$ clasp clone "<script_Id>" --rootDir src
   exports.foo;  // address "imported" content as it will be visible when transpiled
   ```
  
- ###  `namespace` 실행문 해결책
+####  `namespace` 실행문 해결책
  
  * 이전에 "internal module"로 알려졌던, TypeScript의 "namespaces"를 이용하며, 적절한 code isolation의 목적을 이룬다
  * Namespace definition은 중첩될수 있으며, 여러 파일에서 사용될수 있고, `import`/`require` 문장이 필요하지 않다.
@@ -228,7 +262,7 @@ prompt$ clasp clone "<script_Id>" --rootDir src
  ```
  * `namespace`의 좀 더 자세한 예제는 [ts-gas-project-starter](https://github.com/PopGoesTheWza/ts-gas-project-starter)에 나와있다.
 
-### third party build-chain 해결책
+#### third party build-chain 해결책
 
 * webpack, rollup.js, gulp 등등의 써드 파티 도구를 이용한 방법
 * 다음 단계와 같이 수행한다
@@ -237,15 +271,9 @@ prompt$ clasp clone "<script_Id>" --rootDir src
 2. (선택적) 사용하지 않는 코드를 제거하기 위해 나무 흔들기?를 한다.
 3. 결과를 한개의 javascript 패키지로 모은다.
 
+### 설정
 
-
-# 5. 소감 2
-
-* 너무 간단.. 지워버릴까?
-
-# 6. 설정
-
-## clasp github에서 건진 VSCode 설정
+#### clasp github에서 건진 VSCode 설정
 
 * [clasp github/docs/settings.md](https://github.com/google/clasp/blob/master/docs/settings.md) 에서 건진 VSCode 설정
 * 일단 써진대로 `Code > Prefereces > Settings` 로 들어간다
