@@ -3,7 +3,7 @@ layout  : wiki
 title   : 위키에 jekyll-spaceship 적용 
 summary : 다양한 table 작성, emoji and more... 
 date    : 2021-01-02 23:51:07 +0900
-updated : 2021-04-07 22:50:35 +0900
+updated : 2021-09-13 22:55:32 +0900
 tag     : jekyll-spaceship markdown-table plantuml mermaid emoji thequeensgambit
 toc     : true
 public  : true
@@ -436,6 +436,12 @@ Escaped:
     * 폰트 사이즈를 재 설정해주면 emoji size를 변경할 수 있음!!
     * [stackoverflow에 이 건으로 질문을 올리고 자문자답함](https://stackoverflow.com/a/65550809/9457247)...:sweat_smile:
 
+### 그외 이모지 관련 참고할 사이트
+
+* [emojipedia.org](https://emojipedia.org/)
+  * emoji 백과사전같은 사이트
+  * platform별 이모지를 비교할 수 있다
+  * 이모지 이름을 알수 있다 (예: [Otter](https://emojipedia.org/otter/), [Pinching hand](https://emojipedia.org/pinching-hand/))
 
 ## 9. Modifying Element Usage
 
