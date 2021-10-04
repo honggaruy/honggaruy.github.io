@@ -3,8 +3,8 @@ layout  : category
 title   : Git 
 summary : 카테고리 2단계 (끝)
 date    : 2020-04-13 20:53:47 +0900
-updated : 2020-10-12 12:38:21 +0900
-tag     : git 
+updated : 2021-09-10 21:45:14 +0900
+tag     : git gitignore
 toc     : true
 public  : true
 parent  : [[Tools-Category]] 
@@ -52,4 +52,12 @@ latex   : false
 * [Git 사용 규칙 - Git commit 메시지](https://tttsss77.tistory.com/58) : git 커밋 메시지 규칙
 * [Hugo로 github.io 블로그 만들기](https://ryan-han.com/post/etc/creating_static_blog/) : 여러가지 설정 참고할것이 있을듯..
 
+## gitignore 파일 자동 생성 도구
+
+* #gitignore
+* [gitignore.io, Toptal](https://www.toptal.com/developers/gitignore)
+* 사용법 : [docs.gitignore.io](https://docs.gitignore.io/)
+ 
+  ![gitignore.io 사용법](https://vimeo.com/204803019) 
+  
 # git - 카테고리 문서 
