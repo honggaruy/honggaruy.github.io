@@ -2,7 +2,7 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2021-05-19 14:27:33 +0900
+updated : 2021-10-02 14:14:36 +0900
 tag     : index
 toc     : true
 public  : true
@@ -19,6 +19,9 @@ comment : false
 * [[Google-sketchup]]{구글 스케치업 정리}
 * [[OpenApi-usage]]{Open API 사용하기}
 * [[desk-setup]]{데스크 셋업 구경하기}
+* [[bookscan-process]]{북스캔 처리하기}
+* [[the-answer-42]]{42에 대하여}
+* [[google-calendar-flair-korean-keyword]]{구글 캘린더 flair 한글 키워드 목록}
 
 ## [[Term-Category]]{용어 정리 Category}
 
@@ -33,6 +36,7 @@ comment : false
 * [[javascript-myCookBook]]{Javascript 초급 코딩 요령}
 * [[css-default-style]]{Default CSS Style 적용하기}
 * [[meet-puppeteer]]{Puppeteer 시작하기}
+* [[jsts-unit-testing]]{Javascript/Typescript Unit Testing 하기}
 
 ### [[GoogleAppsScript-Category]]{Google Apps Script 관련 Category}
 
@@ -41,10 +45,20 @@ comment : false
 * [[apps-script-starter]]{로컬에서 구글 Apps Script 개발하기}
 * [[code-isolation]]{typescript로 개발시 파일 순서 문제}
 * [[re2-translation]]{RE2 번역}
+* [[gas-unit-testing]]{GAS에서 Unit Testing 하기}
 
-### [[Python-Categroy]]{Python 관련 Category}
+### [[Python-Category]]{Python 관련 Category}
 
 * [[pyscaffold]]{PyScaffold로 시작하기}
+* [[snippets-py]]{Python Snippet 모음}
+
+#### [[Pandas-Category]]{Pandas 관련 Category}
+
+* [[pandas-basic]]{pandas 기초 사용법}
+
+### [[Flutter-Category]]{Flutter 관련 Category}
+
+* [[beginning-flutter]]{Flutter 시작하기}
 
 ## [[Tools-Category]]{프로그래밍 도구 관련 Category}
 
@@ -58,6 +72,7 @@ comment : false
 ### [[Vim-Category]]{Vim 관련 Category}
 
 * [[vim-basic]]{vim 기초 사용법}
+* [[vim-basic-plugin]]{vim 필수 플러그인 사용법}
 
 #### [[Vimrc-Category]]{vimrc 설정 관련 Category}
 
@@ -103,6 +118,7 @@ comment : false
 * [[book-regex-cookbook]]{한 권으로 끝내는 정규표현식}
 * [[book-simplifying-javascript]]{자바스크립트 코딩의 기술}
 * [[book-practical-vim]]{Practical Vim}
+* [[essay-teach-yourself-programming-in-ten-years]]{10년안에 프로그래밍 독학하기}
 
 ---
 
