@@ -45,7 +45,7 @@ latex   : false
 # pandas로 날짜 끼리 비교하기
 
 * 시작일과 종료일을 parameter로 받는 함수를 만들 때 `시작일 <= 종료일`을 assertion 하고자 한다
-* datetime 라이브러리 말고 pandas로 하려고 할 때 어떻게 할까 ?
+* [datetime 라이브러리](https://www.scaler.com/topics/python/datetime-python/) 말고 pandas로 하려고 할 때 어떻게 할까 ?
 * 다음 링크를 참조 했다. [Comparing Timestamp in Python - Pandas](https://www.geeksforgeeks.org/comparing-timestamp-in-python-pandas/)
 * 테스트 코드
   ```python
