@@ -32,3 +32,4 @@ gem 'jekyll-spaceship', git: 'https://github.com/jeffreytse/jekyll-spaceship'
 
 # Windows need wdm to avlid polling for changes ( honggaruy added)
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'jekyll-figure'

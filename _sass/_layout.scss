@@ -27,7 +27,7 @@ table.gsc-search-box {
 }
 
 .header {
-    background-color: $theme-color;
+    background-color: $header-background;
 
     &:after {
         clear: both;
@@ -38,21 +38,21 @@ table.gsc-search-box {
     .site-title {
         float: left;
         text-decoration: none;
-        color: #FFFFFF;
+        color: $header-text-color;
         line-height: 1.5;
         padding-left: 10px;
     }
     .site-title-right {
         float: right;
         text-decoration: none;
-        color: #FFFFFF;
+        color: $header-text-color;
         line-height: 1.5;
         padding-right: 10px;
     }
 }
 
 .page-content {
-    background: $page-content-bgcolor; 
+    background: $background-color; 
     // padding: 30px 0;
 
     img {
@@ -68,7 +68,7 @@ table.gsc-search-box {
     table {
         border-collapse: collapse;
         border-spacing: 0;
-        border-color: #000000;
+        border-color: $border-color;
 
         td, th {
             border: 1px solid $third-font-color;
@@ -88,7 +88,7 @@ table.gsc-search-box {
     background: #EEE;
 }
 .post-tag a {
-    color: #888888;
+    color: darken($text-color, 15%);
     text-decoration: none;
 }
 @media (max-width: 1120px) {
@@ -164,15 +164,15 @@ ul.tag-list {
         padding: 2px;
         text-decoration: none;
         border-radius: 10px;
-        border: 0px solid $theme-color;
-        background-color: $theme-color;
-        color: #FFFFFF;
+        border: 0px solid $main-color-2;
+        background-color: $main-color-2;
+        color: $text-color-2;
     }
 
     a.active {
         border: 0px solid transparent;
         background-color: transparent;
-        color: #000000;
+        color: $text-color;
     }
 }
 
@@ -228,4 +228,5 @@ div.search {
 
 .post-excerpt {
     color: $forth-font-color;
+    //color: $forth-font-color;
 }

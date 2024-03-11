@@ -1,0 +1,39 @@
+@mixin plain() {
+    &,
+    &:link{
+      @content;
+    }
+  }
+
+@mixin visited() {
+    .post &:visited,
+    .post-list &:visited {
+      @content;
+    }
+}
+  
+@mixin hover() {
+    .post &:hover {
+        @content;
+    }
+}
+
+@mixin active() {
+    .post &.active,
+    .post &:active {
+        @content;
+    }
+}
+
+@mixin focus() {
+    .post &.focus {
+        @content;
+    }
+}
+
+@mixin disabled() {
+    &.disabled,
+    &:disabled {
+        @content;
+    }
+}

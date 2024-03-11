@@ -26,6 +26,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
     <link rel="manifest" href="/resources/icon/site.webmanifest">
+{% if page.fontawe and page.fontawe == true %}
+    <!-- https://fontawesome.com/kits/a86e231b11/use 참고 -->
+    <script src="https://kit.fontawesome.com/a86e231b11.js" crossorigin="anonymous"></script>
+{% endif %}
 {% if site.google_analytics.ua %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>

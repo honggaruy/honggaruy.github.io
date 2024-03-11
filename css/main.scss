@@ -1,4 +1,5 @@
 ---
+# Only the main Sass file needs front matter ( the dashes are enough)
 ---
 @charset "utf-8";
 
@@ -30,6 +31,11 @@ $page-content-bgcolor: #FAFAFA;
 
 // Import from 'sass_dir' (default: _sass)
 @import
+    "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
+    "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
+    "common/variables",
+    "common/function",
+    "common/classes",
     "base",
     "layout",
     "syntax",

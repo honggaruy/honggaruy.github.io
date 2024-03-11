@@ -1,0 +1,37 @@
+$base: (
+    font-family: ("NanumBarunpen", "sunflower", "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif),
+    font-family-code: ('D2Coding', Consolas, "Courier New", Courier),
+
+    font-size-root:    16px,
+    font-size-root-sm: 14px,
+
+    font-size-xl:      1.5rem,
+    font-size-lg:      1.25rem,
+    font-size:         1rem,
+    font-size-sm:      .85rem,
+    font-size-xs:      .7rem,
+
+    font-weight:       400,
+    font-weight-bold:  700,
+
+    line-height-xl:    2,
+    line-height-lg:    1.8,
+    line-height:       1.6,
+    line-height-sm:    1.4,
+    line-height-xs:    1.2,
+
+    spacer:            1rem,
+);
+
+$spacers: (
+    0:                  0,
+    1:                  map-get($base, spacer) * .25,
+    2:                  map-get($base, spacer) * .5,
+    3:                  map-get($base, spacer),
+    4:                  map-get($base, spacer) * 1.5,
+    5:                  map-get($base, spacer) * 3
+);
+
+$clickable: (
+    transition:        all .2s ease-in-out
+)

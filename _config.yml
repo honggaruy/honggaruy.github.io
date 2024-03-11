@@ -1,4 +1,6 @@
 # Site settings
+text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 title: 홍가뤼의 개인위키
 url: "https://honggaruy.github.io"
 baseurl: ""
@@ -18,6 +20,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-spaceship
+  - jekyll-figure
 
 permalink: /blog/:year/:month/:day/:title/
 
@@ -25,7 +28,16 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+jekyll-figure:
+  paragraphs: false
 
 paginate: 10
 paginator_path: "/blog"
