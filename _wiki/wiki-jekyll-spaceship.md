@@ -3,7 +3,7 @@ layout  : wiki
 title   : 위키에 jekyll-spaceship 적용 
 summary : 다양한 table 작성, emoji and more... 
 date    : 2021-01-02 23:51:07 +0900
-updated : 2021-09-13 22:55:32 +0900
+updated : 2022-12-29 10:19:28 +0900
 tag     : jekyll-spaceship markdown-table plantuml mermaid emoji thequeensgambit
 toc     : true
 public  : true
@@ -100,7 +100,7 @@ latex   : false
 ### Headerless
 
 <style>
-.big-chess-table {font-size: 2.0rem;}
+.big-chess-table {font-size: 2.0rem; color: black}
 .big-chess-table tbody td {line-height: 1.32em; padding-top: 1px; padding-bottom: 1px;}
 .big-chess-table td:nth-child(9) {font-size: 1rem; color: white; background: black;}
 .big-chess-table tr:nth-child(9) {font-size: 1rem; color: white; background: black; text-align: center}
@@ -442,6 +442,7 @@ Escaped:
   * emoji 백과사전같은 사이트
   * platform별 이모지를 비교할 수 있다
   * 이모지 이름을 알수 있다 (예: [Otter](https://emojipedia.org/otter/), [Pinching hand](https://emojipedia.org/pinching-hand/))
+
 
 ## 9. Modifying Element Usage
 

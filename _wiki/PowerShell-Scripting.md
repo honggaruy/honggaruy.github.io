@@ -1,13 +1,13 @@
 ---
 layout  : wiki
 title   : Powershell 스크립팅 
-summary :  
+summary : Turning your one-liners in PowerShell into reusable tools !! 
 date    : 2020-11-02 21:53:57 +0900
-updated : 2020-11-03 00:17:12 +0900
-tag     : 
+updated : 2022-04-07 13:02:47 +0900
+tag     : windows powershell 
 toc     : true
 public  : true
-parent  : 
+parent  : [[Windows-Category]] 
 latex   : false
 ---
 * TOC
@@ -97,4 +97,39 @@ latex   : false
 * 또한 BOM은 강제사항이 아님 !!
 * 즉, 리눅스에서 BOM이 있을 경우 처리되지 못하는 경우가 발생할 수 있음. 
 * 리눅스에서도 대부분은 BOM을 처리할 수 있다고 함.
+
+# How to
+
+## Module에 Script 작성하기
+
+* 발췌 소스 : [ Script Modules from Learning PowerShell > PowerShell 101 > Script modules](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#script-modules)
+* 어느때 스크립트(.ps1)를 쓰고 어느때 모듈(.psm1)을 쓰나?
+  * 관련 SO: [When to choose dev of a PS Module over PS Scritp](https://stackoverflow.com/q/5103211/9457247) 
+  * 답변 : 
+    * function없이 싱글 task로 일련의 작업을 수행하다면 `.ps1` 
+    * 이미 몇개의 function을 만들어 쓰고 있다면 `.psm1` 이 낫다 
+* module autoloading 이용하기
+  * `$env.PSModulePath -split ';'` 명령으로 나오는 다음 경로에 개인 모듈을 넣을수 있다
+    ```
+    c:\Users\<사용자>\Documents\PowerShell\Modules
+    c:\Program Files\PowerShell\Modules
+    c:\Program Files\PowerShell\7\Modules
+    c:\Program Files\WindowsPowerShell\Modules
+    c:\Windows\system32\WindowsPowerShell\v1.0\Modules
+    c:\Program Files\Intel\Wired Networking\
+    ```
+    * line 1 : 개인용 모듈을 넣을 수 있다 ( 나는 이곳을 선호함)
+    * line 2,3 : 해당 머신 전체 사용자가 사용한다 (다른 사용자 아이디로 로그인해서 작업하는 경우가 많다면 이곳이 좋다)
+    * line 4,5 : posh5.1용 ? + 전체 사용자  
+    * line 6 : 특정 애플리케이션 용 모듈 전용 
+  * 위의 경로밑에.. 
+    * 우선 모듈이름(예를들어,MyScriptModule)을 정하고
+    * 해당 모듈이름으로 된 폴더를 만들고
+    * 그 폴더내에 해당 `모듈이름.psm1` (예를들면, `MyScriptMoudule.psm1`)을 만들면
+    * `Module autoloading`이 동작한다
+* 모든 모듈은 module manifest(.PSD1 확장자)를 가져야 한다 
+  * 주의! DSC configuration 저장용 파일도 .PSD1 확장자를 가진다
+  * `Get-Module -Name MyScriptModule` 명령을 수행에 `0.0` 버전이 나온다면 manifest가 없다는 증거이다
+  * Manifest가 없는 기존 Module이 있다면 `New-ModuleManifest` 명령으로 만들수 있다. [링크참조](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#module-manifests)
+  * [Manifest에서 사용자에게 노출할 함수를 지정할 수 있다](https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#defining-public-and-private-functions)
 

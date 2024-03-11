@@ -3,7 +3,7 @@ layout  : wiki
 title   : 용어 설명 모음 
 summary : 아직 안정함  
 date    : 2020-04-27 11:15:09 +0900
-updated : 2021-05-19 15:04:05 +0900
+updated : 2024-03-11 14:18:27 +0900
 tag     : keyword hash string-interpolation terminology 
 toc     : true
 public  : true
@@ -21,6 +21,40 @@ latex   : false
   * 정보 검색에 실용성이 높을수록 표준 용어에 가깝다고 판단한다.
   * stack overflow에 태그로 등록되었는지 확인
 
+# B로 시작
+
+## BDFL
+
+### 표준 용어 여부 확인
+
+- [Wikipedia 등록여부 확인 완료](https://en.wikipedia.org/wiki/Benevolent_dictoator_for_life) : Benevolent dictator for life
+    - [위키백과 등록여부 확인 완료](https://en.wikipedia.org/wiki/자비로운_종신독재자) : 자비로운 종신독재자
+
+### 관련 링크
+
+
+### 실제 사용례
+
+- Rust의 창시자인 Graydon이 본인의 블로그(?)의 글인 [The Rust I Wanted Had No Future](https://graydon2.dreamwidth.org/307291.html) 에서 BDFL을 언급
+
+
+# D로 시작
+
+## Drop-in replacement
+
+### 표준 용어 여부 확인
+
+* [Wikipedia 등록여부 확인 완료](https://en.wikipedia.org/wiki/Drop-in_replacement)
+
+### 관련 링크
+
+* [컴퓨터 공학에서 drop-in replacement 뜻](https://woongheelee.com/entry/컴퓨터공학-책에서-쓰는-영어-dropin-replacement-뜻)
+  * 아주 조금의 노력으로 A에서 B로 바꿔 성능을 향상 시킨다 
+    
+### 실제 사용례
+
+* Drew Nail의 책 `Mordern Vim`/ Introduction / A Note on Vim Versions / Neovim 첫 문장
+  > Neovim is a community-run fork of Vim that can be used as **a drop-in replacement** for Vim. 
 
 # H로 시작
 
@@ -71,6 +105,14 @@ latex   : false
   > ... The VS Code team has been busy this month working on several longer **lead time** updates ...
   * 해석 : 개발하는데 시간이 많이 걸리는 기능들을 작업하느라 바빴다는 의미..
 
+# M으로 시작
+
+## Manifest
+
+* [Computer 공학에서 manifest의 의미](https://en.wikipedia.org/wiki/Manifest_file) 
+  * 유래 : 배에서 선원이름, 화물목록 등을 적은 문서를 적하목록(ship manifest) 이라고 했음
+  * manifest는 동사로 많이 쓰는데 "명백하게 하다"라는 의미 
+
 # P로 시작
 
 
@@ -90,6 +132,19 @@ latex   : false
 * [JavaScript Is A Great Language](https://betterprogramming.pub/its-time-we-admit-the-truth-about-javascript-98d197c0f1ec#9bb0) - predicate 사용. 조건자 정도로 해석하면 되는듯..
   > JavaScript arrays also have a `fileter` method that takes a **predicate** function and returns an array with only the elements that satisfy the **predicate**.
   
+# R로 시작
+
+## raster image
+
+* [Shields.io](https://github.com/badges/shields) ReadMe 첫 문장에 나오는데 궁금해서 기록함
+
+### 관련 링크
+
+* [Raster Images, Vector Images, University of Michigan Library](https://guides.lib.umich.edu/c.php?g=282942&p=1885352)
+  * 위의 링크에서는 Vector 이미지와 대비되는 개념으로 설명하는데 
+    * 간단하게 확대하면 품질이 떨어지는 이미가 raster 이미지
+    * 확대해도 품질이 유지되는 이미지가 vecter 이미지 
+
 # S로 시작
 
 ## Short-circuit evaluation

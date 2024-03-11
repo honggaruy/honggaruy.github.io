@@ -3,7 +3,7 @@ layout  : wiki
 title   : Sysinternals 도구 
 summary : troubleshooting용 도구  
 date    : 2020-10-30 12:41:22 +0900
-updated : 2020-11-03 02:28:36 +0900
+updated : 2022-05-12 14:48:48 +0900
 tag     : windows sysinternals
 toc     : true
 public  : true

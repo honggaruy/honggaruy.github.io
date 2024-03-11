@@ -3,7 +3,7 @@ layout  : wiki
 title   : 로컬에서 구글 Apps Script 개발하기
 summary : 튜토리얼 따라하기
 date    : 2020-06-06 14:28:52 +0900
-updated : 2021-10-03 01:16:30 +0900
+updated : 2022-06-30 21:40:02 +0900
 tag     : google-apps-script 
 toc     : true
 public  : true
@@ -154,8 +154,8 @@ latex   : false
 * 오랜만에 돌아왔을 때는..
   * `clasp -v` 명령으로 clasp이 설치 되어있는지 확인하자 
 
-#### 신규 프로젝트 생성 루트 
-
+#### 신규 TypeScript 프로젝트 생성 QuickStart 
+  
 1. 프로젝트를 저장할 폴더 생성 
   *  이름을 잘 고민할 것
    
@@ -189,11 +189,17 @@ latex   : false
   }
   ```
 
-1. 다음은 생성한 폴더를 `clasp project`로 만들어야 하는데 
+1. 다음은 생성한 폴더를 `clasp project`로 만들어야 하는데 ...
 
-### TypeScript 프로젝트 만들기 
+* 참조 
+  * [typeScript , clasp github](https://github.com/google/clasp/blob/master/docs/typescript.md)
+  * [What is a tsconfig, typescriptlang.org](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#handbook-content)
+    * [lib option in tsconfig Ref., typescritlang.org](https://www.typescriptlang.org/tsconfig#lib)
+    * [target option in tsconfig Ref., typescriptlang.org](https://www.typescriptlang.org/tsconfig#target)
+ 
+### Clasp 프로젝트로 만들기 
 
-1. script.google.com 사이트에 접속하기 전에 `clasp create` 방식으로 설정
+* script.google.com 사이트에 접속하기 전에 `clasp create` 방식으로 설정
 
 ```sh
 prompt$ clasp create --title "Name of Project" --rootDir src 
@@ -280,4 +286,23 @@ prompt$ clasp clone "<script_Id>" --rootDir src
 * `User > Extensions` 메뉴에 `JSON`을 찾아 `Schemas`에 `Edit in settings.json`을 찾는다.
 * 들어 가서 추천하는 명령은 선택하면 일단 넣을수 있는 템플릿이 완성된다. 
 
+### git repository에 있는 clasp_xxx 프로젝트의 구성
 
+* 요약 : 트리구조및 공통되는 파일쓰임새 
+* 구글시트용 GAS 트리구조
+  ```
+  # root
+  ├── node_modules/  ( ignored )
+  ├── src/
+  │   ├─ appsscript.json - 필수 파일, timezone 설정, Library 설정 등등 (필수 파일)
+  │   ├─ forms.ts - 옵션, 설문지를 사용한다면 있어야 함 
+  │   ├─ sheets.ts - 거의 필수, 각 시트별로 직접적으로 조작하는 함수를 설정 ( 구글 시트라면 필수) 
+  │   ├─ typealiases.ts - 거의 필수, .ts 파일에서 타입길이를 줄이기 위해 사용, .gs로 컴파일하면 내용이 사라지는 파일 (.ts일때만 내용이 존재) 
+  │   ├─ util.ts - 모듈간에 공통적으를 쓸만한 유틸리티 함수. 2D공간에서 검색하는 함수등이 있음 
+  │   └─ main.ts - entry point UI 설정, 최상위 함수 호출
+  ├─ .clasp.json - Google Drive상에 연동되는 스크립트 파일 ID저장 
+  ├─ .claspignore - clasp compiler시에 무시되는 함수 등록 
+  ├─ .gitignore - git 관리 시에 무시되는 함수 등록 
+  ├─ LICENSE - github 등록시 LICENSE 표시용 
+  
+  ```

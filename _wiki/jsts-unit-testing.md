@@ -3,8 +3,8 @@ layout  : wiki
 title   : JavaScript/TypeScript Unit Testing 하기 
 summary : 우선 mocha & chai로 .. 
 date    : 2021-09-06 14:35:20 +0900
-updated : 2021-09-06 23:31:33 +0900
-tag     : unit-testing 
+updated : 2022-03-25 02:41:59 +0900
+tag     : unit-testing typescript mocha 
 toc     : true
 public  : true
 parent  : [[Web-Category]] 

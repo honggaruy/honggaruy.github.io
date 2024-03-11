@@ -3,8 +3,8 @@ layout  : wiki
 title   : 자주 쓰는 git 명령 
 summary : git 명령어 상황별 레시피 
 date    : 2020-04-01 13:34:02 +0900
-updated : 2020-11-04 23:54:29 +0900
-tag     : git 
+updated : 2022-04-15 01:01:24 +0900
+tag     : git gif screen2gif 
 toc     : true
 public  : true
 parent  : [[Git-Category]]
@@ -139,8 +139,9 @@ $ git difftool --diff-filter=d
           git difftool --diff-filter=d"
 ```
 
-### 참고
+### gif 만들기 관련 참고
 
+* #gif #screen2gif
 * 위에서 만든 움짤은 [컴퓨터 화면을 캡쳐해서 GIF로 만드는 간단한 방법](https://steemit.com/kr/@youngbinlee/gif)을 참고했다.
 * 윈도우에 설치하는 프로그램이며 홈페이지는 [이곳](https://www.screentogif.com/)이다.
 * 오픈소스인가? [github](https://github.com/NickeManarin/ScreenToGif)가 있다.

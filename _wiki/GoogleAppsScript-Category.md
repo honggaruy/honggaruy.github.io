@@ -3,7 +3,7 @@ layout  : category
 title   : Google Apps Script 
 summary : 카테고리 2단계 (끝) 
 date    : 2020-04-25 18:35:43 +0900
-updated : 2021-09-10 14:44:15 +0900
+updated : 2021-11-19 12:31:40 +0900
 tag     : google-apps-script google script 
 toc     : true
 public  : true
@@ -55,5 +55,6 @@ latex   : false
 
 * [Yagisanatode](https://yagisanatode.com/category/google-suite/google-sheets/) : Google Apps Script 팁이 많은 블로그
 * [MASHe](https://mashe.hawksey.info/2018/02/google-apps-script-patterns-getting-a-google-sheet-header-row/) : GAS 팁 확인해볼 것
+* [Google Sheets for Developers > Sheets API](https://developers.google.com/sheets/api/quickstart/python) : Python으로 gsheet 프로그램 시작 할 때
 
 # Google Apps Script - 카테고리 문서 

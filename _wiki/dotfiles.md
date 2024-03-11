@@ -3,7 +3,7 @@ layout  : wiki
 title   : dotfiles 관련 정리 
 summary : 아직 정리중... 
 date    : 2020-10-29 15:49:07 +0900
-updated : 2020-11-11 11:39:27 +0900
+updated : 2023-06-04 15:43:40 +0900
 tag     : dotfile shell powershell
 toc     : true
 public  : true
@@ -43,6 +43,15 @@ latex   : false
 ### 추가 : Symlink 개념을 잡자
 
 * 참고 링크 : [Create Symbolic Link in Windows 10 with PowerShell](https://winaero.com/create-symbolic-link-windows-10-powershell/)
+  - To create `a Symlink` in Win 10 w/ PowerShell
+    - Type in an elevated PowerShell
+      ```sh
+      New-Item -ItemType SymbolicLink -Path "Link" -Target "Target"
+      ```
+    - Replace the "link" with the new link file ( including name and extension for files)
+    - Replace the "Target" with the original path (relative or absolute) that new link refers to
+  - `a Direcotry Junction` and `a hard link` has more limitation and is old types than `a Symlink`, so no need to use these options 
+    - read above link for details
 * Symlink와 비슷한 개념으로 hardlink, directory junction 이 있다. 
 * [directory junction과 directory symlink에 대한 심도있는 논의는 이 질문과 댓글문답을 참조](https://superuser.com/a/343079/1150566)
   * 위 링크의 질문 댓글로 *Pacerier(OP질문자)*와 *Matthew Steeples*가 문답한 내용도 읽어보자 
@@ -84,3 +93,31 @@ latex   : false
   4. *Target* 부분에는 새로운 링크가 참조할 경로로 입력한다. ( 상대경로, 절대경로 모두 가능)
 * 플레이스홀더
 
+# 3. Troubleshooting
+
+## wsl ubuntu 에서 윈도우와 공유하는 vimrc 문제발생 로그
+
+```sh
+honggaruy@3950X-P600S:~$ vim
+Error detected while processing /home/honggaruy/repository/dotfiles/.vim/pack/minpac/start/vim-conda/plugin/vim-conda.vim:
+line  124:
+Traceback (most recent call last):
+  File "/home/honggaruy/repository/dotfiles/.vim/pack/minpac/start/vim-conda/plugin/vimconda.py", line 54, in func
+    v = self.cache[key]
+KeyError: (('import site, sys, os; sys.stdout.write(os.path.pathsep.join(site.getsitepackages()))',), ())
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/honggaruy/repository/dotfiles/.vim/pack/minpac/start/vim-conda/plugin/vimconda.py", line 219, in insert_system_py_sitepath
+    sitedirs = vim_conda_runpyshell(cmd)
+  File "/home/honggaruy/repository/dotfiles/.vim/pack/minpac/start/vim-conda/plugin/vimconda.py", line 58, in func
+    v = self.cache[key] = f(*args, **kwargs), time.time()
+  File "/home/honggaruy/repository/dotfiles/.vim/pack/minpac/start/vim-conda/plugin/vimconda.py", line 154, in vim_conda_runpyshell
+    return check_output('python -c "{}"'.format(cmd),
+  File "/usr/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'python -c "import site, sys, os; sys.stdout.write(os.path.pathsep.join(site.getsitepackages()))"' returned non-zero exit status 127.
+Press ENTER or type command to continue
+```

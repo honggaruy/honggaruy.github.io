@@ -3,7 +3,7 @@ layout  : wiki
 title   : 자바스크립트 코딩의 기술
 summary : 똑똑하게 코딩하는 법 
 date    : 2021-05-13 12:28:37 +0900
-updated : 2021-05-17 23:58:29 +0900
+updated : 2022-07-14 03:47:10 +0900
 tag     : br*** book regex 
 toc     : true
 public  : false
@@ -35,97 +35,32 @@ comment : false
 
 <div markdown="1" class="author-container">
 
-* Jan Goyvaerts가 직접 알려주는 자신의 이름을 발음하는 방법
-  * 출처: [Jan Goyvarets 소개 페이지](https://www.just-great-software.com/aboutjg.html) 
+ ![Joe Morgan][joemorgan-img]
  
-![](https://www.just-great-software.com/special/JanGoyvaerts.wav)
+* [홈 페이지](http://thejoemorgan.com/)
+* [트위터](https://twitter.com/joesmorgan)
 
 </div>
 
+[joemorgan-img]:http://thejoemorgan.com/static/2ef7ef668ed3f21927f2289e2e9d3173/9dc27/me.jpg
+{:height="200px" object-fit="cover" object-position="20% 10%"}
 
-<div markdown="1" class="author-container">
+# Chapter1. Signal Intention with Variable Assignment 
 
- ![Jan Goyvaerts][jangoyva-img]
- 
-* [Just Great Software 설립자](https://www.just-great-software.com/index.html)
-  * PowerGrep, RegexBuddy 툴이 유명한 걸로 알고 있음. (모두 유료) 
-* [regular-expressions.info 운영](https://www.regular-expressions.info/)
-  * 내가 알기로 인터넷상에서 가장 상세한 Reguarl Expression 가이드임 
+* 특이한 함수 ( currying ) 와 변수의 사용 빈도를 비교해 보면 변수를 옳게 사용하는 것의 영향력에 대해 판단할 수 있다
+* Modern JavaScript has several new ways to declare variables.
+  * const
+  * let
 
-</div>
+## Tip 1. Signal Unchanging Values with const
 
-[jangoyva-img]:http://thejoemorgan.com/static/2ef7ef668ed3f21927f2289e2e9d3173/9dc27/me.jpg
-{:width="300px" height="300px" object-fit="cover" object-position="20% 10%"}
+* (당신 자신을 포함한) 다음 프로그래머에게 프로그램의 정확한 의도를 알리기 위해 `const`를 사용하라
 
-### 스티븐 레비턴 (Steven Levithan)
+## Tip 2. Reduce Scope Conflicts with let and const
 
-<div markdown="1" class="author-container">
+### terms & jagons
 
- ![Steven Levithan][stevlev-img]
+* [be better off, Collins Dictiornay](https://www.collinsdictionary.com/dictionary/english/be-better-off)
+* lexically scoped
+* block scoped : the block where the variable was declared is enclosed by curly braces
 
-* Javscript 정규식 전문가라고 함
-  * [본인 블로그의 소개글](https://blog.stevenlevithan.com/about)
-  * 이 책외에 `Nicholas C. Zaks`의 `High Performance JavaScript`에서...
-    * `Strings and Regular Expressions` Chapter를 집필
-* 대표 오픈소스 프로젝트
-  * [XRegExp](https://xregexp.com/)
-    * The one of a kind JavaScript regular expression library
-    * [` One of a Kind ` 의미](https://m.blog.naver.com/PostView.nhn?blogId=helpindia&logNo=220737011425&proxyReferer=https:%2F%2Fwww.google.com%2F)
-  * [RegexPal](https://stevenlevithan.com/regexpal/)
-    * a JavaScript regular expression tester
-* [Steven Levithan Github](https://github.com/slevithan)
-* [Steven Levithan Regex Blog](https://blog.stevenlevithan.com/)
-* [Steven Levithan No Programming Blog](https://slev.life/)
-
-</div>
-
-[stevlev-img]:https://blog.stevenlevithan.com/assets/images/steven_levithan2.jpg
-{:width="180px"}
-
-# Chapter1. Introduction to Regular Expressions 
-
-* 실무에 바로 적용할 수 있는 내용은 4장 ~ 8장(마지막장) 참고
-* 일단 정규식을 코드에 넣어버리면 에러가 발생해도 찾기 힘듬
-  * 1장에서 소개하는 툴로 테스트하고 디버깅하는 것이 좋음
-
-## 1. Regular Expressions Defined 
-
-* History of the Term "Regular Expression" 
-  * 정통 컴퓨터 과학자들이 정해놓은 정의와 실용적 프로그래머들이 실용적으로 사용하는 용어에는 차이가 있음을 알아둘것
-  * 어려운 전문용어들이 많이나옴 ( DFA, NFA...)
-  * BackTracking의 사용여부가 정의에 차이를 가져올만큼 중요한 듯함.
-
-### Many Flavors of Regualr Expressions 
-
-* 정규표현식을 정의하기는 어려움
-  * 어떤 텍스트가 정규식인지 아닌지 판단하는 공식적인 기준이 없음
-
-### Regex Flavors Covered by This Book 
-
-#### Perl
-
-#### .NET
-
-#### Java
-
-#### Javascript
-
-#### Python
-
-#### Ruby
-
-## 2. 정규표현식을 이용한 검색치환
-
-# 2장. 정규표현식 기본 기술
-# 3장. 프로그래밍을 위한 정규 표현식
-# 4장. 유효검사와 형식화
-
-## 13. 한국 주민등록번호
-
-* 원서에는 없는데 역자가 집어넣은듯..
-
- 
-# 5장. 단어, 행, 특수문자
-# 6장. 숫자
-# 7장. URL, 경로, 인터넷주소
-# 8장. 마크업과 데이터 상호변환

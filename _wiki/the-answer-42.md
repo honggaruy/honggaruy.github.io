@@ -3,7 +3,7 @@ layout  : wiki
 title   : 42에 대하여  
 summary : 그냥 읽을거리 
 date    : 2021-09-03 20:58:19 +0900
-updated : 2021-09-04 05:14:34 +0900
+updated : 2023-03-08 03:23:49 +0900
 tag     : 
 toc     : true
 public  : true
@@ -66,7 +66,11 @@ latex   : false
 
 * [Why is the answer 42](https://stackoverflow.com/questions/20555155/why-is-the-answer-42)
 
+## 3 x 3 x 3 [magic cube](https://en.wikipedia.org/wiki/Magic_cube) 에서 각각의 column, row, pillar 의 값을 더하면 42가 나온다 
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Simple_Magic_Cube.svg/1920px-Simple_Magic_Cube.svg.png)
 
 ## 그 외
 
-* [Today Is 101010: The Ultimate Answer to the Ultimate Question](https://gizmodo.com/today-is-101010-the-ultimate-answer-to-the-ultimate-qu-5659984)
+- [Today Is 101010: The Ultimate Answer to the Ultimate Question](https://gizmodo.com/today-is-101010-the-ultimate-answer-to-the-ultimate-qu-5659984)
+- [Five Reasons Why 42 may acturally be the answer to ...](https://www.realclearscience.com/blog/2015/05/x_reasons_why_42_may_actually_be_the_answer_to_life_the_universe_and_everything.html)
