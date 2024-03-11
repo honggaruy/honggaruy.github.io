@@ -494,21 +494,277 @@
     url: /blog/2021/10/04/week-40th
     updated: '2021-10-04 22:51:32 +0900'
     children: []
+2021-11-01-week-44th:
+    type: blog
+    title: '2021년 44주차 기록'
+    summary: '11/01 (월) ~ 11/07 (일)'
+    parent: null
+    url: /blog/2021/11/01/week-44th
+    updated: '2021-11-01 09:17:32 +0900'
+    children: []
+2021-12-27-week-52th:
+    type: blog
+    title: '2021년 52주차 기록'
+    summary: '12/27 (월) ~ 01/02 (일)'
+    parent: null
+    url: /blog/2021/12/27/week-52th
+    updated: '2021-12-27 06:43:32 +0900'
+    children: []
+2022-01-10-week-02th:
+    type: blog
+    title: '2022년 02주차 기록'
+    summary: '01/10 (월) ~ 01/16 (일)'
+    parent: null
+    url: /blog/2022/01/10/week-02th
+    updated: '2022-01-10 15:59:32 +0900'
+    children: []
+2022-01-24-week-04th:
+    type: blog
+    title: '2022년 04주차 기록'
+    summary: '01/24 (월) ~ 01/30 (일)'
+    parent: null
+    url: /blog/2022/01/24/week-04th
+    updated: '2022-01-24 15:59:32 +0900'
+    children: []
+2022-02-07-week-06th:
+    type: blog
+    title: '2022년 06주차 기록'
+    summary: '02/07 (월) ~ 02/13 (일)'
+    parent: null
+    url: /blog/2022/02/07/week-06th
+    updated: '2022-02-07 15:59:32 +0900'
+    children: []
+2022-02-14-week-07th:
+    type: blog
+    title: '2022년 07주차 기록'
+    summary: '02/14 (월) ~ 02/20 (일)'
+    parent: null
+    url: /blog/2022/02/14/week-07th
+    updated: '2022-02-14 19:53:32 +0900'
+    children: []
+2022-02-21-week-08th:
+    type: blog
+    title: '2022년 08주차 기록'
+    summary: '02/21 (월) ~ 02/27 (일)'
+    parent: null
+    url: /blog/2022/02/21/week-08th
+    updated: '2022-02-21 23:49:32 +0900'
+    children: []
+2022-02-28-week-09th:
+    type: blog
+    title: '2022년 09주차 기록'
+    summary: '02/28 (월) ~ 03/06 (일)'
+    parent: null
+    url: /blog/2022/02/28/week-09th
+    updated: '2022-02-28 14:02:32 +0900'
+    children: []
+2022-03-07-week-10th:
+    type: blog
+    title: '2022년 10주차 기록'
+    summary: '03/07 (월) ~ 03/13 (일)'
+    parent: null
+    url: /blog/2022/03/07/week-10th
+    updated: '2022-03-07 14:32:32 +0900'
+    children: []
+2022-03-14-week-11th:
+    type: blog
+    title: '2022년 11주차 기록'
+    summary: '03/14 (월) ~ 03/20 (일)'
+    parent: null
+    url: /blog/2022/03/14/week-11th
+    updated: '2022-03-14 05:23:32 +0900'
+    children: []
+2022-03-21-week-12th:
+    type: blog
+    title: '2022년 12주차 기록'
+    summary: '03/21 (월) ~ 03/27 (일)'
+    parent: null
+    url: /blog/2022/03/21/week-12th
+    updated: '2022-03-21 16:50:32 +0900'
+    children: []
+2022-03-28-week-13th:
+    type: blog
+    title: '2022년 13주차 기록'
+    summary: '03/28 (월) ~ 04/03 (일)'
+    parent: null
+    url: /blog/2022/03/28/week-13th
+    updated: '2022-03-28 12:52:32 +0900'
+    children: []
+2022-04-04-week-14th:
+    type: blog
+    title: '2022년 14주차 기록'
+    summary: '04/04 (월) ~ 04/10 (일)'
+    parent: null
+    url: /blog/2022/04/04/week-14th
+    updated: '2022-04-04 12:52:32 +0900'
+    children: []
+2022-04-11-week-15th:
+    type: blog
+    title: '2022년 15주차 기록'
+    summary: '04/11 (월) ~ 04/17 (일)'
+    parent: null
+    url: /blog/2022/04/11/week-15th
+    updated: '2022-04-11 19:16:32 +0900'
+    children: []
+2022-04-18-week-16th:
+    type: blog
+    title: '2022년 16주차 기록'
+    summary: '04/18 (월) ~ 04/24 (일)'
+    parent: null
+    url: /blog/2022/04/18/week-16th
+    updated: '2022-04-18 11:02:32 +0900'
+    children: []
+2022-04-25-week-17th:
+    type: blog
+    title: '2022년 17주차 기록'
+    summary: '04/25 (월) ~ 05/01 (일)'
+    parent: null
+    url: /blog/2022/04/25/week-17th
+    updated: '2022-04-25 14:35:32 +0900'
+    children: []
+2022-05-02-week-18th:
+    type: blog
+    title: '2022년 18주차 기록'
+    summary: '05/02 (월) ~ 05/08 (일)'
+    parent: null
+    url: /blog/2022/05/02/week-18th
+    updated: '2022-05-02 09:48:32 +0900'
+    children: []
+2022-05-09-week-19th:
+    type: blog
+    title: '2022년 19주차 기록'
+    summary: '05/09 (월) ~ 05/15 (일)'
+    parent: null
+    url: /blog/2022/05/09/week-19th
+    updated: '2022-05-09 15:53:32 +0900'
+    children: []
+2022-05-16-week-20th:
+    type: blog
+    title: '2022년 20주차 기록'
+    summary: '05/16 (월) ~ 05/22 (일)'
+    parent: null
+    url: /blog/2022/05/16/week-20th
+    updated: '2022-05-16 23:23:32 +0900'
+    children: []
+2022-05-23-week-21th:
+    type: blog
+    title: '2022년 21주차 기록'
+    summary: '05/23 (월) ~ 05/23 (일)'
+    parent: null
+    url: /blog/2022/05/23/week-21th
+    updated: '2022-05-23 16:51:32 +0900'
+    children: []
+2022-05-30-week-22th:
+    type: blog
+    title: '2022년 22주차 기록'
+    summary: '05/30 (월) ~ 06/05 (일)'
+    parent: null
+    url: /blog/2022/05/30/week-22th
+    updated: '2022-05-30 16:51:32 +0900'
+    children: []
+2022-06-13-week-24th:
+    type: blog
+    title: '2022년 24주차 기록'
+    summary: '06/13 (월) ~ 06/19 (일)'
+    parent: null
+    url: /blog/2022/06/13/week-24th
+    updated: '2022-06-13 17:41:32 +0900'
+    children: []
+2022-06-27-week-26th:
+    type: blog
+    title: '2022년 26주차 기록'
+    summary: '06/27 (월) ~ 07/03 (일)'
+    parent: null
+    url: /blog/2022/06/28/week-26th
+    updated: '2022-06-28 13:43:32 +0900'
+    children: []
+2022-07-11-week-28th:
+    type: blog
+    title: '2022년 28주차 기록'
+    summary: '07/11 (월) ~ 07/17 (일)'
+    parent: null
+    url: /blog/2022/07/11/week-28th
+    updated: '2022-07-11 04:06:32 +0900'
+    children: []
+2022-08-11-week-32th:
+    type: blog
+    title: '2022년 32주차 기록'
+    summary: '08/08 (월) ~ 08/14 (일)'
+    parent: null
+    url: /blog/2022/08/08/week-32th
+    updated: '2022-08-08 06:54:32 +0900'
+    children: []
+2022-08-15-week-33th:
+    type: blog
+    title: '2022년 33주차 기록'
+    summary: '08/15 (월) ~ 08/21 (일)'
+    parent: null
+    url: /blog/2022/08/15/week-33th
+    updated: '2022-08-15 01:16:32 +0900'
+    children: []
+2022-09-11-week-36th:
+    type: blog
+    title: '2022년 36주차 기록'
+    summary: '09/05 (월) ~ 09/11 (일)'
+    parent: null
+    url: /blog/2022/09/05/week-36th
+    updated: '2022-09-05 14:59:32 +0900'
+    children: []
+2022-09-26-week-39th:
+    type: blog
+    title: '2022년 39주차 기록'
+    summary: '09/26 (월) ~ 10/02 (일)'
+    parent: null
+    url: /blog/2022/09/26/week-39th
+    updated: '2022-09-26 23:22:32 +0900'
+    children: []
+2022-10-10-week-41th:
+    type: blog
+    title: '2022년 41주차 기록'
+    summary: '10/10 (월) ~ 10/16 (일)'
+    parent: null
+    url: /blog/2022/10/10/week-41th
+    updated: '2022-10-10 22:14:32 +0900'
+    children: []
+2023-01-02-week-01th:
+    type: blog
+    title: '2023년 01주차 기록'
+    summary: '01/02 (월) ~ 01/08 (일)'
+    parent: null
+    url: /blog/2023/01/02/week-01th
+    updated: '2023-01-02 00:14:32 +0900'
+    children: []
+Algorithm-Category:
+    type: wiki
+    title: '알고리즘 관련 카테고리'
+    summary: '카테고리 1단계 (끝)'
+    parent: index
+    url: /wiki/Algorithm-Category
+    updated: '2021-10-09 21:39:11 +0900'
+    children: [water-sort-puzzle]
+anaconda-basics:
+    type: wiki
+    title: 'Anaconda 기초 사용법'
+    summary: ""
+    parent: Python-Category
+    url: /wiki/anaconda-basics
+    updated: '2023-11-06 00:40:11 +0900'
+    children: []
 apps-script-starter:
     type: wiki
     title: '로컬에서 구글 Apps Script 개발하기'
     summary: '튜토리얼 따라하기'
     parent: GoogleAppsScript-Category
     url: /wiki/apps-script-starter
-    updated: '2021-10-03 01:16:30 +0900'
+    updated: '2022-06-30 21:40:02 +0900'
     children: []
 beginning-flutter:
     type: wiki
     title: '플러터 시작하기'
-    summary: '일단은 Do it! 플러터 앱 프로그래밍으로 시작'
+    summary: 'Flutter 홈 페이지에서 튜토리얼 따라하기중..'
     parent: Flutter-Category
     url: /wiki/beginning-flutter
-    updated: '2021-07-08 00:03:24 +0900'
+    updated: '2022-05-18 14:55:54 +0900'
     children: []
 Books-Category:
     type: wiki
@@ -516,7 +772,7 @@ Books-Category:
     summary: '카테고리 1단계 (끝)'
     parent: index
     url: /wiki/Books-Category
-    updated: '2021-03-19 23:06:51 +0900'
+    updated: '2022-04-30 15:35:54 +0900'
     children: []
 bookscan-process:
     type: wiki
@@ -526,6 +782,14 @@ bookscan-process:
     url: /wiki/bookscan-process
     updated: '2021-06-11 03:13:13 +0900'
     children: []
+C-CPP-Category:
+    type: wiki
+    title: 'C언어 CPP언어 Category'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/C-CPP-Category
+    updated: '2022-01-30 09:59:36 +0900'
+    children: [cpp-environment, cpp-small-tip, LLVM-understanding]
 code-isolation:
     type: wiki
     title: 'typescript로 개발시 파일 순서 문제'
@@ -534,6 +798,30 @@ code-isolation:
     url: /wiki/code-isolation
     updated: '2020-10-07 14:20:51 +0900'
     children: []
+common-flutter-erros:
+    type: wiki
+    title: '번역 - 흔한 플러터 에러'
+    summary: ""
+    parent: ""
+    url: /wiki/common-flutter-erros
+    updated: '2021-12-08 03:35:00 +0900'
+    children: []
+cpp-environment:
+    type: wiki
+    title: 'C++ 개발환경 구축하기'
+    summary: 'WSL 과 Windows Native 모두'
+    parent: C-CPP-Category
+    url: /wiki/cpp-environment
+    updated: '2022-03-07 14:28:00 +0900'
+    children: []
+cpp-small-tip:
+    type: wiki
+    title: 'C++ 기초 상식'
+    summary: 'C언어 관련 여러가지 궁금증및 주제기록'
+    parent: C-CPP-Category
+    url: /wiki/cpp-small-tip
+    updated: '2022-02-26 16:49:04 +0900'
+    children: []
 Cross-Category:
     type: wiki
     title: '공통 도구'
@@ -541,7 +829,15 @@ Cross-Category:
     parent: Tools-Category
     url: /wiki/Cross-Category
     updated: '2021-03-25 02:14:10 +0900'
-    children: [korean-font, vscode-configurations, windows-terminal-config]
+    children: [crypto-hash-verfication, free-resources, korean-font, vs-2019-configurations, vscode-configurations, windows-terminal-config]
+crypto-hash-verfication:
+    type: wiki
+    title: '파일 hash 확인하기'
+    summary: '다운받은 인스톨러가 정상적인 파일일까?'
+    parent: Cross-Category
+    url: /wiki/crypto-hash-verfication
+    updated: '2022-05-22 10:15:47 +0900'
+    children: []
 css-default-style:
     type: wiki
     title: 'Default CSS Style 적용하기'
@@ -572,7 +868,15 @@ dotfiles:
     summary: '아직 정리중...'
     parent: Cross-Categry
     url: /wiki/dotfiles
-    updated: '2020-11-11 11:39:27 +0900'
+    updated: '2023-06-04 15:43:40 +0900'
+    children: []
+english-grammar-recipes:
+    type: wiki
+    title: '영어 문법관련 정리'
+    summary: '영어 문법 troubleshooting?'
+    parent: Natural-language-Category
+    url: /wiki/english-grammar-recipes
+    updated: '2023-01-02 00:33:25 +0900'
     children: []
 exact-size-photo-print:
     type: wiki
@@ -596,8 +900,24 @@ Flutter-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/Flutter-Category
-    updated: '2021-07-10 23:51:40 +0900'
-    children: [beginning-flutter]
+    updated: '2022-05-19 02:24:20 +0900'
+    children: [beginning-flutter, gsheet-flutter]
+free-resources:
+    type: wiki
+    title: '무료 리소스 모음'
+    summary: '무료로 쓰는 사진, 아이콘등등..'
+    parent: Cross-Category
+    url: /wiki/free-resources
+    updated: '2022-05-22 12:27:54 +0900'
+    children: []
+galaxywatch-related:
+    type: wiki
+    title: '갤럭시 워치 관련 정보'
+    summary: ""
+    parent: NoDev-Categroy
+    url: /wiki/galaxywatch-related
+    updated: '2022-06-10 08:15:32 +0900'
+    children: []
 gas_library:
     type: wiki
     title: '구글 스크립트 라이브러리 사용법'
@@ -621,14 +941,14 @@ Git-Category:
     parent: Tools-Category
     url: /wiki/Git-Category
     updated: '2021-09-10 21:45:14 +0900'
-    children: [git-commands, git-commit-messages, git-upstream-meaning]
+    children: [git-commands, git-commit-messages, git-concepts-simplified, git-settings, git-upstream-meaning]
 git-commands:
     type: wiki
     title: '자주 쓰는 git 명령'
     summary: 'git 명령어 상황별 레시피'
     parent: Git-Category
     url: /wiki/git-commands
-    updated: '2020-11-04 23:54:29 +0900'
+    updated: '2022-04-15 01:01:24 +0900'
     children: []
 git-commit-messages:
     type: wiki
@@ -638,6 +958,30 @@ git-commit-messages:
     url: /wiki/git-commit-messages
     updated: '2020-12-26 12:16:55 +0900'
     children: []
+git-concepts-simplified:
+    type: wiki
+    title: '번역 - 단순화한 git의 개념들'
+    summary: '개념을 먼저 익히자'
+    parent: Git-Category
+    url: /wiki/git-concepts-simplified
+    updated: '2023-01-27 00:41:08 +0900'
+    children: []
+git-concepts-simpllified:
+    type: wiki
+    title: ""
+    summary: ""
+    parent: ""
+    url: /wiki/git-concepts-simpllified
+    updated: '2023-01-15 00:06:03 +0900'
+    children: []
+git-settings:
+    type: wiki
+    title: 'Git 설정관련 팁'
+    summary: 'Git-bash 관련 설정 쓰다가 시작'
+    parent: Git-Category
+    url: /wiki/git-settings
+    updated: '2022-12-17 14:27:18 +0900'
+    children: []
 git-upstream-meaning:
     type: wiki
     title: 'Git에서 upstream의 의미'
@@ -645,6 +989,14 @@ git-upstream-meaning:
     parent: Git-Category
     url: /wiki/git-upstream-meaning
     updated: '2020-12-26 11:29:49 +0900'
+    children: []
+good-sources-about-coding:
+    type: wiki
+    title: '코딩 관련 기사 소스모음'
+    summary: making...
+    parent: Gray-Category
+    url: /wiki/good-sources-about-coding
+    updated: '2022-09-29 12:56:41 +0900'
     children: []
 'Google SchechUp':
     type: wiki
@@ -684,8 +1036,16 @@ GoogleAppsScript-Category:
     summary: '카테고리 2단계 (끝)'
     parent: Language-Category
     url: /wiki/GoogleAppsScript-Category
-    updated: '2021-09-10 14:44:15 +0900'
-    children: [apps-script-starter, code-isolation, excel2gsheet, gas_library, gas-unit-testing, re2-translation]
+    updated: '2021-11-19 12:31:40 +0900'
+    children: [apps-script-starter, code-isolation, excel2gsheet, gas_library, gas-unit-testing, GoogleAppsScript-Guide, re2-translation]
+GoogleAppsScript-Guide:
+    type: wiki
+    title: 'Google Apps Script 안내서'
+    summary: '관련 용어 정리, 개념 정리및 안내서 링크'
+    parent: GoogleAppsScript-Category
+    url: /wiki/GoogleAppsScript-Guide
+    updated: '2022-12-11 00:55:07 +0900'
+    children: []
 Gray-Category:
     type: wiki
     title: Gray
@@ -693,7 +1053,15 @@ Gray-Category:
     parent: index
     url: /wiki/Gray-Category
     updated: '2020-04-14 08:32:09 +0900'
-    children: [bookscan-process, desk-setup, exact-size-photo-print, google_photo_slideshow, google-calendar-flair-korean-keyword, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp, the-answer-42]
+    children: [bookscan-process, desk-setup, exact-size-photo-print, good-sources-about-coding, google_photo_slideshow, google-calendar-flair-korean-keyword, Google-sketchup, isbn10-to-isbn13, new-windows-installation, OpenApi-usage, stackoverflow_searchhelp, the-answer-42]
+gsheet-flutter:
+    type: wiki
+    title: '플러터에서 gsheet 사용하기'
+    summary: 'Flutter Tutorial-Google Sheets API'
+    parent: Flutter-Category
+    url: /wiki/gsheet-flutter
+    updated: '2022-07-12 05:01:36 +0900'
+    children: []
 HDMI2dot1-device:
     type: wiki
     title: 'HDMI2.1 관련 장비 정보'
@@ -702,13 +1070,21 @@ HDMI2dot1-device:
     url: /wiki/HDMI2dot1-device
     updated: '2020-12-19 23:54:06 +0900'
     children: []
+IDE-Category:
+    type: wiki
+    title: 'IDE 관련'
+    summary: '카테고리 문서 2단계'
+    parent: Tools-Category
+    url: /wiki/IDE-Category
+    updated: '2022-05-26 13:18:18 +0900'
+    children: [VS-Category]
 index:
     type: wiki
     title: wiki
     summary: null
     parent: null
     url: /wiki/index
-    updated: '2021-10-02 14:14:36 +0900'
+    updated: '2024-02-25 11:28:58 +0900'
     children: []
 isbn10-to-isbn13:
     type: wiki
@@ -724,15 +1100,39 @@ IT-Device-Category:
     summary: '카테고리 1단계 (끝)'
     parent: index
     url: /wiki/IT-Device-Category
-    updated: '2021-05-06 00:35:34 +0900'
-    children: [HDMI2dot1-device, Smart-Device-Stand]
+    updated: '2022-02-04 11:33:10 +0900'
+    children: [HDMI2dot1-device, monitor-review, Smart-Device-Stand]
+Java-android-troubleshooting:
+    type: wiki
+    title: 'Java + Android Studio 문제해결'
+    summary: 'troubleshooting cookbook'
+    parent: Java-Category
+    url: /wiki/Java-android-troubleshooting
+    updated: '2023-01-30 21:46:42 +0900'
+    children: []
+Java-beginning:
+    type: wiki
+    title: 'Java 입문'
+    summary: 'Java 개발 환경 구축'
+    parent: Java-Category
+    url: /wiki/Java-beginning
+    updated: '2023-10-17 22:49:35 +0900'
+    children: []
+Java-Category:
+    type: wiki
+    title: 'Java 언어 Category'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/Java-Category
+    updated: '2022-05-18 16:27:35 +0900'
+    children: [Java-android-troubleshooting, Java-beginning]
 javascript-myCookBook:
     type: wiki
     title: 'Javascript 초급 코딩 요령'
-    summary: 'js/ts 뉴비가 생각하는 ...'
+    summary: 'Google Apps Script 에서 사용하는 요령도 포함'
     parent: Web-Category
     url: /wiki/javascript-myCookBook
-    updated: '2021-10-05 00:05:02 +0900'
+    updated: '2024-02-26 10:04:51 +0900'
     children: []
 jsts-unit-testing:
     type: wiki
@@ -740,7 +1140,7 @@ jsts-unit-testing:
     summary: '우선 mocha & chai로 ..'
     parent: Web-Category
     url: /wiki/jsts-unit-testing
-    updated: '2021-09-06 23:31:33 +0900'
+    updated: '2022-03-25 02:41:59 +0900'
     children: []
 keyword_collection:
     type: wiki
@@ -748,7 +1148,7 @@ keyword_collection:
     summary: '아직 안정함'
     parent: Term-Category
     url: /wiki/keyword_collection
-    updated: '2021-05-19 15:04:05 +0900'
+    updated: '2024-03-11 14:18:27 +0900'
     children: []
 korean-font:
     type: wiki
@@ -765,7 +1165,15 @@ Language-Category:
     parent: index
     url: /wiki/Language-Category
     updated: '2020-04-13 20:46:01 +0900'
-    children: [Flutter-Category, GoogleAppsScript-Category, Python-Category, Web-Category]
+    children: [C-CPP-Category, Flutter-Category, GoogleAppsScript-Category, Java-Category, Python-Category, Rust-Category, Web-Category]
+linux-basic:
+    type: wiki
+    title: '리눅스 기초'
+    summary: '리눅스 사용할 때 필요한 기본지식'
+    parent: Linux-Category
+    url: /wiki/linux-basic
+    updated: '2022-02-18 18:33:21 +0900'
+    children: []
 Linux-Category:
     type: wiki
     title: Linux
@@ -773,7 +1181,15 @@ Linux-Category:
     parent: Tools-Category
     url: /wiki/Linux-Category
     updated: '2020-04-14 08:24:16 +0900'
-    children: [sed-problem-solving]
+    children: [linux-basic, sed-problem-solving, wsl-how-to-use]
+LLVM-understanding:
+    type: wiki
+    title: 'LLVM의 이해'
+    summary: ""
+    parent: C-CPP-Category
+    url: /wiki/LLVM-understanding
+    updated: '2021-10-31 02:01:52 +0900'
+    children: []
 meet-puppeteer:
     type: wiki
     title: 'Puppeteer 시작하기'
@@ -782,6 +1198,30 @@ meet-puppeteer:
     url: /wiki/meet-puppeteer
     updated: '2021-01-30 01:17:24 +0900'
     children: []
+monitor-review:
+    type: wiki
+    title: '모니터 리뷰'
+    summary: '모니터 정보 모음'
+    parent: IT-Device-Category
+    url: /wiki/monitor-review
+    updated: '2021-10-23 17:30:51 +0900'
+    children: []
+movie-related:
+    type: wiki
+    title: '영화 관련 정보'
+    summary: ""
+    parent: NoDev-Category
+    url: /wiki/movie-related
+    updated: '2022-04-30 17:58:04 +0900'
+    children: []
+Natural-language-Category:
+    type: wiki
+    title: 자연어
+    summary: '카테고리 2단계 (끝)'
+    parent: NoDev-Category
+    url: /wiki/Natural-language-Category
+    updated: '2023-01-02 00:37:33 +0900'
+    children: [english-grammar-recipes]
 new-windows-installation:
     type: wiki
     title: '새로 윈도우 설치할 때 순서'
@@ -790,6 +1230,14 @@ new-windows-installation:
     url: /wiki/new-windows-installation
     updated: '2020-06-08 20:54:07 +0900'
     children: []
+NoDev-Category:
+    type: wiki
+    title: '개발 이외 주제'
+    summary: '카테고리 1단계'
+    parent: index
+    url: /wiki/NoDev-Category
+    updated: '2023-01-01 01:56:15 +0900'
+    children: [movie-related, Natural-language-Category]
 OpenApi-usage:
     type: wiki
     title: 'Open API 사용하기'
@@ -804,7 +1252,7 @@ pandas-basic:
     summary: '필요하여 찾다가 알게된 기초 사용법 적음'
     parent: Pandas-Category
     url: /wiki/pandas-basic
-    updated: '2021-08-04 22:58:57 +0900'
+    updated: '2023-11-04 15:33:58 +0900'
     children: []
 Pandas-Category:
     type: wiki
@@ -813,22 +1261,38 @@ Pandas-Category:
     parent: Python-Category
     url: /wiki/Pandas-Category
     updated: '2021-10-05 01:40:23 +0900'
-    children: [pandas-basic]
+    children: [pandas-basic, pandas-cookbook]
+pandas-cookbook:
+    type: wiki
+    title: 'pandas 쿡북'
+    summary: 'Chris Albon 과 비슷하게 적어보려고 함'
+    parent: Pandas-Category
+    url: /wiki/pandas-cookbook
+    updated: '2022-12-01 21:59:30 +0900'
+    children: []
+powershell-basic:
+    type: wiki
+    title: 'Powershell 기초적인 명령'
+    summary: '파워쉘 사용하다가 자주 까먹는 기본 명령'
+    parent: Windows-Category
+    url: /wiki/powershell-basic
+    updated: '2023-11-25 18:29:16 +0900'
+    children: []
 PowerShell-Scripting:
     type: wiki
     title: 'Powershell 스크립팅'
-    summary: ""
-    parent: ""
+    summary: 'Turning your one-liners in PowerShell into reusable tools !!'
+    parent: Windows-Category
     url: /wiki/PowerShell-Scripting
-    updated: '2020-11-03 00:17:12 +0900'
+    updated: '2022-04-07 13:02:47 +0900'
     children: []
 pyscaffold:
     type: wiki
     title: 'PyScaffold로 파이썬 프로젝트 시작하기'
-    summary: ...
+    summary: '파이썬 프로젝트 생성기'
     parent: Python-Category
     url: /wiki/pyscaffold
-    updated: '2021-07-23 22:39:22 +0900'
+    updated: '2022-03-11 01:58:31 +0900'
     children: []
 Python-Category:
     type: wiki
@@ -837,7 +1301,7 @@ Python-Category:
     parent: Language-Category
     url: /wiki/Python-Category
     updated: '2020-11-15 12:45:58 +0900'
-    children: [Pandas-Category, pyscaffold, snippets-py]
+    children: [anaconda-basics, Pandas-Category, pyscaffold, snippets-py]
 re2-translation:
     type: wiki
     title: 'RE2 번역'
@@ -846,6 +1310,30 @@ re2-translation:
     url: /wiki/re2-translation
     updated: '2021-01-25 20:58:48 +0900'
     children: []
+RTFM-and-variants:
+    type: wiki
+    title: 'RTFM과 그 변종들'
+    summary: 'Programming Humors , Jargons'
+    parent: Term-Category
+    url: /wiki/RTFM-and-variants
+    updated: '2022-12-29 12:24:13 +0900'
+    children: []
+rust-beginning:
+    type: wiki
+    title: 'Rust 입문'
+    summary: 'Rust 설치부터 시작'
+    parent: Rust-Category
+    url: /wiki/rust-beginning
+    updated: '2022-07-29 07:06:03 +0900'
+    children: []
+Rust-Category:
+    type: wiki
+    title: 'Rust 언어 Category'
+    summary: '카테고리 2단계 (끝)'
+    parent: Language-Category
+    url: /wiki/Rust-Category
+    updated: '2024-03-11 17:07:03 +0900'
+    children: [rust-beginning]
 sed-problem-solving:
     type: wiki
     title: 'GNU sed의 이상한 정규식 처리'
@@ -878,14 +1366,30 @@ stackoverflow_searchhelp:
     url: /wiki/stackoverflow_searchhelp
     updated: '2020-11-09 21:52:05 +0900'
     children: []
+technology-idioms:
+    type: wiki
+    title: 'IT 문서에서 자주쓰이는 idioms 모음'
+    summary: '주의 - 다소 주관적인 선정 기준'
+    parent: Term-Category
+    url: /wiki/technology-idioms
+    updated: '2024-03-11 15:54:51 +0900'
+    children: []
+term-bootstrapping:
+    type: wiki
+    title: Bootstrapping
+    summary: '영문 Wikipedia 용어 Bootstrapping 발췌 번역'
+    parent: Term-Category
+    url: /wiki/term-bootstrapping
+    updated: '2022-02-21 22:55:41 +0900'
+    children: []
 Term-Category:
     type: wiki
     title: '용어 정리'
     summary: '카테고리 문서 1단계 (끝)'
     parent: index
     url: /wiki/Term-Category
-    updated: '2021-09-06 22:54:07 +0900'
-    children: [keyword_collection, term-short-circuit-evaluation, term-string-interpolation]
+    updated: '2024-03-11 14:33:58 +0900'
+    children: [keyword_collection, RTFM-and-variants, technology-idioms, term-bootstrapping, term-short-circuit-evaluation, term-string-interpolation]
 term-short-circuit-evaluation:
     type: wiki
     title: 'Short-circuit evaluation'
@@ -908,7 +1412,7 @@ the-answer-42:
     summary: '그냥 읽을거리'
     parent: Gray-Category
     url: /wiki/the-answer-42
-    updated: '2021-09-04 05:14:34 +0900'
+    updated: '2023-03-08 03:23:49 +0900'
     children: []
 Tools-Category:
     type: wiki
@@ -916,15 +1420,39 @@ Tools-Category:
     summary: '카테고리 1단계'
     parent: index
     url: /wiki/Tools-Category
-    updated: '2020-04-13 20:52:38 +0900'
-    children: [Cross-Category, Git-Category, Linux-Category, Vim-Category, Windows-Category]
+    updated: '2022-02-10 13:16:20 +0900'
+    children: [Cross-Category, Git-Category, IDE-Category, Linux-Category, Vim-Category, Windows-Category]
+totalcmd-basic:
+    type: wiki
+    title: 'Total Commander 기본 사용법'
+    summary: '기본 설정 상태에서 사용할 수 있는 기능들 모음'
+    parent: TotalCommander-Category
+    url: /wiki/totalcmd-basic
+    updated: '2024-02-24 11:52:06 +0900'
+    children: []
+totalcmd-plugins:
+    type: wiki
+    title: 'Total Commander 플러그인 관련'
+    summary: ""
+    parent: TotalCommander-Category
+    url: /wiki/totalcmd-plugins
+    updated: '2023-10-11 13:06:39 +0900'
+    children: []
+TotalCommander-Category:
+    type: wiki
+    title: 'Total Commander'
+    summary: '카테고리 3단계 (끝)'
+    parent: Windows-Category
+    url: /wiki/TotalCommander-Category
+    updated: '2022-05-02 12:32:34 +0900'
+    children: [totalcmd-basic, totalcmd-plugins]
 vim-basic:
     type: wiki
     title: 'vim 기초 사용법'
-    summary: '매번 잊어버려서 참고할 장소를 만들었다.'
+    summary: '될 수 있으면 vanilla vim에서도 되는 것들로 채운다'
     parent: Vim-Category
     url: /wiki/vim-basic
-    updated: '2021-08-06 21:08:01 +0900'
+    updated: '2024-03-11 22:43:01 +0900'
     children: []
 vim-basic-plugin:
     type: wiki
@@ -932,16 +1460,32 @@ vim-basic-plugin:
     summary: '자주 잊어버리는 플러그인 사용법'
     parent: Vim-Category
     url: /wiki/vim-basic-plugin
-    updated: '2021-09-01 23:52:19 +0900'
+    updated: '2023-06-10 09:53:07 +0900'
     children: []
 Vim-Category:
     type: wiki
     title: Vim
-    summary: '카테고리 문서 1단계'
+    summary: '카테고리 2단계'
     parent: Tools-Category
     url: /wiki/Vim-Category
-    updated: '2020-11-02 12:02:39 +0900'
-    children: [vim-basic, vim-basic-plugin, Vimrc-Category]
+    updated: '2024-03-08 21:25:24 +0900'
+    children: [vim-basic, vim-basic-plugin, Vim-Cheatsheet, vim-my-env, vim-nerdfont, vim-text-object, Vimrc-Category]
+Vim-Cheatsheet:
+    type: wiki
+    title: 'Vim Cheatsheet'
+    summary: '카테고리 3단계 (끝)'
+    parent: Vim-Category
+    url: /wiki/Vim-Cheatsheet
+    updated: '2022-02-10 13:39:52 +0900'
+    children: [vim-cheatsheet-digraphs]
+vim-cheatsheet-digraphs:
+    type: wiki
+    title: 'Vim Digraphs'
+    summary: 'devhints.io 에서 가져온 cheatsheet'
+    parent: Vim-Cheatsheet
+    url: /wiki/vim-cheatsheet-digraphs
+    updated: '2022-06-14 00:33:53 +0900'
+    children: []
 vim-folding:
     type: wiki
     title: 'vimrc 파일 폴딩하기'
@@ -950,14 +1494,78 @@ vim-folding:
     url: /wiki/vim-folding
     updated: '2020-12-19 09:34:40 +0900'
     children: []
+vim-my-env:
+    type: wiki
+    title: '나의 vim 환경'
+    summary: '오래 안쓰면 까먹는 경향이 있음'
+    parent: Vim-Category
+    url: /wiki/vim-my-env
+    updated: '2023-05-30 14:00:10 +0900'
+    children: []
+vim-nerdfont:
+    type: wiki
+    title: 'vim에 nerd font 적용하기'
+    summary: 'how to & troubleshooting'
+    parent: Vim-Category
+    url: /wiki/vim-nerdfont
+    updated: '2022-04-15 01:34:01 +0900'
+    children: []
+vim-text-object:
+    type: wiki
+    title: 'vim의 text object 활용'
+    summary: '알고 있으면 typing을 더 적게 할 수있다!!'
+    parent: Vim-Category
+    url: /wiki/vim-text-object
+    updated: '2023-10-11 10:33:36 +0900'
+    children: []
 Vimrc-Category:
     type: wiki
     title: Vimrc
-    summary: '카테고리 2단계 (끝)'
+    summary: '카테고리 3단계 (끝)'
     parent: Vim-Category
     url: /wiki/Vimrc-Category
-    updated: '2020-04-14 08:38:42 +0900'
-    children: [vim-folding]
+    updated: '2022-02-10 13:34:54 +0900'
+    children: [vim-folding, vimrc-debugging, vimrc-to-dotvim]
+vimrc-debugging:
+    type: wiki
+    title: 'vimrc 디버깅하기'
+    summary: 'vimrc가 생각대로 동작안할때..'
+    parent: Vimrc-Category
+    url: /wiki/vimrc-debugging
+    updated: '2022-12-28 16:33:29 +0900'
+    children: []
+vimrc-to-dotvim:
+    type: wiki
+    title: 'vimrc 에서 dotvim으로 옮기기'
+    summary: '번역, vimrc가 너무 커졌을때'
+    parent: Vimrc-Category
+    url: /wiki/vimrc-to-dotvim
+    updated: '2023-01-13 11:36:11 +0900'
+    children: []
+vs-2019-configurations:
+    type: wiki
+    title: 'Visual Studio 2019 설정하기'
+    summary: 요약
+    parent: Cross-Category
+    url: /wiki/vs-2019-configurations
+    updated: '2022-02-01 03:22:41 +0900'
+    children: []
+VS-Category:
+    type: wiki
+    title: 'Visual Studio 제품군'
+    summary: '카테고리 문서 3단계(끝)'
+    parent: IDE-Category
+    url: /wiki/VS-Category
+    updated: '2022-05-26 13:17:17 +0900'
+    children: [vscode-basics]
+vscode-basics:
+    type: wiki
+    title: 'Visual Studio Code 기초'
+    summary: 'VS Code를 사용하는데 필요한 기초적인 정보'
+    parent: VS-Category
+    url: /wiki/vscode-basics
+    updated: '2024-02-21 09:48:54 +0900'
+    children: []
 vscode-configurations:
     type: wiki
     title: 'Visual Studio Code 설정하기'
@@ -965,6 +1573,14 @@ vscode-configurations:
     parent: Cross-Category
     url: /wiki/vscode-configurations
     updated: '2020-12-28 17:39:39 +0900'
+    children: []
+water-sort-puzzle:
+    type: wiki
+    title: 'Water Sort Puzzle 풀이 알고리즘'
+    summary: ""
+    parent: Algorithm-Category
+    url: /wiki/water-sort-puzzle
+    updated: '2021-10-11 17:45:32 +0900'
     children: []
 Web-Category:
     type: wiki
@@ -974,6 +1590,22 @@ Web-Category:
     url: /wiki/Web-Category
     updated: '2020-05-07 12:18:24 +0900'
     children: [css-default-style, css-meaning, javascript-myCookBook, jsts-unit-testing, meet-puppeteer]
+wiki-code-highlight-theme:
+    type: wiki
+    title: '위키에 코드 하일라이트 테마적용'
+    summary: 'tommorrow theme'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-code-highlight-theme
+    updated: '2023-06-02 18:24:57 +0900'
+    children: []
+wiki-edit-author-profile:
+    type: wiki
+    title: '위키에 저자 프로필 작성하기'
+    summary: '이미지 + side text 배치 방법'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-edit-author-profile
+    updated: '2024-01-30 01:11:03 +0900'
+    children: []
 wiki-favicon:
     type: wiki
     title: '위키에 favicon 추가'
@@ -1004,7 +1636,15 @@ wiki-jekyll-spaceship:
     summary: '다양한 table 작성, emoji and more...'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-jekyll-spaceship
-    updated: '2021-09-13 22:55:32 +0900'
+    updated: '2022-12-29 10:19:28 +0900'
+    children: []
+wiki-mermaid-usage:
+    type: wiki
+    title: '위키에서 mermaid 활용'
+    summary: '다이어그램을 맘껏 그려보자!'
+    parent: Wiki-Setting-Category
+    url: /wiki/wiki-mermaid-usage
+    updated: '2023-11-01 18:27:34 +0900'
     children: []
 Wiki-Setting-Category:
     type: wiki
@@ -1013,7 +1653,7 @@ Wiki-Setting-Category:
     parent: index
     url: /wiki/Wiki-Setting-Category
     updated: '2021-03-10 14:58:46 +0900'
-    children: [wiki-favicon, wiki-font, wiki-inWindows, wiki-jekyll-spaceship, wiki-toc2side, wiki-troubleshooting, wiki-update-guide]
+    children: [wiki-code-highlight-theme, wiki-edit-author-profile, wiki-favicon, wiki-font, wiki-inWindows, wiki-jekyll-spaceship, wiki-mermaid-usage, wiki-toc2side, wiki-troubleshooting, wiki-update-guide]
 wiki-toc2side:
     type: wiki
     title: '위키페이지에서 toc 위치 조정'
@@ -1036,23 +1676,39 @@ wiki-update-guide:
     summary: '위키의 기본 작성법및 기능 추가 방법'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2021-10-03 02:28:54 +0900'
+    updated: '2023-11-25 18:08:34 +0900'
     children: []
 Windows-Category:
     type: wiki
     title: Windows
-    summary: '카테고리 2단계 (끝)'
+    summary: '카테고리 2단계'
     parent: Tools-Category
     url: /wiki/Windows-Category
-    updated: '2021-09-10 14:25:25 +0900'
-    children: [Windows-Sysinternals, Windows-Terminal-Setting]
+    updated: '2024-01-30 01:17:49 +0900'
+    children: [powershell-basic, PowerShell-Scripting, TotalCommander-Category, Windows-ICE-tools, Windows-shortcuts, Windows-Sysinternals, Windows-Terminal-Setting, Windows-troubleshooting]
+Windows-ICE-tools:
+    type: wiki
+    title: '윈도우즈 Image Composite Editor'
+    summary: '사진의 중복 부분을 이용하여 Panorama 사진을 만듬'
+    parent: Windows-Category
+    url: /wiki/Windows-ICE-tools
+    updated: '2021-11-22 01:55:05 +0900'
+    children: []
+Windows-shortcuts:
+    type: wiki
+    title: '윈도우즈 바로가기 모음'
+    summary: '설정을 좀 더 빠르게 접근하기'
+    parent: Windows-Category
+    url: /wiki/Windows-shortcuts
+    updated: '2022-09-24 16:56:02 +0900'
+    children: []
 Windows-Sysinternals:
     type: wiki
     title: 'Sysinternals 도구'
     summary: 'troubleshooting용 도구'
     parent: Windows-Category
     url: /wiki/Windows-Sysinternals
-    updated: '2020-11-03 02:28:36 +0900'
+    updated: '2022-05-12 14:48:48 +0900'
     children: []
 windows-terminal-config:
     type: wiki
@@ -1068,5 +1724,21 @@ Windows-Terminal-Setting:
     summary: ""
     parent: Windows-Category
     url: /wiki/Windows-Terminal-Setting
-    updated: '2020-11-19 12:12:34 +0900'
+    updated: '2022-03-29 03:26:41 +0900'
+    children: []
+Windows-troubleshooting:
+    type: wiki
+    title: '윈도우 관련 문제 해결'
+    summary: '자잘한 팁 모음'
+    parent: Windows-Category
+    url: /wiki/Windows-troubleshooting
+    updated: '2022-09-25 03:45:21 +0900'
+    children: []
+wsl-how-to-use:
+    type: wiki
+    title: 'WSL 사용하기'
+    summary: 'WSL을 오래간만에 사용할 때 보기'
+    parent: Linux-Category
+    url: /wiki/wsl-how-to-use
+    updated: '2023-11-01 00:42:23 +0900'
     children: []

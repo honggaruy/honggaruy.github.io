@@ -22,19 +22,23 @@ google-apps-script:
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-07-13-week-29th}
     - {fileName: 2020-12-28-week-53th}
+    - {fileName: 2022-06-27-week-26th}
     - {fileName: apps-script-starter}
     - {fileName: code-isolation}
     - {fileName: excel2gsheet}
     - {fileName: gas_library}
     - {fileName: gas-unit-testing}
     - {fileName: GoogleAppsScript-Category}
+    - {fileName: javascript-myCookBook}
 gsheet:
     - {fileName: 2020-04-18-todays-ideas}
     - {fileName: excel2gsheet}
 github:
     - {fileName: 2020-04-28-todays-ideas}
+    - {fileName: 2022-08-15-week-33th}
 gif:
     - {fileName: 2020-04-28-todays-ideas}
+    - {fileName: git-commands}
 png:
     - {fileName: 2020-04-28-todays-ideas}
 drop-ice:
@@ -49,6 +53,7 @@ dot-leaders:
     - {fileName: 2020-04-30-todays-ideas}
 css:
     - {fileName: 2020-04-30-todays-ideas}
+    - {fileName: 2022-09-26-week-39th}
     - {fileName: css-default-style}
     - {fileName: css-meaning}
     - {fileName: Language-Category}
@@ -61,6 +66,7 @@ tags:
     - {fileName: wiki-update-guide}
 wiki-setting:
     - {fileName: 2020-05-02-todays-ideas}
+    - {fileName: 2022-03-14-week-11th}
     - {fileName: wiki-favicon}
     - {fileName: wiki-inWindows}
     - {fileName: wiki-toc2side}
@@ -100,7 +106,11 @@ python:
     - {fileName: 2020-06-15-week-25th}
     - {fileName: 2020-11-16-week-47th}
     - {fileName: 2021-07-12-week-28th}
+    - {fileName: 2022-02-21-week-08th}
+    - {fileName: anaconda-basics}
+    - {fileName: pandas-basic}
     - {fileName: Pandas-Category}
+    - {fileName: pandas-cookbook}
     - {fileName: pyscaffold}
     - {fileName: Python-Category}
     - {fileName: snippets-py}
@@ -119,21 +129,30 @@ flutter:
     - {fileName: 2021-07-05-week-27th}
     - {fileName: beginning-flutter}
     - {fileName: Flutter-Category}
+    - {fileName: gsheet-flutter}
 new-item:
     - {fileName: 2020-07-06-week-28th}
 recipe:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2022-03-14-week-11th}
 grep:
     - {fileName: 2020-07-06-week-28th}
 vim:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-23-week-48th}
+    - {fileName: 2020-12-07-week-50th}
+    - {fileName: 2022-09-11-week-36th}
     - {fileName: vim-basic}
     - {fileName: vim-basic-plugin}
+    - {fileName: Vim-Cheatsheet}
+    - {fileName: vim-cheatsheet-digraphs}
     - {fileName: vim-folding}
+    - {fileName: vim-my-env}
+    - {fileName: vim-text-object}
     - {fileName: Vimrc-Category}
     - {fileName: vscode-configurations}
+    - {fileName: wiki-update-guide}
 windows-terminal:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: pyscaffold}
@@ -144,10 +163,18 @@ minpac:
 powershell:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-10-26-week-44th}
+    - {fileName: 2022-01-10-week-02th}
+    - {fileName: 2022-02-14-week-07th}
+    - {fileName: 2022-04-25-week-17th}
+    - {fileName: 2022-10-10-week-41th}
     - {fileName: dotfiles}
+    - {fileName: powershell-basic}
+    - {fileName: PowerShell-Scripting}
+    - {fileName: Windows-Terminal-Setting}
 dotfile:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-02-week-45th}
+    - {fileName: 2022-04-11-week-15th}
     - {fileName: dotfiles}
     - {fileName: Windows-Terminal-Setting}
 ruby:
@@ -157,11 +184,19 @@ windows:
     - {fileName: 2020-07-06-week-28th}
     - {fileName: 2020-11-09-week-46th}
     - {fileName: 2020-11-30-week-49th}
+    - {fileName: 2022-01-10-week-02th}
+    - {fileName: PowerShell-Scripting}
     - {fileName: wiki-inWindows}
     - {fileName: Windows-Category}
+    - {fileName: Windows-ICE-tools}
+    - {fileName: Windows-shortcuts}
     - {fileName: Windows-Sysinternals}
+    - {fileName: Windows-troubleshooting}
 command-line:
     - {fileName: 2020-07-06-week-28th}
+    - {fileName: 2022-01-10-week-02th}
+    - {fileName: 2022-05-09-week-19th}
+    - {fileName: Windows-Category}
 한글:
     - {fileName: 2020-07-06-week-28th}
 clasp:
@@ -180,6 +215,8 @@ overloading:
 wsl:
     - {fileName: 2020-10-26-week-44th}
     - {fileName: 2020-11-30-week-49th}
+    - {fileName: 2022-01-10-week-02th}
+    - {fileName: wsl-how-to-use}
 ubuntu:
     - {fileName: 2020-10-26-week-44th}
 upgrade:
@@ -190,13 +227,17 @@ port:
     - {fileName: 2020-10-26-week-44th}
 cmd:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: 2022-01-10-week-02th}
 keyboard-shortcuts:
     - {fileName: 2020-11-09-week-46th}
     - {fileName: 2020-11-30-week-49th}
 git:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: 2022-05-09-week-19th}
     - {fileName: Git-Category}
     - {fileName: git-commands}
+    - {fileName: git-concepts-simplified}
+    - {fileName: git-settings}
     - {fileName: git-upstream-meaning}
 pre-commit:
     - {fileName: 2020-11-09-week-46th}
@@ -205,11 +246,17 @@ vim-help:
 vimrc:
     - {fileName: 2020-11-09-week-46th}
     - {fileName: vim-folding}
+    - {fileName: vim-my-env}
     - {fileName: Vimrc-Category}
+    - {fileName: vimrc-debugging}
+    - {fileName: vimrc-to-dotvim}
 linux:
     - {fileName: 2020-11-09-week-46th}
+    - {fileName: git-settings}
+    - {fileName: linux-basic}
     - {fileName: Linux-Category}
     - {fileName: sed-problem-solving}
+    - {fileName: wsl-how-to-use}
 terminology:
     - {fileName: 2020-11-09-week-46th}
     - {fileName: 2021-05-10-week-19th}
@@ -235,6 +282,7 @@ nerd:
 font:
     - {fileName: 2020-11-23-week-48th}
     - {fileName: 2020-11-23-week-48th}
+    - {fileName: 2022-02-14-week-07th}
     - {fileName: korean-font}
     - {fileName: wiki-font}
 d2coding:
@@ -244,6 +292,8 @@ zsh:
 icon:
     - {fileName: 2020-11-23-week-48th}
     - {fileName: 2020-11-30-week-49th}
+    - {fileName: 2022-04-25-week-17th}
+    - {fileName: free-resources}
 puppeteer:
     - {fileName: 2020-11-23-week-48th}
     - {fileName: meet-puppeteer}
@@ -260,6 +310,13 @@ promise:
 symbol:
     - {fileName: 2020-11-23-week-48th}
 commanderjs:
+    - {fileName: 2020-11-23-week-48th}
+typescript:
+    - {fileName: 2020-11-23-week-48th}
+    - {fileName: code-isolation}
+    - {fileName: javascript-myCookBook}
+    - {fileName: jsts-unit-testing}
+pptr:
     - {fileName: 2020-11-23-week-48th}
 bluetooth:
     - {fileName: 2020-11-30-week-49th}
@@ -283,6 +340,13 @@ vimwiki:
     - {fileName: 2020-12-07-week-50th}
     - {fileName: Wiki-Setting-Category}
     - {fileName: wiki-troubleshooting}
+    - {fileName: wiki-update-guide}
+pipe_character:
+    - {fileName: 2020-12-07-week-50th}
+    - {fileName: wiki-update-guide}
+vertical_bar:
+    - {fileName: 2020-12-07-week-50th}
+    - {fileName: wiki-update-guide}
 Tashi:
     - {fileName: 2020-12-14-week-51th}
 English:
@@ -330,6 +394,7 @@ test-console:
     - {fileName: 2021-01-25-week-04th}
 mocha:
     - {fileName: 2021-01-25-week-04th}
+    - {fileName: jsts-unit-testing}
 chai:
     - {fileName: 2021-01-25-week-04th}
 compare:
@@ -345,6 +410,7 @@ css-selectors:
 troubleshooting:
     - {fileName: 2021-03-15-week-11th}
     - {fileName: code-isolation}
+    - {fileName: Windows-troubleshooting}
 favicon:
     - {fileName: 2021-03-15-week-11th}
     - {fileName: wiki-favicon}
@@ -385,6 +451,7 @@ mathjax:
     - {fileName: re2-translation}
 google-sheets:
     - {fileName: 2021-07-05-week-27th}
+    - {fileName: gsheet-flutter}
 android-studio:
     - {fileName: 2021-07-05-week-27th}
 book_cover:
@@ -399,6 +466,7 @@ pandas:
     - {fileName: 2021-08-16-week-33th}
     - {fileName: pandas-basic}
     - {fileName: Pandas-Category}
+    - {fileName: pandas-cookbook}
     - {fileName: snippets-py}
 refactoring:
     - {fileName: 2021-07-19-week-29th}
@@ -420,6 +488,9 @@ dataframe:
     - {fileName: 2021-08-09-week-32th}
 sudoku:
     - {fileName: 2021-08-16-week-33th}
+plugin-vim-surround:
+    - {fileName: 2021-08-16-week-33th}
+    - {fileName: vim-basic-plugin}
 unit-testing:
     - {fileName: 2021-08-30-week-35th}
     - {fileName: gas-unit-testing}
@@ -430,15 +501,132 @@ unit-testing:
     - {fileName: 2021-09-20-week-38th}
 xls:
     - {fileName: 2021-09-20-week-38th}
+core_autocrlf:
+    - {fileName: 2021-10-04-week-40th}
+    - {fileName: 2021-11-01-week-44th}
+line-endings:
+    - {fileName: 2021-10-04-week-40th}
+gitattributes:
+    - {fileName: 2021-11-01-week-44th}
+C++:
+    - {fileName: 2022-01-10-week-02th}
+windows-11:
+    - {fileName: 2022-01-24-week-04th}
+backticks:
+    - {fileName: 2022-02-14-week-07th}
+fenced-code-block:
+    - {fileName: 2022-02-14-week-07th}
+webdev:
+    - {fileName: 2022-02-14-week-07th}
+visual-studio-2022:
+    - {fileName: 2022-02-21-week-08th}
+setuptools:
+    - {fileName: 2022-02-21-week-08th}
+rust:
+    - {fileName: 2022-02-28-week-09th}
+    - {fileName: rust-beginning}
+    - {fileName: Rust-Category}
+c++:
+    - {fileName: 2022-03-07-week-10th}
+    - {fileName: 2022-04-18-week-16th}
+    - {fileName: 2022-04-25-week-17th}
+    - {fileName: cpp-environment}
+    - {fileName: cpp-small-tip}
+google-sheets-formula:
+    - {fileName: 2022-03-14-week-11th}
+garbage-collection:
+    - {fileName: 2022-03-21-week-12th}
+environment-variables:
+    - {fileName: 2022-03-21-week-12th}
+    - {fileName: Windows-shortcuts}
+algorithm:
+    - {fileName: 2022-04-25-week-17th}
+    - {fileName: Algorithm-Category}
+    - {fileName: water-sort-puzzle}
+transparent:
+    - {fileName: 2022-04-25-week-17th}
+image_editing:
+    - {fileName: 2022-04-25-week-17th}
+PowerShellHero:
+    - {fileName: 2022-04-25-week-17th}
+svg:
+    - {fileName: 2022-04-25-week-17th}
+java:
+    - {fileName: 2022-04-25-week-17th}
+    - {fileName: Java-beginning}
+    - {fileName: Java-Category}
+꼬들:
+    - {fileName: 2022-05-02-week-18th}
+algorightm:
+    - {fileName: 2022-05-02-week-18th}
+total-commander:
+    - {fileName: 2022-05-02-week-18th}
+    - {fileName: totalcmd-basic}
+    - {fileName: totalcmd-plugins}
+    - {fileName: TotalCommander-Category}
+console:
+    - {fileName: 2022-05-09-week-19th}
+    - {fileName: Windows-Category}
+english:
+    - {fileName: 2022-05-09-week-19th}
+    - {fileName: english-grammar-recipes}
+    - {fileName: Natural-language-Category}
+    - {fileName: NoDev-Category}
+    - {fileName: technology-idioms}
+font-awesome:
+    - {fileName: 2022-06-13-week-24th}
+oauth_2.0:
+    - {fileName: 2022-06-27-week-26th}
+winget:
+    - {fileName: 2022-06-27-week-26th}
+driver:
+    - {fileName: 2022-07-11-week-28th}
+obsidian:
+    - {fileName: 2022-08-11-week-32th}
+termux:
+    - {fileName: 2022-08-15-week-33th}
+sass:
+    - {fileName: 2022-09-26-week-39th}
+hash:
+    - {fileName: 2022-10-10-week-41th}
+    - {fileName: keyword_collection}
+sha:
+    - {fileName: 2022-10-10-week-41th}
+anaconda:
+    - {fileName: anaconda-basics}
+conda:
+    - {fileName: anaconda-basics}
 books:
     - {fileName: Books-Category}
 book-scanner:
     - {fileName: bookscan-process}
-typescript:
-    - {fileName: code-isolation}
-    - {fileName: javascript-myCookBook}
+language:
+    - {fileName: C-CPP-Category}
+    - {fileName: Flutter-Category}
+    - {fileName: Java-Category}
+    - {fileName: Language-Category}
+    - {fileName: Python-Category}
+    - {fileName: Rust-Category}
+    - {fileName: Web-Category}
+c:
+    - {fileName: C-CPP-Category}
+clang:
+    - {fileName: C-CPP-Category}
+    - {fileName: LLVM-understanding}
+cpp:
+    - {fileName: C-CPP-Category}
+iostream:
+    - {fileName: cpp-small-tip}
+standard-library:
+    - {fileName: cpp-small-tip}
 cross:
     - {fileName: Cross-Category}
+cryptographic-hash-function:
+    - {fileName: crypto-hash-verfication}
+sha256:
+    - {fileName: crypto-hash-verfication}
+md5:
+    - {fileName: crypto-hash-verfication}
 http:
     - {fileName: css-default-style}
 desk-setup:
@@ -452,11 +640,12 @@ google-slides:
     - {fileName: new-windows-installation}
 A4용지크기:
     - {fileName: exact-size-photo-print}
-language:
-    - {fileName: Flutter-Category}
-    - {fileName: Language-Category}
-    - {fileName: Python-Category}
-    - {fileName: Web-Category}
+resources:
+    - {fileName: free-resources}
+photo:
+    - {fileName: free-resources}
+GalaxyWatch4:
+    - {fileName: galaxywatch-related}
 library:
     - {fileName: gas_library}
 qunit:
@@ -465,12 +654,18 @@ tap:
     - {fileName: gas-unit-testing}
 gitignore:
     - {fileName: Git-Category}
+screen2gif:
+    - {fileName: git-commands}
 git-commit:
     - {fileName: git-commit-messages}
 commit:
     - {fileName: git-commit-messages}
+bash:
+    - {fileName: git-settings}
 upstream:
     - {fileName: git-upstream-meaning}
+blog:
+    - {fileName: good-sources-about-coding}
 google-photos:
     - {fileName: google_photo_slideshow}
 sketchup:
@@ -479,8 +674,13 @@ script:
     - {fileName: GoogleAppsScript-Category}
 gray:
     - {fileName: Gray-Category}
+google-sheets-api:
+    - {fileName: gsheet-flutter}
 HDMI:
     - {fileName: HDMI2dot1-device}
+ide:
+    - {fileName: IDE-Category}
+    - {fileName: VS-Category}
 index:
     - {fileName: index}
 isbn:
@@ -489,6 +689,17 @@ category:
     - {fileName: IT-Device-Category}
 it-device:
     - {fileName: IT-Device-Category}
+android:
+    - {fileName: Java-android-troubleshooting}
+android-intent:
+    - {fileName: Java-android-troubleshooting}
+android-activity:
+    - {fileName: Java-android-troubleshooting}
+startactivityforresult:
+    - {fileName: Java-android-troubleshooting}
+installation:
+    - {fileName: Java-beginning}
+    - {fileName: rust-beginning}
 falsy:
     - {fileName: javascript-myCookBook}
 truthy:
@@ -499,17 +710,29 @@ package_json:
     - {fileName: javascript-myCookBook}
 keyword:
     - {fileName: keyword_collection}
-hash:
-    - {fileName: keyword_collection}
 string-interpolation:
     - {fileName: keyword_collection}
     - {fileName: term-string-interpolation}
+llvm:
+    - {fileName: LLVM-understanding}
+gcc:
+    - {fileName: LLVM-understanding}
+monitor:
+    - {fileName: monitor-review}
+movie:
+    - {fileName: movie-related}
+natual-language:
+    - {fileName: Natural-language-Category}
 open-api:
     - {fileName: OpenApi-usage}
 config-js:
     - {fileName: OpenApi-usage}
 debug-js:
     - {fileName: OpenApi-usage}
+dr_scripto:
+    - {fileName: powershell-basic}
+profile:
+    - {fileName: powershell-basic}
 re2:
     - {fileName: re2-translation}
 latex:
@@ -517,6 +740,12 @@ latex:
 yaml-front-matter:
     - {fileName: re2-translation}
     - {fileName: wiki-inWindows}
+jargon:
+    - {fileName: RTFM-and-variants}
+RTFM:
+    - {fileName: RTFM-and-variants}
+UTSL:
+    - {fileName: RTFM-and-variants}
 sed:
     - {fileName: sed-problem-solving}
 ellystand:
@@ -531,6 +760,12 @@ inline-html:
     - {fileName: stackoverflow_searchhelp}
 kbd태그:
     - {fileName: stackoverflow_searchhelp}
+idiom:
+    - {fileName: technology-idioms}
+영어:
+    - {fileName: technology-idioms}
+bootstrapping:
+    - {fileName: term-bootstrapping}
 Short-circuit-evaluation:
     - {fileName: term-short-circuit-evaluation}
 short-circuiting:
@@ -547,24 +782,64 @@ variable-substitution:
     - {fileName: term-string-interpolation}
 tool:
     - {fileName: Tools-Category}
+beyondcompare:
+    - {fileName: totalcmd-basic}
 hlghlight:
     - {fileName: vim-basic}
 unimpared:
     - {fileName: vim-basic}
+surround:
+    - {fileName: vim-basic-plugin}
+nerdtree:
+    - {fileName: vim-basic-plugin}
+cheetsheet:
+    - {fileName: Vim-Cheatsheet}
+digraphs:
+    - {fileName: vim-cheatsheet-digraphs}
+    - {fileName: vim-folding}
+unicode:
+    - {fileName: vim-cheatsheet-digraphs}
+icons:
+    - {fileName: vim-cheatsheet-digraphs}
+glyphicons:
+    - {fileName: vim-cheatsheet-digraphs}
+emoticons:
+    - {fileName: vim-cheatsheet-digraphs}
 folding:
     - {fileName: vim-folding}
 특수문자:
     - {fileName: vim-folding}
-digraphs:
-    - {fileName: vim-folding}
+fonts:
+    - {fileName: vim-nerdfont}
+nerdfonts:
+    - {fileName: vim-nerdfont}
+custom-text-object:
+    - {fileName: vim-text-object}
+vim-text-object:
+    - {fileName: vim-text-object}
+dotvim:
+    - {fileName: vimrc-to-dotvim}
+visual-studio:
+    - {fileName: vs-2019-configurations}
+visual-studio-2019:
+    - {fileName: vs-2019-configurations}
 visual-studio-code:
+    - {fileName: vscode-basics}
     - {fileName: vscode-configurations}
 vscode-settings:
+    - {fileName: vscode-basics}
     - {fileName: vscode-configurations}
+puzzle:
+    - {fileName: water-sort-puzzle}
+water-sort:
+    - {fileName: water-sort-puzzle}
 web:
     - {fileName: Web-Category}
 html:
     - {fileName: Web-Category}
+wiki편집:
+    - {fileName: wiki-code-highlight-theme}
+    - {fileName: wiki-edit-author-profile}
 timezone:
     - {fileName: wiki-inWindows}
 tzinfo:
@@ -573,6 +848,7 @@ plantuml:
     - {fileName: wiki-jekyll-spaceship}
 mermaid:
     - {fileName: wiki-jekyll-spaceship}
+    - {fileName: wiki-mermaid-usage}
 thequeensgambit:
     - {fileName: wiki-jekyll-spaceship}
 githubio:
@@ -586,5 +862,9 @@ liquid:
 sysinternals:
     - {fileName: Windows-Category}
     - {fileName: Windows-Sysinternals}
+shortcut:
+    - {fileName: Windows-shortcuts}
 GUID:
     - {fileName: Windows-Terminal-Setting}
+wsl2:
+    - {fileName: wsl-how-to-use}
