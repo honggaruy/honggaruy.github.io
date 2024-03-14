@@ -3,8 +3,8 @@ layout  : wiki
 title   : 위키 편집 안내서 
 summary : 위키의 기본 작성법및 기능 추가 방법
 date    : 2021-03-10 15:14:25 +0900
-updated : 2023-11-25 18:08:34 +0900
-tag     : liquid tags jekyll vim vimwiki pipe_character vertical_bar 
+updated : 2024-03-15 01:38:47 +0900
+tag     : liquid tags jekyll vim vimwiki pipe_character vertical_bar blockquote markdown kramdown
 toc     : true
 public  : true
 parent  : [[Wiki-Setting-Category]] 
@@ -29,23 +29,42 @@ fontawe : true
 
 ### 일반적인 마크다운 문법
 
-* [Markdown Basic Syntax, Makrdown Guide ](https://www.markdownguide.org/basic-syntax/) :star: :star: :star: :star: :star:
-* [Markdown Extended Syntax, Makrdown Guide ](https://www.markdownguide.org/extended-syntax/) :star: :star: :star: :star: :star:
-  * [Tables](https://www.markdownguide.org/extended-syntax/#tables) : 테이블 마크다운
-  * [Fenced Code Blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) : Basic의 Code Block과 문법이 다름 , 백틱 세개를 연속으로 구분함 
-  * [Footnotes](https://www.markdownguide.org/extended-syntax/#footnotes) : 각주 달기
-  * :star: :star: :star: [Heading IDs](https://www.markdownguide.org/extended-syntax/#heading-ids) : html에 id를 임의로 달수 있게 해줌. 현재 위키에서 가능함. 매우 유용할 듯 :star: :star: :star:
+#### Markdown Basic Syntax
+
+- 이 섹션에서는 ..
+    -  Headings, Paragraphs, Line Breaks, Emphasis, Blockquotes, Lists, Code, Horizontal Rules, Links, Images, Escaping Characters, HTML을 다룬다
+- 자세한 내용은 이 링크 참조 ▶️ [Markdown Basic Syntax, Makrdown Guide ](https://www.markdownguide.org/basic-syntax/) :star: :star: :star: :star: :star:
+- blockquotes 작성시 주의사항
+    - blockquotes 영역에 있는  한 paragraph 내에서 줄바꿈을 하고 싶을 경우 `<br>` 태그를 추가한다 
+        - 윗 내용이 공통 문법인지는 확인 필요함!
+    - 다크테마 적용이후 blockquote에 데코레이션을 추가했는데 3줄 이상으로 해야 렌더링에 문제가 없다.
+        - 될 수있으면 3줄에 맞추자
+        - 1줄일 경우 중간에 공백줄 넣고, 발췌 출처를 마지막 줄에 적고 [`last_line_author` 공용 클래스](#last-line-author)를 적용하면 3줄로 바로 가능!!
+        - 이 내용으로 [johngrip님과 질의응답을 진행한 내용](https://github.com/johngrib/johngrib.github.io/discussions/351#discussioncomment-8741613)이 있다
+
+#### Markdown Extend Syntax
+
+- 이 섹션에서는 ..
+    - Tables, Fenced Code Blocks, Footnotes, Heading IDS, Definition Lists, Strikethrough, Task Lists, Emoji, Highlight, Subscript, Superscript, Automatic URL Linking을 다룬다 
+- 자세한 내용은 이 링크 참조 ▶️ [Markdown Extended Syntax, Makrdown Guide ](https://www.markdownguide.org/extended-syntax/) :star: :star: :star: :star: :star:
+  - [Tables](https://www.markdownguide.org/extended-syntax/#tables) : 테이블 마크다운
+  - [Fenced Code Blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) : Basic의 Code Block과 문법이 다름 , 백틱 세개를 연속으로 구분함 
+  - [Footnotes](https://www.markdownguide.org/extended-syntax/#footnotes) : 각주 달기
+  - :star: :star: :star: [Heading IDs](https://www.markdownguide.org/extended-syntax/#heading-ids) : html에 id를 임의로 달수 있게 해줌. 현재 위키에서 가능함. 매우 유용할 듯 :star: :star: :star:
     ```
     ### My Great Heading {#custom-id}
     ```
-  * [Definition Lists](https://www.markdownguide.org/extended-syntax/#definition-lists) : definition 태그및 목록을 달아줌. 현재 위키에서 동작함. dl, dt 태그에 대한 CSS 설정필요함 (안 이쁨)
-  * [Strikethrough](https://www.markdownguide.org/extended-syntax/#strikethrough) : ~~취소줄 긋기~~ 
-  * [Task Lists](https://www.markdownguide.org/extended-syntax/#task-lists) : 체크 박스 생성하기 
+  - [Definition Lists](https://www.markdownguide.org/extended-syntax/#definition-lists) : definition 태그및 목록을 달아줌. 현재 위키에서 동작함. dl, dt 태그에 대한 CSS 설정필요함 (안 이쁨)
+  - [Strikethrough](https://www.markdownguide.org/extended-syntax/#strikethrough) : ~~취소줄 긋기~~ 
+  - [Task Lists](https://www.markdownguide.org/extended-syntax/#task-lists) : 체크 박스 생성하기 
     - [x] 체크박스 넣기 
     - [ ] 안 넣기
-  * Automatic URL Linking, Disable Automatic URL Linking은 안 되는듯 한데, 딱히 쓸 일도 없음
-* [markdown-guide, readthdocs](https://markdown-guide.readthedocs.io/en/latest/index.html) :
-* [Mardown Reference, typora.io](https://support.typora.io/Markdown-Reference/#blockquotes)
+  - Automatic URL Linking, Disable Automatic URL Linking은 안 되는듯 한데, 딱히 쓸 일도 없음
+
+#### 기타 관련 자료
+
+- [markdown-guide, readthdocs](https://markdown-guide.readthedocs.io/en/latest/index.html) :
+- [Mardown Reference, typora.io](https://support.typora.io/Markdown-Reference/#blockquotes)
 
 ### kramdown 문법
 
@@ -88,7 +107,9 @@ fontawe : true
     
   * 앞에서 style을 설정하면 라인전체에 적용되는데 `뒤에 바로 붙여서` style을 적용하면서 해당 태그만 style을 변경함
 
-### blockquote 마지막 줄에 author 표시
+### blockquotes 마지막 줄에 author 표시 {#last-line-author}
+
+#### 방법 1
 
 - markdown 코드
 
@@ -108,6 +129,30 @@ fontawe : true
 - 위 와 같이 blockquote  바깥쪽에 `{. last_line_author}`를 붙이면
 - blockquote의 마지막 줄을 right-align 한다
 - `_base.scss`에 `blockquote.last_line_author > p:last-child` style을 추가하여 구현함
+
+#### 방법 2
+
+- 예전에 "방법 1"을 구현한 줄 모르고 다시 다른 방법으로 알아냄
+- markdown 코드
+    ```md
+    > Mixins allow you to define styles that can be re-used throughout your stylesheet.<br>
+    > They make it easy to avoid using non-semantic classes like `.float-left`, and to distribute collections of styles in libraries.
+    >
+    >{:style="text-align:right;"}
+    > 발췌: [<Sass/At-Rules/@mixin and @include>](https://sass-lang.com/documentation/at-rules/mixin)
+    ```
+- render된 markdown
+    > Mixins allow you to define styles that can be re-used throughout your stylesheet.<br>
+    > They make it easy to avoid using non-semantic classes like `.float-left`, and to distribute collections of styles in libraries.
+    >
+    >{:style="text-align:right;"}
+    > 발췌: [<Sass/At-Rules/@mixin and @include>](https://sass-lang.com/documentation/at-rules/mixin)
+- 두가지 방법 모두 Kramdown의 `Inline Attribute Lists` syntax를 사용하는데 ..
+    - `IAL`은 변경하고자하는 요소의 앞이나 뒤에 붙여 사용하며
+    - `IAL`syntax의 앞쪽이 blank일 경우 바로 다음에 위치한 블럭에 적용된다.
+    - 즉, `방법 2`에서 IAL을 "발췌:..."로 시작하는 줄 맨 끝에 붙일 경우 바로 앞 블럭인 `a tag`에 적용되어 "right-align" 효과가 적용되지 않는다. 앞쪽에 붙일 경우에는 `p tag`에 적용되어 효과가 나타난다
+    - 이 모든 설명은 [Inline Attribute Lists, Kramdown document](https://kramdown.gettalong.org/syntax.html#block-ials) 에 나와 있다
+        > A block IAL (or two or more block IALs) has to be put directly before or after the block-level element to which the attributes should be attached. If a block IAL is directly after and before a block-level element, it is applied to preceding element.  
  
 ### fenced code block 작성 방법 
 

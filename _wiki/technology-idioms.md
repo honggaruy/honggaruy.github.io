@@ -3,7 +3,7 @@ layout  : wiki
 title   : IT 문서에서 자주쓰이는 idioms 모음
 summary : 주의 - 다소 주관적인 선정 기준 
 date    : 2022-10-08 20:20:41 +0900
-updated : 2024-03-11 15:54:51 +0900
+updated : 2024-03-15 00:47:10 +0900
 tag     : idiom english 영어 
 toc     : true
 public  : true
@@ -30,11 +30,16 @@ fontawe : false
 - an arrangement whereby that company will buy more imports - (다음사전 whereby 예문)
 - Whereby shall I know this? <성서, 누가복음 1:18> - (다음사전 whereby 예문)
 
-# semantic classes vs non-semantic classes
+# "semantic classes" vs "non-semantic classes"
 
 ## 아래 문장에서 `non-semantic`의 의미는 ?
 
-> They make it easy to avoid using non-semantic classes like `.float-left`, and to distribute collections of styles in libraries. [<Sass/At-Rules/@mixin and @include>](https://sass-lang.com/documentation/at-rules/mixin)
+> Mixins allow you to define styles that can be re-used throughout your stylesheet.<br>
+> They make it easy to avoid using non-semantic classes like `.float-left`, and to distribute collections of styles in libraries. 
+>
+>{:style="text-align:right;"}
+> 발췌: [<Sass/At-Rules/@mixin and @include>](https://sass-lang.com/documentation/at-rules/mixin)
+
 
 ## 의미
 
@@ -60,7 +65,7 @@ fontawe : false
 
 # At-rules ?
 
-- 발췌 : https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule
+- 발췌 : [At-rule, MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule)
 - `At-rules` are [CSS statements](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave.
   - They begin with an at sign,`'@'`(U+0040 COMMERCIAL AT)
     -,followed by an identifier and includes everything up to the next semicolon
@@ -84,7 +89,12 @@ fontawe : false
   - run control
   - runtime configuration
 - 그리고 이 [문서](http://www.catb.org/~esr/writings/taoup/html/ch10s03.html)를 찾았다
-  > The 'rc' suffix goes back to Unix's grandparent, CTSS, It had a command-script feature called "runcom". Early Unixes used 'rc' for the name of the operationg system's boot script, as a tribute to CTSS runcom. 
+  > An older convention still common among system programs uses the executable's name with the suffix 'rc' for 'run control'.
+  >
+  > Footnote: The 'rc' suffix goes back to Unix's grandparent, CTSS, It had a command-script feature called "runcom". Early Unixes used 'rc' for the name of the operationg system's boot script, as a tribute to CTSS runcom.
+  > 
+  > -- Eric Steven Raymond, The Art of Unix Programming, Ch10. Configuration  --
+  {: .last_line_author}
 
 # the understatement of the year/decade/century
 
@@ -97,7 +107,7 @@ fontawe : false
 ## 사용례
 
 - [The Rust I Wanted Had No Future](https://graydon2.dreamwidth.org/307291.html) 의 첫번째 문장
-  > In a recent podcast about Rust leadership, the BDFL question came up again and Jermy Soller said (in <mark style="font-size:0.83em; background-color:lightblue;">the understatement of the centruy</mark>) that "I believe Graydon would have said no to"
+  > In a recent podcast about Rust leadership, the BDFL question came up again and Jermy Soller said (in <mark style="font-size:0.83em; background-color:lightblue;">the understatement of the centruy</mark>) that "I believe Graydon would have said no to some things we all like now".
 
 # 관련 글감
 
