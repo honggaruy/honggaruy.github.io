@@ -592,6 +592,12 @@ hash:
     - {fileName: keyword_collection}
 sha:
     - {fileName: 2022-10-10-week-41th}
+github-actions:
+    - {fileName: 2024-03-12-week-11th}
+에러해결:
+    - {fileName: 2024-03-12-week-11th}
+디버깅:
+    - {fileName: 2024-03-12-week-11th}
 anaconda:
     - {fileName: anaconda-basics}
 conda:
@@ -858,6 +864,12 @@ toc:
 scss:
     - {fileName: wiki-toc2side}
 liquid:
+    - {fileName: wiki-update-guide}
+blockquote:
+    - {fileName: wiki-update-guide}
+markdown:
+    - {fileName: wiki-update-guide}
+kramdown:
     - {fileName: wiki-update-guide}
 sysinternals:
     - {fileName: Windows-Category}

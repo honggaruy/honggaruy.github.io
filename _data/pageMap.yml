@@ -734,6 +734,14 @@
     url: /blog/2023/01/02/week-01th
     updated: '2023-01-02 00:14:32 +0900'
     children: []
+2024-03-12-week-11th:
+    type: blog
+    title: '2024년 11주차 기록'
+    summary: '03/11 (월) ~ 03/17 (일)'
+    parent: null
+    url: /blog/2024/03/12/week-11th
+    updated: '2024-03-12 00:14:32 +0900'
+    children: []
 Algorithm-Category:
     type: wiki
     title: '알고리즘 관련 카테고리'
@@ -1372,7 +1380,7 @@ technology-idioms:
     summary: '주의 - 다소 주관적인 선정 기준'
     parent: Term-Category
     url: /wiki/technology-idioms
-    updated: '2024-03-11 15:54:51 +0900'
+    updated: '2024-03-15 00:47:10 +0900'
     children: []
 term-bootstrapping:
     type: wiki
@@ -1676,7 +1684,7 @@ wiki-update-guide:
     summary: '위키의 기본 작성법및 기능 추가 방법'
     parent: Wiki-Setting-Category
     url: /wiki/wiki-update-guide
-    updated: '2023-11-25 18:08:34 +0900'
+    updated: '2024-03-15 01:38:47 +0900'
     children: []
 Windows-Category:
     type: wiki
