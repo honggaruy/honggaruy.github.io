@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>북스캔 처리하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/bookscan-process/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="북스캔 처리하기">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/bookscan-process/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/bookscan-process/">
+    <meta name="twitter:title" content="북스캔 처리하기">
+    <meta name="twitter:description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="bookscan-process">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">북스캔 처리하기</h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/bookscan-process.md" target="_blank">created: 2021.06.10</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/bookscan-process.md" target="_blank">updated: 2021.06.11</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/bookscan-process.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EB%B6%81%EC%8A%A4%EC%BA%94+%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    book-scanner
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EB%B6%81%EC%8A%A4%EC%BA%94%ED%95%98%EA%B8%B0" id="markdown-toc-북스캔하기">북스캔하기</a>    <ul>
+      <li>
+<a href="#vflat" id="markdown-toc-vflat">vFlat</a>        <ul>
+          <li><a href="#%EC%86%8C%EA%B0%9C-%EC%9C%A0%ED%8A%9C%EB%B8%8C" id="markdown-toc-소개-유튜브">소개 유튜브</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#pdf-%ED%8E%B8%EC%A7%91" id="markdown-toc-pdf-편집">PDF 편집</a>    <ul>
+      <li>
+<a href="#ezpdf-editor-%EB%A1%9C-%EB%AA%A9%EC%B0%A8-%ED%8E%B8%EC%A7%91%ED%95%98%EA%B8%B0" id="markdown-toc-ezpdf-editor-로-목차-편집하기">ezPDF Editor 로 목차 편집하기</a>        <ul>
+          <li><a href="#%EB%8B%A8%EA%B3%84%EB%B3%84%EB%A1%9C-%ED%8E%B8%EC%A7%91-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" id="markdown-toc-단계별로-편집-하는-방법">단계별로 편집 하는 방법</a></li>
+          <li><a href="#%EB%AA%A9%EC%B0%A8-%ED%8E%B8%EC%A7%91%EC%9D%80-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%ED%95%98%EB%82%98%EC%94%A9-%ED%95%98%EB%8A%94-%EA%B2%8C-%EC%A2%8B%EB%8B%A4" id="markdown-toc-목차-편집은-수동으로-하나씩-하는-게-좋다">목차 편집은 수동으로 하나씩 하는 게 좋다.</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="북스캔하기">북스캔하기</h1>
+
+<h2 id="vflat">vFlat</h2>
+
+<ul>
+  <li>스캔해서 PDF를 생성해줌</li>
+</ul>
+
+<h3 id="소개-유튜브">소개 유튜브</h3>
+
+<p><iframe id="media-NUfQGNMfwis" class="media" src="https://www.youtube.com/embed/NUfQGNMfwis" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+
+<h1 id="pdf-편집">PDF 편집</h1>
+
+<ul>
+  <li>책을 스캔해서 만든 PDF는 책갈피? 목차? 가 없어서 원하는 곳을 찾기가 힘듬</li>
+  <li>Adobe Reader 에서 <code class="language-html highlighter-rouge">PDF 편집</code> 기능을 이용하면 되지만 유료기능으로 구독해야 함</li>
+</ul>
+
+<h2 id="ezpdf-editor-로-목차-편집하기">ezPDF Editor 로 목차 편집하기</h2>
+
+<ul>
+  <li><a href="http://www.ezpdf.co.kr/editor3/main.do">무료 PDF 편집기, ezPDF Editor</a></li>
+  <li>Adobe Acrobat Reader 에서는 <code class="language-html highlighter-rouge">책갈피</code>라는 용어로 나오는데, 여기서는 <code class="language-html highlighter-rouge">목차</code>라고 나온다</li>
+  <li>왼쪽 도구 탭에서 아랫쪽에 <code class="language-html highlighter-rouge">페이지</code>, <code class="language-html highlighter-rouge">주석</code>, <code class="language-html highlighter-rouge">책갈피</code>, <code class="language-html highlighter-rouge">검색</code>, <code class="language-html highlighter-rouge">목차</code>가 있다</li>
+  <li>
+<code class="language-html highlighter-rouge">목차</code>를 선택하면 아무것도 안 나올것이다.</li>
+  <li>
+<code class="language-html highlighter-rouge">목차</code>탭 선택 후, 왼쪽 위에서 <code class="language-html highlighter-rouge">옵션</code>을 보면 <code class="language-html highlighter-rouge">추가</code>, <code class="language-html highlighter-rouge">삭제</code> 를 선택할 수 있다.</li>
+  <li>
+<code class="language-html highlighter-rouge">추가</code>로 항목을 선택할 수 있다.</li>
+</ul>
+
+<h3 id="단계별로-편집-하는-방법">단계별로 편집 하는 방법</h3>
+
+<ul>
+  <li>포커스된 항목이 있을 때 <code class="language-html highlighter-rouge">추가</code>를 누르면 같은 레벨로 포커스 다음 위치에 항목이 생긴다</li>
+  <li>종속 항목으로 하고 싶으면 자식이 될 항목을 부모항목으로 ‘드래그’ 한다</li>
+  <li>부모 항목과 같은 레벨로 새로 항목을 만들고 싶으면</li>
+  <li>부모 항목을 모두 collapse 해서 줄여 놓는다. 포커싱이 해당 부모항목으로 이동된다.</li>
+  <li>이 상태에서 <code class="language-html highlighter-rouge">추가</code>를 누르면 부모 항목과 같은 레벨로 신규 항목이 생성된다</li>
+</ul>
+
+<h3 id="목차-편집은-수동으로-하나씩-하는-게-좋다">목차 편집은 수동으로 하나씩 하는 게 좋다.</h3>
+
+<ul>
+  <li>책을 스캔하는 목적은 하나씩 수동으로 읽으려고 하는 것이다.</li>
+  <li>목차를 타이핑해서 입력하는 동작을 통해 1번 목차를 훝어볼 수 있다. 빠짐없이</li>
+  <li>책을 공부하는 좋은 방법이 된다.</li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

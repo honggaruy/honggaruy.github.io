@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 36주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="09/06 (월) ~ 09/12 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/09/06/week-36th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 36주차 기록">
+    <meta property="og:description" content="09/06 (월) ~ 09/12 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/09/06/week-36th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/09/06/week-36th/">
+    <meta name="twitter:title" content="2021년 36주차 기록">
+    <meta name="twitter:description" content="09/06 (월) ~ 09/12 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/08/30/week-35th/">« 2021년 35주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/09/13/week-37th/">2021년 37주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 36주차 기록</h1>
+        <p class="created-date">
+            2021.09.06
+        </p>
+
+
+        <div class="post-tag">
+    
+</div>
+
+        <h2>09/06 (월) ~ 09/12 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#eslint%EB%A5%BC-%EC%93%B0%EB%8A%94%EB%8D%B0-crlf%EB%A5%BC-%EB%A7%88%EA%B5%AC-%EC%97%90%EB%9F%AC%EB%A1%9C-%EC%9E%A1%EB%8A%94%EB%8B%A4-" id="markdown-toc-eslint를-쓰는데-crlf를-마구-에러로-잡는다-">eslint를 쓰는데 CRLF를 마구 에러로 잡는다 ?</a>    <ul>
+      <li><a href="#eslint" id="markdown-toc-eslint">eslint</a></li>
+      <li><a href="#stackoverflow" id="markdown-toc-stackoverflow">stackoverflow</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#%EB%B2%88%EC%97%AD-windows-interoperability-with-linux" id="markdown-toc-번역-windows-interoperability-with-linux">(번역) Windows interoperability with Linux</a>    <ul>
+      <li><a href="#run-linux-tools-from-a-windows-command-line" id="markdown-toc-run-linux-tools-from-a-windows-command-line">Run Linux tools from a Windows command line</a></li>
+      <li><a href="#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC" id="markdown-toc-관련-링크">관련 링크</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EB%B2%88%EC%97%AD-xdg-base-directory-specification-usage" id="markdown-toc-번역-xdg-base-directory-specification-usage">(번역) XDG Base Directory Specification Usage</a></li>
+  <li><a href="#git-cross-platform" id="markdown-toc-git-cross-platform">gitconfig cross platform</a></li>
+  <li>
+<a href="#%EA%B2%8C%EC%9E%84-%EA%B0%9C%EB%B0%9C" id="markdown-toc-게임-개발">게임 개발</a>    <ul>
+      <li><a href="#botland" id="markdown-toc-botland">bot.land</a></li>
+      <li><a href="#godot-engine" id="markdown-toc-godot-engine">Godot Engine</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="eslint를-쓰는데-crlf를-마구-에러로-잡는다-">eslint를 쓰는데 CRLF를 마구 에러로 잡는다 ?</h1>
+
+<h2 id="eslint">eslint</h2>
+
+<ul>
+  <li>eslint 링크 : <a href="https://eslint.org/docs/rules/linebreak-style">enforce consistent linebreak style, ESLint</a>
+</li>
+  <li>linebreak style의 일관성 강제하기 규칙</li>
+  <li>규칙은 둘 중 하나 : <code class="language-html highlighter-rouge">unix</code>(default) or <code class="language-html highlighter-rouge">windows</code>
+</li>
+</ul>
+
+<h2 id="stackoverflow">stackoverflow</h2>
+
+<ul>
+  <li>line-ending 대세는 <code class="language-html highlighter-rouge">LF</code> default (window 개발자도)
+    <ul>
+      <li>
+<a href="https://prettier.io/docs/en/options.html#end-of-line">End of Line, Prettier</a>
+        <ul>
+          <li>설마 <code class="language-html highlighter-rouge">LF</code> line ending 인식도 못하는 <code class="language-html highlighter-rouge">Notepad for Windows</code> 쓰시는 거 아니죠? 시전..
+            <ul>
+              <li>근데 Windows Notepad도 <a href="https://www.zdnet.com/article/windows-notepad-finally-understands-everyone-elses-end-of-line-characters/">이제 <code class="language-html highlighter-rouge">LF</code> line ending 인식함</a>
+</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://eslint.org/docs/rules/linebreak-style#enforce-consistent-linebreak-style-linebreak-style">Using this rule with version control systems</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://stackoverflow.com/a/9977954/9457247">Force LF eol in git repo and working copy의 답변, stackoverflow</a> : 번역해볼 것</li>
+</ul>
+
+<h1 id="번역-windows-interoperability-with-linux">(번역) Windows interoperability with Linux</h1>
+
+<ul>
+  <li>원본 링크 : <a href="https://docs.microsoft.com/en-us/windows/wsl/interop#invoking-windows-binaries-from-wsl">Windows interoperability with Linux, Microsoft</a>
+</li>
+  <li>Windows Subsystem for Linux (WSL)은 Windows와 Linux간의 integration을 끊임없이 개선하고 있다</li>
+  <li>당신은 아래 일들을 할 수 있다
+    <ul>
+      <li>Linux command line(즉, Ubuntu) 에서 윈도우즈 도구 (즉, notepad.exe)를 실행할 수 있다</li>
+      <li>Windows command line(즉, PowerShell) 에서 리눅스 도구 (즉, grep)을 실행할 수 있다</li>
+      <li>Linux와 Windows (Build 17063+) 간에 환경변수를 공유할 수 있다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="run-linux-tools-from-a-windows-command-line">Run Linux tools from a Windows command line</h2>
+
+<h2 id="관련-링크">관련 링크</h2>
+
+<ul>
+  <li>원본 링크 : <a href="https://www.scootersoftware.com/vbulletin/forum/beyond-compare-4-discussion/version-control-aa/14411-new-updates-in-windows-wsl">New Updates in Windows WSL, scootersoftware.com / Forums</a>
+    <ul>
+      <li>WSL 환경에서 BC4를 사용할수 있는지 문의</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="번역-xdg-base-directory-specification-usage">(번역) XDG Base Directory Specification Usage</h1>
+
+<ul>
+  <li>원본링크 : <a href="https://help.gnome.org/misc/release-notes/3.6/admins-xdg.html.en">XDG Base Directory Specification Usage</a>
+</li>
+  <li>Unix 계열 시스템은 전통적으로 다음과 같은 것이 없었다
+    <ul>
+      <li>application을 저장하는 표준적인 방법</li>
+      <li>각각의 유저 단위로 유저 데이타를 저장하는 표준적인 방법</li>
+    </ul>
+  </li>
+  <li>결과적으로 이런 데이타들은 필요할때 구성하는 (ad-hoc), 일관되지 않은, 문제 많은 방식인 ..
+    <ul>
+      <li>각각의 유저 home directory에 저장되는 “dot files”로 흔히 구성되었다.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.freedesktop.org/wiki/">freedesktop.org</a> 는 이 문제에 대해 <a href="https://specifications.freedesktop.org/basedir-spec/latest/ar01s03.html">추천하는 해결책</a>을 발표했다</li>
+  <li>다음의 몇가지 어플들은 <a href="https://specifications.freedesktop.org/basedir-spec/latest/index.html">freedesktop.org directory specification</a>을 계승함으로써
+    <ul>
+      <li>GNOME 3.6으로 개선된 cross-desktop 호환성을 지원한다</li>
+      <li>지원 어플들
+        <ul>
+          <li>accerciser, baobab, …gtk+,…planner</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="git-cross-platform">gitconfig cross platform</h1>
+
+<ul>
+  <li><a href="https://stackoverflow.com/a/2354278/9457247">Distributing git configuration with the code</a></li>
+  <li><a href="https://stackoverflow.com/Questions/2332349/best-practices-for-cross-platform-git-config">Best practices for corss platformgit config ?</a></li>
+</ul>
+
+<h1 id="게임-개발">게임 개발</h1>
+
+<h2 id="botland">bot.land</h2>
+
+<ul>
+  <li>스타크래프트 유닛 비슷한 것들을 직접 설계한 코드로 전쟁을 시키는 온라인 게임</li>
+  <li>현재 온라인 배포가 끊김. <a href="https://bot.land/">사이트 링크</a>
+</li>
+  <li><a href="https://blog.bot.land/2019/10/launch-the-universe-and-everything/">bot.and 개발자의 회고록</a></li>
+  <li>원작자는 요즘은 게임 개발을 가르치는 쪽으로 방향을 바꾼듯
+    <ul>
+      <li>
+<a href="https://adamlearns.com/">AcAdamy</a>
+        <ul>
+          <li>무료 강의 : <a href="https://adamlearns.com/courses/godot-game-engine">Godot Game Engine</a>
+</li>
+        </ul>
+      </li>
+      <li><a href="https://onedrive.live.com/view.aspx?resid=8D59514B5DBE9460!171239&amp;authkey=!AAYudHw4Jy57cpY">원작자가 5년동안 정리한 개발 노트</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="godot-engine">Godot Engine</h2>
+
+<ul>
+  <li>홈 페이지 : <a href="https://godotengine.org/">https://godotengine.org/</a>
+</li>
+  <li>문서
+    <ul>
+      <li>영문 : <a href="https://docs.godotengine.org/en/latest/">최신 버전</a> / <a href="https://docs.godotengine.org/en/stable/">stable 버전</a>
+</li>
+      <li>한글 : <a href="https://docs.godotengine.org/ko/latest/">최신 버전</a> / <a href="https://docs.godotengine.org/ko/stable/">stable 버전</a>
+</li>
+      <li><a href="https://hosted.weblate.org/projects/godot-engine/godot-docs/ko/">문서 번역 참여 사이트</a></li>
+      <li><a href="https://steamcommunity.com/app/404790">스팀커뮤니티</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

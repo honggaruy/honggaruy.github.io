@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>엑셀 파일을 구글 시트로 바꾸기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="google-apps-script를 배우는 좋은 시작점">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/excel2gsheet/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="엑셀 파일을 구글 시트로 바꾸기">
+    <meta property="og:description" content="google-apps-script를 배우는 좋은 시작점">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/excel2gsheet/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/excel2gsheet/">
+    <meta name="twitter:title" content="엑셀 파일을 구글 시트로 바꾸기">
+    <meta name="twitter:description" content="google-apps-script를 배우는 좋은 시작점">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="excel2gsheet">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">엑셀 파일을 구글 시트로 바꾸기</h1>
+    
+        <p class="title-summary">google-apps-script를 배우는 좋은 시작점</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/excel2gsheet.md" target="_blank">created: 2020.04.25</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/excel2gsheet.md" target="_blank">updated: 2020.11.17</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/excel2gsheet.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%97%91%EC%85%80+%ED%8C%8C%EC%9D%BC%EC%9D%84+%EA%B5%AC%EA%B8%80+%EC%8B%9C%ED%8A%B8%EB%A1%9C+%EB%B0%94%EA%BE%B8%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    excel gsheet google-apps-script
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a>    <ul>
+      <li><a href="#%EA%B5%AC%EC%B2%B4%EC%A0%81-%EC%9A%94%EA%B5%AC-%EC%82%AC%ED%95%AD" id="markdown-toc-구체적-요구-사항">구체적 요구 사항</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li><a href="#%EA%B5%AC%EA%B8%80-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%97%90-%EC%A0%80%EC%9E%A5%EB%90%9C-%EC%97%91%EC%85%80%ED%8C%8C%EC%9D%BC%EC%9D%84-gsheet-%ED%8C%8C%EC%9D%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0" id="markdown-toc-구글-드라이브에-저장된-엑셀파일을-gsheet-파일로-변환하기">구글 드라이브에 저장된 엑셀파일을 gsheet 파일로 변환하기</a></li>
+      <li>
+<a href="#time-trigger-%EA%B1%B0%EB%8A%94-%EB%B0%A9%EB%B2%95" id="markdown-toc-time-trigger-거는-방법">Time trigger 거는 방법</a>        <ul>
+          <li><a href="#managing-triggers-manually" id="markdown-toc-managing-triggers-manually">Managing triggers manually</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EC%95%9E%EC%9C%BC%EB%A1%9C-%EC%A7%84%ED%96%89%ED%95%A0-%EB%82%B4%EC%9A%A9--%EC%A7%84%ED%96%89%ED%95%9C-%EB%82%B4%EC%9A%A9%EC%9D%80-%EC%A0%9C%EA%B1%B0%ED%95%A0-%EA%B2%83" id="markdown-toc-앞으로-진행할-내용--진행한-내용은-제거할-것">앞으로 진행할 내용 ( 진행한 내용은 제거할 것)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>월말 돈 계산 같은 것 할때 엑셀에 비주얼 베이직 얹어서 대충 해주면 어느 정도 자동화 할 수 있었다.</li>
+  <li>그런데 구글 시트를 써보니 …
+    <ul>
+      <li>웬만한 엑셀 함수 대부분 지원하고 .. <a href="https://support.google.com/docs/table/25273">구글 시트 함수 목록</a>
+</li>
+      <li>자주 쓰는 구글 캘린더, 구글 지도 등과도 연계가 쉽고 ..</li>
+      <li>javascript도 쓸 수 있는데 엑셀보다 자동화하기 더 좋은것 같다.</li>
+      <li>제일 좋은건 (기본기능은) 무료라는 것 !!</li>
+    </ul>
+  </li>
+  <li>일반 사용자로서 <code class="language-html highlighter-rouge">엑셀</code>에서 <code class="language-html highlighter-rouge">구글시트</code>로 넘어갈때의 <a href="https://support.google.com/a/users/answer/9331278">가이드</a>도 있지만..</li>
+  <li>프로그래밍이 최종목적인 게으름을 피우기 위해.. 자동화를 알아보도록 하자</li>
+</ul>
+
+<h2 id="구체적-요구-사항">구체적 요구 사항</h2>
+
+<ul>
+  <li>매월 은행 거래 정보, 카드 사용내역을 로컬 PC에 엑셀 파일 형태로 수집한다.</li>
+  <li>기존엔 엑셀파일을 그대로 썼지만 이제 구글 시트로 정리하고 싶다.</li>
+  <li>자동으로 은행사이트 접속해서 긁어오는게 더 좋겠지만… 아직 은행 카드 사이트를 스크래핑 하긴 힘들고 (selenium으로 보안 로그인 하는걸 아직 잘 모르겠음)</li>
+  <li>일단 수동으로 수집한 금융 관련 엑셀파일이 업데이트 되어 있으면 구글 시트로 자동으로 누적되면 좋겠다.</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<ul>
+  <li>일단 <a href="/blog/2020/04/18/todays-ideas/index.html">알아본 바</a>로는 다음과 같은 흐름이 가장 적당한것 같다
+    <ol>
+      <li>
+<a href="https://support.google.com/drive/answer/2374987">구글 드라이브 백업및 동기화 프로그램</a>을 다운로드 받아 로컬 PC에 설치한다</li>
+      <li>은행 사이트에서 엑셀 파일을 다운로드 받을때 동기화 폴더로 직접 다운받는다</li>
+      <li>다운받는 순간 자동으로 진행되는 동기화가 끝나면 구글 드라이브에서 해당 파일을 볼 수 있다.</li>
+      <li>구글 드라이브내에서 .xls 에서 .gsheet 파일로 변환한다.</li>
+      <li>이 때 <a href="https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers">time trigger</a>를 걸어서 자동으로 정해진 시간에 변환하도록 한다.</li>
+    </ol>
+  </li>
+  <li>위에서 1~3 번은 간단히 되고 4,5번을 별도로 정리해보자</li>
+</ul>
+
+<h2 id="구글-드라이브에-저장된-엑셀파일을-gsheet-파일로-변환하기">구글 드라이브에 저장된 엑셀파일을 gsheet 파일로 변환하기</h2>
+
+<ul>
+  <li>Stack Overflow에 적당한 질문및 <a href="https://stackoverflow.com/a/49265306/9457247">답변</a>이 올라왔다.
+    <ul>
+      <li>여기서 사용된 gsi, efi 반복형태는 <a href="https://developers.google.com/apps-script/reference/drive/file-iterator">이 곳</a>을 참조한듯 하다.</li>
+      <li>
+<code class="language-html highlighter-rouge">gsi</code>는 google sheet iterator, <code class="language-html highlighter-rouge">efi</code>는 excel file iterator의 약자 일거라고 나름대로 생각한다.</li>
+      <li>코드상에 <code class="language-html highlighter-rouge">일일 코드 실행량 (quota limits)</code>에 대한 언급이 있는데 현황은 <a href="https://developers.google.com/apps-script/guides/services/quotas">여기</a>에 있다</li>
+    </ul>
+  </li>
+  <li>위 답변을 <a href="https://script.google.com/d/1hXTwkOlL_vXyPA3eLr2m_v2ODr9xywaXM_iRxwyzXINC_ON8r9j8fUxs/edit"><code class="language-html highlighter-rouge">stand alone script</code></a>로 만들어 실행해봤다.
+    <ol>
+      <li>위에서 언급한 1~3과정을 이용해 구글 드라이브 내 폴더 두개를 지정한다. ( 엑셀파일폴더, 구글시트로 변환하여 저장할 폴더)
+        <ul>
+          <li>서로 같아도 상관없다.</li>
+          <li>
+<a href="https://codelabs.developers.google.com/codelabs/apps-script-fundamentals-2/#1">Introducin the Spreadsheet service</a> 페이지의 중간의 <code class="language-html highlighter-rouge">Key Point</code>에 <code class="language-html highlighter-rouge">id</code>를 추출하는 방법이 있다.</li>
+          <li>위 방법을 이용하여 각 폴더의 ID를 알아낸다</li>
+        </ul>
+      </li>
+      <li>
+<a href="https://developers.google.com/apps-script/guides/standalone">stand alone script</a> 에 나온대로 <code class="language-html highlighter-rouge">script.google.com</code>에 접속하여 새로운 스크립트를 생성한다.</li>
+      <li>위 링크의 답변내 코드를 그대로 복사하여 <code class="language-html highlighter-rouge">코드.gs</code>에 붙여넣기 한다.
+        <ul>
+          <li>링크상 코드중 오류가 있다.</li>
+        </ul>
+        <ul>
+          <li>excel file 이름과 gsheet 이름을 비교하는 부분에서 “파일이름.xls”를 “파일이름”과 비교하는 오류가 있다. (같은것으로 판단해야 하는데 못함)</li>
+          <li>엑셀파일 이름을 file.getName()으로 받아오는걸 그대로 쓰지말고, 정규식으로 이름부분만 받아서 비교하도록 한다
+            <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre> <span class="c1">// 원래 이렇게 되어있었다.</span>
+ <span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">efi</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+ <span class="k">if</span><span class="p">(</span> <span class="p">...</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">gsNames</span><span class="p">[</span><span class="nx">file</span><span class="p">.</span><span class="nx">getName</span><span class="p">()])</span>
+ <span class="c1">// 다음과 같이 수정</span>
+ <span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">efi</span><span class="p">.</span><span class="nx">netx</span><span class="p">();</span>
+ <span class="kd">var</span> <span class="nx">onlyName</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">getName</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">.*</span><span class="se">)(\.[^</span><span class="sr">.</span><span class="se">]</span><span class="sr">+</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span> <span class="dl">'</span><span class="s1">$1</span><span class="dl">'</span><span class="p">);</span>
+ <span class="k">if</span><span class="p">(</span> <span class="p">...</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">gsNames</span><span class="p">[</span><span class="nx">onlyName</span><span class="p">])</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>google apps script는 javascript regex 문법을 따른다.</li>
+          <li>정규식으로 파일명 선택하는 부분은 <a href="https://dopus.tistory.com/94">이 곳</a>을 참조함.</li>
+        </ul>
+      </li>
+      <li>코드중 상위부분의 아래코드에 1번에서 알아낸 ID를 각각 붙여넣기 한다.
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 이 코드를 ..</span>
+<span class="kd">var</span> <span class="nx">origin</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="dl">"</span><span class="s2">origin folder id</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="dl">"</span><span class="s2">destination folder id</span><span class="dl">"</span><span class="p">);</span>
+<span class="c1">// 이렇게 ...</span>
+<span class="kd">var</span> <span class="nx">origin</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="dl">"</span><span class="s2">1DnKWG....9hC3jb_brQ8b0</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="dl">"</span><span class="s2">16K05Rlm....jdpCMsAUOf8</span><span class="dl">"</span><span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>한번 실행해본다. 실행하는 방법도 <a href="https://developers.google.com/apps-script/guides/standalone#running_a_standalone_script">stand alone script</a> 요기에 나와있다</li>
+    </ol>
+  </li>
+  <li>실행 이력및 로그 보기 : <a href="https://script.google.com/home/executions">이곳</a>에서 실행 이력, 로그 모두 확인가능하다.</li>
+</ul>
+
+<h2 id="time-trigger-거는-방법">Time trigger 거는 방법</h2>
+
+<ul>
+  <li>
+<a href="https://developers.google.com/apps-script/guides/triggers/installable#managing_triggers_manually">이 문서</a>에 잘 나와있다.</li>
+  <li>수동적으로 (Managing triggers manually) 거는 방법과 프로그램으로 (Managin triggers programmatically) 거는 방법이 있다.</li>
+  <li>프로그램적으로 트리거를 걸 필요성이라면… 2중으로 트리거를 거는 경우를 생각해볼수 있겠다.
+    <ul>
+      <li>매일 1차례 수행되도록 1차 트리거를 수동으로 걸어놓은 상태에서 특정일에 1시간 단위로 수행되는 트리거를 프로그램적으로 생성되도록 할 수도 있다.</li>
+    </ul>
+  </li>
+  <li>일단 프로그램적으로 거는 경우는 아직 필요하지 않으므로, 수동적으로 트리거를 다루는 방법에 대해 번역해 본다</li>
+</ul>
+
+<h3 id="managing-triggers-manually">Managing triggers manually</h3>
+
+<p>설치형 트리거를 스크립트 에디터를 통해 수동적으로 생성하려면, 아래 단계를 따라야 한다</p>
+
+<ol>
+  <li>스크립트 에디터에서, <strong>수정 &gt; 현재 프로젝트의 트리거</strong> 를 선택한다.</li>
+  <li>새로 열린 페이지 가운데에 <strong>새 트리거를 만듭니다.</strong> 라고 쓰인 링크를 클릭한다.</li>
+  <li>새로 팝업 창이 열린다</li>
+  <li>
+<strong>실행할 함수 선택</strong> 에서 트리거 적용할 함수이름을 선택한다.</li>
+  <li>
+<strong>이벤트 소스 선택</strong> 에서, <strong>시간 기반</strong> 이나 스크립트가 <a href="https://developers.google.com/apps-script/guides/bound">묶여있는</a> Google App ( 예를 들면, <strong>스프레드시트에서</strong>)를 선택한다.</li>
+  <li>트리거 세부설정은 위에서 선택한 이벤트 소스에 따라 항목이 달라진다
+    <ul>
+      <li>시간 기반일 경우 : <strong>트리거 기반 시간 유형 선택</strong> , <strong>시간 간격 선택</strong> 을 조정할 수 있다.</li>
+      <li>Google App 기반일 경우 : <strong>이벤트 유형 선택</strong> ( 열릴 시, 수정 시, … ) 을 조정할 수 있다.</li>
+      <li>캘린더일 경우 : <strong>캘린더가 업데이트 됨</strong>  밖에 선택할 수 없는데… 어떻게 하는지는 잘 모르겠다.</li>
+    </ul>
+  </li>
+  <li>옵션으로, <strong>트리거 실패 알림 설정</strong> 으로 트리거 함수가 실패할 경우 언제 이메일을 통해 알려줄지 설정할 수 있다.</li>
+  <li>다 설정한후에 저장한다.</li>
+</ol>
+
+<h2 id="앞으로-진행할-내용--진행한-내용은-제거할-것">앞으로 진행할 내용 ( 진행한 내용은 제거할 것)</h2>
+
+<ul>
+  <li>현재는 엑셀에서 구글시트로 무조건 변환하는 내용만 되어있음</li>
+  <li>변환된 구글시트에서 새로운 내용을 가져오고</li>
+  <li>사용한 엑셀파일및 구글시트 파일은 저장소에 보내고, 일정시간(2달?)후 제거하는</li>
+  <li>내용의 자동화가 필요할 듯</li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

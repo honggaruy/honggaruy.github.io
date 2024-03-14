@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>번역 - 단순화한 git의 개념들 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="개념을 먼저 익히자">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/git-concepts-simplified/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="번역 - 단순화한 git의 개념들">
+    <meta property="og:description" content="개념을 먼저 익히자">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/git-concepts-simplified/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/git-concepts-simplified/">
+    <meta name="twitter:title" content="번역 - 단순화한 git의 개념들">
+    <meta name="twitter:description" content="개념을 먼저 익히자">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- https://fontawesome.com/kits/a86e231b11/use 참고 -->
+    <script src="https://kit.fontawesome.com/a86e231b11.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="git-concepts-simplified">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">번역 - 단순화한 git의 개념들</h1>
+    
+        <p class="title-summary">개념을 먼저 익히자</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/git-concepts-simplified.md" target="_blank">created: 2023.01.15</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/git-concepts-simplified.md" target="_blank">updated: 2023.01.27</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/git-concepts-simplified.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EB%B2%88%EC%97%AD+-+%EB%8B%A8%EC%88%9C%ED%99%94%ED%95%9C+git%EC%9D%98+%EA%B0%9C%EB%85%90%EB%93%A4&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    git
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a></li>
+  <li>
+<a href="#%EB%82%B4%EC%9A%A9" id="markdown-toc-내용">내용</a>    <ul>
+      <li><a href="#%EA%B4%80%EC%9A%A9-%ED%91%9C%ED%98%84" id="markdown-toc-관용-표현">관용 표현</a></li>
+      <li>
+<a href="#1-preface" id="markdown-toc-1-preface">1. preface</a>        <ul>
+          <li><a href="#11-about-this-slideshow" id="markdown-toc-11-about-this-slideshow">1.1 about this slideshow</a></li>
+          <li><a href="#12-license" id="markdown-toc-12-license">1.2 license</a></li>
+          <li><a href="#13-viewing-this-slideshow" id="markdown-toc-13-viewing-this-slideshow">1.3 viewing This slideshow</a></li>
+          <li>
+<a href="#14-acknowledgements" id="markdown-toc-14-acknowledgements">1.4 acknowledgements</a>            <ul>
+              <li><a href="#this-document" id="markdown-toc-this-document">this document</a></li>
+              <li><a href="#this-slide-show" id="markdown-toc-this-slide-show">this slide show</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<a href="#2-basics" id="markdown-toc-2-basics">2. basics</a>        <ul>
+          <li><a href="#21-what-is-a-sha" id="markdown-toc-21-what-is-a-sha">2.1 what is a SHA</a></li>
+          <li><a href="#22-what-is-a-ref" id="markdown-toc-22-what-is-a-ref">2.2 what is a “ref”</a></li>
+          <li><a href="#23-what-is-a-repo" id="markdown-toc-23-what-is-a-repo">2.3 what is a repo</a></li>
+          <li><a href="#hey-why-are-the-arrows-backward-in-your-pictures" id="markdown-toc-hey-why-are-the-arrows-backward-in-your-pictures">(Hey, why are the arrows backward in your pictures?)</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#3-branches-and-tags" id="markdown-toc-3-branches-and-tags">3. branches and tags</a>        <ul>
+          <li><a href="#31-branch" id="markdown-toc-31-branch">3.1 branch</a></li>
+          <li><a href="#32-more-than-one-branch" id="markdown-toc-32-more-than-one-branch">3.2 more than one branch</a></li>
+          <li><a href="#33-more-than-one-parent-commit" id="markdown-toc-33-more-than-one-parent-commit">3.3 more than one parent commit</a></li>
+          <li><a href="#34-current-branch--checked-out-branch" id="markdown-toc-34-current-branch--checked-out-branch">3.4 current branch / checked out branch</a></li>
+          <li><a href="#35-committing" id="markdown-toc-35-committing">3.5 committing</a></li>
+          <li><a href="#36-naming-non-leaf-nodes" id="markdown-toc-36-naming-non-leaf-nodes">3.6 naming non-leaf nodes</a></li>
+          <li><a href="#37-tags" id="markdown-toc-37-tags">3.7 tags</a></li>
+          <li><a href="#38-the-difference-between-branches-and-tags" id="markdown-toc-38-the-difference-between-branches-and-tags">3.8 the difference between branches and tags</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#4-digressions---1" id="markdown-toc-4-digressions---1">4 digressions - 1</a>        <ul>
+          <li><a href="#41-what-is-a-git-url" id="markdown-toc-41-what-is-a-git-url">4.1 what is a git URL?</a></li>
+          <li><a href="#42-what-is-a-remote" id="markdown-toc-42-what-is-a-remote">4.2 what is a “remote”?</a></li>
+        </ul>
+      </li>
+      <li><a href="#5-local-and-remote-repos" id="markdown-toc-5-local-and-remote-repos">5. local and remote repos</a></li>
+      <li><a href="#51-remote-branches" id="markdown-toc-51-remote-branches">5.1 remote branches</a></li>
+      <li><a href="#52-multiple-remotes" id="markdown-toc-52-multiple-remotes">5.2 multiple remotes</a></li>
+      <li><a href="#53-fetching-and-merging-from-another-repo" id="markdown-toc-53-fetching-and-merging-from-another-repo">5.3 fetching and merging from another repo</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#6-digressions---2" id="markdown-toc-6-digressions---2">6. digressions - 2</a>    <ul>
+      <li><a href="#61-the-object-store" id="markdown-toc-61-the-object-store">6.1 the object store</a></li>
+      <li><a href="#62-what-is-a-repo-again" id="markdown-toc-62-what-is-a-repo-again">6.2 what is a repo (again)</a></li>
+      <li><a href="#63-objects-and-branchestags" id="markdown-toc-63-objects-and-branchestags">6.3 objects and branches/tags</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#7-advanced-operations" id="markdown-toc-7-advanced-operations">7. advanced operations</a>    <ul>
+      <li><a href="#71-merging" id="markdown-toc-71-merging">7.1 merging</a></li>
+      <li><a href="#72-cherry-pick" id="markdown-toc-72-cherry-pick">7.2 cherry-pick</a></li>
+      <li><a href="#73-rebasing" id="markdown-toc-73-rebasing">7.3 rebasing</a></li>
+      <li>
+<a href="#8-tying-up-some-loose-ends" id="markdown-toc-8-tying-up-some-loose-ends">8 tying up some loose ends</a>        <ul>
+          <li><a href="#81-the-confusion-about-checkout-versus-reset" id="markdown-toc-81-the-confusion-about-checkout-versus-reset">8.1 the confusion about checkout versus reset</a></li>
+          <li><a href="#82-detached-head-and-all-that" id="markdown-toc-82-detached-head-and-all-that">8.2 detached HEAD and all that</a></li>
+          <li><a href="#83-other-ways-to-detach-your-head" id="markdown-toc-83-other-ways-to-detach-your-head">8.3 other ways to detach your HEAD</a></li>
+          <li><a href="#84-re-attaching-the-head" id="markdown-toc-84-re-attaching-the-head">8.4 re-attaching the HEAD</a></li>
+          <li><a href="#85-the-reflog" id="markdown-toc-85-the-reflog">8.5 the reflog</a></li>
+          <li><a href="#86-the-end" id="markdown-toc-86-the-end">8.6 the end</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<ul>
+  <li>원문: <a href="https://gitolite.com/gcs.html#(1)">git concepts simplified</a>
+</li>
+  <li>저자: Sitaram Chamarty (sitaramc@gmail.com)
+    <ul>
+      <li>
+<i class="fa-brands fa-github fa-xl"></i> : <a href="https://github.com/sitaramc">Sitaram Chamarty github</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="내용">내용</h1>
+
+<h2 id="관용-표현">관용 표현</h2>
+
+<ul>
+  <li>Please be aware that’s only an artifact of ~  : ~의 결과물일뿐임을 알아주시기 바랍니다
+    <ul>
+      <li>artifact meaning #2 : a false or inaccurate result or effect that is produced accidntally (의도한 결과가 아닌듯한 뉘앙스)</li>
+    </ul>
+  </li>
+  <li>with a view to doing : ~할 목적으로, ~을 기대하여
+    <ul>
+      <li>a view to a kill : 살인을 목적으로</li>
+    </ul>
+  </li>
+  <li>at a ~ point in time : ~ 시점에
+    <ul>
+      <li>at this point in time :  이 시점에서</li>
+      <li>at a later point in time : 나중에, 시간적으로 늦은 시점에</li>
+    </ul>
+  </li>
+  <li>the usual practice : 일반적인 관습
+    <ul>
+      <li>follow the usual practice  : 일반적인 관습을 따르다</li>
+    </ul>
+  </li>
+  <li>digression : 여담, 탈선, 주제에서 벗어나기</li>
+  <li>prune : 잘라내다, 가지치기하다
+    <ul>
+      <li>We have pruned the graph a little for clarity</li>
+    </ul>
+  </li>
+  <li>somewhere in there : 그곳 어딘가에 (= in there somewhere )
+    <ul>
+      <li>somewhere in here : 여기 어딘가에</li>
+    </ul>
+  </li>
+  <li>think back : 생각해 내다, 회상하다</li>
+  <li>meanwhile : 그러는 동안</li>
+  <li>cherry-pick : 선별하다, 신중하게 고르다</li>
+  <li>a bunch of ~ : 한 다발의 ~</li>
+  <li>tie up loose ends : 미진한 부분을 처리하다 , 남은 일을 처리하다</li>
+  <li>myriad options : 다양한 옵션</li>
+  <li>pertain to ~ : ~에 속하다</li>
+  <li>in real terms : 실질적으로 ( 여기서 term은 조건의 의미?, 실제 조건에서)
+    <ul>
+      <li>terms of trade : 교역 조건</li>
+    </ul>
+  </li>
+  <li>be not much of a .. : 대단한 ..은 아니다
+    <ul>
+      <li>would not be much of a problem : 대단한 문제는 아니다</li>
+      <li>it will not be too much of a surprise : 크게 놀랄일은 아니다</li>
+      <li>I’m just not much of a crier. : 눈물이 없는 편이다</li>
+    </ul>
+  </li>
+  <li>shaken up : 충격을 받은</li>
+</ul>
+
+<h2 id="1-preface">1. preface</h2>
+<h3 id="11-about-this-slideshow">1.1 about this slideshow</h3>
+
+<ul>
+  <li>이 문서는 gitolite.com과는 별관련이 없지만 우연하게 이곳에 자리잡았다</li>
+  <li>git에 관한 것이라는 점만 관련이 있다</li>
+</ul>
+
+<h3 id="12-license">1.2 license</h3>
+<h3 id="13-viewing-this-slideshow">1.3 viewing This slideshow</h3>
+
+<ul>
+  <li>이 문서는 W3C가 만든 <a href="https://www.w3.org/Talks/Tools/Slidy2/Overview.html#(1)">HTML Slidy</a>를 사용한다</li>
+</ul>
+
+<h3 id="14-acknowledgements">1.4 acknowledgements</h3>
+
+<h4 id="this-document">this document</h4>
+
+<ul>
+  <li>이 문서는 <a href="https://eagain.net/articles/git-for-computer-scientists">Git for Computer Scientists</a> 로부터 애매하게(vaguely) 영감을 받았지만 CS인들만을 위한것은 아니다.
+    <ul>
+      <li>그리고 좀더 많이 detail 하며</li>
+      <li>활발하게 유지 보수된다. 저자가 feedback에 반응한다는 얘기다 ;-)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="this-slide-show">this slide show</h4>
+
+<ul>
+  <li>이 slide show는 pandoc’s slidy output mode와 약간의 pre-processing tweaks 로 완성되었다</li>
+  <li>Pandoc은 환상적이며 매우 강력하지만 지금 갖게된것이 아쉽다(Dec 2013)</li>
+  <li>tweaks의 대부분이 문서내에 <a href="https://graphviz.org/">graphviz</a> diagram을 내장하는 것과 관련된 것이므로 유지보수할 파일은 하나뿐이다</li>
+</ul>
+
+<h2 id="2-basics">2. basics</h2>
+<h3 id="21-what-is-a-sha">2.1 what is a SHA</h3>
+
+<ul>
+  <li>a commit은 a 160-bit hex value (the ‘SHA’)에 의해 유일하게 식별된다
+    <ul>
+      <li>이것은 다음에 설명하는 정보의 조각들로부터 계산된다</li>
+      <li>해당 commit에 존재하는 files와 directories의 SHA
+        <ul>
+          <li>SHA가 계산되는 방법에 대한 details는 이곳과 관련이 없다</li>
+        </ul>
+      </li>
+      <li>the parent commits(s)의 SHA
+        <ul>
+          <li>the repo 내의 최초의 commit을 제외한 모든 commit이
+            <ul>
+              <li>the change가 기초로 하는 one parent commit이 적어도 하나 있다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>the commit message : commit 할때 작성하는 message</li>
+      <li>the author name/email/timestamp</li>
+      <li>the commiter name/email/timestamp</li>
+    </ul>
+  </li>
+  <li>결국은, 내가 말했듯이
+    <ul>
+      <li>그것은 단지 크고, 명백하게 랜덤처럼 보이는, 숫자로</li>
+      <li>그 숫자는 실제로 암호학적으로 강력한 (a cryptographically-strong) checksum이다</li>
+      <li>그것은 보통 40개의 hex digits으로 작성된다</li>
+    </ul>
+  </li>
+  <li>인간은 이 숫자를 기억하지 못할것으로 예상된다
+    <ul>
+      <li>이 논의의 목적으로,
+        <ul>
+          <li>malloc()으로 반환되는 memory address와 유사한 것으로 생각하라</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>그것은 또한 GLOBALLY unique 하다!
+    <ul>
+      <li>세계 어느곳에 있든지 모든 repo의 어떤 commit도 똑같은 SHA를 갖지 않는다</li>
+      <li>(이것은 수학적으로 불가능한것이 아니라,</li>
+      <li>사실로 받아들일 정도로 일어날것 같지 않다는 말이다.</li>
+      <li>그것을 받아들이지 못한다면, 그냥 믿으세요).</li>
+    </ul>
+  </li>
+  <li>An example SHA: <mark style="background-color:pink;">a30236028b7ddd65f01321af42f904479eaff549</mark>
+</li>
+</ul>
+
+<h3 id="22-what-is-a-ref">2.2 what is a “ref”</h3>
+
+<ul>
+  <li>a ref는 단순히 a SHA의 이름이다
+    <ul>
+      <li>Branches나 tags(나중에 설명한다)는 refs이다</li>
+    </ul>
+  </li>
+  <li>some special refs(가장 일반적인 것은 <mark style="background-color:pink;">HEAD</mark>)가 있는데, 대개는 symbolic refs들이다
+    <ul>
+      <li>(i.e., they는 직접적으로 a SHA를 가리키는 대신에 보통 a ref를 가리킨다)</li>
+    </ul>
+  </li>
+  <li>어쨌든, 지금은
+    <ul>
+      <li>당신이 a SHA에거 준, 사람이 읽을수 있는 이름으로 생각하라</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="23-what-is-a-repo">2.3 what is a repo</h3>
+
+<figure>
+<img src="/wiki-img/2023/23what-is-a-repo.png" alt="">
+  <figcaption>a simple chain of commits</figcaption>
+</figure>
+
+<ul>
+  <li>a repository(‘repo’)는 commits의 a graph 이다</li>
+  <li>이 그림 에서, 편의를 위해 SHAs를 numbers로 표현한다</li>
+  <li>또한, 시간은 위쪽으로 흐르는 것으로 표현한다 (아래에서 위로)</li>
+</ul>
+
+<h3 id="hey-why-are-the-arrows-backward-in-your-pictures">(Hey, why are the arrows backward in your pictures?)</h3>
+
+<ul>
+  <li>그래서 왜 화살표가 뒷쪽을 가리키고 있지?
+    <ul>
+      <li>well… 모든 commits은 어느 것이 그들의 parent commit인지 안다
+        <ul>
+          <li>( 앞쪽의 “what is a SHA” 섹션에서 설명한것 처럼)</li>
+        </ul>
+      </li>
+      <li>하지만 그들의 child commit은 알지못한다(아직 안 만들었기때문에..)</li>
+    </ul>
+  </li>
+  <li>그러므로, a repo는 a single linked list와 같다
+    <ul>
+      <li>a double linked list와 같을 수는 없다</li>
+      <li>이것은 내용의 어떤 change라도 the SHA를 변경할 것이기 때문이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-branches-and-tags">3. branches and tags</h2>
+
+<figure style="width:10%;">
+<img src="/wiki-img/2023/31branch.png" alt="" style="width:80%;">
+  <figcaption>a branch</figcaption>
+</figure>
+
+<h3 id="31-branch">3.1 branch</h3>
+
+<ul>
+  <li>전통적으로, a linked list의 꼭대기(the top)는 a name을 가진다</li>
+  <li>that name이 a BRANCH name 이다</li>
+  <li>branch name을 초록색 원에 표시했다</li>
+</ul>
+
+<h3 id="32-more-than-one-branch">3.2 more than one branch</h3>
+
+<figure>
+<img src="/wiki-img/2023/32more-than-one-branch.png" alt="">
+  <figcaption>three branches</figcaption>
+</figure>
+
+<ul>
+  <li>(a.k.a “more than one child commit”)</li>
+  <li>a repo는 a GRAPH 라고 말한것을 기억하는가?</li>
+  <li>특히, 둘이상의 child node가 동일한 parent node를 가리킬 수 있다
+    <ul>
+      <li>오른쪽 그림에서 parent node = 3, child noes = 4, 7</li>
+      <li>오른쪽 그림에서 parent node = 2, child noes = 3, 5</li>
+    </ul>
+  </li>
+  <li>이런 경우, 각 ‘leaf node’는 a branch 이며, 이름을 가질것이다</li>
+  <li>place holder</li>
+</ul>
+
+<h3 id="33-more-than-one-parent-commit">3.3 more than one parent commit</h3>
+
+<figure style="float:inline-start;">
+<img src="/wiki-img/2023/33more-than-one-parent-commit.png" alt="">
+  <figcaption>a merge commit</figcaption>
+</figure>
+
+<ul>
+  <li>결국 branches를 다시 merge하지않으면 더 많은 branches를 계속 생성할수는 없다</li>
+  <li>“feature X”가 the main branch에 merge할 정도로 충분히 테스트 되었다고 하면
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">git merge feature_X</code>를 수행한다</li>
+      <li>오른쪽 그림이 그 결과이다</li>
+    </ul>
+  </li>
+  <li>commit 8이 이제 2 parents를 가진것에 주목하라
+    <ul>
+      <li>이 그림은 commit 8이 a “merge commit”인 것을 보여준다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float:left;margin:4em">
+<img src="/wiki-img/2023/33more-than-one-parent-commit02.png" alt="">
+  <figcaption>a deleted feature branch</figcaption>
+</figure>
+
+<p><br><br></p>
+
+<ul style="text-indent: 3ch">
+  <li>이 지점에서
+    <ul>
+      <li>특히, 당신이 더이상 “large” 변경을 예상하지 않는다면</li>
+      <li>the feature branch를 지우는 것은 매우 흔한일이다</li>
+    </ul>
+  </li>
+  <li>그래서 당신은
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">git branch -d feature_X</code>를 수행하면</li>
+      <li>왼쪽 그림과 같은 결과를 얻는다</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br><br><br></p>
+
+<figure style="float:inline-start">
+<img src="/wiki-img/2023/34current-branch.png" alt="">
+  <figcaption>HEAD</figcaption>
+</figure>
+
+<h3 id="34-current-branch--checked-out-branch">3.4 current branch / checked out branch</h3>
+
+<ul>
+  <li>a ‘currently checked out’ branch의 개념이 있다</li>
+  <li>HEAD라고 불리는 특별한 ref로 표시된다</li>
+  <li>HEAD는
+    <ul>
+      <li>a <strong>symbolic</strong> ref 이며</li>
+      <li>‘current branch’를 가리킨다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="35-committing">3.5 committing</h3>
+
+<ul>
+  <li>a new commit을 만들 때, the current branch가 이동한다</li>
+  <li>기술적으로, HEAD가 어떤 branch를 가리키든지 이동한다</li>
+</ul>
+
+<figure style="float:none;width:50%">
+<img src="/wiki-img/2023/35committing.png" alt="">
+  <figcaption>committing</figcaption>
+</figure>
+
+<figure style="width:30%">
+<img src="/wiki-img/2023/36naming-non-leaf-nodes.png" alt="">
+  <figcaption>non-leat</figcaption>
+</figure>
+
+<h3 id="36-naming-non-leaf-nodes">3.6 naming non-leaf nodes</h3>
+
+<ul>
+  <li>it은 단지 ‘leaf’ nodes일 뿐만 아니라
+    <ul>
+      <li>names을 가질수 있는 inner nodes이다</li>
+    </ul>
+  </li>
+  <li>이전에 <code class="language-html highlighter-rouge">feature_X</code>를 merge한 결과를 다시 기억해봐라
+    <ul>
+      <li>( “more than one parent commit” 섹션을 봐라)</li>
+    </ul>
+  </li>
+  <li>이지점에서,
+    <ul>
+      <li>
+<mark style="background-color:pink;">feature_X</mark> 를 영원히 그대로 둘 수도 있다</li>
+      <li>아니면 the branch를 지울 수도 있다
+        <ul>
+          <li>이번 section에서 이미 보여준 것처럼</li>
+          <li>그 경우에는 that label은 단순히 사라질것이다.</li>
+          <li>( “4”를 가리키는 the commit은 the merge 때문에 <mark style="background-color:pink;">master</mark>로부터 안전하게 도달가능하다</li>
+          <li>즉(that is),
+            <ul>
+              <li>master로 이어지는 a sequence of commits가 있기 때문에</li>
+              <li>“lost”된 것이 아니다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/36naming-non-leaf-nodes02.png" alt="">
+  <figcaption>further feature development</figcaption>
+</figure>
+
+<ul>
+  <li>나중에 다시 한 번 merge 할 수 있도록 좀 더 다듬으면서(refining)(분사구문 while 생략?)
+    <ul>
+      <li>
+<mark style="background-color:pink;">feature_X</mark> branch 위에서 개발을 계속할 수 있다</li>
+    </ul>
+  </li>
+  <li>이 문서의 주제와는 관계없지만, 이 것은 말해야 겠다
+    <ul>
+      <li>일반적인 관례는
+        <ul>
+          <li>개발을 좀 더 진행하기 전에</li>
+          <li>우선 master를 <mark style="background-color:pink;">feature_X</mark>로 다시 병합하는 것이다</li>
+          <li>(그 이유는) master가 이제까지 모아온 모든 other stuff를 it(feature_X)이 확실히 갖도록 (하는것이다)</li>
+          <li>(이것은 옆 그림에서 commit 9에서 보여진다)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="37-tags">3.7 tags</h3>
+
+<ul>
+  <li>좀더 일반적으로
+    <ul>
+      <li>inner nodes는 TAGS이다</li>
+    </ul>
+  </li>
+  <li>tag names는 yellow circles로 표시했다</li>
+</ul>
+
+<figure style="float:none;width:40%">
+<img src="/wiki-img/2023/37tags.png" alt="">
+  <figcaption>a tag</figcaption>
+</figure>
+
+<h3 id="38-the-difference-between-branches-and-tags">3.8 the difference between branches and tags</h3>
+
+<ul>
+  <li>a branch 와 a tag의 주요 차이점은
+    <ul>
+      <li>branches는 이동하고(move)</li>
+      <li>tags는 그렇지 않다는 것이다</li>
+    </ul>
+  </li>
+  <li>현재 checked out 된 the “master” branch에 a commit을 했다면
+    <ul>
+      <li>master는 new commit 위치로 이동할 것이다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float:none;width:40%">
+<img src="/wiki-img/2023/38the-difference-between-branches-and-tags.png" alt="">
+  <figcaption>branch versus tag</figcaption>
+</figure>
+
+<h2 id="4-digressions---1">4 digressions - 1</h2>
+
+<h3 id="41-what-is-a-git-url">4.1 what is a git URL?</h3>
+
+<ul>
+  <li>Git repos는 a URL을 제공하여 access할 수있다</li>
+  <li>전형적인 4 종류의 Git URLs가 있다
+    <ul>
+      <li>ssh: <mark style="background-color:pink;">ssh://[user@]host.xz[:port]/path/to/repo.git/</mark>
+</li>
+      <li>http: <mark style="background-color:pink;">http[s]://host.xz[:port]/path/to/repo.git/</mark>
+</li>
+      <li>git: <mark style="background-color:pink;">git://host.xz[:port]/path/to/repo.git/</mark>
+        <ul>
+          <li>주목하라 : 이것은 인증받지 않은(unauthenticated) 프로토콜로
+            <ul>
+              <li>오픈 소스나 유사한 소프트웨어의 다운로드를 허용하는데에만 적합하다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>local file: <mark style="background-color:pink;">file://ful/pathto/reponame</mark>
+</li>
+    </ul>
+  </li>
+  <li>(git URLs에 대해 허용된 모든 문법을 보려면 ‘man git-clone’을 실행하라)</li>
+</ul>
+
+<h3 id="42-what-is-a-remote">4.2 what is a “remote”?</h3>
+
+<ul>
+  <li>A remote는
+    <ul>
+      <li>특정 git repository를 참조하는데 사용되는</li>
+      <li>(an alias와 같은) a short name이다</li>
+    </ul>
+  </li>
+  <li>다음과 같이 명령을 호출(saying)하는것 대신
+    <ul>
+      <li><mark style="background-color:pink;">git fetch git://sitaramc/gitolite</mark></li>
+      <li>that(URL)을 a remote로 추가하고</li>
+      <li>the long URL 대신 that short name을 사용할 수 있다</li>
+    </ul>
+  </li>
+  <li>편의성을 위해,
+    <ul>
+      <li>‘origin’이라 불리는 a ‘remote’가</li>
+      <li>a repo를 clone할 때 자동적으로 생성되며</li>
+      <li>(a ‘remote’는) 당신이 clone해온 the repo를 가리킨다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="5-local-and-remote-repos">5. local and remote repos</h2>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/51remote-branches.png" alt="">
+  <figcaption>a remote</figcaption>
+</figure>
+
+<h2 id="51-remote-branches">5.1 remote branches</h2>
+
+<ul>
+  <li>Git은
+    <ul>
+      <li>분산된(distributed) version control system이다</li>
+      <li>그래서
+        <ul>
+          <li>누군가의 repo를 clone할 때</li>
+          <li>그것 안의 모든 branches를 가져온다</li>
+        </ul>
+      </li>
+      <li>Remote branches는
+        <ul>
+          <li>the remote의 이름을 접두어로 한다</li>
+          <li>그리고 옆 그림에서 orange로 표시한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="52-multiple-remotes">5.2 multiple remotes</h2>
+
+<ul>
+  <li>당신은 몇가지 remote를 가질수 있다</li>
+</ul>
+
+<figure style="float:none;width:85%">
+<img src="/wiki-img/2023/52multiple-remotes.png" alt="">
+  <figcaption>several remotes</figcaption>
+</figure>
+
+<h2 id="53-fetching-and-merging-from-another-repo">5.3 fetching and merging from another repo</h2>
+
+<figure style="width:60%">
+<img src="/wiki-img/2023/53fetching-and-merging-from-another-repo.png" alt="">
+  <figcaption>before merge</figcaption>
+</figure>
+
+<ul>
+  <li>이제 Sita’s repo가
+    <ul>
+      <li>master로 부터 몇 개의 새로운 commits을 가졌다고 해보자</li>
+      <li>,그리고 <mark style="background-color:pink;">git fetch sitas-repo</mark>를 수행한다</li>
+    </ul>
+  </li>
+  <li>(우리는 명확성을 위해
+    <ul>
+      <li>관련있는 commits만 보이도록</li>
+      <li>the graph를 좀 가지치기 했다;</li>
+      <li>the commits와 branches의 나머지는
+        <ul>
+          <li>바로 앞 그림과 같은 상태로 존재하는 것으로 가정한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/53fetching-and-merging-from-another-repo02.png" alt="">
+  <figcaption>after merge</figcaption>
+</figure>
+
+<ul>
+  <li>이제
+    <ul>
+      <li>Sita’s master branch를</li>
+      <li>당신것에 merge하길 원한다고 해보자</li>
+    </ul>
+  </li>
+  <li>Sita’s master에 없는 것은
+    <ul>
+      <li>당신의 master에도 없기 때문에</li>
+      <li>(즉, Sita’s master는 당신것의 상위집합이다)</li>
+      <li>
+<mark style="background-color:pink;">git merge sitas-repo/master</mark>를
+        <ul>
+          <li>실행하는것은</li>
+          <li>옆 그림의 결과를 준다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="6-digressions---2">6. digressions - 2</h1>
+
+<h2 id="61-the-object-store">6.1 the object store</h2>
+
+<ul>
+  <li>Git은
+    <ul>
+      <li>모든 data를</li>
+      <li>repository의 최상위에 위치한</li>
+      <li>
+<mark style="background-color:pink;">.git</mark>이라 불리는 특별한 directory에 저장한다</li>
+    </ul>
+  </li>
+  <li>그곳 어딘가에
+    <ul>
+      <li>우리가 단순히 the <em>object store</em>라고 부르는 것이 있다</li>
+      <li>( that phrase가 불편하다면, 일종의 database로 생각해라)</li>
+    </ul>
+  </li>
+  <li>Git은
+    <ul>
+      <li>당신의 모든 data를</li>
+      <li>this object store에 저장한다</li>
+    </ul>
+  </li>
+  <li>this store에는 4가지 objects가 있다
+    <ul>
+      <li>
+<strong>blob</strong> - the repo에 추가한 each file은 a blob object로 변환된다</li>
+      <li>
+<strong>tree</strong> - each directory는 a tree object로 변환된다
+        <ul>
+          <li>분명하게, a tree object는
+            <ul>
+              <li>마치 a directory가 다른 directories와 files를 포함하듯이</li>
+              <li>다른 tree objects와 blob objects를 포함할 수 있다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<strong>commit</strong> - a commit은
+        <ul>
+          <li>it(a commit)이 많은 다른 정보들 또한 갖고있긴 하지만</li>
+          <li>특정 시점의 working tree의 a snapshot이다</li>
+        </ul>
+      </li>
+      <li>
+<strong>tag</strong> - 주석이달린(annotated) tag는
+        <ul>
+          <li>tag이 달린 the commit의 the SHA</li>
+          <li>some other metadata</li>
+          <li>the message</li>
+          <li>를 가지고 있다</li>
+          <li>a GPG-signed tag은 the GPG signature 또한 가진다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>(원한다면 이 세부사항을 봐라:
+    <ul>
+      <li>a blob은 the hierarchy 내에서 최하위이다.</li>
+      <li>한 개 이상의 blobs and trees가 a tree를 만든다</li>
+      <li>A commit은
+        <ul>
+          <li>a tree에</li>
+          <li>parent sommit(s)의 the SHA,</li>
+          <li>the commit message,</li>
+          <li>author/committer names and emails,</li>
+          <li>와 tiestamps</li>
+          <li>를 더한것이다</li>
+        </ul>
+      </li>
+      <li>일반적인 사용조건하에서, 이들 모두를 다룰필요는 없다 )</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="62-what-is-a-repo-again">6.2 what is a repo (again)</h2>
+
+<ul>
+  <li>앞부분에서, a repo는 commits으로 이루어진 a graph 인것을 봤다</li>
+  <li>the file system level에서,
+    <ul>
+      <li>하지만, it(a repo)는 기본적으로</li>
+      <li>어느정도(somewhat) 아래처럼 보이는</li>
+      <li>
+<mark style="background-color:pink;">.git</mark>이라 불리는 a directory이다</li>
+    </ul>
+
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-al</span> .git
+total 40
+drwxrwxr-x 7 sitaram sitaram 4096 Sep 14 18:54 ./
+drwx------ 3 sitaram sitaram 4096 Sep 14 18:54 ../
+drwxrwxr-x 2 sitaram sitaram 4096 Sep 14 18:54 branches/
+<span class="nt">-rw-rw-r--</span> 1 sitaram sitaram   92 Sep 14 18:54 config
+<span class="nt">-rw-rw-r--</span> 1 sitaram sitaram   73 Sep 14 18:54 description
+<span class="nt">-rw-rw-r--</span> 1 sitaram sitaram   23 Sep 14 18:54 HEAD
+drwxrwxr-x 2 sitaram sitaram 4096 Sep 14 18:54 hooks/
+drwxrwxr-x 2 sitaram sitaram 4096 Sep 14 18:54 info/
+drwxrwxr-x 4 sitaram sitaram 4096 Sep 14 18:54 objects/
+drwxrwxr-x 4 sitaram sitaram 4096 Sep 14 18:54 refs/
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="63-objects-and-branchestags">6.3 objects and branches/tags</h2>
+
+<ul>
+  <li>이해해야하는 정말, 정말 중요한 것은
+    <ul>
+      <li>the object store는 아래 내용을 상관하지 않는다는 것이다
+        <ul>
+          <li>the commit이 어디로부터 왔는지</li>
+          <li>혹은 it(a commit)이 the object store에 들어갈때,
+            <ul>
+              <li>it(a commit)이 어떤 “branche”의 일부였는지</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>일단 거기에 있으면, 거기에 있는거다!</li>
+    </ul>
+  </li>
+  <li>여기 3개의 diagrams를 다시 돌아보자
+    <ul>
+      <li>첫번째는 당신이 fetch를 하기 전이다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float:none;width:70%">
+<img src="/wiki-img/2023/63objects-and-branches-tags.png" alt="">
+  <figcaption>before fetch</figcaption>
+</figure>
+
+<ul>
+  <li>다음 두개의 그림은 각각
+    <ul>
+      <li>
+<mark style="background-color:pink;">git fetch sitas-repo</mark> 실행이후와</li>
+      <li>
+<mark style="background-color:pink;">git merge sitas-repo/master</mark> 실행이후이다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float:inline-start;width:35%">
+<img src="/wiki-img/2023/63after-merge.png" alt="">
+  <figcaption>after merge</figcaption>
+</figure>
+
+<figure style="float:none;width:50%">
+<img src="/wiki-img/2023/63after-fetch.png" alt="">
+  <figcaption>after fetch</figcaption>
+</figure>
+
+<ul>
+  <li>하지만,
+    <ul>
+      <li>단지 they(commits 10 and 11)가 지금 <strong>당신의 local “master” branch</strong>에 있다는 이유로는</li>
+      <li>commits 10 과 11이 어떤식으로도 바뀌지 않았음에 주목하라</li>
+    </ul>
+  </li>
+  <li>They(commits 10 and 11)는
+    <ul>
+      <li>계속 같은 SHA values를 가지며</li>
+      <li>the object store는 the command의 결과로 전혀 바뀌지 않는다</li>
+    </ul>
+  </li>
+  <li>당신이 한 모든 일은
+    <ul>
+      <li>a pointer를 하나의 node에서 다른곳으로 이동한것 뿐이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="7-advanced-operations">7. advanced operations</h1>
+
+<h2 id="71-merging">7.1 merging</h2>
+
+<figure style="width:50%">
+<img src="/wiki-img/2023/71before-non-ff-merge.png" alt="">
+  <figcaption>before non-ff merge</figcaption>
+</figure>
+
+<ul>
+  <li>첫번째로 merging을 하자</li>
+  <li>앞에서 본 the merge는
+    <ul>
+      <li>a “fast-forward” merge 라고 부르는데,</li>
+      <li>mergin하려는 the remote branche에 없는 어떤 commits도</li>
+      <li>당신의 local master에 없는 경우를 말한다</li>
+    </ul>
+  </li>
+  <li>실제로,
+    <ul>
+      <li>많은 개발자와 함께 하는 활성화된 프로젝트에서는</li>
+      <li>이런 경우는 드물다</li>
+      <li>그래서 that이 어떤지 같이 보자</li>
+      <li>시작 지점은 이곳이었다:</li>
+    </ul>
+  </li>
+  <li>이제,
+    <ul>
+      <li>your local master에서 몇가지 변경을 더했다</li>
+      <li>그러는 동안, sitas-repo는  몇가지 변경을 했었고
+        <ul>
+          <li>a fetch를 실행해서 그것들은 가지고 왔다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float: none;width:50%">
+<img src="/wiki-img/2023/71after-fetch.png" alt="">)
+  <figcaption>after-fetch</figcaption>
+</figure>
+
+<ul>
+  <li>merge를 하면, 최종 결과는 아래 그림 처럼 보인다</li>
+</ul>
+
+<figure style="float:none;width:50%">
+<img src="/wiki-img/2023/71after-non-ff-merge.png" alt="">
+  <figcaption>after non-ff merge</figcaption>
+</figure>
+
+<h2 id="72-cherry-pick">7.2 cherry-pick</h2>
+
+<ul>
+  <li>a cherry-pick은
+    <ul>
+      <li>매우 일반적으로 수행되는 것은 아니다</li>
+      <li>잘 설계된 workflows 에서 it(a cherry-pick)은 드물어야 한다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/72before-cherry-pick.png" alt="">
+  <figcaption>before cherry-pick</figcaption>
+</figure>
+
+<ul>
+  <li>하지만, a cherry-pick은
+    <ul>
+      <li>git 에서의 중요한 컨셉을 묘사하기 위한 좋은 방법이다</li>
+    </ul>
+  </li>
+  <li>앞에서 a commit은
+    <ul>
+      <li>files와 directories의 특정 집합(set)을 표현한다고 했다</li>
+      <li>하지만 대부분의 commits이 한 개의 parent만 가지므로</li>
+      <li>a commit이 일련의 changes 또한 표현한다고 생각할 수 있다</li>
+      <li>(사실상, 대부분의 오래된 VCSs가 이랬다)</li>
+    </ul>
+  </li>
+  <li>당신의 동료중 한명(신비에 싸인 “Sita” 재등장!)이
+    <ul>
+      <li>그의 repo copy에 한 다발의 변경사항을 반영했다고 하자</li>
+      <li>당신의 이 변경사항의 대부분이 싫지만,</li>
+      <li>그 중 한개의 변경사항만 당신의 repo에 가져오고 싶다고 하자</li>
+      <li>시작점은 그림과 같다:</li>
+    </ul>
+  </li>
+  <li>여기서, sitas-repo는
+    <ul>
+      <li>그의 마스터위에 3개의 commits(12, 13, and 14)를 가지고,</li>
+      <li>당신은 그 중 commit 13 에만 관심이 있다고 하자</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/72after-cherry-pick.png" alt="">
+  <figcaption>after cherry-pick</figcaption>
+</figure>
+
+<ul>
+  <li>
+<mark style="background-color:pink;">~1</mark>의 의미에 대해서 지금은 걱정하지 마라
+    <ul>
+      <li>(추측은 할 수 있어야하긴 하지만!),</li>
+      <li>하지만, 당신이 실행해볼 수 있는 the command가 있다</li>
+      <li><mark style="background-color:pink;">git cherry-pick sitas-repo/master~1</mark></li>
+    </ul>
+  </li>
+  <li>위 명령의 결과는 옆 그림의 commit graph와 같다</li>
+  <li>the new commit을 “13a”로 부르는 것에 주목하라.
+    <ul>
+      <li>이 것은 다음과 같은 사실을 반영하려는 것이다</li>
+      <li>반영된 변경사항은 원래의 commit 13과 똑같은 변경사항이지만</li>
+      <li>the SHA는 더 이상 같지 않을것이다</li>
+      <li>(다른 이유는.. 새로운 부모 commit, 새로운 “tree”,</li>
+      <li>새로운 commiter name/emial/commit time, 등등 때문이다)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="73-rebasing">7.3 rebasing</h2>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/73after-fetch.png" alt="">
+  <figcaption>after fetch</figcaption>
+</figure>
+
+<ul>
+  <li>merging 대신,
+    <ul>
+      <li>Sita’s commits 위에</li>
+      <li>당신의 commits을 rebase하길 원한다고 해보자</li>
+    </ul>
+  </li>
+  <li>우선, rebasing이 무엇인가?
+    <ul>
+      <li>그것은 기본적으로
+        <ul>
+          <li>the graph의 한 지점으로부터</li>
+          <li>일련의 변경사항들을</li>
+          <li>다른 지점으로 이식하는 것이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>그래서 만약에
+    <ul>
+      <li>a rebase가</li>
+      <li>(원칙적으로) cherry-picks의 연속으로 추측했다면</li>
+      <li>적어도 개념적인 측면에서는</li>
+      <li>매우 가까운 추측을 한 것이다</li>
+    </ul>
+  </li>
+  <li>그러므로
+    <ul>
+      <li>앞선 merge 예제와 유사한 예제를 사용하자</li>
+      <li>하지만 sitas-repo 대신에</li>
+      <li>새로운 commit이 “origin”(이 프로젝트의 “main”server)</li>
+      <li>에 있다고 하자</li>
+    </ul>
+  </li>
+  <li>당신은 당신의 새로운 commits을 가졌고
+    <ul>
+      <li>
+<mark style="background-color:pink;">git fetch origin</mark>명령을 하면</li>
+      <li>“origin”에서 마지막 commits를 가져와서</li>
+      <li>옆 그림처럼 된다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:50%">
+<img src="/wiki-img/2023/73after-rebase.png" alt="">
+  <figcaption>after rebase</figcaption>
+</figure>
+
+<ul>
+  <li>이제,
+    <ul>
+      <li>“origin/master”를</li>
+      <li>당신의 local master에 merging하는 것 대신에,</li>
+      <li>“origin/master”위에</li>
+      <li>당신의 commits를 rebase하길 원한다.</li>
+    </ul>
+  </li>
+  <li>즉, 당신은
+    <ul>
+      <li>the origin의 commit 13 이후에</li>
+      <li>당신의 local changes가</li>
+      <li>반영되는것처럼 보이길 원한다</li>
+    </ul>
+  </li>
+  <li>그래서 당신은
+    <ul>
+      <li>
+<mark style="background-color:pink;">git rebase origin/master</mark>명령을 수행하고</li>
+      <li>옆 그림과 같은 결과가 된다</li>
+    </ul>
+  </li>
+  <li>우리는 여기서
+    <ul>
+      <li>command syntax와 뉘앙스를</li>
+      <li>무시하고 있다는 것을 다시 주목하라</li>
+    </ul>
+  </li>
+  <li>이것은 컨셉에 대한 것이다</li>
+  <li>또한 다시,
+    <ul>
+      <li>the 2 commits의 the SHAs가 변경된것에 주목하라</li>
+      <li>그들은 이제 새로운 parents,tree,etc 를 가지며,</li>
+      <li>이점을 suffix”a”를 붙여서 표시했다</li>
+    </ul>
+  </li>
+  <li>매달린(dangling) commits 10 and 11을 주목하라
+    <ul>
+      <li>아무런 branch도 그들을 가리키지 않기 때문에</li>
+      <li>그들은 기본적으로 disk 공간 낭비이다</li>
+      <li>(그들은 ‘reflog’를 사용하여 검사되고 회수될수 있다</li>
+      <li>또는 그대로 남겨진다면 결국은 garbage collected 될것이다)</li>
+    </ul>
+  </li>
+  <li>cherry-pick과는 달리,
+    <ul>
+      <li>실제 사용할때 a rebase는 꽤 많이 발생한다</li>
+    </ul>
+  </li>
+  <li>Rebase에는 좀 다른 형식도 있다</li>
+  <li>이 형식(form)은 하나인데,
+    <ul>
+      <li>개발자가 자신의 local commits을</li>
+      <li>publishing/pushing 하기 전에</li>
+      <li>보다 논리적인 순서로 재정렬 하고 싶은 경우가</li>
+      <li>가장 일반적인 경우이다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="float:inline-start;width:60%">
+<img src="/wiki-img/2023/73fixup-rebased.png" alt="">
+  <figcaption>fixup rebased</figcaption>
+</figure>
+
+<figure style="float:none;width:30%">
+<img src="/wiki-img/2023/73fixup-commit.png" alt="">
+  <figcaption>fixup commit</figcaption>
+</figure>
+
+<ul>
+  <li>“fixup commit”을 “fixup rebased”로 변경하는 형태를 많이 작업하는데
+    <ul>
+      <li>“fixup commit”에서 “22delta”는 a minor fixup to “22”이고</li>
+      <li>“git rebase -i”를 사용하여 작업한다</li>
+    </ul>
+  </li>
+  <li>다음과 같은 점을 주목하라
+    <ul>
+      <li>commit 22은 SHA를 변경하기 때문에</li>
+      <li>지금은 rebase된 - 모든 그의 child commits은</li>
+      <li>또한 새로운 SHAs를 가질것이다</li>
+      <li>이것이
+        <ul>
+          <li>이미 발행된 branches를</li>
+          <li>(거의) 결코 rebase 하지 말아야 하는 이유이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="8-tying-up-some-loose-ends">8 tying up some loose ends</h2>
+
+<h3 id="81-the-confusion-about-checkout-versus-reset">8.1 the confusion about checkout versus reset</h3>
+
+<ul>
+  <li>제발 주목하라
+    <ul>
+      <li>이 section은
+        <ul>
+          <li>이러한 두 명령, 특히 the index 및 the working tree</li>
+          <li>와 관련된 옵션에서 사용 가능한</li>
+          <li>무수한 옵션들을 무시한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>우리가 하려는 모든 것은
+    <ul>
+      <li>the commands가</li>
+      <li>the branch와 <mark style="background-color:pink;">HEAD</mark>에 하는 것을</li>
+      <li>보여주는것 이고, 그 외에는 없다</li>
+    </ul>
+  </li>
+  <li>때문에,
+    <ul>
+      <li>이 것은 그 두 commands에 대한 완전한 논의가 아니며</li>
+      <li>일부 측면일 일뿐이다</li>
+    </ul>
+  </li>
+  <li>사실상,
+    <ul>
+      <li>이 둘이 때때로 혼동되는 the major reason은</li>
+      <li>사람들이</li>
+      <li>
+<mark style="background-color:pink;">git checkout -f</mark>와  <mark style="background-color:pink;">git reset --hard</mark>이</li>
+      <li>결국 같은일을 한다는 것을 알게되기 때문이며,</li>
+      <li>이 것을 기초로 다른 options에 대해서도 추론하기 때문이다</li>
+    </ul>
+  </li>
+  <li>그냥 아래 내용을 기억해라
+    <ul>
+      <li>아주 다른 두 개의 명령의 특별한 경우들이</li>
+      <li>우연히 그 지점 에서 만나게 되었을 뿐이다</li>
+    </ul>
+  </li>
+  <li>기본적인 차이는 매우 간단한다:
+    <ul>
+      <li>“checkout”은 현재 branch의 상태를 변경한다 (즉, HEAD가 가리키는 곳을 변경한다)</li>
+      <li>“reset”은 현재 branch가 어느 commit을 가리키는 가를 변경한다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:30%">
+<img src="/wiki-img/2023/81starting-point.png" alt="">
+  <figcaption>starting point</figcaption>
+</figure>
+
+<ul>
+  <li>여기에
+    <ul>
+      <li>어떤 일이 벌어지고 있는지를 보여주는 그림이 있다.</li>
+      <li>(간단하게 하기위해 commits 6과 7 아래는 생략되었다)</li>
+      <li>첫 번째 그림은 일반적인 시작지점이다</li>
+    </ul>
+  </li>
+  <li>다음 두개의 그림은
+    <ul>
+      <li>a checkout 과 a reset 효과를 각각 보여준다</li>
+      <li>각 그림에서 시작 지점과 비교하여</li>
+      <li>어느 line이 움직이는지 주목하라</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/81checkout.png" alt="">
+  <figcaption>checkout</figcaption>
+</figure>
+
+<ul>
+  <li>그림에서 보듯이
+    <ul>
+      <li>시작했을때 현재 branch는 “master” 이다</li>
+      <li>(HEAD 가 가리키는 곳으로 표시된다)</li>
+    </ul>
+  </li>
+  <li>A “checkout”은
+    <ul>
+      <li>현재 branch가 어느 것인지를 변경한다</li>
+      <li>“checkout”으로 “devel”로 변경되었다</li>
+      <li>때문에 지금부터 어떤변경이든지</li>
+      <li>“master”가 아니라”devel” 위에 쌓이게 된다</li>
+    </ul>
+  </li>
+  <li>반면에, a “reset”은
+    <ul>
+      <li>현재 branch가 어느 commit을 가리키는 지를 변경한다</li>
+      <li>당신의 branch는 여전히 mater 이지만,</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/81reset.png" alt="">
+  <figcaption>reset</figcaption>
+</figure>
+
+<ul>
+  <li>이제는 잠재적으로
+    <ul>
+      <li>
+<em>완전히</em> 다른 history가 될수 있는 것을</li>
+      <li>가리키고 있다</li>
+    </ul>
+  </li>
+  <li>(다음을 주목하라,
+    <ul>
+      <li>the rebase 예제에서와 같이,</li>
+      <li>어떤 branch도 가리키지 않는 - a dangling commit</li>
+      <li>이 존재한다</li>
+      <li>그것은 <code class="language-html highlighter-rouge">reflog</code>명령으로 접근가능하며,</li>
+      <li>결국 garbage collect로 처리된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="82-detached-head-and-all-that">8.2 detached HEAD and all that</h3>
+
+<figure style="float:inline-start;width:40%">
+<img src="/wiki-img/2023/82after-commit.png" alt="">
+  <figcaption>after commit</figcaption>
+</figure>
+
+<figure style="float:none;width:40%">
+<img src="/wiki-img/2023/82before-commit.png" alt="">
+  <figcaption>before commit</figcaption>
+</figure>
+
+<ul>
+  <li>지금까지
+    <ul>
+      <li>HEAD가 a branch name을 가리키는 것과</li>
+      <li>the branch 자신이 a commit을 가리키는 것을 봐왔다</li>
+    </ul>
+  </li>
+  <li>그렇다면
+    <ul>
+      <li>a commit을 만들때,</li>
+      <li>the branch는 the new commit 쪽으로 이동한다</li>
+      <li>(HEAD가 the branch name을 여전히 가리키고 있음에도 불구하고)</li>
+    </ul>
+  </li>
+  <li>요약하고 싶다면,
+    <ul>
+      <li>간단한 before/after 표시로 이 주제와 관련된 the tree의 일부분을 살펴봐라</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/82after-checkout-v10.png" alt="">
+  <figcaption>after checkout v1.0</figcaption>
+</figure>
+
+<ul>
+  <li>이제
+    <ul>
+      <li>
+<mark style="background-color:pink;">git checkout v1.0</mark>을 실행할 때</li>
+      <li>무슨 일이 발생하는지 보자</li>
+    </ul>
+  </li>
+  <li>미묘한 차이를 알아챘는가?
+    <ul>
+      <li>HEAD는 더 이상 a <strong>symbolic</strong> ref가 아니다</li>
+      <li>(즉, a real branch를 가리키고 있다)</li>
+    </ul>
+  </li>
+  <li>그 대신,
+    <ul>
+      <li>HEAD는 a commit을</li>
+      <li>직접 가리키고 있다</li>
+    </ul>
+  </li>
+  <li>실제 조건에서,
+    <ul>
+      <li>이것이 문자그대로 일어나는 것이다</li>
+      <li>“master”를 check out 할 때,</li>
+      <li>HEAD의 내용( 단지 .git 폴더 내의 a file 이다)은 단순히 아래 내용이다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>ref: refs/heads/master
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>
+<mark style="background-color:pink;">git checkout devel</mark> 를 실행하면 (devel은 local branch) 아래와 같이 된다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>ref: refs/heads/devel
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>하지만, 이전에 말했던 것을 기억하는가?
+    <ul>
+      <li>branches만 이동할수 있으며, tags는 이동할수 없다</li>
+      <li>그래서 <mark style="background-color:pink;">git checkout v1.0</mark>을 실행하면 HEAD는 아래 내용을 포함한다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>90fed7792746a9a33e24059fb171f6bbb6ffebe6
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>아니면 저런 hash를 포함한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:50%">
+<img src="/wiki-img/2023/82commit-on-detached-HEAD.png" alt="">
+  <figcaption>commit on detached HEAD</figcaption>
+</figure>
+
+<ul>
+  <li>local branches에 수행한 (commit 8)작업을 (여기서도)수행했다면,
+    <ul>
+      <li>the tag가 이동할 것임을 의미한다. 맞나?</li>
+      <li>그렇지 않아야한다 - 움직인다면 아무래도 a tag는 아닐것이다</li>
+    </ul>
+  </li>
+  <li>그래서 이런 관점에서,
+    <ul>
+      <li>a commit을 한다면,</li>
+      <li>HEAD 만 변경되며, 다른 것은 안 바뀐다</li>
+      <li>HEAD가 어떤 local branch name에도</li>
+      <li>더이상 붙어있지 않기 때문이다</li>
+    </ul>
+  </li>
+</ul>
+
+<figure style="width:40%">
+<img src="/wiki-img/2023/82unreachable-commit.png" alt="">
+  <figcaption>unreachable commit</figcaption>
+</figure>
+
+<ul>
+  <li>이 사실이 위험하게 생각되는 이유는
+    <ul>
+      <li>이제 <mark style="background-color:pink;">git checkout master</mark> 를 실행하면</li>
+      <li>옆 그림 상태가 되기 때문이다</li>
+    </ul>
+  </li>
+  <li>new commit 8에 어떤 일이 발생했는가?
+    <ul>
+      <li>그냥 매달려있다 (dangling)</li>
+      <li>즉, 닿을수 없다. (unreachable)</li>
+      <li>( 물론,</li>
+      <li>the reflog 명령을 제외하고 말이다,</li>
+      <li>초보자는 충격을 받을 수도 있다!)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="83-other-ways-to-detach-your-head">8.3 other ways to detach your HEAD</h3>
+
+<ul>
+  <li>a detached HEAD 상태가 되는 가장 일반적인 방법은
+    <ul>
+      <li>그 위에 commits 을 하기전에</li>
+      <li>a local copy를 만들 필요가 있다는 것을 깨닫지 못하고</li>
+      <li>a remote branch를 check out 하는 것이다</li>
+      <li>(<mark style="background-color:pink;">git checkout origin/branch</mark> 처럼)</li>
+    </ul>
+  </li>
+  <li>(Side note:
+    <ul>
+      <li>a remote branch에서 가져온 a local branch를
+        <ul>
+          <li>create하거나 checkout 하는 올바른 syntax는</li>
+          <li>
+<mark style="background-color:pink;">git checkout -t -b branch origin/branch</mark> 였지만</li>
+          <li>modern git 은 <mark style="background-color:pink;">git checkout branch</mark>만 해도 된다</li>
+        </ul>
+      </li>
+      <li>진보에 찬사를!)</li>
+    </ul>
+  </li>
+  <li>
+<mark style="background-color:pink;">git checkout origin/branch</mark>가 a detached HEAD 상태를 만드는 이유는
+    <ul>
+      <li>remote branches가 이동할 수는 있지만,</li>
+      <li>
+<mark style="background-color:pink;">git fetch</mark>나 equivalent의 결과로만 그렇게 할 수 있다</li>
+      <li>결국, they(remote branches)는
+        <ul>
+          <li>the <em>remote</em>가 무엇을 가지는지 추적하기 위한것이기에,</li>
+          <li>그들이 <em>local</em> commits을 갖는 것이 합리적이지 않다!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>아래에 detach HEAD하는 다양한 방법이 있다:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>git checkout origin/master    <span class="c"># (described above)</span>
+git checkout master^          <span class="c"># parent of master </span>
+git checkout HEAD~2           <span class="c"># grandparent of current HEAD</span>
+git checkout tagname          <span class="c"># since you cant commit to a tag!</span>
+git checkout &lt;SHA&gt;            <span class="c"># hex digits forming a full or partial SHA</span>
+git checkout master^0         <span class="c"># (see note below)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>위 명령들은 모두
+    <ul>
+      <li>
+<mark style="background-color:pink;">HEAD</mark>라 불리는 file이</li>
+      <li>
+<mark style="background-color:pink;">ref: refs/heads/branch</mark>같은 어떤 string 대신에</li>
+      <li>대응되는 commit의 the actual (40-hex-digt) SHA를</li>
+      <li>포함하도록 한다</li>
+    </ul>
+  </li>
+  <li>마지막 명령 (<mark style="background-color:pink;">git checkout master^0</mark>)은 흥미롭다
+    <ul>
+      <li>
+<mark style="background-color:pink;">master^0</mark> notation이</li>
+      <li>“master가 가리키는 the actual commit”을 의미하기 때문에,</li>
+      <li>
+<mark style="background-color:pink;">git checkout 〈SHA〉</mark>라고 하는 것과 같기 때문이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="84-re-attaching-the-head">8.4 re-attaching the HEAD</h3>
+
+<ul>
+  <li>최근의 git은
+    <ul>
+      <li>command line 상태에 있다면</li>
+      <li>a detached HEAD 상태에서</li>
+      <li>commits을 잃게될 것이라고 경고할 것이다</li>
+      <li>그리고, 어떻게 recover(즉시)하는지 말해줄것이다</li>
+    </ul>
+  </li>
+  <li>다른 branch로 전환하기 전에
+    <ul>
+      <li>당신이 a detached HEAD상태에 있는것 알아차린 다면</li>
+      <li>Recovery는 매우 쉽다
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>git checkout <span class="nt">-b</span> newbranch
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>아마도 몇가지 commits을 한 상태로
+    <ul>
+      <li>당신이 이미 전환하고 나서,</li>
+      <li>a detached HEAD 상태로 몇개의 commit을 잃을 것을 알아차린 다면,</li>
+      <li>the lost HAD를 찾기 위해 reflog를 check하고</li>
+      <li>아래 명령으로 그쪽으로 전환할</li>
+      <li>필요가 있다
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>git branch newbranch HEAD@<span class="o">{</span>1<span class="o">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="85-the-reflog">8.5 the reflog</h3>
+
+<ul>
+  <li>the reflog는
+    <ul>
+      <li>HEAD가 과거에 가졌던 모든 values를</li>
+      <li>보여줄 수 있다</li>
+    </ul>
+  </li>
+  <li>여기에 simulated 예제가 있다
+    <ul>
+      <li>나는 a master branch와 ‘foo’ branch를 가진 a repo를 clone 했다</li>
+      <li>그다음 <mark style="background-color:pink;">origin/foo</mark>를 check out하고</li>
+      <li>모든 warnings를 무시하고,</li>
+      <li>내가 “foo” branch라고 생각했던것에 2개의 commits을 했다</li>
+      <li>그다음 master로 복귀한 후</li>
+      <li>내가 2개의 commits을 ‘잃었다’고 알아차리기 전에</li>
+      <li>2개의 일반적인 commits을 했다</li>
+    </ul>
+  </li>
+  <li>이 시점에서,
+    <ul>
+      <li>
+<mark style="background-color:pink;">git reflog show</mark>를 실행하면 아래내용이 나온다</li>
+      <li>(가장 최근 HEAD values가 first이다)
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre>86a8ee0 HEAD@{0}: commit: my second commit on master
+e42c4d0 HEAD@{1}: commit: my first commit on master
+58c1539 HEAD@{2}: checkout: moving from e2558a9d1527e5a76b39ffede1dc5ca9c650de01 to master
+e2558a9 HEAD@{3}: commit: second commit on foo
+1c9dfa0 HEAD@{4}: commit: first commit on foo
+802f184 HEAD@{5}: checkout: moving from master to origin/foo
+58c1539 HEAD@{6}: clone: from /tmp/tmp.lv5IqjK0ZI/b
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>저 <mark style="background-color:pink;">moving from 〈SHA〉...</mark>는
+    <ul>
+      <li>보통 some commits을 잃었을수도 있다는 신호이다</li>
+      <li>이런 경우에
+        <ul>
+          <li>
+<mark style="background-color:pink;">git branch newbranch HEAD@{3}</mark>을 실행하거나</li>
+          <li>
+<mark style="background-color:pink;">git branch newbranch e2558a9</mark>을 실행하여,</li>
+          <li>those commits을 구할수 있다</li>
+          <li>(<mark style="background-color:pink;">HEAD@{3}</mark>의 SHA 값이
+            <ul>
+              <li>위라인의 <mark style="background-color:pink;">moving from 〈SHA〉...</mark> message에서 언급된 것과</li>
+              <li>같다는 것에 주목하라)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="86-the-end">8.6 the end</h3>
+
+<ul>
+  <li>이것이 도움이 되었기를 바란다…!</li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

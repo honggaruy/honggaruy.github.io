@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>구글 맞춤 검색 안됨 [해결] - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="장기 미해결 과제">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/05/07/google-custom-search/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="구글 맞춤 검색 안됨 [해결]">
+    <meta property="og:description" content="장기 미해결 과제">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/05/07/google-custom-search/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/05/07/google-custom-search/">
+    <meta name="twitter:title" content="구글 맞춤 검색 안됨 [해결]">
+    <meta name="twitter:description" content="장기 미해결 과제">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/05/02/todays-ideas/">« 오늘의 영감</a>
+          
+          
+            <a class="next" href="/blog/2020/05/11/todays-ideas/">오늘의 영감 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">구글 맞춤 검색 안됨 [해결]</h1>
+        <p class="created-date">
+            2020.05.07
+        </p>
+
+
+        <div class="post-tag">
+    google custom search
+</div>
+
+        <h2>장기 미해결 과제</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%ED%98%84%EC%9E%AC-%EC%83%81%ED%99%A9" id="markdown-toc-현재-상황">현재 상황</a></li>
+  <li><a href="#%ED%95%B4%EA%B2%B0-%EB%90%A8-" id="markdown-toc-해결-됨-">해결 됨 ?</a></li>
+  <li><a href="#%EC%B0%B8%EA%B3%A0" id="markdown-toc-참고">참고</a></li>
+  <li><a href="#%EA%B5%90%ED%9B%88" id="markdown-toc-교훈">교훈</a></li>
+</ul>
+
+<p>현재 구글 맞춤 검색이 잘 안되어서 확인하는 과정을 기록하고자 한다</p>
+
+<h1 id="현재-상황">현재 상황</h1>
+
+<ul>
+  <li>github에 <a href="https://github.com/honggaruy/honggaruy.github.io/issues/1">이슈</a>로 등록 해놓았다.</li>
+  <li>
+<a href="https://search.google.com/search-console?hl=ko&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home&resource_id=https://honggaruy.github.io/">요기</a>에 가서 현재 상황을 확인할 수 있다.</li>
+  <li>근데 그냥 구글 검색에서는 내글이 검색됨 <a href="https://www.google.com/search?q=vimrc+%EC%84%A4%EC%A0%95+honggaruy&amp;oq=vimrc&amp;aqs=chrome.0.69i59l2j69i57j69i60l5.3262j0j1&amp;sourceid=chrome&amp;ie=UTF-8">(“vimrc 설정 honggaruy”로 검색)</a>
+</li>
+  <li>
+<a href="https://cse.google.com/cse/all">요기</a>는 맞춤검색 사이트</li>
+</ul>
+
+<h1 id="해결-됨-">해결 됨 ?</h1>
+
+<ul>
+  <li>처음에는 아래 맞춤 검색 사이트의 공개 URL을 보고 <a href="https://github.com/johngrib/johngrib.github.io/blob/master/search.html">johngrib님이 작성한 코드</a>와 URL이 달라 시간이 지나 변경된건가 했다. 일단 아래 공개 URL로 serach.html의 URL을 변경했다
+<img src="/post-img/2020/cse-blog-01.png" alt="공개 URL">
+</li>
+  <li>요기서 이것저것 뒤적이다 디자인좀 바꿔볼까 하고 맞춤검색 사이트에서 디자인 변경후 코드 다자인 변경하고 <code class="language-html highlighter-rouge">저장후 코드 생성</code>을 클릭했더니…
+<img src="/post-img/2020/cse-blog-02.png" alt="저장후 코드 생성">
+</li>
+  <li>johngrib님이 작성한 것과 동일한 URL이 나온다. 이걸 그대로 코드 변경없이 search.html에 추가 했더니 일단 동작은 함.
+하지만 각 페이지에서 작성한 쿼리 스트링을 얻어 오지는 못한다. 일단 서치 페이지로 접속후 쿼리 스트링을 다시 작성해야함
+<img src="/post-img/2020/cse-blog-03.png" alt="코드 가져오기">
+</li>
+  <li>위 코드는 없애고 URL만 변경했더니 … 작동함.</li>
+</ul>
+
+<h1 id="참고">참고</h1>
+
+<ul>
+  <li>johngrib님의 search결과와 내 search 결과 비교시 개발자 tool 에서 아래 에러만 달랐음
+<img src="/post-img/2020/cse-blog-04.png" alt="CORB 에러">
+</li>
+</ul>
+
+<h1 id="교훈">교훈</h1>
+
+<ul>
+  <li>원래 잘 동작하는 것을 변경할 때는 확인또 확인할 것…</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 32주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="08/09 (월) ~ 08/15 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/08/09/week-32th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 32주차 기록">
+    <meta property="og:description" content="08/09 (월) ~ 08/15 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/08/09/week-32th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/08/09/week-32th/">
+    <meta name="twitter:title" content="2021년 32주차 기록">
+    <meta name="twitter:description" content="08/09 (월) ~ 08/15 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/08/02/week-31th/">« 2021년 31주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/08/16/week-33th/">2021년 33주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 32주차 기록</h1>
+        <p class="created-date">
+            2021.08.09
+        </p>
+
+
+        <div class="post-tag">
+    operator_precedence pandas dataframe
+</div>
+
+        <h2>08/09 (월) ~ 08/15 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#python%EC%9D%98-operator-precedence" id="markdown-toc-python의-operator-precedence">Python의 Operator precedence</a></li>
+  <li><a href="#dictionary-comprehension%EC%9D%98-%ED%8A%B9%EC%9D%B4-%EC%82%AC%EB%A1%80" id="markdown-toc-dictionary-comprehension의-특이-사례">dictionary Comprehension의 특이 사례</a></li>
+  <li>
+<a href="#pandas-dataframe-cell%EC%97%90-list-%EA%B0%92%EC%9D%84-value%EB%A1%9C-%EB%84%A3%EA%B8%B0" id="markdown-toc-pandas-dataframe-cell에-list-값을-value로-넣기">pandas Dataframe Cell에 List 값을 Value로 넣기</a>    <ul>
+      <li><a href="#%EC%98%88%EC%A0%9C" id="markdown-toc-예제">예제</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#%EC%9D%BD%EB%8A%94-%EC%B1%85" id="markdown-toc-읽는-책">읽는 책</a>    <ul>
+      <li><a href="#fluent-python" id="markdown-toc-fluent-python">Fluent Python</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EA%B4%80%EC%8B%AC%EC%A3%BC%EC%A0%9C" id="markdown-toc-관심주제">관심주제</a></li>
+</ul>
+
+<h1 id="python의-operator-precedence">Python의 Operator precedence</h1>
+
+<ul>
+  <li>#operator_precednce</li>
+  <li>다음과 같은 조건문을 사용하려고 하는데 연산자 우선순위가 맞나?
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># 의도: a_file 이나 b_file이 아직 준비가 안되었으면 do_something()을 수행하자
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">is_ready</span><span class="p">.</span><span class="n">a_file</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">is_ready</span><span class="p">.</span><span class="n">b_file</span><span class="p">:</span>
+  <span class="n">do_something</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>해답은 <a href="https://docs.python.org/3/reference/expressions.html#operator-precedence">Operator Precedence, docs.python.org</a> 에 있다.</li>
+  <li>
+<code class="language-html highlighter-rouge">not</code>의 우선순위가 <code class="language-html highlighter-rouge">or</code>보다 높으므로 위 예제는 의도대로 수행된다</li>
+</ul>
+
+<h1 id="dictionary-comprehension의-특이-사례">dictionary Comprehension의 특이 사례</h1>
+
+<ul>
+  <li>질문하고 싶었던 <a href="https://stackoverflow.com/q/67292334/9457247">기존 질문</a>을 찾았음</li>
+  <li><a href="https://stackoverflow.com/a/67292437/9457247">좋은 답변</a></li>
+</ul>
+
+<h1 id="pandas-dataframe-cell에-list-값을-value로-넣기">pandas Dataframe Cell에 List 값을 Value로 넣기</h1>
+
+<ul>
+  <li>#pandas #dataframe</li>
+  <li>참조링크 : <a href="https://stackoverflow.com/a/67292437/9457247">Add List as value in pandas Dataframe, stackoverflow</a>
+</li>
+</ul>
+
+<h2 id="예제">예제</h2>
+
+<ul>
+  <li>
+    <p>다음과 같은 Dataframe을 만들고 싶다</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>남산도서관</td>
+          <td>양천도서관</td>
+          <td>동작도서관</td>
+        </tr>
+        <tr>
+          <td>9783478</td>
+          <td>[‘1234’, ‘4567’]</td>
+          <td>[‘5678’]</td>
+          <td>NaN</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>흔히 범하는 실패 사례 1 : index 설정 오류  ( TypeError: ~ )
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="n">lib_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'남산도서관'</span><span class="p">:</span> <span class="p">[</span><span class="s">'1234'</span><span class="p">,</span> <span class="s">'4567'</span><span class="p">],</span> <span class="s">'양천도서관'</span><span class="p">:</span> <span class="p">[</span><span class="s">'5678'</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lib_dict</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s">'9783478'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'남산도서관'</span><span class="p">,</span> <span class="s">'양천도서관'</span><span class="p">,</span> <span class="s">'동작도서관'</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="p">....</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">Index</span><span class="p">(</span> <span class="p">...</span> <span class="p">)</span> <span class="n">must</span> <span class="n">be</span> <span class="n">called</span> <span class="k">with</span> <span class="n">a</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">some</span> <span class="n">kind</span><span class="p">,</span> <span class="s">'97834578'</span> <span class="n">was</span> <span class="n">passed</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">pandas.DataFrame API reference</a>를 참조해보면 <code class="language-html highlighter-rouge">index or array-like</code> 라고 되어있다</li>
+      <li>pd.Index 형식이나 배열을 넘기라는 얘기. 한 줄이라도 <code class="language-html highlighter-rouge">['97834578']</code> 처럼 list로 감싸서 보내야함</li>
+    </ul>
+  </li>
+  <li>흔히 범하는 실패 사례 2 : value 설정 오류  ( ValueError: ~ )
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="n">lib_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'남산도서관'</span><span class="p">:</span> <span class="p">[</span><span class="s">'1234'</span><span class="p">,</span> <span class="s">'4567'</span><span class="p">],</span> <span class="s">'양천도서관'</span><span class="p">:</span> <span class="p">[</span><span class="s">'5678'</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lib_dict</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'9783478'</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'남산도서관'</span><span class="p">,</span> <span class="s">'양천도서관'</span><span class="p">,</span> <span class="s">'동작도서관'</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="p">....</span>
+<span class="nb">ValueError</span><span class="p">:</span> <span class="n">Shape</span> <span class="n">of</span> <span class="n">passed</span> <span class="n">values</span> <span class="ow">is</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">indices</span> <span class="n">imply</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>
+<a href="https://stackoverflow.com/a/42809866/9457247">Add List as value in pandas Dataframe, stackoverflow</a>를 참조</li>
+      <li>
+        <p>일단 아래와 같은 형식을 만들려면 <code class="language-html highlighter-rouge">lib_dict</code>를 어떻게 구성했을지 생각해보자</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td> </td>
+              <td>남산도서관</td>
+              <td>양천도서관</td>
+              <td>동작도서관</td>
+            </tr>
+            <tr>
+              <td>9783478</td>
+              <td>‘1234’</td>
+              <td>‘5678’</td>
+              <td>NaN</td>
+            </tr>
+            <tr>
+              <td>9783459</td>
+              <td>‘4567’</td>
+              <td>NaN</td>
+              <td>NaN</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>아마 위의 코드에서 index만 고쳐주면 된다. 즉 현재 <code class="language-html highlighter-rouge">lib_dict</code> 설정이 원래 의도와는 다르다.</li>
+          <li>현재 pandas에서 값으로만 판단했을때 index=2개 , columns=3개 형식 으로 판단하고 있음</li>
+        </ul>
+      </li>
+      <li>그런데 index 형식은 index=1개, columns=3개로 넘겨줘서 서로 형식이 안 맞는다며 불평하는 것임</li>
+      <li>원래 원하던 형식이 [‘1234’, ‘4567’] 을 하나의 값으로 보는 것 이었으므로
+        <ul>
+          <li>겉으로 봐서 한 개처럼 보이게 만들어줘야 함</li>
+          <li>즉, <code class="language-html highlighter-rouge">[]</code> 으로 한 번 더 감싸줘야 함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>최종 형태
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="n">lib_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'남산도서관'</span><span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="s">'1234'</span><span class="p">,</span> <span class="s">'4567'</span><span class="p">]</span> <span class="p">],</span> <span class="s">'양천도서관'</span><span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="s">'5678'</span><span class="p">]</span> <span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lib_dict</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'9783478'</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'남산도서관'</span><span class="p">,</span> <span class="s">'양천도서관'</span><span class="p">,</span> <span class="s">'동작도서관'</span><span class="p">])</span>
+<span class="k">with</span> <span class="n">dataframe_print_option</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+            <span class="n">남산도서관</span> <span class="n">양천도서관</span> <span class="n">동작도서관</span>
+<span class="mi">97834578</span>  <span class="p">[</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">4567</span><span class="p">]</span>     <span class="p">[</span><span class="mi">5678</span><span class="p">]</span>        <span class="n">NaN</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="읽는-책">읽는 책</h1>
+
+<h2 id="fluent-python">Fluent Python</h2>
+
+<ul>
+  <li>This phrase takes time but eventually gets to the point.</li>
+  <li>저자 : <a href="https://www.thoughtworks.com/profiles/l/luciano-ramalho">루시아누 하말류</a>, 브라질 프로그래머
+    <ul>
+      <li><a href="https://github.com/ramalho">github.com/ramalho</a></li>
+    </ul>
+  </li>
+  <li>책에 언급된 주제들
+    <ul>
+      <li><a href="https://stackoverflow.com/users/95810/alex-martelli">Alex Mrtelli, stackOverflow</a></li>
+      <li>감사의 글에 언급된 <a href="https://www.moma.org/collection/works/4240?artist_id=2526&page=1&sov_referrer=artist">요제프 하르트비히의 체스판</a>
+</li>
+      <li>1장에서 나온 짐 허구닌 <a href="http://hugunin.net/story_of_jython.html">Jim Hugunin</a>
+</li>
+      <li>
+    </li>
+</ul>
+  </li>
+</ul>
+
+<h1 id="관심주제">관심주제</h1>
+
+<ul>
+  <li><a href="https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/">Vim Text Objects: The Definitive Guide, blog.carbonfive.com</a></li>
+  <li>PyCharm에서 좀 더 Vim 기능을 많이 쓰기 위해 <a href="https://github.com/JetBrains/ideavim">JetBrains/ideavim</a> 방문
+    <ul>
+      <li>
+<a href="https://github.com/JetBrains/ideavim#setup">Setup 섹션</a>에 <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG standard</a>를 지원한다고 한다</li>
+    </ul>
+  </li>
+  <li>Vim에서 PyCharm 처럼 class outline을 보고싶을때 : <a href="https://github.com/preservim/tagbar">Tagbar: a class outline viewer for Vim</a>
+    <ul>
+      <li>
+<a href="https://github.com/preservim/tagbar#dependencies">Dependencies</a>에 Exuberant Ctags 와 Universl Ctags 얘기가 나옴</li>
+      <li>이글로 유추해보면 <a href="https://ctags.io/">Universal Ctags</a>는 유지보수는 되는 Exuberant Ctags 의 후손이며</li>
+      <li>
+<a href="http://ctags.sourceforge.net/">Exuberant Ctags</a> 2009년 이후로 유지보수가 멈춘듯 하다</li>
+      <li>johngrib 블로그에 <a href="https://johngrib.github.io/wiki/ctags/">ctags 명령어</a> 글이 있다</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

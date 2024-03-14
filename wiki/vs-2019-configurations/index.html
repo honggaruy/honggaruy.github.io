@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Visual Studio 2019 설정하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="요약">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/vs-2019-configurations/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Visual Studio 2019 설정하기">
+    <meta property="og:description" content="요약">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/vs-2019-configurations/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/vs-2019-configurations/">
+    <meta name="twitter:title" content="Visual Studio 2019 설정하기">
+    <meta name="twitter:description" content="요약">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="vs-2019-configurations">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Visual Studio 2019 설정하기</h1>
+    
+        <p class="title-summary">요약</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vs-2019-configurations.md" target="_blank">created: 2022.01.31</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vs-2019-configurations.md" target="_blank">updated: 2022.02.01</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/vs-2019-configurations.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Visual+Studio+2019+%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    visual-studio visual-studio-2019
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#visual-studio-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-visual-studio-설정하기">Visual Studio 설정하기</a>    <ul>
+      <li>
+<a href="#%EC%97%90%EB%94%94%ED%84%B0-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-에디터-설정하기">에디터 설정하기</a>        <ul>
+          <li><a href="#%ED%8F%B0%ED%8A%B8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-폰트-설정하기">폰트 설정하기</a></li>
+          <li><a href="#ide%EC%97%90%EC%84%9C-%EA%B8%80%EA%BC%B4-%EB%B0%8F-%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%81%AC%EA%B8%B0%EB%A5%BC-%EB%B3%80%EA%B2%BD%ED%95%98%EB%A0%A4%EB%A9%B4" id="markdown-toc-ide에서-글꼴-및-텍스트-크기를-변경하려면">IDE에서 글꼴 및 텍스트 크기를 변경하려면</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="visual-studio-설정하기">Visual Studio 설정하기</h1>
+
+<p><img src="https://docs.microsoft.com/ko-kr/visualstudio/ide/media/vs-2022/quickstart-start-window-labeled.png?view=vs-2022#lightbox" alt="Visual Studio 시작창"></p>
+
+<ul>
+  <li>설정만 하려면 맨 아랫쪽 “코드를 사용하지 않고 계속 (Continue without Code)”를 누름</li>
+</ul>
+
+<h2 id="에디터-설정하기">에디터 설정하기</h2>
+
+<h3 id="폰트-설정하기">폰트 설정하기</h3>
+
+<h3 id="ide에서-글꼴-및-텍스트-크기를-변경하려면">IDE에서 글꼴 및 텍스트 크기를 변경하려면</h3>
+
+<ol>
+  <li>메뉴 모음에서 <code class="language-html highlighter-rouge">도구 &gt; 옵션</code>을 선택</li>
+  <li>옵션 목록에서 <code class="language-html highlighter-rouge">환경 &gt; 글꼴 및 색</code>을 선택</li>
+  <li>
+    <p><code class="language-html highlighter-rouge">설정 표시</code> 목록에서 <code class="language-html highlighter-rouge">환경</code>을 선택
+  <img src="https://docs.microsoft.com/ko-kr/visualstudio/ide/media/vs-2022/fonts-colors-text-environment.png?view=vs-2022" alt="글꼴설정"></p>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">글꼴</code>및 <code class="language-html highlighter-rouge">크기</code> 옵션을 수정</li>
+</ol>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>C++ 최적화 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="Proven Techniques for Heightened Performance">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/book-optimized-c++/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="C++ 최적화">
+    <meta property="og:description" content="Proven Techniques for Heightened Performance">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/book-optimized-c++/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/book-optimized-c++/">
+    <meta name="twitter:title" content="C++ 최적화">
+    <meta name="twitter:description" content="Proven Techniques for Heightened Performance">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book-optimized-c++">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">C++ 최적화</h1>
+    
+        <p class="title-summary">Proven Techniques for Heightened Performance</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-optimized-c++.md" target="_blank">created: 2022.05.16</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-optimized-c++.md" target="_blank">updated: 2022.05.16</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/book-optimized-c++.md">편집하기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    c++ optimization
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a>    <ul>
+      <li>
+<a href="#%EC%A0%80%EC%9E%90-%EC%84%A4%EB%AA%85" id="markdown-toc-저자-설명">저자 설명</a>        <ul>
+          <li><a href="#%EC%BB%A4%ED%8A%B8-%EA%B1%B4%EC%84%9C%EB%A1%9C%EC%8A%A4-kurt-guntheroth" id="markdown-toc-커트-건서로스-kurt-guntheroth">커트 건서로스 (Kurt Guntheroth)</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EC%B5%9C%EC%A0%81%ED%99%94-10%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95-%EC%9A%94%EC%95%BD" id="markdown-toc-최적화-10가지-방법-요약">최적화 10가지 방법 요약</a></li>
+    </ul>
+  </li>
+  <li><a href="#1-an-overview-of-optimization" id="markdown-toc-1-an-overview-of-optimization">1. An Overview of Optimization</a></li>
+  <li><a href="#2-computer-behavior-affecting-optimization" id="markdown-toc-2-computer-behavior-affecting-optimization">2. Computer Behavior Affecting Optimization</a></li>
+  <li>
+<a href="#3-measure-performance" id="markdown-toc-3-measure-performance">3. Measure Performance</a>    <ul>
+      <li><a href="#the-optimizing-mindset" id="markdown-toc-the-optimizing-mindset">The Optimizing Mindset</a></li>
+      <li><a href="#perform-experiments" id="markdown-toc-perform-experiments">Perform Experiments</a></li>
+      <li>
+<a href="#profile-program-execution" id="markdown-toc-profile-program-execution">Profile Program Execution</a>        <ul>
+          <li><a href="#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C-%EC%97%AD%EC%9E%90%EC%A3%BC" id="markdown-toc-참고자료-역자주">참고자료 (역자주)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<style>
+.cover-table img { width: 300px }
+</style>
+
+<table class="cover-table">
+  <tbody>
+    <tr>
+      <td><img src="https://www.hanbit.co.kr/data/books/B8975427001_l.jpg" alt="optimizedcpp-kr-img"></td>
+      <td>저자: 커트 건서로스(Kurt Guntheroth) <br> 옮긴이: 옥찬호 <br> 감수자: 박수현 <br> <br> 책제목 : C++ 최적화<br> (원서 제목 : Optimized C++) <br> 부제 : 최고 성능을 구현하는 10가지 검증된 기법<br> (원서 부제: PROVEN TECHNIQUES FOR HEIGHTENED PERFORMANCE)<br><br> 출판사 : <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B8975427001">한빛미디어</a>(원책: <a href="https://www.oreilly.com/library/view/optimized-c/9781491922057/">O’Reilly Media</a>) <br> ISBN 한글 : <a href="https://www.google.com/search?q=9791162241981">979-11-6224-198-1</a> <br> ISBN 영문 : <a href="https://www.google.com/search?q=9781491922064">978-1-491-92206-4</a> <br> <br> 정가: 38,000원</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="저자-설명">저자 설명</h2>
+
+<h3 id="커트-건서로스-kurt-guntheroth">커트 건서로스 (Kurt Guntheroth)</h3>
+
+<style>
+.author-container {display: flex; align-items: center; justify-content: space-evenly;}
+</style>
+
+<div class="author-container">
+
+  <p><img width="50%" object-fit="cover" object-position="20% 10%" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.18169-9/23543_101205819918543_5949494_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=PnucehwFYwcAX-5-ooJ&tn=7tdRGi-y2CQ1sMIg&_nc_ht=scontent-ssn1-1.xx&oh=00_AT95pefe3_lscvUIF69w-bGI4KGvhRAp2jO36Ay1G4gfLg&oe=62A86F96" alt="author Photo"></p>
+
+  <ul>
+    <li>집필당시 35년 이상의 C++ 개발자 경력 ( 2022-05-16 현재 40년이상..)</li>
+    <li><a href="http://www.guntheroth.com/">HomePage</a></li>
+    <li><a href="https://www.linkedin.com/in/kurt-guntheroth-b13919b">LinkedIn</a></li>
+    <li>
+<a href="http://oldhandsblog.blogspot.com/">Blog</a> : Kurt Guntheroth’s Old Hands Blog, 2011 ~ 2020</li>
+  </ul>
+
+</div>
+
+<h2 id="최적화-10가지-방법-요약">최적화 10가지 방법 요약</h2>
+
+<ul>
+  <li>Locate performance hot spots using the profiler and software timers</li>
+  <li>Learn to perform repeatable experiments to measure performance of code changes</li>
+  <li>Optimize use of dynamically allocated variables</li>
+  <li>Improve performance of hot loops and functions</li>
+  <li>Speed up string handling functions</li>
+  <li>Recognize efficient algorithms and optimization patterns</li>
+  <li>Learn the strengths-and weaknesses-of C++ container classes</li>
+  <li>View searching and sorting through an optimizer’s eye</li>
+  <li>Make efficient use of C++ streaming I/O functions</li>
+  <li>Use C++ thread-based concurrency features effectively</li>
+</ul>
+
+<h1 id="1-an-overview-of-optimization">1. An Overview of Optimization</h1>
+
+<h1 id="2-computer-behavior-affecting-optimization">2. Computer Behavior Affecting Optimization</h1>
+
+<h1 id="3-measure-performance">3. Measure Performance</h1>
+
+<h2 id="the-optimizing-mindset">The Optimizing Mindset</h2>
+
+<h2 id="perform-experiments">Perform Experiments</h2>
+
+<h2 id="profile-program-execution">Profile Program Execution</h2>
+
+<ul>
+  <li>Profiler : a program that produces statistics about where another program spends its time
+    <ul>
+      <li>The profiler constructs a report showing …
+        <ul>
+          <li>how freqenlty each statement or function is executed</li>
+          <li>how much time accumulates in each function</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>프로파일러는 보통 컴파일러와 함께 제공됨
+    <ul>
+      <li>VS는 예전에 유료버전에서만 제공했지만 VS2015 커뮤니티 버전부터 프로파일러를 제공함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="참고자료-역자주">참고자료 (역자주)</h3>
+
+<ul>
+  <li>
+<a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022">First look at profiling tools, MS Docs</a> : Docs / Visual Studio / IDE / Profiling /</li>
+  <li>실전에서 VS Profiler 사용해보기
+    <ul>
+      <li><a href="https://devblogs.microsoft.com/visualstudio/case-study-using-visual-studio-profiler-to-reduce-memory-allocations-in-the-windows-terminal-console-host-startup-path/">Using VS Profiler to reduce memrory allocations in the WT console, Visual Studio Blog</a></li>
+      <li>위 블로그 포스트에서 언급된 <a href="https://docs.microsoft.com/ko-kr/windows-hardware/test/wpt/windows-performance-analyzer">WPA Tool 설명</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

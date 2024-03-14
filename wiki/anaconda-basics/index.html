@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Anaconda 기초 사용법 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/anaconda-basics/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anaconda 기초 사용법">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/anaconda-basics/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/anaconda-basics/">
+    <meta name="twitter:title" content="Anaconda 기초 사용법">
+    <meta name="twitter:description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="anaconda-basics">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Anaconda 기초 사용법</h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/anaconda-basics.md" target="_blank">created: 2022.05.26</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/anaconda-basics.md" target="_blank">updated: 2023.11.06</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/anaconda-basics.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Anaconda+%EA%B8%B0%EC%B4%88+%EC%82%AC%EC%9A%A9%EB%B2%95&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    python anaconda conda
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#what-is-anaconda-distribution-" id="markdown-toc-what-is-anaconda-distribution-">What is Anaconda Distribution ?</a>    <ul>
+      <li><a href="#before-starting" id="markdown-toc-before-starting">Before Starting</a></li>
+      <li><a href="#anaconda-navigator-or-conda-" id="markdown-toc-anaconda-navigator-or-conda-">Anaconda Navigator or conda ?</a></li>
+    </ul>
+  </li>
+  <li><a href="#troubleshooting" id="markdown-toc-troubleshooting">Troubleshooting</a></li>
+</ul>
+
+<h1 id="what-is-anaconda-distribution-">What is Anaconda Distribution ?</h1>
+
+<ul>
+  <li>발췌 링크 : <a href="https://docs.anaconda.com/_downloads/9ee215ff15fde24bf01791d719084950/Anaconda-Starter-Guide.pdf">Anaconda Starter Guide, pdf file</a>
+</li>
+  <li>Anaconda Distribution : 무료 배포판 Anaconda</li>
+</ul>
+
+<h2 id="before-starting">Before Starting</h2>
+
+<ul>
+  <li>Why do I need Anaconda Distribution ?
+    <ul>
+      <li>Scientific Package들이 특정 Python 버전을 요구한다</li>
+      <li>Package 간의 간섭으로 인해 안정성을 유지하면서 최신버전으로 유지 하기 어렵다</li>
+      <li>Anaconda는 각 Package에 맞는 여러 버전의 Python의 가상환경을 유지할 수 있도록 해준다</li>
+    </ul>
+  </li>
+  <li>What is Anaconda Distribution
+    <ul>
+      <li>무료판 Anaconda Full Package ( requires 3GB )</li>
+      <li>Anaconda public repo 에서 Python 과 R을 지원하는 over 1.5k packages 지원</li>
+      <li>Conda-forge나 bioconda 같은 community channel에서 more than 20k packages 지원</li>
+    </ul>
+  </li>
+  <li>What is Miniconda?
+    <ul>
+      <li>꼭 필요한 기능만 넣은 축소판 ( only 400 MB)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="anaconda-navigator-or-conda-">Anaconda Navigator or conda ?</h2>
+
+<ul>
+  <li>Anaconda Navigator : command line 환경보다 UI환경에 익숙한 사람에게 적합</li>
+  <li>Conda : command line 환경을 선호한다면 이쪽으로 진행 (Anaconda prompt)
+    <ul>
+      <li>
+<a href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">20-minute conda test drive</a> : conda 처음 사용할 때 볼것</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<ul>
+  <li>BillMaker를 Anaconda로 실행하면서 발생했던 문제와 해결책을 적어둔다</li>
+</ul>
+
+<p>##</p>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

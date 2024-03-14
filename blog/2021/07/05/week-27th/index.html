@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 27주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="07/05 (월) ~ 07/11 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/07/05/week-27th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 27주차 기록">
+    <meta property="og:description" content="07/05 (월) ~ 07/11 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/07/05/week-27th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/07/05/week-27th/">
+    <meta name="twitter:title" content="2021년 27주차 기록">
+    <meta name="twitter:description" content="07/05 (월) ~ 07/11 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/06/28/week-26th/">« 2021년 26주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/07/12/week-28th/">2021년 28주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 27주차 기록</h1>
+        <p class="created-date">
+            2021.07.05
+        </p>
+
+
+        <div class="post-tag">
+    google-sheets flutter android-studio
+</div>
+
+        <h2>07/05 (월) ~ 07/11 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%9D%B4%EB%B2%88-%EC%A3%BC-%EB%B2%88%EC%97%AD" id="markdown-toc-이번-주-번역">이번 주 번역</a>    <ul>
+      <li><a href="#%EC%9B%90%EB%AC%B8" id="markdown-toc-원문">원문</a></li>
+      <li>
+<a href="#using-google-sheeta-as-a-database-a-comprehensive-analysis" id="markdown-toc-using-google-sheeta-as-a-database-a-comprehensive-analysis">Using Google Sheeta as a Database: A Comprehensive Analysis</a>        <ul>
+          <li><a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a></li>
+          <li><a href="#introduction-to-google-sheets" id="markdown-toc-introduction-to-google-sheets">Introduction to Google Sheets</a></li>
+        </ul>
+      </li>
+      <li><a href="#introduction-to-databases" id="markdown-toc-introduction-to-databases">Introduction to Databases</a></li>
+      <li>
+<a href="#google-sheets-as-a-database" id="markdown-toc-google-sheets-as-a-database">Google Sheets as a Database</a>        <ul>
+          <li><a href="#%ED%95%84%EC%9A%94%ED%95%9C-%EC%A4%80%EB%B9%84%EB%AC%BC" id="markdown-toc-필요한-준비물">필요한 준비물</a></li>
+          <li><a href="#google-clud-console%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%A8" id="markdown-toc-google-clud-console에서-프로젝트를-시작함">Google Clud Console에서 프로젝트를 시작함</a></li>
+          <li><a href="#connect-to-spreadsheet-via-python" id="markdown-toc-connect-to-spreadsheet-via-python">Connect to Spreadsheet via Python</a></li>
+        </ul>
+      </li>
+      <li><a href="#limitations-of-using-google-sheets-as-a-database" id="markdown-toc-limitations-of-using-google-sheets-as-a-database">Limitations of Using Google Sheets as a Database</a></li>
+      <li><a href="#%EA%B2%B0%EB%A1%A0" id="markdown-toc-결론">결론</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#flutter-tutorial---google-sheets-api" id="markdown-toc-flutter-tutorial---google-sheets-api">Flutter Tutorial - Google Sheets API</a>    <ul>
+      <li><a href="#%EA%B0%9C%EC%9A%94-1" id="markdown-toc-개요-1">개요</a></li>
+      <li><a href="#%EB%82%B4%EC%9A%A9%EC%A0%95%EB%A6%AC" id="markdown-toc-내용정리">내용정리</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#android-studio-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%A4%91-%EC%97%90%EB%9F%AC" id="markdown-toc-android-studio-업데이트중-에러">Android Studio 업데이트중 에러</a>    <ul>
+      <li><a href="#%EC%B0%B8%EA%B3%A0%EB%A7%81%ED%81%AC" id="markdown-toc-참고링크">참고링크</a></li>
+    </ul>
+  </li>
+  <li><a href="#javascript-%EA%B0%9C%EB%85%90-%EC%84%A4%EB%AA%85-%EC%82%AC%EC%9D%B4%ED%8A%B8" id="markdown-toc-javascript-개념-설명-사이트">Javascript 개념 설명 사이트</a></li>
+</ul>
+
+<h1 id="이번-주-번역">이번 주 번역</h1>
+
+<h2 id="원문">원문</h2>
+
+<ul>
+  <li>#google-sheets</li>
+  <li><a href="https://hevodata.com/learn/google-sheets-as-a-database/">Using Google Sheets as a Database: A Comprehensive Analysis, HEVO</a></li>
+  <li>2020년 8월 20일 작성</li>
+</ul>
+
+<h2 id="using-google-sheeta-as-a-database-a-comprehensive-analysis">Using Google Sheeta as a Database: A Comprehensive Analysis</h2>
+
+<h3 id="개요">개요</h3>
+
+<ul>
+  <li>당신혹은 당신조직이 구글 시트를 데이타 저장용도로 써본적이 있나?</li>
+  <li>구글 시트를 무료 데이타베이스로 쓸 수 있을지 궁금했던적이 있나?</li>
+  <li>전통적인 database를 구매하지 않고 당신의 웹서비스에 구글시트를 database로 활용할 수 있을지 생각하나?</li>
+  <li>위의 질문들이 모두 Yes 라면, 바로 정확한 지점에 왔다 .</li>
+  <li>이 포스트에서는 구글시트를 database로 사용하기 위해 data를 변환하는 방법과 사용방법에 대해 논의한다.</li>
+  <li>다음의 목차를 참고 해라 (목차 생략, 위의 목차를 참고하라)</li>
+</ul>
+
+<h3 id="introduction-to-google-sheets">Introduction to Google Sheets</h3>
+
+<ul>
+  <li>구글 시트는 클라우드에서 spreadsheet 기능을 제공하는 구글의 서비스다.</li>
+  <li>구글 시트는 spreadsheet과 비슷하지만 한층 더 강력해진(on steroids) 도구다.</li>
+  <li>태생이 클라우드 플랫폼이라서, 기존의 spreadsheet과 비교해 더 많은 기능을 제공한다.</li>
+  <li>구글 시트의 몇가지 주요 특징을 살펴보면..
+    <ol>
+      <li>웹기반이기 때문에, 인터넷을 통해 언제 어디서든 sheets에 저장된 데이타에 접근할 수 있다</li>
+      <li>모든 주요 디바이스의 운영체제는 구글 시트용 앱을 가지고 있으며 막힘없는 경험을 제공한다.</li>
+      <li>Gmail 계정과 함께 제공되며 구글 시트를 사용하기 위해 추가비용을 낼필요는 없다.</li>
+      <li>Microsoft Excel과 사용방법이 유사하여 경험이 있다면 어려운점은 없을것이다.</li>
+      <li>시트의 데이타를 효율적으로 분석하기 위해 플러그인 , 애드온, 커스텀 코드를 적용할 수 있다.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="introduction-to-databases">Introduction to Databases</h2>
+
+<ul>
+  <li>database는 행과 열로 표현된 data collection 이다</li>
+  <li>database는 database management system(DBMS)의 도움을 받아, 데이타의 구조적인 정보를 조정하고 구성한다.</li>
+  <li>datatabs는 쉽게 data에 접근하고, 조회하고, 구성하고, 관리할 수 있도록 기능을 제공한다.</li>
+  <li>대부분의 database는 데이타를 작성하고 요청하는데에 structured query language (SQL)을 이용한다</li>
+  <li>몇가지 인기있는 database는 다음과 같다.
+    <ol>
+      <li>MySQL</li>
+      <li>PostgreSQL</li>
+      <li>SQL Server</li>
+      <li>MongoDB(NoSQL database)</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="google-sheets-as-a-database">Google Sheets as a Database</h2>
+
+<ul>
+  <li>구글 시트는 매우 발전된 형태의 spreadsheet로 바로 사용할 수있는 많은 능력이 탑재되어있다</li>
+  <li>클라우드 기반 앱이기 때문에, 작은 어플리케이션이나 웹사이트의 database로도 활용할 수 있다.</li>
+  <li>MySQL이나 PostgreSQL 처럼 많은 돈을 지불해야하는 DB들은 가볍게 무시하고..
+    <ul>
+      <li>구글 시트를 이용하여 실시간으로 data를 저장하거나 관리할 수 있다.</li>
+    </ul>
+  </li>
+  <li>DB의 사용처를 구글 시트가 완전히 대체할 수있다고 말하는것은 아니지만
+    <ul>
+      <li>작은 dataset에 한해서 옵션정도가 될 수는 있다</li>
+    </ul>
+  </li>
+  <li>어떻게 Google Sheets를 database로 사용하는지 보자</li>
+</ul>
+
+<h3 id="필요한-준비물">필요한 준비물</h3>
+
+<ol>
+  <li>Google Cloud Platform Account</li>
+  <li>Python 3.6 or later</li>
+  <li>Excel data와 프로그래밍 언어에 대한 기본적인 이해</li>
+</ol>
+
+<h3 id="google-clud-console에서-프로젝트를-시작함">Google Clud Console에서 프로젝트를 시작함</h3>
+
+<ol>
+  <li>구글 API Manager로 가서 신규 프로젝트를 생성한다
+  <img src="https://lh3.googleusercontent.com/jBPBoxONLLhITXHoGjBE2gDxMp2pW85TaqVEpW7UOw7zJWLT5kOu8zRRY_UK1dSSMI1G9AvquG-aBGN7W4JDWo_QUYpANqXH9XjfWi9X8Ofj-XUH1eJcC_gidNLqSWBUZVm1rNRK" alt="그림1">
+</li>
+  <li>
+<strong>Google Drive API</strong>를 프로젝트에 추가한다. 이것은 구글 드라이브에 저장된 spreadsheet에 접근을 허용하는 것이다.
+  <img src="https://lh3.googleusercontent.com/36ioGEr6hp5RtO1PVMFhSXH4qZ1L-dJkom627hqkeJTFfejgM4vL4L3fEtao9QKYucBXRVco0TcYRVwUzB7Xo1MjYd5cbA7BrYPjVFb-xcS_A2Dlp10yfNQGbsanFHnxpVtYvVa0" alt="그림2">
+</li>
+  <li>Python 프로그램에서 생성 될 요청을 인증(authenticate)하는 데 사용할 자격 증명(credential)을 생성한다.
+  <img src="https://lh4.googleusercontent.com/KMoH9JB7Pg_8L1uozU3dI416jvwxa4N0S8d4QTJIPk1T-AWMewvc00qKcQyQUIFk1Wk4GXv-dPxDGjklKo8ka6NJiOoN5JVzq4PHbMeHvaJ_t4vSdnZKcOyLmFlLIQJEIZdGYQbj" alt="그림3">
+</li>
+  <li>생성된 JSON Key를 로컬머신에 <code class="language-html highlighter-rouge">keys.json</code>이라는 이름으로 저장한다</li>
+  <li>텍스트 에디터로 생성된 키를 Open하고 <strong>client_email</strong> 프로퍼티 로 언급된 이메일 주소를 복사한다.</li>
+  <li>“Tutorial” 이름으로 시트를 생성하고 몆가지 데이터를 추가해본다</li>
+  <li>그 시트의 접근권한을 위 email 주소에 공유한다. 이 작업은 API를 통해 그 시트로의 접근권한을 허용한다.
+  <img src="https://lh6.googleusercontent.com/dl_tSQ4HObs0gFVZeJAlgT6vy5fUHd-5WMNtRXBlA5bYBvQDXGyS1jYMhHDTSmx3SptRbp8EIilssq-rS8nxUjf6QWervs75plItAEuRc1CO359XPaKJXFIkMwfLNJOXaAySUyZM" alt="그림4">
+</li>
+</ol>
+
+<h3 id="connect-to-spreadsheet-via-python">Connect to Spreadsheet via Python</h3>
+
+<ol>
+  <li>좋아하는 Python IDE를 열고 아래 패키지를 설치한다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>  <span class="o">&gt;</span> pip <span class="nb">install </span>gspread oauth2client
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">googleSheetToPython.py</code> 이름으로된 파일을 생성하고 아래 코드를 적어넣자
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre>  <span class="c1"># 라이브러리를 임포트한다 
+</span>  <span class="kn">import</span> <span class="nn">gspread</span>
+  <span class="c1"># oauth2client 에서 가져온 Service client credential
+</span>  <span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
+  <span class="c1"># 이쁘게 프린트하기
+</span>  <span class="kn">import</span> <span class="nn">pprint</span>
+  <span class="c1"># scope 생성하기
+</span>  <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s">'https://spreadsheets.google.com/feeds'</span><span class="p">]</span>
+  <span class="c1"># keys.json 내용과 scope를 이용하여 자격증명 생성하기
+</span>  <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="p">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s">'keys.json'</span><span class="p">,</span> <span class="n">scope</span><span class="p">)</span>
+  <span class="c1"># 자격증명을 이용하여 gspread authorize를 생성하기
+</span>  <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+  <span class="c1"># 이제 구글 시트에 대한 access가 가능하며 StartupName으로 client.open을 호출한다
+</span>  <span class="n">sheet</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">'Tutorial'</span><span class="p">).</span><span class="n">sheet1</span>
+  <span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="p">.</span><span class="n">PrettyPrinter</span><span class="p">()</span>
+  <span class="c1"># 구글 시트안의 모든 record 에 access한다
+</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">.</span><span class="n">get_all_record</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>일단 자격증명이 setup되면, spreadsheet에 접근하는데 API를 사용할수 있으며 CRUD(Create, Read, Update, Delete) opertation을 구글시트에 적용하는 것이 가능해진다</p>
+  </li>
+  <li>아래 Python code는 구글 시트에서 data를 읽어오는 코드이다
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">.</span><span class="n">row_values</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 각각의 row를 본다
+</span>  <span class="n">result_col</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">.</span><span class="n">col</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 각각의 column을 본다
+</span>  <span class="n">result_cell</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">.</span><span class="n">cell</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># 특정 cell을 본다
+</span>  <span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="p">.</span><span class="n">PrettyPrinter</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>시트의 값을 업데이트한다
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>  <span class="c1">#update values
+</span>  <span class="n">sheet</span><span class="p">.</span><span class="n">update_cell</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">'500000'</span><span class="p">)</span> <span class="c1"># 시트의 cell(2, 9) 위치의 값을 변경한다
+</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">.</span><span class="n">cell</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+  <span class="n">pp</span><span class="p">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="limitations-of-using-google-sheets-as-a-database">Limitations of Using Google Sheets as a Database</h2>
+
+<ul>
+  <li>구글 시트는 사용자가 데이타를 관리하고 분석할 수있는 훌륭한 기능들을 제공한다</li>
+  <li>하지만 그것이 기존 database를 완전히 대체하는 것은 아니다</li>
+  <li>구글 시트를 database로 사용하게 될 때 맞닥뜨리게 되는 몇가지 제약(constraints)들에 대해 알아보자
+    <ol>
+      <li>
+<strong>내결함성 부족</strong>
+        <ul>
+          <li>구글시트는 클라우드를 통해 이용가능하지만, 기존 database와 수준의 내결함성(fault-tolerant)은 없다</li>
+          <li>만약 어떤 사용자라도 spreadsheet을 지운다면, 모든 데이타는 날아갈 것이다.</li>
+          <li>반면에 기존 database는 데이타가 다중 노드로 복제되며 훨신 내결함성이 좋은 시스템을 제공한다.</li>
+        </ul>
+      </li>
+      <li>
+<strong>스토리지 제약</strong>
+        <ul>
+          <li>구글시트는 5백만 레코드까지만 저장할 수있다.</li>
+          <li>처음에는 이것이 상당히 많은 숫자처럼 보이지만,</li>
+        </ul>
+        <ul>
+          <li>medium 이나 large size의 application에 충분한 숫자는 아니다</li>
+        </ul>
+      </li>
+      <li>
+<strong>데이타베이스 기능이 없음</strong>
+        <ul>
+          <li>구글 시트는 querty,search,joins,consitency와 같은 database 기능들을 제공하지 않는다.</li>
+          <li>부드럽게 joins 기능을 수행하는 표준 API는 없다</li>
+          <li>이런 동작을 하기 위해서는 직접 복잡한 프로그래밍을 해야한다</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="결론">결론</h2>
+
+<ul>
+  <li>이 포스트에서 구글 시트와 그 특징들, 구글시트를 어떻게 database로 사용하는지를 배웠다</li>
+  <li>하지만 특정 기능들의 부족으로 database를 완전히 대체할 수는 없다</li>
+  <li>당신이 다른 대체품을 찾고있다면, <code class="language-html highlighter-rouge">Hevo Data</code>를 한 번 써보길 권한다,</li>
+  <li>여기서 부터는 Hevo 홍보 ( 유료 서비스임)</li>
+</ul>
+
+<h1 id="flutter-tutorial---google-sheets-api">Flutter Tutorial - Google Sheets API</h1>
+
+<ul>
+  <li>#flutter</li>
+</ul>
+
+<h2 id="개요-1">개요</h2>
+
+<ul>
+  <li>Youtube 시리즈</li>
+  <li><a href="https://www.youtube.com/watch?v=3UJ6RnWTGIY">Flutter Tutorial - Google Sheets API 1/3, youtube</a></li>
+</ul>
+
+<h2 id="내용정리">내용정리</h2>
+
+<ul>
+  <li>google sheets에 있는 데이터의 CRUD가 가능한 android, ios, web 앱을 지원하는 api를 배움</li>
+</ul>
+
+<h1 id="android-studio-업데이트중-에러">Android Studio 업데이트중 에러</h1>
+
+<ul>
+  <li>#android-studio</li>
+</ul>
+
+<h2 id="참고링크">참고링크</h2>
+
+<ul>
+  <li><a href="https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors">첫번째 링크: Android Emulator Hypervisor Driver for AMD Processors</a></li>
+  <li><a href="https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors/wiki/Is-Hyper-V-really-disabled%3F">두번째 링크: Is Hyper V really disabled?</a></li>
+  <li>첫번째 링크에서 Prerequiste를 맞추도록 해야함.</li>
+</ul>
+
+<h1 id="javascript-개념-설명-사이트">Javascript 개념 설명 사이트</h1>
+
+<ul>
+  <li>
+<a href="https://poiemaweb.com/js-closure">클로저의 개념, Polemaweb?</a> : 클로저의 개념 설명, 모던 자바스크립트 Deep Dive의 저자?</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Javascript 초급 코딩 요령 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="Google Apps Script 에서 사용하는 요령도 포함">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/javascript-myCookBook/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Javascript 초급 코딩 요령">
+    <meta property="og:description" content="Google Apps Script 에서 사용하는 요령도 포함">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/javascript-myCookBook/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/javascript-myCookBook/">
+    <meta name="twitter:title" content="Javascript 초급 코딩 요령">
+    <meta name="twitter:description" content="Google Apps Script 에서 사용하는 요령도 포함">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="javascript-myCookBook">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Javascript 초급 코딩 요령</h1>
+    
+        <p class="title-summary">Google Apps Script 에서 사용하는 요령도 포함</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/javascript-myCookBook.md" target="_blank">created: 2020.06.05</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/javascript-myCookBook.md" target="_blank">updated: 2024.02.26</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/javascript-myCookBook.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Javascript+%EC%B4%88%EA%B8%89+%EC%BD%94%EB%94%A9+%EC%9A%94%EB%A0%B9&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    javascript typescript falsy truthy npm-install package_json google-apps-script
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EC%8B%9C%EC%9E%91" id="markdown-toc-1-시작">1. 시작</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#%EB%B9%88-%EB%B0%B0%EC%97%B4-%EA%B0%92%EC%9D%B4-false%EB%A1%9C-%ED%8F%89%EA%B0%80-%EB%B0%9B%EA%B8%B8-%EC%9B%90%ED%95%A0-%EB%95%8C" id="markdown-toc-빈-배열-값이-false로-평가-받길-원할-때">빈 배열 값이 false로 평가 받길 원할 때</a>        <ul>
+          <li><a href="#%ED%95%B4%EB%8B%B9-%EB%82%B4%EC%9A%A9%EC%9D%98-%EC%9E%90%EC%84%B8%ED%95%9C-%EC%84%A4%EB%AA%85%EC%9D%80" id="markdown-toc-해당-내용의-자세한-설명은">해당 내용의 자세한 설명은…</a></li>
+        </ul>
+      </li>
+      <li><a href="#iseven--isodd-%ED%95%9C-%EC%A4%84-%ED%95%A8%EC%88%98" id="markdown-toc-iseven--isodd-한-줄-함수">isEven &amp; isOdd 한 줄 함수</a></li>
+      <li>
+<a href="#eventlistner%EC%97%90%EC%84%9C-this%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%97%90-%ED%98%BC%EB%8F%99%EC%9D%B4-%EC%9E%88%EC%9D%84-%EB%95%8C" id="markdown-toc-eventlistner에서-this의-사용에-혼동이-있을-때">eventlistner에서 this의 사용에 혼동이 있을 때</a>        <ul>
+          <li><a href="#%EB%AC%B8%EC%A0%9C" id="markdown-toc-문제">문제</a></li>
+          <li><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-해결책">해결책</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#git-%EC%97%90%EC%84%9C-javascript-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-clone-%ED%95%98%EA%B3%A0%EB%82%98%EC%84%9C-%EB%AD%90-%ED%95%B4%EC%95%BC-%ED%95%98%EC%A7%80-" id="markdown-toc-git-에서-javascript-프로젝트-clone-하고나서-뭐-해야-하지-">git 에서 javascript 프로젝트 clone 하고나서 뭐 해야 하지 ?</a>        <ul>
+          <li><a href="#npm-install" id="markdown-toc-npm-install">npm install</a></li>
+        </ul>
+      </li>
+      <li><a href="#vanila-javascript%EB%A1%9C-%EC%98%A4%EB%8A%98-%EB%82%A0%EC%A7%9C-%EB%A7%8C%EB%93%A4%EA%B3%A0-%EB%82%A0%EC%A7%9C-%EB%B9%84%EA%B5%90%ED%95%98%EA%B8%B0" id="markdown-toc-vanila-javascript로-오늘-날짜-만들고-날짜-비교하기">vanila javascript로 오늘 날짜 만들고 날짜 비교하기</a></li>
+      <li><a href="#javascript-%EC%97%90%EC%84%9C-python%EC%9D%98-range-%ED%95%A8%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-javascript-에서-python의-range-함수-만들기">javascript 에서 python의 range 함수 만들기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-시작">1. 시작</h1>
+
+<ul>
+  <li>최근에 Google-Apps-Script 프로젝트 하나를 완성하면서 정리해놓고 싶은 Javascript 요령을 적고자 한다.</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<p>바로 내용으로 들어간다</p>
+
+<h2 id="빈-배열-값이-false로-평가-받길-원할-때">빈 배열 값이 false로 평가 받길 원할 때</h2>
+
+<ul>
+  <li>폴더 상에서 특정 파일들을 검색하여 검색된 <strong>파일 이름을 배열로</strong> (예를 들면, <code class="language-html highlighter-rouge">newFiles</code> 배열) 반환하는 함수가 있다고 하자</li>
+  <li>이 때 배열이 비어있을 경우 이어지는 파일처리를 하지 않도록 빈배열이  <code class="language-html highlighter-rouge">falsy value</code>로 평가 받고 싶을 것이다.</li>
+  <li>하지만 Python 과는 다르게 <code class="language-html highlighter-rouge">if ( newfiles )</code> 로 처리할 때 <code class="language-html highlighter-rouge">false</code>로 판단하지 않는다.</li>
+  <li><strong>제목의 의도대로 판단 하고자 한다면 <code class="language-html highlighter-rouge">if ( newfiles.length )</code>를 사용한다.</strong></li>
+</ul>
+
+<h3 id="해당-내용의-자세한-설명은">해당 내용의 자세한 설명은…</h3>
+
+<ul>
+  <li>참조할 책 : 이선 브라운, 러닝 자바스크립트, 3rd Edition(2016), 번역판-한빛미디어(2017), p151. 5.7.1 참 같은 값과 거짓 같은 값</li>
+  <li>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">MDN &gt; Definitions of Web-realated terms &gt; Fasly</a> : 거짓 같은 값</li>
+  <li>위 값 외에는 모두 참 같은 값 (Truthy)
+    <ul>
+      <li>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">MDN &gt; Definitions of Web-realated terms &gt; Truthy</a> : 참 같은 값</li>
+    </ul>
+  </li>
+  <li>주의할 Truthy values
+    <ul>
+      <li>모든 객체, valueOf( ) 메서드 호출시 false를 반환하는 객체도 참 값임</li>
+      <li>모든 배열, 빈 배열도 참 값</li>
+      <li>공백만 있는 문자열 (“ “ 등)</li>
+      <li>문자열 “false”</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="iseven--isodd-한-줄-함수">isEven &amp; isOdd 한 줄 함수</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">isEven</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="kd">const</span> <span class="nx">isOdd</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<h2 id="eventlistner에서-this의-사용에-혼동이-있을-때">eventlistner에서 this의 사용에 혼동이 있을 때</h2>
+
+<ul>
+  <li>참조링크 : <a href="https://metafizzy.co/blog/this-in-event-listeners/">What is ‘this’ in event listeners?</a>
+</li>
+</ul>
+
+<h3 id="문제">문제</h3>
+<ul>
+  <li>eventlistener 콜백함수내에서 this를 사용할 경우 , this가 콜백함수를 멤버로 가진 Object를 참조하지 않는다</li>
+  <li>이때의 this는 eventlistner의 bound element를 this로 사용하므로 원래의 의도대로 수행할 수 없다</li>
+</ul>
+
+<h3 id="해결책">해결책</h3>
+<ul>
+  <li>구식 solution : <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener/handleEvent">handleEvent</a>
+</li>
+  <li>요즘 solution : <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Specifying_this_using_bind()">bind()</a>
+</li>
+  <li>다른 solution : 화살표 함수</li>
+  <li>자세한 내용은 위 참조링크 본문 참조</li>
+</ul>
+
+<h2 id="git-에서-javascript-프로젝트-clone-하고나서-뭐-해야-하지-">git 에서 javascript 프로젝트 clone 하고나서 뭐 해야 하지 ?</h2>
+
+<ul>
+  <li>google 개발자는 gas unit-testing 어떻게 하나 보려고 <a href="https://github.com/googleworkspace/apps-script-oauth2">apps-script-oauth2, github</a>를 다운받아 봤다.</li>
+  <li>package.json을 보니 mocha와 chai를 쓰는군..</li>
+  <li>근데 clone 하고 나서 뭐 해야 하지? (오랜만에 다시해서..) ▶ <code class="language-html highlighter-rouge">npm install</code>을 한다 !!</li>
+</ul>
+
+<h3 id="npm-install">npm install</h3>
+
+<ul>
+  <li>#npm-install #package_json</li>
+  <li>참고 링크 : <a href="https://docs.npmjs.com/cli/v7/commands/npm-install">npm-install</a>
+</li>
+  <li>
+<code class="language-html highlighter-rouge">npm install</code> (in a package directory, no arguments):
+    <ul>
+      <li>(이 명령으로) 로컬 <code class="language-html highlighter-rouge">node_modules</code> folder에 의존하는 패키지들을 모두 설치한다</li>
+      <li>여기에 global mode를 추가하면 (즉, command에 <code class="language-html highlighter-rouge">-g</code> 나 <code class="language-html highlighter-rouge">--global</code>을 덧붙이면)
+        <ul>
+          <li>현재 package context (즉, 현재 working directory)를 global package로 설치한다</li>
+        </ul>
+      </li>
+      <li>기본적으로 <code class="language-html highlighter-rouge">npm install</code> 명령은 <code class="language-html highlighter-rouge">package.json</code>에 들어있는 모든 의존 모듈(dependencies)을 설치한다</li>
+      <li>
+<code class="language-html highlighter-rouge">--production</code> flag이 추가되면 (혹은 <code class="language-html highlighter-rouge">NODE_ENV</code> 환경 변수가 <code class="language-html highlighter-rouge">production</code>으로 설정되어있으면)
+        <ul>
+          <li>npm은 <code class="language-html highlighter-rouge">devDependencies</code>에 등록된 모듈을 설치하지 않는다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">NODE_ENV</code> 환경 변수가 <code class="language-html highlighter-rouge">production</code>으로 설정된 상황에서
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">dependencies</code>와 <code class="language-html highlighter-rouge">devDependencies</code>의 모든 모듈을 설치하려면</li>
+          <li>
+<code class="language-html highlighter-rouge">--production=false</code> 옵션을 추가해라
+            <ul>
+              <li>NOTE : <code class="language-html highlighter-rouge">--production</code> flag은 프로젝트에 dependency 추가할 때는 별 의미가 없다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vanila-javascript로-오늘-날짜-만들고-날짜-비교하기">vanila javascript로 오늘 날짜 만들고 날짜 비교하기</h2>
+
+<ul>
+  <li>#google-apps-script</li>
+  <li>참조
+    <ul>
+      <li><a href="https://script.google.com/home/projects/17hCVZq2nXrmbBKpFrQe3rk2tYzWLKYOmrjXcmHxUHoHWLGTCmXSjeM_P/edit">사용된 AppsScript</a></li>
+      <li><a href="https://stackoverflow.com/a/493018/9457247">date object의 날짜 비교 방법, stackoverflow</a></li>
+    </ul>
+  </li>
+  <li>상황
+    <ul>
+      <li>‘A12’ range가 오늘 날짜인지 확인하여 `needUpdate 변수 생성하고 필요하면 오늘 날짜로 업데이트하기
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">finalDay</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="dl">'</span><span class="s1">A12</span><span class="dl">'</span><span class="p">).</span><span class="nx">getValue</span><span class="p">());</span>
+<span class="kd">const</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="nx">today</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">needUpdate</span> <span class="o">=</span> <span class="nx">finalDay</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">!==</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getTime</span><span class="p">();</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">needUpdate</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">today</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="javascript-에서-python의-range-함수-만들기">javascript 에서 python의 range 함수 만들기</h2>
+
+<ul>
+  <li>이 <a href="https://velog.io/@jinyongp/%EC%97%B0%EC%86%8D%EB%90%9C-%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%96%BB%EB%8A%94-%EB%B0%A9%EB%B2%95">링크</a> 에서 보이는 바와 같이 많은 방법이 있지만</li>
+  <li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#sequence_generator_range">MDN Site에 나와 있는 아래 방법</a>이 표준이라고 보여진다
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>  <span class="c1">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)</span>
+  <span class="kd">const</span> <span class="nx">range</span> <span class="o">=</span> <span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">stop</span><span class="p">,</span> <span class="nx">step</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">({</span> <span class="na">length</span><span class="p">:</span> <span class="p">(</span><span class="nx">stop</span> <span class="o">-</span> <span class="nx">start</span><span class="p">)</span> <span class="o">/</span> <span class="nx">step</span> <span class="o">+</span><span class="mi">1</span> <span class="p">},</span> <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">start</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">*</span> <span class="nx">step</span><span class="p">);</span>
+    
+  <span class="c1">// Generate numbers range 1..10 with step of 2</span>
+  <span class="nx">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="c1">// [1, 3, 5, 7, 9]</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>여기서 사용된 낯선 문법을 알아보자
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">{ length: n }</code> 은 유사 배열 (array-like)를 만드는 문법이다 . 참조링크: <a href="https://kamang-it.tistory.com/entry/JavaScript15%EC%9C%A0%EC%82%AC%EB%B0%B0%EC%97%B4-%EA%B0%9D%EC%B2%B4Arraylike-Objects">유사배열 객체</a>
+</li>
+      <li>
+<code class="language-html highlighter-rouge">Array.from()</code>은 유사 배열을 실제 배열로 만드는 대표적인 method 로 ES6부터 추가된 기능이다</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

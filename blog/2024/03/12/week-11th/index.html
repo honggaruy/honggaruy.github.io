@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2024년 11주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="03/11 (월) ~ 03/17 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2024/03/12/week-11th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2024년 11주차 기록">
+    <meta property="og:description" content="03/11 (월) ~ 03/17 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2024/03/12/week-11th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2024/03/12/week-11th/">
+    <meta name="twitter:title" content="2024년 11주차 기록">
+    <meta name="twitter:description" content="03/11 (월) ~ 03/17 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2023/01/02/week-01th/">« 2023년 01주차 기록</a>
+          
+          
+            <a class="next">◀ 이게 마지막 포스트입니다</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2024년 11주차 기록</h1>
+        <p class="created-date">
+            2024.03.12
+        </p>
+
+
+        <div class="post-tag">
+    github-actions 에러해결 디버깅
+</div>
+
+        <h2>03/11 (월) ~ 03/17 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%98%A4%EB%9E%AB%EB%A7%8C%EC%97%90-push-%ED%96%88%EB%8D%94%EB%8B%88-%EC%95%84%EB%9E%98%EC%99%80-%EA%B0%99%EC%9D%80-github-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C%EB%8B%A4" id="markdown-toc-오랫만에-push-했더니-아래와-같은-github-에러가-발생한다">오랫만에 push 했더니 아래와 같은 github 에러가 발생한다</a>    <ul>
+      <li><a href="#%EB%AC%B8%EC%A0%9C%ED%99%94%EB%A9%B4" id="markdown-toc-문제화면">문제화면</a></li>
+      <li><a href="#%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95" id="markdown-toc-해결방법">해결방법</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="오랫만에-push-했더니-아래와-같은-github-에러가-발생한다">오랫만에 push 했더니 아래와 같은 github 에러가 발생한다</h1>
+<ul>
+  <li>드가자~ (해결하러)</li>
+</ul>
+
+<h2 id="문제화면">문제화면</h2>
+<ul>
+  <li><img src="/post-img/2024/2024week11-01.png" alt=""></li>
+  <li>첫번째 문제
+    <ul>
+      <li>build_and_depoly</li>
+      <li>Node.js 16 actions are deprecated.</li>
+      <li>Please update the following actions to use Node.js 20:
+        <ul>
+          <li>actions/checkout@v2, actions/cache@v2.</li>
+        </ul>
+      </li>
+      <li>Fore more information see: https://github.blog/changelog/2023-09-22-github-actions-transitioning-from-node-16-tonode-20/</li>
+    </ul>
+  </li>
+  <li>두번째 문제
+    <ul>
+      <li>build_and_depoly</li>
+      <li>The following actions uses node12 which is deprecated and will be forced to run on node16:
+        <ul>
+          <li>actions/checkout@v2, actions/cache@v2.</li>
+        </ul>
+      </li>
+      <li>Fore more information see: https://github.blog/changelog/2023-06-13-github-actions-all-actions-will-run-on-node16-instead-of-node12-by-default/</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="해결방법">해결방법</h2>
+<ul>
+  <li>허무한 해결</li>
+  <li>github action을 도입하게된 계기인 <a href="https://github.com/jeffreytse/jekyll-deploy-action">jekyll-deploy-action, github</a>에 방문했더니…</li>
+  <li>대문(README.md)에 Update된 <code class="language-html highlighter-rouge">.github/workflows/build-jekyll.yml</code> 파일을 걸어놓았다</li>
+  <li>그냥복사해서 붙여넣기 했더니 해결되었다</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

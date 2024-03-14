@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 19주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="05/09 (월) ~ 05/15 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/05/09/week-19th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 19주차 기록">
+    <meta property="og:description" content="05/09 (월) ~ 05/15 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/05/09/week-19th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/05/09/week-19th/">
+    <meta name="twitter:title" content="2022년 19주차 기록">
+    <meta name="twitter:description" content="05/09 (월) ~ 05/15 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/05/02/week-18th/">« 2022년 18주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/05/16/week-20th/">2022년 20주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 19주차 기록</h1>
+        <p class="created-date">
+            2022.05.09
+        </p>
+
+
+        <div class="post-tag">
+    git command-line console english
+</div>
+
+        <h2>05/09 (월) ~ 05/15 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#git-%EC%97%90%EC%84%9C-unsafe-repository-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%82%9C%EB%8B%A4" id="markdown-toc-git-에서-unsafe-repository-에러가-난다">git 에서 unsafe repository 에러가 난다</a>    <ul>
+      <li><a href="#using-takeownexe-command-to-take-ownership-of-a-file-or-folder-theitbroscom" id="markdown-toc-using-takeownexe-command-to-take-ownership-of-a-file-or-folder-theitbroscom">Using Takeown.exe Command to Take Ownership of a File or Folder, theITBros.com</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EC%98%81%EC%96%B4---ie%EC%99%80-eg-%EA%B5%AC%EB%B3%84%ED%95%98%EC%97%AC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" id="markdown-toc-영어---ie와-eg-구별하여-사용하기">영어 - <code class="language-html highlighter-rouge">i.e.</code>와 <code class="language-html highlighter-rouge">e.g.</code> 구별하여 사용하기</a></li>
+</ul>
+
+<h1 id="git-에서-unsafe-repository-에러가-난다">git 에서 unsafe repository 에러가 난다</h1>
+
+<ul>
+  <li>tags: #git</li>
+  <li>에러 문구
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>╭─ ♥ 09:47 | D:     honggaruy.github.io
+╰─ git s
+fatal: unsafe repository <span class="o">(</span><span class="s1">'D:/repository/honggaruy.github.io'</span> is owned by someone <span class="k">else</span><span class="o">)</span>
+To add an exception <span class="k">for </span>this directory, call:
+
+        git config <span class="nt">--global</span> <span class="nt">--add</span> safe.directory D:/repository/honggaruy.github.io
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>에러 문구 지시사항대로 <code class="language-html highlighter-rouge">.gitconfig</code>에 safe.directory 항목을 추가했는데도 에러가 난다</li>
+  <li>git repository 만들때 관리자 권한으로 만들었는데 일반 권한으로 WT(Windows Terminal)을 실행하니 문제가 있다
+    <ul>
+      <li>관리자권한으로 WT 를 실행하여 <code class="language-html highlighter-rouge">git status</code>를 하면 문제가 없다</li>
+    </ul>
+  </li>
+  <li>SO에 관련된 질문과 답변이 있다 - <a href="https://stackoverflow.com/q/71901632/9457247">Fatal error unsafe  repo…</a>
+</li>
+  <li>때문에 다음과 같은 기사를 찾아봤다</li>
+</ul>
+
+<h2 id="using-takeownexe-command-to-take-ownership-of-a-file-or-folder-theitbroscom"><a href="https://theitbros.com/using-takeown-exe-command-to-take-ownership-of-file-or-folder/">Using Takeown.exe Command to Take Ownership of a File or Folder, theITBros.com</a></h2>
+
+<ul>
+  <li>tags: #command-line #console</li>
+  <li>파일 소유자를 변경하는 2가지 방법
+    <ul>
+      <li>File Explorer 사용하기
+        <ul>
+          <li>Step.1 - 변경하려는 폴더나 파일 선택후 마우스 Right-Click 하여 <code class="language-html highlighter-rouge">속성</code> 선택</li>
+          <li>Step.2 - <code class="language-html highlighter-rouge">보안 탭</code> ▶ <code class="language-html highlighter-rouge">고급</code> ▶ <code class="language-html highlighter-rouge">사용 권한 탭</code> ▶ <code class="language-html highlighter-rouge">변경</code>
+            <ul>
+              <li>이 방법으로 위 에러 문구 문제가 해결되는 것을 확인함 (2022-05-12)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>command-line에서 takeown.exe 유틸리티 사용하기 (windows built-in 도구임)
+        <ul>
+          <li>이 도구는 Administrator가 파일 소유권을 잃었을 때 다시 찾기 위한것이며 임의의 사용자에게 파일 소유권을 줄 수는 없음
+            <ul>
+              <li>결국, <code class="language-html highlighter-rouge">takeown.exe</code> 명령은 위 에러 문구 문제 해결에 역할을 하지 못했다.</li>
+              <li>임의의 사용자에게 파일 소유권을 주려면 <code class="language-html highlighter-rouge">File Explorer</code>를 사용해야 함</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="영어---ie와-eg-구별하여-사용하기">영어 - <code class="language-html highlighter-rouge">i.e.</code>와 <code class="language-html highlighter-rouge">e.g.</code> 구별하여 사용하기</h1>
+
+<ul>
+  <li>tags: #english</li>
+  <li>발췌 링크 : <a href="https://www.warnell.uga.edu/sites/default/files/inline-files/ieVeg.pdf">Using i.e. and e.g. correctly</a>
+</li>
+  <li>내용 요약
+    <ul>
+      <li>“i.e.” : <em>id est</em>, which is Latin for “that is.”</li>
+      <li>“e.g.” : <em>exempli gratia</em>, meaning “for example.”</li>
+    </ul>
+  </li>
+  <li>“i.e”
+    <ul>
+      <li>Examples
+        <ul>
+          <li>All employees will receive the standard discount; i.e., 20 percent.
+            <ul>
+              <li>i.e.가 “that is”를 의미하므로 “i.e., 20 percent”는 완전한 문장임 (또한 independent clause임)</li>
+              <li>때문에 두 independent caluses 를 연결하는 semicolon을 사용한다</li>
+            </ul>
+          </li>
+          <li>One meal(i.e., breakfast) is included in the pric eof the room.
+            <ul>
+              <li>이 번에는 문장 가운데에 위치하므로 괄호로 둘러쌌다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>“e.g.”
+    <ul>
+      <li>Examples
+        <ul>
+          <li>Certain fur-bearing mammals, e.g., nutria and otters, spend much of their lives in the water.
+            <ul>
+              <li>다른것과 구별되는 의미에 쓰이는 “i.e.”와는 다르게, “e.g.”는 “for example”을 의미한다
+                <ul>
+                  <li>즉, e.g.에 따라오는 예들과 똑같은 성질의 다른것이 있을수 있다</li>
+                  <li>하지만, i.e.에 따라오는 것은 오직 그것만 알맞은 성질을 갖는다</li>
+                </ul>
+              </li>
+              <li>e.g.는 또한 대체로 독립적인 문장을 구성하지 않지만..
+                <ul>
+                  <li>만약 독립적인 문장에 쓰인다면 <code class="language-html highlighter-rouge">;</code>로 문장을 연결한다
+                    <ul>
+                      <li>The beach closes when conditions warrant it; e.g., a hurricane warning has been issued.</li>
+                    </ul>
+                  </li>
+                  <li>그외에는 comma 혹은 괄호로 감싸거나 분리한다
+                    <ul>
+                      <li>There are some herbs that belong in every kitchen garden (e.g., basil, rosemary, and oregano).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

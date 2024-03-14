@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Total Commander 플러그인 관련 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/totalcmd-plugins/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Total Commander 플러그인 관련">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/totalcmd-plugins/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/totalcmd-plugins/">
+    <meta name="twitter:title" content="Total Commander 플러그인 관련">
+    <meta name="twitter:description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="totalcmd-plugins">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Total Commander 플러그인 관련</h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/totalcmd-plugins.md" target="_blank">created: 2022.04.30</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/totalcmd-plugins.md" target="_blank">updated: 2023.10.11</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/totalcmd-plugins.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Total+Commander+%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8+%EA%B4%80%EB%A0%A8&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    total-commander
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#tc%EC%9D%98-%EC%98%AC%EB%B0%94%EB%A5%B8-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B4%80%EB%A6%AC" id="markdown-toc-tc의-올바른-디렉토리-관리">TC의 올바른 디렉토리 관리</a>    <ul>
+      <li><a href="#tc-plugins-manager-%EB%A1%9C-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%A4%EC%B9%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" id="markdown-toc-tc-plugins-manager-로-플러그인-설치하는-방법">TC Plugins Manager 로 플러그인 설치하는 방법</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#wdx-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8" id="markdown-toc-wdx-플러그인">WDX 플러그인</a>    <ul>
+      <li>
+<a href="#%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8" id="markdown-toc-사용중인-플러그인">사용중인 플러그인</a>        <ul>
+          <li><a href="#%ED%99%95%EC%9D%B8%ED%95%B4%EB%B3%BC-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8" id="markdown-toc-확인해볼-플러그인">확인해볼 플러그인</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95" id="markdown-toc-사용방법">사용방법</a>        <ul>
+          <li><a href="#step-1-tc-%EC%9E%90%EC%B2%B4%EC%84%A4%EC%A0%95" id="markdown-toc-step-1-tc-자체설정">Step 1. TC 자체설정</a></li>
+          <li>
+<a href="#step-2-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%97%B4-%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%A7%91" id="markdown-toc-step-2-사용자-열-보기-편집">Step 2. 사용자 열 보기 편집</a>            <ul>
+              <li><a href="#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%97%B4" id="markdown-toc-사용자-열">사용자 열</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="#exif-%ED%99%9C%EC%9A%A9%EB%B2%95" id="markdown-toc-exif-활용법">Exif 활용법</a>            <ul>
+              <li><a href="#%EA%B4%80%EB%A0%A8%EB%A7%81%ED%81%AC" id="markdown-toc-관련링크">관련링크</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#wlx-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8" id="markdown-toc-wlx-플러그인">WLX 플러그인</a>    <ul>
+      <li>
+<a href="#fileinfo" id="markdown-toc-fileinfo">FileInfo</a>        <ul>
+          <li><a href="#%EA%B5%AD%EB%82%B4%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%84%A4%EB%AA%85" id="markdown-toc-국내블로그-설명">국내블로그 설명</a></li>
+          <li><a href="#readmetxt-%EC%9A%94%EC%95%BD" id="markdown-toc-readmetxt-요약">ReadMe.txt 요약</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#pdfview" id="markdown-toc-pdfview">pdfview</a>        <ul>
+          <li><a href="#%EC%B6%94%EA%B0%80-%EC%84%A4%EC%B9%98-%ED%95%84%EC%9A%94%ED%95%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8" id="markdown-toc-추가-설치-필요한-프로그램">추가 설치 필요한 프로그램</a></li>
+          <li><a href="#%EC%84%A4%EC%A0%95" id="markdown-toc-설정">설정</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tc의-올바른-디렉토리-관리">TC의 올바른 디렉토리 관리</h1>
+
+<ul>
+  <li>발췌: <a href="https://cafe.naver.com/totalcommander/240">토탈커맨더의 올바른 디렉토리 관리, TC 네이버 카페</a>
+</li>
+  <li>토탈커맨더 트리구조 - Plugins 폴더를 만들어 넣는다
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre># totalcmd root
+├── Filter64/  - default
+├── Filter32/  - default
+├── Language/  - default
+├── Sounds/ - Custom, 효과음 ? 
+├── Plugins/ - Custom, 플러그인 관리
+│   ├─ Applications - Plugin이 아닌 유틸 i.e. Plugin Manager등등
+│   ├─ WCX - 압축기 플러그인 (Packer plugins)
+│   ├─ WDX - 컨텐츠 플러그인 (Content Plugins) 
+│   ├─ WFX - 파일 시스템 플러그인 (File system plugins) 
+│   └─ WLX - 리스터 플러그인 (Lister Plugins) 
+├─ wincmd.ini - 시스템 홈에 저장될수도 있음 
+├─ Totalcmd.exe - 32bit 실행 파일 
+├─ TOTALCMD64.exe - 64bit 실행 파일 
+└─ Wincmd.key - 구입키 
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>위의 트리구조 편집은 tree command를 한 이후에 복사 붙여넣기 한 것</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tc-plugins-manager-로-플러그인-설치하는-방법">TC Plugins Manager 로 플러그인 설치하는 방법</h2>
+
+<ul>
+  <li>TC에 단축메뉴로 등록해놓은 ( 이건 아마 되어있겠지??) TC Plugins Manager를 실행한다
+    <ul>
+      <li>내가 확인한 것은 2.2.8 버전</li>
+    </ul>
+  </li>
+  <li>TCPM의 Dialog 창이 뜬다</li>
+  <li>중간쯤에 메뉴버튼 리본이 있는데 첫번째인 <code class="language-html highlighter-rouge">Install</code>을 click
+    <ul>
+      <li>Install..  (개별파일에서 설치?)</li>
+      <li>Install from archive..  (압축파일에서 바로 설치)</li>
+      <li>Install from folder..  (풀어놓은 폴더에서 설치)</li>
+      <li>.. 와 같이 3개 메뉴가 나온다</li>
+    </ul>
+  </li>
+  <li>플러그인은 보통 압축파일로 배포되므로 두번째를 가장 많이 쓴다
+    <ul>
+      <li>위 메뉴를 통해 인터넷에서 다운로드 받은 압축파일이 있는 <code class="language-html highlighter-rouge">다운로드 폴더</code>로 가서..</li>
+      <li>설치를 누르고 폴더가 제대로 들어갔는지 확인한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="wdx-플러그인">WDX 플러그인</h1>
+
+<ul>
+  <li>주로 음악파일이나 동영상 파일의 세부 정보를 TC 파일목록 뷰에서 바로 확인하기 위해 이용한다</li>
+  <li>플러그인을 설치하자 마자 바로 보이는 것은 아니고 <code class="language-html highlighter-rouge">보기 모드</code>관련 설정이 필요하다</li>
+</ul>
+
+<h2 id="사용중인-플러그인">사용중인 플러그인</h2>
+
+<ul>
+  <li>MediaInfo</li>
+  <li>TCMediaInfo</li>
+  <li><a href="https://totalcmd.net/plugring/exif.html">Exif 2.3</a></li>
+</ul>
+
+<h3 id="확인해볼-플러그인">확인해볼 플러그인</h3>
+
+<ul>
+  <li><a href="https://ghisler.ch/board/viewtopic.php?t=44032">WinScript</a></li>
+</ul>
+
+<h2 id="사용방법">사용방법</h2>
+
+<h3 id="step-1-tc-자체설정">Step 1. TC 자체설정</h3>
+
+<ul>
+  <li>기본 옵션이 <code class="language-html highlighter-rouge">수직 분할</code> 상태로는 여러가지 정보를 보기 어려우므로 <code class="language-html highlighter-rouge">수평 분할</code>상태로 바꾼다
+    <ul>
+      <li>편의를 위해 상단 버튼 바에 <code class="language-html highlighter-rouge">명령어: 수평 분할</code>버튼을 추가한다 (기본적으로 toggle이 적용된다)</li>
+    </ul>
+  </li>
+  <li>사용자 열 보기를 설정할 예정인데 음악파일용, 동영상 파일용등 여러개를 만들어 toggle할 것이다
+    <ul>
+      <li>버튼 만들기 : <code class="language-html highlighter-rouge">원본: 다음 사용자 열 보기</code> (cm_SrcNextCustomView) 를 버튼 등록한다
+        <ul>
+          <li>혹시 사용자 열 보기 옵션이 늘어나면  <code class="language-html highlighter-rouge">원본: 이전 사용자 열 보기</code> (cm_SrcPrevCustomView) 버튼도 추가한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="step-2-사용자-열-보기-편집">Step 2. 사용자 열 보기 편집</h3>
+
+<ul>
+  <li>사용자 열 환경 설정으로 진입한다
+    <ul>
+      <li>메뉴에서 진입 : <code class="language-html highlighter-rouge">보기메뉴 ▶ 사용자 열 모드 ▶ 사용자 열 환경설정...</code>
+</li>
+      <li>옵션에서 진입 : <code class="language-html highlighter-rouge">옵션 root ▶ 화면 ▶ 사용자 열</code>
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">새로 만들기</code>로 추가 or 기존 열을 <code class="language-html highlighter-rouge">편집</code>
+</li>
+  <li>편집화면으로 들어가면 TC 목록에서 보여줄 열을 편집할 수 있는데…
+    <ul>
+      <li>맨 오른쪽에 <kbd>+</kbd> 키를 누르고 들어가면 이제서야 미리 설치한 <code class="language-html highlighter-rouge">WDX</code> 플러그인 이름이 보인다</li>
+      <li>WDX 플러그인은 파일에서 정보를 뽑아내는 정보소스로 필요한 정보를 편집하여 해당 열에서 보여줄 정보를 편집한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="사용자-열">사용자 열</h4>
+
+<ul>
+  <li>관련 도움말
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Dialog box: Custom columns</code>
+        <ul>
+          <li>[=pluginname.fieldname.unit] 이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="exif-활용법">Exif 활용법</h3>
+
+<h4 id="관련링크">관련링크</h4>
+
+<ul>
+  <li><a href="https://likenew.tistory.com/448">디지털 사진 관리, 파일 이름 일괄 변경, likenew.tistory.com</a></li>
+  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=iagapeu&logNo=220875813227">몇년동안 쌓인 사진 파일 정리 하기(아이폰), 아날로그로의 귀환…</a></li>
+</ul>
+
+<h1 id="wlx-플러그인">WLX 플러그인</h1>
+
+<ul>
+  <li>파일의 내용을 확인하는 플러그인.</li>
+  <li>파일을 선택한후 “빠른 보기”(<kbd>Ctrl</kbd>+<kbd>q</kbd>)로 각 파일별 lister 플러그인 활성화 한다</li>
+</ul>
+
+<h2 id="fileinfo">FileInfo</h2>
+
+<ul>
+  <li>.exe, .dll, .ocx 파일의 메타데이트를 보여주는 파일</li>
+  <li>2022-05-07 현재, 2.23 버전 ( 2017-05-18 업데이트)</li>
+  <li>64bit 버전 지원</li>
+  <li><a href="http://totalcmd.net/plugring/fileinfo.html">TOTALCMD.NET 링크</a></li>
+</ul>
+
+<h3 id="국내블로그-설명">국내블로그 설명</h3>
+
+<ul>
+  <li><a href="https://qaos.com/article.php?sid=2447">TC/파일 정보 표시 플러그인 Fileinfo, qaos.com</a></li>
+</ul>
+
+<h3 id="readmetxt-요약">ReadMe.txt 요약</h3>
+
+<ul>
+  <li>4 versions are included in this zipped file.
+    <ul>
+      <li>wlx_fileinfo32 and wlx_fileinfo64 are statically linked to MFC, size is larger but no DLL is needed</li>
+      <li>wlx_fileinfo32_DL and wlx_fileinfo64_DL are dynamically linked to MFC, size is half the weight but 
+  2 DLLs from MFC9.0 are needed (MFC90.dll, MSVCR90.dll)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pdfview">pdfview</h2>
+
+<h3 id="추가-설치-필요한-프로그램">추가 설치 필요한 프로그램</h3>
+
+<ul>
+  <li>Ghostscript
+    <ul>
+      <li><a href="https://ghostscript.com/doc/current/Readme.htm">Documentation</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="설정">설정</h3>
+
+<ul>
+  <li>아래 설정은 pdfplugin 설치 폴더에 있는 <code class="language-html highlighter-rouge">ReadMe.txt</code>를 참고하여 작성함</li>
+  <li>설치하면 <code class="language-html highlighter-rouge">%COMMANDER_PATH%\lsplugin.ini</code>에 다음과 같은 설정이 자동으로 추가된다
+    <div class="language-ini highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nn">[pdfview]</span>
+<span class="py">command</span><span class="p">=</span><span class="s">-dSAFER -dBATCH -dNOPAUSE -sDEVICE=bmp256 -r%3 -sOutputFile=%2 -dFirstPage=%4 -dLastPage=%4 "%1"</span>
+<span class="py">resolution</span><span class="p">=</span><span class="s">144</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>그냥 Pdf 파일를 Lister로 보면 에러가 남. 다음 설정을 <code class="language-html highlighter-rouge">lsplugin.ini</code>에 추가하자
+    <div class="language-ini highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="py">exepath</span><span class="p">=</span><span class="s">"C:/Program Files/gs/gs9.56.1/bin/gswin64c.exe"</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

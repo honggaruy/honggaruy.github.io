@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 28주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="07/12 (월) ~ 07/18 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/07/12/week-28th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 28주차 기록">
+    <meta property="og:description" content="07/12 (월) ~ 07/18 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/07/12/week-28th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/07/12/week-28th/">
+    <meta name="twitter:title" content="2021년 28주차 기록">
+    <meta name="twitter:description" content="07/12 (월) ~ 07/18 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/07/05/week-27th/">« 2021년 27주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/07/19/week-29th/">2021년 29주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 28주차 기록</h1>
+        <p class="created-date">
+            2021.07.12
+        </p>
+
+
+        <div class="post-tag">
+    python javascript billmaker book_cover jupyter_notebook gist pandas
+</div>
+
+        <h2>07/12 (월) ~ 07/18 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#python--javascript-%ED%8C%81-%ED%95%98%EB%82%98" id="markdown-toc-python--javascript-팁-하나">Python + Javascript 팁 하나</a>    <ul>
+      <li><a href="#tldr" id="markdown-toc-tldr">TL;DR</a></li>
+      <li><a href="#%EB%AC%B8%EC%A0%9C" id="markdown-toc-문제">문제</a></li>
+      <li><a href="#%EA%B5%AC%ED%98%84" id="markdown-toc-구현">구현</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EC%B1%85-%ED%91%9C%EC%A7%80-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EC%82%AC" id="markdown-toc-책-표지-관련-기사">책 표지 관련 기사</a></li>
+  <li><a href="#%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%97%90-javascript%EC%9D%98-codepen-%EC%B2%98%EB%9F%BC-python-%EC%BD%94%EB%93%9C-%ED%8F%AC%EC%8A%A4%ED%8C%85%ED%95%98%EA%B8%B0" id="markdown-toc-사이트에-javascript의-codepen-처럼-python-코드-포스팅하기">사이트에 Javascript의 CodePen 처럼 Python 코드 포스팅하기</a></li>
+  <li>
+<a href="#pandas-%EC%98%88%EC%A0%9C" id="markdown-toc-pandas-예제">Pandas 예제</a>    <ul>
+      <li><a href="#%EB%AC%B8%EC%A0%9C-1" id="markdown-toc-문제-1">문제</a></li>
+      <li><a href="#%EC%A4%80%EB%B9%84-%EC%82%AC%ED%95%AD" id="markdown-toc-준비-사항">준비 사항</a></li>
+      <li><a href="#%EC%9E%98%EB%AA%BB-%ED%95%B4%EA%B2%B0%ED%95%9C-%EC%82%AC%EB%A1%80" id="markdown-toc-잘못-해결한-사례">잘못 해결한 사례</a></li>
+      <li><a href="#%EC%A2%80-%EB%8D%94-%EA%B0%9C%EC%84%A0%EB%90%9C-%EC%82%AC%EB%A1%80" id="markdown-toc-좀-더-개선된-사례">좀 더 개선된 사례</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="python--javascript-팁-하나">Python + Javascript 팁 하나</h1>
+
+<h2 id="tldr">TL;DR</h2>
+
+<ul>
+  <li>python , jinja2 템플릿, 템플릿내의 javascript 간에 정보를 주고 받을수 있다.</li>
+</ul>
+
+<h2 id="문제">문제</h2>
+
+<ul>
+  <li>BillMaker 개발중에 나온 이슈로 기록해 놓고 싶다.</li>
+  <li>lib_scraping 구현중에 대여한 책 dataframe에서 다음과 같은 정보를 pandas로 뽑아내어 기록했다.
+    <ul>
+      <li><img src="/post-img/2021/2021week28-01.png" alt="2021week28-01"></li>
+    </ul>
+  </li>
+  <li>위 정보는 python에서 뽑아내어 jinja2 템플릿에 전달한 것이므로 일단 html rendering이 완료되면 javascript 처럼 실시간으로 정보가 업데이트 되지 않는다.</li>
+  <li>그런데 위와 같이 구현한 후에 다음과 같이 개선하고 싶어졌다.
+    <ul>
+      <li><img src="/post-img/2021/2021week28-02.png" alt="2021week28-02"></li>
+    </ul>
+  </li>
+  <li>신규정보인 남은날짜는 정보 특성상 html을 다시 rendering하지 않더라도 html 파일을 열 때마다 업데이트 되어야 하므로 javascript로 구현해야 했다.</li>
+</ul>
+
+<h2 id="구현">구현</h2>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">다음반납</code>행은 처음 개발한 대로 python + jinja2로만 구현한다.</li>
+  <li>
+<code class="language-html highlighter-rouge">다음반납</code>행은 h2 태그인데 id=’next_return` attr을 주어 javascript로 추후 수정을 용이하도록 한다.</li>
+  <li>jinja2 템플릿의 제일 마지막에 다음과 같은 script 태그를 추가한다
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="c">&lt;!-- 다음 반납일과 오늘 사이의 남은 날짜를 계산하여 추가한다--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="nx">moment</span><span class="p">.</span><span class="nx">locale</span><span class="p">(</span><span class="dl">'</span><span class="s1">ko</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">next_return</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">words</span> <span class="o">=</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">return_day</span> <span class="o">=</span> <span class="nx">moment</span><span class="p">(</span><span class="nx">words</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="nx">words</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">`(</span><span class="p">${</span><span class="nx">moment</span><span class="p">().</span><span class="nx">to</span><span class="p">(</span><span class="nx">return_day</span><span class="p">)}</span><span class="s2">)`</span><span class="p">)</span>
+    <span class="nx">elem</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>moment.js 불러오는 행은 다음과 같이 두 줄로 해도 된다. 어느게 좋을지는 확인해보지 않았다
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>locale을 적용하지 않은 버전도 있고 나라별로 locale을 분리해놓은 것을 보면 로딩할 때 performance 이슈가 있을 것으로 보인다.</li>
+  <li>locale을 적용해주면 <a href="https://momentjs.com/docs/#/displaying/to/"><code class="language-html highlighter-rouge">moment().to()</code> 함수</a>를 써서 <code class="language-html highlighter-rouge">9일 후</code>를 나타낼 때 한국 표기를 지원해준다. ( 나라별 날짜 계산도 포함)</li>
+  <li>
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.split(‘ ‘)</a>를 써서 분리하고 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.splice()</a>를 써서 필요한 문구를 추가하고 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.join(‘ ‘)</a>으로 문장을 완성한다.</li>
+  <li>
+<a href="https://stackoverflow.com/a/15322060/9457247">python 에서 javascript로 데이타를 넘길때 javascript가 인식가능한 html의 한 요소로 넘기면 간단하다.</a> ( 보이지 않는 meta 태그에 json 데이타로 넘겨도 된다)</li>
+</ul>
+
+<h1 id="책-표지-관련-기사">책 표지 관련 기사</h1>
+
+<ul>
+  <li>#book_cover</li>
+  <li>꺼리 : <a href="https://m.blog.naver.com/chjeon/221850622920">인터넷서점에 등록된 책 표지 이미지를 도서관목록에 사용할 수 있는가?, 네이버블로그</a>
+    <ul>
+      <li>책 표지 이미지가 저작권 이슈로 된 적은 없음.</li>
+      <li>원칙적으로 저작물로 보호를 받긴 하나 주 저작물이라기 보다는 서지정보의 일종으로 평가됨.</li>
+      <li>따라서, 저작권자인 출판사가 보호를 하려고하기 보단 홍보에 쓰길 원함</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="사이트에-javascript의-codepen-처럼-python-코드-포스팅하기">사이트에 Javascript의 CodePen 처럼 Python 코드 포스팅하기</h1>
+
+<ul>
+  <li>#jupyter_notebook, #gist</li>
+  <li><a href="https://danthetech.netlify.app/Blog/how-to-embed-jupyter-notebook-using-gist">Gist를 사용하여 Jupyter Notebook 포스팅하기, DanTheTech</a></li>
+  <li>Python Pandas 팁을 사이트에 올리려고 하는데 참고해보기.</li>
+</ul>
+
+<h1 id="pandas-예제">Pandas 예제</h1>
+
+<ul>
+  <li>#billmaker, #pandas</li>
+</ul>
+
+<h2 id="문제-1">문제</h2>
+
+<ul>
+  <li>아래와 같은 Dataframe 이 있을 때 오늘 (2021-07-03) 기준으로…
+    <ul>
+      <li>이번달 반납일 [18, 22] 과</li>
+      <li>다음달 반납일 [2, 6] 을 각각 반환하는 함수를 만들고자 한다</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>index</th>
+      <th>서명</th>
+      <th>반납일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>일번책</td>
+      <td>2021-07-18</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>이번책</td>
+      <td>2021-07-22</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>삼번책</td>
+      <td>2021-07-22</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>사번책</td>
+      <td>2021-08-02</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>오번책</td>
+      <td>2021-08-06</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>이 문제는 Python의 Datetime 라이브러리 만으로 풀려고 하면 복잡하다.</li>
+  <li>Pandas의 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#">Time Series 예제</a>를 충분히 활용해보자</li>
+</ul>
+
+<h2 id="준비-사항">준비 사항</h2>
+
+<ul>
+  <li>아래와 같이 준비한다</li>
+</ul>
+
+<p><img src="/post-img/2021/2021week28-03.png" alt="2021week28-03"></p>
+
+<h2 id="잘못-해결한-사례">잘못 해결한 사례</h2>
+
+<ul>
+  <li>파이썬과 Pandas를 배운 초기에 짰던 코드</li>
+  <li>다음달을 결정할 때 12월에서 1월로 넘어갈때의 오류등을 없애기 위해
+    <ul>
+      <li>python의 내장 라이브러리인 datetime과</li>
+      <li>3rd 파티 라이브러리인 dateutil까지 사용하고 있다</li>
+    </ul>
+  </li>
+  <li>너무 복잡하다</li>
+</ul>
+
+<p><img src="/post-img/2021/2021week28-04.png" alt="2021week28-04"></p>
+
+<h2 id="좀-더-개선된-사례">좀 더 개선된 사례</h2>
+
+<ul>
+  <li>Pandas에는 자체적으로 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Time Series / date functionality</a> 가 있다</li>
+  <li>웬만한 시간계산 라이브러리 보다 사용하기 좋다</li>
+  <li>좀 더 개선할 점이 있는지 찾아보자.</li>
+</ul>
+
+<p><img src="/post-img/2021/2021week28-05.png" alt="2021week28-05"></p>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

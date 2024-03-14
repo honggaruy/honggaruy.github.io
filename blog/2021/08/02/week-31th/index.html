@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 31주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="08/02 (월) ~ 08/08 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/08/02/week-31th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 31주차 기록">
+    <meta property="og:description" content="08/02 (월) ~ 08/08 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/08/02/week-31th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/08/02/week-31th/">
+    <meta name="twitter:title" content="2021년 31주차 기록">
+    <meta name="twitter:description" content="08/02 (월) ~ 08/08 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/07/26/week-30th/">« 2021년 30주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/08/09/week-32th/">2021년 32주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 31주차 기록</h1>
+        <p class="created-date">
+            2021.08.02
+        </p>
+
+
+        <div class="post-tag">
+    docstring python-module-unicodedata southeast-asian-languages type-annotation
+</div>
+
+        <h2>08/02 (월) ~ 08/08 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%9D%B4%EB%B2%88%EC%A3%BC-%EA%B4%80%EC%8B%AC%EC%A3%BC%EC%A0%9C" id="markdown-toc-이번주-관심주제">이번주 관심주제</a>    <ul>
+      <li><a href="#%EA%B8%B0%ED%83%80" id="markdown-toc-기타">기타</a></li>
+      <li><a href="#%ED%95%9C%EA%B8%80-print%EC%8B%9C-%ED%8F%AC%EB%A7%B7%EB%AC%B8%EC%A0%9C" id="markdown-toc-한글-print시-포맷문제">한글 print시 포맷문제</a></li>
+      <li><a href="#type-annotation-in-python" id="markdown-toc-type-annotation-in-python">Type Annotation in Python</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#python%EC%97%90%EC%84%9C-signature-%EC%9D%98-%EC%9D%98%EB%AF%B8" id="markdown-toc-python에서-signature-의-의미">Python에서 Signature 의 의미</a>    <ul>
+      <li>
+<a href="#what-is-the-difference--stackoveflow-%EB%8B%B5%EB%B3%80-%EB%B2%88%EC%97%AD" id="markdown-toc-what-is-the-difference--stackoveflow-답변-번역">what is the difference … stackoveflow 답변 번역</a>        <ul>
+          <li><a href="#%EC%A0%95%EB%B3%B4" id="markdown-toc-정보">정보</a></li>
+          <li><a href="#%EB%B2%88%EC%97%AD" id="markdown-toc-번역">번역</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#function-signautre-object--pythonorg-%EC%97%90%EC%84%9C" id="markdown-toc-function-signautre-object--pythonorg-에서">Function Signautre Object , python.org 에서</a>        <ul>
+          <li><a href="#%EB%B2%88%EC%97%AD-1" id="markdown-toc-번역-1">번역</a></li>
+          <li><a href="#abstract-%EB%A9%94%EC%86%8C%EB%93%9C" id="markdown-toc-abstract-메소드">Abstract, 메소드</a></li>
+          <li><a href="#signature-object" id="markdown-toc-signature-object">Signature Object</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#python%EC%97%90%EC%84%9C-resolution-%EC%9D%B4%EB%9E%80" id="markdown-toc-python에서-resolution-이란">python에서 resolution 이란?</a></li>
+</ul>
+
+<h1 id="이번주-관심주제">이번주 관심주제</h1>
+
+<h2 id="기타">기타</h2>
+
+<ul>
+  <li>#docstring</li>
+  <li>2021-08-05 : <a href="https://www.datacamp.com/community/tutorials/docstrings-python">Docstrings in Python</a>
+</li>
+  <li>2021-08-05 : <a href="https://everydayminder.wordpress.com/2009/02/04/%ED%98%84%EC%9E%AC-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EC%9D%B4%EB%A6%84-%EC%96%BB%EA%B8%B0-%ED%98%84%EC%9E%AC-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EB%A9%94%EC%86%8C%EB%93%9C-%EC%96%BB%EA%B8%B0/">현재 클래스의 이름 얻기</a>
+</li>
+  <li>2021-08-05 : <a href="https://www.kite.com/python/answers/how-to-call-a-function-by-its-name-as-a-string-in-python">How to call a function by its name as a string in Python, kite</a>
+</li>
+</ul>
+
+<h2 id="한글-print시-포맷문제">한글 print시 포맷문제</h2>
+
+<ul>
+  <li>#python-module-unicodedata #southeast-asian-languages</li>
+  <li>2021-08-05 : <a href="https://sarc.io/index.php/development/810-python-print-format-padding">파이썬으로 한글 print format 설정 시 padding이 잘 맞지 않을 때</a>
+</li>
+  <li>2021-08-05 : <a href="http://egloos.zum.com/nitraqu/v/4448687">python print 한글 고정폭, egloos.zum.com/nitraqu</a>
+</li>
+  <li>2021-08-05 : <a href="https://www.programcreek.com/python/example/5938/unicodedata.east_asian_width">unicodedata.east_asian_width() Example, programcreek.com</a>
+</li>
+  <li>2021-08-05 : <a href="https://unicode.org/reports/tr11/#Definitions">EAST ASIAN WIDTH, unicode.org/Technical Reports</a>
+</li>
+</ul>
+
+<h2 id="type-annotation-in-python">Type Annotation in Python</h2>
+
+<ul>
+  <li>#type-annotation</li>
+  <li>function 타입이 없는 줄 알았는데 <code class="language-html highlighter-rouge">types</code>를 import 해야하는 것이였음
+    <ul>
+      <li>2021-08-05 : <a href="https://docs.python.org/3/library/types.html?highlight=functiontype#types.FunctionType">types.FunctionType, python.org</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="python에서-signature-의-의미">Python에서 Signature 의 의미</h1>
+
+<h2 id="what-is-the-difference--stackoveflow-답변-번역">what is the difference … stackoveflow 답변 번역</h2>
+
+<h3 id="정보">정보</h3>
+
+<ul>
+  <li>C++에 대한 얘기로 python 상황에서 자료를 찾아볼 필요가 있음</li>
+</ul>
+
+<h3 id="번역">번역</h3>
+
+<ul>
+  <li>원문 : <a href="https://stackoverflow.com/a/2323005/9457247">answer of what is the difference between function declaration and signature?</a>
+</li>
+  <li>함수 declaration은 함수의 prototype이다.
+    <ul>
+      <li>또는 그 지점에서 컴파일러가 prototype을 발견하지 못했다면 함수 정의에서 가져 올수도 있다</li>
+      <li>(함수 declarations은) return type, 함수의 이름, 함수의 파라미터(C에서는 선택적임)를 포함한다</li>
+    </ul>
+  </li>
+  <li>함수 signature는 함수 선언의 일부이다.
+    <ul>
+      <li>함수 declaration은 컴파일러가 overload resolution 을 수행하는 데 사용한다.</li>
+      <li>(역자 주) overload resolution ?
+        <ul>
+          <li>overload는 함수나 연산자의 이름은 유지하면서 기능을 추가로 부여하는 것을 말함</li>
+          <li>resolution 이란?
+            <ul>
+              <li>변수나 함수의 이름이 하나뿐이라면 찾는게 어렵지 않지만 같은 이름이 scope상에 여럿 보인다면 <code class="language-html highlighter-rouge">해석</code>이 필요할 것이다</li>
+              <li>resolution은 binding 되는 이름이 어느 것이 찾아내는 것으로 <code class="language-html highlighter-rouge">해석</code>정도로 풀이하면 될것 같다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>여러 개의 함수가 같은 이름을 가질 수 있기 때문에 (즉, 오버로드가 될수 있기 때문에)
+    <ul>
+      <li>컴파일러는 함수 후보군중에서 호출할 함수로 해석될( resolve to) 특정 이름을 결정할 방법이 필요하다</li>
+      <li>signature는 그런 overload resolution에서 컴파일러가 consider한 것이다.</li>
+    </ul>
+  </li>
+  <li>특별하게, 표준은 <code class="language-html highlighter-rouge">signature</code>를 다음과 같이 정의했다.
+    <blockquote>
+      <p>overload resolution에 참여하는 함수에 대한 정보(information): 파라미터의 타입, 함수가 class 멤버라면
+함수 자신에 대한 cv-qualifiers (만일 있다면) 그리고 그 멤버함수가 선언된 클래스</p>
+    </blockquote>
+  </li>
+  <li>return type은 함수 signature에 속하지 않는 다는 것에 주의해라.</li>
+  <li>표준이 각주에서 말하는 것처럼..
+    <blockquote>
+      <p>Function signature는 return type을 포함하지 않는다. 그것들이 overload resolution에 참여하지 않기 때문이다.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="function-signautre-object--pythonorg-에서">Function Signautre Object , python.org 에서</h2>
+
+<h3 id="번역-1">번역</h3>
+
+<ul>
+  <li>원문 : <a href="https://www.python.org/dev/peps/pep-0362/">PEP 362 – Function Signature Object, python.org</a>
+</li>
+</ul>
+
+<h3 id="abstract-메소드">Abstract, 메소드</h3>
+
+<ul>
+  <li>Python 은 항상 강력한 introspection 가능성을 지원했다.
+    <ul>
+      <li>그 가능성은 introspecting 함수와 메소드를 포함한다.</li>
+      <li>(이 PEP의 나머지 부분에서 , “function”은 function과 method 둘다를 의미한다)</li>
+      <li>introspection capabilities는 자기 자신을 볼 줄아는 능력인가?</li>
+    </ul>
+  </li>
+  <li>function object를 조사함으로써, 당신은 완전하게 function의 signature를 재구축(reconstruct)할 수 있다</li>
+  <li>불행하게도, 이 정보는 불편한 방식으로 저장되어있다.
+    <ul>
+      <li>그리고 6개의 깊숙히 내포된 attribute로 퍼져 나뉘어져 있다.</li>
+    </ul>
+  </li>
+  <li>이 PEP은 function signature의 새로운 표현방식을 제안한다</li>
+  <li>새 표현방식은 function과 그의 파라메터에 모든 필요한 정보를 포함하며
+    <ul>
+      <li>introspection을 쉽고 간단하게(straightforward) 만들것이다.</li>
+    </ul>
+  </li>
+  <li>하지만, 이 object는 기존의 function metadata를 대체하지는 않는다.
+    <ul>
+      <li>(function metadata는) python이 그런 function들을 실행하는데 자체적으로 사용한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="signature-object">Signature Object</h3>
+
+<ul>
+  <li>하나의 Signature 객체는 한 함수의 call signature와 그의 return 어노테이션을 나타낸다.(represent)</li>
+  <li>그 함수에 입력되는 각 파라메터에 대해,
+    <ul>
+      <li>(signature 객체는) 그것의 parameters collection에 Parameter 객체를 저장한다</li>
+    </ul>
+  </li>
+  <li>하나의 Signature 객체는 아래와 같은 public attributes와 메소드를 갖는다.
+    <ul>
+      <li>return_annotation: object
+        <ul>
+          <li>함수에 대한 “return” 어노테이션.</li>
+          <li>함수에 “return” 어노테이션이 없다면, 이 attribute은 Sinature.empty로 설정된다.</li>
+        </ul>
+      </li>
+      <li>parameters: OrderedDict
+        <ul>
+          <li>파라메터 객체들에 대응되는 파라메터 이름들의 순서가 고정된(ordered) 매핑</li>
+        </ul>
+      </li>
+      <li>bind(*args, **kwargs) -&gt; BoundArguments
+        <ul>
+          <li>위치기반, 키워드기반 arguments로부터 parameters 로의 mapping을 생성함.</li>
+          <li>넘겨받은 arguments가 signature와 맞지 않으면 <code class="language-html highlighter-rouge">TypeError</code>를 냄.</li>
+        </ul>
+      </li>
+      <li>bind_partial(*args, **kwargs) -&gt; BoundArguments
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">bind()</code>와 같은 방식으로 일하지만, 일부 요구되는 arguments가 빠지는 것을</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Signature 객체는 immutable 하다.
+    <ul>
+      <li>변형된 복사 (modified copy)를 만들기 위해서는 Signature.repalce() 를 사용해라</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="python에서-resolution-이란">python에서 resolution 이란?</h1>
+
+<ul>
+  <li>resolution의 일반 언어에서의 의미
+    <ul>
+      <li>모니터 해상도 - 화면을 얼마나 촘촘하게 풀어내는가? 풀어내는 정도</li>
+      <li>resove - 해결하다</li>
+    </ul>
+  </li>
+  <li>그럼 python(프로그래밍 언어) 에서 resolution이란?
+    <ul>
+      <li><a href="https://docs.python.org/3/reference/executionmodel.html#resolution-of-names"> 4.2.2 Resolution of names , - python.org &gt;  Reference </a></li>
+      <li>해당 문서의 <a href="https://docs.python.org/ko/3/reference/executionmodel.html#resolution-of-names">한글 해석</a>에서는 <code class="language-html highlighter-rouge">resolution</code>을 <code class="language-html highlighter-rouge">검색</code>으로 해석</li>
+      <li>나의 의견은 <code class="language-html highlighter-rouge">해석</code>이 더 맞지않나 생각됨.
+        <ul>
+          <li>변수이름이 주어졌을 때 이 이름이 어느 namespace로 연결되는지 <code class="language-html highlighter-rouge">검색</code>보다는 <code class="language-html highlighter-rouge">해석</code>하는게 더 어울리는 듯</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>위의 <code class="language-html highlighter-rouge">Resolution of names</code>는 개념적인 설명이 예제도 없이 죽 이어지므로 한 번 읽고 제대로 이해하기가 매우 어렵다.
+    <ul>
+      <li>
+<a href="https://bjpublic.tistory.com/302">파이썬 답게 코딩하기</a> 1장 에서 이 내용의 일부에 대해 1장에서 14 페이지 정도에 걸쳐서 예제를 들어 자세히 설명하고 있다.</li>
+      <li><a href="https://stackoverflow.com/questions/55830293/python-name-resolution-clarification">위 내용 관련한 stack<strong>overflow</strong> 질문</a></li>
+      <li>
+    </li>
+</ul>
+  </li>
+  <li><a href="https://www.ibm.com/docs/en/i/7.4?topic=only-overload-resolution-c"> Overload resolution (C++ only, IBM</a></li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

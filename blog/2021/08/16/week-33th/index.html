@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 33주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="08/16 (월) ~ 08/22 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/08/16/week-33th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 33주차 기록">
+    <meta property="og:description" content="08/16 (월) ~ 08/22 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/08/16/week-33th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/08/16/week-33th/">
+    <meta name="twitter:title" content="2021년 33주차 기록">
+    <meta name="twitter:description" content="08/16 (월) ~ 08/22 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/08/09/week-32th/">« 2021년 32주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/08/23/week-34th/">2021년 34주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 33주차 기록</h1>
+        <p class="created-date">
+            2021.08.16
+        </p>
+
+
+        <div class="post-tag">
+    pandas sudoku plugin-vim-surround
+</div>
+
+        <h2>08/16 (월) ~ 08/22 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%9D%B4%EB%B2%88%EC%A3%BC-%EA%B4%80%EC%8B%AC%EA%B0%80%EB%8A%94-%ED%8F%AC%EC%8A%A4%ED%8C%85-%EC%95%84%EC%9D%B4%ED%85%9C" id="markdown-toc-이번주-관심가는-포스팅-아이템">이번주 관심가는 포스팅 아이템</a>    <ul>
+      <li>
+<a href="#pandas-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95%EC%97%90-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%84-%EB%86%92%EC%9D%B4%EB%8A%94-%ED%8F%AC%EC%8A%A4%ED%8C%85" id="markdown-toc-pandas-기본-사용법에-접근성을-높이는-포스팅">pandas 기본 사용법에 접근성을 높이는 포스팅</a>        <ul>
+          <li><a href="#%EC%98%88%EC%A0%9C" id="markdown-toc-예제">예제</a></li>
+        </ul>
+      </li>
+      <li><a href="#vim-surround" id="markdown-toc-vim-surround">vim-surround</a></li>
+      <li><a href="#%EB%AA%87%EA%B0%80%EC%A7%80-pandas-%ED%8C%81" id="markdown-toc-몇가지-pandas-팁">몇가지 pandas 팁</a></li>
+      <li>
+<a href="#pandas-%EC%97%90%EC%84%9C-period-%EB%8B%A4%EB%A3%A8%EA%B8%B0" id="markdown-toc-pandas-에서-period-다루기">Pandas 에서 Period 다루기</a>        <ul>
+          <li><a href="#%EA%B4%80%EB%A0%A8%EB%90%9C-%EC%B0%B8%EC%A1%B0-%ED%95%A0%EB%A7%8C%ED%95%9C-%EB%A7%81%ED%81%AC" id="markdown-toc-관련된-참조-할만한-링크">관련된 참조 할만한 링크</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EA%B8%B0%ED%83%80" id="markdown-toc-기타">기타</a></li>
+      <li><a href="#%EB%B2%88%EC%97%AD--object-oriented-programming--the-trillion-dollar-disaster" id="markdown-toc-번역--object-oriented-programming--the-trillion-dollar-disaster">번역 : Object-Oriented Programming – The Trillion Dollar Disaster</a></li>
+      <li><a href="#water-sort-puzzle-solver" id="markdown-toc-water-sort-puzzle-solver">Water Sort Puzzle Solver</a></li>
+      <li><a href="#sudoku-solver" id="markdown-toc-sudoku-solver">Sudoku Solver</a></li>
+      <li><a href="#peter-novig" id="markdown-toc-peter-novig">Peter Novig</a></li>
+      <li><a href="#john-m-zelle" id="markdown-toc-john-m-zelle">John M. Zelle</a></li>
+      <li><a href="#creative-commons-license" id="markdown-toc-creative-commons-license">Creative Commons license</a></li>
+      <li><a href="#abstruse-goose" id="markdown-toc-abstruse-goose">Abstruse Goose</a></li>
+      <li><a href="#%EA%B8%B0%ED%83%80-1" id="markdown-toc-기타-1">기타</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="이번주-관심가는-포스팅-아이템">이번주 관심가는 포스팅 아이템</h1>
+
+<h2 id="pandas-기본-사용법에-접근성을-높이는-포스팅">pandas 기본 사용법에 접근성을 높이는 포스팅</h2>
+
+<ul>
+  <li>#pandas</li>
+  <li>pandas의 기본 기능이 궁금할 때 stackoverflow도 좋지만..</li>
+  <li>공식 Documents 에 링크를 걸어 설명을 찾을수 있도록 하는 포스팅이 좋을것 같음</li>
+</ul>
+
+<h3 id="예제">예제</h3>
+
+<ul>
+  <li>
+<a href="https://pandas.pydata.org/docs/user_guide/indexing.html#selection-by-label">selection by label</a> : 인덱스및 컬럼 레이블 기준으로 Series나 DataFrame 선택하는 방법.
+    <ul>
+      <li>Dictionary 구조에서 key로 선택하는 방법을 연상하면 됨</li>
+      <li>이 방식에서 가장 기본이 되는 attribute은 <code class="language-html highlighter-rouge">.loc</code>임</li>
+      <li>
+<a href="https://pandas.pydata.org/docs/user_guide/indexing.html#slicing-with-labels">slicing with labels</a> : 인덱스및 컬럼 레이블 기준으로 슬라이싱하기</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://pandas.pydata.org/docs/user_guide/indexing.html#selection-by-position">selection by position</a> : 위치 기준으로 Series나 DataFrame 선택하는 방법.
+    <ul>
+      <li>리스트 구조에서 인덱스로 선택하는 방법을 연상하면 됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vim-surround">vim-surround</h2>
+
+<ul>
+  <li>#plugin-vim-surround  ( Vi and Vim Beta 태그)</li>
+  <li><a href="https://github.com/tpope/vim-surround/blob/master/doc/surround.txt">surround.txt, github.com/tpope/vim-surround</a></li>
+  <li><a href="http://www.futurile.net/2016/03/19/vim-surround-plugin-tutorial/">Vim surround plugin tutorial</a></li>
+  <li><a href="https://forteleaf.tistory.com/entry/VIM-Surroundvim-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">VIM Surround.vim 사용하기 </a></li>
+</ul>
+
+<h2 id="몇가지-pandas-팁">몇가지 pandas 팁</h2>
+
+<ul>
+  <li>
+<a href="https://stackoverflow.com/a/27755103/9457247">Check if single cell value is NaN in Pandas</a> : Cell 하나만 NaN인지 체크하기</li>
+</ul>
+
+<h2 id="pandas-에서-period-다루기">Pandas 에서 Period 다루기</h2>
+
+<ul>
+  <li>기간을 넘겨주어 기간에 포함되면 처리하는 동작을 구현하고 싶다</li>
+  <li>Pandas에 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#">Time series / date functionality</a> 가 이미 있으므로 이것을 이용해보자</li>
+  <li>Pandas에는 기간을 의미하는 <a href="https://pandas.pydata.org/docs/reference/api/pandas.Period.html">pandas.Period</a> 라는 객체가 있다</li>
+  <li>설정하는 방법은 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#period">Period 정의하기</a>를 참조한다.</li>
+  <li>period 객체에서 가장 핵심적인 부분은 <code class="language-html highlighter-rouge">freq=</code> attribute을 어떻게 설정하느냐는 것이다.
+    <ul>
+      <li>아래 예에서 같은 날짜를 설정했지만 <code class="language-html highlighter-rouge">freq=</code>의 설정에 따라 시작시간과 끝시간이 달라진다</li>
+    </ul>
+
+    <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> period <span class="o">=</span> pd.Period<span class="o">(</span><span class="s1">'2021-08-21'</span>, <span class="nv">freq</span><span class="o">=</span><span class="s1">'Y'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.start_time
+Timestamp<span class="o">(</span><span class="s1">'2021-01-01 00:00:00'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.end_time
+Timestamp<span class="o">(</span><span class="s1">'2021-12-31 23:59:59.999999999'</span><span class="o">)</span>
+  
+<span class="o">&gt;&gt;&gt;</span> period <span class="o">=</span> pd.Period<span class="o">(</span><span class="s1">'2021-08-21'</span>, <span class="nv">freq</span><span class="o">=</span><span class="s1">'M'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.start_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-01 00:00:00'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.end_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-31 23:59:59.999999999'</span><span class="o">)</span>
+  
+<span class="o">&gt;&gt;&gt;</span> period <span class="o">=</span> pd.Period<span class="o">(</span><span class="s1">'2021-08-21'</span>, <span class="nv">freq</span><span class="o">=</span><span class="s1">'W'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.start_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-16 00:00:00'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.end_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-22 23:59:59.999999999'</span><span class="o">)</span>
+  
+<span class="o">&gt;&gt;&gt;</span> period <span class="o">=</span> pd.Period<span class="o">(</span><span class="s1">'2021-08-21'</span>, <span class="nv">freq</span><span class="o">=</span><span class="s1">'3D'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.start_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-21 00:00:00'</span><span class="o">)</span>
+<span class="o">&gt;&gt;&gt;</span> period.end_time
+Timestamp<span class="o">(</span><span class="s1">'2021-08-23 23:59:59.999999999'</span><span class="o">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>freq는 <code class="language-html highlighter-rouge">기간-object</code>를 결정한다.
+    <ul>
+      <li>어찌보면 vim에서 <code class="language-html highlighter-rouge">text-object</code> 개념과 통하는 측면이 있다고 해야하나?
+        <ul>
+          <li>여러가지 사전 정의된 단위로 범위를 설정한다는 개념이 비슷해 보인다</li>
+        </ul>
+      </li>
+      <li>설정하는 방법은 아래 링크를 참고한다
+        <ul>
+          <li>
+<a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects">DateOffeset objects</a> : 조금 아래 표에서 <code class="language-html highlighter-rouge">Frequency String</code>을 참조한다</li>
+          <li>
+<a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases">Offset aliases</a> : 표를 참조한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>pandas.Period의 <code class="language-html highlighter-rouge">start_time</code>, <code class="language-html highlighter-rouge">end_time</code> attribute과 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.between.html#"><code class="language-html highlighter-rouge">pandas.Series.between</code> method</a>를 같이 쓰면 특정기간에 해당하는 행만 처리하는 코드를 간단히 구현할 수 있다.</li>
+</ul>
+
+<h3 id="관련된-참조-할만한-링크">관련된 참조 할만한 링크</h3>
+
+<ul>
+  <li><a href="https://rfriend.tistory.com/503"> Python pandas, 시계열 데이터 빈도/주기와 날짜 Offsets</a></li>
+  <li><a href="https://rfriend.tistory.com/498">Python datetime, pandas Timestamp를 문자열로 변환 등등</a></li>
+  <li><a href="https://datatofish.com/strings-to-datetime-pandas/">How to Convert Strings to Datetime in Pandas DataFrame</a></li>
+  <li><a href="https://stackoverflow.com/a/35854917/9457247">Check if a pandas.Timestamp is in a pandas.Period</a></li>
+  <li><a href="https://stackoverflow.com/questions/35339139/what-values-are-valid-in-pandas-freq-tags">What values are valid in Pandas ‘Freq’ tags?</a></li>
+</ul>
+
+<h2 id="기타">기타</h2>
+
+<ul>
+  <li>
+<a href="https://developers.google.com/sheets/api/quickstart/python">Python Quickstart, Google Sheets for Developers &gt; Sheets API</a> : Python으로 구글 시트 다루기
+    <ul>
+      <li>BillMaker 스크레이핑 데이터를 구글시트로 바로 넣기로 응용할수 있다.</li>
+    </ul>
+  </li>
+  <li><a href="https://stackoverflow.com/questions/29216889/slicing-a-dictionary">Slicing a dictionary</a></li>
+  <li><a href="https://stackoverflow.com/questions/23549231/check-if-a-value-exists-in-pandas-dataframe-index">Check if a value exists in pandas dataframe index</a></li>
+</ul>
+
+<h2 id="번역--object-oriented-programming--the-trillion-dollar-disaster">번역 : Object-Oriented Programming – The Trillion Dollar Disaster</h2>
+
+<ul>
+  <li>원문 : <a href="https://betterprogramming.pub/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7">Object-Oriented Programming – The Trillion Dollar Disaster, BetterProgramming / Medium</a>
+</li>
+  <li>
+<a href="https://youtu.be/goy4lZfDtCE">Reacting to Controversial Opinions of Software Engineers</a> 에 링크되어 있던 글</li>
+  <li>
+<a href="https://stackoverflow.com/a/408751/9457247">My controversial opinion: Object Oriented Programming is the worst thing, stackoverflow</a> : 링크된 스텍오버플로우 답변</li>
+</ul>
+
+<h2 id="water-sort-puzzle-solver">Water Sort Puzzle Solver</h2>
+
+<ul>
+  <li>water sort puzzle 이란 모바일 게임이 있는데 해결하는 코드를 작성하고 싶다</li>
+  <li><a href="https://www.codechef.com/problems/WTRSORT">Water Sort Puzzle</a></li>
+  <li>
+<a href="https://levelsolved.com/water-sort-puzzle-level-50-solution/">Water sort puzzel level 50 solution, Levelsolved</a> : 해답나와 있는 사이트</li>
+  <li>
+<a href="https://github.com/kuking/WaterSortPuzzleSolver//">WaterSortPuzzleSover</a> : github 코드 , Go 언어</li>
+  <li>
+<a href="https://www.codechef.com/problems/WTRSORT">Water Sort Puzzle, codechef</a> : 워터 소트 퍼즐을 이론적으로 분석</li>
+</ul>
+
+<h2 id="sudoku-solver">Sudoku Solver</h2>
+
+<ul>
+  <li>#sudoku</li>
+  <li>몇 년전에 <a href="https://en.wikipedia.org/wiki/Peter_Norvig">피터 노빅</a> 이 <a href="http://www.norvig.com/sudoku.html">모든 스도쿠 문제를 푸는 방법, Solving Every Sudoku Puzzle</a> 에 대해 올린 적이 있다.</li>
+  <li>유사한 해결책들이 <a href="https://en.wikipedia.org/wiki/Sudoku_solving_algorithms">Sudoku solving algorithms, 영문 위키</a> 에 올라와 있는데 포스팅하면 좋을것 같다</li>
+</ul>
+
+<h2 id="peter-novig">Peter Novig</h2>
+
+<ul>
+  <li>구글의 연구이사 ( a director of  research at Google), 검색 품질 이사 역임</li>
+  <li>유명한 Text Book인 <a href="https://en.wikipedia.org/wiki/Artificial_Intelligence:_A_Modern_Approach">Artifical Intellignece: A Moden Approach, 1995년 초판, 2020년 4판 발간</a> 의 공동 저자</li>
+  <li>홈페이지 : <a href="http://norvig.com/">Peter@Norvig.com</a>
+</li>
+  <li>유명한 글
+    <ul>
+      <li><a href="http://www.norvig.com/21-days.html">Teach Yourself Programming in Ten Years, Peter Norvig</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="john-m-zelle">John M. Zelle</h2>
+
+<ul>
+  <li>피터 노빅이 추천한 Python 책 저자</li>
+  <li>해당 책에 대한 설명이 자세히 나온 링크 : <a href="https://mcsp.wartburg.edu/zelle/python/">Python Programming: An Introduction to Computer Science</a>
+</li>
+</ul>
+
+<h2 id="creative-commons-license">Creative Commons license</h2>
+
+<ul>
+  <li>
+<a href="https://abstrusegoose.com/">Abstruse Goose</a> 중에서 번역해보고 싶은 에피소드가 있는데 license가 궁금했다</li>
+  <li><a href="http://ccl.cckorea.org/">CCL 한국어 설명</a></li>
+</ul>
+
+<h2 id="abstruse-goose">Abstruse Goose</h2>
+
+<ul>
+  <li>
+<a href="https://abstrusegoose.com/369">Trash talk</a> : 스타크래프트, 한글이 나옴</li>
+</ul>
+
+<h2 id="기타-1">기타</h2>
+
+<ul>
+  <li>
+<a href="http://python-history.blogspot.com/2010/06/import-antigravity.html">import antigravity, 귀도의 블로그</a> : 파이썬 창시자인 귀도 반 로썸의 블로그중 이스터 에그 인 <code class="language-html highlighter-rouge">imprt antigravity</code> 소개.</li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vim 필수 플러그인 사용법 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="자주 잊어버리는 플러그인 사용법">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/vim-basic-plugin/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="vim 필수 플러그인 사용법">
+    <meta property="og:description" content="자주 잊어버리는 플러그인 사용법">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/vim-basic-plugin/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/vim-basic-plugin/">
+    <meta name="twitter:title" content="vim 필수 플러그인 사용법">
+    <meta name="twitter:description" content="자주 잊어버리는 플러그인 사용법">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="vim-basic-plugin">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">vim 필수 플러그인 사용법</h1>
+    
+        <p class="title-summary">자주 잊어버리는 플러그인 사용법</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-basic-plugin.md" target="_blank">created: 2021.08.31</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-basic-plugin.md" target="_blank">updated: 2023.06.10</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/vim-basic-plugin.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=vim+%ED%95%84%EC%88%98+%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8+%EC%82%AC%EC%9A%A9%EB%B2%95&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    vim surround plugin-vim-surround nerdtree
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#tip-1-surroundvim-%EC%82%AC%EC%9A%A9%EB%B2%95" id="markdown-toc-tip-1-surroundvim-사용법">Tip 1. <code class="language-html highlighter-rouge">surround.vim</code> 사용법</a>    <ul>
+      <li><a href="#%EB%8B%A4%EB%A5%B8-%EC%82%AC%EB%9E%8C%EC%9D%B4-%EC%9E%91%EC%84%B1%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95" id="markdown-toc-다른-사람이-작성한-사용법">다른 사람이 작성한 사용법</a></li>
+      <li>
+<a href="#%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B8%B0%EB%B3%B8" id="markdown-toc-사용법-기본">사용법 기본</a>        <ul>
+          <li><a href="#3%EA%B0%80%EC%A7%80-%EA%B8%B0%EB%B3%B8-%EB%8F%99%EC%9E%91" id="markdown-toc-3가지-기본-동작">3가지 기본 동작</a></li>
+          <li><a href="#%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%9D%91%EC%9A%A9" id="markdown-toc-사용법-응용">사용법 응용</a></li>
+          <li><a href="#usd-255-%EB%AC%B8%EC%9E%A5%EC%9D%84---usd-255---%EC%99%80-%EA%B0%99%EC%9D%B4-double-dash%EB%A1%9C-%EA%B0%90%EC%8B%B8%EA%B3%A0-%EC%8B%B6%EB%8B%A4" id="markdown-toc-usd-255-문장을---usd-255---와-같이-double-dash로-감싸고-싶다"><code class="language-html highlighter-rouge">USD 2.55</code> 문장을 <code class="language-html highlighter-rouge">--USD $2.55--</code> 와 같이 double dash로 감싸고 싶다</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#tip-2-nerdtree-%EC%82%AC%EC%9A%A9%EB%B2%95" id="markdown-toc-tip-2-nerdtree-사용법">Tip 2. NerdTree 사용법</a>    <ul>
+      <li><a href="#changing-drive-letter-in-nerdtree" id="markdown-toc-changing-drive-letter-in-nerdtree">Changing drive letter in NERDtree</a></li>
+      <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8" id="markdown-toc-테스트">테스트</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tip-1-surroundvim-사용법">Tip 1. <code class="language-html highlighter-rouge">surround.vim</code> 사용법</h1>
+<ul>
+  <li>만든이 : Tim Pope</li>
+  <li>용도 : 예를들면, (Hello world!) 라는 표현식에서 [Hello world!] 라고 바꾸고 싶을때 사용한다
+    <ul>
+      <li>즉, 어떤 <code class="language-html highlighter-rouge">문장</code>을 둘러싸는 <code class="language-html highlighter-rouge">기호</code>를 한 방에 바꾸고 싶을 때 사용</li>
+    </ul>
+  </li>
+  <li>지원 버전 : vim 7 이상
+    <ul>
+      <li>이 플러그인의 몇가지 feature는 옛날 버전에도 동작 할 수 있다</li>
+      <li>full fuctionality를 위해서는 vim 7 이상을 권장한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="다른-사람이-작성한-사용법">다른 사람이 작성한 사용법</h2>
+<ul>
+  <li><a href="https://github.com/tpope/vim-surround/blob/master/doc/surround.txt">surround.vim 공식 help, Tim Pope</a></li>
+  <li><a href="https://forteleaf.tistory.com/entry/VIM-Surroundvim-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">VIM │ SURROUND.VIM 사용하기, 부들잎블로그</a></li>
+  <li><a href="https://krksap.tistory.com/1775">surround vim 사용법 정리, 뷰티플 프로그래밍</a></li>
+</ul>
+
+<h2 id="사용법-기본">사용법 기본</h2>
+<ul>
+  <li>vim에서 <code class="language-html highlighter-rouge">text-objects</code> 라고 말하는 Object를 기준으로 적용된다
+    <ul>
+      <li>즉, 커서는 적용하려는 <code class="language-html highlighter-rouge">text-objects</code>내에 위치하고 있어야 한다</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">text-objects</code>를 둘러싸는 <code class="language-html highlighter-rouge">surroundings</code>에는
+    <ul>
+      <li>parentheses, quotes, HTML tags 등이 포함된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3가지-기본-동작">3가지 기본 동작</h3>
+<ul>
+  <li>감싸기(surround) - ‘ys’</li>
+  <li>삭제(delete) - ‘ds’</li>
+  <li>~바~꾸기(change) - ‘cs’</li>
+</ul>
+
+<h3 id="사용법-응용">사용법 응용</h3>
+
+<h3 id="usd-255-문장을---usd-255---와-같이-double-dash로-감싸고-싶다">
+<code class="language-html highlighter-rouge">USD 2.55</code> 문장을 <code class="language-html highlighter-rouge">--USD $2.55--</code> 와 같이 double dash로 감싸고 싶다</h3>
+<ul>
+  <li>원래 <code class="language-html highlighter-rouge">-</code>(dash)가 아닌 *(asterisk)로 하고 싶었는데 편집상의 문제가 많아 <code class="language-html highlighter-rouge">-</code>로 변경함</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">키 입력</th>
+      <th style="text-align: center">버퍼 내용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">{시작}
+<br>
+ </td>
+      <td style="text-align: left">USD $2.5{줄끝}
+<br>
+커서는 U 자에 위치</td>
+    </tr>
+    
+    <tr>
+      <td style="text-align: left">ys$
+<br>
+ 
+<br>
+ 
+<br>
+ </td>
+      <td style="text-align: left">USD $2.5
+<br>
+ys:감싸기, $: 커서위치부터 줄끝까지 선택
+<br>
+이때 커서는 맨 아래 status line으로 가서 입력 대기
+<br>
+태그 입력시 여러문자를 입력받고 그 외에는 한문자로 끝</td>
+    </tr>
+    
+    
+    
+    <tr>
+      <td style="text-align: left">-</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">-USD $2.55-</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">.
+<br>
+ </td>
+      <td style="text-align: left">–USD $2.55–
+<br>
+dot 명령으로 마지막 action 을 한번 더 함</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<h1 id="tip-2-nerdtree-사용법">Tip 2. NerdTree 사용법</h1>
+
+<h2 id="changing-drive-letter-in-nerdtree">Changing drive letter in NERDtree</h2>
+<ul>
+  <li>#nerdtree</li>
+  <li><a href="https://stackoverflow.com/q/1467447/9457247">Changing drive letter in NERDtree</a></li>
+  <li>
+<code class="language-html highlighter-rouge">:NERDTree D:\ </code> will work</li>
+</ul>
+
+<h2 id="테스트">테스트</h2>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

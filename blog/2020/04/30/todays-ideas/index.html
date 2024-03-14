@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="CSS로 dot leaders 표기하기">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/04/30/todays-ideas/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네">
+    <meta property="og:description" content="CSS로 dot leaders 표기하기">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/04/30/todays-ideas/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/04/30/todays-ideas/">
+    <meta name="twitter:title" content="원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네">
+    <meta name="twitter:description" content="CSS로 dot leaders 표기하기">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/04/28/todays-ideas/">« 오늘의 영감</a>
+          
+          
+            <a class="next" href="/blog/2020/05/02/todays-ideas/">오늘의 영감 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네</h1>
+        <p class="created-date">
+            2020.04.30
+        </p>
+
+
+        <div class="post-tag">
+    dot-leaders css
+</div>
+
+        <h2>CSS로 dot leaders 표기하기</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#css%EB%A1%9C-%EB%AA%A9%EC%B0%A8table-of-contents-%ED%91%9C%ED%98%84%EC%9D%B4-%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C" id="markdown-toc-css로-목차table-of-contents-표현이-가능할까">CSS로 목차(table of contents) 표현이 가능할까?</a></li>
+  <li><a href="#%EB%AC%B4%EB%A3%8C-%ED%8F%B0%ED%8A%B8-%EB%B0%9C%EA%B2%AC" id="markdown-toc-무료-폰트-발견">무료 폰트 발견</a></li>
+</ul>
+
+<h1 id="css로-목차table-of-contents-표현이-가능할까">CSS로 목차(table of contents) 표현이 가능할까?</h1>
+
+<ul>
+  <li>예를 들면 .. 책의 목차는 아래와 같은 형식인데..
+    <ul>
+      <li>타이틀과 페이지 사이에 공간을 메워주고 싶은데 CSS 가 지원하는 방식이 있을까 하는게 의문
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>제목 ................   3
+조금 긴 제목 ........  10
+제일 제일 긴 제목 ...  30
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://stackoverflow.com/q/24389341/9457247">Print page numbers for table of contents using CSS in Chrome</a> : 관련해서 발견한 stack overflow 질문
+    <ul>
+      <li>좋은 질문에서 발견한 좋은 사이트 링크
+        <ol>
+          <li><a href="http://jsfiddle.net/4MPR7/1/">첫번째 답변 구현</a></li>
+          <li>
+<a href="https://www.w3.org/TR/2014/WD-css-gcpm-3-20140513/#cross-references">Cross-references</a> : 이곳을 보다보니 target-counter()가 내가 찾는게 아니고 leader()가 내가찾는것일듯…</li>
+          <li>
+<a href="https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/">Designing For Print With CSS</a> : 책 출판 관련해서 CSS 사용하는 방법인가? 아직 제대로 읽지 않고 대충 훑어봄</li>
+          <li>
+<a href="https://www.princexml.com/">Price 13</a> : HTML을 PDF로 그대로 변환할수 있는 Tool 인듯. 유료툴</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.w3.org/Style/Examples/007/leaders.en.html">Web Style Sheets CSS tips &amp; tricks, leaders</a>: 요기가 맞을듯..
+    <ul>
+      <li>
+<a href="https://www.w3.org/TR/css-gcpm-3/#leaders">W3C leaders</a> : W3C 링크도 추가</li>
+      <li><strong>내가 찾고 싶었던 <code class="language-html highlighter-rouge">....</code> 의 명칭은 <code class="language-html highlighter-rouge">dot leaders</code> 인듯 하다. 제대로 명칭만 찾으면 검색도 시간문제.</strong></li>
+      <li>결국은 위 parent node의 링크에 있는  CSS tips로 구현함.
+        <ul>
+          <li>CSS Level 3의 leader() 는 아직 지원이 안되는 듯 하다.
+            <ul>
+              <li>contents: leader(‘.’) 하니<code class="language-html highlighter-rouge">invalid property value</code> 에러가 남</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>위 링크에서 CSS Level 2 방식으로 적용, wiki-index와 blog-index에 동시 적용함</li>
+      <li>현재 적용된 버전도 완벽하진 않은데… 이런 상황이 발생하기 때문임
+<img src="/post-img/2020/middle-long-title.png" alt="애매하게 긴 제목">
+</li>
+      <li>길게 적으려면 한줄이 넘도록 하든지 .. 아니면 날짜 이전까지만 짧게 적든지 결정해야함.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="무료-폰트-발견">무료 폰트 발견</h1>
+
+<ul>
+  <li><a href="https://noonnu.cc/">눈누</a></li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

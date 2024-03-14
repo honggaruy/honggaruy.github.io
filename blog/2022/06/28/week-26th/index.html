@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 26주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="06/27 (월) ~ 07/03 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/06/28/week-26th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 26주차 기록">
+    <meta property="og:description" content="06/27 (월) ~ 07/03 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/06/28/week-26th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/06/28/week-26th/">
+    <meta name="twitter:title" content="2022년 26주차 기록">
+    <meta name="twitter:description" content="06/27 (월) ~ 07/03 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/06/13/week-24th/">« 2022년 24주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/07/11/week-28th/">2022년 28주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 26주차 기록</h1>
+        <p class="created-date">
+            2022.06.28
+        </p>
+
+
+        <div class="post-tag">
+    oauth_2.0 google-apps-script winget
+</div>
+
+        <h2>06/27 (월) ~ 07/03 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%98%A4%ED%94%88-%EB%B1%85%ED%82%B9-api-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0" id="markdown-toc-오픈-뱅킹-api-사용해보기">오픈 뱅킹 API 사용해보기</a>    <ul>
+      <li>
+<a href="#gas-%EC%97%90%EC%84%9C-oauth2-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%B0%B8%EC%A1%B0-%EC%9E%90%EB%A3%8C" id="markdown-toc-gas-에서-oauth2-구현하기-위한-참조-자료">GAS 에서 oauth2 구현하기 위한 참조 자료</a>        <ul>
+          <li><a href="#oauth-2-lib---sample-web-app-%EB%B6%84%EC%84%9D" id="markdown-toc-oauth-2-lib---sample-web-app-분석">oauth 2 lib - sample web app 분석</a></li>
+          <li>
+<a href="#ts-gas-project-start-%EB%B6%84%EC%84%9D" id="markdown-toc-ts-gas-project-start-분석">ts-gas-project-start 분석</a>            <ul>
+              <li><a href="#root-folder" id="markdown-toc-root-folder">root folder</a></li>
+            </ul>
+          </li>
+          <li><a href="#src-folder" id="markdown-toc-src-folder">src folder</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#windows-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-winget" id="markdown-toc-windows-패키지-매니저-winget">windows 패키지 매니저, winget</a>    <ul>
+      <li><a href="#winget%EC%9C%BC%EB%A1%9C-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%ED%95%98%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EB%93%A4" id="markdown-toc-winget으로-업그레이드-하는-프로그램들">winget으로 업그레이드 하는 프로그램들</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="오픈-뱅킹-api-사용해보기">오픈 뱅킹 API 사용해보기</h1>
+
+<ul>
+  <li>tags: #oauth_2.0</li>
+  <li>오픈 뱅킹 사이트 : <a href="https://www.openbanking.or.kr/main">OpenBanking.or.kr</a>
+    <ul>
+      <li>오픈 뱅킹 개발자 사이트 : <a href="https://developers.kftc.or.kr/dev">developers.kftc.or.kr</a>
+        <ul>
+          <li><a href="https://developers.kftc.or.kr/dev/starter/starter">시작하기</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="gas-에서-oauth2-구현하기-위한-참조-자료">GAS 에서 oauth2 구현하기 위한 참조 자료</h2>
+
+<ul>
+  <li>tags: #google-apps-script</li>
+  <li>
+<a href="https://github.com/PopGoesTheWza/ts-gas-project-starter">Typescript - Google Apps Script starter, PopGoesTheWza</a> : typescript + gas 환경 참조용, 지금 말고 나중에 보자</li>
+  <li><a href="https://github.com/googleworkspace/apps-script-oauth2">OAuth2 for Apps Script, github</a></li>
+  <li>
+<a href="https://youtu.be/LrFKAoyQwj4">Access Notion API with OAuth2 for Apps Script library</a> : oauth2 library 이용방법 설명</li>
+  <li>
+<a href="https://developers.google.com/apps-script/guides/dialogs#custom_sidebars">Custom sidebars, developers.google.com/apps-script</a>
+    <ul>
+      <li>gas용 oauth2 library의 예제중 web app으로 github api 사용하는 예제가 있어 실행해봤다</li>
+      <li>sheets + sidebar에 이 web app 예제를 끼얹어서 오픈 뱅킹을 적용해볼수 있지 않을까?</li>
+      <li>추가전인 library로 <code class="language-html highlighter-rouge">Intercom.js</code>와 <code class="language-html highlighter-rouge">Angular</code>를 사용하는데..<code class="language-html highlighter-rouge">react</code>쓰는 것으로 바꿔볼까 고민중</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="oauth-2-lib---sample-web-app-분석">oauth 2 lib - sample web app 분석</h3>
+
+<ul>
+  <li>github readme 링크 : <a href="https://github.com/googleworkspace/apps-script-oauth2/tree/master/samples/WebApp">Sample Web App</a>
+</li>
+  <li>구현해서 <a href="https://script.google.com/home/">script.google.com</a>에 <code class="language-html highlighter-rouge">Sample_oauth_web-app</code>으로 등록</li>
+  <li>현재 배포중으로 실행하는 방법은 <code class="language-html highlighter-rouge">배포 관리</code> 메뉴에서 웹 앱 URL을 복사해서 브라우저에서 오픈</li>
+  <li>앱 스크립트 홈에서 실행로그를 보면..
+    <ul>
+      <li>배포 URL을 브라우저로 접근할 때 먼저 <code class="language-html highlighter-rouge">doGet</code> ▶ <code class="language-html highlighter-rouge">getGitHubProfile</code> ▶ <code class="language-html highlighter-rouge">getGitHubRepos</code>가 실행된다</li>
+      <li>6월 30일 처음 접속했을때는 <code class="language-html highlighter-rouge">doGet</code> ▶ <code class="language-html highlighter-rouge">getAuthorizationUrI</code> ▶ <code class="language-html highlighter-rouge">authCallback</code> ▶ <code class="language-html highlighter-rouge">getGitHubRepos</code> ▶ <code class="language-html highlighter-rouge">getGitHubProfile</code> 순으로 실행 됐었다</li>
+      <li>7월 1일인 오늘, 아직 접속 token이 유효하여 다시 인증을 진행하지는 않고 바로 정보를 보여준다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ts-gas-project-start-분석">ts-gas-project-start 분석</h3>
+
+<h4 id="root-folder">root folder</h4>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">.editorconfig</code> 파일은 ??
+    <ul>
+      <li>여러 에디터에서 설정을 공유할 수 있는 공통 설정</li>
+      <li><a href="https://editorconfig.org/">editorconfig.org 홈 페이지 참조</a></li>
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig 플러그인 for VS Code</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="src-folder">src folder</h3>
+
+<ul>
+  <li>tsconfig.json이 3군데 있다 ( src, src/GasProject1, src/GasProject2 )</li>
+  <li>각각의 <code class="language-html highlighter-rouge">tsconfig.json</code>에서 “extends” 키로 src에 있는 <code class="language-html highlighter-rouge">tsconfig-gas.json</code>을 참조한다. 이것이 base config!</li>
+  <li>
+<code class="language-html highlighter-rouge">tsconfg-node.json</code>도 있는데 참조하는 곳을 아직 찾지 못했다</li>
+  <li>tsconfig.json 이해하기
+    <ul>
+      <li>
+<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">What is a tsconfig.json, 공식자료</a>
+        <ul>
+          <li>
+<a href="https://www.typescriptlang.org/tsconfig#extends">typescript의 extends 항목 소개</a> : root 옵션중 하나임, 외부 config file을 참조함</li>
+        </ul>
+      </li>
+      <li><a href="https://velog.io/@sooran/tsconfig.json-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">tsconfig.json 제대로 알고 사용하기, sooran.log 블로그</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="windows-패키지-매니저-winget">windows 패키지 매니저, winget</h1>
+
+<ul>
+  <li>tags : #winget</li>
+  <li>발췌 참조: <a href="http://woshub.com/using-winget-package-manager-windows/">Using WinGet Package Manager on Windows 10 and 11, Windows OS Hub.com</a>
+</li>
+  <li>자주 업데이트되는 PicPick을 빠르게 업데이트 하고 싶었다</li>
+  <li>PoSh 상에서 <code class="language-html highlighter-rouge">winget install --id=NGWIN.PicPick -e</code>를 실행하면 된다
+    <ul>
+      <li>위 명령이 되긴 하지만 업데이트 메세지가 뜰 때 홈페이지가 먼저 업데이트 되고 winget 서버상에는 구 버전이 남아있는 상태가 있는듯하다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="winget으로-업그레이드-하는-프로그램들">winget으로 업그레이드 하는 프로그램들</h2>
+
+<ul>
+  <li>id=NGWIN.PicPick</li>
+  <li>id=Telegram.TlegramDesktop</li>
+  <li>id=Microsoft.PowerToys</li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

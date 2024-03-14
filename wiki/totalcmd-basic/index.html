@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Total Commander 기본 사용법 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="기본 설정 상태에서 사용할 수 있는 기능들 모음">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/totalcmd-basic/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Total Commander 기본 사용법">
+    <meta property="og:description" content="기본 설정 상태에서 사용할 수 있는 기능들 모음">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/totalcmd-basic/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/totalcmd-basic/">
+    <meta name="twitter:title" content="Total Commander 기본 사용법">
+    <meta name="twitter:description" content="기본 설정 상태에서 사용할 수 있는 기능들 모음">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="totalcmd-basic">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Total Commander 기본 사용법</h1>
+    
+        <p class="title-summary">기본 설정 상태에서 사용할 수 있는 기능들 모음</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/totalcmd-basic.md" target="_blank">created: 2022.04.30</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/totalcmd-basic.md" target="_blank">updated: 2024.02.24</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/totalcmd-basic.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Total+Commander+%EA%B8%B0%EB%B3%B8+%EC%82%AC%EC%9A%A9%EB%B2%95&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    total-commander beyondcompare
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EB%8B%A8%EC%B6%95%ED%82%A4" id="markdown-toc-단축키">단축키</a></li>
+  <li>
+<a href="#%EB%8F%84%EA%B5%AC-%EB%AA%A8%EC%9D%8C%EC%97%90-%ED%8C%8C%EC%9D%BC-%EB%B9%84%EA%B5%90%EB%8F%84%EA%B5%AC-%EB%93%B1%EB%A1%9D" id="markdown-toc-도구-모음에-파일-비교도구-등록">도구 모음에 파일 비교도구 등록</a>    <ul>
+      <li><a href="#%EB%93%B1%EB%A1%9D-%EB%A9%94%EB%89%B4-%EC%A7%84%EC%9E%85-%EB%B0%A9%EB%B2%95" id="markdown-toc-등록-메뉴-진입-방법">등록 메뉴 진입 방법</a></li>
+      <li><a href="#beyond-compare-%EB%93%B1%EB%A1%9D%ED%95%98%EA%B8%B0" id="markdown-toc-beyond-compare-등록하기">Beyond Compare 등록하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#tc-%EC%84%A4%EC%A0%95-%ED%95%98%EA%B8%B0" id="markdown-toc-tc-설정-하기">TC 설정 하기</a></li>
+  <li>
+<a href="#%EA%B0%84%EB%8B%A8%ED%95%9C-tip" id="markdown-toc-간단한-tip">간단한 Tip</a>    <ul>
+      <li><a href="#tip-1-tc%EA%B0%80-%EC%84%A4%EC%B9%98%EB%90%98%EC%96%B4-%EC%9E%88%EB%8A%94-%EC%9C%84%EC%B9%98-%EC%B0%BE%EA%B8%B0" id="markdown-toc-tip-1-tc가-설치되어-있는-위치-찾기">Tip 1. TC가 설치되어 있는 위치 찾기</a></li>
+      <li><a href="#tip-2-tc%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-file%EC%9D%98-%EB%82%A0%EC%A7%9C-%EC%8B%9C%EA%B0%84-%EB%B0%94%EA%BE%B8%EA%B8%B0" id="markdown-toc-tip-2-tc를-이용하여-file의-날짜-시간-바꾸기">Tip 2. TC를 이용하여 File의 날짜 시간 바꾸기</a></li>
+      <li><a href="#tip-3-tc%EC%9D%98-%ED%98%84%EC%9E%AC-window-position%EC%9D%84-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0" id="markdown-toc-tip-3-tc의-현재-window-position을-저장하기">Tip 3. TC의 현재 window position을 저장하기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="단축키">단축키</h1>
+
+<ul>
+  <li>자주 사용하는 Default 단축키</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Key</th>
+      <th style="text-align: left">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><kbd>F6</kbd></td>
+      <td style="text-align: left">Rename for move files</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>F7</kbd></td>
+      <td style="text-align: left">Create directory</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>TAB</kbd></td>
+      <td style="text-align: left">Switch between left and right fle list</td>
+    </tr>
+    <tr>
+      <td style="text-align: center" rowspan="2">
+<kbd>Shift</kbd> + <kbd>Left</kbd>
+<br>
+<kbd>Shift</kbd> + <kbd>Right</kbd>
+</td>
+      <td style="text-align: left" rowspan="2">TC상의 Command-line으로 Focus 이동
+<br>
+  <li>참조 : <a href="https://www.ghisler.ch/board/viewtopic.php?t=8210">Move to command line without mouse</a>
+</li>
+</td>
+    </tr>
+    <tr>
+      
+      
+    </tr>
+    <tr>
+      <td style="text-align: center" rowspan="2">
+<kbd>Ctrl</kbd> + <kbd>Left</kbd>
+<br>
+<kbd>Ctrl</kbd> + <kbd>Right</kbd>
+</td>
+      <td style="text-align: left" rowspan="2">Cursor가 위치한 폴더의 내용을 다른쪽 창에서 보기
+<br>
+</td>
+    </tr>
+    <tr>
+      
+      
+    </tr>
+    <tr>
+      <td style="text-align: center" rowspan="3">
+<kbd>Ctrl</kbd> + <kbd>Enter</kbd>
+<br><br>
+</td>
+      <td style="text-align: left" rowspan="3">Cursor가 위치한 파일의 이름을 현재 cmd line 뒷쪽에 붙임
+<br>
+예제) <code class="language-html highlighter-rouge">code</code> 치고 단축키 치면 파일이름이 들어옴
+<br>
+참조: TC 도움말에서 찾음</td>
+    </tr>
+    <tr>
+      
+      
+    </tr>
+    <tr>
+      
+      
+    </tr>
+    <tr>
+      <td style="text-align: center">
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd>
+</td>
+      <td style="text-align: left">Cursor가 위치한 파일의 경로+이름을 현재 cmd line 뒷쪽에 붙임</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="도구-모음에-파일-비교도구-등록">도구 모음에 파일 비교도구 등록</h1>
+
+<h2 id="등록-메뉴-진입-방법">등록 메뉴 진입 방법</h2>
+
+<ul>
+  <li>
+    <p><code class="language-html highlighter-rouge">도구 모음 바</code> 오른쪽 빈곳 우클릭후 <code class="language-html highlighter-rouge">변경(C)...</code> 클릭</p>
+
+    <p><img src="/wiki-img/2022/totalcmd_button_bar.png" alt="totalcmd_button_bar.png"></p>
+    <ul>
+      <li>도구 모음 변경 대화창 Open ( 수직 도구 모음 변경도 유사함)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="beyond-compare-등록하기">Beyond Compare 등록하기</h2>
+
+<ul>
+  <li>tags: #beyondcompare</li>
+  <li>다음과 같이 입력한다
+    <ul>
+      <li>명령어 : <code class="language-html highlighter-rouge">"C:\Program Files\Beyond Compare 4\BCompare.exe"</code> 입력</li>
+      <li>매개변수 : %T%M %P%N
+        <ul>
+          <li>위 매개변수 의미는 도움말 <code class="language-html highlighter-rouge">Dialog box: Configuration - Change button bar</code>에 나옴
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">%T</code> : inserts the current target path. Especially useful for packers.</li>
+              <li>
+<code class="language-html highlighter-rouge">%M</code> : places the current filename in the target directory into the command line</li>
+              <li>
+<code class="language-html highlighter-rouge">%P</code> : causes the source path to be inserted into the command line, including a backslash () at the end.</li>
+              <li>
+<code class="language-html highlighter-rouge">%N</code> : places the filename under the cursor into the command line, including a backslash () at the end.</li>
+            </ul>
+          </li>
+          <li>위와 같이 설정한 후 비교할 때 ….
+            <ul>
+              <li>왼쪽 리스트의 파일을 먼저클릭, 오른쪽 리스트파일을 두번째로 클릭한다음 비교버튼을 누르면 ..</li>
+              <li>Beyond Compare 또한 서로 같은 쪽에 비교대상을 보여주게 된다</li>
+              <li>
+<code class="language-html highlighter-rouge">%T%M</code> 과 <code class="language-html highlighter-rouge">%P%N</code>의 위치를 바꾸면 서로 반대쪽에 비교대상이 나온다</li>
+              <li>오른쪽 리스트를 먼저 클릭하고, 왼쪽 리스트를 두번째로 클릭해도서로 반대쪽에 비교대상이 나온다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>아이콘 파일 : <code class="language-html highlighter-rouge">C:\Program Files\Beyond Compare 4\BCompare.exe</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="tc-설정-하기">TC 설정 하기</h1>
+
+<ul>
+  <li>참고 링크
+    <ul>
+      <li><a href="https://kim-expain.tistory.com/58">10년째 쓰고 있는 윈도우 탐색기 대체 프로그램 토탈 커맨더, 김효의 Page_Up 블로그</a></li>
+    </ul>
+  </li>
+  <li>파일형식별 색상설정
+    <ul>
+      <li>색상 설정 메뉴 진입 : <code class="language-html highlighter-rouge">환경설정 ▶ 화면 ▶ 색상 ▶ 파일 형식별 색상 정의(D)...</code>
+</li>
+      <li>단일 확장자 형식에 각각 색상을 지정하는 것보다 같은 종류에 같은색을 설정하기위해 <code class="language-html highlighter-rouge">파일 선택 규칙</code>을 정의하는게 좋다</li>
+      <li>규칙 정의 진입 방법 :</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="간단한-tip">간단한 Tip</h1>
+
+<h2 id="tip-1-tc가-설치되어-있는-위치-찾기">Tip 1. TC가 설치되어 있는 위치 찾기</h2>
+
+<ul>
+  <li>아래 메뉴중 맨 오른쪽 <code class="language-html highlighter-rouge">Help</code> 메뉴아래 <code class="language-html highlighter-rouge">About Total Commander</code> 클릭
+<img src="/wiki-img/2022/totalcmd_menu_bar.png" alt="totalcmd_menu_bar.png">
+    <ul>
+      <li>가장 아랫쪽에 <code class="language-html highlighter-rouge">설정 파일</code> 위치와 <code class="language-html highlighter-rouge">프로그램 파일</code> 위치가 나온다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tip-2-tc를-이용하여-file의-날짜-시간-바꾸기">Tip 2. TC를 이용하여 File의 날짜 시간 바꾸기</h2>
+
+<ul>
+  <li>스캔한 사진에 사진 찍은 날짜로 File 날짜 시간을 변경해주고 싶을때</li>
+  <li>메뉴바 : Files &gt; Change Attributes… 클릭하면 아래와 비슷한 dialog box가 뜨는데..
+    <ul>
+      <li><img src="https://i.imgur.com/miZ7i3R.jpg" alt="Change Attributes Dialog"></li>
+      <li>가운데 Change date/time 체크해주고</li>
+      <li>날짜와 시간을 변경하고 OK해주면 된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tip-3-tc의-현재-window-position을-저장하기">Tip 3. TC의 현재 window position을 저장하기</h2>
+
+<ul>
+  <li>참조링크 : <a href="https://ghisler.ch/board/viewtopic.php?t=28449">Save Position on exit not working</a> 의 첫번째 답변</li>
+  <li>메뉴바 : Configuration &gt; Save Position
+    <ul>
+      <li><img src="/wiki-img/2022/totalcmd_conf_savePosition.png" alt="Save Position menu"></li>
+      <li>TC application의 windows 데스크탑상의 위치와 Size가 저장된다</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

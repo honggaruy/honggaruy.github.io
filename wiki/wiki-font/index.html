@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>위키 폰트 변경 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/wiki-font/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="위키 폰트 변경">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/wiki-font/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/wiki-font/">
+    <meta name="twitter:title" content="위키 폰트 변경">
+    <meta name="twitter:description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="wiki-font">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">위키 폰트 변경</h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-font.md" target="_blank">created: 2020.03.30</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-font.md" target="_blank">updated: 2021.01.25</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/wiki-font.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%84%ED%82%A4+%ED%8F%B0%ED%8A%B8+%EB%B3%80%EA%B2%BD&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    font
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%ED%8F%B0%ED%8A%B8-%EB%B3%80%EA%B2%BD%EC%9D%98-%EB%B0%9C%EB%8B%A8" id="markdown-toc-폰트-변경의-발단">폰트 변경의 발단</a></li>
+  <li><a href="#%EA%B7%B8-%EC%99%B8-%ED%8F%B0%ED%8A%B8%EA%B4%80%EB%A0%A8-%EC%9D%98%EB%AC%B8%EC%A0%90--%EC%9D%B4%EC%8A%88" id="markdown-toc-그-외-폰트관련-의문점--이슈">그 외 폰트관련 의문점 &amp; 이슈</a></li>
+  <li>
+<a href="#%EA%B0%9C%EC%9D%B8%EC%9C%84%ED%82%A4%EC%97%90%EC%84%9C-%ED%8F%B0%ED%8A%B8-%EC%88%98%EC%A0%95-%EC%A0%88%EC%B0%A8" id="markdown-toc-개인위키에서-폰트-수정-절차">개인위키에서 폰트 수정 절차</a>    <ul>
+      <li><a href="#%ED%8F%B0%ED%8A%B8-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-폰트-수정하기">폰트 수정하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#%ED%8F%B0%ED%8A%B8-%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC" id="markdown-toc-폰트-관련-링크">폰트 관련 링크</a></li>
+</ul>
+
+<h1 id="폰트-변경의-발단">폰트 변경의 발단</h1>
+
+<ul>
+  <li>위키 제목으로 쓸 아스키 아트를 만들어 봤다.
+    <ul>
+      <li>의외로 한글을 아스키 아트로 만들어주는 곳을 찾지 못해서 직접 만들어야 했다.</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-ascii-art">    _      _   _       _________    _     ________     _
+   | |____| | | |_    |______   |  | |   |______  |,--' |
+   | ,----, | | ,-'        _/ _/ ,-' |         / / '--. |
+   | '----' | | |      _,-' _ \_ '-. |     ___/ / ,---' | 
+   '--------' '-'     |__,-' \__|  |_|    |__,-'  '---,_|
+      .---------.         .--.               ,---------┐ 
+      }=======  |         |  |______         }=======  |
+      |  ======={         \_________|        |  ======={  
+      '---------'  단                 개     '---------' 론 
+</code></pre>
+
+<ul>
+  <li>아스키 아트는 폰트의 영향을 많이 받기 때문에 폰트를 수정하는 방법을 찾아봤다.</li>
+  <li>본 위키에서는 코딩 폰트와 본문 폰트는 별도로 설정하고 있다.</li>
+  <li>아스키 아트는 코딩 폰트로 적용되므로 발단의 목적을 위해서는 코딩폰트만 변경하면 됨</li>
+  <li>D2Coding폰트를 웹폰트로 만들어 주신 고마운분 <a href="https://wani.kr/posts/2019/05/25/d2coding-webfont/">링크</a>
+</li>
+  <li>위의 아스키아트를 대문에 쓸까 했는데 디자인이 별로라 그냥 영문으로 씀.</li>
+</ul>
+
+<h1 id="그-외-폰트관련-의문점--이슈">그 외 폰트관련 의문점 &amp; 이슈</h1>
+
+<ul>
+  <li>현재 폰트가 뭐지? 통화표시 W 가 안나오고 /\ 가 잘나오지만 monotype은 아닌듯..</li>
+  <li>code block을 쓰지 않으면 깨지는 문제가 있음. 일부 문자를 markdown 표기로 인식
+    <ul>
+      <li>줄간격도 좀 줄였으면 좋겠음.</li>
+    </ul>
+  </li>
+  <li>아스키 아트를 vimwiki 파일에서 직접 편집하면 | 문자가 연속될 경우 표를 만드는 걸로 인식함.
+    <ul>
+      <li>표 만드는 걸로 인식하면 자간이 전부 틀어짐.</li>
+      <li>txt 확장자에서 편집하여 그대로 복사하는 방식으로 편집중..</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개인위키에서-폰트-수정-절차">개인위키에서 폰트 수정 절차</h1>
+
+<ul>
+  <li>Jekyll에서 폰트 수정 방법 <a href="https://frhyme.github.io/others/jekyll_korea_font_change/">링크</a>
+</li>
+</ul>
+
+<h2 id="폰트-수정하기">폰트 수정하기</h2>
+
+<ol>
+  <li>root / css / main.scss 편집
+    <ul>
+      <li>맨 앞에서 <code class="language-html highlighter-rouge">@import url(...)</code> 혹은 <code class="language-html highlighter-rouge">@font-face {...}</code>로 폰트 추가</li>
+      <li>$coding-font 변수의 맨 앞에 변경하고자 하는 폰트 이름 설정 ( 뒤 쪽은 <a href="https://d2.naver.com/helloworld/4969726">fallback font</a>로 설정됨)</li>
+    </ul>
+  </li>
+  <li>(전체 폰트 수정) root / _sass / _base.scss 편집
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">body, th, td, div, p, li { .. }</code> 에 <code class="language-html highlighter-rouge">font-family</code> 속성 추가</li>
+    </ul>
+  </li>
+  <li>(코딩 폰트 수정) root / _sass / _syntax.scss 편집
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">code { .. }</code> 에 <code class="language-html highlighter-rouge">font-family</code> 속성에 <code class="language-html highlighter-rouge">$coding-font</code> 적용</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li><a href="https://github.com/honggaruy/honggaruy.github.io/commit/36c09285351317c51fab1c5b48625ca2b8a133b3">전체 폰트 실제 수정 commit 링크</a></li>
+  <li><a href="https://github.com/honggaruy/honggaruy.github.io/commit/a7d39da6acfcc5e3cb7e330713e8e1f34a47486a">코딩 폰트 실제 수정 commit 링크</a></li>
+</ul>
+
+<h1 id="폰트-관련-링크">폰트 관련 링크</h1>
+
+<ul>
+  <li>
+<a href="https://martian36.tistory.com/1392">서울시체를 웹폰트로 사용하기</a> - 목마른 사람이 우물파는 법.. (개인서버 or 구글 드라이브 사용)</li>
+  <li><a href="https://slides.com/sangjinlee/webconf-2018-5#/">Webfont 사용과 최적화, 이상진</a></li>
+  <li>
+<a href="https://fcnotebook.tistory.com/">프라치노 공책 스킨</a>
+    <ul>
+      <li>윗 링크에서 사용된 <a href="https://hangeul.naver.com/2017/nanum">나눔바른펜</a> 서체를 웹폰트로 사용하는 방법을 찾고 있다.</li>
+      <li>눈누에 <a href="https://noonnu.cc/font_page/42">나눔 바른펜 웹폰트</a>가 있었네</li>
+    </ul>
+  </li>
+  <li>유니코드의 모든 glyph ( 영문및 유럽어 CJK 등 모두 포함)하는 폰트가 있을까? - <a href="https://en.wikipedia.org/wiki/Fallback_font#GNU_Unifont">GNU Unifont</a>
+    <ul>
+      <li>사이즈가 너무 커지지 않도록 퀄리티를 많이 떨어뜨림. 하지만 구분은 가능한 수준임</li>
+      <li><a href="https://en.wikipedia.org/wiki/GNU_Unifont">GNU Unifont wikipedia</a></li>
+      <li>CJK ( Chinese - Japanese - Korean )</li>
+    </ul>
+  </li>
+</ul>
+
+<p>High 65 to 70.</p>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

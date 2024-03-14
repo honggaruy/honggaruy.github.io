@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>52주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="12/21 (월) ~ 12/27(일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/12/21/week-52th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="52주차 기록">
+    <meta property="og:description" content="12/21 (월) ~ 12/27(일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/12/21/week-52th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/12/21/week-52th/">
+    <meta name="twitter:title" content="52주차 기록">
+    <meta name="twitter:description" content="12/21 (월) ~ 12/27(일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/12/14/week-51th/">« 51주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2020/12/23/week-53th/">53주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">52주차 기록</h1>
+        <p class="created-date">
+            2020.12.21
+        </p>
+
+
+        <div class="post-tag">
+    lofi regex exec
+</div>
+
+        <h2>12/21 (월) ~ 12/27(일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#lofi-%EB%AE%A4%EC%A7%81--code-fi-" id="markdown-toc-lofi-뮤직--code-fi-">lofi 뮤직 ? code fi ?</a></li>
+  <li><a href="#regexpexec%EC%9D%98-%EC%8B%A4%EC%A0%9C-%EA%B2%B0%EA%B3%BC-%EC%98%88%EC%A0%9C" id="markdown-toc-regexpexec의-실제-결과-예제">RegExp.exec()의 실제 결과 예제</a></li>
+</ul>
+
+<h1 id="lofi-뮤직--code-fi-">lofi 뮤직 ? code fi ?</h1>
+
+<ul>
+  <li>Hi-Fi : High Fidelity의 약자.
+    <ul>
+      <li>본래 음향용어로 원음에 충실하게 재현하는 고음질 음향 기기의 특성을 의미</li>
+    </ul>
+  </li>
+  <li>Lo-fi : 그냥 Hi-Fi의 반대의미
+    <ul>
+      <li>음질이 낮고 잡음이 많은 곡</li>
+      <li>최근 고의적으로 이런 효과를 만들어 집어넣어 감성적인 효과를 노리는 곡들이 있다</li>
+      <li>유튜브에 찾아 보면 많음</li>
+    </ul>
+  </li>
+  <li>Code fi : Lo-fi 의 패러디로 코딩할 때 들으면 좋은 음악
+    <ul>
+      <li>역시 유튜브를 찾아보면 나온다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="regexpexec의-실제-결과-예제">RegExp.exec()의 실제 결과 예제</h1>
+
+<ul>
+  <li>입력 문자열
+    <blockquote>
+      <p>현대카드코스트코_01월_20201223.xls의 사본</p>
+    </blockquote>
+  </li>
+  <li>regex 문자열
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>  <span class="kd">const</span> <span class="nx">regex_hd</span> <span class="o">=</span> <span class="sr">/</span><span class="se">(?&lt;</span><span class="sr">cardname&gt;.*카드</span><span class="se">)</span><span class="sr">_</span><span class="se">(?&lt;</span><span class="sr">month&gt;</span><span class="se">\d</span><span class="sr">+</span><span class="se">)</span><span class="sr">월_</span><span class="se">\d{4}(?&lt;</span><span class="sr">checkmonth&gt;</span><span class="se">\d{2})\d{8}\.</span><span class="sr">xls/</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>실행문
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">regexResult</span> <span class="o">=</span> <span class="nx">regex_hd</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">getName</span><span class="p">())</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>regexResult 결과
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span> <span class="dl">'</span><span class="s1">현대카드코스트코_01월_20201223.xls</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">현대카드</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">코스트코</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">01</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">12</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">index</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nx">input</span><span class="p">:</span> <span class="dl">'</span><span class="s1">현대카드코스트코_01월_20201223.xls의 사본</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">groups</span><span class="p">:</span> <span class="p">{</span> <span class="nl">cardname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">현대카드</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">subname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">코스트코</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">month</span><span class="p">:</span> <span class="dl">'</span><span class="s1">01</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">checkmonth</span><span class="p">:</span> <span class="dl">'</span><span class="s1">12</span><span class="dl">'</span> <span class="p">}]</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>활용
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">regexResult</span><span class="p">.</span><span class="nx">groups</span><span class="p">.</span><span class="nx">month</span><span class="p">)</span> <span class="c1">// '01'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">regexResult</span><span class="p">.</span><span class="nx">groups</span><span class="p">.</span><span class="nx">subname</span><span class="p">)</span> <span class="c1">// '코스트코'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

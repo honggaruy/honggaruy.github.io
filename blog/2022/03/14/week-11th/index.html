@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 11주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="03/14 (월) ~ 03/20 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/03/14/week-11th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 11주차 기록">
+    <meta property="og:description" content="03/14 (월) ~ 03/20 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/03/14/week-11th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/03/14/week-11th/">
+    <meta name="twitter:title" content="2022년 11주차 기록">
+    <meta name="twitter:description" content="03/14 (월) ~ 03/20 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/03/07/week-10th/">« 2022년 10주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/03/21/week-12th/">2022년 12주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 11주차 기록</h1>
+        <p class="created-date">
+            2022.03.14
+        </p>
+
+
+        <div class="post-tag">
+    google-sheets-formula recipe wiki-setting
+</div>
+
+        <h2>03/14 (월) ~ 03/20 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B5%AC%EA%B8%80-%EC%8B%9C%ED%8A%B8-%ED%95%A8%EC%88%98-%EB%A0%88%EC%8B%9C%ED%94%BC-%ED%95%9C-%EA%B0%9C-%EC%B6%94%EA%B0%80" id="markdown-toc-구글-시트-함수-레시피-한-개-추가">구글 시트 함수 레시피 한 개 추가</a>    <ul>
+      <li>
+<a href="#recipe-%ED%8A%B9%EC%A0%95-%EB%B2%94%EC%9C%84%EC%97%90%EC%84%9C-12%EB%B2%88%EC%A7%B8-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%AA%A8%EB%93%A0-%EC%97%B4%EC%9D%84-%EB%B2%94%EC%9C%84%EB%A1%9C-%EB%B0%9B%EA%B3%A0-%EC%8B%B6%EB%8B%A4" id="markdown-toc-recipe-특정-범위에서-12번째-컬럼의-모든-열을-범위로-받고-싶다">Recipe, 특정 범위에서 12번째 컬럼의 모든 열을 범위로 받고 싶다</a>        <ul>
+          <li><a href="#index-%EC%82%AC%EC%9A%A9" id="markdown-toc-index-사용">INDEX 사용</a></li>
+          <li><a href="#offset-%EC%82%AC%EC%9A%A9" id="markdown-toc-offset-사용">OFFSET 사용</a></li>
+          <li><a href="#%EC%B0%A8%EC%9D%B4%EC%A0%90-" id="markdown-toc-차이점-">차이점 ?</a></li>
+          <li><a href="#plus-recipe-%ED%8A%B9%EC%A0%95-%EB%B2%94%EC%9C%84%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95-%EC%BB%AC%EB%9F%BC%EC%9D%84-%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C-filtering-%ED%95%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4" id="markdown-toc-plus-recipe-특정-범위에서-특정-컬럼을-기준으로-filtering-하고-싶다">Plus Recipe, 특정 범위에서 특정 컬럼을 기준으로 Filtering 하고 싶다</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#%EA%B0%9C%EC%9D%B8%EC%9C%84%ED%82%A4%EC%97%90%EC%84%9C-%ED%83%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%8B%9C%EC%97%90-%EC%A1%B0%ED%95%A9-%ED%83%9C%EA%B7%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C-2022-03-14" id="markdown-toc-개인위키에서-태그-검색시에-조합-태그를-사용할-수-있을까-2022-03-14">개인위키에서 태그 검색시에 조합 태그를 사용할 수 있을까? (2022-03-14)</a></li>
+  <li>
+<a href="#%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC-%ED%95%84%EC%9A%94---react%EB%A5%BC-cdn%EC%9C%BC%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%A0-%EA%B2%BD%EC%9A%B0-%EA%B6%8C%EC%9E%A5%ED%95%98%EB%8A%94-crossorigin-%EC%86%8D%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%B4" id="markdown-toc-용어정리-필요---react를-cdn으로-사용할-경우-권장하는-crossorigin-속성에-대해">용어정리 필요 - React를 CDN으로 사용할 경우 권장하는 <code class="language-html highlighter-rouge">crossorigin</code> 속성에 대해</a>    <ul>
+      <li>
+<a href="#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC" id="markdown-toc-관련-링크">관련 링크</a>        <ul>
+          <li><a href="#%EA%BC%BD%EC%82%AC%EB%A6%AC--evans-libary-%EC%A0%95%EB%A6%AC%EA%B0%80-%EC%9E%98%EB%90%9C-%EA%B0%9C%EC%9D%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B8%EB%93%AF" id="markdown-toc-꼽사리--evans-libary-정리가-잘된-개인-블로그-인듯">꼽사리 .. Evans Libary 정리가 잘된 개인 블로그 인듯</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8-%EC%97%90%EC%84%9C-%EC%A7%81%EC%A0%91-%EC%8A%A4%ED%81%AC%EB%A0%88%EC%9D%B4%ED%95%91-%ED%95%98%EA%B8%B0" id="markdown-toc-구글시트-에서-직접-스크레이핑-하기">구글시트 에서 직접 스크레이핑 하기</a></li>
+  <li>
+<a href="#gcp%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%84%EB%9D%BC%EB%B3%B4%EC%9E%90-2022-03-17" id="markdown-toc-gcp에-대해-아라보자-2022-03-17">GCP에 대해 아라보자 (2022-03-17)</a>    <ul>
+      <li><a href="#how-to-puppeteer-on-google-cloud-functins---youtube" id="markdown-toc-how-to-puppeteer-on-google-cloud-functins---youtube">How to puppeteer on Google Cloud Functins - Youtube</a></li>
+      <li>
+<a href="#creating-a-puppeteer-microservice-to-deploy-to-google-cloud-functions" id="markdown-toc-creating-a-puppeteer-microservice-to-deploy-to-google-cloud-functions">Creating a Puppeteer microservice to deploy to Google Cloud Functions</a>        <ul>
+          <li><a href="#setting-up-puppeteer-and-nodejs" id="markdown-toc-setting-up-puppeteer-and-nodejs">Setting up Puppeteer and Node.js</a></li>
+          <li><a href="#using-automation-with-puppeteer" id="markdown-toc-using-automation-with-puppeteer">Using automation with Puppeteer</a></li>
+          <li><a href="#creating-an-express-server" id="markdown-toc-creating-an-express-server">Creating an Express server</a></li>
+          <li><a href="#deploying-to-google-cloud-functions" id="markdown-toc-deploying-to-google-cloud-functions">Deploying to Google Cloud Functions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#it%EB%AC%B8%EC%84%9C%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%EC%98%81%EC%96%B4-%ED%91%9C%ED%98%84-2022-03-18" id="markdown-toc-it문서에서-사용되는-영어-표현-2022-03-18">IT문서에서 사용되는 영어 표현 (2022-03-18)</a>    <ul>
+      <li><a href="#due-in-part-to" id="markdown-toc-due-in-part-to">due in part to</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EC%A7%88%EB%AC%B8-commanderjs-%EC%99%80-pkg%EB%8A%94-%EA%B0%99%EC%9D%80-%EA%B0%9C%EB%85%90%EC%9D%98-library%EC%9D%B8%EA%B0%80" id="markdown-toc-질문-commanderjs-와-pkg는-같은-개념의-library인가">(질문) Commander.js 와 Pkg는 같은 개념의 Library인가?</a></li>
+  <li>
+<a href="#%EC%B6%95%EA%B5%AC-%EA%B2%BD%EA%B8%B0%EC%9D%BC%EC%A0%95-calendar%EC%97%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0" id="markdown-toc-축구-경기일정-calendar에-추가하기">축구 경기일정 calendar에 추가하기</a>    <ul>
+      <li><a href="#%EC%9A%B8%EB%B2%84%ED%96%84%ED%84%B4" id="markdown-toc-울버햄턴">울버햄턴</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EC%9C%88%EB%8F%84%EC%9A%B0%EC%A6%88-%EC%9D%B4%EB%AA%A8%EC%A7%80-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0" id="markdown-toc-윈도우즈-이모지-선택하기">윈도우즈 이모지 선택하기</a></li>
+  <li><a href="#%ED%81%B4%EB%A6%BD%EB%B3%B4%EB%93%9C%EB%A1%9C-%EB%B3%B5%EC%82%AC%ED%9E%88%EA%B8%B0-%EB%B2%84%ED%8A%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-클립보드로-복사히기-버튼-만들기">클립보드로 복사히기 버튼 만들기</a></li>
+  <li><a href="#css%EB%A1%9C-%EA%B7%B8%EB%A6%BC%EA%B7%B8%EB%A6%AC%EA%B8%B0" id="markdown-toc-css로-그림그리기">CSS로 그림그리기</a></li>
+  <li><a href="#naver-cloud-platform" id="markdown-toc-naver-cloud-platform">Naver Cloud Platform</a></li>
+</ul>
+
+<h1 id="구글-시트-함수-레시피-한-개-추가">구글 시트 함수 레시피 한 개 추가</h1>
+
+<ul>
+  <li>태그 연관성: #google-sheets-formula, #recipe</li>
+</ul>
+
+<h2 id="recipe-특정-범위에서-12번째-컬럼의-모든-열을-범위로-받고-싶다">Recipe, 특정 범위에서 12번째 컬럼의 모든 열을 범위로 받고 싶다</h2>
+
+<h3 id="index-사용">INDEX 사용</h3>
+
+<ul>
+  <li><a href="https://support.google.com/docs/answer/3098242">INDEX 함수 설명, 구글</a></li>
+  <li>INDEX는 보퉁 참조된 범위 내에서 특정 행과 열에 해당하는 <em>값</em>만 반환 한다</li>
+  <li>INDEX는 때문에 행, 열의 INDEX는 보통 1이상의 정수가 입력되는데..</li>
+  <li>하지만 행이나 열 부분에 <code class="language-html highlighter-rouge">0</code>이 입력될 경우 0이 아닌 값을 가진 행이나 열의 전체 <em>배열</em>을 반환하게 된다</li>
+  <li>사용례
+    <ul>
+      <li><code class="language-html highlighter-rouge">=INDEX(이름이지정된범위, 0, 12)</code></li>
+      <li>
+<em>이름이지정된범위</em>의 12번째 컬럼 배열이 반환됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="offset-사용">OFFSET 사용</h3>
+
+<ul>
+  <li><a href="https://support.google.com/docs/answer/3093379">OFFSET 함수 설명, 구글</a></li>
+  <li>OFFSET은 원래 범위 참조를 반환하는 함수다</li>
+  <li>첫번째 argument인 <em>셀 참조</em> 에는 보통 <code class="language-html highlighter-rouge">A2</code>와 같이 지정된 셀주소를 넣지만
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">이름이지정된범위</code> 를 넣으면 해당 범위의 LeftTop 지점이 OFFSET을 계산할 기준으로 설정된다</li>
+    </ul>
+  </li>
+  <li>행 수를 계산하기 위해 <code class="language-html highlighter-rouge">ROWS()</code> 를 사용했다</li>
+  <li>때문에 위의 INDEX 와 같은 결과를 반환하려면 아래와 같이 사용한다
+    <ul>
+      <li><code class="language-html highlighter-rouge">=OFFSET(이름이지정된범위,0,11,ROWS(이름이지정된범위),1)</code></li>
+      <li>
+<em>이름이지정된범위</em>의 12번째 컬럼의 범위 참조가 반환된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="차이점-">차이점 ?</h3>
+
+<ul>
+  <li>반환하는 값의 명치이 <em>배열</em>과 <em>범위 참조</em>로 차이가 있다</li>
+  <li>
+<em>배열</em>과 <em>범위 참조</em>에 어떤 실질적 차이가 있는지는 아직 발견하지 못했다</li>
+</ul>
+
+<h3 id="plus-recipe-특정-범위에서-특정-컬럼을-기준으로-filtering-하고-싶다">Plus Recipe, 특정 범위에서 특정 컬럼을 기준으로 Filtering 하고 싶다</h3>
+
+<ul>
+  <li><a href="https://support.google.com/docs/answer/3093197">FILTER 함수 설명, 구글</a></li>
+  <li>위의 Recipe 결과를 반환받아 다음과 같이 응용할 수 있다</li>
+  <li>12번째 컬럼이 <code class="language-html highlighter-rouge">B02</code>값을 갖는 행만 필터링해서 보고 싶다
+    <ul>
+      <li><code class="language-html highlighter-rouge">=FILTER(이름이지정된범위,INDEX(이름이지정된범위,0,12) = 'B02')</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개인위키에서-태그-검색시에-조합-태그를-사용할-수-있을까-2022-03-14">개인위키에서 태그 검색시에 조합 태그를 사용할 수 있을까? (2022-03-14)</h1>
+
+<ul>
+  <li>태그 연관성: #wiki-setting</li>
+  <li>
+<a href="https://stackoverflow.com/tags">스택 오버플로의 태그 페이지</a>를 보면 여러태그의 조합으로 질문 필터링을 할 수 있다</li>
+  <li>
+<a href="/tag">개인 위키 태그 페이지</a>는 한 개의 태그를 선택하면 그 태그에 해당하는 포스팅만 나오는 구조라 조합 태그를 사용할 수 없다</li>
+  <li>조합 태그를 사용할 수 있도록 구조를 바꿔보자</li>
+  <li>필요성 ?
+    <ul>
+      <li>위 섹션의 <strong>구글 시트 함수 레시피</strong> 에 두 개의 태그를 쓰고 싶다</li>
+      <li>#google-sheets-formula, #recipe</li>
+      <li>두 개의 태그 조합시 이 태그 두개가 붙은 포스팅이 모두 검색되면 좋겠다</li>
+    </ul>
+  </li>
+  <li>여유가 있을 때 해보자</li>
+  <li>관련 링크
+    <ul>
+      <li><a href="https://stackoverflow.com/questions/23050938/jekyll-get-all-posts-that-are-in-multiple-categories">Jekyll - Get all posts that are in multiple categories, stackoverflow</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="용어정리-필요---react를-cdn으로-사용할-경우-권장하는-crossorigin-속성에-대해">용어정리 필요 - React를 CDN으로 사용할 경우 권장하는 <code class="language-html highlighter-rouge">crossorigin</code> 속성에 대해</h1>
+
+<h2 id="관련-링크">관련 링크</h2>
+
+<ul>
+  <li><a href="https://ko.reactjs.org/docs/cdn-links.html#why-the-crossorigin-attribute">crossorigin 속성이 필요한 이유, React</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin">HTML attribute: crossorigin, 모질라</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS), 모질라</a></li>
+  <li><a href="https://evan-moon.github.io/2020/05/21/about-cors/">CORS는 왜 이렇게 우리를 힘들게 하는걸까?, EvansLibrary</a></li>
+</ul>
+
+<h3 id="꼽사리--evans-libary-정리가-잘된-개인-블로그-인듯">꼽사리 .. Evans Libary 정리가 잘된 개인 블로그 인듯</h3>
+
+<ul>
+  <li>관심 주제 링크
+    <ul>
+      <li><a href="https://evan-moon.github.io/2020/11/28/making-your-components-extensible-with-typescript/">타입스크립트와 함께 컴포넌트를 단계 별로 추상화해보자, EvansLibrary</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="구글시트-에서-직접-스크레이핑-하기">구글시트 에서 직접 스크레이핑 하기</h1>
+
+<ul>
+  <li>
+<a href="https://blog.coupler.io/importhtml-function-google-sheets/">How to Use IMPORTHTML Function to Pull Data From a Website Into Google Sheets, coupler.io</a> : IMPORTHTML로 스크레이핑 하기 ( table 과 list만 가능함 )
+    <ul>
+      <li>console 에 직접 JavaScript를 입력하여 table이나 list 순서를 print하는 구문이 쓸만함
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="cm">/* 아래 구문을 직접 console 창에 입력 */</span>
+<span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="p">[].</span><span class="nx">forEach</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">"</span><span class="s2">table</span><span class="dl">"</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">elements</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Index: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">index</span><span class="o">++</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span> <span class="p">});</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.geckoboard.com/blog/use-google-sheets-importxml-function-to-display-data/">Use Google Sheets’ ImportXML function to scrape and visualize data, geckoboard</a> : IMPORTXML로 스크레이핑 하기
+    <ul>
+      <li>
+<a href="https://stackoverflow.com/questions/4835891/extract-value-of-attribute-node-via-xpath">Extract value of attribute node via XPath, stackoverflow</a> : XPath로 태그 프로퍼티 값 읽어오기</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="gcp에-대해-아라보자-2022-03-17">GCP에 대해 아라보자 (2022-03-17)</h1>
+
+<ul>
+  <li>#google-cloud-platfrom #google-cloud-functions</li>
+  <li>
+<a href="https://stackoverflow.com/a/57069970/9457247">Google-apps-script에서 Puppeteer를 이용하는 방법</a> : GCF로 Puppeteer를 써서 페이지를 로딩한후 Apps Script가 HTTP API를 읽어오게 할수 있다.</li>
+</ul>
+
+<h2 id="how-to-puppeteer-on-google-cloud-functins---youtube"><a href="https://youtu.be/i8THvr03FaY">How to puppeteer on Google Cloud Functins - Youtube</a></h2>
+
+<ul>
+  <li>Tech Youtube 따라해보기</li>
+  <li>0:59 , Kickstart 등장
+    <ul>
+      <li>create-react-app 같은 것인줄 알았는데.. 그런 공식적인 것은 아니고..</li>
+      <li>아래와 같이 그냥 만든 generic batch function
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>kickstart <span class="o">()</span> <span class="o">{</span>
+  <span class="nb">mkdir</span> <span class="nv">$1</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$1</span> <span class="o">&amp;&amp;</span> git init <span class="o">&amp;&amp;</span> npm init <span class="nt">-y</span> <span class="nv">$$</span> code <span class="nb">.</span>
+  <span class="nb">echo</span> <span class="s2">"You're awesome 🤟"</span>
+<span class="o">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="creating-a-puppeteer-microservice-to-deploy-to-google-cloud-functions"><a href="https://blog.logrocket.com/creating-puppeteer-microservice-deploy-google-cloud-functions/">Creating a Puppeteer microservice to deploy to Google Cloud Functions</a></h2>
+
+<ul>
+  <li>작성일 :  2021.10.14, 제목에 원본 링크함</li>
+  <li>이 기사에서는 GitHub에서 키워드를 검색해서 첫번째 결과에서 title을 fetch해오는 예제를 만들어볼것 이다
+    <ul>
+      <li>이것은 순전히 예제를 위한것이며 굳이 Puppeteer를 사용하지 않아도 된다</li>
+      <li>keyword는 URL에 있고 Github의 페이지에 페이지 목록이 있기 때문에 결과로 바로 navigating 할 수 있다</li>
+    </ul>
+  </li>
+  <li>하지만, web page와 interaction이 page URL에 반영되지 않고 이 데이타를 fetch해올수 있는 API가 없다고 가정하자
+    <ul>
+      <li>이 경우 Puppeteer를 통한 자동화가 필요해질것이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="setting-up-puppeteer-and-nodejs">Setting up Puppeteer and Node.js</h3>
+
+<ul>
+  <li>Puppeteer 프로젝트를 처음 시작하기
+    <ul>
+      <li>node.js 프로젝트를 시작하고 puppeteer 설치하기</li>
+      <li>가장 기본적인 템플릿으로 puppeteer가 동작하는지 확인
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="k">import</span> <span class="nx">puppeteer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">puppeteer</span><span class="dl">'</span><span class="p">;</span>
+    
+<span class="kd">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">lauch</span><span class="p">({</span>
+  <span class="na">headless</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+    
+<span class="kd">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
+<span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.github.com</span><span class="dl">'</span><span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>실행방법
+        <ul>
+          <li>package.json의 script 에 <code class="language-html highlighter-rouge">"run": "node ./src/service.mjs",</code>를 추가하고 <code class="language-html highlighter-rouge">npm run-script run</code>을 실행</li>
+          <li>아니면 그냥 <code class="language-html highlighter-rouge">node ./src/service.mjs</code>를 실행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="using-automation-with-puppeteer">Using automation with Puppeteer</h3>
+
+<ul>
+  <li>Puppeteer로 다음 동작을 자동화하여 실행해봄
+    <ul>
+      <li>github.com 을 접속하여 ‘react’로 keyword 검색</li>
+      <li>프로젝트 리스트중 첫번째 프로젝트의 title을 가져옴
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre></td>
+<td class="rouge-code"><pre><span class="k">import</span> <span class="nx">puppeteer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">puppeteer</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">keyword</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">({</span>
+    <span class="na">headless</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">defaultViewport</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="mi">1920</span><span class="p">,</span>
+      <span class="na">height</span><span class="p">:</span> <span class="mi">1080</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="kd">const</span> <span class="nx">inputField</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">.header-search-input</span><span class="dl">'</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">repoList</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">.repo-list</span><span class="dl">'</span><span class="p">;</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.github.com</span><span class="dl">'</span><span class="p">);</span>
+
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="nx">inputField</span><span class="p">);</span>
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">focus</span><span class="p">(</span><span class="nx">inputField</span><span class="p">);</span>
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="nx">keyword</span><span class="p">);</span>
+
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">keyboard</span><span class="p">.</span><span class="nx">press</span><span class="p">(</span><span class="dl">'</span><span class="s1">Enter</span><span class="dl">'</span><span class="p">);</span>
+
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">waitForNavigation</span><span class="p">();</span>
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="nx">repoList</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">((</span><span class="nx">repoList</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="nb">document</span>
+        <span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">repoList</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">li</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.f4.text-normal</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">innerText</span>
+    <span class="p">),</span> <span class="nx">repoList</span><span class="p">);</span>
+
+    <span class="k">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="k">return</span> <span class="nx">title</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="nx">e</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">service</span><span class="p">;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>위 과정중 알게된 knowledge
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">page.waitxxx</code> method로 로딩이 끝나길 기다려 실행할 수 있음
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">page.waitForNavigation</code>, <code class="language-html highlighter-rouge">page.waitForSelector</code> 등을 사용해봄</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">page.evalute</code> method로 실제 scrape 를 실행할 수 있음</li>
+    </ul>
+  </li>
+  <li>위 작업의 결과물을 다른 파일에서도 사용할 수 있게 function으로 wrap하고 export 함
+    <ul>
+      <li>service.mjs의 최종 결과물은 keyword를 입력받는 async function 임</li>
+      <li>혹시 에러가 발생하면 알 수 있도록 <code class="language-html highlighter-rouge">try..catch</code> 블럭을 사용함</li>
+      <li>작업이 끝난후 <code class="language-html highlighter-rouge">browser.close</code>를 호출하여 용무가 끝난 browser 를 닫음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="creating-an-express-server">Creating an Express server</h3>
+
+<ul>
+  <li>우선 다음 명령으로 express 설치한다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>npm <span class="nb">install </span>express <span class="nt">--save</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>서버코드는 다음과 같다
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// server.mjs</span>
+<span class="k">import</span> <span class="nx">express</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">service</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./service.mjs</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/:keyword</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">keyword</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">service</span><span class="p">(</span><span class="nx">keyword</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>이 섹션에서는 express로 간이 서버를 만들고 service.mjs를 서비스한다
+    <ul>
+      <li>express 서버에 접속하면 우리는 contents로 우리가 scraping 해온 title을 얻을수 있다</li>
+      <li>본문에서는 <code class="language-html highlighter-rouge">curl localhost:5000/react</code>  형식으로 실행했는데
+        <ul>
+          <li>windows10의  Powershell에서는 다음과 같이 <code class="language-html highlighter-rouge">Invoke-WebRequest</code>명령으로 실행한다. <code class="language-html highlighter-rouge">Contest</code>에 <code class="language-html highlighter-rouge">facebook/react</code>를 가져온 것이다
+            <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre>❯ Invoke-WebRequest <span class="nt">-Uri</span> http://localhost:3000/react
+      
+StatusCode        : 200
+StatusDescription : OK
+Content           : facebook/react
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: <span class="nb">timeout</span><span class="o">=</span>5
+                    Content-Length: 14
+                    Content-Type: text/html<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
+                    Date: Sat, 19 Mar 2022 06:08:16 GMT
+                    ETag: W/<span class="s2">"e-snvGvaecsCpaaBiKy352NKIUZX0"</span>...
+Forms             : <span class="o">{}</span>
+Headers           : <span class="o">{[</span>Connection, keep-alive], <span class="o">[</span>Keep-Alive, <span class="nb">timeout</span><span class="o">=</span>5], <span class="o">[</span>Content-Length, 14], <span class="o">[</span>Content-Type, text/html<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>ut
+                    f-8]...<span class="o">}</span>
+Images            : <span class="o">{}</span>
+InputFields       : <span class="o">{}</span>
+Links             : <span class="o">{}</span>
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 14
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>위 Invke-WebRequest 호출에서 keyword를 다른 것으로 바꿔보며 테스트해보자</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>이 예제는 최소한으로 동작을 확인하기 위한것이다
+    <ul>
+      <li>실제 사용시에는 endpoint에 보안작업이 필요하며</li>
+      <li>서버가 아닌 브라우저로부터 request를 send할경우 CORS 설정도 필요하다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="deploying-to-google-cloud-functions">Deploying to Google Cloud Functions</h3>
+
+<ul>
+  <li>드디어.. 이제 이 서비스를 serverless cloud function에 배포해보자</li>
+  <li>cloud function 과 서버의 차이점은 ?
+    <ul>
+      <li>cloud function : request 오는 순간 깨어나서 후속 request가 있을동안 깨어있음</li>
+      <li>server : 항상 깨어있는 상태</li>
+    </ul>
+  </li>
+  <li>Google Cloud Function에 배포하는 것은 매우 간단하지만</li>
+  <li>Puppeteer가 성공적으로 실행되기 위해서 몇가지 알아둬야할 설정이 있다
+    <ul>
+      <li>첫째로 충분한 메모리를 cloud function에 할당해야 한다
+        <ul>
+          <li>내 경험으로는 512MB 정도면 Puppeteer를 돌릴수 있었는데</li>
+          <li>혹시 memory-related 문제를 만나게 되면 좀더 할당해라</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">package.json</code> 내용은 다음과 같아야 한다
+        <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"puppeteer-example"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"module"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"puppeteer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^10.2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"express"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.17.1"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>dependencies 에  <code class="language-html highlighter-rouge">puppeteer</code>와 <code class="language-html highlighter-rouge">express</code>를 추가하고 ES6 문법을 사용하기 위해 <code class="language-html highlighter-rouge">module</code>로 설정했다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="it문서에서-사용되는-영어-표현-2022-03-18">IT문서에서 사용되는 영어 표현 (2022-03-18)</h1>
+
+<h2 id="due-in-part-to">due in part to</h2>
+
+<ul>
+  <li>#english-idiom</li>
+  <li>발견한 곳 : <a href="https://hackwild.com/article/creating-a-command-line-application-with-nodejs/">Creating a Command-line App …</a> 에서 본문 첫번째 paragraph
+    <blockquote>
+      <p>This is due in no small part to the fact that command-line apps tend to be efficient, fast, and powerful.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.collinsdictionary.com/ko/dictionary/english/due-in-part-to">due in part to , collins dict</a> : 콜린즈 사전의 예문들</li>
+  <li>
+<a href="https://textranch.com/67911/in-part-due/or/due-in-part/">due in part vs. in part due</a>: 비슷한 다른 표현과의 예문 비교</li>
+  <li>의미는 “partly because”</li>
+  <li>나의 추론은…
+    <ul>
+      <li>This is <code class="language-html highlighter-rouge">due</code>to the fact .. (100% 그 사실 때문이다)</li>
+      <li>This is due <code class="language-html highlighter-rouge">in part</code> to the fact .. (100%는 아니지만 부분적으로는 그 사실 때문이다)</li>
+      <li>This is due in <code class="language-html highlighter-rouge">no small</code> part to the fact .. (100%는 아니지만 결코 작지않은 부분이  그 사실 때문이다)</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="질문-commanderjs-와-pkg는-같은-개념의-library인가">(질문) Commander.js 와 Pkg는 같은 개념의 Library인가?</h1>
+
+<ul>
+  <li>
+<a href="https://hackwild.com/article/creating-a-command-line-application-with-nodejs/">Commander.js 소개</a> : node.js 프로그램에 CLI 인터페이스를 지원</li>
+  <li>
+<a href="https://blog.outsider.ne.kr/1379">Pkg 소개</a> : node.js 애플리케이션을 바이너리 컴파일 하여 nodejs가 없는곳에서도 실행할수 있게 만듬
+    <ul>
+      <li>생각해보니 pkg로 만든 바이너리가 꼭 Command line Interface일 필요는 없겠다고 생각됨</li>
+      <li>다른게 당연 ?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="축구-경기일정-calendar에-추가하기">축구 경기일정 calendar에 추가하기</h1>
+
+<h2 id="울버햄턴">울버햄턴</h2>
+
+<ul>
+  <li><a href="https://www.wolves.co.uk/fixtures/mens-first-team/">울버햄턴 홈페이지 접속</a></li>
+  <li>아래로 스크롤하여 중간쯤에 <strong>NEVER MISS A FIXTURE CHANGE</strong> 항목에서 <code class="language-html highlighter-rouge">DOWNLOAD</code>버튼 클릭</li>
+</ul>
+
+<h1 id="윈도우즈-이모지-선택하기">윈도우즈 이모지 선택하기</h1>
+
+<ul>
+  <li>페이지를 하나 만들까 했는데..이미 인터넷상에 있음
+    <ul>
+      <li><a href="https://ko.emojiguide.com/">emojiguide.com</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="클립보드로-복사히기-버튼-만들기">클립보드로 복사히기 버튼 만들기</h1>
+
+<ul>
+  <li>#jekyll #liquid #javascript #wiki-setting</li>
+  <li>개인위기의 사용자 경험을 개선시키는 도구</li>
+  <li>
+<a href="https://www.aleksandrhovhannisyan.com/blog/how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/">How to Add a Copy-to-clipboard Button to Jekyll</a>
+    <ul>
+      <li>이 블로그의 Dark 모드 버튼이 참신하다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="css로-그림그리기">CSS로 그림그리기</h1>
+
+<ul>
+  <li>HowTo …
+    <ul>
+      <li><a href="https://dev.to/alvaromontoro/drawing-homer-simpson-using-circles-in-css-4gc1">Drawing Homer Simpson using circles in CSS, dev.to</a></li>
+      <li><a href="https://youtu.be/xSy_8MtmhPA">I draw anime girl using only HTML and CSS</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="naver-cloud-platform">Naver Cloud Platform</h1>
+
+<ul>
+  <li>사용자 아이디 만듬 롱텀 지메일아이디로..</li>
+  <li>cloud function 지원함</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

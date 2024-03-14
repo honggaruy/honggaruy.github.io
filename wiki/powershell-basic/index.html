@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Powershell 기초적인 명령 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="파워쉘 사용하다가 자주 까먹는 기본 명령">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/powershell-basic/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Powershell 기초적인 명령">
+    <meta property="og:description" content="파워쉘 사용하다가 자주 까먹는 기본 명령">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/powershell-basic/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/powershell-basic/">
+    <meta name="twitter:title" content="Powershell 기초적인 명령">
+    <meta name="twitter:description" content="파워쉘 사용하다가 자주 까먹는 기본 명령">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="powershell-basic">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Powershell 기초적인 명령</h1>
+    
+        <p class="title-summary">파워쉘 사용하다가 자주 까먹는 기본 명령</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/powershell-basic.md" target="_blank">created: 2022.02.09</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/powershell-basic.md" target="_blank">updated: 2023.11.25</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/powershell-basic.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Powershell+%EA%B8%B0%EC%B4%88%EC%A0%81%EC%9D%B8+%EB%AA%85%EB%A0%B9&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    powershell dr_scripto profile
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EB%8F%84%EC%9B%80%EC%9D%84-%EC%A3%BC%EB%8A%94-%EC%9D%B4%EB%93%A4" id="markdown-toc-도움을-주는-이들">도움을 주는 이들…</a>    <ul>
+      <li><a href="#%EA%B4%80%EB%A0%A8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9D%B4%EB%A0%A5" id="markdown-toc-관련-블로그-이력">관련 블로그 이력</a></li>
+      <li><a href="#other-resources" id="markdown-toc-other-resources">Other Resources</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#tip1--path-%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EB%82%B4%EC%9A%A9-%EB%B3%B4%EA%B8%B0-%EC%9D%B4%EC%81%98%EA%B2%8C" id="markdown-toc-tip1--path-환경-변수-내용-보기-이쁘게">Tip1 : Path 환경 변수 내용 보기 (+이쁘게)</a>    <ul>
+      <li><a href="#%EC%9C%A0%EC%82%AC-%EB%82%B4%EC%9A%A9---%EB%AA%A8%EB%93%A0-%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EB%B3%B4%EA%B8%B0" id="markdown-toc-유사-내용---모든-환경-변수-보기">유사 내용 :  모든 환경 변수 보기</a></li>
+    </ul>
+  </li>
+  <li><a href="#tip2--powershell-%EB%B2%84%EC%A0%84-%EB%B3%B4%EA%B8%B0" id="markdown-toc-tip2--powershell-버전-보기">Tip2 : PowerShell 버전 보기</a></li>
+  <li><a href="#tip3--powershell-%EC%97%90%EC%84%9C-rm--rf-temp-%EC%99%80-%EA%B0%99%EC%9D%80-%EB%AA%85%EB%A0%B9%EC%9D%84-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%98%EC%A7%80" id="markdown-toc-tip3--powershell-에서-rm--rf-temp-와-같은-명령을-어떻게-하지">Tip3 : PowerShell 에서 <code class="language-html highlighter-rouge">rm -rf temp</code> 와 같은 명령을 어떻게 하지?</a></li>
+  <li>
+<a href="#tip4--windows%EC%97%90-powershell-%EC%84%A4%EC%B9%98" id="markdown-toc-tip4--windows에-powershell-설치">Tip4 : Windows에 PowerShell 설치</a>    <ul>
+      <li><a href="#setting1--execution-policy-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-setting1--execution-policy-설정하기">Setting1 : Execution Policy 설정하기</a></li>
+      <li><a href="#setting2--powershell-profile-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0" id="markdown-toc-setting2--powershell-profile-설정하기">Setting2 : PowerShell Profile 설정하기</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#tip5--powershell-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EA%B8%B0-tip5---733-%EC%9D%B4%ED%9B%84-winget-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EC%95%88%EB%90%A8" id="markdown-toc-tip5--powershell-업데이트-하기-tip5---733-이후-winget-업데이트-안됨">Tip5 : PowerShell 업데이트 하기 {#tip5} - 7.3.3 이후 winget 업데이트 안됨</a>    <ul>
+      <li><a href="#2023-03-02-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EC%8B%9C-%EB%8B%AC%EB%9D%BC%EC%A7%84-%EC%A0%90-2023-10-29-%EB%B3%B4%EC%99%84" id="markdown-toc-2023-03-02-업데이트시-달라진-점-2023-10-29-보완">2023-03-02 업데이트시 달라진 점 (2023-10-29 보완)</a></li>
+      <li><a href="#2023-11-25-%EC%95%84%EB%9E%98%EB%AA%85%EB%A0%B9-%EB%8B%A4%EC%8B%9C-%EB%A8%B9%EC%9D%8C" id="markdown-toc-2023-11-25-아래명령-다시-먹음">2023-11-25 아래명령 다시 먹음</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="도움을-주는-이들">도움을 주는 이들…</h1>
+
+<p><a href="https://devblogs.microsoft.com/search?query=Dr+Scripto&amp;blog=%2Fscripting%2F"><img src="https://devblogs.microsoft.com/scripting/wp-content/uploads/sites/29/2018/09/dr_scripto-102x150.gif" alt="Dr Scripto"></a>
+<a href="https://devblogs.microsoft.com/search?query=Kory+Thacher"><img src="https://secure.gravatar.com/avatar/ca7ac7ab5a0d4579bea2a0904165c1cc?s=58&d=wp_user_avatar&r=g" alt="Kory Thacher"></a>
+<a href="https://devblogs.microsoft.com/powershell-community/author/tflpsp-co-uk/"><img src="https://secure.gravatar.com/avatar/0ac76ca825380de54163d628b1c9b1f3?s=58&d=mm&r=g" alt="Kory Thacher"></a></p>
+
+<h2 id="관련-블로그-이력">관련 블로그 이력</h2>
+
+<ul>
+  <li>
+<a href="https://devblogs.microsoft.com/scripting/">Scripting Blog, ~2021</a> : Old Blog
+    <ul>
+      <li>
+<a href="https://devblogs.microsoft.com/scripting/all-good-things-must-come-to-an-end/">All good things must come to an end, Feb 16th 2021</a> : Old Blog의 거의? 마지막 포스트</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://devblogs.microsoft.com/powershell-community/">PowerShell Community, 2021 ~</a> : New Blog
+    <ul>
+      <li>
+<a href="https://devblogs.microsoft.com/powershell-community/announcing-the-powershell-community-blog/">Announcing the PowerShell Community Blog, by Doctor Scripto, Feb 16th 2021</a> : 새로운 블로그의 첫번째 포스트</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="other-resources">Other Resources</h2>
+
+<ul>
+  <li><a href="https://github.com/doctorscripto">doctorscripto github, Sean Kearney</a></li>
+</ul>
+
+<h1 id="tip1--path-환경-변수-내용-보기-이쁘게">Tip1 : Path 환경 변수 내용 보기 (+이쁘게)</h1>
+
+<ul>
+  <li>#dr_scripto</li>
+  <li>발췌 링크 : <a href="https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-display-windows-path/">PowerTip: Use PowerShell to Display Windows Path, microsoft devblog</a>
+</li>
+  <li>간단한 명령은 <code class="language-html highlighter-rouge">&gt;$Env:PATH</code>를 치면 되지만 너무 뭉텅이로 나와 보기 어렵다</li>
+  <li>다음과 같이 간단한 옵션을 주어 좀 더 보기 쉽게 만들어 보자
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span><span class="nv">$Env</span>:PATH <span class="nt">-split</span> <span class="s2">";"</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="유사-내용---모든-환경-변수-보기">유사 내용 :  모든 환경 변수 보기</h2>
+
+<ul>
+  <li>발췌 링크: <a href="https://devblogs.microsoft.com/scripting/powertip-use-windows-powershell-to-display-all-environment-variables/">PowerTip: Use Windows PowerShell to display all Environment variables</a>
+</li>
+  <li>DOS에서 <code class="language-html highlighter-rouge">SET</code> 명령처럼 모든 환경 변수를 보는 명령이 Powershell에도 있을까?</li>
+  <li>다음 명령을 실행해봐라
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span><span class="nb">dir env</span>:
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="tip2--powershell-버전-보기">Tip2 : PowerShell 버전 보기</h1>
+
+<ul>
+  <li>발췌 링크 : <a href="https://devblogs.microsoft.com/scripting/powershell-powertip-checking-your-powershell-version/">PowerTip: Checking your PowerShell version, microsoft devblog</a>
+</li>
+  <li>다음 명령을 친다. <code class="language-html highlighter-rouge">$psv</code>를 치고 <kbd>Tab</kbd>만 쳐도 자동완성된다. 뒤에있는 <code class="language-html highlighter-rouge">PSVersion</code>도 다 치지 말고 tab 자동완성을 사용하자
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span><span class="nv">$psversiontable</span>.PSVersion
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="tip3--powershell-에서-rm--rf-temp-와-같은-명령을-어떻게-하지">Tip3 : PowerShell 에서 <code class="language-html highlighter-rouge">rm -rf temp</code> 와 같은 명령을 어떻게 하지?</h1>
+
+<ul>
+  <li>발췌 링크 : <a href="https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-clean-up-temp-files/">PowerTip: Use PowerShell to Clean Up Temp Files, microsoft devblog</a>
+</li>
+  <li>다음 명령을 친다. <code class="language-html highlighter-rouge">Remove-Item</code> 대신 <code class="language-html highlighter-rouge">dir</code>을 쳐도 된다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span>Remove-Item temp <span class="nt">-Recurse</span> | Remove-Item <span class="nt">-Force</span> <span class="nt">-Recurse</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="tip4--windows에-powershell-설치">Tip4 : Windows에 PowerShell 설치</h1>
+
+<ul>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2">Winodws PowerShell 5.1에서 PowerShell 7으로 마이그레이션</a> : 5.1 과 7.x는 Path가 다르므로 같이 설치해서 사용가능함</li>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi">Windows에 PowerShell 설치</a> : MSI 패키지 설치용 파일 링크 있음</li>
+</ul>
+
+<h2 id="setting1--execution-policy-설정하기">Setting1 : Execution Policy 설정하기</h2>
+
+<ul>
+  <li>PowerShell script를 마음대로 실행하려면 Execution Policy가 제대로 설정되어 있어야 함
+    <blockquote>
+      <p>Execution Policy is designed to prevent a user from unkonwingly running a script</p>
+    </blockquote>
+  </li>
+  <li><a href="https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.2#execution-policy">Execution Policy 설정하는법, ms pwsh docs</a></li>
+  <li>현재 설정된 Execution Policy를 보는 법
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Get-ExecutionPolicy</code> : <code class="language-html highlighter-rouge">Restricted</code>면 아직 미허용, <code class="language-html highlighter-rouge">Remote Signed</code>면 허용된 상태</li>
+    </ul>
+  </li>
+  <li>Execution Policy 변경하는 법 : <code class="language-html highlighter-rouge">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -scope CurrentUser</code>
+    <ul>
+      <li>mis-typing을 피하기 위해 tab completion을 이용할 것</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="setting2--powershell-profile-설정하기">Setting2 : PowerShell Profile 설정하기</h2>
+
+<ul>
+  <li>#profile</li>
+  <li>내용 발췌 소스
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2#separate-profiles">Separate profiles, ms posh docs</a></li>
+    </ul>
+  </li>
+  <li>profile 이란?
+    <ul>
+      <li>보통 sessoin 이 시작할 때 편의적인 기능을 자동적으로 미리 로딩하기 위해 profile 파일을 작성한다.</li>
+      <li>powershell도 마찬가지 (예를 들면, linux bash도 <code class="language-html highlighter-rouge">.profile</code> 파일에 저장)</li>
+    </ul>
+  </li>
+  <li>실행시 잘 읽어오기 위해 저장된 위치가 중요한데..
+    <ul>
+      <li>Posh5.1 과 Posh7이 다르게 설정되어 동시에 사용가능하다</li>
+      <li>Posh5.1 : <code class="language-html highlighter-rouge">$HOME/Documents/WindowsPowerShell</code>
+</li>
+      <li>Posh7.x : <code class="language-html highlighter-rouge">$HOME/Documents/PowerShell</code>
+</li>
+    </ul>
+  </li>
+  <li>이 명령으로 7.x 버전에서 달라진 profile 파일명을 볼수 있다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>PS&gt; <span class="nv">$PROFILE</span> | Select-Object <span class="k">*</span>Host<span class="k">*</span> | Format-List
+
+AllUsersAllHosts       : C:/Program Files/PowerShell/7/profile.ps1
+AllUsersCurrentHost    : C:/Program Files/PowerShell/7/Microsoft.PowerShell_profile.ps1
+CurrentUserAllHosts    : C:/Users/&lt;user&gt;/Documents/PowerShell/profile.ps1
+CurrentUserCurrentHost : C:/Users/&lt;user&gt;/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="tip5--powershell-업데이트-하기-tip5---733-이후-winget-업데이트-안됨">Tip5 : PowerShell 업데이트 하기 {#tip5} - 7.3.3 이후 winget 업데이트 안됨</h1>
+
+<ul>
+  <li>
+    <p>아래와 같이 업데이트 메시지가 뜨는 경우 어떻게 업데이트할까?</p>
+
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre>PowerShell 7.2.2
+Copyright <span class="o">(</span>c<span class="o">)</span> Microsoft Corporation.
+
+https://aka.ms/powershell
+Type <span class="s1">'help'</span> to get help.
+
+   A new PowerShell stable release is available: v7.2.3
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag<span class="o">=</span>v7.2.3
+
+Loading personal and system profiles took 3826ms.
+
+<span class="o">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>간단히 <code class="language-html highlighter-rouge">winget upgrade -h --id Microsoft.PowerShell</code>로 최신버전으로 업데이트 할 수 있다</li>
+  <li>자세한 설명은 아래 링크를 참조한다
+    <ul>
+      <li><a href="https://pureinfotech.com/update-apps-winget-windows-11/">Update an app on Windows 11 using winget command</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2023-03-02-업데이트시-달라진-점-2023-10-29-보완">2023-03-02 업데이트시 달라진 점 (2023-10-29 보완)</h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre>  PowerShell 7.3.2
+
+     A new PowerShell stable release is available: v7.3.3
+     Upgrade now, or check out the release page at:
+       https://aka.ms/PowerShell-Release?tag<span class="o">=</span>v7.3.3
+
+  Loading personal and system profiles took 2357ms.
+
+  <span class="o">&gt;</span> winget upgrade <span class="nt">-h</span> <span class="nt">--id</span> Microsoft.PowerShell
+  A newer version was found, but the <span class="nb">install </span>technology is different from the current version installed. 
+  Please uninstall the package and <span class="nb">install </span>the newer version.
+  <span class="o">(</span>혹은 <span class="o">=&gt;</span> 최신 버전을 찾았지만 설치 기술이 현재 설치된 버전과 다릅니다. 패키지를 제거하고 최신 버전을 설치하세요.<span class="o">)</span>
+  
+  <span class="o">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>7.3.3 버전에서 <code class="language-html highlighter-rouge">winget</code> 업데이트가 바로안됨</li>
+  <li>
+<a href="https://github.com/PowerShell/PowerShell/releases/tag/v7.3.3">Github 배포 사이트</a> 에서 <code class="language-html highlighter-rouge">PowerShell-7.3.3-win-x64.msi</code> 다운받아서 실행함</li>
+  <li>Optional Actions : 설치과정 중 선택사항
+    <ul>
+      <li>Add PowerShell to Path Envronment Variable (체크)
+        <ul>
+          <li>어떤 경로에서든 PowerShell을 실행할 수 있도록 함</li>
+        </ul>
+      </li>
+      <li>Register Windows Event Logging Manifest (체크)
+        <ul>
+          <li>
+<a href="https://learn.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7.3">PowerShell Remoting</a>(원격명령) 이 작동하도록 함</li>
+          <li>다양한 advanced logging techniques 또한 enable 함</li>
+        </ul>
+      </li>
+      <li>Enable PowerShell remoting (선택 안함)
+        <ul>
+          <li>관련 cmdlet : <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7.3">Enable-PSRemoting</a>
+</li>
+          <li>원격 PowerShell 명령을 수신하도록 컴퓨터를 구성하는 것으로 Window Sever 플랫폼에서는 기본 활성화함</li>
+          <li>개인 컴퓨터에서는 활성화 불필요할 듯</li>
+        </ul>
+      </li>
+      <li>나머지 두개는 Explorer에 편의성관련 context 메뉴 추가 하는 내용. 별로 중요하지 않음</li>
+    </ul>
+  </li>
+  <li>Use Microsoft Update to help keep your computer secure and up tp date</li>
+  <li>
+    <ul>
+      <li>Enable updating PowerShell through Microsoft Update or WSUS (recommended)</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Use Microsoft Update when I check for updates (recommended)</li>
+      <li>업데이트 정책 설정 (둘 다 체크함)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2023-11-25-아래명령-다시-먹음">2023-11-25 아래명령 다시 먹음</h2>
+
+<ul>
+  <li>이 명령…
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>  <span class="o">&gt;</span> winget upgrade <span class="nt">-h</span> <span class="nt">--id</span> Microsoft.PowerShell <span class="nt">--source</span> winget
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

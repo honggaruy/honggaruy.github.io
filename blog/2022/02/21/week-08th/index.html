@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 08주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="02/21 (월) ~ 02/27 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/02/21/week-08th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 08주차 기록">
+    <meta property="og:description" content="02/21 (월) ~ 02/27 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/02/21/week-08th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/02/21/week-08th/">
+    <meta name="twitter:title" content="2022년 08주차 기록">
+    <meta name="twitter:description" content="02/21 (월) ~ 02/27 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/02/14/week-07th/">« 2022년 07주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/02/28/week-09th/">2022년 09주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 08주차 기록</h1>
+        <p class="created-date">
+            2022.02.21
+        </p>
+
+
+        <div class="post-tag">
+    visual-studio-2022 python setuptools
+</div>
+
+        <h2>02/21 (월) ~ 02/27 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#visual-studio-2022-vs-2019-should-you-upgrade-now-explained-muo---%EB%B2%88%EC%97%AD%EA%B8%80" id="markdown-toc-visual-studio-2022-vs-2019-should-you-upgrade-now-explained-muo---번역글">Visual Studio 2022 vs. 2019: Should You Upgrade Now? Explained, MUO - 번역글</a>    <ul>
+      <li><a href="#%EC%84%9C%EB%AC%B8" id="markdown-toc-서문">서문</a></li>
+      <li><a href="#visual-studio-%EC%97%AD%EC%82%AC-%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%84-%EB%8C%80%EB%B6%80%EB%B6%84-%EC%A2%8B%EC%95%98%EB%8B%A4" id="markdown-toc-visual-studio-역사-지금까진-대부분-좋았다">Visual Studio 역사: 지금까진, 대부분 좋았다</a></li>
+      <li><a href="#vs-2022%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EC%A4%91%EC%9A%94%ED%95%9C-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD" id="markdown-toc-vs-2022에서-가장-중요한-개선사항">VS 2022에서 가장 중요한 개선사항</a></li>
+      <li>
+<a href="#vs-2022-%EB%B2%84%EC%A0%84%EC%9D%98-%EB%8B%A4%EB%A5%B8-%EC%8B%A0%EA%B7%9C-%EC%82%AC%ED%95%AD%EB%93%A4" id="markdown-toc-vs-2022-버전의-다른-신규-사항들">VS 2022 버전의 다른 신규 사항들</a>        <ul>
+          <li><a href="#%EA%B0%9C%EC%84%A0%EB%90%9C-%EC%BD%94%EB%93%9C-%EC%9E%90%EB%8F%99-%EC%99%84%EC%84%B1-code-completion-%EA%B8%B0%EB%8A%A5" id="markdown-toc-개선된-코드-자동-완성-code-completion-기능">개선된 코드 자동 완성 (Code-Completion) 기능</a></li>
+          <li><a href="#%EB%8D%94-%EA%B0%95%EB%A0%A5%ED%95%B4%EC%A7%84-%EB%94%94%EB%B2%84%EA%B9%85-%EC%97%AD%EB%9F%89" id="markdown-toc-더-강력해진-디버깅-역량">더 강력해진 디버깅 역량</a></li>
+          <li><a href="#%EA%B0%9C%EC%84%A0%EB%90%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4" id="markdown-toc-개선된-프로그래밍-인터페이스">개선된 프로그래밍 인터페이스</a></li>
+          <li><a href="#%EA%B0%9C%EC%84%A0%EB%90%9C-%EC%A0%91%EA%B7%BC%EC%84%B1" id="markdown-toc-개선된-접근성">개선된 접근성</a></li>
+          <li><a href="#c-%EC%B5%9C%EC%8B%A0-%EB%B9%8C%EB%93%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B0%9C%EC%84%A0%EB%90%9C-%EC%A7%80%EC%9B%90" id="markdown-toc-c-최신-빌드에-대한-개선된-지원">C++ 최신 빌드에 대한 개선된 지원</a></li>
+          <li><a href="#%EA%B0%9C%EC%84%A0%EB%90%9C-windows-app-%EA%B0%9C%EB%B0%9C" id="markdown-toc-개선된-windows-app-개발">개선된 Windows App 개발</a></li>
+        </ul>
+      </li>
+      <li><a href="#vs-2022-%EB%A1%9C-%EC%A7%80%EA%B8%88-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C" id="markdown-toc-vs-2022-로-지금-업그레이드-해야할까">VS 2022 로 지금 업그레이드 해야할까?</a></li>
+    </ul>
+  </li>
+  <li><a href="#setuptools%EC%9D%98-development-mode-%EB%B2%88%EC%97%AD" id="markdown-toc-setuptools의-development-mode-번역">SETUPTOOlS의 “Development Mode” 번역</a></li>
+  <li>
+<a href="#%EB%B2%88%EC%97%AD---sytax-highlight-with-rouge-in-jekyll-frankindevcom" id="markdown-toc-번역---sytax-highlight-with-rouge-in-jekyll-frankindevcom">번역 - Sytax highlight with Rouge in Jekyll, frankindev.com</a>    <ul>
+      <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+      <li><a href="#install-rouge" id="markdown-toc-install-rouge">Install Rouge</a></li>
+      <li><a href="#theme-and-colour" id="markdown-toc-theme-and-colour">Theme and colour</a></li>
+      <li><a href="#implement" id="markdown-toc-implement">Implement</a></li>
+      <li><a href="#example" id="markdown-toc-example">Example</a></li>
+      <li><a href="#alternative-themes" id="markdown-toc-alternative-themes">Alternative Themes</a></li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#sass" id="markdown-toc-sass">Sass</a>    <ul>
+      <li><a href="#%EC%B0%B8%EA%B3%A0%ED%95%A0-%EB%A7%81%ED%81%AC" id="markdown-toc-참고할-링크">참고할 링크</a></li>
+      <li><a href="#documentation-%EA%B0%9C%EC%9A%94" id="markdown-toc-documentation-개요">Documentation 개요</a></li>
+      <li>
+<a href="#sass-basics" id="markdown-toc-sass-basics">Sass Basics</a>        <ul>
+          <li><a href="#preprocessing" id="markdown-toc-preprocessing">Preprocessing</a></li>
+          <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+          <li><a href="#nesting" id="markdown-toc-nesting">Nesting</a></li>
+          <li><a href="#partials" id="markdown-toc-partials">Partials</a></li>
+          <li><a href="#modules" id="markdown-toc-modules">Modules</a></li>
+          <li><a href="#mixins" id="markdown-toc-mixins">Mixins</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="visual-studio-2022-vs-2019-should-you-upgrade-now-explained-muo---번역글">
+<a href="https://www.makeuseof.com/visual-studio-2022-vs-2019-should-upgrade/">Visual Studio 2022 vs. 2019: Should You Upgrade Now? Explained, MUO</a> - 번역글</h1>
+
+<ul>
+  <li>Visual Studio 2022는 몇가지 매우 멋진 변경과 함께 찾아왔다.
+    <ul>
+      <li>당신이 만일 VS 2019를 사용하고 있다면, 업그레이드 해야할까? 아니면 기다려야 할까?</li>
+    </ul>
+  </li>
+  <li>SEP 02, 2021 by Nancy Jo Melucci</li>
+  <li>제목에 원문 링크</li>
+</ul>
+
+<h2 id="서문">서문</h2>
+
+<p><img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/08/computerdesktop.jpeg?q=50&fit=contain&w=750&h=375&dpr=1.5" alt="처음 그림"></p>
+
+<ul>
+  <li>2021년 초에 Microsoft는 <code class="language-html highlighter-rouge">Visual Studio 2022</code> preview 버전을 야생의 programming world에 풀어놓았다</li>
+  <li>이것은 좋은 뉴스다
+    <ul>
+      <li>매우 인기있는 IDE지만, DevOps 생태계의 빠른 발전속도를 감안할 때 조정또는 정밀 검사가 필요했기 때문이다</li>
+    </ul>
+  </li>
+  <li>VS 2019가 모든 레벨의 개발자에게 호감을 얻긴 했지만, 발전이 필요없는 IDE란 존재하기 않는다
+    <ul>
+      <li>VS 2022가 그만큼 좋은가?</li>
+      <li>얼리 어답터가 되어 최신판으로 업그레이드 할 가치가 있는가?</li>
+    </ul>
+  </li>
+  <li>여기 알아야 할 것들이 있다.</li>
+</ul>
+
+<h2 id="visual-studio-역사-지금까진-대부분-좋았다">Visual Studio 역사: 지금까진, 대부분 좋았다</h2>
+
+<ul>
+  <li>VS 2019와 VS Code는 초심자에겐 사용자 친화적인 것으로 홍보해왔지만, 고급 사용자들로부터도 지속적인 찬사를 받아왔다</li>
+  <li>예를 들면, Azure, Git/GitHub, Live share, Xamarin 과의 통합이라든가, 쉬운 cloud 기반 storage, 실시간 협업과 cross-platform 개발 등의 기능이 호평을 받았다</li>
+  <li>VS 2022는, VS 2019나 VS Code 만큼 좋고 상당히 매력적인 몇가지 개선 사항을 제공한다
+<iframe id="media-9QXwSg9-2qQ" class="media" src="https://www.youtube.com/embed/9QXwSg9-2qQ" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+</li>
+</ul>
+
+<h2 id="vs-2022에서-가장-중요한-개선사항">VS 2022에서 가장 중요한 개선사항</h2>
+
+<ul>
+  <li>VS 2022 주요 개선사항중 하나는 VS 2019에서 지속적으로 불만이 제기된 - 즉(namely), intense demand on memory 입니다</li>
+  <li>대량의 computing power를 요구하는 복잡한 어플리케이션을 개발하는 개발자에게 이 개선사항은 대단한 이점을 약속한다</li>
+  <li>이것은 상업용 또는 산업용 프로젝트에서 일하는 개발자의 (일반적인) 주요 관심사이다</li>
+  <li>이 글을 쓰는 시점에는 프리뷰 버전은 production application에는 license 되지 않았다</li>
+</ul>
+
+<h2 id="vs-2022-버전의-다른-신규-사항들">VS 2022 버전의 다른 신규 사항들</h2>
+
+<ul>
+  <li>Microsoft online documentation의 <a href="https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap">VS 2022 로드맵 페이지</a> 에서 주장하는 내용
+    <ul>
+      <li>이번 최신 배포를 작업하는 팀이 다음과 같은 주제를 염두에 두었다</li>
+      <li>“개인및 팀 생산성, 모던 개발및 지속적인 혁신”</li>
+    </ul>
+  </li>
+  <li>매우 좋은 소리처럼 들리지만, 이 언급이 VS 2022를 사용하면서 실제로 어떻게 반영된다는 것일까?</li>
+  <li>VS 2022 는 아래와 같은 추가적인 개선사항을 약속한다</li>
+</ul>
+
+<h3 id="개선된-코드-자동-완성-code-completion-기능">개선된 코드 자동 완성 (Code-Completion) 기능</h3>
+
+<h3 id="더-강력해진-디버깅-역량">더 강력해진 디버깅 역량</h3>
+
+<h3 id="개선된-프로그래밍-인터페이스">개선된 프로그래밍 인터페이스</h3>
+
+<h3 id="개선된-접근성">개선된 접근성</h3>
+
+<h3 id="c-최신-빌드에-대한-개선된-지원">C++ 최신 빌드에 대한 개선된 지원</h3>
+
+<h3 id="개선된-windows-app-개발">개선된 Windows App 개발</h3>
+
+<h2 id="vs-2022-로-지금-업그레이드-해야할까">VS 2022 로 지금 업그레이드 해야할까?</h2>
+
+<ul>
+  <li>대답은 당신이 지금 당장 VS를 어떻게 사용하고 있는지에 달려있다</li>
+  <li>안타깝게도, VS 2022 Preview 버전은 글쓰는 시점(2021-09-02)에서는 제품 개발에 사용할 수는 없다</li>
+  <li>주로 containerized application으로 작업하는 사람들은 preview 버전으로 시도해보기 전에 약속된 추가 개선사항이 적용될 때까지 기다리길 원할 것이다</li>
+  <li>능숙한 솔로 개발자는 VS 2022에서 제공되는 개선 사항의 이점을 누릴수 있고,
+    <ul>
+      <li>정식버전이 배포되기전에 신규로 개선되는 기능에 익숙해지길 원할것이다</li>
+    </ul>
+  </li>
+  <li>업그레이드 하기로 결정했다면, VS 2022 Preview 이용하는 몇가지 옵션방법이 있다
+    <ul>
+      <li>가장 쉬운 방법은 현재 사용중인 VS 2019와 나란히 VS 2022를 설치하는 것이다
+        <ul>
+          <li>로컬 머신에 설치하기 싫다면 cloud-based 버전를 시도해볼 수도 있다.</li>
+          <li>아니면 command-line에서 작업할 수도있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="setuptools의-development-mode-번역">SETUPTOOlS의 “Development Mode” 번역</h1>
+
+<ul>
+  <li>사족, 번역 기록은 남기는 것은 사실 <code class="language-html highlighter-rouge">세심히 읽었음</code>을 기록으로 남기기 위함이다.
+    <ul>
+      <li>이렇게 남기지 않으면 대충 읽기 때문에..</li>
+      <li>때문에 번역이 애매한 단어는 그냥 영어로 그대로 두자</li>
+      <li>오르막 길을 오를때는 목표점은 보지말고 그냥 내 발을 어느 위치에 둘 지만 생각하자</li>
+      <li>첫번째 발위치가 익숙해지면 그제서야 두번째 발 위치를 생각할 여유가 생길것이다. Bootstrapping..</li>
+    </ul>
+  </li>
+  <li>
+    <p>원본 : <a href="https://setuptools.pypa.io/en/latest/userguide/development_mode.html">Development Mode, setuptools.pypa.io</a></p>
+  </li>
+  <li>일반적인 환경에서, <code class="language-html highlighter-rouge">distutils</code>는, “raw”나 “unbuilt” form이 아닌, 당신의 프로젝트의 distribution 을 빌드할 것으로 가정한다
+    <ul>
+      <li>하지만, 만약 당신이 <code class="language-html highlighter-rouge">distutils</code>를 distribution에 사용하려고 한다면, 당신은 당신의 프로젝트를 개발 기간동안 변경할 때마다 매번 rebuild 하거나 reinstall해야 할 것이다</li>
+    </ul>
+  </li>
+  <li>당신이 두 개의 관련된 프로젝트를 동시에 개발할 필요가 있을 때, 때때로 <code class="language-html highlighter-rouge">distutils</code>가 문제가 될 때도 있습니다.
+    <ul>
+      <li>양쪽의 프로젝트 패키지를 같은 디렉토리에 넣고 실행해야할 필요가 있는데, revision control 목적으로 두 프로젝트간 분리를 유지할 필요가 있을 수 있다</li>
+      <li>이 문제를 어떻게 해결할 수 있을까?</li>
+    </ul>
+  </li>
+  <li>Setuptools를 사용하면, 파일을 복사하지 않고 common directory나 staging area 에서 사용할 프로젝트를 배포(deploy)할 수 있다
+    <ul>
+      <li>따라서, 각 프로젝트의 코드를 그 프로젝트의 체크아웃 디렉토리에서 편집할 수 있으며</li>
+      <li>프로젝트의 C extenstion이나 유사하게 컴파일된 파일을 변경할때만 빌드 명령을 실행하면 된다</li>
+      <li>심지어 당신이 원한다면 다른 프로젝트의 checkout directory에 당신의 프로젝트를 배포할 수도 있다
+        <ul>
+          <li>이 방식은 공통의 독립적인 stagin area나 site-packages directory를 이용하는 것과는 반대인 경우다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>이것을 이용하려면, <code class="language-html highlighter-rouge">setup.py develop</code> 명령을 이용해라.
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">setup.py install</code>과 매우 유사하게 동작하지만, 이 명령은 실제로 아무것도 설치하지 않는다</li>
+      <li>대신, development directory에 특별한 <code class="language-html highlighter-rouge">.egg-link</code> 파일을 생성하는데, 이 파일은 당신의 프로젝트 소스코드에 연결된다</li>
+      <li>그리고, 당신의 development directory가 Python의 <code class="language-html highlighter-rouge">site-packages</code> directory라면, (이 명령은) 당신 프로젝트의 소스 코드를 include하도록 <code class="language-html highlighter-rouge">easy-install.pth</code> 파일도 업데이트 하므로 해당 Python 설치를 사용하는 모든 프로그램의 <code class="language-html highlighter-rouge">sys.path</code>에서 사용할수 있도록 한다</li>
+    </ul>
+  </li>
+  <li>게다가, <code class="language-html highlighter-rouge">develop</code> 명령은, 모든 <code class="language-html highlighter-rouge">install_requires</code> 패키지가 <code class="language-html highlighter-rouge">sys.path</code>에서 사용가능 한것이 확인된후에,  당신의 in-development 스크립트를 실행할 wrapper 스크립트를 target script directory에 생성한다</li>
+  <li>당신은 같은 프로젝트를 다중 staging 영역들에 배포할수 있다. 즉, 같은 machine에 당신이 개발을 진행중인  같은 프로젝트를 공유하는 다중 프로젝트 있을 경우에 이용한다</li>
+  <li>당신이 주어진 개발 task를 완료했다면, 프로젝트 소스를 staging area로 부터 제거할 수 있다.
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">setup.py develop --uninstall</code>을 이용하라</li>
+      <li>대상 staging area가 default가 아니라면 원하는 staging area를 선택해야 한다</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">develop</code> 명령의 정확한 behavior 조정을 위한 몇가지 옵션이 있다; 자세한 사항은 아래 <code class="language-html highlighter-rouge">develop</code> 명령 section을 확인하라</li>
+  <li>아래와 같은 방식으로, non-setuptools 프로젝트에 setuptools 명령을 적용할수있다.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> python <span class="nt">-c</span> <span class="s2">"import setuptools; with open('setup.py') as f: exec(compile(f.read(), 'setup.py', 'exec'))"</span> develop
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>다시 말하면, 단순하게 일반적인 setup 명령과 옵션들을 따옴표안에 나열하면 된다</li>
+</ul>
+
+<h1 id="번역---sytax-highlight-with-rouge-in-jekyll-frankindevcom">번역 - <a href="https://www.frankindev.com/2017/03/18/syntax-highlight-with-rouge-in-jekyll/">Sytax highlight with Rouge in Jekyll, frankindev.com</a>
+</h1>
+
+<ul>
+  <li>부제 : better styling the code blocks</li>
+  <li>updated: 2021.02.06</li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<ul>
+  <li>Jekyll 3 이후로 <a href="http://rouge.jneen.net/">Rouge</a>가 default code highlighter 이고
+    <ul>
+      <li>100% Ruby로 구현된 100개의 언어를 지원하는 code highlighter</li>
+      <li>Python 계열 syntax highlighter인 Pygments의 stylesheets와 호환되어 Pygments themes를 사용가능</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-rouge">Install Rouge</h2>
+
+<h2 id="theme-and-colour">Theme and colour</h2>
+
+<h2 id="implement">Implement</h2>
+
+<h2 id="example">Example</h2>
+
+<h2 id="alternative-themes">Alternative Themes</h2>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<h1 id="sass">Sass</h1>
+
+<ul>
+  <li>위키작성시 사용하는 fenced code block의 syntax highlighting이 생각하는 대로 나오지 않는 것을 발견했다</li>
+  <li>Jekyll은 <a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting">Code snippet highlighting</a>에 <code class="language-html highlighter-rouge">Rouge</code> Ruby Gem를 사용한다</li>
+  <li>rouge에서 사용하는 syntax highlight 설정이 <code class="language-html highlighter-rouge">_sass</code> 폴더의 <code class="language-html highlighter-rouge">_syntax.scss</code> 내의 <code class="language-html highlighter-rouge">.highlight</code> 설정에 관련이 있다는 것을 알아내었다</li>
+  <li>그러니까, sass를 한 번 알아보자</li>
+</ul>
+
+<h2 id="참고할-링크">참고할 링크</h2>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/assets/#sassscss"> jekyll &gt; assets &gt; Sass </a></li>
+  <li>
+<a href="https://sass-lang.com/documentation"> Sass Documentation, sass-lang.com</a>
+    <ul>
+      <li><a href="https://sass-lang.com/guide">Sass Tutorial, sass-lang.com</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="documentation-개요">Documentation 개요</h2>
+
+<ul>
+  <li>Sass는 CSS로 컴파일되는 stylesheet 언어이다</li>
+  <li>fully CSS 호환되는 구문으로 variables, nested rules, mixins, functions 등등을 사용할 수 있다</li>
+  <li>Sass 는 큰 스타일시트를 잘 정리하는데 도움을 준다
+    <ul>
+      <li>또한 프로젝트 내부및 프로젝트 간에 디자인을 쉽게 공유할 수 있게 해준다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sass-basics">Sass Basics</h2>
+
+<ul>
+  <li>Sass를 사용하기전에 , 당신의 프로젝트에 먼저 설정을 해야 한다</li>
+  <li>이곳에서 그냥 브라우징만 해도 되지만, 일단 Sass 를 먼저 설치하는 것을 권장한다</li>
+  <li>셋업하는 방법을 알고 싶다면 <a href="https://sass-lang.com/install">이 페이지</a>로 가라</li>
+</ul>
+
+<h3 id="preprocessing">Preprocessing</h3>
+
+<ul>
+  <li>CSS는 점점 더 커지고 복잡해진다.</li>
+  <li>자체 문법만으로는 한계가 있으며..
+    <ul>
+      <li>nesting, mixins, inheritance등 다른 niftygoodies가 필요해진다</li>
+    </ul>
+  </li>
+  <li>전처리된 Sass 파일은 normal CSS로 저장된다</li>
+  <li>Sass를 이용하는 가장 직접적인 방법은 terminal을 이용하는 것이다
+    <ul>
+      <li>Sass를 설치한 후 <code class="language-html highlighter-rouge">sass</code> command로 Sass 파일을 CSS 파일로 컴파일할 수 있다</li>
+      <li>디렉토리나 파일을 지정해 <code class="language-html highlighter-rouge">--watch</code> 플래그를 써서 변경 즉시 자동 컴파일 되도록 할 수 있다
+        <ul>
+          <li>아래 두 번째 예에서 colon 앞쪽은 input 폴더, 뒷쪽은 output 폴더이다
+            <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> sass <span class="nt">--watch</span> input.scss output.css
+<span class="o">&gt;</span> sass <span class="nt">--watch</span> app/sass:public/stylesheets
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variables">Variables</h3>
+
+<style>
+.sidebyside {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<ul>
+  <li>변수를 “스타일시트에서 재사용 하려는 정보를 저장하는 방법”이라고  생각해라</li>
+  <li>colors, font stacks등 당신이 생각하는 어떤 CSS 값이라도 저장해놓고 재사용할 수 있다</li>
+  <li>Sass 는 변수를 만들기 위해 <code class="language-html highlighter-rouge">$</code> 심볼을 사용한다</li>
+</ul>
+
+<div class="sidebyside">
+
+  <div class="language-sass highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="cm">/* sass file */
+</span><span class="nv">$font-stack</span><span class="p">:</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="err">;</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#333</span><span class="err">;</span>
+
+<span class="nt">body</span> <span class="err">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">100%</span> <span class="nv">$font-stack</span><span class="err">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="err">;</span>
+<span class="err">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>  </div>
+
+  <div class="language-css highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="c">/* css file */</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">100%</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>  </div>
+</div>
+
+<ul>
+  <li>위의 Sass 파일이 처리되면
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">$font-stack</code>과 <code class="language-html highlighter-rouge">$primary-color</code>를 받아서 일반적인 CSS 형태로 값을 대체하여 출력한다</li>
+    </ul>
+  </li>
+  <li>이 기능은 brand color 작업으로 사이트에 통일성을 주고자 할 때 유용하다</li>
+</ul>
+
+<h3 id="nesting">Nesting</h3>
+
+<h3 id="partials">Partials</h3>
+
+<ul>
+  <li>부품 Sass 파일을 만들 수 있다
+    <ul>
+      <li>little snippets of css 가 포함된다</li>
+      <li>다른 Sass file에 포함되도록 할 수 있다</li>
+    </ul>
+  </li>
+  <li>이 특성은 CSS를 모듈화 하는데 좋고, 유지보수를 쉽게 만들어 준다</li>
+  <li>사용법
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">partial</code>은 파일접두사로 <code class="language-html highlighter-rouge">_</code> 를 사용하는 Sass file 이다</li>
+      <li>예를 들면, <code class="language-html highlighter-rouge">_partial.scss</code>와 같이 이름지을 수 있다</li>
+      <li>
+<code class="language-html highlighter-rouge">_</code>가 붙어 있으면 Sass 컴파일러가 <code class="language-html highlighter-rouge">partial</code>임 인식하여 별도의 CSS file로 생성하지 않는다</li>
+      <li>Sass partial은 @use 규칙으로 사용된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="modules">Modules</h3>
+
+<ul>
+  <li>다른 섹션과 달리 호환성 표시가 있다
+    <ul>
+      <li>Dart Sass 는 1.23.0 부터 지원</li>
+      <li>LiSass , Ruby Sass 는 지원하지 않음</li>
+      <li>오직 Dart Sass만이 <code class="language-html highlighter-rouge">@use</code>를 지원한다</li>
+      <li>다른 implementation 사용자들은  <code class="language-html highlighter-rouge">@import</code> rule을 사용할 것</li>
+    </ul>
+  </li>
+  <li>모든 Sass 코드를 하나의 파일에 작성할 필요가 없다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">@use</code> rule을 이용해 원하는 만큼 분리하여 작성할 수 있다</li>
+      <li>이 rule은 다른 Sass 파일을 <em>module</em>로 로드한다
+        <ul>
+          <li>즉, variables, mixins, functions등을 Sass 파일에서 참조할 때</li>
+          <li>파일명에 기반한 namespace로 이용할 수 있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mixins">Mixins</h3>
+
+<ul>
+  <li>CSS의 어떤 것들을 모두 써주기 귀찮다. 특별히 CSS3와 많은 vendor prefixes가 존재할 때 특히 그렇다</li>
+  <li>mixin을 사용하면 사이트 전체에서 재사용하려는 CSS declarations 그룹을 만들 수 있다</li>
+  <li>이것을 당산이 Sass를 매우 DRY( Don’t Repeat Yourself)하게 유지되도록 돕는다</li>
+  <li>당신은 심지어 값을 넘겨 mixin을 매우 flexible하게 할수도 있다</li>
+  <li>여기 예제가 있다</li>
+</ul>
+
+<div class="sidebyside">
+
+  <div class="language-sass highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre>  <span class="cm">/* sass file */
+</span>  <span class="k">@mixin</span> <span class="nf">theme</span><span class="p">(</span><span class="nv">$theme</span><span class="o">:</span> <span class="n">DarkGray</span><span class="p">)</span> <span class="err">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nv">$theme</span><span class="err">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$theme</span><span class="o">,</span> <span class="mi">.25</span><span class="p">)</span><span class="err">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="err">;</span>
+  <span class="err">}</span>
+  
+  <span class="nc">.info</span> <span class="err">{</span>
+    <span class="k">@include</span> <span class="nd">theme</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.alert</span> <span class="err">{</span>
+    <span class="k">@include</span> <span class="nd">theme</span><span class="p">(</span><span class="nv">$theme</span><span class="o">:</span> <span class="n">DarkRed</span><span class="p">)</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.success</span> <span class="err">{</span>
+    <span class="k">@include</span> <span class="nd">theme</span><span class="p">(</span><span class="nv">$theme</span><span class="o">:</span> <span class="n">DarkGreen</span><span class="p">)</span><span class="err">;</span>
+  <span class="err">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>  </div>
+
+  <div class="language-css highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre>  <span class="c">/* css file */</span>
+  <span class="nc">.info</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">DarkGray</span><span class="p">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">169</span><span class="p">,</span> <span class="m">169</span><span class="p">,</span> <span class="m">169</span><span class="p">,</span> <span class="m">0.25</span><span class="p">);</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.alert</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">DarkRed</span><span class="p">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">130</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.25</span><span class="p">);</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.success</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">DarkGreen</span><span class="p">;</span>
+    <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.25</span><span class="p">);</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="p">}</span>
+
+</pre></td>
+</tr></tbody></table></code></pre></div>  </div>
+</div>
+
+<ul>
+  <li>mixin을 사용하려면..
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">@mixin</code> directive를 사용하고 이름을 부여하라</li>
+    </ul>
+  </li>
+  <li>우리의 mixin에게 <code class="language-html highlighter-rouge">theme</code>이란 이름을 지었다
+    <ul>
+      <li>또한 <code class="language-html highlighter-rouge">$theme</code> 변수를 넘겨주어 원하는 설정을 넘길수 있도록 하였다</li>
+    </ul>
+  </li>
+  <li>mixin을 생성한 다음에는 다음과 같이 사용할 수 있다
+    <ul>
+      <li>@include로 시작하고 mixin 이름이 뒤에오는 CSS declaration으로 사용할 수 있다</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

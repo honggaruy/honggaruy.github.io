@@ -1,0 +1,529 @@
+@charset "UTF-8";
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
+@import url("https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean&effect=shadow-multiple|3d|fire-animation");
+@font-face { font-family: 'NanumBarunpen'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+figure.highlight::before { color: #969896 !important; background-color: #1d1f21 !important; }
+
+pre.lineno { color: #969896 !important; }
+
+.highlight > pre { color: #c5c8c6; background-color: #1d1f21 !important; /* Comment */ /* Error */ /* Keyword */ /* Literal */ /* Name */ /* Operator */ /* Punctuation */ /* Comment.Multiline */ /* Comment.Preproc */ /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */ /* Generic.Emph */ /* Generic.Heading */ /* Generic.Inserted */ /* Generic.Prompt */ /* Generic.Strong */ /* Generic.Subheading */ /* Keyword.Constant */ /* Keyword.Declaration */ /* Keyword.Namespace */ /* Keyword.Pseudo */ /* Keyword.Reserved */ /* Keyword.Type */ /* Literal.Date */ /* Literal.Number */ /* Literal.String */ /* Name.Attribute */ /* Name.Builtin */ /* Name.Class */ /* Name.Constant */ /* Name.Decorator */ /* Name.Entity */ /* Name.Exception */ /* Name.Function */ /* Name.Label */ /* Name.Namespace */ /* Name.Other */ /* Name.Property */ /* Name.Tag */ /* Name.Variable */ /* Operator.Word */ /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */ /* Literal.Number.Integer */ /* Literal.Number.Oct */ /* Literal.String.Backtick */ /* Literal.String.Char */ /* Literal.String.Doc */ /* Literal.String.Double */ /* Literal.String.Escape */ /* Literal.String.Heredoc */ /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */ /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */ /* Name.Variable.Instance */ /* Literal.Number.Integer.Long */ }
+
+.highlight > pre .c { color: #969896; }
+
+.highlight > pre .err { color: #c66; }
+
+.highlight > pre .k { color: #b294bb; }
+
+.highlight > pre .l { color: #de935f; }
+
+.highlight > pre .n { color: #c5c8c6; }
+
+.highlight > pre .o { color: #8abeb7; }
+
+.highlight > pre .p { color: #c5c8c6; }
+
+.highlight > pre .cm { color: #969896; }
+
+.highlight > pre .cp { color: #969896; }
+
+.highlight > pre .c1 { color: #969896; }
+
+.highlight > pre .cs { color: #969896; }
+
+.highlight > pre .gd { color: #c66; }
+
+.highlight > pre .ge { font-style: italic; }
+
+.highlight > pre .gh { font-weight: bold; color: #c5c8c6; }
+
+.highlight > pre .gi { color: #b5bd68; }
+
+.highlight > pre .gp { font-weight: bold; color: #969896; }
+
+.highlight > pre .gs { font-weight: bold; }
+
+.highlight > pre .gu { font-weight: bold; color: #8abeb7; }
+
+.highlight > pre .kc { color: #b294bb; }
+
+.highlight > pre .kd { color: #b294bb; }
+
+.highlight > pre .kn { color: #8abeb7; }
+
+.highlight > pre .kp { color: #b294bb; }
+
+.highlight > pre .kr { color: #b294bb; }
+
+.highlight > pre .kt { color: #f0c674; }
+
+.highlight > pre .ld { color: #b5bd68; }
+
+.highlight > pre .m { color: #de935f; }
+
+.highlight > pre .s { color: #b5bd68; }
+
+.highlight > pre .na { color: #81a2be; }
+
+.highlight > pre .nb { color: #c5c8c6; }
+
+.highlight > pre .nc { color: #f0c674; }
+
+.highlight > pre .no { color: #c66; }
+
+.highlight > pre .nd { color: #8abeb7; }
+
+.highlight > pre .ni { color: #c5c8c6; }
+
+.highlight > pre .ne { color: #c66; }
+
+.highlight > pre .nf { color: #81a2be; }
+
+.highlight > pre .nl { color: #c5c8c6; }
+
+.highlight > pre .nn { color: #f0c674; }
+
+.highlight > pre .nx { color: #81a2be; }
+
+.highlight > pre .py { color: #c5c8c6; }
+
+.highlight > pre .nt { color: #8abeb7; }
+
+.highlight > pre .nv { color: #c66; }
+
+.highlight > pre .ow { color: #8abeb7; }
+
+.highlight > pre .w { color: #c5c8c6; }
+
+.highlight > pre .mf { color: #de935f; }
+
+.highlight > pre .mh { color: #de935f; }
+
+.highlight > pre .mi { color: #de935f; }
+
+.highlight > pre .mo { color: #de935f; }
+
+.highlight > pre .sb { color: #b5bd68; }
+
+.highlight > pre .sc { color: #c5c8c6; }
+
+.highlight > pre .sd { color: #969896; }
+
+.highlight > pre .s2 { color: #b5bd68; }
+
+.highlight > pre .se { color: #de935f; }
+
+.highlight > pre .sh { color: #b5bd68; }
+
+.highlight > pre .si { color: #de935f; }
+
+.highlight > pre .sx { color: #b5bd68; }
+
+.highlight > pre .sr { color: #b5bd68; }
+
+.highlight > pre .s1 { color: #b5bd68; }
+
+.highlight > pre .ss { color: #b5bd68; }
+
+.highlight > pre .bp { color: #c5c8c6; }
+
+.highlight > pre .vc { color: #c66; }
+
+.highlight > pre .vg { color: #c66; }
+
+.highlight > pre .vi { color: #c66; }
+
+.highlight > pre .il { color: #de935f; }
+
+figure.highlight::before { color: #7285b7 !important; background-color: #002451 !important; }
+
+pre.lineno { color: #7285b7 !important; }
+
+.highlight > pre { color: #fff; background-color: #002451 !important; /* Comment */ /* Error */ /* Keyword */ /* Literal */ /* Name */ /* Operator */ /* Punctuation */ /* Comment.Multiline */ /* Comment.Preproc */ /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */ /* Generic.Emph */ /* Generic.Heading */ /* Generic.Inserted */ /* Generic.Prompt */ /* Generic.Strong */ /* Generic.Subheading */ /* Keyword.Constant */ /* Keyword.Declaration */ /* Keyword.Namespace */ /* Keyword.Pseudo */ /* Keyword.Reserved */ /* Keyword.Type */ /* Literal.Date */ /* Literal.Number */ /* Literal.String */ /* Name.Attribute */ /* Name.Builtin */ /* Name.Class */ /* Name.Constant */ /* Name.Decorator */ /* Name.Entity */ /* Name.Exception */ /* Name.Function */ /* Name.Label */ /* Name.Namespace */ /* Name.Other */ /* Name.Property */ /* Name.Tag */ /* Name.Variable */ /* Operator.Word */ /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */ /* Literal.Number.Integer */ /* Literal.Number.Oct */ /* Literal.String.Backtick */ /* Literal.String.Char */ /* Literal.String.Doc */ /* Literal.String.Double */ /* Literal.String.Escape */ /* Literal.String.Heredoc */ /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */ /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */ /* Name.Variable.Instance */ /* Literal.Number.Integer.Long */ }
+
+.highlight > pre .c { color: #7285b7; }
+
+.highlight > pre .err { color: #ff9da4; }
+
+.highlight > pre .k { color: #ebbbff; }
+
+.highlight > pre .l { color: #ffc58f; }
+
+.highlight > pre .n { color: #fff; }
+
+.highlight > pre .o { color: #9ff; }
+
+.highlight > pre .p { color: #fff; }
+
+.highlight > pre .cm { color: #7285b7; }
+
+.highlight > pre .cp { color: #7285b7; }
+
+.highlight > pre .c1 { color: #7285b7; }
+
+.highlight > pre .cs { color: #7285b7; }
+
+.highlight > pre .gd { color: #ff9da4; }
+
+.highlight > pre .ge { font-style: italic; }
+
+.highlight > pre .gh { font-weight: bold; color: #fff; }
+
+.highlight > pre .gi { color: #d1f1a9; }
+
+.highlight > pre .gp { font-weight: bold; color: #7285b7; }
+
+.highlight > pre .gs { font-weight: bold; }
+
+.highlight > pre .gu { font-weight: bold; color: #9ff; }
+
+.highlight > pre .kc { color: #ebbbff; }
+
+.highlight > pre .kd { color: #ebbbff; }
+
+.highlight > pre .kn { color: #9ff; }
+
+.highlight > pre .kp { color: #ebbbff; }
+
+.highlight > pre .kr { color: #ebbbff; }
+
+.highlight > pre .kt { color: #ffeead; }
+
+.highlight > pre .ld { color: #d1f1a9; }
+
+.highlight > pre .m { color: #ffc58f; }
+
+.highlight > pre .s { color: #d1f1a9; }
+
+.highlight > pre .na { color: #bbdaff; }
+
+.highlight > pre .nb { color: #fff; }
+
+.highlight > pre .nc { color: #ffeead; }
+
+.highlight > pre .no { color: #ff9da4; }
+
+.highlight > pre .nd { color: #9ff; }
+
+.highlight > pre .ni { color: #fff; }
+
+.highlight > pre .ne { color: #ff9da4; }
+
+.highlight > pre .nf { color: #bbdaff; }
+
+.highlight > pre .nl { color: #fff; }
+
+.highlight > pre .nn { color: #ffeead; }
+
+.highlight > pre .nx { color: #bbdaff; }
+
+.highlight > pre .py { color: #fff; }
+
+.highlight > pre .nt { color: #9ff; }
+
+.highlight > pre .nv { color: #ff9da4; }
+
+.highlight > pre .ow { color: #9ff; }
+
+.highlight > pre .w { color: #fff; }
+
+.highlight > pre .mf { color: #ffc58f; }
+
+.highlight > pre .mh { color: #ffc58f; }
+
+.highlight > pre .mi { color: #ffc58f; }
+
+.highlight > pre .mo { color: #ffc58f; }
+
+.highlight > pre .sb { color: #d1f1a9; }
+
+.highlight > pre .sc { color: #fff; }
+
+.highlight > pre .sd { color: #7285b7; }
+
+.highlight > pre .s2 { color: #d1f1a9; }
+
+.highlight > pre .se { color: #ffc58f; }
+
+.highlight > pre .sh { color: #d1f1a9; }
+
+.highlight > pre .si { color: #ffc58f; }
+
+.highlight > pre .sx { color: #d1f1a9; }
+
+.highlight > pre .sr { color: #d1f1a9; }
+
+.highlight > pre .s1 { color: #d1f1a9; }
+
+.highlight > pre .ss { color: #d1f1a9; }
+
+.highlight > pre .bp { color: #fff; }
+
+.highlight > pre .vc { color: #ff9da4; }
+
+.highlight > pre .vg { color: #ff9da4; }
+
+.highlight > pre .vi { color: #ff9da4; }
+
+.highlight > pre .il { color: #ffc58f; }
+
+body { margin: 0; height: 100%; background-color: #121212; }
+
+body ::-moz-selection { background: rgba(255, 149, 0, 0.5); }
+
+body ::-webkit-selection { background: rgba(255, 149, 0, 0.5); }
+
+body ::selection { background: rgba(255, 149, 0, 0.5); }
+
+body ::marker { color: rgba(255, 255, 255, 0.7); }
+
+/* 목차에 사용되는 ul 들여쓰기를 폰트 2자 크기로 지정 */
+ul { padding-inline-start: 2em; }
+
+body { font: 400 1rem/1.6 "NanumBarunpen", "sunflower", "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif; word-break: keep-all; color: rgba(255, 255, 255, 0.7); }
+
+.powered-by { font-size: 0.7rem; }
+
+a { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+
+a, a:link { text-decoration: none; }
+
+.post a:visited, .post-list a:visited { text-decoration: none; }
+
+.post a:hover { text-decoration: underline; }
+
+.post a.active, .post a:active { text-decoration: none; }
+
+a, a:link { color: #ff9500; }
+
+.post a:visited, .post-list a:visited { color: #b8a800; }
+
+.post a:hover { color: #b86b00; }
+
+.post a.active, .post a:active { color: #6b3f00; }
+
+a.disabled, a:disabled { color: rgba(255, 149, 0, 0.2) !important; }
+
+/* a:visited { color: #344B83; } */
+.blog-only-title { text-align: center; }
+
+.post-content { line-height: 2; }
+
+blockquote { background: #222; font-size: 1.15rem; padding: 4px 0px 4px 8px; border-left: 4px solid #CCCCCC; quotes: "“" "”" "‘" "’"; }
+
+blockquote p { line-height: 1; color: rgba(255, 255, 255, 0.8); margin-top: 1%; margin-bottom: 1%; }
+
+blockquote:before { color: #ccc; content: open-quote; font-size: 3em; font-family: Georgia; float: left; margin: -30px 10px 0px -10px; }
+
+/* .last_line_author 클래스일 경우  text-align: right  가져온 소스 : https://gist.github.com/jameslairdsmith/e22c6dd89ae80128d671d127d827954e */
+blockquote.last_line_author > p:last-child { font-style: italic; text-align: right; margin-top: 1rem; margin-right: 10%; }
+
+code, pre { font-family: "D2Coding", Consolas, "Courier New", Courier; font-size: 0.85rem; }
+
+code { color: #fff; background-color: rgba(255, 255, 255, 0.1); padding: 0.25rem 0.5rem; border-radius: 0.4rem; }
+
+pre { overflow-x: auto; padding: 10px 10px; }
+
+/* pre, pre code { color: #fafafa; background-color: #223; // font-weight: 600; } */
+pre code { padding: 0; }
+
+.hide { display: none; }
+
+.center { text-align: center; }
+
+.language-html table { background: transparent; margin: 0; }
+
+.language-html td { padding: 0; border: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: rgba(255, 255, 255, 0.8); text-shadow: 4px 4px 4px #aaa; }
+
+.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { color: #ff9500; }
+
+h1 { font-size: 2.2rem; }
+
+.post-content h1 { border-bottom: 1px solid #ff9500; }
+
+h2 { font-size: 1.8em; border-bottom: 1px solid #d0d0d0; }
+
+.post-content h2:before { content: "⠁"; }
+
+h3 { font-size: 1.6em; font-style: italic; }
+
+.post-content h3:before { content: "⠃"; }
+
+h4 { font-size: 1.4em; padding-left: 5px; font-style: italic; }
+
+.post-content h4:before { content: "⠋"; }
+
+h5 { font-size: 1.2em; padding-left: 10px; font-style: italic; }
+
+.post-content h5:before { content: "⠛"; }
+
+h6 { font-size: 1.0em; padding-left: 15px; font-weight: bold; font-style: italic; }
+
+.post-content h6:before { content: "⠟"; }
+
+kbd { background-color: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset; color: #333; display: inline-block; font-size: 1.1em; font-weight: 700; line-height: 1; padding: 2px 4px; white-space: nowrap; }
+
+.PageNavigation { font-size: 14px; display: block; width: auto; oveflow: hidden; }
+
+.PageNavigation a { display: block; float: left; margin: 1em 0; }
+
+.PageNavigation .next { float: right; }
+
+figure { float: right; width: 30%; text-align: center; font-style: italic; font-size: smaller; text-indent: 0; border: thin silver solid; margin: 0.5em; padding: 0.5em; }
+
+.wrapper { margin: 0 auto; }
+
+@media (min-width: 800px) { body { width: 800px; margin: auto; border: 1px solid #d0d0d0; } }
+
+div.gsc-control-cse { padding: 0; }
+
+.search form.gsc-search-box { margin: 0; }
+
+table.gsc-search-box { margin: 0px; }
+
+.header { background-color: #202020; }
+
+.header:after { clear: both; content: ' '; display: block; }
+
+.header .site-title { float: left; text-decoration: none; color: rgba(255, 255, 255, 0.8); line-height: 1.5; padding-left: 10px; }
+
+.header .site-title-right { float: right; text-decoration: none; color: rgba(255, 255, 255, 0.8); line-height: 1.5; padding-right: 10px; }
+
+.page-content { background: #121212; }
+
+.page-content img { max-width: 100%; }
+
+.post { overflow-x: auto; padding: 5px; }
+
+.post table { border-collapse: collapse; border-spacing: 0; border-color: #414141; }
+
+.post table td, .post table th { border: 1px solid #9e948a; padding: 5px 5px; }
+
+.post table th { font-weight: normal; color: #FFFFFF; background: #47146C; }
+
+.post table tr:hover { background: #BEE7F6; }
+
+.toc { background: #EEE; }
+
+.post-tag a { color: rgba(217, 217, 217, 0.7); text-decoration: none; }
+
+@media (max-width: 1120px) { .page-content .wrapper:before { display: none; } }
+
+.footer { text-align: center; }
+
+ul.tag-list { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
+
+ul.tag-list li { float: left; }
+
+ul.tag-list li a { padding-right: 5px; text-decoration: none; }
+
+.post-link { text-decoration: none; }
+
+.no-text-deco a { text-decoration: none; }
+
+.section-nav { background-color: #FFF; margin: 5px 0; padding: 10px 30px; border: 1px solid #E8E8E8; border-radius: 3px; }
+
+.history-button { text-align: right; font-size: 0.8em; }
+
+.title-summary { font-size: 1.6em; font-style: italic; color: gray; }
+
+.visible { display: block; }
+
+.invisible { display: none; }
+
+.pagination { text-align: center; }
+
+.pagination a { font-size: 1em; margin: 2px; padding: 2px; text-decoration: none; border-radius: 10px; border: 0px solid #ff006a; background-color: #ff006a; color: rgba(255, 255, 255, 0.8); }
+
+.pagination a.active { border: 0px solid transparent; background-color: transparent; color: rgba(255, 255, 255, 0.7); }
+
+.pagination li { display: inline-block; }
+
+.tag-list li { display: inline-block; }
+
+div.search { background-color: #f6f5ea; width: 100%; position: relative; height: 1.3em; border-bottom: 1px solid #47146C; }
+
+.searchInput { background-color: transparent; width: 100%; height: 100%; top: 0; position: relative; padding: 0px; padding-left: 5px; border: 0px; margin: 0px; font-size: 13px; direction: ltr; -webkit-appearance: textfield; border-radius: 0px; }
+
+.searchButton { border: 0px; border-radius: 0px; background-color: transparent; position: absolute; top: 0; right: 0; height: 100%; z-index: 2; }
+
+.post-header h2 { border: 0px; }
+
+.post-header p { margin: 0; }
+
+.post-excerpt { color: #808094; }
+
+/* 2022-09-25, modify this file by referencing https://frankindev.com/2017/03/18/syntax-highlight-with-rouge-in-jekyll/#alternative-themes */
+figure.highlight, pre.highlight { padding: .7rem .5rem; margin: .7rem 0; overflow: auto; line-height: 1rem; position: relative; font-size: .8rem; }
+
+figure.highlight::before, pre.highlight::before { content: attr(); }
+
+.highlighter-rouge { font-weight: 300; position: relative; }
+
+.rouge-table .code pre { overflow: hidden; }
+
+table.rouge-table, table.rouge-table tr, table.rouge-table td, table.rouge-table pre { border: 0; padding: 0; margin: 0; }
+
+/* for liquid tag highlight : table.rouge-table td.gutter	 for fenced_code_blocks (```) : table.rouge-table td.rouge-gutter	 */
+table.rouge-table td.rouge-gutter, table.rouge-table td.gutter { padding-right: .5rem; border-right: 1px solid #adb5bd; }
+
+table.rouge-table td.rouge-code { padding-left: .5rem; }
+
+figure pre { margin-bottom: 0; }
+
+.lineno { text-align: right; }
+
+code { font-family: "D2Coding", Consolas, "Courier New", Courier; }
+
+code a { color: inherit; text-decoration: none; }
+
+.language-ascii-art { display: inline-block; letter-spacing: -0.1em; line-height: 1.0em; }
+
+/* 개인위키의 대문 페이지인 index 페이지 전용 CSS */
+.blog-face { text-align: center; }
+
+.indent { margin-left: 30px; }
+
+.contact { margin-top: 10px; text-align: center; }
+
+.contact a { background: #47146C; color: #FFFFFF; padding: 5px 10px; text-decoration: none; border-radius: 8px; white-space: nowrap; }
+
+.contact a:hover { transition: background 0.3s ease; background: #666; }
+
+.post-list .post-meta.ul a { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+
+.post-list .post-meta.ul a, .post-list .post-meta.ul a:link { text-decoration: none; }
+
+.post .post-list .post-meta.ul a:visited, .post-list .post-list .post-meta.ul a:visited { text-decoration: none; }
+
+.post .post-list .post-meta.ul a:hover { text-decoration: underline; }
+
+.post .post-list .post-meta.ul a.active, .post .post-list .post-meta.ul a:active { text-decoration: none; }
+
+.post-list .post-meta.ul a, .post-list .post-meta.ul a:link { color: #ff9500; }
+
+.post .post-list .post-meta.ul a:visited, .post-list .post-list .post-meta.ul a:visited { color: #b8a800; }
+
+.post .post-list .post-meta.ul a:hover { color: #b86b00; }
+
+.post .post-list .post-meta.ul a.active, .post .post-list .post-meta.ul a:active { color: #6b3f00; }
+
+.post-list .post-meta.ul a.disabled, .post-list .post-meta.ul a:disabled { color: rgba(255, 149, 0, 0.2) !important; }
+
+/* index의 blog 목차에 "dot leader" 형식 적용 */
+/* 참조 링크: https://www.w3.org/Style/Examples/007/leaders.en.html */
+ul.leaders { overflow-x: hidden; }
+
+ul.leaders span:after { float: left; width: 0; white-space: pre; content: "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · "; }
+
+ul.leaders span:first-child { padding-right: 0.33em; background: #121212; }
+
+ul.leaders span + div { float: right; padding-left: 0.33em; background: #121212; position: relative; z-index: 1; }
+
+@media (min-width: 1700px) { ul#markdown-toc { position: fixed; top: 0; bottom: 0; left: calc(50vw + 410px); width: 380px; background-color: #202020; z-index: 9999; font-size: 0.8em; overflow-y: scroll; overflow-x: hidden; border: 0px solid; line-height: 1.5; } }
+
+#markdown-toc { border: 1px solid; padding: 10px; padding-left: 30px; background-color: #202020; line-height: 1.5; }
+
+/*# sourceMappingURL=main.css.map */

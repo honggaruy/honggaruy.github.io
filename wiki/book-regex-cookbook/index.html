@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>한 권으로 끝내는 정규표현식 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="여덟 가지 프로그래밍 언어별 완벽 해설">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/book-regex-cookbook/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="한 권으로 끝내는 정규표현식">
+    <meta property="og:description" content="여덟 가지 프로그래밍 언어별 완벽 해설">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/book-regex-cookbook/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/book-regex-cookbook/">
+    <meta name="twitter:title" content="한 권으로 끝내는 정규표현식">
+    <meta name="twitter:description" content="여덟 가지 프로그래밍 언어별 완벽 해설">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book-regex-cookbook">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">한 권으로 끝내는 정규표현식</h1>
+    
+        <p class="title-summary">여덟 가지 프로그래밍 언어별 완벽 해설</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-regex-cookbook.md" target="_blank">created: 2021.03.25</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-regex-cookbook.md" target="_blank">updated: 2021.07.11</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/book-regex-cookbook.md">편집하기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    br*** book regex
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a>    <ul>
+      <li><a href="#%EC%B6%94%EA%B0%80-%EA%B0%9C%EC%9A%94" id="markdown-toc-추가-개요">추가 개요</a></li>
+      <li>
+<a href="#%EC%A0%80%EC%9E%90-%EC%84%A4%EB%AA%85" id="markdown-toc-저자-설명">저자 설명</a>        <ul>
+          <li><a href="#%EC%96%80-%EA%B3%A0%EC%9D%B4%EB%B0%94%EB%A5%B4%EC%B8%A0-jan-goyvaerts" id="markdown-toc-얀-고이바르츠-jan-goyvaerts">얀 고이바르츠 (Jan Goyvaerts)</a></li>
+          <li><a href="#%EC%8A%A4%ED%8B%B0%EB%B8%90-%EB%A0%88%EB%B9%84%ED%84%B4-steven-levithan" id="markdown-toc-스티븐-레비턴-steven-levithan">스티븐 레비턴 (Steven Levithan)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#chapter1-introduction-to-regular-expressions" id="markdown-toc-chapter1-introduction-to-regular-expressions">Chapter1. Introduction to Regular Expressions</a>    <ul>
+      <li>
+<a href="#1-regular-expressions-defined" id="markdown-toc-1-regular-expressions-defined">1. Regular Expressions Defined</a>        <ul>
+          <li><a href="#many-flavors-of-regualr-expressions" id="markdown-toc-many-flavors-of-regualr-expressions">Many Flavors of Regualr Expressions</a></li>
+          <li>
+<a href="#regex-flavors-covered-by-this-book" id="markdown-toc-regex-flavors-covered-by-this-book">Regex Flavors Covered by This Book</a>            <ul>
+              <li><a href="#perl" id="markdown-toc-perl">Perl</a></li>
+              <li><a href="#net" id="markdown-toc-net">.NET</a></li>
+              <li><a href="#java" id="markdown-toc-java">Java</a></li>
+              <li><a href="#javascript" id="markdown-toc-javascript">Javascript</a></li>
+              <li><a href="#python" id="markdown-toc-python">Python</a></li>
+              <li><a href="#ruby" id="markdown-toc-ruby">Ruby</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<a href="#2-search-and-replace-with-regular-expressions" id="markdown-toc-2-search-and-replace-with-regular-expressions">2. Search and Replace with Regular Expressions</a>        <ul>
+          <li><a href="#many-flavors-of-replacement-text" id="markdown-toc-many-flavors-of-replacement-text">Many Flavors of Replacement Text</a></li>
+        </ul>
+      </li>
+      <li><a href="#3-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%9E%91%EC%84%B1-%ED%88%B4" id="markdown-toc-3-정규표현식-작성-툴">3. 정규표현식 작성 툴</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#2%EC%9E%A5-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EA%B8%B0%EB%B3%B8-%EA%B8%B0%EC%88%A0" id="markdown-toc-2장-정규표현식-기본-기술">2장. 정규표현식 기본 기술</a>    <ul>
+      <li><a href="#1-%EB%A6%AC%ED%84%B0%EB%9F%B4-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%9D%BC%EC%B9%98" id="markdown-toc-1-리터럴-텍스트에-일치">1. 리터럴 텍스트에 일치</a></li>
+      <li>
+<a href="#3-%EC%97%AC%EB%9F%AC-%EB%AC%B8%EC%9E%90-%EC%A4%91-%ED%95%98%EB%82%98%EC%99%80-%EC%9D%BC%EC%B9%98" id="markdown-toc-3-여러-문자-중-하나와-일치">3. 여러 문자 중 하나와 일치</a>        <ul>
+          <li><a href="#%EC%9D%91%EC%9A%A9---%EC%95%BD%EA%B8%B0-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4" id="markdown-toc-응용---약기-문자-클래스">응용 - 약기 문자 클래스</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#3%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D" id="markdown-toc-3장-프로그래밍을-위한-정규-표현식">3장. 프로그래밍을 위한 정규 표현식</a></li>
+  <li>
+<a href="#4%EC%9E%A5-%EC%9C%A0%ED%9A%A8%EA%B2%80%EC%82%AC%EC%99%80-%ED%98%95%EC%8B%9D%ED%99%94" id="markdown-toc-4장-유효검사와-형식화">4장. 유효검사와 형식화</a>    <ul>
+      <li><a href="#13-%ED%95%9C%EA%B5%AD-%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EB%B2%88%ED%98%B8" id="markdown-toc-13-한국-주민등록번호">13. 한국 주민등록번호</a></li>
+    </ul>
+  </li>
+  <li><a href="#5%EC%9E%A5-%EB%8B%A8%EC%96%B4-%ED%96%89-%ED%8A%B9%EC%88%98%EB%AC%B8%EC%9E%90" id="markdown-toc-5장-단어-행-특수문자">5장. 단어, 행, 특수문자</a></li>
+  <li><a href="#6%EC%9E%A5-%EC%88%AB%EC%9E%90" id="markdown-toc-6장-숫자">6장. 숫자</a></li>
+  <li><a href="#7%EC%9E%A5-url-%EA%B2%BD%EB%A1%9C-%EC%9D%B8%ED%84%B0%EB%84%B7%EC%A3%BC%EC%86%8C" id="markdown-toc-7장-url-경로-인터넷주소">7장. URL, 경로, 인터넷주소</a></li>
+  <li><a href="#8%EC%9E%A5-%EB%A7%88%ED%81%AC%EC%97%85%EA%B3%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%83%81%ED%98%B8%EB%B3%80%ED%99%98" id="markdown-toc-8장-마크업과-데이터-상호변환">8장. 마크업과 데이터 상호변환</a></li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://www.hanbit.co.kr/data/books/B1048739715_l.jpg" alt="표지"></td>
+      <td>저자: 잰 고이바에르츠(Jan Goyvaerts), 스티븐 리바이선(Steven Levithan) <br> 책제목 : 한 권으로 끝내는 정규표현식<br> (원서 제목 : Regular Expressions Cookbook) <br> 부제 : 여덟 가지 프로그래밍 언어별 완벽 해설<br> (원서 부제: Detailed Solutions in Eight Programming Languages)<br><br> 출판사 : 한빛출판네트워크 (원책: O’Reilly Media, Inc.) <br> ISBN 한글 : 9788979147742 <br> ISBN 영문 : 9781449319434 <br> <br> 값: 36,000원</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="추가-개요">추가 개요</h2>
+
+<ul>
+  <li>이 책은 1판 번역서이다. ( 출간일: 2010-09-17 , <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B1048739715">한빛출판사 링크</a>)</li>
+  <li>영문판은 2판 까지 나왔다. ( 출간일: 2012년, <a href="https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/">O’Reilly 링크</a>)</li>
+  <li>번역서 2판은 2021-03-25 현재 아직 없는듯.</li>
+  <li><a href="https://blog.outsider.ne.kr/546">Outsider’s Dev Stroy의 해당 북 리뷰</a></li>
+  <li><a href="https://chszard.tistory.com/entry/%EB%A6%AC%EB%B7%B0-%ED%95%9C-%EA%B6%8C%EC%9C%BC%EB%A1%9C-%EB%81%9D%EB%82%B4%EB%8A%94-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D">하이바네.P의 해당 북 리뷰</a></li>
+</ul>
+
+<h2 id="저자-설명">저자 설명</h2>
+
+<h3 id="얀-고이바르츠-jan-goyvaerts">얀 고이바르츠 (Jan Goyvaerts)</h3>
+
+<style>
+.author-container {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<div class="author-container">
+
+  <ul>
+    <li>Jan Goyvaerts가 직접 알려주는 자신의 이름을 발음하는 방법
+      <ul>
+        <li>출처: <a href="https://www.just-great-software.com/aboutjg.html">Jan Goyvarets 소개 페이지</a>
+</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><audio id="media-JanGoyvaerts.wav" class="media" src="https://www.just-great-software.com/special/JanGoyvaerts.wav" style="max-width: 600px;outline: none" controls> Your browser doesn't support HTML5 audio. Here is a <a href="https://www.just-great-software.com/special/JanGoyvaerts.wav">link to download the audio</a> instead.</audio></p>
+
+</div>
+
+<div class="author-container">
+
+  <p><img width="140px" src="https://www.just-great-software.com/img/JFG_18021608_10860-150.JPG" alt="Jan Goyvaerts"></p>
+
+  <ul>
+    <li>
+<a href="https://www.just-great-software.com/index.html">Just Great Software 설립자</a>
+      <ul>
+        <li>PowerGrep, RegexBuddy 툴이 유명한 걸로 알고 있음. (모두 유료)</li>
+      </ul>
+    </li>
+    <li>
+<a href="https://www.regular-expressions.info/">regular-expressions.info 운영</a>
+      <ul>
+        <li>내가 알기로 인터넷상에서 가장 상세한 Reguarl Expression 가이드임</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+<h3 id="스티븐-레비턴-steven-levithan">스티븐 레비턴 (Steven Levithan)</h3>
+
+<div class="author-container">
+
+  <p><img width="180px" src="https://blog.stevenlevithan.com/assets/images/steven_levithan2.jpg" alt="Steven Levithan"></p>
+
+  <ul>
+    <li>Javscript 정규식 전문가라고 함
+      <ul>
+        <li><a href="https://blog.stevenlevithan.com/about">본인 블로그의 소개글</a></li>
+        <li>이 책외에 <code class="language-html highlighter-rouge">Nicholas C. Zaks</code>의 <code class="language-html highlighter-rouge">High Performance JavaScript</code>에서…
+          <ul>
+            <li>
+<code class="language-html highlighter-rouge">Strings and Regular Expressions</code> Chapter를 집필</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>대표 오픈소스 프로젝트
+      <ul>
+        <li>
+<a href="https://xregexp.com/">XRegExp</a>
+          <ul>
+            <li>The one of a kind JavaScript regular expression library</li>
+            <li><a href="https://m.blog.naver.com/PostView.nhn?blogId=helpindia&logNo=220737011425&proxyReferer=https:%2F%2Fwww.google.com%2F"><code class="language-html highlighter-rouge"> One of a Kind </code> 의미</a></li>
+          </ul>
+        </li>
+        <li>
+<a href="https://stevenlevithan.com/regexpal/">RegexPal</a>
+          <ul>
+            <li>a JavaScript regular expression tester</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="https://github.com/slevithan">Steven Levithan Github</a></li>
+    <li><a href="https://blog.stevenlevithan.com/">Steven Levithan Regex Blog</a></li>
+    <li><a href="https://slev.life/">Steven Levithan No Programming Blog</a></li>
+  </ul>
+
+</div>
+
+<h1 id="chapter1-introduction-to-regular-expressions">Chapter1. Introduction to Regular Expressions</h1>
+
+<ul>
+  <li>실무에 바로 적용할 수 있는 내용은 4장 ~ 8장(마지막장) 참고</li>
+  <li>일단 정규식을 코드에 넣어버리면 에러가 발생해도 찾기 힘듬
+    <ul>
+      <li>1장에서 소개하는 툴로 테스트하고 디버깅하는 것이 좋음</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-regular-expressions-defined">1. Regular Expressions Defined</h2>
+
+<ul>
+  <li>History of the Term “Regular Expression”
+    <ul>
+      <li>정통 컴퓨터 과학자들이 정해놓은 정의와 실용적 프로그래머들이 실용적으로 사용하는 용어에는 차이가 있음을 알아둘것</li>
+      <li>어려운 전문용어들이 많이나옴 ( DFA, NFA…)</li>
+      <li>BackTracking의 사용여부가 정의에 차이를 가져올만큼 중요한 듯함.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="many-flavors-of-regualr-expressions">Many Flavors of Regualr Expressions</h3>
+
+<ul>
+  <li>정규표현식을 정의하기는 어려움
+    <ul>
+      <li>어떤 텍스트가 정규식인지 아닌지 판단하는 공식적인 기준이 없음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="regex-flavors-covered-by-this-book">Regex Flavors Covered by This Book</h3>
+
+<h4 id="perl">Perl</h4>
+
+<h4 id="net">.NET</h4>
+
+<h4 id="java">Java</h4>
+
+<h4 id="javascript">Javascript</h4>
+
+<h4 id="python">Python</h4>
+
+<h4 id="ruby">Ruby</h4>
+
+<h2 id="2-search-and-replace-with-regular-expressions">2. Search and Replace with Regular Expressions</h2>
+
+<ul>
+  <li>용어
+    <ul>
+      <li>치환 텍스트 ( Replacement Text ) : 정규식은 아니지만 일부 정규식 문법을 사용하여 동적인 치환을 가능케 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="many-flavors-of-replacement-text">Many Flavors of Replacement Text</h3>
+
+<ul>
+  <li>각자 개발하다보니 문법과 기능이 다른 여러가지 정규식 스타일이 파생됨</li>
+</ul>
+
+<h2 id="3-정규표현식-작성-툴">3. 정규표현식 작성 툴</h2>
+
+<h1 id="2장-정규표현식-기본-기술">2장. 정규표현식 기본 기술</h1>
+
+<h2 id="1-리터럴-텍스트에-일치">1. 리터럴 텍스트에 일치</h2>
+
+<ul>
+  <li>
+<a href="https://regex101.com/r/kgY65G/1">Match Literal Text 예제 실행</a>
+    <ul>
+      <li>메타 문자는 기본적으로 <strong>back slash( ∖ )</strong> 로 escape 한다.</li>
+      <li>위의 예제에서 책의 해결책과 다른점은 <strong>slash( ⁄ )</strong>문자도 escape 했다는 것
+        <ul>
+          <li>
+<strong>slash( ⁄ )</strong>는 regex 문자열을 구분하는 delimiter 인듯한데..메타문자에는 포함되지 않아 확실치 않음.</li>
+        </ul>
+      </li>
+      <li>Flavor별 차이
+        <ul>
+          <li>Flavor를 Python으로 변경하면 <strong>double quote ( ‟ )</strong> 문자를 인식못함. escape 필요</li>
+          <li>Flavor를 Golang으로 변경하면 백틱문자를 인식못함.
+            <ul>
+              <li>
+<strong>back slash</strong> 로 escape도 불가함 , 백틱문자대신 <code class="language-html highlighter-rouge">\x60</code> 으로 대체해야함</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>12개의 특수문자(메타문자)를 포함하는 문장을 어떻게 매치시킬수 있는지 알아봄</li>
+  <li>문자의 특수기능을 escape 해야함</li>
+  <li>짝이 필요한 특수문자 ( <code class="language-html highlighter-rouge">]</code>, <code class="language-html highlighter-rouge">-</code>, <code class="language-html highlighter-rouge">}</code> )는 앞선 짝문자가 있어야 특수문자로 인식됨</li>
+  <li>블록 이스케이프는 Java 6, PCRE, Perl에서 사용할수 있지만,…
+    <ul>
+      <li>Java 4, 5에서는 버그가 있어 사용하면 안되는 등 사용법이 까다로움</li>
+      <li><a href="https://regex101.com/r/11QqqF/1">블록 이스케이프 예제</a></li>
+    </ul>
+  </li>
+  <li>대소문자 구분 없이 일치
+    <ul>
+      <li><a href="https://regex101.com/r/ZebkBI/1">예제 실행</a></li>
+      <li>모드 변경자 <code class="language-html highlighter-rouge"><span class="nt">&lt;</span><span class="err">(?</span><span class="na">i</span><span class="err">)</span><span class="nt">&gt;</span></code>를 사용함?</li>
+      <li>자체 모드 변경자 예제</li>
+      <li>sensitive(?i)caseless(?-i)sensitive</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-여러-문자-중-하나와-일치">3. 여러 문자 중 하나와 일치</h2>
+
+<ul>
+  <li><a href="https://regex101.com/r/UvkSK7/1">Match One of Many Characters , calendar 예제</a></li>
+  <li>용어
+    <ul>
+      <li>문자 클래스, character class : <a href="https://www.regular-expressions.info/refcharclass.html">Character Classes, regular-Expressions.info</a>
+</li>
+    </ul>
+  </li>
+  <li>기본적으로 12개의 메타 문자가 있지만, 문자 클래스 내부에서는 4개 문자만 인정됨
+    <ul>
+      <li>Flavor에 따라, Java, .NET 스타일은 <code class="language-html highlighter-rouge">[</code>도 메타문자로 인식됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="응용---약기-문자-클래스">응용 - 약기 문자 클래스</h3>
+
+<ul>
+  <li>약기 문자 클래스 (shorthands)</li>
+  <li><a href="https://regex101.com/r/4kBV3U/1/">16진수 문자(hexadecimal character)를 표현하는 regex</a></li>
+  <li>다음 Flavor에서 <code class="language-html highlighter-rouge"><span class="nt">&lt;</span><span class="err">\</span><span class="na">w</span><span class="nt">&gt;</span></code> 는  <code class="language-html highlighter-rouge"><span class="nt">&lt;</span><span class="err">[</span><span class="na">a-zA-Z0-9_</span><span class="err">]</span><span class="nt">&gt;</span></code>와 언제나 결과가 같다.
+    <ul>
+      <li>Java, JavaScript, PCRE, Ruby</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3장-프로그래밍을-위한-정규-표현식">3장. 프로그래밍을 위한 정규 표현식</h1>
+<h1 id="4장-유효검사와-형식화">4장. 유효검사와 형식화</h1>
+
+<h2 id="13-한국-주민등록번호">13. 한국 주민등록번호</h2>
+
+<ul>
+  <li>원서에는 없는데 역자가 집어넣은듯..</li>
+</ul>
+
+<h1 id="5장-단어-행-특수문자">5장. 단어, 행, 특수문자</h1>
+<h1 id="6장-숫자">6장. 숫자</h1>
+<h1 id="7장-url-경로-인터넷주소">7장. URL, 경로, 인터넷주소</h1>
+<h1 id="8장-마크업과-데이터-상호변환">8장. 마크업과 데이터 상호변환</h1>
+
+    </article>
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

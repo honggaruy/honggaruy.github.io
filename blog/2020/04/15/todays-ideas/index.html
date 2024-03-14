@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>오늘의 영감 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="sample summary">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/04/15/todays-ideas/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="오늘의 영감">
+    <meta property="og:description" content="sample summary">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/04/15/todays-ideas/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/04/15/todays-ideas/">
+    <meta name="twitter:title" content="오늘의 영감">
+    <meta name="twitter:description" content="sample summary">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/04/10/test-post/">« 테스트 포스팅</a>
+          
+          
+            <a class="next" href="/blog/2020/04/18/todays-ideas/">오늘의 영감 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">오늘의 영감</h1>
+        <p class="created-date">
+            2020.04.15
+        </p>
+
+
+        <div class="post-tag">
+    todaysideas
+</div>
+
+        <h2>sample summary</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#google-sheet%EB%A1%9C-scraping" id="markdown-toc-google-sheet로-scraping">Google Sheet로 Scraping</a></li>
+</ul>
+
+<h1 id="google-sheet로-scraping">Google Sheet로 Scraping</h1>
+
+<ul>
+  <li>
+<a href="https://www.octoparse.com/blog/simple-web-scraping-using-google-sheets">Simple Web Scraping using Google Sheets (2020 updated)</a>
+    <ul>
+      <li>구글 sheet으로 웹스크레이핑을 하면 좋겠다는 생각이 들어서 찾아보다 걸렸다
+        <ul>
+          <li>작성자는 Octoparse라는 서비스인데.. 코딩없이 web scraping 해준다는 사이트 ( 유료 )</li>
+          <li>보다보니 단순히 google sheet 함수인 <a href="https://support.google.com/docs/answer/3093342?hl=ko&ref_topic=9199554">IMPRTXML</a>의 사용예제임</li>
+          <li>
+<a href="https://support.google.com/docs/answer/3093339?hl=ko&ref_topic=9199554">IMPORTHTML</a>도 비슷한 기능을 수행할 듯..</li>
+          <li>오픈된 웹에서 가져올때는 쓸만한데 로그인등이 필요할땐 좀더 추가 기능이 필요</li>
+        </ul>
+      </li>
+      <li>유사한 포스팅들
+        <ul>
+          <li><a href="https://www.benlcollins.com/spreadsheets/google-sheet-web-scraper/">Using Google Sheets as a basic web scraper</a></li>
+          <li><a href="https://hackernoon.com/web-scraping-with-google-sheets-20d0dce323cc">Web Scraping With Google Sheets</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

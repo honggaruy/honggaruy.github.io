@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>리눅스 기초 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="리눅스 사용할 때 필요한 기본지식">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/linux-basic/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="리눅스 기초">
+    <meta property="og:description" content="리눅스 사용할 때 필요한 기본지식">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/linux-basic/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/linux-basic/">
+    <meta name="twitter:title" content="리눅스 기초">
+    <meta name="twitter:description" content="리눅스 사용할 때 필요한 기본지식">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="linux-basic">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">리눅스 기초</h1>
+    
+        <p class="title-summary">리눅스 사용할 때 필요한 기본지식</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/linux-basic.md" target="_blank">created: 2022.02.18</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/linux-basic.md" target="_blank">updated: 2022.02.18</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/linux-basic.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EB%A6%AC%EB%88%85%EC%8A%A4+%EA%B8%B0%EC%B4%88&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    linux
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#tip-1-%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EB%8B%A4%EB%A3%A8%EA%B8%B0" id="markdown-toc-tip-1-리눅스-환경변수-다루기">Tip 1. 리눅스 환경변수 다루기</a>    <ul>
+      <li><a href="#enviroment-variables-and-shell-variables" id="markdown-toc-enviroment-variables-and-shell-variables">Enviroment Variables and Shell Variables</a></li>
+      <li><a href="#list-environment-variables" id="markdown-toc-list-environment-variables">List Environment Variables</a></li>
+      <li><a href="#setting-environment-variables" id="markdown-toc-setting-environment-variables">Setting Environment Variables</a></li>
+      <li><a href="#persistent-environment-variables" id="markdown-toc-persistent-environment-variables">Persistent Environment Variables</a></li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+.envvar { color:#d50000; background:#fce8e6; }
+.command { color:#01579b; background:#e1f5fe; }
+</style>
+
+<h1 id="tip-1-리눅스-환경변수-다루기">Tip 1. 리눅스 환경변수 다루기</h1>
+
+<ul>
+  <li>발췌 원본 : <a href="https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/">How to Set and List Environment Variables in Linux, linuxize.com</a>
+</li>
+</ul>
+
+<h2 id="enviroment-variables-and-shell-variables">Enviroment Variables and Shell Variables</h2>
+
+<ul>
+  <li>Variables는 다음과 같은 형식을 갖는다
+    <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">KEY</span><span class="o">=</span>value
+<span class="nv">KEY</span><span class="o">=</span><span class="s2">"Some other value"</span>
+<span class="nv">KEY</span><span class="o">=</span>value1:value2
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>variables의 이름은 대소문자를 구분한다.
+        <ul>
+          <li>관습적으로, 환경변수는 대문자 이름을 갖는다</li>
+        </ul>
+      </li>
+      <li>다중 값을 할당할때 colon(<code class="language-html highlighter-rouge">:</code>)으로 구분한다</li>
+      <li>equal symbol (<code class="language-html highlighter-rouge">=</code>) 주변에는 공백을 제거한다</li>
+    </ul>
+  </li>
+  <li>Variables 는 두 개의 메인 카테고리로 구분된다
+    <ul>
+      <li>
+<strong>Environment variables</strong>
+        <ul>
+          <li>system-wide하게 적용되는 variable</li>
+          <li>모든 파생된(spawned) child process와 shell에 상속(inherited)된다</li>
+        </ul>
+      </li>
+      <li>
+<strong>Shell variables</strong>
+        <ul>
+          <li>현재 shell instance에만 적용된다</li>
+          <li>
+<code class="language-html highlighter-rouge">zsh</code>나 <code class="language-html highlighter-rouge">bash</code> 같은 shell은 자신만의 내부 shell variables set을 갖는다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Linux에서 환경변수를 다루는 몇가지 commands가 있다
+    <ul>
+      <li>
+<code class="language-html command highlighter-rouge">env</code>
+        <ul>
+          <li>현재 환경을 바꾸지 않고 custom environment에서 다른 프로그램을 실행할수 있도록 해준다</li>
+          <li>argument 없이 실행하면 현재 환경 변수 목록을 print한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html command highlighter-rouge">printenv</code> - 모든 지정된 환경변수를 프린트한다</li>
+      <li>
+<code class="language-html command highlighter-rouge">set</code>
+        <ul>
+          <li>shell 변수를 set하거나 unset한다</li>
+          <li>argument 없이 사용된다면
+            <ul>
+              <li>모든 변수의 목록을 print 한다</li>
+              <li>모든 변수에는 environment 변수, shell 변수, shell functions까지 포함된다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html command highlighter-rouge">unset</code> - shell 변수와 Environment 변수를 제거한다</li>
+      <li>
+<code class="language-html command highlighter-rouge">export</code> - 환경변수를 설정한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="list-environment-variables">List Environment Variables</h2>
+
+<ul>
+  <li>환경 변수를 보는데 가장 많이 쓰이는 명령은 <code class="language-html command highlighter-rouge">printenv</code> 이다
+    <ul>
+      <li>변수이름을 argument로 넘기면 그 변수만 볼수있다</li>
+      <li>argument가 지정되지 않으면 모든 변수가 한 줄에 한 개씩 print된다</li>
+      <li>사용례
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">printenv </span>HOME
+/home/linuxise
+<span class="nv">$ </span><span class="nb">printenv </span>LANG HOME
+en_US
+/home/linuxise
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>가장 흔한 환경 변수들 목록
+    <ul>
+      <li>
+<code class="language-html envvar highlighter-rouge">USER</code> - 현재 로그인한 사용자</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">HOME</code> - 현재 사용자의 home directory</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">EDITOR</code> - 기본 편집기. terminal에서 <code class="language-html command highlighter-rouge">edit</code>을 치면 실행될 편집기이다</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">SHELL</code> - 현재 사용자의 shell 경로. 보통 bash나 zsh</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">LOGNAME</code> - 현재 사용자의 이름</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">PATH</code> - 실행 명령이 탐색될 directory들의 목록
+        <ul>
+          <li>명령을 치면 이 목록에 저장된 순서 명령을 탐색하여 가장먼저 찾은 실행파일을 실행한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html envvar highlighter-rouge">LANG</code> - 현재 locales 설정</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">TERM</code> - 현재 terminal emulation</li>
+      <li>
+<code class="language-html envvar highlighter-rouge">MAIL</code> - 현재 사용자의 메일이 저장되는 장소</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html command highlighter-rouge">printenv</code>와 <code class="language-html command highlighter-rouge">env</code> 명령은 환경변수만 print 한다</li>
+  <li>Environment,shell 변수를 포함한 모든 변수와, <a href="https://linuxize.com/post/bash-functions/">shell functions</a> 목록까지 보고싶다면
+    <ul>
+      <li>
+<code class="language-html command highlighter-rouge">set</code> 명령이 있다</li>
+      <li>이 명령은 매우 많은 량의 목록을 보여주기 때문에 요약판을 보고 싶을 경우 출력을 <a href="https://linuxize.com/post/less-command-in-linux/"><code class="language-html command highlighter-rouge">less</code></a> 명령으로 pipe한다
+        <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">set</span> | less
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://linuxize.com/post/echo-command-in-linux-with-examples/"><code class="language-html command highlighter-rouge">echo</code> 명령</a>도 shell 변수값을 print하는데 사용한다
+    <div class="language-shell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$BASH_VERSION</span>
+5.0.17<span class="o">(</span>1<span class="o">)</span><span class="nt">-release</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="setting-environment-variables">Setting Environment Variables</h2>
+
+<ul>
+  <li>
+</li>
+</ul>
+
+<h2 id="persistent-environment-variables">Persistent Environment Variables</h2>
+
+<ul>
+  <li>Environment 변수를 계속 유지하기 위해서는 bash configuration 파일에 정의해야 한다</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<ul>
+  <li>enviroment 변수와 shell 변수를 설정하고 list 하는 방법을 설명했다</li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

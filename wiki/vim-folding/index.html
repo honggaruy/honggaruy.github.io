@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vimrc 파일 폴딩하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="vimrc가 점점 커진다면 폴딩을 적용해보자.">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/vim-folding/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="vimrc 파일 폴딩하기">
+    <meta property="og:description" content="vimrc가 점점 커진다면 폴딩을 적용해보자.">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/vim-folding/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/vim-folding/">
+    <meta name="twitter:title" content="vimrc 파일 폴딩하기">
+    <meta name="twitter:description" content="vimrc가 점점 커진다면 폴딩을 적용해보자.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="vim-folding">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">vimrc 파일 폴딩하기</h1>
+    
+        <p class="title-summary">vimrc가 점점 커진다면 폴딩을 적용해보자.</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-folding.md" target="_blank">created: 2020.03.14</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vim-folding.md" target="_blank">updated: 2020.12.19</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/vim-folding.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=vimrc+%ED%8C%8C%EC%9D%BC+%ED%8F%B4%EB%94%A9%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    vim folding vimrc 특수문자 digraphs
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a>    <ul>
+      <li><a href="#%EC%B0%BE%EC%95%84%EB%82%B8-%EB%B0%A9%EB%B2%95%EB%93%A4" id="markdown-toc-찾아낸-방법들">찾아낸 방법들</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#%EC%9C%84%EC%97%90%EC%84%9C-%EC%96%B8%EA%B8%89%ED%95%9C-vimcast-%EA%B4%80%EB%A0%A8-%EC%97%90%ED%94%BC%EC%86%8C%EB%93%9C" id="markdown-toc-위에서-언급한-vimcast-관련-에피소드">위에서 언급한 VIMCAST 관련 에피소드</a>        <ul>
+          <li>
+<a href="#38-writing-a-custom-fold-expression-%EC%84%A4%EB%AA%85-%EC%9A%94%EC%95%BD" id="markdown-toc-38-writing-a-custom-fold-expression-설명-요약">#38 Writing a custom fold expression 설명 요약</a>            <ul>
+              <li><a href="#%ED%8F%B4%EB%94%A9%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EB%8A%94-3%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95%EC%9D%B4-%EC%9E%88%EC%9D%8C" id="markdown-toc-폴딩을-적용하는-3가지-방법이-있음">폴딩을 적용하는 <strong>3가지 방법</strong>이 있음</a></li>
+              <li><a href="#%ED%8F%B4%EB%94%A9%EA%B4%80%EB%A0%A8-vim-%ED%85%8C%ED%81%AC%EB%8B%89" id="markdown-toc-폴딩관련-vim-테크닉">폴딩관련 vim 테크닉</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+<a href="#%EC%9C%84%EC%97%90%EC%84%9C-%EC%96%B8%EA%B8%89%ED%95%9C-vi-exchange-%EB%8B%B5%EB%B3%80-%EC%A0%81%EC%9A%A9-%EC%9D%B4%EC%8A%88" id="markdown-toc-위에서-언급한-vi-exchange-답변-적용-이슈">위에서 언급한 VI exchange 답변 적용 이슈</a>        <ul>
+          <li><a href="#%EC%A0%81%EC%9A%A9%EA%B3%BC%EC%A0%95" id="markdown-toc-적용과정">적용과정</a></li>
+          <li><a href="#customize-%EB%B0%A9%EB%B2%95" id="markdown-toc-customize-방법">customize 방법</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#3-%EA%B2%B0%EB%A7%90" id="markdown-toc-3-결말">3. 결말</a>    <ul>
+      <li><a href="#%EC%A0%81%EC%9A%A9-%EA%B2%B0%EA%B3%BC%EB%AC%BC" id="markdown-toc-적용-결과물">적용 결과물</a></li>
+      <li>
+<a href="#%EC%82%AC%EC%9A%A9%EB%B2%95" id="markdown-toc-사용법">사용법</a>        <ul>
+          <li><a href="#%ED%8E%B8%EC%A7%91%EC%8B%9C" id="markdown-toc-편집시">편집시</a></li>
+          <li><a href="#%ED%8F%B4%EB%93%9C-%EC%97%B4%EA%B3%A0-%EB%8B%AB%EA%B3%A0" id="markdown-toc-폴드-열고-닫고">폴드 열고 닫고</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#%EC%A0%81%EC%9A%A9-%EC%86%8C%EA%B0%90" id="markdown-toc-적용-소감">적용 소감</a>        <ul>
+          <li><a href="#%EB%B0%B0%EC%9A%B4-%EB%82%B4%EC%9A%A9" id="markdown-toc-배운-내용">배운 내용</a></li>
+          <li><a href="#todos" id="markdown-toc-todos">ToDos</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>vim의 설정을 담당하는 vimrc 파일의 크기가 커지면서 정리할 방법을 찾기 시작했다.</li>
+</ul>
+
+<h2 id="찾아낸-방법들">찾아낸 방법들</h2>
+<ul>
+  <li>이종립님의 <a href="https://johngrib.github.io/wiki/vim-configure-split/">별도 파일 방식</a>
+    <ul>
+      <li>좋긴하지만, 특정설정을 수정하기 위해 별도파일을 만들고, 열고 하는 부분이 번거롭다고 생각되었다.</li>
+      <li>그래서 어디선가 봤던 기억이 있는 <strong>폴딩하는 방법</strong> 을 찾기 시작했다.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://vi.stackexchange.com/">StackExchange / Vim 커뮤니티</a>의 질문중, <a href="https://vi.stackexchange.com/q/3814/27406">Is there a best practice to fold a vimrc file ?</a>
+    <ul>
+      <li>여기 답변중 채택된 답변은 아니지만, <a href="https://vi.stackexchange.com/a/6608/27406">마음에 드는 것</a>이 있어 적용해보기로 했다.</li>
+      <li>위 답변상의 코드내에 드류 네일의 관련 <a href="http://vimcasts.org/episodes/writing-a-custom-fold-expression/#stq=ftplugin&amp;stp=1">VIMCAST 에피소드</a>가 언급 되어 있어 찾아보았다.
+        <ul>
+          <li>아래에 그 내용을 요약했다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="위에서-언급한-vimcast-관련-에피소드">위에서 언급한 VIMCAST 관련 에피소드</h2>
+
+<h3 id="38-writing-a-custom-fold-expression-설명-요약">
+<a href="http://vimcasts.org/episodes/writing-a-custom-fold-expression/#stq=ftplugin&amp;stp=1">#38 Writing a custom fold expression</a> 설명 요약</h3>
+
+<h4 id="폴딩을-적용하는-3가지-방법이-있음">폴딩을 적용하는 <strong>3가지 방법</strong>이 있음</h4>
+
+<blockquote>
+  <p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" raw="✔️" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> 참고, VIMCAST 내용에서 아래 처럼 3가지 방법이 있다라고 명확하게 구분한건 아니고 요약하다 보니 구분하는게 요약하기 편해서 내가 구분함.</p>
+</blockquote>
+
+<ul>
+  <li>
+<strong>Method 1.</strong> 명령어를 사용하여 즉시 적용하는 방법
+    <ul>
+      <li>vim 명령줄에 다음 명령을 연속 적용 (vimcast 동영상 참조)</li>
+      <li>:set foldcolumn=3 / :set foldmethod=marker / 파일에 default marker <code class="language-html highlighter-rouge">{{{</code> 적용 / 폴드 명령 za zM</li>
+      <li>단점: 이 방법은 저장되지 않으므로 vi를 나갔다 들어오면 사용할 수 없음</li>
+    </ul>
+  </li>
+  <li>
+<strong>Method 2.</strong> 특정 파일에서 자동으로 항상 적용되도록 저장 하는 방법(modeline magic)
+    <ul>
+      <li>참조링크: <a href="https://vim.fandom.com/wiki/Modeline_magic">Modeline magic</a>
+</li>
+      <li>해당 파일 맨위나 맨 아래에 다음 줄 추가
+        <ul>
+          <li>“vim:foldmethod=marker</li>
+        </ul>
+      </li>
+      <li>단점
+        <ul>
+          <li>vim에만 적용되는 방법이 파일의 내용에 같이 포함됨</li>
+          <li>같은 종류의 파일에 적용하고자 할 때 번거로움</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<strong>Method 3.</strong> 특정 파일타입에 대해 항상 적용되도록 설정을 수정하는 방법 <strong>(추천방법)</strong>
+    <ul>
+      <li>기본 마커를 사용하면 원본 훼손으로 보기 안좋음 -&gt; custom fold expression을 만들어 쓰는게 좋음</li>
+      <li>markdown 파일타입에만 적용하기 위해서는 아래 위치에 vim 파일을 작성하면됨.
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>:e ~/.vim/after/ftplugin/markdown/folding.vim
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+        <ul>
+          <li>after/ftplugin/markdown 아래 작성된 vim 파일은 …
+            <ul>
+              <li>vim의 default 플러그인인 ftplugin/markdown.vim 의 적용후에 추가적으로 적용된다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>이후 내용은 custom fold expression을 작성하는 내용으로 …
+        <ul>
+          <li>해당 VIMCAST의 <a href="http://vimcasts.org/transcripts/38/en/">trnascript</a>와..</li>
+          <li>
+<a href="http://vimcasts.org/episodes/writing-a-custom-fold-expression/#shownotes">shownote</a>를 참고할것</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="폴딩관련-vim-테크닉">폴딩관련 vim 테크닉</h4>
+<ul>
+  <li>foldmethod가 marker 일때 <code class="language-html highlighter-rouge">{{{</code>로 열었으면 <code class="language-html highlighter-rouge">}}}</code>로 닫을수 있다.</li>
+  <li>
+<code class="language-html highlighter-rouge">}}}</code>로 닫지 않더라도 <code class="language-html highlighter-rouge">{{{1</code>, <code class="language-html highlighter-rouge">{{{2</code>로 레벨을 줘서 구분할수 있다.
+    <ul>
+      <li>같은 레벨의 열리는 marker를 만나면 자동으로 닫히는듯</li>
+    </ul>
+  </li>
+  <li>폴드(fold)를 열고 닫는 기본 명령들 ( ‘foldminlines’, ‘foldenable’ 옵션의 영향을 받음)
+    <ul>
+      <li>zo : 현재 커서아래의 폴드 한개를 연다. count 옵션을 추가 하여 열고자 하는 폴드 갯수를 지정한다.</li>
+      <li>zO : 현재 커서아래의 모든 폴드를 연속적으로 연다.</li>
+      <li>zc : 현재 커서아래의 폴드 한개를 닫는다. count 옵션 가능</li>
+      <li>zC : 현재 커서아래의 모든 폴드를 연속적으로 닫는다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="위에서-언급한-vi-exchange-답변-적용-이슈">위에서 언급한 <a href="https://vi.stackexchange.com/a/6608/27406">VI exchange 답변</a> 적용 이슈</h2>
+
+<h3 id="적용과정">적용과정</h3>
+<ul>
+  <li>Step 1. 위 VIMCAST 에피소드의 <strong>Method 3 방법</strong> 을 적용하기로 결정</li>
+  <li>Step 2. vim 실행</li>
+  <li>Step 3. :e ~/vimfiles/after/ftplugin/<strong>vim</strong>/folding.vim (위에선 <code class="language-html highlighter-rouge">markdown</code>이었지만 여기선 <code class="language-html highlighter-rouge">vim</code>인것에 주의)</li>
+  <li>Step 4. 위 답변에서 제공되는 vim script Copy &amp; Paste
+    <ul>
+      <li>전부 그대로 한것 아니고 VimFolds()와 VimFoldText()만 따옴.</li>
+      <li>답변 내용은 vimrc에 구현하는 것을 가정한것으로 augroup을 사용.</li>
+      <li>after/ftplugin 을 사용한다면 augroup 사용할필요 없고…</li>
+      <li>아래내용만 folding.vim 마지막에 넣으면 됨.
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">setlocal</span> <span class="nb">foldmethod</span><span class="p">=</span>expr
+<span class="k">setlocal</span> <span class="nb">foldexpr</span><span class="p">=</span>VimFolds<span class="p">(</span><span class="k">v</span><span class="p">:</span>lnum<span class="p">)</span>
+<span class="k">setlocal</span> <span class="nb">foldtext</span><span class="p">=</span>VimFoldText<span class="p">()</span>
+<span class="c">" set foldcolumn=2 foldminlines=2  " 이부분 comment 되어있는데 ..이유까먹음</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Step 5. 아래 방법대로 Customize</li>
+  <li>Step 6. 끝</li>
+</ul>
+
+<h3 id="customize-방법">customize 방법</h3>
+<ul>
+  <li>폴딩시 보여주는 문구를 customize 하려면 folding.vim 의 <code class="language-html highlighter-rouge">VimFoldText()</code> 편집
+    <ul>
+      <li>글머리표 특수문자 입력방법
+        <ul>
+          <li>step1. : vim 명령줄에서 ‘:digraphs’ 명령으로 어떤 문자 적용할지 확인
+            <ul>
+              <li>현재 vim 메인 폰트로 채택된 font에서 지원되는 특수문자 일람확인 (표시 여부 확인가능)</li>
+            </ul>
+          </li>
+          <li>step2. : vim insert mode에서 ctrl + k 누른후 위에서 찾아낸 문자코드 두자리 입력</li>
+        </ul>
+      </li>
+      <li>어두운 테마를 사용하니 digraphs 명령 결과로 나온 <code class="language-html highlighter-rouge">digraph table</code>의 문자를 알아보기 힘들다.
+        <ul>
+          <li>요기에서 찾아보도록 하자. <a href="https://devhints.io/vim-digraphs">Vim digraphs</a>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3-결말">3. 결말</h1>
+
+<h2 id="적용-결과물">적용 결과물</h2>
+<ul>
+  <li>~/vimfiles/after/ftplugin/vim/folding.vim
+    <ul>
+      <li>이외에는 모두 default 설정 사용.</li>
+      <li>주의!! ~/_vimrc 는 건드리지 않았음</li>
+      <li>혹시 folding 관련 이외의 vim 파일관련 설정을 넣고자 한다면…
+        <ul>
+          <li>위의 ~/vimfiles/after/ftplugin/vim/ 파일내에 ~.vim 확장자로 추가하면됨.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="사용법">사용법</h2>
+
+<h3 id="편집시">편집시</h3>
+<ul>
+  <li>가장 윗 단계 카테고리를 만들때 …
+    <ul>
+      <li>‘box’를 치고 insert mode에서 <code class="language-html highlighter-rouge">tab</code>을 누름</li>
+      <li>ultisnip이 적용되어 있으므로 “로 둘러싼 box가 생김.(vimfile only)</li>
+    </ul>
+  </li>
+  <li>그 다음단계 만들때 …
+    <ul>
+      <li>”” 이면 2단계, “”” 이면 3단계임.</li>
+      <li>”” 뒤에 스페이스 한칸 까지 감지하므로 다른 문자 붙이면 안됨.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="폴드-열고-닫고">폴드 열고 닫고</h3>
+<ul>
+  <li>vim 명령줄에서 :help zo (혹은 :help zc )열고 찾아볼것</li>
+  <li>쟤네들 다 모여있음…</li>
+</ul>
+
+<h2 id="적용-소감">적용 소감</h2>
+
+<h3 id="배운-내용">배운 내용</h3>
+<ul>
+  <li>vim folding 관련 전반</li>
+  <li>vim에서 제공되는 기본 ftplugin 과 custom ftplugin의 공존방법 ( after/ftplugin )
+    <ul>
+      <li>예를 들어, vim 파일 관련 설정을 추가한다면 after/ftplugin/ 밑에 vim.vim 에 넣거나…</li>
+      <li>after/ftplugin/vim/ 폴더를 만들어 그 밑에 아무 이름으로 넣어도 …</li>
+      <li>vim 파일 (예를 들면 _vimrc 파일) Open시에 설정이 적용됨.</li>
+      <li>이 때 vim 배포시에 적용되는 기본 설정들은 /App/Vim/ftplugin/에 있으며…</li>
+      <li>기본 설정들이 적용되고나서 after 폴더 밑에 있는 것들이 적용되는 식임.</li>
+      <li>즉, 기본 설정들을 after에서 overwrite 하므로 최종적으로 기존설정위에..</li>
+      <li>after에서 변경되는 설정으로 적용되는 방식임.</li>
+    </ul>
+  </li>
+  <li>
+    <p>vim 에서 특수 문자 입력하기 ( :digraphs ) ,<a href="https://vim.fandom.com/wiki/Entering_special_characters">참조링크</a></p>
+  </li>
+  <li>Markdown 작성 관련
+    <ul>
+      <li>[[wiki-troubleshooting#curly braces 에러]] 문서에 정리</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="todos">ToDos</h3>
+<ul>
+  <li>jekyll에서 <code class="language-html highlighter-rouge">typora</code>, <code class="language-html highlighter-rouge">github</code>에서 지원하는 <a href="https://gist.github.com/rxaviers/7360908">이모지</a>가 표시안됨. 방법있나 찾아볼 것 (2020-03-24 ~ )
+    <ul>
+      <li>아마 markdown 엔진관련 이슈일 것 같음.</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 14주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="04/05 (월) ~ 04/11 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/04/05/week-14th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 14주차 기록">
+    <meta property="og:description" content="04/05 (월) ~ 04/11 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/04/05/week-14th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/04/05/week-14th/">
+    <meta name="twitter:title" content="2021년 14주차 기록">
+    <meta name="twitter:description" content="04/05 (월) ~ 04/11 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/03/29/week-13th/">« 2021년 13주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/04/12/week-15th/">2021년 15주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 14주차 기록</h1>
+        <p class="created-date">
+            2021.04.05
+        </p>
+
+
+        <div class="post-tag">
+    bundler ruby wikipedia standardjs
+</div>
+
+        <h2>04/05 (월) ~ 04/11 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#bundler--the-best-way-to-manage-a-ruby-applications-gems" id="markdown-toc-bundler--the-best-way-to-manage-a-ruby-applications-gems">Bundler : The best way to manage a Ruby application’s gems</a>    <ul>
+      <li><a href="#what-is-bundler" id="markdown-toc-what-is-bundler">What is Bundler?</a></li>
+      <li><a href="#%EB%A7%8E%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-bundle-%EB%AA%85%EB%A0%B9" id="markdown-toc-많이-사용하는-bundle-명령">많이 사용하는 bundle 명령</a></li>
+    </ul>
+  </li>
+  <li><a href="#wikipediatags" id="markdown-toc-wikipediatags">Wikipedia:Tags</a></li>
+  <li><a href="#%EA%B4%9C%EC%B0%AE%EC%95%84%EB%B3%B4%EC%9D%B4%EB%8A%94-%EB%A7%81%ED%81%AC" id="markdown-toc-괜찮아보이는-링크">괜찮아보이는 링크</a></li>
+  <li>
+<a href="#%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0" id="markdown-toc-개발자-커뮤니티">개발자 커뮤니티</a>    <ul>
+      <li><a href="#--devto-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0" id="markdown-toc---devto-커뮤니티"><svg width="50" height="40" viewbox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="40" rx="3" style="fill: #000000;"></rect><path d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z" style="fill: #ffffff;"></path></svg> : Dev.to 커뮤니티</a></li>
+      <li><a href="#free-code-camp" id="markdown-toc-free-code-camp">free Code Camp</a></li>
+    </ul>
+  </li>
+  <li><a href="#101%EC%9D%98-%EC%9C%A0%EB%9E%98" id="markdown-toc-101의-유래"><code class="language-html highlighter-rouge">101</code>의 유래</a></li>
+  <li>
+<a href="#javascript-%EC%97%90%EB%8F%84-pep8-%EC%B2%98%EB%9F%BC-%ED%91%9C%EC%A4%80%EC%9D%B4-%EB%90%98%EB%8A%94-style-guide%EA%B0%80-%EC%9E%88%EC%9D%84%EA%B9%8C" id="markdown-toc-javascript-에도-pep8-처럼-표준이-되는-style-guide가-있을까">JavaScript 에도 PEP8 처럼 표준이 되는 Style Guide가 있을까?</a>    <ul>
+      <li><a href="#%EA%B5%AC%EA%B8%80%EB%A7%81%ED%95%9C-%EC%A7%88%EB%AC%B8%EA%B3%BC-%EB%8B%B5%EB%B3%80%EB%93%A4" id="markdown-toc-구글링한-질문과-답변들">구글링한 질문과 답변들</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#--%EC%9D%B8%ED%84%B0%EB%84%B7%EC%83%81-meme%EC%9D%98-%EC%9C%A0%EB%9E%98%EB%A5%BC-%EC%95%8C%EB%A0%A4%EC%A4%8C" id="markdown-toc---인터넷상-meme의-유래를-알려줌"><img src="https://s.kym-cdn.com/assets/kym-logo-small-3829d72942bea9a286c085772f9a64a7.png" alt="Know your meme logo"> : 인터넷상 meme의 유래를 알려줌</a>    <ul>
+      <li>
+<a href="#just-go-on-the-internet-and-tell-lies" id="markdown-toc-just-go-on-the-internet-and-tell-lies">Just Go On The Internet and Tell Lies</a>        <ul>
+          <li><a href="#about" id="markdown-toc-about">About</a></li>
+          <li><a href="#origin" id="markdown-toc-origin">Origin</a></li>
+          <li><a href="#spread" id="markdown-toc-spread">Spread</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#why-should-i-care-what-color-the-bikeshed-is" id="markdown-toc-why-should-i-care-what-color-the-bikeshed-is">Why Should I Care What Color the Bikeshed Is?</a>    <ul>
+      <li><a href="#%EA%B4%80%EB%A0%A8%EB%A7%81%ED%81%AC" id="markdown-toc-관련링크">관련링크</a></li>
+      <li><a href="#%EB%A7%90%ED%95%9C%EC%82%AC%EB%9E%8C" id="markdown-toc-말한사람">말한사람</a></li>
+      <li><a href="#%EC%9A%A9%EB%A1%80" id="markdown-toc-용례">용례</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="bundler--the-best-way-to-manage-a-ruby-applications-gems">Bundler : The best way to manage a Ruby application’s gems</h1>
+
+<style>
+.bundler-img img { background-color: #64C9EF; }
+</style>
+
+<p class="bundler-img"><a href="https://bundler.io"><img src="https://bundler.io/images/header_transparent_bg.png" alt="Bundler"></a></p>
+
+<ul>
+  <li>처음으로 Image에 링크를 동시에 걸어봤다. 위 이미지를 클릭하면 bundler 홈페이지로 직행
+    <ul>
+      <li><a href="https://www.markdownguide.org/basic-syntax/#linking-images">Linking Images, Markdown Guide</a></li>
+    </ul>
+  </li>
+  <li>node.js의 npm 처럼 gem을 managing하는 툴</li>
+  <li>jekyll을 로컬에서 테스트 하는데 항상 사용하는 bundle을 너무 몰라서 정리해보자 한다.</li>
+</ul>
+
+<h2 id="what-is-bundler"><a href="https://bundler.io/v2.2/#getting-started">What is Bundler?</a></h2>
+
+<ul>
+  <li>Bundler는 Ruby 프로젝트에 일관된 환경을 제공함
+    <ul>
+      <li>그러기위해서, 정확한 Gem을 tracking하고 installing 함.</li>
+    </ul>
+  </li>
+  <li>Bundler의 도움으로 …
+    <ul>
+      <li>의존성 지옥에서 벗어날 수 있고</li>
+      <li>development, staging, production 단계에서 필요한 gem을 항상 얻을 수 있다.</li>
+      <li>project에서 작업을 시작할 때 <code class="language-html highlighter-rouge">bundle install</code>만 치면됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="많이-사용하는-bundle-명령">많이 사용하는 bundle 명령</h2>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">bundle exec jekyll serve</code> : 로컬에서 jekyll을 서빙할 때,
+    <ul>
+      <li>현재는 windows 터미널에서 제킬 탭을 열 때 기본으로 실행되도록 해놓아서 명령을 잘 까먹음.</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">bundle update</code> : 최신 버전의 gem으로 업데이트할 때 사용
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">jekyll-spaceship</code>에 이슈 등록하고 해결버전이 github에 등록되면 바로 설치해볼 때 필요함.</li>
+      <li>안써봤지만 특정 Gem만 업데이트하고자 할 때는
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">bundle update --source jekyll-spaceship</code>처럼 쓰면 될 듯. <a href="https://bundler.io/v2.2/man/bundle-update.1.html#OPTIONS">참고 링크</a>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="wikipediatags"><a href="https://en.wikipedia.org/wiki/Wikipedia:Tags">Wikipedia:Tags</a></h1>
+
+<ul>
+  <li>#wikipedia</li>
+  <li>Tag Page에 StackOverflow 외에 다른 표준적인 태그 기준을 넣고 싶은데 혹시 Wikipedia도 넣을수 있을지 알아보고자 번역.
+    <ul>
+      <li>느낌이 Wikipedia:Tags는 항목자체보다는 Wikipedia 운영적인 측면의 Tag인듯함</li>
+    </ul>
+  </li>
+</ul>
+
+<p>여기부터 본문 —</p>
+<ul>
+  <li>Wikipedia의 유지와 관리를 위한 목적으로, <code class="language-html highlighter-rouge">태그</code>는 MediaWiki가 특정 <code class="language-html highlighter-rouge">edits</code> 내용(혹은 기록된 작업) 옆에 자동으로 배치하는 간단한 메시지 입니다
+    <ul>
+      <li>컨텍스트에 따라, <code class="language-html highlighter-rouge">edits</code>은 특정 article에 대한 <code class="language-html highlighter-rouge">changes</code> 또는 특정 편집자의 <code class="language-html highlighter-rouge">contributions</code>라고도 합니다.</li>
+      <li>
+<code class="language-html highlighter-rouge">Edit tags</code>는 histories, 최근 changes와 특정 special pages에 표시됩니다.</li>
+    </ul>
+  </li>
+  <li>
+</li>
+</ul>
+
+<h1 id="괜찮아보이는-링크">괜찮아보이는 링크</h1>
+
+<ul>
+  <li>마크다운 작성법 가이드 모음
+    <ul>
+      <li>
+<a href="https://www.markdownguide.org/basic-syntax/">Markdown Basic Syntax, Makrdown Guide </a> <img class="emoji" title=":star:" alt=":star:" raw="⭐️" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> <img class="emoji" title=":star:" alt=":star:" raw="⭐️" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> <img class="emoji" title=":star:" alt=":star:" raw="⭐️" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> <img class="emoji" title=":star:" alt=":star:" raw="⭐️" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> <img class="emoji" title=":star:" alt=":star:" raw="⭐️" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">
+</li>
+      <li>
+<a href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown-guide, readthdocs</a> :</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://stackoverflow.com/q/5214127/9457247">CSS technique for a horizontal line with words in the middle</a> : 줄 가운데 words 넣기 CSS로
+    <ul>
+      <li>나는 마크다운으로 하고 시픈데..</li>
+      <li>일단 용어는 horizontal line with words</li>
+      <li>결론 : 찾아보니 없는듯 … 억지로 만들어 쓰지말자.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개발자-커뮤니티">개발자 커뮤니티</h1>
+
+<h2 id="--devto-커뮤니티">
+<a href="https://dev.to/"><svg width="50" height="40" viewbox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="40" rx="3" style="fill: #000000;"></rect><path d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z" style="fill: #ffffff;"></path></svg></a> : Dev.to 커뮤니티</h2>
+
+<ul>
+  <li>처음 시도해보는 기술
+    <ul>
+      <li>inline으로 svg 그림을 제목줄에 넣고 링크를 걸어봤다.</li>
+      <li>SVG 코드는 <code class="language-html highlighter-rouge">dev.to</code> 사이트에서 가져옴</li>
+      <li>color는 사이트 스킨에 따라 변경되도록 되어있는데 그냥 고정시킴.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://dev.to/about">About DEV</a>
+    <ul>
+      <li>개발관련 정보를 공유하고 싶어 만든 오픈 커뮤니티</li>
+      <li>
+<a href="https://dev.to/tags">Tags 페이지</a>가 별도로 있는데 태그마다 관리자가 따로 있다.</li>
+    </ul>
+  </li>
+  <li>읽어볼만한 링크
+    <ul>
+      <li>
+<a href="https://dev.to/educative/yaml-tutorial-get-started-with-yaml-in-5-minutes-4ik">YAML Tutorial</a> : 온라인 러닝사이트 광고가 있긴하지만 간단하게 YAML을 알아볼수 있다.</li>
+      <li>
+<a href="https://dev.to/codeloungedev/5-best-resources-to-learn-javascript-for-free-n53">5 Best Resources To Learn JavaScript For Free</a> : 모두 무료 사이트</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="free-code-camp"><a href="https://www.freecodecamp.org/learn">free Code Camp</a></h2>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="freeCodeCamp log"></p>
+
+<h1 id="101의-유래">
+<code class="language-html highlighter-rouge">101</code>의 유래</h1>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/101_(number)#In_education">101 in education, wikipedia</a></li>
+  <li><a href="https://namu.wiki/w/101#s-10.1">특정 과목을 기초부터 배우는 것, 나무위키</a></li>
+</ul>
+
+<h1 id="javascript-에도-pep8-처럼-표준이-되는-style-guide가-있을까">JavaScript 에도 PEP8 처럼 표준이 되는 Style Guide가 있을까?</h1>
+
+<ul>
+  <li>#standardjs</li>
+</ul>
+
+<h2 id="구글링한-질문과-답변들">구글링한 질문과 답변들</h2>
+
+<ul>
+  <li>
+<a href="https://www.reddit.com/r/learnjavascript/comments/31oqk0/js_equivalent_to_pythons_pep8_style_guide/">JS equivalent to Python’s PEP8 style guide?</a>
+    <ul>
+      <li><a href="https://github.com/standard/standard">Standard, github</a></li>
+      <li>Javascript에는 no semicolon 파와 line 당 하나씩파가 싸우고 있다.
+        <ul>
+          <li>대댓글에 누군가 <a href="https://knowyourmeme.com/memes/just-go-on-the-internet-and-tell-lies">Just Go On The Internet and Tell Lies</a> meme으로 반응했다.</li>
+        </ul>
+      </li>
+      <li><a href="https://contribute.jquery.org/style-guide/js/">JavaScript Style Guide, jQuery Document</a></li>
+      <li>
+<a href="http://sideeffect.kr/popularconvention#javascript">Analyze Github commits to know which convention is popular, Popular Coding Convention on Github</a> : 비교형식으로 스타일간 선택통계를 보여줌</li>
+      <li><a href="https://google.github.io/styleguide/jsguide.html">Google JavaScript Style Guide, Google Style Guides</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://medium.com/hbsmith/javascript-standard-coding-style%EC%9D%84-pycharm%EC%97%90%EC%84%9C-%EC%93%B0%EB%8A%94%EB%B0%A9%EB%B2%95-f75ad8c4d3df">Javascript: ‘Standard’ coding style을 PyCharm에서 쓰는 방법, HBsmith, Jesang Yoon</a>
+    <ul>
+      <li>코딩 스타일 검사기 : <a href="http://www.jslint.com/help.html">JSLint</a> → JSHint → JSCSRC</li>
+      <li>Standard의 특징
+        <ul>
+          <li>프로젝트별 설정 파일을 이용하여 코딩 스타일 Customize 하는 것을 허용하지 않음 (많은 사람이 불만이 있지만 옛날방식을 쓰라는 듯)</li>
+          <li>Statement 뒤에 세미콜론 다는것 지원하지 않음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Linting Tool에 대한 리뷰
+    <ul>
+      <li>
+<a href="https://blog.outsider.ne.kr/1007">JSHint의 옵션 정리, 2013년 포스팅, Outsider’s Dev Story</a> : JSLint는 너무 엄격, 현실에 맞지 않는다는 듯.</li>
+      <li>
+<a href="https://www.sitepoint.com/comparison-javascript-linting-tools/">A Comparison of JavaScript linting Tools, 2015, sitepoint</a> : JSLint , JSHint, JSCS, ESLint중 <code class="language-html highlighter-rouge">ESLint</code>를 추천</li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+.knowyourmeme-logo img { background-color: #13133E; }
+</style>
+
+<h1 class="knowyourmeme-logo" id="--인터넷상-meme의-유래를-알려줌">
+<a href="https://knowyourmeme.com/"><img src="https://s.kym-cdn.com/assets/kym-logo-small-3829d72942bea9a286c085772f9a64a7.png" alt="Know your meme logo"></a> : 인터넷상 meme의 유래를 알려줌</h1>
+
+<ul>
+  <li>나무위키 처럼 인터넷상에 유행하는 유행어의 의미와 어원등을 모아놓았다.</li>
+</ul>
+
+<h2 id="just-go-on-the-internet-and-tell-lies"><a href="https://knowyourmeme.com/memes/just-go-on-the-internet-and-tell-lies">Just Go On The Internet and Tell Lies</a></h2>
+
+<h3 id="about">About</h3>
+
+<ul>
+  <li>“누군가가 정말로 그렇게 할거라고 생각해? 그냥 인터넷에 가서 거짓말을 해댄다고?”는 의례적인(rhetorical) 질문이다.
+    <ul>
+      <li>Rhetorical question은 질문의 형식만 빌릴뿐 답변을 듣기위한 질문이 아니다.</li>
+      <li>예를 들어, 연사가 청중들에게 “신사 숙녀 여러분, 여러분은 롤모델이 있나요?”라고 물을때는 답변을 기대한 것이 아니라 주제에 대해 생각해볼 시간을 주는 rhetorical question이다.</li>
+    </ul>
+  </li>
+  <li>잘 속아넘어가는 다른 인터넷 사용자를 비꼬기 위한 용도로 사용된다.</li>
+</ul>
+
+<h3 id="origin">Origin</h3>
+
+<ul>
+  <li>이 문구는 아동용 텔레비전 애니메이션 “Buster the Myth Maker”의 Season 9, Episode 2 ( 2005년 4월 7일 첫 방영)에서 처음 나왔다.</li>
+  <li>이 에피소드에서, Arthur는 그의 친구 Buster에게 인터넷에서 가짜 정보를 본것 같다며 얘기를 한다.</li>
+  <li>그 말에 Buster는 쇼크와 불신의 반응으로 이렇게 답변한다.
+    <blockquote>
+      <p>“Your really think someone would do that? Just go on the Internet and tell lies?”</p>
+    </blockquote>
+  </li>
+  <li>2011년 7월 21일, 텀블러 사용자 <a href="https://meowie.tumblr.com/post/7897060869"><code class="language-html highlighter-rouge">meowie</code></a>가 아래 사진을 포스팅했다.
+<img src="https://64.media.tumblr.com/tumblr_lopafy4tF01qbami0o1_500.jpg" alt="meowie's meme">
+    <ul>
+      <li>이 포스팅은 10년이내에 29,000 notes를 받았다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="spread">Spread</h3>
+
+<ul>
+  <li><iframe id="media-UXLgz3wH2n8" class="media" src="https://www.youtube.com/embed/UXLgz3wH2n8" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></li>
+</ul>
+
+<h1 id="why-should-i-care-what-color-the-bikeshed-is">Why Should I Care What Color the Bikeshed Is?</h1>
+
+<ul>
+  <li>중요하지 않은 형식 맞추는데에 시간을 낭비하지 말라는 의미</li>
+</ul>
+
+<h2 id="관련링크">관련링크</h2>
+
+<ul>
+  <li><a href="https://www.oreilly.com/library/view/producing-open-source/0596007590/apc.html">Appendix C. Why Should I …, Producing Open Source Software by Karl Fogel, O’Reilly</a></li>
+  <li>
+<a href="http://bikeshed.com/">bikeshed.com</a> : 의미를 강조하기 위해 첨부된 사진의 벽 컬러와 포스팅의 컬러가 접속할 때마다 바뀜.</li>
+  <li><a href="https://docs.freebsd.org/en_US.ISO8859-1/books/faq/misc.html#bikeshed-painting">15.12 Why should I care what color the bikeshed is? from docs.freebsd.org</a></li>
+</ul>
+
+<h2 id="말한사람">말한사람</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Poul-Henning_Kamp">Poul-Henning Kamp</a></li>
+  <li>유닉스계열 운영체제인 <code class="language-html highlighter-rouge">FreeBSD</code>의 주요커미터</li>
+  <li>MD5 암호 hash 알고리즘의 개발자</li>
+</ul>
+
+<h2 id="용례">용례</h2>
+
+<ul>
+  <li>
+<a href="https://standardjs.com/#i-disagree-with-rule-x-can-you-change-it">standardjs.com 에서 FAQ 답변중 하나에 <code class="language-html highlighter-rouge">bikeshedding</code>을 사용</a> 했다.</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

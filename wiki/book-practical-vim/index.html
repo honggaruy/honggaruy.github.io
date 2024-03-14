@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Practical Vim - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="손이 먼저 반응하는">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/book-practical-vim/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Practical Vim">
+    <meta property="og:description" content="손이 먼저 반응하는">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/book-practical-vim/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/book-practical-vim/">
+    <meta name="twitter:title" content="Practical Vim">
+    <meta name="twitter:description" content="손이 먼저 반응하는">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book-practical-vim">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Practical Vim</h1>
+    
+        <p class="title-summary">손이 먼저 반응하는</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-practical-vim.md" target="_blank">created: 2021.05.17</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-practical-vim.md" target="_blank">updated: 2021.05.19</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/book-practical-vim.md">편집하기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    br*** book vim
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a>    <ul>
+      <li><a href="#%EC%B6%94%EA%B0%80-%EA%B0%9C%EC%9A%94" id="markdown-toc-추가-개요">추가 개요</a></li>
+      <li>
+<a href="#%EC%A0%80%EC%9E%90-%EC%84%A4%EB%AA%85" id="markdown-toc-저자-설명">저자 설명</a>        <ul>
+          <li><a href="#%EB%93%9C%EB%A5%98-%EB%84%A4%EC%9D%BC-drew-neil" id="markdown-toc-드류-네일-drew-neil">드류 네일 (Drew Neil)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#acknowledgments" id="markdown-toc-acknowledgments">Acknowledgments</a></li>
+  <li><a href="#foreword-to-the-first-edition" id="markdown-toc-foreword-to-the-first-edition">Foreword to the First Edition</a></li>
+  <li>
+<a href="#read-me" id="markdown-toc-read-me">Read Me</a>    <ul>
+      <li><a href="#how-this-book-is-structuted" id="markdown-toc-how-this-book-is-structuted">How This Book Is Structuted</a></li>
+      <li><a href="#a-note-on-the-examples" id="markdown-toc-a-note-on-the-examples">A Note on the Examples</a></li>
+      <li><a href="#learn-to-touch-type-then-learn-vim" id="markdown-toc-learn-to-touch-type-then-learn-vim">Learn to Touch Type, Then Learn Vim</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#read-the-forgotten-manual" id="markdown-toc-read-the-forgotten-manual">Read the Forgotten Manual</a>    <ul>
+      <li><a href="#get-to-know-vims-built-in-documentation" id="markdown-toc-get-to-know-vims-built-in-documentation">Get to Know Vim’s Built-in Documentation</a></li>
+      <li>
+<a href="#notation-for-simulating-vim-on-the-page" id="markdown-toc-notation-for-simulating-vim-on-the-page">Notation for Simulating Vim on the Page</a>        <ul>
+          <li><a href="#playing-melodies" id="markdown-toc-playing-melodies">Playing Melodies</a></li>
+          <li><a href="#playing-chords" id="markdown-toc-playing-chords">Playing Chords</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#1-the-vim-way" id="markdown-toc-1-the-vim-way">1. The Vim Way</a>    <ul>
+      <li><a href="#tip-1-meet-the-dot-command" id="markdown-toc-tip-1-meet-the-dot-command">Tip 1. Meet the Dot Command</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<style>
+.cover-table img { width: 300px }
+</style>
+
+<table class="cover-table">
+  <tbody>
+    <tr>
+      <td><img src="https://insightbookblog.files.wordpress.com/2017/02/Pratical-Vim-%ED%91%9C%EC%A7%80.png" alt="practicalvim-kr-img"></td>
+      <td>저자: 드류 네일(Drew Neil) <br> 옮긴이: 김용균 <br> 책제목 : Practical Vim<br> (원서 제목 : Practical Vim Second Edition) <br> 부제 : 손이 먼저 반응하는<br> (원서 부제: Edit Text at the Speed of Thought)<br><br> 출판사 : <a href="https://blog.insightbook.co.kr/2017/02/24/%EC%86%90%EC%9D%B4-%EB%A8%BC%EC%A0%80-%EB%B0%98%EC%9D%91%ED%95%98%EB%8A%94-practical-vim/">인사이트</a>(원책: <a href="https://pragprog.com/titles/dnvim2/practical-vim-second-edition/">The Pragmatic Bookshelf</a>) <br> ISBN 한글 : <a href="https://www.google.com/search?q=9788966262083">978-89-6626-208-3</a> <br> ISBN 영문 : <a href="https://www.google.com/search?q=9781680501278">9781680501278</a> <br> <br> 정가: 25,000원</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="추가-개요">추가 개요</h2>
+
+<ul>
+  <li>이 책의 부제에서 사이트 대문의 영감을 얻었다.</li>
+  <li>영문 2판(2015년)의 번역본이다. 한글판 번역은 2017년</li>
+</ul>
+
+<h2 id="저자-설명">저자 설명</h2>
+
+<h3 id="드류-네일-drew-neil">드류 네일 (Drew Neil)</h3>
+
+<style>
+.author-container {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<div class="author-container">
+
+  <p><img width="300px" height="300px" object-fit="cover" object-position="20% 10%" src="https://avatars.githubusercontent.com/u/7069?v=4" alt="Drew Neil Photo"></p>
+
+  <ul>
+    <li>vim 관련 콘텐츠로 유명한 <a href="http://vimcasts.org/">vimcasts.org</a>를 운영하고 있다.</li>
+    <li><a href="http://drewneil.com/">HomePage</a></li>
+    <li>
+<a href="https://github.com/nelstrom/">GitHub</a> :</li>
+    <li>
+<a href="https://twitter.com/nelstrom">twitter</a> : 가끔 괜찮은 vi tip을 올린다</li>
+  </ul>
+
+</div>
+
+<h1 id="acknowledgments">Acknowledgments</h1>
+
+<ul>
+  <li>책을 만드는 과정에서 도와준 사람들에 대한 감사</li>
+</ul>
+
+<h1 id="foreword-to-the-first-edition">Foreword to the First Edition</h1>
+
+<ul>
+  <li>Vim의 Core Contributor이며 Vim Plugin 제작자로 유명한 Tim Pope의 추천사</li>
+  <li>이 책은 Tip으로 구성되지만, 일반적인 개념의 Tip을 넘어선다!</li>
+</ul>
+
+<h1 id="read-me">Read Me</h1>
+
+<ul>
+  <li>Vim을 사용하는데 필수적인 지식은..
+    <ul>
+      <li>vim에서 제공하는 대화형 강의 : <a href="http://vimhelp.appspot.com/usr_01.txt.html#vimtutor">Vim 튜터</a> 에서 배울 수 있다.</li>
+    </ul>
+  </li>
+  <li>이 책에서는 vimrc 설정과 상관없이 사용할 수 있는 에디터의 핵심기능만 다룬다.</li>
+</ul>
+
+<h2 id="how-this-book-is-structuted">How This Book Is Structuted</h2>
+
+<ul>
+  <li>처음부터 끝까지 쭉 읽어야 하는 책이 아니다.</li>
+  <li>골라서 필요한 부분만 읽으면 된다.</li>
+  <li>초급 수준 ▶ 고급 수준으로 나아가는 흐름이 아니다
+    <ul>
+      <li>하지만 초급 사용자라면 각 장 초반에 나오는 팀 위주로 책을 전체적으로 훝어보고</li>
+      <li>고급 사용자라면 후반부의 팁에 초점을 맞추거나 골라 읽어라</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="a-note-on-the-examples">A Note on the Examples</h2>
+
+<ul>
+  <li>같은 문제에 대해 여러가지 해결 방식이 있다.</li>
+  <li>더 빠른 방법을 알고있다면 그 방식이 맞을것이다.</li>
+</ul>
+
+<h2 id="learn-to-touch-type-then-learn-vim">Learn to Touch Type, Then Learn Vim</h2>
+
+<ul>
+  <li>번역 제목: 키보드 자판에 숙달된 후 Vim 학습하기</li>
+  <li>타이핑이 익숙치 않다면 Vim을 배우기는 어렵다.</li>
+</ul>
+
+<h1 id="read-the-forgotten-manual">Read the Forgotten Manual</h1>
+
+<ul>
+  <li>번역 제목: Vim을 시작하기 위한 준비운동</li>
+  <li>예제를 묘사하기 보다는 시연하는 식으로 설명한다.</li>
+  <li>vim을 설명만 보고 따라하기는 어렵다.</li>
+  <li>이 곳에서는 설명방식을 설명한다.</li>
+  <li>책에서 반복적으로 나오는 기호가 궁금하다면 여기로 다시 돌아오라</li>
+</ul>
+
+<h2 id="get-to-know-vims-built-in-documentation">Get to Know Vim’s Built-in Documentation</h2>
+
+<ul>
+  <li>vim내부에 설치되는 문서를 읽어보라</li>
+  <li>vim 명령줄에 <code class="language-html highlighter-rouge">:h vimtutor</code>를 입력해보자</li>
+</ul>
+
+<h2 id="notation-for-simulating-vim-on-the-page">Notation for Simulating Vim on the Page</h2>
+
+<ul>
+  <li>vim을 사용하는 것은 피아노 연주하는 것에 비유할 수 있다.</li>
+  <li>
+<kbd>Ctrl</kbd>-<kbd>s</kbd> 는 동시에 눌러야 하는 키를 표기하는 전통적인 방식이다
+    <ul>
+      <li>하지만, 이 방식은 vim의 다중 모두 명령 (modal command set)을 묘사하기에는 부족하다.</li>
+    </ul>
+  </li>
+  <li>이어지는 섹션에서 <em>Practical Vim</em> 책 전체에서 Vim의 usage를 묘사하기 위해 사용하는 표기법에 대해 알아본다</li>
+</ul>
+
+<h3 id="playing-melodies">Playing Melodies</h3>
+
+<ul>
+  <li>Normal Mode에서 키 조합 방식의 표현</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Notation</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-html highlighter-rouge">x</code></td>
+      <td>Press <code class="language-html highlighter-rouge">x</code> once</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">dw</code></td>
+      <td>In sequence, press <code class="language-html highlighter-rouge">d</code>, then <code class="language-html highlighter-rouge">w</code>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">dap</code></td>
+      <td>In sequece, press <code class="language-html highlighter-rouge">d</code>, <code class="language-html highlighter-rouge">a</code>, then <code class="language-html highlighter-rouge">p</code>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="playing-chords">Playing Chords</h3>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge"><span class="nt">&lt;C-p&gt;</span></code>와 같은 keystroke를 본다면, <code class="language-html highlighter-rouge"><span class="nt">&lt;</span></code>를 누르고, <code class="language-html highlighter-rouge">C</code>를 누르고 <code class="language-html highlighter-rouge">-</code>를 누르고.. 하라는게 아니다.</li>
+  <li>
+<kbd>Ctrl</kbd>과 <kbd>p</kbd>를 동시에 누르라는 것이다.</li>
+</ul>
+
+<h1 id="1-the-vim-way">1. The Vim Way</h1>
+
+<ul>
+  <li>반복작업을 효율적으로 할 수 있다면 시간을 아낄수 있다.</li>
+  <li>vim은 반복작업에 최적화되어있다.
+    <ul>
+      <li>vim은 마지막 변경사항을 한 번의 keystroke로 반복할 수 있는데,</li>
+      <li>이 강력한 기능을 효율적으로 사용하려면,</li>
+      <li>작업을 반복적으로 사용가능한 작업으로 단위화하는 습관이 필요하다.</li>
+    </ul>
+  </li>
+  <li>dot command는 vim에서 가장 강력한 기능이다.
+    <ul>
+      <li>관련없어 보이는 각각의 tip들은 결국 하나로 수렴한다.</li>
+    </ul>
+  </li>
+  <li>가장 이상적인 편집방식은,
+    <ul>
+      <li>이동에 필요한 하나의 keystorke와</li>
+      <li>실행을 위한 또 하나의 keystoke임을</li>
+      <li>알게될 것이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tip-1-meet-the-dot-command">Tip 1. Meet the Dot Command</h2>
+
+<ul>
+  <li>dot command : 마지막 <strong>change</strong>를 반복한다.</li>
+  <li>vim에서 가장 다목적 이며, 가장 강력한 기능이다.</li>
+  <li>
+<strong>change</strong> 란 무엇인가?</li>
+</ul>
+
+    </article>
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

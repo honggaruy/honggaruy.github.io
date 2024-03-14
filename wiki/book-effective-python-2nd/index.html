@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>파이썬 코딩의 기술 2판 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="똑똑하게 코딩하는 법">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/book-effective-python-2nd/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="파이썬 코딩의 기술 2판">
+    <meta property="og:description" content="똑똑하게 코딩하는 법">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/book-effective-python-2nd/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/book-effective-python-2nd/">
+    <meta name="twitter:title" content="파이썬 코딩의 기술 2판">
+    <meta name="twitter:description" content="똑똑하게 코딩하는 법">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book-effective-python-2nd">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">파이썬 코딩의 기술 2판</h1>
+    
+        <p class="title-summary">똑똑하게 코딩하는 법</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-effective-python-2nd.md" target="_blank">created: 2021.03.19</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-effective-python-2nd.md" target="_blank">updated: 2021.03.26</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/book-effective-python-2nd.md">편집하기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    br*** book
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a>    <ul>
+      <li>
+<a href="#%EC%A0%80%EC%9E%90-%EC%84%A4%EB%AA%85" id="markdown-toc-저자-설명">저자 설명</a>        <ul>
+          <li><a href="#%EB%B8%8C%EB%A0%9B-%EC%8A%AC%EB%9D%BC%ED%82%A8--brett-slatkin" id="markdown-toc-브렛-슬라킨--brett-slatkin">브렛 슬라킨 ( Brett Slatkin)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#chapter-1-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EB%8B%B5%EA%B2%8C-%EC%83%9D%EA%B0%81%ED%95%98%EA%B8%B0" id="markdown-toc-chapter-1-파이썬답게-생각하기">Chapter 1. 파이썬답게 생각하기</a>    <ul>
+      <li><a href="#better-way-1-%EC%82%AC%EC%9A%A9-%EC%A4%91%EC%9D%B8-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-%EB%B2%84%EC%A0%84%EC%9D%84-%EC%95%8C%EC%95%84%EB%91%90%EB%9D%BC" id="markdown-toc-better-way-1-사용-중인-파이썬의-버전을-알아두라">Better Way 1. 사용 중인 파이썬의 버전을 알아두라</a></li>
+      <li>
+<a href="#better-way-2-pep-8-%EC%8A%A4%ED%83%80%EC%9D%BC-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%A5%BC-%EB%94%B0%EB%A5%B4%EB%9D%BC" id="markdown-toc-better-way-2-pep-8-스타일-가이드를-따르라">Better Way 2. PEP 8 스타일 가이드를 따르라</a>        <ul>
+          <li><a href="#%EA%B3%B5%EB%B0%B1" id="markdown-toc-공백">공백</a></li>
+          <li><a href="#%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%95%BD" id="markdown-toc-명명-규약">명명 규약</a></li>
+          <li><a href="#%EC%8B%9D%EA%B3%BC-%EB%AC%B8" id="markdown-toc-식과-문">식과 문</a></li>
+          <li><a href="#%EC%9E%84%ED%8F%AC%ED%8A%B8" id="markdown-toc-임포트">임포트</a></li>
+        </ul>
+      </li>
+      <li><a href="#better-way-3" id="markdown-toc-better-way-3">Better Way 3.</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="http://image.kyobobook.co.kr/images/book/xlarge/190/x9791165213190.jpg" alt="표지"></td>
+      <td>저자: 브렛 슬라킨 (Brett Slatkin) <br> 책제목 : 파이썬 코딩의 기술 개정2판 (원제 : Effective Python: 90 Specific ways to write better Python, 2nd Edition) <br> 부제 : 똑똑하게 코딩하는 법<br><br> 출판사 : 길벗 (원책: Pearson, Addison-Wesley) <br> ISBN 한글 : 979-11-6521-319-0 <br> ISBN 영문 : 978-0134853989 <br> <br> 값: 32,000원 <br> <a href="https://effectivepython.com/">Book hompage</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="저자-설명">저자 설명</h2>
+
+<h3 id="브렛-슬라킨--brett-slatkin">브렛 슬라킨 ( Brett Slatkin)</h3>
+
+<style>
+.author-container {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<div class="author-container">
+
+  <p><img width="240px" src="https://effectivepython.com/images/bslatkin_square.jpg" alt="Brett Slatkin"></p>
+
+  <ul>
+    <li>구글 Principal software engineer</li>
+    <li>
+<a href="https://surveys.google.com/">Google Surveys</a>의 기술적 공동 설립자(technical co-founder)</li>
+    <li>
+<a href="https://github.com/pubsubhubbub/">PubSubHubbub 프로토콜</a>의 공동 창립자(co-creator)</li>
+    <li>구글의 첫번째 클라우드 컴퓨팅 제품(<a href="https://cloud.google.com/appengine/">App Engine</a>)을 런칭함.</li>
+    <li>개인 홈페이지 : <a href="https://www.onebigfluke.com/">one big fluke</a>
+</li>
+  </ul>
+
+</div>
+
+<style>
+.acceptable-code pre { background:#e1f5fe;}
+.correct-code pre { background:#ADFF2F;}
+.wrong-code pre { background:#FFB6C1;}
+.verywrong-code pre { background:#FF0000;}
+</style>
+
+<h1 id="chapter-1-파이썬답게-생각하기">Chapter 1. 파이썬답게 생각하기</h1>
+
+<ul>
+  <li>Pythonic의 의미</li>
+  <li>The Zen of Python
+    <ul>
+      <li>파이썬 인터프리터에서 <code class="language-html highlighter-rouge">import this</code>를 입력
+        <iframe height="400px" width="100%" src="https://replit.com/@honggaruy/the-zen-of-python?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+      </li>
+      <li><a href="https://wikidocs.net/7907">번역본</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="better-way-1-사용-중인-파이썬의-버전을-알아두라">Better Way 1. 사용 중인 파이썬의 버전을 알아두라</h2>
+
+<ul>
+  <li>이 책은 Python 3.7을 기반으로 테스트</li>
+  <li>새로운 기능을 보이기 위해 일부는 3.8로 진행</li>
+  <li>버전 확인 방법
+    <ul>
+      <li>파이썬 2
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> python <span class="nt">--version</span>
+Python 2.7.10
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>파이썬 3
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> python3 <span class="nt">--version</span>
+Python 3.8.0
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>인터프리터에서
+        <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">version</span><span class="p">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>2020년 1월 1일부터 python 2는 사용하지 말 것.</li>
+</ul>
+
+<h2 id="better-way-2-pep-8-스타일-가이드를-따르라">Better Way 2. PEP 8 스타일 가이드를 따르라</h2>
+
+<ul>
+  <li>다른 프로그래머들과 협업할 때의 기준이 필요하기 때문</li>
+  <li><a href="https://www.python.org/dev/peps/pep-0008/">온라인 가이드</a></li>
+  <li>이 번 better way는 원본이 있고 원본을 간추린 것이므로 번역본에서 언급된 내용을 원소스에서 찾아보고 정리함</li>
+</ul>
+
+<h3 id="공백">공백</h3>
+
+<ul>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#indentation">Indentation</a>
+    <ul>
+      <li>indentation level 마다 4 space를 사용하라</li>
+      <li>연속되는 줄은 줄바꿈 되는 요소들이 수직적으로 정렬되도록 한다.
+        <ul>
+          <li>이 때 여러가지 괄호(parentheses, brackets, braces)내에서의 파이썬의 implicit line joining을 이용하라</li>
+          <li>첫</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces">Tabs of Spaces?</a>
+    <ul>
+      <li>Spaces are the preferred indentation method.</li>
+      <li>Logacy 코드가 이미 탭으로 되어있는 경우에만 (일관성을 유지하기 위해) 허용됨.</li>
+      <li>Python 3는 indentations에 탭과 스페이스의 혼용을 금지합니다.</li>
+      <li>탭과 스페이스로 혼용된 Python 2 indentation은 모두 스페이스로 치환되어야 한다.</li>
+      <li>Python2 command line 띄울때 강력하게 추천하는 옵션
+        <ul>
+          <li>python -t : 탭과 스페이스를 불법적으로 혼용시 경고를 띄운다</li>
+          <li>python -tt : 탭과 스페이스를 불법적으로 혼용시 에러를 띄운다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">Maximum Line Length</a>
+    <ul>
+      <li>모든 line은 79자가 최대치이다.</li>
+      <li>구조적인 제약이 적은 긴 텍스트 블럭 ( docstrings나 comment)은 72자 이하로 제한해야 한다.</li>
+      <li>글자수에 제한을 둠으로써..
+        <ul>
+          <li>몇개의 파일을 나란히 열어둘 수 있으며..</li>
+          <li>두개의 버전을 나란히 비교하는 코드 리뷰툴을 원활하게 사용할 수 있다.</li>
+        </ul>
+      </li>
+      <li>대부분의 툴의 기본적인 줄바꿈은 코드의 비주얼 구조에 어지럽히며, 코드를 이해하기 더 어렵게만든다</li>
+      <li>79자 제한을 설정한 이유는…
+        <ul>
+          <li>80자 길이로 맞추어진 에디터 창에서 wrapping을 피할수 있으며..</li>
+          <li>마지막 컬럼에서 툴이 marker glyph를 두더라도 wrapping이 안되도록 하려는 목적이다.</li>
+          <li>어떤 웹 베이스 툴은 dynamic line wrapping을 전혀 지원하지 않는다. ( 따라서 글자수 제한이 더욱 필요하다.)</li>
+        </ul>
+      </li>
+      <li>어떤 팀들은 더 긴라인을 강력하게 좋아할 수도 있다.
+        <ul>
+          <li>그 코드가 주로 한 팀에서만 독점적으로 관리되고, 그 팀내에서 동의가 된다면..</li>
+          <li>line length limit이 99자까지 늘어나는 것도 허용가능하지만…</li>
+          <li>주석이나 docstringsjgs 여전히 72자내로 관리되어야 하는것이 조건이다.</li>
+        </ul>
+      </li>
+      <li>Python 표준 library는 보수적이며 79자이내로 제한되어야 한다. ( docstrings/comments는 72자 이내이다)</li>
+      <li>긴줄을 줄바꿈하는데 가장 선호되는 방법은…
+        <ul>
+          <li>parenthesese, brackets, braces 안에서 허용되는 파이썬의 묵시적인(implied) line continuation 방법이다</li>
+          <li>괄호를 포함하는 긴 줄은 괄호안의 표현식을 여러줄에 걸쳐 분리할 수 있다</li>
+          <li>이 방법은 <code class="language-html highlighter-rouge">backslash</code>를 이용하여 줄을 연장하는 방법보다는 선호되어야 한다</li>
+        </ul>
+      </li>
+      <li>Backslash가 여전히 적당한 방법인 경우도 있다.
+        <ul>
+          <li>예를 들면, 여러라인에 걸친 <code class="language-html highlighter-rouge">with-</code>문의 경우 묵시적인 연장방법을 사용할 수 없으므로…</li>
+          <li>backslash를 허용할 필요가 있다
+            <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'/path/to/some/file/you/want/to/read'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_1</span><span class="p">,</span> \
+     <span class="nb">open</span><span class="p">(</span><span class="s">'/path/to/some/file/being/written'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_2</span><span class="p">:</span>
+    <span class="n">file_2</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_1</span><span class="p">.</span><span class="n">read</span><span class="p">())</span> 
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+            <ul>
+              <li>
+<a href="#multiline-if-statements"><code class="language-html highlighter-rouge">multiline if-statements</code></a>에 대한 앞선 논의를 확인해봐라</li>
+              <li>여러줄에 걸친 <code class="language-html highlighter-rouge">with-statements</code>에 indentation 관련하여 더 깊은 생각을 확인할 수 있다.</li>
+            </ul>
+          </li>
+          <li>assert statemenst도 이런 경우이다.</li>
+        </ul>
+      </li>
+      <li>연속된 라인을 들여쓸 때 적절한 방법으로 들여쓰는지 확인하라</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="명명-규약">명명 규약</h3>
+
+<h3 id="식과-문">식과 문</h3>
+
+<ul>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations">Progamming Recommendations</a> 중 3번째
+    <ul>
+      <li>Use <code class="language-html highlighter-rouge">is not</code> operator rather than <code class="language-html highlighter-rouge">not ... is</code>.
+        <ul>
+          <li>While both expressions are functionally identical, the former is more readable and preferred:</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="language-python correct-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Correct:
+</span><span class="k">if</span> <span class="n">foo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-python wrong-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Wrong:
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">foo</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations">Progamming Recommendations</a> 중 19번째
+    <ul>
+      <li>for sequences, (stings, lists, tuples), use the fact that empty sequences are false:</li>
+    </ul>
+
+    <div class="language-python correct-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Correct:
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">seq</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">seq</span><span class="p">:</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-python wrong-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Wrong:
+</span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#other-recommendations">Other Recommendations</a> 중 6번째
+    <ul>
+      <li>Compund statements (multiple statements on the same line) are generally discouraged:</li>
+    </ul>
+
+    <div class="language-python correct-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Correct:
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span>
+    <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="n">do_one</span><span class="p">()</span>
+<span class="n">do_two</span><span class="p">()</span>
+<span class="n">do_three</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <p>Rather not:</p>
+
+    <div class="language-python wrong-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Wrong:
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span> <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="n">do_one</span><span class="p">();</span> <span class="n">do_two</span><span class="p">();</span> <span class="n">do_three</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#other-recommendations">Other Recommendations</a> 중 7번째
+    <ul>
+      <li>While sometimes it’s okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!</li>
+    </ul>
+
+    <p>Rather not:</p>
+
+    <div class="language-python wrong-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Wrong:
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span> <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span> <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
+<span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">delay</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <p>Definitely not:</p>
+
+    <div class="language-python verywrong-code highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># Wrong:
+</span><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span> <span class="n">do_blah_thing</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span> <span class="n">do_non_blah_thing</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span> <span class="n">something</span><span class="p">()</span>
+<span class="k">finally</span><span class="p">:</span> <span class="n">cleanup</span><span class="p">()</span>
+
+<span class="n">do_one</span><span class="p">();</span> <span class="n">do_two</span><span class="p">();</span> <span class="n">do_three</span><span class="p">(</span><span class="nb">long</span><span class="p">,</span> <span class="n">argument</span><span class="p">,</span>
+                             <span class="nb">list</span><span class="p">,</span> <span class="n">like</span><span class="p">,</span> <span class="n">this</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">'blah'</span><span class="p">:</span> <span class="n">one</span><span class="p">();</span> <span class="n">two</span><span class="p">();</span> <span class="n">three</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p id="multiline-if-statements"><a href="https://www.python.org/dev/peps/pep-0008/#multiline-if-statements">multiline-if-statements에 대한 논의</a></p>
+
+    <ul>
+      <li>이 부분은 좀 기니까 원문을 해석하기로 함</li>
+      <li>if 문의 조건부분이 여러줄을 필요로 할만큼 길다면..</li>
+      <li>
+<code class="language-html highlighter-rouge">if</code>+ space + <code class="language-html highlighter-rouge">(</code> 가 다음에 이어지는 여러줄 조건부분에 대해 자연스럽게 4 space 들여쓰기를 형성함.</li>
+      <li>이렇게 들여쓰기된 조건부분은 if 문안에서 들여쓰기된 표현식들과 시각적인 충돌을 일으킬수 있다.</li>
+      <li>이 PEP은 이런 부분을 좀 더 시각적으로 구분하기 위한 방법 (혹은 시각적으로 구분할지 안할지)에 대한 명확한 입장을 취하지 않습니다.</li>
+      <li>이러한 상황에 대해 받아들일수있는 옵션은 다음과 같지만.. 이것만으로 한정되지도 않습니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python acceptable-code highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre>  <span class="c1"># No extra indentation
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">this_is_one_thing</span> <span class="ow">and</span>
+      <span class="n">that_is_another_thing</span><span class="p">):</span>
+      <span class="n">do_something</span><span class="p">()</span>
+
+  <span class="c1"># Add a comment, which will provide some distinction in editors
+</span>  <span class="c1"># supporting syntax highlighting.
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">this_is_one_thing</span> <span class="ow">and</span>
+      <span class="n">that_is_another_thing</span><span class="p">):</span>
+      <span class="c1"># Since both conditions are true, we can frobinicate.
+</span>      <span class="n">do_something</span><span class="p">()</span>
+
+  <span class="c1"># Add some extra indentation on the conditional continuation line.
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">this_is_one_thing</span>
+          <span class="ow">and</span> <span class="n">that_is_another_thing</span><span class="p">):</span>
+      <span class="n">do_something</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+<ul>
+  <li>
+<a href="https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator">이항 연산자의 앞과 뒤 어느쪽에서 line을 끊을지에 대한 논의</a> 도 참고하세요</li>
+</ul>
+
+<h3 id="임포트">임포트</h3>
+
+<h2 id="better-way-3">Better Way 3.</h2>
+
+    </article>
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

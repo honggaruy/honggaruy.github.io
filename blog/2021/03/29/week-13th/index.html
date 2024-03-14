@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 13주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="03/29 (월) ~ 04/04 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/03/29/week-13th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 13주차 기록">
+    <meta property="og:description" content="03/29 (월) ~ 04/04 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/03/29/week-13th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/03/29/week-13th/">
+    <meta name="twitter:title" content="2021년 13주차 기록">
+    <meta name="twitter:description" content="03/29 (월) ~ 04/04 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/03/22/week-12th/">« 2021년 12주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/04/05/week-14th/">2021년 14주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 13주차 기록</h1>
+        <p class="created-date">
+            2021.03.29
+        </p>
+
+
+        <div class="post-tag">
+    
+</div>
+
+        <h2>03/29 (월) ~ 04/04 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%9D%B4%EB%B2%88-%EC%A3%BC-%ED%95%9C%EC%9D%BC" id="markdown-toc-이번-주-한일">이번 주 한일</a>    <ul>
+      <li><a href="#jekyll-spaceship-%EC%9D%B4%EC%8A%88-%EB%93%B1%EB%A1%9D" id="markdown-toc-jekyll-spaceship-이슈-등록">jekyll-spaceship 이슈 등록</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="이번-주-한일">이번 주 한일</h1>
+
+<h2 id="jekyll-spaceship-이슈-등록">jekyll-spaceship 이슈 등록</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/jeffreytse/jekyll-spaceship/issues/49">HTML5 audio not supported problem</a>
+    <ul>
+      <li>audio 임베딩 기능을 사용해보다가 발견</li>
+      <li>3월 26일 현재 해결됨</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/jeffreytse/jekyll-spaceship/issues/50">Weird inline Mathjax processing</a>
+    <ul>
+      <li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger">Number.isSafeInteger()</a> 내용을 베껴쓰다가 발견</li>
+      <li>4월 02일 현재 해결됨</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vimrc 에서 dotvim으로 옮기기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="번역, vimrc가 너무 커졌을때">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/vimrc-to-dotvim/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="vimrc 에서 dotvim으로 옮기기">
+    <meta property="og:description" content="번역, vimrc가 너무 커졌을때">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/vimrc-to-dotvim/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/vimrc-to-dotvim/">
+    <meta name="twitter:title" content="vimrc 에서 dotvim으로 옮기기">
+    <meta name="twitter:description" content="번역, vimrc가 너무 커졌을때">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="vimrc-to-dotvim">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">vimrc 에서 dotvim으로 옮기기</h1>
+    
+        <p class="title-summary">번역, vimrc가 너무 커졌을때</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vimrc-to-dotvim.md" target="_blank">created: 2022.12.28</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/vimrc-to-dotvim.md" target="_blank">updated: 2023.01.13</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/vimrc-to-dotvim.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=vimrc+%EC%97%90%EC%84%9C+dotvim%EC%9C%BC%EB%A1%9C+%EC%98%AE%EA%B8%B0%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    vimrc dotvim
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%EB%82%B4%EC%9A%A9" id="markdown-toc-2-내용">2. 내용</a>    <ul>
+      <li><a href="#%EA%B4%80%EC%9A%A9%ED%91%9C%ED%98%84" id="markdown-toc-관용표현">관용표현</a></li>
+      <li><a href="#attack-of-the-5000-line-vimrc" id="markdown-toc-attack-of-the-5000-line-vimrc">Attack of the 5,000-line vimrc</a></li>
+      <li><a href="#your-own-personal-vimruntime" id="markdown-toc-your-own-personal-vimruntime">Your own personal <code class="language-html highlighter-rouge">$VIMRUNTIME</code></a></li>
+      <li><a href="#lose-the-source-luke" id="markdown-toc-lose-the-source-luke">Lose the <code class="language-html highlighter-rouge">:source</code>, Luke</a></li>
+      <li>
+<a href="#turn-on-plugin-drop-out" id="markdown-toc-turn-on-plugin-drop-out">Turn on, <code class="language-html highlighter-rouge">plugin</code>, drop out</a>        <ul>
+          <li><a href="#whats-a-plugin-anyway" id="markdown-toc-whats-a-plugin-anyway">What’s a plugin, anyway?</a></li>
+          <li><a href="#plugin-subdirectories" id="markdown-toc-plugin-subdirectories">Plugin subdirectories</a></li>
+          <li><a href="#local-script-scope" id="markdown-toc-local-script-scope">Local script scope</a></li>
+          <li><a href="#short-circuiting-and-load-guards" id="markdown-toc-short-circuiting-and-load-guards">Short-circuiting and load guards</a></li>
+          <li><a href="#the-question-of-mappings" id="markdown-toc-the-question-of-mappings">The question of mappings</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#not-really-my-filetype" id="markdown-toc-not-really-my-filetype">Not really my <code class="language-html highlighter-rouge">:filetype</code></a>        <ul>
+          <li><a href="#loading-filetype-configuration-afterwards" id="markdown-toc-loading-filetype-configuration-afterwards">Loading filetype configuration afterwards</a></li>
+          <li><a href="#breaking-up-filetype-plugins" id="markdown-toc-breaking-up-filetype-plugins">Breaking up filetype plugins</a></li>
+          <li><a href="#undoing-filetype-settings" id="markdown-toc-undoing-filetype-settings">Undoing filetype settings</a></li>
+          <li><a href="#the-difference-with-indent" id="markdown-toc-the-difference-with-indent">The difference with indent</a></li>
+          <li><a href="#detecting-filetypes" id="markdown-toc-detecting-filetypes">Detecting filetypes</a></li>
+        </ul>
+      </li>
+      <li><a href="#be-water-my-friend" id="markdown-toc-be-water-my-friend">Be water, my friend</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>
+    <p>vimrc를 정리할 필요를 느꼈다</p>
+
+    <blockquote class="last_line_author">
+      <p>You can’t have everything. Where would you put it?</p>
+
+      <p>—  Steven Wright  —</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>원본링크 : <a href="https://vimways.org/2018/from-vimrc-to-vim/">From .vimrc to vim, vimways.org</a></p>
+  </li>
+</ul>
+
+<h1 id="2-내용">2. 내용</h1>
+
+<h2 id="관용표현">관용표현</h2>
+
+<ul>
+  <li>over time: 오랜 시간을 거쳐, 시간이 지나면서</li>
+  <li>ever-shifting: =ever-changing</li>
+  <li>be in good company: ~을 못해도 걱정할 필요가 없다 (마찬가지인 사람이 많아서)</li>
+</ul>
+
+<blockquote>
+  <p>If you find it difficult to cope with your family you are in good company because most people feel the same.</p>
+</blockquote>
+
+<ul>
+  <li>the sheer amount of: 엄청난 양의</li>
+  <li>come frome : ~의 결과이다</li>
+  <li>quick-and-dirty : 간이의, 신속히 대강하는 것</li>
+  <li>well over 특정숫자 : 특정숫자를 충분히 넘는</li>
+  <li>take a hint from : ~로부터 눈치를 채다. ~로부터 힌트를 얻다</li>
+  <li>self-contained : 독립된, 자급 자족의</li>
+  <li>any and all : 어떤 종류이든 상관없이 모든</li>
+  <li>thinly-veiled : (직역: 얇게 가려진) = 노골적인, 눈에 보이는</li>
+  <li>as an analogue to 명사 : (직역: 명사와 유사품으로서) ~와 유사하게</li>
+  <li>trample on ~ : ~를 짓밟다, ~를 밟아 뭉개다</li>
+  <li>there are some caveats : 약간의 주의가 필요하다</li>
+  <li>like to think of (it) as something : (그것을) something이라고 생각하고 싶다</li>
+  <li>fall into a category : ~의 범주에 들어가다</li>
+  <li>you may have guessed by now : 지금쯤 짐작하겠지만</li>
+</ul>
+
+<h2 id="attack-of-the-5000-line-vimrc">Attack of the 5,000-line vimrc</h2>
+
+<ul>
+  <li>Vim은 끊임없이 configurable 하고 확장가능한 에디터이다
+    <ul>
+      <li>또한  <code class="language-html highlighter-rouge">~/.vimrc</code> 나 <code class="language-html highlighter-rouge">~/vim/vimrc</code> startup 파일을 공유하는 문화를 가지고 있다</li>
+      <li>이 파일들은 시간이 지날수록 확장되는 경향이 있다</li>
+      <li>초보자들은
+        <ul>
+          <li>‘expandntab’ 이나 ‘wrap’ 같은 몇가지 global options를 설정으로 시작으로</li>
+          <li>custom amppings, functions, 파일타입별 로직, 3rd-party 플러그인을</li>
+          <li>언제나 변화하는 플러그인 manager의 외벽아래에 추가하게된다</li>
+        </ul>
+      </li>
+      <li>vimrc 파일은 크기가 커지는 것이 아니라, 좀더 뒤얽히고 복잡하게 자란다</li>
+    </ul>
+  </li>
+  <li>만일 당신이 이런 큰 파일을 가지고 있다면, 다른 사람도 마찬가지니 걱정하지 마라
+    <ul>
+      <li>Damian Conway는 Perl 분야의 Vim guru 인데 <a href="https://github.com/thoughtstream/Damian-Conway-s-Vim-Setup/blob/cbe1fb5b5505e17bd7709669168c367903d94cd4/.vimrc">1855 lines의 vimrc 파일</a>을 배포했다</li>
+      <li>매우 긴 길이의 vimrc 파일의 문제는
+        <ul>
+          <li>엄청난 양의 configuration 때문이 아니다</li>
+          <li>어쨌거나 그들은 모두 존재 목적이 있다</li>
+        </ul>
+      </li>
+      <li>하지만, 당신이 프로그래밍을 경험이 많다면 알겠지만
+        <ul>
+          <li>서로 다른일을 하는 코드들을 한 파일에 집어넣는 일은 피하는 것이 좋다</li>
+          <li>이 것은 코드를 찾기어렵게, 관리하기 어렵게, 이해하기 어렵게 한다</li>
+          <li>Vim configuration도 예외가 아니다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>매우 큰 vimrc 파일을 만드는 대신
+    <ul>
+      <li>좀 더 작고, 잘 구성된 파일들로 분리하는 방법이 있다</li>
+      <li>이 파일들은 <code class="language-html highlighter-rouge">~/.vim</code> 아래에 위치한다</li>
+    </ul>
+  </li>
+  <li>매우 큰 vimrc 파일을 대체하기 위해
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">~/.vim</code> 아래 directory hierarchy 를 만드는 것은</li>
+      <li>당신의 configurations을 관리가능하도록 유지시킨다</li>
+      <li>이 것은 코드가 필요할 때만 로딩되도록하여 효율을 개선한다</li>
+      <li>hierarchy상의 파일 위치로 코드의 존재 목적이 명확해진다</li>
+      <li>다른 사람들이 사용할 수 있도록 쉽게 패키징할 수 있다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="your-own-personal-vimruntime">Your own personal <code class="language-html highlighter-rouge">$VIMRUNTIME</code>
+</h2>
+
+<ul>
+  <li>잘 조직된 <code class="language-html highlighter-rouge">~/.vim</code> directory의 이점은
+    <ul>
+      <li>어떻게 configuration 파일이 load될지 많은 control을 제공하는</li>
+      <li>Vim의 내장된 동작에 의존한 결과이다</li>
+    </ul>
+  </li>
+  <li>Vim 자체와 함께 제공된 runtime files의 구조를 살펴보는 것으로 시작하자
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">$VIMRUNTIME</code> 변수내에서 이 directory의 path를 발견할 수 있다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span>echo $VIMRUNTIME
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>당신의 OS와 함께 배포된 버전의 vim을 사용중이라면
+        <ul>
+          <li>경로는 <code class="language-html highlighter-rouge">/usr/share/vim/vim81</code>과 같을 가능성이 높다</li>
+          <li>그 directory의 내용을 한 번 보자
+            <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">ls</span> /usr/share/vim/vim81
+autoload/     bugreport.vim       colors/     compiler/
+defaults.vim  delmenu.vim         doc/        evim.vim
+filetype.vim  ftoff.vim           ftplugin/   ftplugin.vim
+ftplugof.vim  gvimrc_example.vim  indent/     indent.vim
+indoff.vim    keymap/             lang/       macros/
+menu.vim      mswin.vim           optwin.vim  pack/
+plugin/       print/              rgb.txt     scripts.vim
+spell/        synmenu.vim         syntax/     tools/
+tutor/        vimrc_example.vim  
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>쉘에서 대강 count 해보면,
+            <ul>
+              <li>이 directory tree에 1,674 files가 있다는 것을 보여준다
+                <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>find /usr/share/vim/vim81 <span class="nt">-type</span> f | <span class="nb">wc</span> <span class="nt">-l</span>
+1674
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+              </li>
+              <li>그 것들중, 1,335 개는 <code class="language-html highlighter-rouge">.vim</code> files 이다
+                <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>find /usr/share/vim/vim81 <span class="nt">-type</span> f <span class="nt">-name</span> <span class="se">\*</span>.vim | <span class="nb">wc</span> <span class="nt">-l</span>
+1335
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+              </li>
+              <li>이 모든 파일들은, vimrc 처럼, plain Vim script이다</li>
+              <li>이 directory 내의 그들의 location은 언제 그들이 load될지 결정한다</li>
+              <li>그 들중 몇개만 Vim startup에서 load된다</li>
+              <li>그 들은 관련이 있을때만 load될 준비가 되어있는 천 개는 충분히 넘는 파일들이다</li>
+              <li>우리는 그 것에 대해 Bram(Vim 개발자)으로 부터 힌트를 얻어야 한다</li>
+              <li>Vim에서 <code class="language-html highlighter-rouge">runtimepath</code> option의 값을 살펴보면, 몇 가지 다른 paths를 볼 수 있다.
+                <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">set</span> <span class="nb">runtimepath</span>?
+  <span class="nb">runtimepath</span><span class="p">=~</span><span class="sr">/.vim,/</span>usr<span class="sr">/share/</span><span class="k">vim</span><span class="sr">/vim81,...,~/</span><span class="p">.</span><span class="k">vim</span>/after
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+              </li>
+              <li>
+<code class="language-html highlighter-rouge">runtimepath</code>의 맨 첫번째 entry는 <code class="language-html highlighter-rouge">~/.vim</code>이고
+                <ul>
+                  <li>이곳이 <code class="language-html highlighter-rouge">$VIMRUNTIME</code>의 구조를 모방하는 구조를 build할 수 있는 장소이다</li>
+                </ul>
+              </li>
+              <li>이곳이 당신의 개인적인 Vim runtime directory인 것이다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lose-the-source-luke">Lose the <code class="language-html highlighter-rouge">:source</code>, Luke</h2>
+
+<ul>
+  <li>Vim script로 작업한 경험이 있다면,
+    <ul>
+      <li>Vim script를 파일에서 읽어내기 위해</li>
+      <li>
+<code class="language-html highlighter-rouge">:source</code> 명령을 어떻게 사용하는지 알고 있을것이다</li>
+    </ul>
+  </li>
+  <li>mapping definitions 같은것들이 있는 어떤 분리된 파일을 load하기 위해
+    <ul>
+      <li>vimrc 파일에 아래와 같은 line을 가지고 있을 수있다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">source</span> <span class="p">~</span><span class="sr">/.vim/</span>mappings<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Vim은
+    <ul>
+      <li>우리가 방금 확인한 <code class="language-html highlighter-rouge">runtimepath</code> directories의 file layout과 동작하는
+        <ul>
+          <li>files를 load하기위한<code class="language-html highlighter-rouge">:runtime</code>이라는 또다른 command가 있다</li>
+        </ul>
+      </li>
+      <li>”!”표 없이 사용되면, 이 명령은
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">runtimepath</code> directories 내에서 그것을 발견한 첫번째 경로로 부터</li>
+          <li>Vim script commands를 read한다</li>
+        </ul>
+      </li>
+      <li>”!”표와 함께 사용되면, 이 명령은
+        <ul>
+          <li>경로 모두를 read한다</li>
+        </ul>
+      </li>
+      <li>양쪽 경우에서, globs( <code class="language-html highlighter-rouge">*</code> 과 <code class="language-html highlighter-rouge">?</code> 문자)로
+        <ul>
+          <li>filename pattern matching을 포함할 수 있다
+            <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">runtime</span> <span class="nb">syntax</span>/<span class="k">c</span><span class="p">.</span><span class="k">vim</span>
+<span class="k">runtime</span><span class="p">!</span> <span class="nb">syntax</span>/<span class="k">c</span><span class="p">.</span><span class="k">vim</span>
+<span class="k">runtime</span><span class="p">!</span> */maps<span class="p">.</span><span class="k">vim</span>
+<span class="k">runtime</span><span class="p">!</span> **/maps<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>앞쪽의 <code class="language-html highlighter-rouge">~/.vim</code> 경로는 이런 패턴에 포함시키지 않는 것을 주목하라</li>
+    </ul>
+  </li>
+  <li>마지막 example의 <a href="https://vimhelp.org/editing.txt.html?#starstar-wildcard">double asterisk</a>는
+    <ul>
+      <li>directory path elements의 세트를 표현한다</li>
+      <li>elements는 100 levels 깊이까지 표현할 수 있다</li>
+      <li>이것은 <code class="language-html highlighter-rouge">~/.vim/foo/bar/baz/quux/maps.vim</code>도 발견하여 load할 수 있다는 것이다</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">:source</code>와는 다르게, <code class="language-html highlighter-rouge">:runtime</code>은
+    <ul>
+      <li>아무 파일도 찾지 못해도 에러를 발생시키지 않는다</li>
+      <li>이것은 파일의 부재가 에러 조건이 아닌 경우 boilerplate checks?를 피한다</li>
+    </ul>
+  </li>
+  <li>Vim’s sctartup process의 많은 부분은
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">:runtime</code> commands의 얇은 wrappers 이다</li>
+      <li>
+<a href="https://vimhelp.org/filetype.txt.html?#%3Afiletype"><code class="language-html highlighter-rouge">:filetype</code></a> 을 포함하여, its other commands의 일부분도 마찬가지이다</li>
+    </ul>
+  </li>
+  <li>Vim’s bundled runtime code를
+    <ul>
+      <li>비활성화, 대체, 수정, 확장하기 위해</li>
+      <li>Vim’s bundled runtime code를</li>
+      <li>실행하기 전 , 아니면 그것 대신, 혹은 그 후에</li>
+      <li>우리의 own code를 실행하는데</li>
+      <li>위 사실(바로 전문장)을 활용할 수 있다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="turn-on-plugin-drop-out">Turn on, <code class="language-html highlighter-rouge">plugin</code>, drop out</h2>
+
+<ul>
+  <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kbs4547&logNo=20181779004">제목의 유래, Turn on, Tune In, Drop out</a></li>
+  <li>vimrc 파일을 나누는 작업은
+    <ul>
+      <li>간단한 configuration을 넘어서 확장된 코드 블럭을 찾아,</li>
+      <li>의미있는 단위로 그룹화하는 것으로 시작할 수 있다</li>
+      <li>이 부분을 추출하여 <code class="language-html highlighter-rouge">plugin</code> 하위 디렉토리 아래의 독립된 파일로 둘수 있다</li>
+    </ul>
+  </li>
+  <li>예를 들어, 다른 사람의 vimrc files를 읽어보면
+    <ul>
+      <li>후행 공백을 편리하게 제거하는 문제를 해결하는 approaches를 자주 볼 수 있다</li>
+      <li>여기에, <a href="https://vim.fandom.com/wiki/Remove_unwanted_spaces">Vim Tips wiki</a>로 부터의 한 function안에 담긴, 한가지 approach가 있다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre><span class="k">function</span> StripTrailingWhitespace<span class="p">()</span>
+  <span class="k">if</span> <span class="p">!</span>&amp;<span class="nb">binary</span> &amp;&amp; &amp;<span class="k">filetype</span> <span class="p">!=</span> <span class="s1">'diff'</span>
+    normal <span class="k">mz</span>
+    normal Hmy
+    %s<span class="sr">/\s\+$/</span>/<span class="k">e</span>
+    normal 'yz<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+    normal `z
+  <span class="k">endif</span>
+<span class="k">endfunction</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>이런 종류의 function은 보통 그 것을 호출하는 mapping도 따라온다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>nnoremap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">x</span> <span class="p">:&lt;</span>C<span class="p">-</span>U<span class="p">&gt;</span><span class="k">call</span> StripTrailingWhitespace<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>이 function은 vimrc가 source될 때마다 load될 필요가 없다</li>
+      <li>일단 정의되면,
+        <ul>
+          <li>적당한 때에 호출될 준비가 된 채로</li>
+          <li>그 곳에 있기만 하면 된다</li>
+        </ul>
+      </li>
+      <li>사실, Vim은 이 funtion이 있는 vimrc가 reload되면 에러를 던진다</li>
+      <li>우리는 <code class="language-html highlighter-rouge">function!</code> 으로 function을 declare함으로써 문제를 고칠수도 있지만
+        <ul>
+          <li>다른 방법도 있다:</li>
+          <li>
+<code class="language-html highlighter-rouge">~/.vimrc</code>에 function definition을 넣는 대신,</li>
+          <li>
+<code class="language-html highlighter-rouge">~/.vim/plugin</code> 내의 <code class="language-html highlighter-rouge">.vim</code> 파일 안으로 넣는 방법이다</li>
+          <li>즉, <code class="language-html highlighter-rouge">~/.vim/plugin/strip_trailing_whitespace.vim</code>을 사용한다</li>
+        </ul>
+      </li>
+      <li>일단 이 파일이 생성되면,
+        <ul>
+          <li>Vim을 새로 시작해서</li>
+          <li>우리의 plugin이 load되었는지</li>
+          <li>
+<code class="language-html highlighter-rouge">:scriptnames</code>의 출력을 체크하여 확인할 수 있다
+            <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span>scriptname
+  <span class="p">...</span>
+  <span class="m">10</span><span class="p">:</span> <span class="p">~</span><span class="sr">/.vim/</span>plugin/strip_trailing_whitespace<span class="p">.</span><span class="k">vim</span>
+  <span class="p">...</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>호출하는 함수가 정의되기 전에 설정되었음에도 불구하고,
+            <ul>
+              <li>vimrc에 남아 있는 <leader>x mapping이 여전이 작동하는 것에 주목해라</leader>
+</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="whats-a-plugin-anyway">What’s a plugin, anyway?</h3>
+
+<ul>
+  <li>왜 <code class="language-html highlighter-rouge">~/.vim/plugin</code>에 script를 넣어야 하나?
+    <ul>
+      <li>당신은 우리의 example이 real plugin이 아니라고 이의를 주장할 수도 있다</li>
+      <li>즉, 그것은 단순히 하나의 function일 뿐이라고</li>
+      <li>하지만, Vim에게는 그 사실이 의미있는 구분이 아니다</li>
+      <li>startup 때에, Vim은
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">runtime</code>에 있는 각 디렉토리의 <code class="language-html highlighter-rouge">plugin</code> 하위 디렉토리의</li>
+          <li>어떤 형식이든 상관없이 모든 <code class="language-html highlighter-rouge">.vim</code> files를 souce한다</li>
+          <li>그 파일들이 무엇을 contain하든지 구분하지 않는다</li>
+          <li>관계있는 abbreviations ? Custom 명령 ?</li>
+          <li>특정 machine이나 OS에 의존하는 Code? 모두 가능하다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="plugin-subdirectories">Plugin subdirectories</h3>
+
+<ul>
+  <li>마찬가지로,
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">*.vim</code> files가 <code class="language-html highlighter-rouge">plugin</code> directory 에서 재귀적으로 로드되기 때문에</li>
+      <li>원한다면 그 파일들을 하위 디렉토리들에 organize 할 수 있다
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>~/.vim/plugin/insert/cancel.vim
+~/.vim/plugin/insert/suspend.vim
+~/.vim/plugin/visual/region.vim
+~/.vim/plugin/whitespace/squeeze.vim
+~/.vim/plugin/whitespace/trim.vim
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>subdirectories의 이름은 중요하지 않다; Vim은 그냥 다 뒤질것이다</li>
+      <li>Vim의 얇게 가려진 <code class="language-html highlighter-rouge">:runtime</code> wrappers를 언급한 것을 기억하는가?</li>
+      <li>이것이 그것들중 하나다</li>
+      <li>이곳에서 단서는
+        <ul>
+          <li>Vim이 이 단계에서 내부적으로 수행하는 것과 유사하게</li>
+          <li>
+<a href="https://vimhelp.org/starting.txt.html?#load-plugins"><code class="language-html highlighter-rouge">:hep load-plugins</code></a>가 제안하는 command에 있다
+            <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">runtime</span><span class="p">!</span> plugin<span class="sr">/**/</span>*<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="local-script-scope">Local script scope</h3>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">~/.vim/plugin/</code>내의 구별되는 파일내에
+    <ul>
+      <li>이런 코드 블럭을 집어넣는 것은 또 다른 이점이 있다</li>
+      <li>이런 이점중 하나는 그 스크립트 내에서만 필요한 functions와 variables를 scoping하는 Vim의 <a href="https://vimhelp.org/eval.txt.html?#script-variable">script-variable</a> 이다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">let</span> <span class="nv">s:myvar</span> <span class="p">=</span> <span class="s1">'value'</span>
+<span class="k">function</span> <span class="nv">s:Myfunc</span><span class="p">()</span>
+  <span class="p">...</span>
+<span class="k">endfunction</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+        <ul>
+          <li>이 것은 file이 source되는 시점에 모든 function names과 variable names와 구별되는 접두사를 적용한다</li>
+          <li>이 것이 의미하는 것은 당신의 configuration중 어딘가 다른 곳에 정의된 variable을 무시할지도 모른다는 걱정을 할 필요가 없다는 것이다</li>
+          <li>mappings를 정의할 때 주의할 점이 있다; <a href="https://vimhelp.org/map.txt.html?#%3CSID%3E">〈SiD〉prefixes</a>를 어떻게 사용하는지 확실히 이해하도록 <code class="language-html highlighter-rouge">:help script-variable</code>를 주의깊게 읽어봐라</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="short-circuiting-and-load-guards">Short-circuiting and load guards</h3>
+
+<ul>
+  <li>분리된 script files의 또하나의 advantage는 script를 short-circuit하는 ability 이다
+    <ul>
+      <li>, 분리하는 이유는 적당치 않은경우 loading 되지 않도록 하기 위함이다</li>
+      <li>이 작업은 script의 시작부분에서 나머지 부분이 load되어야 하는지 checking 하는 것으로 수행된다</li>
+      <li>,그리고 로딩되지 않아야한다면 <code class="language-html highlighter-rouge">:finish</code>명령으로 skipping한다</li>
+    </ul>
+  </li>
+  <li>이 기능은 다음과 같은 options를 체크하는데 사용할 수 있다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">compatible</code>, Vim version number, 어떤 feature의 availabilty, 혹은 plugin이 이미 load되었는지 여부
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="k">if</span> &amp;<span class="nb">compatible</span>
+<span class="se">    \</span> <span class="p">||</span> <span class="k">v</span><span class="p">:</span>versiion <span class="p">&lt;</span> <span class="m">700</span>
+<span class="se">    \</span> <span class="p">||</span> <span class="p">!</span><span class="nb">has</span><span class="p">(</span><span class="s1">'folding'</span><span class="p">)</span> 
+<span class="se">    \</span> <span class="p">||</span> <span class="nb">exists</span><span class="p">(</span><span class="s1">'g:loaded_myplugin'</span><span class="p">)</span>
+  <span class="k">finish</span>
+<span class="k">endif</span>
+<span class="k">let</span> <span class="nv">g:loaded_myplugin</span> <span class="p">=</span> <span class="m">1</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>이런 방법으로,
+    <ul>
+      <li>당신의 모든 feature-dependent한 코드를</li>
+      <li>투박한(clumsy) <code class="language-html highlighter-rouge">:if</code> 블럭으로 감싸지 않아도 된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-question-of-mappings">The question of mappings</h3>
+
+<ul>
+  <li>plugin 자체에서 정의된 function을 사용하는 mapping을 include 해야 하는가?</li>
+  <li>당신이 정하는 것이지만, plugin author는
+    <ul>
+      <li>vimrc files를 user-level preferences가 가야할 곳으로 생각하고 싶어하고</li>
+      <li>plugins를 그들이 호출하는 code가 가야할 곳으로 생각하고 싶어한다</li>
+      <li>Mapping choices는 개인적인 기호이며, former 범주에 들어간다</li>
+    </ul>
+  </li>
+  <li>plugin이 수행하는 작업과 plugin이 호출 방법 사이에서
+    <ul>
+      <li>some abstraction을 유지하고 싶다면,</li>
+      <li>plugin file로부터 interface를 노출하기 위해 <code class="language-html highlighter-rouge"><span class="nt">&lt;plug&gt;</span> prefix</code> mappings를 사용할 수 있다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="k">function</span> <span class="nv">s:StripTrailngWhitespace</span><span class="p">()</span>
+  <span class="p">...</span>
+<span class="k">endfunction</span>
+nnoremap <span class="p">&lt;</span>Plug<span class="p">&gt;</span>StripTrailingWhitespace
+<span class="se">    \</span> <span class="p">:&lt;</span>C<span class="p">-</span>U<span class="p">&gt;</span><span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>StripTrailingWhitespace<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>그 다음에 vimrc에서 that target에 대한 당신의 mapping 선택을 넣을수 있다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">x</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>StripTrailingWhitespace
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>만약에 누군가 다른이가 당신의 plugin을 사용하고 싶다면,
+        <ul>
+          <li>this는 it에 대해 그들 자신의 mappings를 선택하도록 만든다</li>
+          <li>좀더 직접적으로 (more straightforward)</li>
+        </ul>
+      </li>
+      <li>충분히 발전된 plugin files를 작성할때의 good mapping practices에 대한
+        <ul>
+          <li>좀 더 일반적인 조언이 <code class="language-html highlighter-rouge">:help write-plugin</code>에 있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="not-really-my-filetype">Not really my <code class="language-html highlighter-rouge">:filetype</code>
+</h2>
+
+<ul>
+  <li>big vimrc files에서의 또 다른 pattern은
+    <ul>
+      <li>a certain filetype의 buffers에 대해서만 options를 설정하는 것이다</li>
+    </ul>
+  </li>
+  <li>예를 들면, 이 코드는
+    <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>autocmd <span class="nb">FileType</span> mail <span class="k">setlocal</span> <span class="nb">spell</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>텍스트에서 철자 오류 후보들을 highlight하려고</li>
+      <li>‘spell’ option을, mail filetype buffers에서만 동작하게 하려고 한다</li>
+    </ul>
+  </li>
+  <li>여기서 주목할 첫번째 thing은
+    <ul>
+      <li>it을 reloading 해도 같은 hook이 여러번 정의되지 않도록</li>
+      <li>this는 self-clearing <code class="language-html highlighter-rouge">augroup</code>안에 둘러쌓여져야 한다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>augroup ftmail
+autocmd<span class="p">!</span>
+autocmd <span class="nb">FileType</span> mail <span class="k">setlocal</span> <span class="nb">spell</span>
+augroup END
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>이것은 좀 성가시다, 하지만 이런 boilerplate를 피할 방법이 있다</li>
+    </ul>
+  </li>
+  <li>우리의 <code class="language-html highlighter-rouge">autocmd</code>에 대해 주목할 두번째 thing은
+    <ul>
+      <li>그 sesstion에서 a mail file이 실제로 편집되었는지에 관계없이,</li>
+      <li>it이 vimrc가 load될 때마다 set 된다는 점이다</li>
+      <li>그러므로
+        <ul>
+          <li>it이 관련이 있을때만 load되도록,</li>
+          <li>this를 a filetype plugin이나 ftplugin에 집어 넣는것은 합리적이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>a buffer의 filetype을 set하는 <code class="language-html highlighter-rouge">autocmd</code> hooks는
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">$VIMRUNTIME/filetype.vim</code>에 정의되어 있다</li>
+      <li>그 hooks는 추측하는데 heuristics를 적용하고 나서
+        <ul>
+          <li>a buffer의 type을 설정한다</li>
+          <li>그리고나서 Vim은 그 후에 any appropriate filetype plugins를 수행한다</li>
+          <li>:<code class="language-html highlighter-rouge">ftplugin/FILETYPE.vim</code>으로 이름지어진 <code class="language-html highlighter-rouge">runtimepaht</code> directories에 있는 files</li>
+        </ul>
+      </li>
+      <li>this는,
+        <ul>
+          <li>우리의 <code class="language-html highlighter-rouge">spell</code> setting 주위의 <code class="language-html highlighter-rouge">autocmd</code> hooks가</li>
+          <li>있을 필요가 없다는 것을 의미한다</li>
+        </ul>
+      </li>
+      <li>우리는
+        <ul>
+          <li>이미 우리에게 허용된 filetype 변경을 위한 hooks를 가지고 있고,</li>
+          <li>them을 사용하기 위해 <code class="language-html highlighter-rouge">~/.vim/ftplugin/mail.vim</code>에 아래의 한 줄을 넣기만하면 된다
+            <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">setlocal</span> <span class="nb">spell</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>위 작업이 수행된 채로,
+            <ul>
+              <li>새로운 <code class="language-html highlighter-rouge">mail</code> buffer를 편집하는 경우,</li>
+              <li>우리는 filetype이 선택될 때 우리의 filetype plugin이 load된다는 것을</li>
+              <li>`:scriptnames 를 사용하여 확인할수 있다
+                <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">set</span> <span class="k">filetype</span><span class="p">=</span>mail
+<span class="p">:</span><span class="k">scriptnames</span>
+  <span class="p">...</span>
+  <span class="m">20</span><span class="p">:</span> <span class="p">~</span><span class="sr">/.vim/</span>ftplugin/mail<span class="p">.</span><span class="k">vim</span>
+  <span class="p">...</span>
+<span class="p">:</span><span class="k">set</span> <span class="nb">spell</span>?
+ <span class="nb">spell</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+              </li>
+              <li>이 방법이 좋긴하지만 좀더 개선할 수 있다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="loading-filetype-configuration-afterwards">Loading filetype configuration afterwards</h3>
+
+<ul>
+  <li>우리의 <code class="language-html highlighter-rouge">spell</code> seting을
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">~/.vim/ftplugin/mail.vim</code> 안에 집어넣기 보다는,</li>
+      <li>
+<code class="language-html highlighter-rouge">~/.vim/after/ftplugin/mail.vim</code> 에 넣을 수 있다</li>
+      <li>
+<code class="language-html highlighter-rouge">after</code>로 이름붙은 추가된 경로에 주목하라</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">after</code> runtime directory안에 있는 files는
+    <ul>
+      <li>Vim에 포함된 the analoguous runtime files 다음에(after) load된다</li>
+      <li>이 경로를 이용하여, 우리는
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">$VIMRUNTIME/ftplugin/mail.vim</code>안에 있는 <code class="language-html highlighter-rouge">mail</code> filetype plugin이 source 된 다음에(after)</li>
+          <li>우리의 option이 설정되는 것을 보장할 수 있다</li>
+          <li>이방법으로 filetype plugin이 한 작업을 당신이 싫어할 경우 덮어쓸(override) 수 있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="breaking-up-filetype-plugins">Breaking up filetype plugins</h3>
+
+<ul>
+  <li>좀 더 자잘하게 나눌 필요가 있다면,
+    <ul>
+      <li>files를 filetype 이름이 붙은 subdirectories로 집어넣어도 된다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="p">~</span><span class="sr">/.vim/</span>after<span class="sr">/ftplugin/</span>mail/<span class="nb">spell</span><span class="p">.</span><span class="k">vim</span>
+<span class="p">~</span><span class="sr">/.vim/</span>after<span class="sr">/ftplugin/</span>mail/quote<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">filetype_스크립트이름</code> 형태도 똑같이 작동한다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="p">~</span><span class="sr">/.vim/</span>after<span class="sr">/ftplugin/</span>mail_spell<span class="p">.</span><span class="k">vim</span>
+<span class="p">~</span><span class="sr">/.vim/</span>after<span class="sr">/ftplugin/</span>mail_quote<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>지금쯤 짐작하겠지만, filetype switching은 또 하나의 <code class="language-html highlighter-rouge">:runtime</code> wrapper이다</li>
+      <li>
+<code class="language-html highlighter-rouge">mail</code> filetype으로의 switching은 아래 command를 효과적으로 실행한다
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">runtime</span><span class="p">!</span> ftplugin<span class="sr">/mail.vim ftplugin/</span>mail_*<span class="p">.</span><span class="k">vim</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="undoing-filetype-settings">Undoing filetype settings</h3>
+
+<ul>
+  <li>a buffer의 filetype이 변경된다면,
+    <ul>
+      <li>우리가 적용한 어떤 local cinfiguration라도 reverse해야한다</li>
+      <li>우리는 이 작업을 <code class="language-html highlighter-rouge">b:undo_ftplugin</code> 변수로 할수 있는데,
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>이 변수는 (</td>
+                  <td>)로 구분된 commands의 목록을 포함한다</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>a buffer의 filetype이 바뀌면,
+    <ul>
+      <li>the commands는 이전 fieltype에 대한 buffer-specific settings를 undo하며,</li>
+      <li>새로운 filetype의 plugins이 load되도록 준비된다.</li>
+    </ul>
+  </li>
+  <li>각 filetype plugin 설정 후에,
+    <ul>
+      <li>that change를 <code class="language-html highlighter-rouge">b:undo_ftplugin</code>으로 되돌리도록,</li>
+      <li>해당 commands를 추가해야 한다.</li>
+    </ul>
+  </li>
+  <li>우리의 <code class="language-html highlighter-rouge">spell</code> 예제에서, 이렇게 할것이다:
+    <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="k">setlocal</span> <span class="nb">spell</span>
+<span class="k">let</span> <span class="nv">b:undo_ftplugin</span> <span class="p">.=</span> <span class="s1">'|setlocal spell&lt;'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>여기에 사용된 <code class="language-html highlighter-rouge">spell<span class="nt">&lt;</span></code> 문법은,
+        <ul>
+          <li>left angle 꺽쇠가 뒤따라 붙었는데,</li>
+          <li>
+<code class="language-html highlighter-rouge">mail</code> filetype이 unload될 때</li>
+          <li>‘spell’의 local value가 ‘spell’의 global value와 match 되도록</li>
+          <li>복구되어야 한다는 것을 지정한다(specify)</li>
+        </ul>
+      </li>
+      <li>a filetype을 setting한 이후,
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">:let</code> 명령으로 <code class="language-html highlighter-rouge">b:undo_ftplugin</code> 변수의 값을 check할수 있다
+            <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">set</span> <span class="k">filetype</span><span class="p">=</span>mail
+<span class="p">:</span><span class="k">let</span> <span class="nv">b:undo_ftplugin</span>
+<span class="nv">b:undo_ftplugin</span>     <span class="k">setl</span> <span class="nb">modeline</span><span class="p">&lt;</span> <span class="nb">tw</span><span class="p">&lt;</span> <span class="k">fo</span><span class="p">&lt;</span> <span class="nb">comments</span><span class="p">&lt;|</span><span class="k">setlocal</span> <span class="nb">spell</span><span class="p">&lt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-difference-with-indent">The difference with indent</h3>
+
+<ul>
+  <li>indentation에 관계된 Filetype-specific code는
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">~/.vim/indent/FILETYPE.vim</code> 이나</li>
+      <li>
+<code class="language-html highlighter-rouge">~/.vim/after/indent/FILETYPE.vim</code> 같은</li>
+      <li>다른 location으로 다시 들어간다</li>
+    </ul>
+  </li>
+  <li>당신의 vimrc의 <code class="language-html highlighter-rouge">:filetype</code> 호출에 <code class="language-html highlighter-rouge">indent</code> 단어를 가지고 있다면
+    <ul>
+      <li>those files는 source된다</li>
+      <li>예를 들면,
+        <ul>
+          <li>‘autoindent’나 ‘indentexpr’ settings를 변경하는 files에 대해</li>
+          <li>이 layout을 사용해야 한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>원한다면 indent settings를 filetype plugin에 넣을수 있지만,
+    <ul>
+      <li>우리는 things에 알맞는 자리를 찾아주려고 한다</li>
+    </ul>
+  </li>
+  <li>it을 이런 방식으로 하는 것이
+    <ul>
+      <li>indentation settings를 모든 다른 filetype-specific settings로 부터</li>
+      <li>분리되도록 만든다</li>
+    </ul>
+  </li>
+  <li>this는
+    <ul>
+      <li>사용자들의 vimrc’s <code class="language-html highlighter-rouge">:filetype</code> 호출에 적절한 arguments를 사용하여,</li>
+      <li>그들이 원하는 것만 load하는 쉬운 방법을 제공한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="detecting-filetypes">Detecting filetypes</h3>
+
+<ul>
+  <li>filetype-dependent logic에 대한 마지막 note로,
+    <ul>
+      <li>its filename이나 contents에 기초한, 첫번째 장소에</li>
+      <li>a buffer’s filetype을 설정할 어떤 hooks라도 가지고 있다면,</li>
+      <li>those는 <code class="language-html highlighter-rouge">ftdetect</code> directory에 들어간다</li>
+      <li>this를 <code class="language-html highlighter-rouge">~/.vim/ftdetect/irssilog</code>에 넣을것이다,예를 들면:
+        <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *<span class="sr">/irc/</span>*<span class="p">.</span><span class="nb">log</span> <span class="k">setfiletype</span> irssilog
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">~/.vim/ftdetect</code>에 hooks를 넣는것은
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">filetype.vim</code>에 정의된 <code class="language-html highlighter-rouge">filetypedetect augroup</code>의 일부로서</li>
+      <li>they가 source됨을 의미한다</li>
+    </ul>
+  </li>
+  <li>this는
+    <ul>
+      <li>it이 이미 완료되었기 때문에</li>
+      <li>
+<code class="language-html highlighter-rouge">autocmd</code> definitions을 a self-clearing <code class="language-html highlighter-rouge">augroup</code>으로 둘러쌀 필요가 없는</li>
+      <li>another context 이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="be-water-my-friend">Be water, my friend</h2>
+
+<ul>
+  <li>위에 설명한 모든것은 단지 시작일 뿐이다.
+    <ul>
+      <li>우리는
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">~/.vim/autoload</code>에 정의된, 속도를 위한 lazy-loading functions과</li>
+          <li>
+<code class="language-html highlighter-rouge">~/.vim/compiler</code>에 있는, ‘makeprg’과 ‘errorformat’의 설정을 위한
+            <ul>
+              <li>custome <code class="language-html highlighter-rouge">:compiler</code> 정의조차</li>
+            </ul>
+          </li>
+          <li>다루지 않았다</li>
+        </ul>
+      </li>
+      <li>이들은
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">:runtime</code> loading을 둘러싼,</li>
+          <li>vim functionality의 한층 더 나아간 사례들이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Vim이 configuration과 customizing에 상당한 flexibility를 주는 반면에,
+    <ul>
+      <li>관련 configuration을 적시에 로딩하기위한 <code class="language-html highlighter-rouge">Way of Vim</code>은 분명히 있으며,</li>
+      <li>그것이 어떻게 동작하는지 조금 배우기만 한다면,</li>
+      <li>그만큼 당신의 editor와는 덜 다투게 될것이다.</li>
+      <li>이것이 당신에게 까다로워 보인다면,
+        <ul>
+          <li>당신이 Vim을 처음 배웠을때를 돌아보라</li>
+        </ul>
+      </li>
+      <li>HJKL 키로 편집기내에서 이동하는 것이,
+        <ul>
+          <li>합리적으로 보이기 전까지, 얼마나 이상해보였는지 기억하는가?</li>
+        </ul>
+      </li>
+      <li>normal mode가 합리적으로 보이기 전까지,
+        <ul>
+          <li>insert mode에 머물러 있기를 얼마나 원했는지 기억하는가?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>it을 무시하거나 it과 싸우는 대신에,
+    <ul>
+      <li>Vim runtime file 구조내의 일하는 것은</li>
+      <li>당신의 <code class="language-html highlighter-rouge">~/.vim</code> directory를</li>
+      <li>모든것이 구비된 장소이자 모든것이 제자리에 있는,</li>
+      <li>정교한 도구상자로 만들어 준다</li>
+      <li>이것을 노력을 들일만한 일이다</li>
+    </ul>
+  </li>
+  <li>
+</li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

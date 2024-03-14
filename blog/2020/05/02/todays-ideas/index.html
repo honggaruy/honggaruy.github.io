@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>오늘의 영감 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="태그 표시 관련">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/05/02/todays-ideas/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="오늘의 영감">
+    <meta property="og:description" content="태그 표시 관련">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/05/02/todays-ideas/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/05/02/todays-ideas/">
+    <meta name="twitter:title" content="오늘의 영감">
+    <meta name="twitter:description" content="태그 표시 관련">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/04/30/todays-ideas/">« 원래 제목은 오늘의 영감이지만 .. 제목을 아주아주 길게 해볼까 CSS RULES for Wrapping Text 좀 테스트 해볼려구 어라 아직도 끝이 아니네</a>
+          
+          
+            <a class="next" href="/blog/2020/05/07/google-custom-search/">구글 맞춤 검색 안됨 [해결] »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">오늘의 영감</h1>
+        <p class="created-date">
+            2020.05.02
+        </p>
+
+
+        <div class="post-tag">
+    tags wiki-setting
+</div>
+
+        <h2>태그 표시 관련</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EA%B0%9C%EC%9D%B8%EC%9C%84%ED%82%A4%EC%97%90%EC%84%9C-%ED%83%9C%EA%B7%B8-%ED%91%9C%EC%8B%9C" id="markdown-toc-개인위키에서-태그-표시">개인위키에서 태그 표시</a></li>
+  <li><a href="#%EA%B7%B8%EB%8F%99%EC%95%88-%EB%B0%80%EB%A6%B0-push-%EC%B2%98%EB%A6%AC-%ED%95%98%EA%B8%B0" id="markdown-toc-그동안-밀린-push-처리-하기">그동안 밀린 push 처리 하기</a></li>
+</ul>
+
+<h1 id="개인위키에서-태그-표시">개인위키에서 태그 표시</h1>
+
+<ul>
+  <li>개인wiki 의 index.html에서는 태그가 잘 표시되는데 post의 index.html은 태그표시가 잘안됨</li>
+  <li>johngrib 님의 관련 커밋들을 보면 ….
+    <ul>
+      <li>관련 커밋들 <a href="https://github.com/johngrib/johngrib.github.io/commits/master/_includes/createLink.html">링크</a>
+        <ul>
+          <li>태그 링크 생성 방식 변경, tag link 생성 코드 업데이트 등등..</li>
+          <li>특히 <a href="https://github.com/johngrib/johngrib.github.io/commit/6e47d6f778d1f95f702838ac14c301454c36dc88#diff-e55396c87b350d53c584fc83984eecbe">index.html의 태그 링크 생성 버그 수정 commit</a>이 관련이 많음</li>
+          <li>전체 홈에서는 신규 태그 방식이 적용되었는데 ..</li>
+          <li>블로그 홈에서는 구 태그 방식이 남아있어서 문제임</li>
+        </ul>
+      </li>
+      <li>원래 각자 처리하다가 createLink.html로 일원화 했다는 것을 알수 있음</li>
+      <li>johngrib님도 전체 홈에서는 변경했는데 블로그 홈에서는 적용하지 않았음</li>
+      <li>최근 커밋들을 보니 블로그 글을 위키로 변경하고 앞으로 블로그 글은 안쓰실 듯해서..</li>
+      <li>…알려드리지 않기로 함.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="그동안-밀린-push-처리-하기">그동안 밀린 push 처리 하기</h1>
+
+<ul>
+  <li>git commit 주석 작성</li>
+</ul>
+
+<p>[add-contents] 그동안 밀린 push 처리 하라</p>
+
+<ul>
+  <li>vim 카테고리 문서에  Vimwiki cheatsheet  링크 추가</li>
+  <li>[wiki 문서 추가] 용어 설명 모음</li>
+  <li>[wiki 문서 추가] language - GoogleAppsScript 카테고리 추가</li>
+  <li>[wiki 문서 추가] 엑셀 시트를 구글 시트로 바꾸기 문서 추가</li>
+  <li>vim 폴딩 문서에서 tag 추가 ( vim 특수문자 입력하기를 가끔 쓰는데 잊어먹어서 )</li>
+  <li>블로그 홈 문서에 블로그 성격 문구 추가</li>
+  <li>그 외 4월 15일 ~ 5월 2일의 블로그 문서 추가</li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

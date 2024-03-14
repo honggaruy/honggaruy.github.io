@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 39주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="09/26 (월) ~ 10/02 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/09/26/week-39th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 39주차 기록">
+    <meta property="og:description" content="09/26 (월) ~ 10/02 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/09/26/week-39th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/09/26/week-39th/">
+    <meta name="twitter:title" content="2022년 39주차 기록">
+    <meta name="twitter:description" content="09/26 (월) ~ 10/02 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/09/05/week-36th/">« 2022년 36주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/10/10/week-41th/">2022년 41주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 39주차 기록</h1>
+        <p class="created-date">
+            2022.09.26
+        </p>
+
+
+        <div class="post-tag">
+    css sass
+</div>
+
+        <h2>09/26 (월) ~ 10/02 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#css--sass--%EB%B6%84%EC%84%9D" id="markdown-toc-css--sass--분석">css &amp; sass  분석</a>    <ul>
+      <li><a href="#parent-selector--sass" id="markdown-toc-parent-selector--sass">parent selector , SASS</a></li>
+      <li><a href="#pseudo-elements-%EC%A4%91-%ED%95%98%EB%82%98%EC%9D%B8-before" id="markdown-toc-pseudo-elements-중-하나인-before">Pseudo-elements 중 하나인 <code class="language-html highlighter-rouge">::before</code></a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="css--sass--분석">css &amp; sass  분석</h1>
+
+<ul>
+  <li>위키의 SCSS 분석중</li>
+  <li>
+<code class="language-html highlighter-rouge">_base.scss</code>에 다음과 같은 문장은…
+    <div class="language-scss highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nc">.post-content</span> <span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span> <span class="p">{</span>
+    <span class="k">&amp;</span><span class="nd">:before</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span><span class="nv">$theme-color</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>아래와 같이 render 된다
+    <div class="language-css highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nc">.post-content</span> <span class="nt">h1</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h2</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h3</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h4</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h5</span><span class="nd">:before</span><span class="o">,</span> <span class="nt">h6</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#47146C</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="parent-selector--sass">parent selector , SASS</h2>
+
+<ul>
+  <li>여기서 <code class="language-html highlighter-rouge"><span class="err">&amp;</span></code>가 뭔지 몰라 찾아봤다</li>
+  <li>CSS 문법은 아니고 sass 문법임. <a href="https://sass-lang.com/documentation/style-rules/parent-selector">Parent Selector</a>
+</li>
+  <li>간단하게 말하면 nested selector에서 바깥쪽 selector로 치환해주는 역할을 한다</li>
+  <li>2014년 배포된 <a href="https://sass-lang.com/blog/sass-34-is-released#using-in-sassscript">Sass 3.4 Release</a> 부터 반영되었다</li>
+  <li>참고 링크 : <a href="https://jekyllrb.com/docs/step-by-step/07-assets/#sass">jekyll sass</a>
+</li>
+</ul>
+
+<h2 id="pseudo-elements-중-하나인-before">Pseudo-elements 중 하나인 <code class="language-html highlighter-rouge">::before</code>
+</h2>
+
+<ul>
+  <li>관련링크 : <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">::before (:before)</a>
+</li>
+  <li><a href="https://ordinary-code.tistory.com/141">CSS의 가상요소(Pseudo-element)란?</a></li>
+  <li>실체가 있지 않아도 특정 element 바로 앞의 요소를 지칭하여 CSS 속성을 정할수 있다</li>
+  <li>이 경우는 각각의 header 앞에 있는 <code class="language-html highlighter-rouge">글머리표</code>의 속성을 지정하고 있다</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

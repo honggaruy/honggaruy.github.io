@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Properties Serveice 사용법 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="오늘의 영감 제목은 그만 써야지..">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/06/04/todays-ideas/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Properties Serveice 사용법">
+    <meta property="og:description" content="오늘의 영감 제목은 그만 써야지..">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/06/04/todays-ideas/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/06/04/todays-ideas/">
+    <meta name="twitter:title" content="Properties Serveice 사용법">
+    <meta name="twitter:description" content="오늘의 영감 제목은 그만 써야지..">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/05/11/todays-ideas/">« 오늘의 영감</a>
+          
+          
+            <a class="next" href="/blog/2020/06/15/week-25th/">25주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">Properties Serveice 사용법</h1>
+        <p class="created-date">
+            2020.06.04
+        </p>
+
+
+        <div class="post-tag">
+    google-apps-script
+</div>
+
+        <h2>오늘의 영감 제목은 그만 써야지..</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#properties-service" id="markdown-toc-properties-service">Properties Service</a>    <ul>
+      <li>
+<a href="#%EA%B7%B8%EB%83%A5-%EC%A0%95%EB%A6%AC%ED%95%98%EB%A9%B4%EC%84%9C-%EB%B3%B4%EB%8A%94-properties-service" id="markdown-toc-그냥-정리하면서-보는-properties-service">그냥 정리하면서 보는 Properties Service</a>        <ul>
+          <li><a href="#data-format" id="markdown-toc-data-format">Data format</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EC%8B%A4%EC%A0%9C-%EC%82%AC%EC%9A%A9%EB%A1%80" id="markdown-toc-실제-사용례">실제 사용례</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#typescript%EB%A1%9C-%EC%9E%91%EC%84%B1%ED%95%B4%EC%84%9C-%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B4%EB%95%8C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C%EB%A1%9C-%EB%B3%80%ED%99%98%EB%90%A8" id="markdown-toc-typescript로-작성해서-구글시트에-올릴때-한글이-유니코드로-변환됨">typescript로 작성해서 구글시트에 올릴때 한글이 유니코드로 변환됨</a>    <ul>
+      <li><a href="#%EC%B0%B8%EA%B3%A0" id="markdown-toc-참고">참고</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="properties-service">Properties Service</h1>
+
+<ul>
+  <li>
+<a href="https://github.com/markgitset/BetterLog/blob/master/Code.gs">BetterLog 코드</a>를 보니…가운데쯤에 Best practice라고 나오는데..
+    <ul>
+      <li>가운데쯤 : function info() 의 함수 주석</li>
+      <li>.. ScriptProperties.getProperty(‘BetterLogLevel’)).. 을 쓰라고 나온다.</li>
+      <li>따라서 해보다보니… <a href="https://developers.google.com/apps-script/reference/properties/script-properties">ScriptProperties는 deprecate된</a> 놈이다.</li>
+    </ul>
+  </li>
+  <li>대신 바로 옆에 비슷한 <a href="https://developers.google.com/apps-script/reference/properties/properties-service">PropertiesService</a>가 있는것 같다.</li>
+  <li>
+<a href="https://developers.google.com/apps-script/guides/properties">사용법 가이드</a>도 있다. 아래 일부 내용을 번역해봤다.</li>
+</ul>
+
+<h2 id="그냥-정리하면서-보는-properties-service">그냥 정리하면서 보는 Properties Service</h2>
+
+<p>PropertiesService는 세가지 메소드를 제공하는 global object이다. 각각은 유사한 <code class="language-html highlighter-rouge">Properties</code> object를 반환하지만, 접근 권한이 서로 다르다</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Script Properties</th>
+      <th style="text-align: left">User Properties</th>
+      <th>Document Properties</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">access 메소드</td>
+      <td style="text-align: left">getScriptProperties()</td>
+      <td style="text-align: left">getUserProperties()</td>
+      <td>getDocumentProperties()</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">공유 범위</td>
+      <td style="text-align: left">script, add-on, web app을 사용하는 모든 사용자</td>
+      <td style="text-align: left">script, add-on, web app을 사용하는 현재 사용자</td>
+      <td>열린 문서안의 모든 add-on 사용자</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">전형적인 사용처</td>
+      <td style="text-align: left">개발자의 외부 데이타베이스용 유저이름과 패스워드등의 앱 범위의 설정 data</td>
+      <td style="text-align: left">미터법등의 단위계같은 사용자별 설정</td>
+      <td>내장 차트의 source URL과 같은 문서별 설정</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-format">Data format</h3>
+
+<ul>
+  <li>Properties service는 모든 데이터를 문자열 형태의 key-value 쌍으로 저장한다. 문자열이 아닌 data type은 자동으로 문자열로 변환되며, 저장된 객체내의 메소드도 포함하여 변환된다.</li>
+</ul>
+
+<h2 id="실제-사용례">실제 사용례</h2>
+
+<ul>
+  <li>BetterLog를 사용하는 스크립트에서 표시할 LogLevel을 스크립트 속성으로 지정하는 것이 좋은 사용례 같다.</li>
+  <li>위 <code class="language-html highlighter-rouge">BettLog 코드</code>에서 나온것 처럼, Script Editor에서 <strong>파일 &gt; 프로젝트 속성</strong> 에서 <strong>스크립트 속성</strong>으로 지정된 속성을 사용할수 있는데..</li>
+  <li>
+    <p>deprecated 된 <code class="language-html highlighter-rouge">ScriptProperties</code> 서비스 대신 다음과 같이 구현하면 된다.</p>
+
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="nx">Logger</span> <span class="o">=</span> <span class="nx">BetterLog</span>
+<span class="p">.</span><span class="nx">setLevel</span><span class="p">(</span><span class="nx">PropertiesService</span><span class="p">.</span><span class="nx">getScriptProperties</span><span class="p">().</span><span class="nx">getProperty</span><span class="p">(</span><span class="dl">'</span><span class="s1">BetterLogLevel</span><span class="dl">'</span><span class="p">))</span>
+<span class="p">.</span><span class="nx">useSpreadsheet</span><span class="p">(</span><span class="dl">'</span><span class="s1">Spread Sheet for log project key</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// 설정한 log level대로 동작하는지 확인</span>
+<span class="nx">Logger</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="dl">"</span><span class="s2">This log is 'Info' level</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">Logger</span><span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="dl">"</span><span class="s2">This log is 'config' level</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">Logger</span><span class="p">.</span><span class="nx">fine</span><span class="p">(</span><span class="dl">"</span><span class="s2">This log is 'fine' level</span><span class="dl">"</span><span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+
+    <ul>
+      <li>참고 삼아 볼만한 링크
+        <ul>
+          <li><a href="https://stackoverflow.com/a/27744925/9457247">var userProperties = PropertiesService.getUserProperties(); is not working properly for me?</a></li>
+          <li><a href="https://stackoverflow.com/q/48313491/9457247">How can I read the user properties saved in the File Project properties menu ?</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="typescript로-작성해서-구글시트에-올릴때-한글이-유니코드로-변환됨">typescript로 작성해서 구글시트에 올릴때 한글이 유니코드로 변환됨</h1>
+
+<ul>
+  <li>VS Code에서 typescript 로 작성한 한글 문자열이 아래와 같이 유니코드로 변환된다.
+    <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 이 코드가 ...</span>
+<span class="nx">Logger</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s2">`계좌번호 일치 : </span><span class="p">${</span><span class="nx">accountNum</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+<span class="c1">// 이렇게 변함 </span>
+<span class="nx">Logger</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="dl">"</span><span class="se">\</span><span class="s2">uACC4</span><span class="se">\</span><span class="s2">uC88C</span><span class="se">\</span><span class="s2">uBC88</span><span class="se">\</span><span class="s2">uD638 </span><span class="se">\</span><span class="s2">uC77C</span><span class="se">\</span><span class="s2">uCE58 : </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">accountNum</span><span class="p">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>변환할때 사용하는 유틸은 <strong><a href="https://github.com/grant/ts2gas">ts2gas</a></strong> 이다.
+    <ul>
+      <li>요기 github issues에 들어가서 유사한 내용이 있는지 확인했다.</li>
+      <li>
+<a href="https://github.com/grant/ts2gas/issues/45">유사한 이슈가 있는데</a> .. close 되어있고 typescript의 <code class="language-html highlighter-rouge">transpileModule</code>의 문제가 아닌지 확인해 보란다.</li>
+    </ul>
+  </li>
+  <li>찾아보니 typescript의 transpilModule 을 테스트 해볼수 있는 <a href="https://github.com/Microsoft/TypeScript/wiki/Using-the-Compiler-API#a-simple-transform-function">테스트 코드</a>가 있다.
+    <ul>
+      <li>node.js 구동해서 테스트해봐야 하는데 아직 안해봤다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li><a href="https://typescript-kr.github.io/">TypeScript-Handbook 한글 문서</a></li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

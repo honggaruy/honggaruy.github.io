@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ISBN-10 에서 ISBN-13으로 바꾸기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="책관련">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/isbn10-to-isbn13/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ISBN-10 에서 ISBN-13으로 바꾸기">
+    <meta property="og:description" content="책관련">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/isbn10-to-isbn13/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/isbn10-to-isbn13/">
+    <meta name="twitter:title" content="ISBN-10 에서 ISBN-13으로 바꾸기">
+    <meta name="twitter:description" content="책관련">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="isbn10-to-isbn13">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">ISBN-10 에서 ISBN-13으로 바꾸기</h1>
+    
+        <p class="title-summary">책관련</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/isbn10-to-isbn13.md" target="_blank">created: 2020.12.04</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/isbn10-to-isbn13.md" target="_blank">updated: 2020.12.21</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/isbn10-to-isbn13.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=ISBN-10+%EC%97%90%EC%84%9C+ISBN-13%EC%9C%BC%EB%A1%9C+%EB%B0%94%EA%BE%B8%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    isbn translation
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%ED%91%9C%EC%A4%80-%EB%AC%B8%EC%84%9C---%EB%B2%88%EC%97%AD" id="markdown-toc-2-표준-문서---번역">2. 표준 문서 - 번역</a>    <ul>
+      <li>
+<a href="#isbn-information" id="markdown-toc-isbn-information">ISBN Information</a>        <ul>
+          <li><a href="#isbn-10-to-isbn-13" id="markdown-toc-isbn-10-to-isbn-13">ISBN 10 To ISBN 13</a></li>
+          <li><a href="#isbn-10-vs-isbn-13" id="markdown-toc-isbn-10-vs-isbn-13">ISBN-10 vs ISBN-13</a></li>
+          <li><a href="#10-digits-13-digits-what-about-spaces-and-hyphens" id="markdown-toc-10-digits-13-digits-what-about-spaces-and-hyphens">10 Digits, 13 Digits? What About Spaces And Hyphens?</a></li>
+          <li><a href="#the-conversion-of-isbn-10-to-isbn-13" id="markdown-toc-the-conversion-of-isbn-10-to-isbn-13">The Conversion Of ISBN-10 to ISBN-13</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>python에서는 isbn library가 있는데 google sheet에서 사용하고 싶은데 없다.</li>
+  <li>자작하기로 하고 표준을 알아봤다</li>
+  <li>찾아보니 예제 코드가 많다</li>
+</ul>
+
+<h1 id="2-표준-문서---번역">2. 표준 문서 - 번역</h1>
+
+<ul>
+  <li>원문 : <a href="https://isbn-information.com/convert-isbn-10-to-isbn-13.html">convert-isbn-10-to-isbn-13</a>
+</li>
+</ul>
+
+<h2 id="isbn-information">ISBN Information</h2>
+
+<h3 id="isbn-10-to-isbn-13">ISBN 10 To ISBN 13</h3>
+
+<p>Bill Pearce. 2015년 3월 12일 마지막 업데이트</p>
+
+<h3 id="isbn-10-vs-isbn-13">ISBN-10 vs ISBN-13</h3>
+
+<ul>
+  <li>ISBN-10은 구형 표준으로 신규 발행되는 책에는 더이상 발행되지 않습니다</li>
+  <li>ISBN-10은 10자리 숫자를 사용하며 2007년 1월 1일에 ISBN-13으로 대체되었습니다</li>
+  <li>그 이후 발행된 모든 새 ISBN 번호는 13자리로 구성됩니다</li>
+  <li>ISBN-10에 대한 자세한 내용은 <a href="https://isbn-information.com/the-10-digit-isbn.html">ISBN-10 페이지</a>를 참조하세요</li>
+  <li>마찬가지로, ISBN-13에 대한 자세한 내용은 <a href="https://isbn-information.com/the-13-digit-isbn.html">ISBN-13 페이지</a>를 참조하세요</li>
+</ul>
+
+<h3 id="10-digits-13-digits-what-about-spaces-and-hyphens">10 Digits, 13 Digits? What About Spaces And Hyphens?</h3>
+
+<ul>
+  <li>여기서 논의하고자 하는 주제에 집중하기 위해 다음 문자들은 무시합니다
+    <ul>
+      <li>ISBN 번호 주변의 공백문자</li>
+      <li>하이픈</li>
+      <li>ISBN이라고 써진 레이블</li>
+    </ul>
+  </li>
+  <li>단 하나의 예외만 허용
+    <ul>
+      <li>일부 10 자리 ISBN은 숫자가 아닌 문자 x ( 혹은 X )를 마지막 문자로 허용합니다</li>
+      <li>허용하는 이유에 대해서는 ISBN-10 페이지를 참조하세요( 위에 링크에 있음)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-conversion-of-isbn-10-to-isbn-13">The Conversion Of ISBN-10 to ISBN-13</h3>
+
+<ul>
+  <li>아래 7 단계 과정에서 하려고 하는 것들
+    <ul>
+      <li>10 자리 ISBN을 가져오기 (10 자리)</li>
+      <li>마지막 문자를 뺌 (9 자리)</li>
+      <li>앞에 “978” 붙이기 (12 자리)</li>
+      <li>체크 숫자를 새로 계산해서 마지막에 붙이기 (13 자리)</li>
+    </ul>
+  </li>
+  <li>시작합니다
+    <ul>
+      <li>다음의 ISBN-10 예제로 시작합니다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>1861972717
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <ol>
+      <li>10자리 ISBN-10 을 가져와서 마지막 1자리만 뺍니다
+        <ul>
+          <li>마지막 문자는 10자리에서만 의미있는 Check 숫자라서 그냥 버려도 됩니다</li>
+          <li>우리는 13자리에서 필요한 새로운 숫자를 이어지는 3 ~ 6 단계에서 계산할겁니다.</li>
+          <li>Check 숫자에 관한 내용은 <a href="https://isbn-information.com/check-digit-for-the-13-digit-isbn.html">ISBN Check Digit</a> 에서 확인하세요
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre> 186197271
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>“978”을 남은 9자리 숫자에 붙입니다 ( 978을 붙이는 이유는 ISBN-13 페이지를 참고하세요)
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>978186197271
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>이 단계부터 다음 3번의 단계동안 Check 숫자를 계산해야 합니다
+        <ul>
+          <li>계산된 Check 숫자는 2단계에서 넘어온 12자리 숫자뒤에 덧붙입니다</li>
+          <li>12자리 숫자 각각에 숫자 하나를 곱합니다</li>
+          <li>첫번째 숫자는 1을 곱하고, 두번째 숫자는 3을 곱합니다</li>
+          <li>세번째 숫자는 다시 1을 곱하고, 네번째 숫자는 다시 3을 곱하고..이런 식으로 계속합니다</li>
+          <li>1과 3을 번갈아 곱하면서 12번째 숫자까지 진행합니다.</li>
+          <li>즉 다음과 같습니다
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre> 9 x 1 = 9
+ 7 x 3 = 21
+ 8 x 1 = 8
+ 1 x 3 = 3
+ 8 x 1 = 8
+ 6 x 3 = 18
+ 1 x 1 = 1
+ 9 x 3 = 27
+ 7 x 1 = 7
+ 2 x 3 = 6
+ 7 x 1 = 7
+ 1 x 3 = 3
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>이제 단계 3 에서 얻은 12개의 합 결과를 모두 더합니다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>9 + 21 + 8 + 3 + 8 + 18 + 1 + 27 + 7 + 6 + 7 + 3 = 118
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>단계 4의 결과를 가져와서 10으로 모듈러 나눗셈을 합니다
+        <ul>
+          <li>10으로 모듈러 나누기를 한다는 것은 10단위 이상을 버리는 것과 같습니다</li>
+          <li>10으로 나누었을때 나머지의 의미입니다</li>
+          <li>나누기를 했을때 소수점 이하의 값을 내는 decimal division 방식이 아님을 주의하세요</li>
+          <li>
+<code class="language-html highlighter-rouge">118 mod 10 = 8</code> <code class="language-html highlighter-rouge">118 을 10으로 나누면 몫은 11 나머지는 8</code>입니다. 우리는 나머지 8에만 관심이 있습니다
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>8
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>ISBN-13의 Check 숫자를 계산하는 마지막 단계입니다
+        <ul>
+          <li>단계 5에서 결과를 가져옵니다</li>
+          <li>결과가 zero이면 Check 숫자는 0 입니다</li>
+          <li>결과가 zero가 아니면 10 에서 단계 5의 결괏값을 뺍니다</li>
+          <li>그 결과가 Check 숫자입니다
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>10 - 8 = 2
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>ISBN-10 에서 ISBN-13으로 바꾸는 마지막 단계입니다
+        <ul>
+          <li>단계 6의 결괏값을 단계 2에서 얻은 12자리값 뒤에 덧붙입니다</li>
+          <li>결과가 나왔습니다
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>9781861972712
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>우리가 한 일 요약
+    <ul>
+      <li>10자리 ISBN 숫자에서 마지막 문자를 하나 뺀다 (step 1)</li>
+      <li>맨 앞에 “978”을 붙인다 (step 2)</li>
+      <li>Check 숫자를 계산해서 (step 3 to 6) 맨 뒤에 붙인다 (step 7)</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>윈도우즈에서 V+J+G 따라하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/wiki-inWindows/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="윈도우즈에서 V+J+G 따라하기">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/wiki-inWindows/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/wiki-inWindows/">
+    <meta name="twitter:title" content="윈도우즈에서 V+J+G 따라하기">
+    <meta name="twitter:description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="wiki-inWindows">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">윈도우즈에서 V+J+G 따라하기</h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-inWindows.md" target="_blank">created: 2020.04.13</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-inWindows.md" target="_blank">updated: 2020.11.10</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/wiki-inWindows.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%88%EB%8F%84%EC%9A%B0%EC%A6%88%EC%97%90%EC%84%9C+V%2BJ%2BG+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    wiki-setting windows timezone tzinfo jekyll yaml-front-matter
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#%EC%9C%84%ED%82%A4-%EC%9E%91%EC%84%B1-%ED%99%98%EA%B2%BD-%EA%B4%80%EB%A0%A8" id="markdown-toc-위키-작성-환경-관련">위키 작성 환경 관련</a>        <ul>
+          <li><a href="#git" id="markdown-toc-git">git</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#timezone-%EC%9D%B4%EC%8A%88-2020-11-07" id="markdown-toc-timezone-이슈-2020-11-07">timezone 이슈 (2020-11-07)</a>        <ul>
+          <li><a href="#%EA%B2%BD%ED%97%98%ED%95%9C-%EB%AC%B8%EC%A0%9C" id="markdown-toc-경험한-문제">경험한 문제</a></li>
+          <li><a href="#%EC%9E%90%EB%A3%8C-%EC%88%98%EC%A7%91" id="markdown-toc-자료-수집">자료 수집</a></li>
+          <li><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85-%EC%8B%A4%ED%96%89" id="markdown-toc-해결책-실행">해결책 실행</a></li>
+          <li><a href="#%EA%B7%B8%EB%9F%B0%EB%8D%B0-%EC%9C%84-jekyll-issue-%EA%B4%80%EB%A0%A8-pull-request%EB%8A%94-%EB%AD%98%EA%B9%8C" id="markdown-toc-그런데-위-jekyll-issue-관련-pull-request는-뭘까">그런데… 위 Jekyll issue 관련 Pull Request는 뭘까?</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>이 사이트는 <strong>기계인간 John Grib</strong> 님의 포스팅을 보고 거의 그대로 따라한 사이트이다.
+    <ul>
+      <li>포스팅링크 : <a href="https://johngrib.github.io/wiki/my-wiki/">Vimwiki + Jekyll + Github.io로 나만의 위키를 만들자</a>
+</li>
+    </ul>
+  </li>
+  <li>다만, johngrib님이 windows를 사용하지 않고 있어 windows에서 따라 했던 내가 겪은 경험을 남기고자 한다.</li>
+  <li>생각나는 대로 적어 순서가 뒤죽박죽이다. 쓰다보면 정리될 것 같다.</li>
+  <li>제목대로 윈도우즈로 할때 달라지는 점만 적을 예정이다.</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="위키-작성-환경-관련">위키 작성 환경 관련</h2>
+
+<ul>
+  <li>로컬에 필수적으로 설치해야 하는 도구들
+    <ul>
+      <li>git for windows</li>
+      <li>jekyll을 설치하기 위해 설치 해야하는 것들 (Ruby + Gems..)
+        <ul>
+          <li>로컬에서 확인하지 않고 올렸다가 github에서 에러나는 경우가 있다. 로컬 jekyll 환경은 필수다.</li>
+        </ul>
+      </li>
+      <li>node.js + npm 설치할 것
+        <ul>
+          <li>루트 폴더의 generateData.js 실행시에 node.js 환경을 요구함.</li>
+          <li>windows 환경에서 node.js 의 실행법이 쉘에 따라 좀 다르다.
+            <ul>
+              <li>git for windows 에서 generateData.js의 실행 : 리눅스와 동일하다.
+                <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> ./generateData.js
+tagMap saved.
+pageMap saved.
+tagList saved.
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+              </li>
+              <li>powersheell 에서 generateData.js의 실행 :
+                <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> node ./generateData.js
+tagMap saved.
+pageMap saved.
+tagList saved.
+</pre></td>
+</tr></tbody></table></code></pre></div>                </div>
+                <ul>
+                  <li>만약 그냥 <code class="language-html highlighter-rouge">&gt; .\generateData.js</code>를 호출한다면 아래와 같이 에러가 난다.
+<img src="/wiki-img/wiki-inWindows/error_nodejs.png" alt="node.js 에러">
+</li>
+                </ul>
+              </li>
+              <li>
+<code class="language-html highlighter-rouge">generateData.js</code>는 git hook 으로 실행하는데 아직 위 사항을 적용하지 않았다. (2020-11-08)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="git">git</h3>
+
+<ul>
+  <li>windows에서 git을 쓴다면 git for windows를 쓸거라고 생각한다.</li>
+  <li>
+    <p>git for windows는 bash를 지원하기 때문에 가끔 사용되는 linux 명령어들에 막히지 않을수 있다.</p>
+  </li>
+  <li>git mergetool로 diffmerge를 사용중인데 merge할 때 특정 경우 돌발행동을 한다.</li>
+  <li>merge conflict가 발생할때 deleted, created, modified로 나뉜다.
+    <ul>
+      <li>modified conflict일 경우 원래 utf8이면, 수동 merge가 끝나고 그대로 utf8로 저장이 된다.</li>
+      <li>문제는 created conflict일 경우인데..
+        <ul>
+          <li>현재 파일이 있는데도 왜 created로 confilct가 나는지 모르겠지만..</li>
+          <li>git merge 표기가 기록된 파일이 utf8인데.. Diffmerge로 수동 머지 되면서..</li>
+          <li>utf8 이었던 문서가 저장되며 cp949로 변경되는 문제가 있다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>이때 jekyll에서 어디선가 지정되어서 그렇겠지만 해당 파일을 UTF-8로 생각하다가 갑자기 cp949를 얻어맞고 에러가 날때가 있다
+<img src="/wiki-img/wiki-inWindows/error_encoding.png" alt="파일인코딩에러">
+</li>
+  <li>diffmerge의 문제가 맞긴한데 해당 문제를 해결할 수 있는 diffmerge 설정은 아직 못 찾았다.</li>
+  <li>어찌할 방법이 없어서 파일 인코딩을 변경하여 저장할수 있는 gvim 명령어를 알아두는 것이 좋다. <a href="https://kldp.org/node/32987">링크</a>
+    <div class="language-vim highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">:</span><span class="k">set</span> <span class="nb">fileencoding</span><span class="p">=</span>utf8
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="timezone-이슈-2020-11-07">timezone 이슈 (2020-11-07)</h2>
+
+<ul>
+  <li>이제서야 이걸 발견하다니…</li>
+  <li><a href="https://jekyllrb.com/docs/front-matter/">Front Matter 란?</a></li>
+</ul>
+
+<h3 id="경험한-문제">경험한 문제</h3>
+
+<ul>
+  <li>2020.07.06일자로 작성한 포스팅의 링크가 <code class="language-html highlighter-rouge">/2020/07/05/</code> 로 생겨 tag 목록에서 생성한 링크로는 연결이 안되는 문제가 발생함.
+    <ul>
+      <li>위의 경우 파일이름은 <code class="language-html highlighter-rouge">2020-07-06-week-28th.md</code>, Front Matter중 date는 <code class="language-html highlighter-rouge">2020-07-06 07:39:32 +09:00</code>으로 설정</li>
+      <li>이 상태에서 Front Matter 내용을 <code class="language-html highlighter-rouge">2020-07-06 07:39:32</code>로 UTC로 부터의 Offset 부분을 지우면 정상적으로 <code class="language-html highlighter-rouge">/2020/07/06</code>으로 URL 작성됨.</li>
+      <li>즉, URL은 파일이름과는 상관없이 Front Matter에 적힌 UTC offset 포함 날짜에서 계산하여 URL을 작성하는 것어로 보임.</li>
+    </ul>
+  </li>
+  <li>jekyll 이슈에서 찾은 내용
+    <ul>
+      <li>
+<a href="https://github.com/jekyll/jekyll/issues/1069">유사한 old 이슈: Missing timezone in metadata date can lead to wrong date in url #1069</a>
+        <ul>
+          <li>아래 #7550번 이슈 단 사람이 맨 마지막에 이슈를 달았는데 jekyll 측에서 너무 오래된 이슈번호라서 새로 이슈 시작하라고 함.</li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/jekyll/jekyll/issues/7550">요즘에 새로 시작한 이슈: The wrong date can be used in the url #7550</a>
+        <ul>
+          <li>Front Matter에 2015-05-28 날짜로 포스팅했는데 url은 <code class="language-html highlighter-rouge">../2015/05/29/.. </code>로 나옴</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="자료-수집">자료 수집</h3>
+
+<ul>
+  <li>
+<a href="https://jekyllrb.com/docs/installation/windows/">Jekyll 홈 &gt; Installation &gt; Jekyll on Windows 문서</a>
+    <ul>
+      <li>
+<a href="https://jekyllrb.com/docs/installation/windows/#time-zone-management">Timezone Management</a>
+        <ul>
+          <li>Windows는 TZInfo 2.0과 호환성이 없음
+            <ul>
+              <li>블로그 포스팅의 날짜 URL은 포스팅의 date Front Matter로 계산 하는데..</li>
+              <li>TZInfo 2.0 + Jekyll 3.x(4.x도 마찬가지 인듯) + Windows 상황인 경우 <code class="language-html highlighter-rouge">jekyll build</code>시 포스팅 날짜 계산에 오류가 있다고 함.</li>
+              <li>따라서 <code class="language-html highlighter-rouge">Gemfile</code>에 <code class="language-html highlighter-rouge">tzinfo</code>를 1.2 로 낮출것을 추천함.</li>
+            </ul>
+          </li>
+          <li>linux 환경에서 구현된 johngrib님 위키를 그대로 따라하다 보니 빼먹은 듯..</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="해결책-실행">해결책 실행</h3>
+
+<ul>
+  <li>프로젝트 루트의 <code class="language-html highlighter-rouge">GemFile.lock</code>에 다음 줄을 추가 ( 위의 Timezone Managemnt 링크에서 추천)
+    <div class="language-ruby highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="n">gem</span> <span class="s1">'tzinfo'</span><span class="p">,</span> <span class="s1">'~&gt; 1.2'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Gemfile 수정후 <code class="language-html highlighter-rouge">bundle exec jekyll serve</code> 실행하니 다음과 같은 메시지 출력
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre>You have requested:
+  tzinfo ~&gt; 1.2
+
+The bundle currently has tzinfo locked at 2.0.2.
+Try running <span class="sb">`</span>bundle update tzinfo<span class="sb">`</span>
+
+If you are updating multiple gems <span class="k">in </span>your Gemfile at once,
+try passing them all to <span class="sb">`</span>bundle update<span class="sb">`</span>
+Run <span class="sb">`</span>bundle <span class="nb">install</span><span class="sb">`</span> to <span class="nb">install </span>missing gems.
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">bundle update tzinfo</code> 수행
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre>D:/repository/honggaruy.github.io&gt;bundle update tzinfo
+Fetching gem metadata from https://rubygems.org/..........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using public_suffix 4.0.6
+Using addressable 2.7.0
+....
+Fetching tzinfo 1.2.7 <span class="o">(</span>was 2.0.2<span class="o">)</span>
+Installing tzinfo 1.2.7 <span class="o">(</span>was 2.0.2<span class="o">)</span>
+Using tzinfo-data 1.2020.4
+Using wdm 0.1.1
+Note: tzinfo version regressed from 2.0.2 to 1.2.7
+Bundle updated!
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>일단 위와 같이 수행한 이후에는 문제는 나오지 않음.</li>
+</ul>
+
+<h3 id="그런데-위-jekyll-issue-관련-pull-request는-뭘까">그런데… 위 Jekyll issue 관련 Pull Request는 뭘까?</h3>
+
+<ul>
+  <li>위 #7551 이슈에 연결된 PR <a href="https://github.com/jekyll/jekyll/pull/7551">Compute time zones on all platforms with ‘tzinfo` gem</a> 이 있다.</li>
+  <li>작년 2019년 2월에 요청되었는데 … 문제가 있어 적용이 지연되고 있음.
+    <ul>
+      <li>Test 때 Fail이 나오고 .. DST(Daylight Saving Time) 변동에 따라 불안한 모습이 있음</li>
+      <li>의존성 문제 : windows의 경우 tzinfo-1.x를 써야하는데.. jekyll이 <code class="language-html highlighter-rouge">activesupport</code>라는 gem에 간접적인 의존성이 있고 <code class="language-html highlighter-rouge">activesupport</code>의 신버전이 <code class="language-html highlighter-rouge">tzinfo-1.x</code>를 지원하지 않는 문제가 있음.</li>
+    </ul>
+  </li>
+  <li>따라서 이도저도 아닌 교착상태에 있어서… Community에서 더 좋은 해결책이 나오길 기대하는 상황..</li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

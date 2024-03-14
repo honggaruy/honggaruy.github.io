@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Powershell 스크립팅 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="Turning your one-liners in PowerShell into reusable tools !!">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/PowerShell-Scripting/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Powershell 스크립팅">
+    <meta property="og:description" content="Turning your one-liners in PowerShell into reusable tools !!">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/PowerShell-Scripting/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/PowerShell-Scripting/">
+    <meta name="twitter:title" content="Powershell 스크립팅">
+    <meta name="twitter:description" content="Turning your one-liners in PowerShell into reusable tools !!">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="PowerShell-Scripting">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Powershell 스크립팅</h1>
+    
+        <p class="title-summary">Turning your one-liners in PowerShell into reusable tools !!</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/PowerShell-Scripting.md" target="_blank">created: 2020.11.02</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/PowerShell-Scripting.md" target="_blank">updated: 2022.04.07</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/PowerShell-Scripting.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Powershell+%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8C%85&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    windows powershell
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#trouble-shooting" id="markdown-toc-trouble-shooting">Trouble Shooting</a>    <ul>
+      <li>
+<a href="#1-powershell-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%9E%91%EC%84%B1%ED%95%9C-literal-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%90-2020-11-02" id="markdown-toc-1-powershell-스크립트에서-작성한-literal-한글이-깨짐-2020-11-02">1. PowerShell 스크립트에서 작성한 Literal 한글이 깨짐 (2020-11-02)</a>        <ul>
+          <li><a href="#%EB%AC%B8%EC%A0%9C-%EC%83%81%ED%99%A9" id="markdown-toc-문제-상황">문제 상황</a></li>
+          <li><a href="#1%EC%B0%A8-%EA%B5%AC%EA%B8%80%EB%A7%81---%EC%8B%A4%ED%8C%A8" id="markdown-toc-1차-구글링---실패">1차 구글링 - 실패</a></li>
+          <li><a href="#2%EC%B0%A8-%EA%B5%AC%EA%B8%80%EB%A7%81---%EC%84%B1%EA%B3%B5" id="markdown-toc-2차-구글링---성공">2차 구글링 - 성공</a></li>
+          <li><a href="#%EA%B2%B0%EA%B3%BC-%EC%B6%94%EB%A1%A0--%ED%99%95%EC%9D%B8%EB%90%9C-%EB%82%B4%EC%9A%A9%EC%9D%80-%EC%95%84%EB%8B%98" id="markdown-toc-결과-추론--확인된-내용은-아님">결과 추론 ( 확인된 내용은 아님)</a></li>
+          <li><a href="#%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C-bom-%EC%9D%B4%EB%9E%80" id="markdown-toc-유니코드-bom-이란">유니코드 BOM 이란?</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#how-to" id="markdown-toc-how-to">How to</a>    <ul>
+      <li><a href="#module%EC%97%90-script-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0" id="markdown-toc-module에-script-작성하기">Module에 Script 작성하기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="trouble-shooting">Trouble Shooting</h1>
+
+<h2 id="1-powershell-스크립트에서-작성한-literal-한글이-깨짐-2020-11-02">1. PowerShell 스크립트에서 작성한 Literal 한글이 깨짐 (2020-11-02)</h2>
+
+<h3 id="문제-상황">문제 상황</h3>
+
+<ul>
+  <li>VS Code에서 .ps1으로 작성한 스크립트에서 Write-Host 명령으로 한글 출력
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>Write-Host <span class="s2">" </span><span class="nv">$LinkPath</span><span class="s2"> 파일이 이미 존재함."</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Windows Terminal에서 .ps1 파일 실행시키니 아래처럼 깨짐
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>C:/Users/hongg/.gitconfig ?뚯씪???대? 議댁옱?? 
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>이 상황에서 VS Code 에서 작성한 .ps1 파일의 파일 encoding은 <code class="language-html highlighter-rouge">UTF-8</code>
+</li>
+  <li>
+<code class="language-html highlighter-rouge">[System.Console]::OutputEncoding</code> 명령으로 확인한 PowerShell의 출력 encoding은 cp949 였다.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre>❯ <span class="o">[</span>System.Console]::OutputEncoding
+
+
+BodyName          : ks_c_5601-1987
+EncodingName      : 한국어
+HeaderName        : ks_c_5601-1987
+WebName           : ks_c_5601-1987
+WindowsCodePage   : 949
+IsBrowserDisplay  : True
+IsBrowserSave     : True
+IsMailNewsDisplay : True
+IsMailNewsSave    : True
+IsSingleByte      : False
+EncoderFallback   : System.Text.InternalEncoderBestFitFallback
+DecoderFallback   : System.Text.InternalDecoderBestFitFallback
+IsReadOnly        : True
+CodePage          : 949
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>처음엔 단순히 UTF-8로 encoding 된 스트링을 cp949로 출력하여 발생한 문제로 생각했다.</li>
+  <li>결론적으로 맞긴 하지만 .. 여기에는 더 복잡한 내막이 있었다…</li>
+</ul>
+
+<h3 id="1차-구글링---실패">1차 구글링 - 실패</h3>
+
+<ul>
+  <li>참고1 : <a href="https://psychoria.tistory.com/737">PowerShell에서 한글 깨짐 문제 해결 - 냉정과 열정 사이</a>
+</li>
+  <li>참고2 : <a href="https://holjjack.tistory.com/144">파워쉘 이용할때 한글깨짐현상 해결방법</a>
+</li>
+  <li>위 링크를 참고하여 <code class="language-html highlighter-rouge">code $PROFILE</code> 명령으로 <code class="language-html highlighter-rouge">Microsoft.PowerShell_profile.ps1</code> 파일에 다음을 추가했다.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$env</span>:LC_ALL<span class="o">=</span><span class="s1">'C.UTF-8'</span>
+<span class="o">[</span>System.Console]::InputEncoding <span class="o">=</span> <span class="o">[</span>System.Console]::OutputEncoding <span class="o">=</span> <span class="o">[</span>System.Text.Encoding]::UTF8
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>한글 깨짐은 해결 되지 않고 오히려 <code class="language-html highlighter-rouge">ls</code>(별칭) 명령시 리스팅된 목록간에 한줄씩 더 벌어지는 문제가 발생했다.
+<img src="/wiki-img/PowerShell-Scripting/PowerShell-Scripting-02.png" alt="사이벌어짐 문제">
+</li>
+</ul>
+
+<h3 id="2차-구글링---성공">2차 구글링 - 성공</h3>
+
+<ul>
+  <li>결정적인 링크 : <a href="https://docs.microsoft.com/ko-kr/powershell/scripting/dev-cross-plat/vscode/understanding-file-encoding?view=powershell-7#choosing-the-right-encoding">VS Code 및 PowerShell에서 파일 인코딩 이해 &gt; 맞는 인코딩 선택 - MS 공식 문서</a>
+</li>
+  <li>위 링크에 이런 말이 있다
+    <blockquote>
+
+      <ul>
+        <li>주로 Window 애플리케이션 및 Windows PowerShell로 작업하는 경우 BOM이 포함된 UTF-8 또는 UTF-16과 같은 인코딩을 사용하는 것이 좋습니다.</li>
+        <li>Linux 관련 컨텍스트에서 주로 작업하는 경우 BOM이 포함되지 않은 UTF-8을 사용하는 것이 좋습니다.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>VS Code에서 작성한 .ps1 파일의 저장 형식은 <code class="language-html highlighter-rouge">UTF-8</code>이었다. (맨 아래 상태줄 오른쪽에 보면 나옴)
+    <ul>
+      <li>맨 아래 상태줄에서 <code class="language-html highlighter-rouge">UTF-8</code>을 클릭하면, 선택항목 중에 <code class="language-html highlighter-rouge">Save with Encoding</code>이 나옴</li>
+      <li>해당 항목 클릭하면, 여러가지 Encoding이 나오는데…</li>
+      <li>그 중 <code class="language-html highlighter-rouge">UTF-8 with BOM</code>을 선택하면 바로 해당 인코딩으로 저장됨.</li>
+    </ul>
+  </li>
+  <li>이걸 <code class="language-html highlighter-rouge">UTF-8 with BOM</code>으로 변경하고 실행해 봤다.</li>
+  <li>결과는 다음과 같다
+<img src="/wiki-img/PowerShell-Scripting/PowerShell-Scripting-01.png" alt="확인결과">
+</li>
+</ul>
+
+<h3 id="결과-추론--확인된-내용은-아님">결과 추론 ( 확인된 내용은 아님)</h3>
+
+<ul>
+  <li>
+    <p>경고!! 일단 아래 내용은 그냥 추론으로 확인된 내용이 아님.</p>
+  </li>
+  <li>.ps1 파일은 주로 Windows에서 사용하므로 BOM이 있는 UTF-8로 저장하는게 좋음.</li>
+  <li>PowerShell에서 BOM이 있는 UTF-8 문서를 자동 인식하여 결과를 UTF-8 디코딩하여 보여줌.</li>
+  <li>.ps1 파일의 encoding이 기본 UTF-8 이라서 인식하지 못하자…
+    <ul>
+      <li>Powershell이 기본 출력 encoding으로 그냥 디코딩해버렸고..</li>
+      <li>결국 한글이 깨지게 됨.</li>
+    </ul>
+  </li>
+  <li>UTF-8 with BOM으로인해 PowerShell이 파일 디코딩 형식을 자동으로 이해하자 제대로 한글을 출력해냄.</li>
+</ul>
+
+<h3 id="유니코드-bom-이란">유니코드 BOM 이란?</h3>
+
+<ul>
+  <li>BOM은 텍스트에서 사용하는 인코딩을 디코더에 알려주기 위해 텍스트의 시작 부분에 표시됨</li>
+  <li>리눅스에서는 BOM이 널리 사용되지 않는데 기본적으로 UTF-8이 텍스트 인코딩의 표준처럼 여겨지기 때문임.</li>
+  <li>또한 BOM은 강제사항이 아님 !!</li>
+  <li>즉, 리눅스에서 BOM이 있을 경우 처리되지 못하는 경우가 발생할 수 있음.</li>
+  <li>리눅스에서도 대부분은 BOM을 처리할 수 있다고 함.</li>
+</ul>
+
+<h1 id="how-to">How to</h1>
+
+<h2 id="module에-script-작성하기">Module에 Script 작성하기</h2>
+
+<ul>
+  <li>발췌 소스 : <a href="https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#script-modules"> Script Modules from Learning PowerShell &gt; PowerShell 101 &gt; Script modules</a>
+</li>
+  <li>어느때 스크립트(.ps1)를 쓰고 어느때 모듈(.psm1)을 쓰나?
+    <ul>
+      <li>관련 SO: <a href="https://stackoverflow.com/q/5103211/9457247">When to choose dev of a PS Module over PS Scritp</a>
+</li>
+      <li>답변 :
+        <ul>
+          <li>function없이 싱글 task로 일련의 작업을 수행하다면 <code class="language-html highlighter-rouge">.ps1</code>
+</li>
+          <li>이미 몇개의 function을 만들어 쓰고 있다면 <code class="language-html highlighter-rouge">.psm1</code> 이 낫다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>module autoloading 이용하기
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">$env.PSModulePath -split ';'</code> 명령으로 나오는 다음 경로에 개인 모듈을 넣을수 있다
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>c:\Users\<span class="nt">&lt;사용자&gt;</span>\Documents\PowerShell\Modules
+c:\Program Files\PowerShell\Modules
+c:\Program Files\PowerShell\7\Modules
+c:\Program Files\WindowsPowerShell\Modules
+c:\Windows\system32\WindowsPowerShell\v1.0\Modules
+c:\Program Files\Intel\Wired Networking\
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+        <ul>
+          <li>line 1 : 개인용 모듈을 넣을 수 있다 ( 나는 이곳을 선호함)</li>
+          <li>line 2,3 : 해당 머신 전체 사용자가 사용한다 (다른 사용자 아이디로 로그인해서 작업하는 경우가 많다면 이곳이 좋다)</li>
+          <li>line 4,5 : posh5.1용 ? + 전체 사용자</li>
+          <li>line 6 : 특정 애플리케이션 용 모듈 전용</li>
+        </ul>
+      </li>
+      <li>위의 경로밑에..
+        <ul>
+          <li>우선 모듈이름(예를들어,MyScriptModule)을 정하고</li>
+          <li>해당 모듈이름으로 된 폴더를 만들고</li>
+          <li>그 폴더내에 해당 <code class="language-html highlighter-rouge">모듈이름.psm1</code> (예를들면, <code class="language-html highlighter-rouge">MyScriptMoudule.psm1</code>)을 만들면</li>
+          <li>
+<code class="language-html highlighter-rouge">Module autoloading</code>이 동작한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모든 모듈은 module manifest(.PSD1 확장자)를 가져야 한다
+    <ul>
+      <li>주의! DSC configuration 저장용 파일도 .PSD1 확장자를 가진다</li>
+      <li>
+<code class="language-html highlighter-rouge">Get-Module -Name MyScriptModule</code> 명령을 수행에 <code class="language-html highlighter-rouge">0.0</code> 버전이 나온다면 manifest가 없다는 증거이다</li>
+      <li>Manifest가 없는 기존 Module이 있다면 <code class="language-html highlighter-rouge">New-ModuleManifest</code> 명령으로 만들수 있다. <a href="https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#module-manifests">링크참조</a>
+</li>
+      <li><a href="https://docs.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.2#defining-public-and-private-functions">Manifest에서 사용자에게 노출할 함수를 지정할 수 있다</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

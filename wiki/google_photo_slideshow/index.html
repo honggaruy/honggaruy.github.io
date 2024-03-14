@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>구글 포토의 슬라이드쇼 콘트롤하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="구글 포토로만 하는 건 아님...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/google_photo_slideshow/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="구글 포토의 슬라이드쇼 콘트롤하기">
+    <meta property="og:description" content="구글 포토로만 하는 건 아님...">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/google_photo_slideshow/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/google_photo_slideshow/">
+    <meta name="twitter:title" content="구글 포토의 슬라이드쇼 콘트롤하기">
+    <meta name="twitter:description" content="구글 포토로만 하는 건 아님...">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="google_photo_slideshow">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">구글 포토의 슬라이드쇼 콘트롤하기</h1>
+    
+        <p class="title-summary">구글 포토로만 하는 건 아님...</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/google_photo_slideshow.md" target="_blank">created: 2020.05.16</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/google_photo_slideshow.md" target="_blank">updated: 2021.01.31</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/google_photo_slideshow.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EA%B5%AC%EA%B8%80+%ED%8F%AC%ED%86%A0%EC%9D%98+%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%87%BC+%EC%BD%98%ED%8A%B8%EB%A1%A4%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    google google-photos google-slides
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li><a href="#%EA%B5%AC%EA%B8%80-%ED%8F%AC%ED%86%A0-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EC%88%9C%EC%84%9C%EB%A5%BC-%EB%A7%98%EB%8C%80%EB%A1%9C-%ED%95%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4" id="markdown-toc-구글-포토-슬라이드-순서를-맘대로-하고-싶다">구글 포토 슬라이드 순서를 맘대로 하고 싶다.</a></li>
+      <li><a href="#%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%9D%98-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%A1%B0%EC%A0%88%ED%95%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4" id="markdown-toc-슬라이드의-속도를-조절하고-싶다">슬라이드의 속도를 조절하고 싶다.</a></li>
+      <li><a href="#%EA%B5%AC%EA%B8%80-%ED%8F%AC%ED%86%A0%EB%A5%BC-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%97%90-%EB%84%A3%EC%96%B4%EC%A3%BC%EB%8A%94-%ED%99%95%EC%9E%A5%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8" id="markdown-toc-구글-포토를-자동으로-슬라이드에-넣어주는-확장프로그램">구글 포토를 자동으로 슬라이드에 넣어주는 확장프로그램</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#3-%EA%B2%B0%EB%A1%A0" id="markdown-toc-3-결론">3. 결론</a>    <ul>
+      <li><a href="#%ED%98%84%EC%9E%AC%EA%B9%8C%EC%A7%80%EC%9D%98-%EC%86%94%EB%A3%A8%EC%85%98" id="markdown-toc-현재까지의-솔루션">현재까지의 솔루션</a></li>
+      <li><a href="#%EA%B5%AC%EA%B8%80-%ED%94%84%EB%A6%AC%EC%A0%A0%ED%85%8C%EC%9D%B4%EC%85%98-%ED%85%9C%ED%94%8C%EB%A6%BF-%EC%82%AC%EC%9D%B4%ED%8A%B8" id="markdown-toc-구글-프리젠테이션-템플릿-사이트">구글 프리젠테이션 템플릿 사이트</a></li>
+      <li><a href="#%EA%B5%AC%EA%B8%80-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%ED%8E%B8%EC%A7%91-%EA%B8%B0%EC%88%A0-%EB%A7%81%ED%81%AC" id="markdown-toc-구글-슬라이드-편집-기술-링크">구글 슬라이드 편집 기술 링크</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>구글 포토에서 몇개 사진을 연속적으로 참조하면서 작업할 일이 있었다</li>
+  <li>근데 구글 포토에서 사진하나 넘기고 다른 앱에서 작업하고 또 넘기고… 하는게 귀찮았다</li>
+  <li>마침 메뉴에 슬라이드 쇼가 있길래 써봤는데… 넘 불편했다.
+    <ul>
+      <li>속도 조절 메뉴가 없다. 5초면 후딱 넘어가 버린다.</li>
+      <li>구글 포토에서 <code class="language-html highlighter-rouge">포토</code> 메뉴에 모든 사진이 저장되는데 최근사진이 가장 위고 내림차순으로 되어있다
+        <ul>
+          <li>여기서 슬라이드 쇼를 하면 최근 » 과거 순으로 되는데 순서 변경 옵션이 없다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>구글 포토 슬라이드 쇼 옵션을 조절할 수 있는 방법을 찾아보았다.</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="구글-포토-슬라이드-순서를-맘대로-하고-싶다">구글 포토 슬라이드 순서를 맘대로 하고 싶다.</h2>
+
+<ul>
+  <li>
+<a href="https://support.google.com/photos/thread/843206?hl=en">구글 포토 헬프의 연관 질문</a> : 역시 다른 사람들도 위 문제에 공감하고 있었다.</li>
+  <li>위 질문의 답변중에 아래와 같은 답변이 있었다
+    <blockquote>
+      <p>“The present Slideshow goes from newer to older slides.”
+In the library: yes, because that is the way photos are sorted. 
+When you add photos to an album you can sort from older to newer (3-dots &gt; Edit album &gt; Sort icon) and the slideshow will show them in that order.</p>
+    </blockquote>
+  </li>
+  <li>위 답변은 구글 포토에서 제공하는 <code class="language-html highlighter-rouge">앨범</code> 기능을 사용하여 순서를 원하는 대로 배열할 수 있다는 정보이다</li>
+  <li>직접 해보니, 일단 구글 포토에서 선택된 사진을 앨범으로 지정할 경우 …
+    <ul>
+      <li>일단 시간순 ( 과거 » 현재, 구글 포토의 <code class="language-html highlighter-rouge">포토</code> 와는 반대 순서)로 기본 배열되며,</li>
+      <li>
+<code class="language-html highlighter-rouge">메뉴 &gt;&gt; 앨범 수정</code> 상태에서 <strong>순서를 원하는 대로 배치할</strong> 수 있었다. ( 20년 5/16일 기준)</li>
+      <li>
+<code class="language-html highlighter-rouge">앨범 수정</code> 모드에서 <code class="language-html highlighter-rouge">정렬 기준</code> (위/아래 화살표 아이콘) 으로 4가지 모드로 정렬할 수 있다
+        <ul>
+          <li>오래된 날짜순, 최근 날짜순, 최근 추가, 맞춤설정 ( 임의로 순서 바꾸면 자동으로 맞춤 설정으로 가는듯..)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>그러므로 일단 순서에 대한 문제는 <code class="language-html highlighter-rouge">구글 포토</code> 내에서 해결가능했다.</li>
+</ul>
+
+<h2 id="슬라이드의-속도를-조절하고-싶다">슬라이드의 속도를 조절하고 싶다.</h2>
+
+<ul>
+  <li>
+<a href="https://www.techrepublic.com/article/how-to-create-a-slideshow-from-google-photos-or-google-drive/">How to create a sliedshow from Google Photos or Google Drive</a> : 영감을 받은 문서</li>
+  <li>위 링크중에 <strong>How to create a slideshow with Google Slides</strong> 섹션이 있다.</li>
+  <li>구글 슬라이드(한국은 구글 프리젠테이션)로 문서를 만든 뒤 …
+    <ul>
+      <li>여기에 사진을 배열하면 <code class="language-html highlighter-rouge">프리젠테이션 보기</code> 모드에서 <strong>슬라이드 속도</strong>를 조절할 수 있다.</li>
+      <li>삽입 메뉴에서 바로 구글 포토에 연결하면 사이드에 구글포토를 띄워서 드래그로 가져올 수 있다.</li>
+    </ul>
+  </li>
+  <li>근데 사실 이것도 귀찮을 수 있기 때문에, 템플릿을 한개 만들어 놓고 특정 앨뱀에 있는 사진을 시간 순서로 한 페이지에 한장씩 불러와서 문서를 만들어주는 스크립트가 있으면 좋을것 같다.. (나중에 개발해 보자)</li>
+</ul>
+
+<h2 id="구글-포토를-자동으로-슬라이드에-넣어주는-확장프로그램">구글 포토를 자동으로 슬라이드에 넣어주는 확장프로그램</h2>
+
+<ul>
+  <li>위에서 말했던 프로그램이 실제로 있었다.. <a href="https://gsuite.google.com/marketplace/app/photos_to_slides/859164198261">Photos To Slides</a>
+</li>
+  <li>해보니 잘되긴 하는데…. <a href="https://docs.google.com/presentation/d/1JJK_alvKbPXoSNad7sgVGVDAkqswczz7oZetiFp0fAE/edit#slide=id.a8c2551a-7783-4ea4-ae1a-46fc96576f13">테스트 문서 링크</a>
+    <ul>
+      <li>앨범당 50장으로 제한이 있고 … ( 돈주면 1000장까지)</li>
+      <li>개인 앨범만 된다 (유료는 공유앨범도 지원)</li>
+      <li>또한 유료는 Google photo description에서 캡션도 불러와 붙여준다.</li>
+      <li>동일한 기능 하는것 내가 한번 만들어봐야겠다. 나중에…</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3-결론">3. 결론</h1>
+
+<h2 id="현재까지의-솔루션">현재까지의 솔루션</h2>
+
+<ul>
+  <li>슬라이드 순서 변경하기 : 구글 포토에서 앨범을 만들면 가능  (난이도 : 하)</li>
+  <li>슬라이드 속도 조절하기 : 구글 슬라이드에 구글 포토 사진을 넣고 문서를 만들면 가능 (난이도 : 중~상)</li>
+</ul>
+
+<h2 id="구글-프리젠테이션-템플릿-사이트">구글 프리젠테이션 템플릿 사이트</h2>
+
+<ul>
+  <li>
+<a href="https://slidesgo.com/">slidesgo</a> : 구글 슬라이드 및 파워포인트에서 사용할 수 있는 템플릿을 무료 배포
+    <ul>
+      <li>
+<a href="https://slidesgo.com/slidesgo-school">slidesgo school</a> : 프리젠테이션 작성법을 소개하는 온라인 강좌홈
+        <ul>
+          <li>
+<a href="https://slidesgo.com/slidesgo-school/presentation-tips">Presentation Tip</a> : 프리젠테이션 요령 강좌</li>
+          <li>
+<a href="https://slidesgo.com/slidesgo-school/google-slides-tutorials">Google Slides Tutorials</a> : 구글 슬라이드 사용법 레시피</li>
+          <li>파워포인트 튜토리얼도 있는데 안쓸것 같음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="구글-슬라이드-편집-기술-링크">구글 슬라이드 편집 기술 링크</h2>
+
+<ul>
+  <li><a href="https://www.bettercloud.com/monitor/the-academy/become-a-google-slides-artist-with-these-tricks/">Become a Google Slides Artist With These 7 Tricks</a></li>
+  <li><a href="https://www.brightcarbon.com/blog/5-google-slides-animation-features/">5 ways to  make the most of Google slides animation features</a></li>
+  <li><a href="https://medium.com/google-design/moving-presentations-d4f895e78de3">How to Create ‘Moving’ Presentations</a></li>
+  <li><a href="https://www.brightcarbon.com/blog/google-slides-image-editing/">6 Google slides image editing hacks</a></li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

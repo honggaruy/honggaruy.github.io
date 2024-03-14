@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>위키페이지에서 toc 위치 조정 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="CSS및 SCSS에 대한 정리">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/wiki-toc2side/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="위키페이지에서 toc 위치 조정">
+    <meta property="og:description" content="CSS및 SCSS에 대한 정리">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/wiki-toc2side/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/wiki-toc2side/">
+    <meta name="twitter:title" content="위키페이지에서 toc 위치 조정">
+    <meta name="twitter:description" content="CSS및 SCSS에 대한 정리">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="wiki-toc2side">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">위키페이지에서 toc 위치 조정</h1>
+    
+        <p class="title-summary">CSS및 SCSS에 대한 정리</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-toc2side.md" target="_blank">created: 2020.03.26</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-toc2side.md" target="_blank">updated: 2020.11.09</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/wiki-toc2side.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%84%ED%82%A4%ED%8E%98%EC%9D%B4%EC%A7%80%EC%97%90%EC%84%9C+toc+%EC%9C%84%EC%B9%98+%EC%A1%B0%EC%A0%95&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    wiki-setting toc css scss
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li><a href="#scss-%ED%8C%8C%EC%9D%BC" id="markdown-toc-scss-파일">scss 파일</a></li>
+      <li><a href="#toc-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81" id="markdown-toc-toc-스타일링">toc 스타일링</a></li>
+      <li><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%8B%9C-toc%EB%A5%BC-%EA%B3%A0%EC%A0%95%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" id="markdown-toc-브라우저-스크롤시-toc를-고정하는-방법">브라우저 스크롤시 toc를 고정하는 방법</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#3-%EA%B2%B0%EB%A1%A0" id="markdown-toc-3-결론">3. 결론</a>    <ul>
+      <li>
+<a href="#%EC%9D%98%EB%AC%B8%EC%82%AC%ED%95%AD-%EA%B2%B0%EA%B3%BC-%EC%A0%95%EB%A6%AC-%EC%A1%B0%EC%82%AC%ED%9B%84-%EC%86%8C%EA%B0%90" id="markdown-toc-의문사항-결과-정리-조사후-소감">의문사항 <del>결과 정리</del> 조사후 소감</a>        <ul>
+          <li><a href="#1-scss" id="markdown-toc-1-scss">1. SCSS</a></li>
+          <li><a href="#2-markdown-toc" id="markdown-toc-2-markdown-toc">2. #markdown-toc</a></li>
+          <li><a href="#3-toc%EB%A5%BC-side%EB%A1%9C-%EB%B9%BC%EA%B3%A0-%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%9D%84-%EB%94%B0%EB%9D%BC-%EB%82%B4%EB%A0%A4%EC%98%A4%EA%B2%8C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" id="markdown-toc-3-toc를-side로-빼고-스크롤을-따라-내려오게-하는-방법">3. toc를 side로 빼고 스크롤을 따라 내려오게 하는 방법</a></li>
+          <li><a href="#4-edit-text-at-the-speed-of-thought-" id="markdown-toc-4-edit-text-at-the-speed-of-thought-">4. Edit text at the speed of thought !!!</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>johngrib 님 홈페이지와 비교하다보니 toc위치가 다른것을 발견</li>
+  <li>
+<a href="https://github.com/johngrib/johngrib-jekyll-skeleton/">github 스켈레톤 repository</a>에서 해당 <a href="https://github.com/johngrib/johngrib-jekyll-skeleton/commit/4f58609b71e52a226d7e29f9240ad659ac953ba9?diff=unified">commit</a>을 찾아냄
+    <ul>
+      <li>브라우저 너비가 좁을 때는 같은 열에 보여주고 넓을 때는 오른쪽 사이드로 빼는 방법 적용</li>
+    </ul>
+  </li>
+  <li>위의 commit된 코드상에 모르는게 많아 공부를 해보려고 함
+    <ul>
+      <li>scss 파일?, #markdown-toc? 스크롤시 고정?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="scss-파일">scss 파일</h2>
+
+<ul>
+  <li>
+    <p>우선 구글링</p>
+
+    <ul>
+      <li>첫번째 타자, <a href="https://heropy.blog/2018/01/31/sass/">Sass(SCSS)완전 정복!</a>
+        <ul>
+          <li>Sass(SCSS)란 무엇인가? 에 대한 설명
+            <ul>
+              <li>CSS 전처리기(preprocessor)임, 말그대로 CSS가 동작하기 전에 사용
+                <ul>
+                  <li>비슷한 표준이 몇개 더 있음 (Less, Stylus). 저자는 Sass 추천</li>
+                </ul>
+              </li>
+              <li>따라서 컴파일러가 필요
+                <ul>
+                  <li>다양한 컴파일 방법이 있음. (node-sass, Gulp, Webpack, Parcel, ..)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>두번째 타자, <a href="https://chaewonkong.github.io/posts/scss-media-query.html">SCSS에서 미디어 쿼리 다루기</a>
+        <ul>
+          <li>SCSS에 대해 좀 더 간결한 설명 (<strong>이걸 추천함</strong>)</li>
+          <li>보통 Sass와 SCSS는 같이 언급되나 약간 다름
+            <ul>
+              <li>SCSS는 Sass의 상위호환(Superset)으로 CSS와 호환되는 문법을 가지므로 많이 추천됨</li>
+              <li>Sass는 SCSS와 비슷하지만 문법자체가 CSS와 좀 틀려서 추천되지 않는듯..</li>
+            </ul>
+          </li>
+          <li>@media 는 미디어 쿼리라고 부르고 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">CSS의 표준중 하나</a>임.
+            <ul>
+              <li>site나 app을 디바이스(phone, pc)나 특성(화면 해상도나 <a href="https://developer.mozilla.org/ko/docs/Glossary/Viewport">viewport</a> width)에 따라 수정하고 싶을때 사용</li>
+              <li>min-width: CSS 표준 속성, 요소의 최소 너비를 설정하고 그보다 작게 드래그 해도 설정된 값으로 유지(그보다 작아지는걸 방지)</li>
+              <li>@media {min-width: 800px}</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>세번째 타자, <a href="https://kgmyh.github.io/blog/2017/12/23/Jekyll_Using_Sass/">Jekyll에서 Sass 사용 설정하기</a>
+        <ul>
+          <li>의문사항, sass로 작성하면 css로 변환을 하는데 어떻게 되는거지? 에 대한 해답</li>
+        </ul>
+      </li>
+      <li>네번째 타자, <a href="https://jekyllrb-ko.github.io/docs/assets/">jekyll 공식 문서, Sass관련</a>
+        <ul>
+          <li>세번째 타자의 심화 버전.</li>
+          <li>jekyll은 기본적으로 sass를 지원한다고 하니 뭘로 컴파일 하는지 신경쓸 필요는 없는듯..</li>
+          <li>현재 _config.yml에 <code class="language-html highlighter-rouge">sass:</code> 옵션이 없는데 디폴트 설정을 그대로 써서 없는것으로 보임</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="toc-스타일링">toc 스타일링</h2>
+
+<ul>
+  <li>위 커밋에서 #markdown-toc 에 대한 css가 작성이 되어있다
+    <ul>
+      <li>_layouts 이나 _includes의 템플릿을 모두 뒤져도 #markdown-toc는 발견할 수 없었음.</li>
+      <li><strong>의문사항: 어떻게 toc의 식별자가 #markdown-toc가 될줄 알았지?</strong></li>
+    </ul>
+  </li>
+  <li>알고보니 kramdown 엔진으로 markdown 에서 html 로 generation 된것과 관련이 있음.
+    <ul>
+      <li>markdown Header에서 자동적으로 ID를 만들어내는 내용. <a href="https://kramdown.gettalong.org/converter/html.html#auto-ids">auto-ids 링크</a>
+</li>
+      <li>ID 를 가진 모든 header에서 toc를 만드는 내용. <a href="https://kramdown.gettalong.org/converter/html.html#toc">관련내용 링크</a>
+        <ul>
+          <li>이 섹션에 <strong>별도로 ID를 설정하지 않은 경우 markdown-toc 라는 ID를 갖게 된다는 내용</strong>이 있음.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="브라우저-스크롤시-toc를-고정하는-방법">브라우저 스크롤시 toc를 고정하는 방법</h2>
+
+<ul>
+  <li>toc의 ID가 #markdown-toc일 때 이 ID에 대한 CSS를 다음과 같이 설정한다.
+    <ul>
+      <li>position을 fixed로 설정하면 페이지가 스크롤 되도 늘 같은 곳에 위치, <a href="https://ko.learnlayout.com/position.html">참조 사이트</a>
+        <ul>
+          <li>position: fixed;와 함께 top, left, width 값을 주어 오른쪽 위쪽에 위치 시킬수 있음
+            <ul>
+              <li>아래에 위치 시키려면 top을 빼고 bottom에 값을 줌</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>left: calc(50vw + 410px) ?
+    <ul>
+      <li>css 함수중 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/calc">calc()</a>가 있음.</li>
+      <li>vw는 또 뭐지? viewport width인 듯.. <a href="https://webclub.tistory.com/356">css의 7가지 단위 설명 링크</a>
+        <ul>
+          <li>위 링크에서 vw가 vertical width인듯 나오는데 vertical이 아니라 viewport 일 듯. 댓글에도 있네</li>
+          <li>vw는 viewport 즉 브라우저 넓이를 의미, 50vw는 브라우저 넓이의 절반위치</li>
+        </ul>
+      </li>
+      <li>left: calc(50vw + 410px) 를 해석하면..
+        <ul>
+          <li>toc 왼쪽 시작위치는 viewport 넓이의 정가운데 (50vw) 에서 시작해서 410px 만큼 떨어진 위치임.</li>
+          <li>410px의 수치는 어디로 부터 옴?
+            <ul>
+              <li>_sass/_layout.scss 에 @media (min-width: 800px) 내에 body의 width가 800px로 정해져있음.</li>
+              <li>위에서 body width 의 절반에 10px을 더한 410px로 정했을 것이라고 강하게 추측됨.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>z-index: CSS 표준, 아이템 겹칠때 가장위부터 아래까지 순서를 정할수 있음. <a href="https://developer.mozilla.org/ko/docs/Web/CSS/z-index">z-index 참조 링크</a>
+</li>
+  <li>font-size: em 단위, 동적인 값, 0.8em이면 메인폰트 대비 80% 정도 크기로 지정, <a href="https://developer.mozilla.org/ko/docs/Web/CSS/font-size#Ems">em 참조 링크</a>
+</li>
+  <li><a href="https://developer.mozilla.org/ko/docs/Web/Guide/CSS/Media_queries#Targeting_media_features">@media (min-width: xxxxpx) { … } 의 의미</a></li>
+</ul>
+
+<h1 id="3-결론">3. 결론</h1>
+
+<h2 id="의문사항-결과-정리-조사후-소감">의문사항 <del>결과 정리</del> 조사후 소감</h2>
+
+<h3 id="1-scss">1. SCSS</h3>
+
+<ul>
+  <li>본 지 얼마 안되었지만 잘 지내야 할 것 같은 아이..</li>
+  <li>곳곳에 좋은 posting이 많아서 한동안 링크 따라 다닐듯</li>
+</ul>
+
+<h3 id="2-markdown-toc">2. #markdown-toc</h3>
+
+<ul>
+  <li>jekyll 이용시 SCSS보다 더 근본적인 영향을 주는 kramdown이 배후</li>
+  <li>추천 공부 링크:  <a href="https://kramdown.gettalong.org/documentation.html">https://kramdown.gettalong.org/documentation.html</a>
+</li>
+</ul>
+
+<h3 id="3-toc를-side로-빼고-스크롤을-따라-내려오게-하는-방법">3. toc를 side로 빼고 스크롤을 따라 내려오게 하는 방법</h3>
+
+<ul>
+  <li>CSS 기본을 잘 알자… 전부 다 CSS 표준이었다.</li>
+</ul>
+
+<h3 id="4-edit-text-at-the-speed-of-thought-">4. Edit text at the speed of thought !!!</h3>
+
+<ul>
+  <li>johngrib 님의 Vimwiki + Jekyll + Github.io 를 사용하면서 드는 생각은… 딱 이 느낌..</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Edit Text at the Speed of Thought.. 요기→→</td>
+      <td><img src="https://images-na.ssl-images-amazon.com/images/I/41Uki3%2BV7nL._SX415_BO1,204,203,200_.jpg" alt="speed" width="290"></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>그래서 그런지 몰라도 정리한 내용을 다시보면 …
+    <ul>
+      <li>깔끔하게 정리된 느낌은 없고…</li>
+      <li>…그냥 그때 의식의 흐름이 이랬구나를 알게 된다.</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

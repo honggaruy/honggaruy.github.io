@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>위키에 저자 프로필 작성하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="이미지 + side text 배치 방법">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/wiki-edit-author-profile/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="위키에 저자 프로필 작성하기">
+    <meta property="og:description" content="이미지 + side text 배치 방법">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/wiki-edit-author-profile/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/wiki-edit-author-profile/">
+    <meta name="twitter:title" content="위키에 저자 프로필 작성하기">
+    <meta name="twitter:description" content="이미지 + side text 배치 방법">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+    <!-- https://fontawesome.com/kits/a86e231b11/use 참고 -->
+    <script src="https://kit.fontawesome.com/a86e231b11.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="wiki-edit-author-profile">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">위키에 저자 프로필 작성하기</h1>
+    
+        <p class="title-summary">이미지 + side text 배치 방법</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-edit-author-profile.md" target="_blank">created: 2023.06.02</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-edit-author-profile.md" target="_blank">updated: 2024.01.30</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/wiki-edit-author-profile.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%84%ED%82%A4%EC%97%90+%EC%A0%80%EC%9E%90+%ED%94%84%EB%A1%9C%ED%95%84+%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    wiki편집
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EB%B0%9C%EB%8B%A8" id="markdown-toc-발단">발단</a></li>
+  <li>
+<a href="#%EC%A0%84%EA%B0%9C" id="markdown-toc-전개">전개</a>    <ul>
+      <li>
+<a href="#%EC%B0%B8%EA%B3%A0-%EB%A7%81%ED%81%AC" id="markdown-toc-참고-링크">참고 링크</a>        <ul>
+          <li><a href="#kramdown" id="markdown-toc-kramdown">kramdown</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0" id="markdown-toc-기본-구조">기본 구조</a>        <ul>
+          <li><a href="#%EC%82%AC%EC%A0%84-%EC%A4%80%EB%B9%84" id="markdown-toc-사전-준비">사전 준비</a></li>
+          <li><a href="#%EC%A0%80%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%EC%9E%91%EC%84%B1" id="markdown-toc-저자-프로필-작성">저자 프로필 작성</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90-%EB%B0%9C%EC%83%9D%EB%B0%8F-%ED%95%B4%EA%B2%B0-%EA%B3%BC%EC%A0%95" id="markdown-toc-문제점-발생및-해결-과정">문제점 발생및 해결 과정</a>    <ul>
+      <li><a href="#%EB%AC%B8%EC%A0%9C%EC%A0%90-%EC%84%A4%EB%AA%85" id="markdown-toc-문제점-설명">문제점 설명</a></li>
+      <li>
+<a href="#%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-해결책">해결책</a>        <ul>
+          <li><a href="#jekyll-figure" id="markdown-toc-jekyll-figure">jekyll-figure</a></li>
+          <li><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85-%EC%A0%81%EC%9A%A9-%EB%8B%A8%EA%B3%84%EB%B3%84-%EC%84%A4%EB%AA%85" id="markdown-toc-해결책-적용-단계별-설명">해결책 적용 단계별 설명</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#%EA%B8%B0%ED%83%80" id="markdown-toc-기타">기타</a>        <ul>
+          <li><a href="#figure%EC%9D%98-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A1%B0%EC%A0%95" id="markdown-toc-figure의-사이즈-조정">figure의 사이즈 조정</a></li>
+          <li><a href="#%EC%9C%84-%EB%B0%A9%EB%B2%95%EB%8C%80%EB%A1%9C-%EC%A0%81%EC%9A%A9%ED%96%88%EB%8A%94%EB%8D%B0%EB%8F%84-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%EA%B8%80-%EC%82%AC%EC%9D%B4%EC%9D%98-%EC%82%AC%EC%9D%B4%EA%B0%80-%EB%B2%8C%EC%96%B4%EC%A0%B8-%EC%9E%88%EB%8B%A4" id="markdown-toc-위-방법대로-적용했는데도-이미지와-글-사이의-사이가-벌어져-있다">위 방법대로 적용했는데도 이미지와 글 사이의 사이가 벌어져 있다??</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="발단">발단</h1>
+<ul>
+  <li>책읽고 정리할 때 저자 프로필도 작성하면 좋겠다고 생각했다</li>
+  <li>사용하다 보니 여러 곳에서 인물 프로필도 작성할 필요가 생겼다</li>
+  <li>인물 프로필 섹션을 사용할 때 생긴 문제와 해결책을 이곳에 적기로 한다</li>
+</ul>
+
+<h1 id="전개">전개</h1>
+
+<h2 id="참고-링크">참고 링크</h2>
+
+<h3 id="kramdown">kramdown</h3>
+<ul>
+  <li>본 위키는 Jekyll의 기본 markup langauge인 kramdown을 사용한다</li>
+  <li>
+<a href="https://kramdown.gettalong.org/syntax.html#html-spans">HTML Spans , kramdown syntax</a> 를 참고하면..
+    <ul>
+      <li>기본적으로 kramdown은 span HTML tags 내부의 kramdown syntax를 파싱하지만
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">parse_span_thml</code> 옵션으로 on/off 할 수 있다</li>
+          <li>html에 <code class="language-html highlighter-rouge">markdown</code> attribute을 이용하여 tag 단위로도 syntax parsing을 enable/disable 할 수 있다
+            <ul>
+              <li>HTML tag가 <code class="language-html highlighter-rouge">markdown="0"</code> attribute을 가지면, HTML tag 내에서 kramdown 파싱이 되지 않는다</li>
+              <li>HTML tag가 <code class="language-html highlighter-rouge">markdown="1"</code> attribute을 가지면, tag 내의 content는 span-leve(in line 수준)으로 파싱된다</li>
+              <li>HTML tag가 <code class="language-html highlighter-rouge">markdown="block"</code> attribute을 가지면,
+                <ul>
+                  <li>HTML spans는 block-level 요소를 포함할수 없기 때문에,  warning이 뜨고 attribute은 무시된다</li>
+                </ul>
+              </li>
+              <li>HTML tag가 <code class="language-html highlighter-rouge">markdown="span"</code> attribute을 가지면, tag 내의 content는 span-leve(in line 수준)으로 파싱된다</li>
+            </ul>
+          </li>
+          <li>대부분의 HTML tag 콘텐츠가 파싱되지만 script 태그 처럼 내부를 파싱할 수 없는 태그도 있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="기본-구조">기본 구조</h2>
+
+<h3 id="사전-준비">사전 준비</h3>
+<ul>
+  <li>현재 페이지 단위로 별도로 적용하도록 되어 있다. 형식이 확립되면 추후에 global하게 적용하도록 할 수 있다</li>
+  <li>아래 html 코드를 페이지 앞부분에 적당히 적용한다
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;style&gt;</span>
+<span class="nc">.author-container</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span> <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-around</span><span class="p">;}</span>
+<span class="nt">&lt;/style&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="저자-프로필-작성">저자 프로필 작성</h3>
+<ul>
+  <li>다음과 같이 작성하면..
+    <div class="language-md highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre><span class="gu">## Bram Moolenaar</span>
+
+<span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"author-container"</span><span class="nt">&gt;</span>
+
+<span class="p">![</span><span class="nv">Bram Moolenaar Photo</span><span class="p">][</span><span class="ss">Moolenaar-img</span><span class="p">]</span>
+<span class="p">
+-</span> Vim - the ubiquitous text editor 개발자
+<span class="p">-</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa-solid fa-house fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span> : <span class="p">[</span><span class="nv">moolenaar.net</span><span class="p">](</span><span class="sx">https://moolenaar.net/</span><span class="p">)</span> 
+
+<span class="nt">&lt;/div&gt;</span>
+  
+<span class="p">[</span><span class="ss">Moolenaar-img</span><span class="p">]:</span><span class="sx">https://moolenaar.net/kopk.jpg</span>
+{:width="100%" object-fit="cover" object-position="20% 10%"}
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>다음과 같은 결과를 얻는다</li>
+  <li><img src="/wiki-img/2023/profile_good_example_01.png" alt="Good Example 01"></li>
+</ul>
+
+<h1 id="문제점-발생및-해결-과정">문제점 발생및 해결 과정</h1>
+
+<h2 id="문제점-설명">문제점 설명</h2>
+
+<ul>
+  <li>원본 사진이 너무 크면 텍스트와 어울리지 않는다
+    <div class="language-md highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td>
+<td class="rouge-code"><pre><span class="gu">## Drew neil</span>
+
+<span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"author-container"</span><span class="nt">&gt;</span>
+
+<span class="p">![</span><span class="nv">Drew neil Photo</span><span class="p">][</span><span class="ss">Drewneil-img</span><span class="p">]</span>
+<span class="p">   
+-</span> Vim 강연, 도서출판, media 제작을 활발히 하는 개발자
+<span class="p">-</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa-solid fa-house fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span> : <span class="p">[</span><span class="nv">drewneil.com</span><span class="p">](</span><span class="sx">http://drewneil.com/</span><span class="p">)</span> 
+<span class="p">-</span> <span class="p">[</span><span class="nv">Drew Nail Github profile</span><span class="p">](</span><span class="sx">https://github.com/nelstrom</span><span class="p">)</span>
+<span class="p">-</span> 도서
+<span class="p">  -</span> <span class="p">[</span><span class="nv">Practical Vim, 2ed</span><span class="p">](</span><span class="sx">https://pragprog.com/titles/dnvim2/practical-vim-second-edition/</span><span class="p">)</span>
+<span class="p">  -</span> <span class="p">[</span><span class="nv">Mordern Vim</span><span class="p">](</span><span class="sx">https://pragprog.com/titles/modvim/modern-vim/</span><span class="p">)</span> 
+<span class="p">-</span> 미디어: <span class="p">[</span><span class="nv">Vimcast.org</span><span class="p">](</span><span class="sx">http://vimcasts.org/</span><span class="p">)</span> 운영
+
+<span class="nt">&lt;/div&gt;</span>
+  
+<span class="p">[</span><span class="ss">Drewneil-img</span><span class="p">]:</span><span class="sx">https://avatars.githubusercontent.com/u/7069?v=4</span>
+{:width="100%" object-fit="cover" object-position="20% 10%"}
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>결과
+<img src="/wiki-img/2023/profile_bad_example_01.png" alt="Bad Example 01">
+</li>
+    </ul>
+  </li>
+  <li>이미지 width 옵션을 다음과 같이 줄여본다
+    <div class="language-md highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="ss">Drewneil-img</span><span class="p">]:</span><span class="sx">https://avatars.githubusercontent.com/u/7069?v=4</span>
+{:width="50%" object-fit="cover" object-position="20% 10%"}
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>결과
+<img src="/wiki-img/2023/profile_bad_example_02.png" alt="Bad Example 02">
+</li>
+      <li>사진 오른쪽이 이상하게 여백이 넓다</li>
+      <li>img 사이즈는 원하는 대로 줄였지만..
+<img src="/wiki-img/2023/profile_bad_example_03.png" alt="Bad Example 03">
+</li>
+      <li>img 사이즈의 parent node인 p 태그는 원본 사이즈로 그대로 유지되고 있다
+<img src="/wiki-img/2023/profile_bad_example_04.png" alt="Bad Example 04">
+</li>
+    </ul>
+  </li>
+  <li>일단 가장 큰 문제는 markdown 형식으로 작성된 image 요소가 html로 렌더링되면 p 태그로 한번더 감싸지는데
+    <ul>
+      <li>이 상태대로 rendering되면 image가 차지하는 영역을 줄일수 없다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="해결책">해결책</h2>
+<ul>
+  <li>위의 문제와 관련된 SO 질문과 답을 우선 보자
+    <ul>
+      <li><a href="https://stackoverflow.com/q/24456010/9457247">위와 관련한 SO 질문01</a></li>
+      <li><a href="https://shttp://www.unixwiz.net/techtips/tackoverflow.com/q/30590367/9457247">위와 관련한 SO 질문02</a></li>
+    </ul>
+  </li>
+  <li>figure 태그나 div태그와 같은 block 태그로 감싸라는 해결책이 많이 보인다</li>
+</ul>
+
+<h3 id="jekyll-figure">jekyll-figure</h3>
+<ul>
+  <li><a href="https://github.com/paulrobertlloyd/jekyll-figure">jekyll-figure github repository</a></li>
+  <li>jekyll 에 적용하는 custom ruby gem</li>
+  <li>기본 image 태그 대신 figure 태그로 markdown을 rendering하기 위해 채택함</li>
+</ul>
+
+<h3 id="해결책-적용-단계별-설명">해결책 적용 단계별 설명</h3>
+<ul>
+  <li>우선 jekyll-figure 를 설치한다</li>
+  <li>kramdown에서 제공하는 <a href="https://kramdown.gettalong.org/syntax.html#link-definitions">Link Definitions</a> 방법은 jekyll-figure에서 지원안되기 때문에
+    <ul>
+      <li>일반적인 markdown image 링크를 사용한다</li>
+    </ul>
+  </li>
+  <li>다음은 해결책을 적용한 markdown이다
+    <ul>
+      <li>아래에서 liquid tag를 code fence내에 표시하기 위해 raw liquid tag를 사용함</li>
+      <li>raw liquid tag가 없으면 figure liquid tag가 작동하여 code fence가 깨짐</li>
+    </ul>
+
+    <div class="language-md highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre>  
+<span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"author-container"</span><span class="nt">&gt;</span>
+
+{% figure %}
+<span class="p">![</span><span class="nv">Drew neil Photo</span><span class="p">](</span><span class="sx">https://avatars.githubusercontent.com/u/7069?v=4</span><span class="p">)</span>
+{% endfigure %}
+<span class="p">   
+-</span> Vim 강연, 도서출판, media 제작을 활발히 하는 개발자
+<span class="p">-</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa-solid fa-house fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span> : <span class="p">[</span><span class="nv">drewneil.com</span><span class="p">](</span><span class="sx">http://drewneil.com/</span><span class="p">)</span> 
+<span class="p">-</span> <span class="p">[</span><span class="nv">Drew Nail Github profile</span><span class="p">](</span><span class="sx">https://github.com/nelstrom</span><span class="p">)</span>
+<span class="p">-</span> 도서
+<span class="p">  -</span> <span class="p">[</span><span class="nv">Practical Vim, 2ed</span><span class="p">](</span><span class="sx">https://pragprog.com/titles/dnvim2/practical-vim-second-edition/</span><span class="p">)</span>
+<span class="p">  -</span> <span class="p">[</span><span class="nv">Mordern Vim</span><span class="p">](</span><span class="sx">https://pragprog.com/titles/modvim/modern-vim/</span><span class="p">)</span> 
+<span class="p">-</span> 미디어: <span class="p">[</span><span class="nv">Vimcast.org</span><span class="p">](</span><span class="sx">http://vimcasts.org/</span><span class="p">)</span> 운영
+
+<span class="nt">&lt;/div&gt;</span>
+  
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>결과
+    <ul>
+      <li>span-level인 img html tag 대신 block-level인 figure html tag가 들어가 p tag 감싸기가 사라졌다 !!</li>
+      <li>p 태그가 들어가는 이유는
+        <ul>
+          <li>span-level인 img html tag를 block들만 놀아야할 flex box에 (부모없이) 혼자 들어갔기 때문에 임시로 p 태그라는 보호자를 세워주는 보호책인것이다 !! (개발자의 실수를 보완해주는 markdown 엔진…)
+<img src="/wiki-img/2023/profile_good_example_02.png" alt="Good Example 02">
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="기타">기타</h2>
+
+<h3 id="figure의-사이즈-조정">figure의 사이즈 조정</h3>
+<ul>
+  <li>figure를 사용하니 image size가 자동으로 줄어들었다</li>
+  <li>size를 조정하려면 다음과 같이 하면 되는데
+    <div class="language-liquid highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>  
+<span class="p">{%</span><span class="w"> </span><span class="nt">figure</span><span class="w"> </span><span class="p">%}</span>
+![Drew neil Photo](https://avatars.githubusercontent.com/u/7069?v=4)
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfigure</span><span class="w"> </span><span class="p">%}</span>
+{:style="width:50%"}
+  
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+    <ul>
+      <li>다만 이렇게 하면 image html tag에 50%가 적용되는게 아니라 figure html tag에 적용되며
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">.author-container</code> 블럭을 100%로 볼 때 <code class="language-html highlighter-rouge">figure</code> tag가 50%를 차지하겠다는 것으로 해석되기 때문에..</li>
+          <li>아래와 같이 커지게 된다
+<img src="/wiki-img/2023/profile_good_example_03.png" alt="Good Example 03">
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="위-방법대로-적용했는데도-이미지와-글-사이의-사이가-벌어져-있다">위 방법대로 적용했는데도 이미지와 글 사이의 사이가 벌어져 있다??</h3>
+<ul>
+  <li>문제: 그러니까 아래와 같은 경우는 왜 발생할까?
+    <ul>
+      <li>맨 아래 <code class="language-html highlighter-rouge">Steve Friedl</code>의 경우 이미지와 오른쪽 ul 태그와 사이의 공백이 크다 (이미지의 공백도 아니다!) 
+  <img src="/wiki-img/2023/profile_other_example_01.png" alt="other Example 01">
+</li>
+    </ul>
+  </li>
+  <li>해결: 그 이유는.. 글이 가로길이가 너무 짧고, <code class="language-html highlighter-rouge">justify-content</code> 옵션이 <code class="language-html highlighter-rouge">space-around</code>로 설정되어 있기 때문이다
+    <ul>
+      <li>즉, <a href="https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=281016&pageIndex=1&searchCondition=&searchKeyword=">글밥</a>이 많아지면 앞의 예처럼 조정된다!!</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

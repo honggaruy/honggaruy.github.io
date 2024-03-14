@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RE2 번역 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="구글 RE2">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/re2-translation/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RE2 번역">
+    <meta property="og:description" content="구글 RE2">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/re2-translation/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/re2-translation/">
+    <meta name="twitter:title" content="RE2 번역">
+    <meta name="twitter:description" content="구글 RE2">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="re2-translation">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">RE2 번역</h1>
+    
+        <p class="title-summary">구글 RE2</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/re2-translation.md" target="_blank">created: 2020.12.05</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/re2-translation.md" target="_blank">updated: 2021.01.25</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/re2-translation.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=RE2+%EB%B2%88%EC%97%AD&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    re2 regex latex yaml-front-matter mathjax translation
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a>    <ul>
+      <li><a href="#%EB%A7%81%ED%81%AC" id="markdown-toc-링크">링크</a></li>
+      <li><a href="#%EC%9D%B4%EB%B2%88%EA%B8%80%EC%9D%98-%ED%8A%B9%EC%A7%95" id="markdown-toc-이번글의-특징">이번글의 특징</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#2-re2-wiki" id="markdown-toc-2-re2-wiki">2. re2 wiki</a>    <ul>
+      <li><a href="#whyre2" id="markdown-toc-whyre2">WhyRE2</a></li>
+      <li>
+<a href="#syntax" id="markdown-toc-syntax">Syntax</a>        <ul>
+          <li><a href="#%EB%8B%A8%EC%9D%BC-%EB%AC%B8%EC%9E%90-%ED%91%9C%ED%98%84%EC%8B%9D%EC%9D%98-%EC%A2%85%EB%A5%98" id="markdown-toc-단일-문자-표현식의-종류">단일 문자 표현식의 종류</a></li>
+          <li><a href="#composites" id="markdown-toc-composites">Composites</a></li>
+          <li><a href="#repetitions" id="markdown-toc-repetitions">Repetitions</a></li>
+          <li><a href="#possessive-repetitions" id="markdown-toc-possessive-repetitions">Possessive repetitions</a></li>
+          <li><a href="#ascii-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4" id="markdown-toc-ascii-문자-클래스">ASCII 문자 클래스</a></li>
+          <li><a href="#grouping" id="markdown-toc-grouping">Grouping</a></li>
+          <li><a href="#flags" id="markdown-toc-flags">Flags</a></li>
+          <li><a href="#empty-strings" id="markdown-toc-empty-strings">Empty strings</a></li>
+          <li><a href="#escape-sequences" id="markdown-toc-escape-sequences">Escape sequences</a></li>
+          <li><a href="#perl-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4" id="markdown-toc-perl-문자-클래스">Perl 문자 클래스</a></li>
+          <li><a href="#ascii-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4-1" id="markdown-toc-ascii-문자-클래스-1">ASCII 문자 클래스</a></li>
+          <li><a href="#unicode-character-class-namesgeneral-category" id="markdown-toc-unicode-character-class-namesgeneral-category">Unicode character class names–general category</a></li>
+          <li><a href="#unicode-character-class-namesscripts" id="markdown-toc-unicode-character-class-namesscripts">Unicode character class names–scripts</a></li>
+          <li><a href="#vim-character-classes" id="markdown-toc-vim-character-classes">Vim character classes</a></li>
+          <li><a href="#magic" id="markdown-toc-magic">Magic</a></li>
+          <li><a href="#%EB%81%9D" id="markdown-toc-끝">끝</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<h2 id="링크">링크</h2>
+
+<ul>
+  <li><a href="https://github.com/google/re2">RE2, github</a></li>
+</ul>
+
+<h2 id="이번글의-특징">이번글의 특징</h2>
+
+<ul>
+  <li>LaTex 사용해봄(봉인 해제..)
+    <ul>
+      <li>사용방법 : 해당 글의 Front matter에서 latex : false로 되어있는데 true로 변경하면됨</li>
+      <li>사용법 : <a href="https://johngrib.github.io/wiki/mathjax-latex/">MathJax로 LaTex 사용하기</a>
+</li>
+      <li>관련링크 <a href="https://www.mathjax.org/">MathJax 홈페이지</a>
+</li>
+      <li>Johngrib님 위키를 따라 했다면 이미 적용되어 있음
+        <ul>
+          <li><a href="https://github.com/honggaruy/honggaruy.github.io/blob/master/_includes/footer.html">root / _includes / footer.html 참조</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="2-re2-wiki">2. re2 wiki</h1>
+
+<ul>
+  <li>원문 링크 : <a href="https://github.com/google/re2/wiki">RE2, github wiki</a>
+</li>
+</ul>
+
+<h2 id="whyre2">WhyRE2</h2>
+
+<ul>
+  <li>
+<em>Safety is RE2’s raison d’être.</em>
+    <ul>
+      <li>갑자기 웬 프랑스어</li>
+      <li>의미를 해석해보면 “안전은 RE2의 존재 이유입니다.”
+        <ul>
+          <li>참고 :  <a href="https://m.blog.naver.com/PostView.nhn?blogId=ilovemofat&logNo=140056680950&proxyReferer=https:%2F%2Fwww.google.com%2F">레종 데트르와 레종 데따</a>
+</li>
+        </ul>
+      </li>
+      <li>
+<a href="https://en.wikipedia.org/wiki/Raison_d%27%C3%AAtre">위키피디어에 의하면</a> 영어에서 많이쓰는 French 표현 이라고 한다.</li>
+      <li>강조하려고 일부러 그런듯..</li>
+    </ul>
+  </li>
+  <li>문단 1
+    <ul>
+      <li>RE2는 다음과 같은 명확한 목표하에 설계되고 구현되었습니다.
+        <ul>
+          <li>인증받지않은 사용자의 정규식 입력을 리스크없이 다룰수 있도록 하겠다</li>
+        </ul>
+      </li>
+      <li>주요 보장중의 하나는 다음과 같습니다
+        <ul>
+          <li>일치 검색 시간이 입력 문자열의 길이와 선형적으로 비례한다는 겁니다</li>
+        </ul>
+      </li>
+      <li>또한 생산적인 측면 또한 고려되어 작성되었습니다
+        <ul>
+          <li>파서, 컴파일러, 실행 엔진은 configurable budget내에서 작동하여 메모리 사용량을 제한합니다
+            <ul>
+              <li>즉, 메모리가 고갈되면 우아하게 에러를 처리합니다</li>
+            </ul>
+          </li>
+          <li>그리고 재귀를 피해 스택 오버플로우를 방지합니다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>문단 2
+    <ul>
+      <li>모든 환경에서 모든 다른 엔진보다 속도가 빠르고자 하는 것이 목표가 아닙니다</li>
+      <li>RE2는 선형 시간 성능을 보장하지만,
+        <ul>
+          <li>선형 시간 상수는 정규식의 안전한 처리에 수반되는 오버헤드에 따라 달라집니다.</li>
+          <li>어떤 의미에서는, backtracking 엔진이 낙관적으로 동작하는 반면에 RE2는 비관적으로 동작합니다
+            <ul>
+              <li>따라서 다양한 상황에서 예상되는 성능을 능가할 수 있습니다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>문단 3
+    <ul>
+      <li>Perl, PCRE 와 다른 엔진이 제공하는 모든 기능을 지원하는 것 또한 목표가 아닙니다</li>
+      <li>원칙적으로, RE2는 backtracking 솔루션만 존재하는 것으로 알려진 구조를 지원하지 않습니다</li>
+      <li>따라서, backreferences와 주변보기 assertions이 지원되지 않습니다</li>
+    </ul>
+  </li>
+  <li>자세한 내용은 정규 표현식 이론 및 실습에 대한 Russ Cox의 기사를 참조하세요
+    <ul>
+      <li><a href="https://swtch.com/~rsc/regexp/regexp1.html">Regular Expression Matching Can Be Simpl And Fast</a></li>
+      <li><a href="https://swtch.com/~rsc/regexp/regexp2.html">Regular Expression Matching: the Virtual Machine Approach</a></li>
+      <li><a href="https://swtch.com/~rsc/regexp/regexp3.html">Regular Expression Matching in the Wild</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="syntax">Syntax</h2>
+
+<ul>
+  <li>정규 표현식은 문자열 세트(character strings)를 설명하기 위한 표기법(notations)입니다</li>
+  <li>특정한 문자열이 정규 표현식으로 표현된 문자집합을 가질 때,
+    <ul>
+      <li>정규 표현식이 문자열과 match되었다고 말합니다</li>
+    </ul>
+  </li>
+  <li>가장 간단한 정규식은 단일 리터럴 문자입니다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">*+?()|</code>과 같은 메타 문자를 제외하고 문자는 자신과 match됩니다</li>
+      <li>메타 문자와 match하려면, backslash로 escape합니다
+        <ul>
+          <li>즉, <code class="language-html highlighter-rouge">\+</code>는 literal 플러스 문자와 match됩니다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>두 개의 정규 표현식은 서로 대체 되거나 연결하여 새로운 정규표현식을 구성할 수 있습니다
+    <ul>
+      <li>즉, $e_1$가 $s$에 match하고 $e_2$가 $t$와 match한다면..
+        <ul>
+          <li>$e_1$<code class="language-html highlighter-rouge">|</code>$e_2$도 $s$나 $t$에 match하고 $e_1e_2$도 $st$에 match한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>메타문자 <code class="language-html highlighter-rouge">*</code>,<code class="language-html highlighter-rouge">+</code>,<code class="language-html highlighter-rouge">?</code>는 반복 연산자입니다:
+    <ul>
+      <li>$e_1$<code class="language-html highlighter-rouge">*</code>는 0개 이상의 (아마도 다른)strings의 sequence와 match됩니다
+        <ul>
+          <li>위에서 각각의 string은 표현식 $e_1$과 match됩니다</li>
+        </ul>
+      </li>
+      <li>$e_1$<code class="language-html highlighter-rouge">+</code>는 1개 이상과 match되며</li>
+      <li>$e_1$<code class="language-html highlighter-rouge">?</code>는 0 혹은 1개와 match됩니다</li>
+    </ul>
+  </li>
+  <li>약한 binding부터 강한 binding 순서로 연산자 우선순위는..
+    <ul>
+      <li>첫번째가 교대(alternation, <code class="language-html highlighter-rouge">|</code>), 그 다음이 연결(concatenation) 마지막이 반복(repetition) 연산자입니다</li>
+      <li>명시적 괄호(Explicit parentheses)는 이 우선순위에 예외를 줄 수 있습니다.
+        <ul>
+          <li>수학 표현식에서와 마찬가지로요</li>
+          <li>예를 들자면
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">ab|cd</code>는 <code class="language-html highlighter-rouge">(ab)|(cd)</code>와 같습니다. - <code class="language-html highlighter-rouge">b|c</code>의 alternation 이 <code class="language-html highlighter-rouge">ab</code>의 concatenation보다 약함</li>
+              <li>
+<code class="language-html highlighter-rouge">ab*</code>는 <code class="language-html highlighter-rouge">a(b*)</code>와 같습니다. - <code class="language-html highlighter-rouge">ab</code> 의 concatenation 보다 <code class="language-html highlighter-rouge">b*</code> 의 반복(repetion) 이 강함</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>지금까지 설명한 내용은 Unix <em>egrep</em> 정규 표현식의 문법의 대부분입니다.
+    <ul>
+      <li>이 부분집합(subset)은 모든 정규식 언어을 묘사하는데 충분합니다</li>
+      <li>느슨하게 말하면, 정규식 언어(regular language)는 …
+        <ul>
+          <li>text를 고정된 크기의 메모리를 사용하여 한번 통과하여 일치시킬수 있는 ..</li>
+          <li>문자열 집합입니다.</li>
+        </ul>
+      </li>
+      <li>최신의 정규 표현식 기능(특히 Perl과 그 복제품들)은 ..
+        <ul>
+          <li>많은 신규 연산자와 escape squence를 추가했는데..</li>
+          <li>이들은 정규식을 간결하게 만들기도 하지만..</li>
+          <li>가끔은 좀더 혼동을주며, 보다 강력한것 같지도 않습니다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>이 페이지는 RE2에서 허용된 정규 표현식 문법의 목록입니다</li>
+  <li>PCRE, PERL, VIM에서 허용된 일부 문법 또한 포함됩니다</li>
+</ul>
+
+<h3 id="단일-문자-표현식의-종류">단일 문자 표현식의 종류</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">단일 문자 표현식의 종류</th>
+      <th style="text-align: left">예제</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">모든 문자, 개행문자 포함(s=true)</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">.</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">문자 클래스</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[xyz]</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">문자 이외 클래스</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[^xyz]</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Perl 문자 클래스 (<a href="#perl-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4">link</a>)</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\d</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Perl 문자 이외 클래스</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\D</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ASCII 문자 클래스</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[[:alpha:]]</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ASCII 문자 이외 클래스(<a href="#ascii-%EB%AC%B8%EC%9E%90-%ED%81%B4%EB%9E%98%EC%8A%A4">link</a>)</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[[:^alpha:]]</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Unicode 문자 class (한 글자 이름)</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\pN</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Unicode 문자 class</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\p{Greek}</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Unicode 문자 이외 클래스 (한 글자 이름)</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\PN</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Unicode 문자 이외 클래스</td>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\P{Greek}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="composites">Composites</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">합성문자</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">xy</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">x</code> 다음에 오는 <code class="language-html highlighter-rouge">y</code>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x│y</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">x</code> 아니면 <code class="language-html highlighter-rouge">y</code> (<code class="language-html highlighter-rouge">x</code> 우선 )</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="repetitions">Repetitions</h3>
+
+<style>
+.notsupport-repet tr:nth-child(n+13) { background: lightgrey; }
+</style>
+
+<table class="notsupport-repet">
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">반복문자</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x*</code></td>
+      <td style="text-align: left">0개 이상의 <code class="language-html highlighter-rouge">x</code>, 많은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x+</code></td>
+      <td style="text-align: left">1개 이상의 <code class="language-html highlighter-rouge">x</code>, 많은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x?</code></td>
+      <td style="text-align: left">0개 혹은 1개의 <code class="language-html highlighter-rouge">x</code>, 1개를 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,m}</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code> 이나 <code class="language-html highlighter-rouge">n</code>+1 이나 … 이나 <code class="language-html highlighter-rouge">m</code>개의 <code class="language-html highlighter-rouge">x</code>, 많은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,}</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code>개의 이상의 <code class="language-html highlighter-rouge">x</code>, 많은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n}</code></td>
+      <td style="text-align: left">정확히 <code class="language-html highlighter-rouge">n</code>개의 <code class="language-html highlighter-rouge">x</code>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x*?</code></td>
+      <td style="text-align: left">0개 이상의 <code class="language-html highlighter-rouge">x</code>, 적은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x+?</code></td>
+      <td style="text-align: left">1개 이상의 <code class="language-html highlighter-rouge">x</code>, 적은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x??</code></td>
+      <td style="text-align: left">0개 혹은 1개의 <code class="language-html highlighter-rouge">x</code>, 0개를 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,m}?</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code> 이나 <code class="language-html highlighter-rouge">n</code>+1 이나 … 이나 <code class="language-html highlighter-rouge">m</code>개의 <code class="language-html highlighter-rouge">x</code>, 적은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,}?</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code>개의 이상의 <code class="language-html highlighter-rouge">x</code>, 적은쪽 선호</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n}?</code></td>
+      <td style="text-align: left">정확히 <code class="language-html highlighter-rouge">n</code>개의 <code class="language-html highlighter-rouge">x</code>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{}</code></td>
+      <td style="text-align: left">(≡<code class="language-html highlighter-rouge">x*</code>) (지원 안됨) VIM</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{-}</code></td>
+      <td style="text-align: left">(≡<code class="language-html highlighter-rouge">x*?</code>) (지원 안됨) VIM</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{-n}</code></td>
+      <td style="text-align: left">(≡<code class="language-html highlighter-rouge">x{n}?</code>) (지원 안됨) VIM</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x=</code></td>
+      <td style="text-align: left">(≡<code class="language-html highlighter-rouge">x?</code>) (지원 안됨) VIM</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>구현 제한
+    <ul>
+      <li>카운팅 형식인 <code class="language-html highlighter-rouge">x{n,m}</code>, <code class="language-html highlighter-rouge">x{n,}</code>, <code class="language-html highlighter-rouge">x{n}</code>은 최소또는 최대 반복횟수가 1000이 넘는 형식을 거부합니다</li>
+      <li>무제한 반복은 이 제한이 적용되지 않습니다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="possessive-repetitions">Possessive repetitions</h3>
+
+<ul>
+  <li>Possessive 용어
+    <ul>
+      <li>Possessive repetitions는 Possessive quantifier라고도 한다</li>
+      <li>Possessive 소유라는 뜻도 있지만 독점의 뜻도 있다.
+        <ul>
+          <li>독점의 뜻이 전부 아니면 0 이므로 이쪽이 맞는듯</li>
+        </ul>
+      </li>
+      <li><a href="https://www.regular-expressions.info/possessive.html">Regular-Expressions.info 의 Possessive Quantifiers 설명</a></li>
+    </ul>
+  </li>
+  <li>Possessive 의 특징
+    <ul>
+      <li>backtrack을 하지 않는다
+        <ul>
+          <li>맞지 않으면 바로 끝남 ( The deal is all or nothing. )</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+.notsupport-possessive tr:nth-child(n+1) { background: lightgrey; }
+</style>
+
+<table class="notsupport-possessive">
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">독점적 반복자</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x*+</code></td>
+      <td style="text-align: left">0개 이상의 <code class="language-html highlighter-rouge">x</code>, 독점적 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x++</code></td>
+      <td style="text-align: left">1개 이상의 <code class="language-html highlighter-rouge">x</code>, 독점적 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x?+</code></td>
+      <td style="text-align: left">0개 혹은 1개의 <code class="language-html highlighter-rouge">x</code>, 독점적 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,m}+</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code> 이나 <code class="language-html highlighter-rouge">n</code>+1 이나 … 이나 <code class="language-html highlighter-rouge">m</code>개의 <code class="language-html highlighter-rouge">x</code>, 독점적 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">x{n,}+</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">n</code>개의 이상의 <code class="language-html highlighter-rouge">x</code>, 독점적 (지원 안됨)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ascii-문자-클래스">ASCII 문자 클래스</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">ASCII 문자 클래스</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[[:alnum:]]</code></td>
+      <td style="text-align: left">alphanumeric (≡ <code class="language-html highlighter-rouge">[0-9A-Za-z]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">[[:alpha:]]</code></td>
+      <td style="text-align: left">alphabetic (≡ <code class="language-html highlighter-rouge">[A-Za-z]</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="grouping">Grouping</h3>
+
+<ul>
+  <li>아래 표에서 <code class="language-html highlighter-rouge">re</code>는 <code class="language-html highlighter-rouge">regular expression</code> 인듯 하다</li>
+  <li>캡쳐 : 어딘가에 잡아(캡쳐)둠. 다른곳에 써먹기 위해..</li>
+  <li>
+<a href="https://stackoverflow.com/a/3513858/9457247">Non-Capturing Group , stackoverflow 답변</a>
+    <ul>
+      <li>URL을 regex 파싱할 때 프로토콜인 http or https 부분은 파싱할 때는 필요하지만 match된 이후 별 쓸모가 없다</li>
+      <li>나중에 써먹을 필요가 없는 부분은 잡아둘(캡처할) 필요가 없으므로 Non-Captureing Group으로 설정하곤 한다</li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+.notsupport-grouping tr:nth-child(n+3):nth-child(-n+4) { background: lightgrey; }
+.notsupport-grouping tr:nth-child(n+7) { background: lightgrey; }
+</style>
+
+<table class="notsupport-grouping">
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">그루핑</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(re)</code></td>
+      <td style="text-align: left">번호가 매겨진 캡쳐 그룹 (submatch)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?P<span class="nt">&lt;name&gt;</span>re)</code></td>
+      <td style="text-align: left">이름과 번호가 설정된 캡쳐 그룹 (submatch)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?<span class="nt">&lt;name&gt;</span>re)</code></td>
+      <td style="text-align: left">이름과 번호가 설정된 캡쳐 그룹 (submatch) (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?'name're)</code></td>
+      <td style="text-align: left">이름과 번호가 설정된 캡쳐 그룹 (submatch) (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?:re)</code></td>
+      <td style="text-align: left">캡쳐 안하는 그룹</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?flags)</code></td>
+      <td style="text-align: left">현재 그룹내에 플래그를 설정; 캡쳐 안하는 그룹</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?#text)</code></td>
+      <td style="text-align: left">주석 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?│x│y│z)</code></td>
+      <td style="text-align: left">브랜치 숫자 리셋 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?&gt;re)</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>의 독점적 match (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re@&gt;</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>의 독점적 match (지원 안됨) VIM</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">%(re)</code></td>
+      <td style="text-align: left">캡쳐 안하는 그룹 (지원 안됨) VIM</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="flags">Flags</h3>
+
+<ul>
+  <li><a href="https://www.regular-expressions.info/modifiers.html">Specifying Modes Inside the Rqgular Expression, regex.info</a></li>
+  <li>regex 맨 앞에 <code class="language-html highlighter-rouge">(?i)</code> 이런씩으로 붙임</li>
+  <li>
+<code class="language-html highlighter-rouge">(?ismx)</code>  이렇게 여러개의 옵션을 한 번에 줄 수도 있음</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">플래그</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">i</code></td>
+      <td style="text-align: left">매치할 때 case를 신경쓰지 않음 ( 기본값은 false )</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">m</code></td>
+      <td style="text-align: left">다중 라인 모드: <code class="language-html highlighter-rouge">^</code>와 <code class="language-html highlighter-rouge">$</code>가 text의 처음과 끝뿐만 아니라 <br> line의 처음과 끝과 match됨 (기본값은 false)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">s</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">.</code>가 개행문자 <code class="language-html highlighter-rouge">\n</code> 까지도 match됨 ( 기본값은 false )</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">U</code></td>
+      <td style="text-align: left">ungreedy: <code class="language-html highlighter-rouge">x*</code>와 <code class="language-html highlighter-rouge">x*?</code>의 의미를 <code class="language-html highlighter-rouge">x*?</code>, <code class="language-html highlighter-rouge">x+?</code>로 swap함 ( 기본값은 false )</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Flag 문법은 <code class="language-html highlighter-rouge">xyz</code>(설정) <code class="language-html highlighter-rouge">-xyz</code> (해제) , 혹은 <code class="language-html highlighter-rouge">xy-z</code> ( <code class="language-html highlighter-rouge">xy</code>는 설정 <code class="language-html highlighter-rouge">z</code>는 해제)</li>
+</ul>
+
+<h3 id="empty-strings">Empty strings</h3>
+
+<style>
+.notsupport-empty-strings tr:nth-child(n+6):nth-child(-n+8) { background: lightgrey; }
+.notsupport-empty-strings tr:nth-child(n+10) { background: lightgrey; }
+</style>
+
+<table class="notsupport-empty-strings">
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">공백  문자열</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">^</code></td>
+      <td style="text-align: left">line(<code class="language-html highlighter-rouge">m</code>이 true일때) 이나 text의 시작</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$</code></td>
+      <td style="text-align: left">line(<code class="language-html highlighter-rouge">m</code>이 true일때) 이나 text의 끝 (<code class="language-html highlighter-rouge">\Z</code>이 아니고 <code class="language-html highlighter-rouge">\z</code>과 같음)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\A</code></td>
+      <td style="text-align: left">text의 시작</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\b</code></td>
+      <td style="text-align: left">ASCII 단어의 경계 (한 쪽은 <code class="language-html highlighter-rouge">\w</code>이고 다른한 쪽은 <code class="language-html highlighter-rouge">\W</code>, <code class="language-html highlighter-rouge">\A</code> 혹은 <code class="language-html highlighter-rouge">\z</code>가 됨</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\B</code></td>
+      <td style="text-align: left">ASCII 단어의 경계에 있지 않을때</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\g</code></td>
+      <td style="text-align: left">찾는 sbutext의 시작 (지원 안됨) PCRE</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\G</code></td>
+      <td style="text-align: left">마지막 match의 끝 (지원 안됨) PERL</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\Z</code></td>
+      <td style="text-align: left">text의 끝이거나, text의 끝에서 새 줄이 시작하기 전 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\z</code></td>
+      <td style="text-align: left">text의 끝</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?=re)</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되는 text 바로 전 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?!re)</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되지 않는 text 바로 전 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?<span class="nt">&lt;</span><span class="err">=</span><span class="na">re</span><span class="err">)</span></code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되는 text 이후 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">(?<span class="nt">&lt;</span><span class="err">!</span><span class="na">re</span><span class="err">)</span></code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되지 않는 text 이후 (지원 안됨)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re<span class="err">&amp;</span></code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되는 text 이전  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/%5C&amp;">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re@=</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되는 text 이전  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@=">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re@!</code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되지않는 text 이전  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@!">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re@<span class="nt">&lt;</span><span class="err">=</span></code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되는 text 이후  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@&lt;=">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">re@<span class="nt">&lt;</span><span class="err">!</span></code></td>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">re</code>에 match되지않는 text 이후  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@&lt;!">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\zs</code></td>
+      <td style="text-align: left">match 시작의 sets (= <code class="language-html highlighter-rouge">\K</code>) (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\ze</code></td>
+      <td style="text-align: left">match 끝의 sets  (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\ze">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%^</code></td>
+      <td style="text-align: left">file의 시작 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%^">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%$</code></td>
+      <td style="text-align: left">file의 끝 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%$">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%V</code></td>
+      <td style="text-align: left">screen 상에서 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%V">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%#</code></td>
+      <td style="text-align: left">cursor 위치에서 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%#">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%'m</code></td>
+      <td style="text-align: left">mark <code class="language-html highlighter-rouge">m</code> 위치에서 (지원 안됨) VIM (링크는 표 아랫쪽 참조)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%23l</code></td>
+      <td style="text-align: left">line 23 위치에서 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%l">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%23c</code></td>
+      <td style="text-align: left">column 23 위치에서 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%c">VIM</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\%23v</code></td>
+      <td style="text-align: left">virtual column 23 위치에서 (지원 안됨) <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%&lt;v">VIM</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-html highlighter-rouge">\%'m</code> 링크는 <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%'m" title="VIM">이 곳</a>을 참조하세요. 테이블내에서 링크 안됨</p>
+
+<h3 id="escape-sequences">Escape sequences</h3>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/ko-kr/cpp/c-language/escape-sequences?view=msvc-160">이스케이프 시퀀스란 ?</a></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">이스케이프 시퀀스</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\a</code></td>
+      <td style="text-align: left">bell (≡<code class="language-html highlighter-rouge">╲007</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\f</code></td>
+      <td style="text-align: left">form feed (≡<code class="language-html highlighter-rouge">╲014</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\t</code></td>
+      <td style="text-align: left">horizontal tab (≡<code class="language-html highlighter-rouge">╲011</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>안쓸것 같아 대부분 생략</li>
+</ul>
+
+<h3 id="perl-문자-클래스">Perl 문자 클래스</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Perl 문자 클래스 ( all ASCII-only)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\d</code></td>
+      <td style="text-align: left">숫자 (≡ <code class="language-html highlighter-rouge">[0-9]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\D</code></td>
+      <td style="text-align: left">숫자아닌 문자  (≡ <code class="language-html highlighter-rouge">[^0-9]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\s</code></td>
+      <td style="text-align: left">공백 문자  (≡ <code class="language-html highlighter-rouge">[\t\n\f\r ]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\S</code></td>
+      <td style="text-align: left">공백아닌 문자  (≡ <code class="language-html highlighter-rouge">[^\t\n\f\r ]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\w</code></td>
+      <td style="text-align: left">일반단어 문자  (≡ <code class="language-html highlighter-rouge">[0-9A-Za-z_]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\W</code></td>
+      <td style="text-align: left">일반단어아닌 문자  (≡ <code class="language-html highlighter-rouge">[^0-9A-Za-z_]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ascii-문자-클래스-1">ASCII 문자 클래스</h3>
+
+<ul>
+  <li>편집시 팁: 연속된 <code class="language-html highlighter-rouge">[[</code> 앞에 <code class="language-html highlighter-rouge">╲</code>를 붙여서 링크를 만들지 않도록 한다</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">ASCII 문자 클래스</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:alnum:]]</code></td>
+      <td style="text-align: left">알파누메릭 (≡ <code class="language-html highlighter-rouge">[0-9A-Za-z]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:alpha:]]</code></td>
+      <td style="text-align: left">알파베틱 (≡ <code class="language-html highlighter-rouge">[A-Za-z]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:ascii:]]</code></td>
+      <td style="text-align: left">ASCII (≡ <code class="language-html highlighter-rouge">[\x00-\x7F]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:blank:]]</code></td>
+      <td style="text-align: left">빈칸문자  (≡ <code class="language-html highlighter-rouge">[\t ]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:cntrl:]]</code></td>
+      <td style="text-align: left">control (≡ <code class="language-html highlighter-rouge">[\x00-\x1F\x7F]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:digit:]]</code></td>
+      <td style="text-align: left">숫자  (≡ <code class="language-html highlighter-rouge">[0-9]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:graph:]]</code></td>
+      <td style="text-align: left">graphical (≡ <code class="language-html highlighter-rouge">[!-~]</code> ≡ <code class="language-html highlighter-rouge">[A-Za-z0-9!"#$%<span class="ni">&amp;'()*+,\-./:;</span><span class="nt">&lt;</span><span class="err">=</span><span class="nt">&gt;</span>?@[\\\]^_{|}~]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:lower:]]</code></td>
+      <td style="text-align: left">소문자 (≡ <code class="language-html highlighter-rouge">[a-z]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:print:]]</code></td>
+      <td style="text-align: left">프린트되는 문자 (≡ <code class="language-html highlighter-rouge">[ -~]</code> ≡ <code class="language-html highlighter-rouge">[ [:graph:]]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:punct:]]</code></td>
+      <td style="text-align: left">구두점  (≡ <code class="language-html highlighter-rouge">[!-/:-@[- ' {-~]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:space:]]</code></td>
+      <td style="text-align: left">공백문자 (≡ <code class="language-html highlighter-rouge">[\t\n\v\f\r ]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:upeer:]]</code></td>
+      <td style="text-align: left">대문자 (≡ <code class="language-html highlighter-rouge">[A-Z]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:word:]]</code></td>
+      <td style="text-align: left">단어문자 (≡ <code class="language-html highlighter-rouge">[0-9A-Za-z_]</code>)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">\[[:xdigit:]]</code></td>
+      <td style="text-align: left">16진수  (≡ <code class="language-html highlighter-rouge">[0-9A-Fa-f]</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="unicode-character-class-namesgeneral-category">Unicode character class names–general category</h3>
+
+<ul>
+  <li>어떻게 사용하는지 모르겠어서 생략</li>
+</ul>
+
+<h3 id="unicode-character-class-namesscripts">Unicode character class names–scripts</h3>
+
+<ul>
+  <li>어떻게 사용하는지 모르겠어서 생략</li>
+</ul>
+
+<h3 id="vim-character-classes">Vim character classes</h3>
+
+<ul>
+  <li>대부분이 Not Supported라 생략</li>
+  <li>Not supported가 아닌것은 앞에 나왔음</li>
+</ul>
+
+<h3 id="magic">Magic</h3>
+
+<ul>
+  <li>일단 생략</li>
+</ul>
+
+<h3 id="끝">끝</h3>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </div>
+</footer>
+    
+</body>
+</html>

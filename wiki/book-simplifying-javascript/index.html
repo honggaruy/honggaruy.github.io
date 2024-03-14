@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>자바스크립트 코딩의 기술 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="똑똑하게 코딩하는 법">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/book-simplifying-javascript/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="자바스크립트 코딩의 기술">
+    <meta property="og:description" content="똑똑하게 코딩하는 법">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/book-simplifying-javascript/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/book-simplifying-javascript/">
+    <meta name="twitter:title" content="자바스크립트 코딩의 기술">
+    <meta name="twitter:description" content="똑똑하게 코딩하는 법">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book-simplifying-javascript">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">자바스크립트 코딩의 기술</h1>
+    
+        <p class="title-summary">똑똑하게 코딩하는 법</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-simplifying-javascript.md" target="_blank">created: 2021.05.13</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/book-simplifying-javascript.md" target="_blank">updated: 2022.07.14</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/book-simplifying-javascript.md">편집하기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    br*** book regex
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EA%B0%9C%EC%9A%94" id="markdown-toc-개요">개요</a>    <ul>
+      <li><a href="#%EC%B6%94%EA%B0%80-%EA%B0%9C%EC%9A%94" id="markdown-toc-추가-개요">추가 개요</a></li>
+      <li>
+<a href="#%EC%A0%80%EC%9E%90-%EC%84%A4%EB%AA%85" id="markdown-toc-저자-설명">저자 설명</a>        <ul>
+          <li><a href="#%EC%A1%B0-%EB%AA%A8%EA%B1%B4-joe-morgan" id="markdown-toc-조-모건-joe-morgan">조 모건 (Joe Morgan)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#chapter1-signal-intention-with-variable-assignment" id="markdown-toc-chapter1-signal-intention-with-variable-assignment">Chapter1. Signal Intention with Variable Assignment</a>    <ul>
+      <li><a href="#tip-1-signal-unchanging-values-with-const" id="markdown-toc-tip-1-signal-unchanging-values-with-const">Tip 1. Signal Unchanging Values with const</a></li>
+      <li>
+<a href="#tip-2-reduce-scope-conflicts-with-let-and-const" id="markdown-toc-tip-2-reduce-scope-conflicts-with-let-and-const">Tip 2. Reduce Scope Conflicts with let and const</a>        <ul>
+          <li><a href="#terms--jagons" id="markdown-toc-terms--jagons">terms &amp; jagons</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="개요">개요</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://gimg.gilbut.co.kr/book/BN002655/rn_view_BN002655.jpg" alt="표지"></td>
+      <td>저자: 조 모건(Joe Morgan) <br> 책제목 : 자바스크립트 코딩의 기술<br> (원서 제목 : Simplifying JavaScript) <br> 부제 : 똑똑하게 코딩하는 법, ES5, ES6를 넘어 최신 표준을 따르는 모던 자바스크립트 작성하기! <br> (원서 부제: Writing Modern JavaScript with ES5, ES6, and Beyond)<br><br> 출판사 : <a href="https://www.gilbut.co.kr/book/view?bookcode=BN002655&pdscode=pds&keyword=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8&collection=GB_BOOK#bookTab">도서출판 길벗</a>(원책: <a href="https://pragprog.com/titles/es6tips/simplifying-javascript/">The Pragmatic Bookshelf</a>) <br> ISBN 한글 : <a href="https://www.google.com/search?q=9791165210205">979-11-6521-020-5</a> <br> ISBN 영문 : <a href="https://www.google.com/search?q=9781680502886">9781680502886</a> <br> <br> 정가: 24,000원</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="추가-개요">추가 개요</h2>
+
+<ul>
+  <li>이 책은 1판 번역서이다. ( 출간일: 2010-09-17 , <a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B1048739715">한빛출판사 링크</a>)</li>
+  <li>영문판은 2판 까지 나왔다. ( 출간일: 2012년, <a href="https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/">O’Reilly 링크</a>)</li>
+  <li>번역서 2판은 2021-03-25 현재 아직 없는듯.</li>
+  <li><a href="https://commontoday.tistory.com/126">멘탈저장소의 해당 북 리뷰</a></li>
+</ul>
+
+<h2 id="저자-설명">저자 설명</h2>
+
+<h3 id="조-모건-joe-morgan">조 모건 (Joe Morgan)</h3>
+
+<style>
+.author-container {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<div class="author-container">
+
+  <p><img height="200px" object-fit="cover" object-position="20% 10%" src="http://thejoemorgan.com/static/2ef7ef668ed3f21927f2289e2e9d3173/9dc27/me.jpg" alt="Joe Morgan"></p>
+
+  <ul>
+    <li><a href="http://thejoemorgan.com/">홈 페이지</a></li>
+    <li><a href="https://twitter.com/joesmorgan">트위터</a></li>
+  </ul>
+
+</div>
+
+<h1 id="chapter1-signal-intention-with-variable-assignment">Chapter1. Signal Intention with Variable Assignment</h1>
+
+<ul>
+  <li>특이한 함수 ( currying ) 와 변수의 사용 빈도를 비교해 보면 변수를 옳게 사용하는 것의 영향력에 대해 판단할 수 있다</li>
+  <li>Modern JavaScript has several new ways to declare variables.
+    <ul>
+      <li>const</li>
+      <li>let</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tip-1-signal-unchanging-values-with-const">Tip 1. Signal Unchanging Values with const</h2>
+
+<ul>
+  <li>(당신 자신을 포함한) 다음 프로그래머에게 프로그램의 정확한 의도를 알리기 위해 <code class="language-html highlighter-rouge">const</code>를 사용하라</li>
+</ul>
+
+<h2 id="tip-2-reduce-scope-conflicts-with-let-and-const">Tip 2. Reduce Scope Conflicts with let and const</h2>
+
+<h3 id="terms--jagons">terms &amp; jagons</h3>
+
+<ul>
+  <li><a href="https://www.collinsdictionary.com/dictionary/english/be-better-off">be better off, Collins Dictiornay</a></li>
+  <li>lexically scoped</li>
+  <li>block scoped : the block where the variable was declared is enclosed by curly braces</li>
+</ul>
+
+
+    </article>
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

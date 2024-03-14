@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2021년 30주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="07/26 (월) ~ 08/01 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2021/07/26/week-30th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2021년 30주차 기록">
+    <meta property="og:description" content="07/26 (월) ~ 08/01 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2021/07/26/week-30th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2021/07/26/week-30th/">
+    <meta name="twitter:title" content="2021년 30주차 기록">
+    <meta name="twitter:description" content="07/26 (월) ~ 08/01 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2021/07/19/week-29th/">« 2021년 29주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/08/02/week-31th/">2021년 31주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2021년 30주차 기록</h1>
+        <p class="created-date">
+            2021.07.26
+        </p>
+
+
+        <div class="post-tag">
+    iterable_unpacking argument_unpacking
+</div>
+
+        <h2>07/26 (월) ~ 08/01 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#python%EC%97%90-unpacking%EC%9D%98-%ED%99%9C%EC%9A%A9" id="markdown-toc-python에-unpacking의-활용">python에 <code class="language-html highlighter-rouge">unpacking</code>의 활용</a>    <ul>
+      <li><a href="#%EC%B0%B8%EC%A1%B0-%EB%A7%81%ED%81%AC" id="markdown-toc-참조-링크">참조 링크</a></li>
+      <li><a href="#%EB%8B%A4-%EB%8B%A8%EA%B3%84-%EC%83%81%EC%86%8D%EC%8B%9C-init-%EC%9D%98-%EC%9D%B8%EC%9E%90-%EB%8B%A8%EC%88%9C%ED%99%94" id="markdown-toc-다-단계-상속시-init-의-인자-단순화">다 단계 상속시 <strong>init</strong> 의 인자 단순화</a></li>
+    </ul>
+  </li>
+  <li><a href="#answer" id="markdown-toc-answer">answer</a></li>
+</ul>
+
+<h1 id="python에-unpacking의-활용">python에 <code class="language-html highlighter-rouge">unpacking</code>의 활용</h1>
+
+<ul>
+  <li>#iterable_unpacking, #argument_unpacking</li>
+  <li>파이썬에서 쓰는 용어는 각각..
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">iterable unpacking</code>, (single) asterisk</li>
+      <li>
+<code class="language-html highlighter-rouge">dictionary unpacking</code>, double asterisk</li>
+    </ul>
+  </li>
+  <li>JavaScript 에선 <code class="language-html highlighter-rouge">Destructuring assignment</code>라고 한다
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment, MDN</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="참조-링크">참조 링크</h2>
+
+<ul>
+  <li><a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=iterable%20unpacking#unpacking-argument-lists">Unpacking Argument Lists, docs.python.org</a></li>
+  <li><a href="https://docs.python.org/3/reference/expressions.html?highlight=asterisk#dictionary-displays">double asterisk (**), dictionary unpacking, docs.python.org</a></li>
+  <li><a href="https://docs.python.org/3/reference/expressions.html?highlight=asterisk#expression-lists">asterisk (*), iterable unpacking, docs,python.org</a></li>
+  <li><a href="https://mingrammer.com/understanding-the-asterisk-of-python/">파이썬의 Asterisk 이해하기, mingrammer.com</a></li>
+  <li><a href="https://3months.tistory.com/347">가변길이 인수목록 받기, Deep Play</a></li>
+  <li><a href="https://medium.com/techtofreedom/5-best-practices-of-destructuring-assignments-in-python-81bce95c5fda">5 Best Practices of Destructuring Assignments in Python, medium.com</a></li>
+</ul>
+
+<h2 id="다-단계-상속시-init-의-인자-단순화">다 단계 상속시 <strong>init</strong> 의 인자 단순화</h2>
+
+<ul>
+  <li>아버지 클래스에서 단순히 전달만 하는 파라메터를 생략하고 싶을때
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre><span class="k">class</span> <span class="nc">BasePage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="s">""" 할아버지 클래스 """</span> 
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parm1</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">param3</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+    <span class="k">pass</span>
+  
+<span class="k">class</span> <span class="nc">BaseLibPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+  <span class="s">""" 아버지 클래스 """</span> 
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>    <span class="c1"># 여기서는 collecting
+</span>    <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>     <span class="c1"># 여기서는 unpacking
+</span>     
+<span class="k">class</span> <span class="nc">LibDetailPage</span><span class="p">(</span><span class="n">BaseLibPage</span><span class="p">):</span>
+  <span class="s">""" 자식 클래스 """</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">param3</span><span class="p">)</span>
+    <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">param3</span><span class="p">)</span>
+  
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="answer">answer</h1>
+
+<p>I referenced this book and I found that my code are breaking many rules of inheritance.
+All the block-quoted part down below came from this book.</p>
+
+<ul>
+  <li>The rules of inheritance I broke
+    <ul>
+      <li>Substitutability :
+        <blockquote>
+          <p>Using a different instance creation signature is a common way to violate <code class="language-html highlighter-rouge">substitutability</code>.</p>
+        </blockquote>
+        <ul>
+          <li>In my code, <code class="language-html highlighter-rouge">BooksBorrowed.Counter</code> is breaking the <code class="language-html highlighter-rouge">substitutabiltiy</code>
+</li>
+        </ul>
+      </li>
+      <li>Superclass access :
+        <blockquote>
+          <p>Overriding methods to take different numbers of arguments, and passing only some of them along using super(), can lead to confusion and poor maintainability.</p>
+        </blockquote>
+        <ul>
+          <li>In my code, <code class="language-html highlighter-rouge">BooksBorrowed.Counter.__init__</code> is taking diferrent numbers of arguments.</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">has-a</code> relationship
+        <blockquote>
+          <p>Use composition for has-a relationships</p>
+        </blockquote>
+        <ul>
+          <li>In my code, ‘Counter’ <code class="language-html highlighter-rouge">has a</code> ‘status-type’. But, <code class="language-html highlighter-rouge">status-type</code> is overrided in the inheritance way.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>How to use the composition way.
+    <blockquote>
+      <p>Inversion of control says that instaed of creating instances of dependencies in your class, you can pass in existing instances for the clas to make use of.</p>
+    </blockquote>
+    <ul>
+      <li>There are two relations in my code. They are ‘BaseBookInfo’- ‘Counter’ and ‘Counter’-‘status_type’
+They are tightly coupled each outher so it is hard to upgarde. They need to be coupled loosely.</li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

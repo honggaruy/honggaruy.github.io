@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>플러터 시작하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="Flutter 홈 페이지에서 튜토리얼 따라하기중..">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/beginning-flutter/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="플러터 시작하기">
+    <meta property="og:description" content="Flutter 홈 페이지에서 튜토리얼 따라하기중..">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/beginning-flutter/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/beginning-flutter/">
+    <meta name="twitter:title" content="플러터 시작하기">
+    <meta name="twitter:description" content="Flutter 홈 페이지에서 튜토리얼 따라하기중..">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="beginning-flutter">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">플러터 시작하기</h1>
+    
+        <p class="title-summary">Flutter 홈 페이지에서 튜토리얼 따라하기중..</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/beginning-flutter.md" target="_blank">created: 2021.07.07</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/beginning-flutter.md" target="_blank">updated: 2022.05.18</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/beginning-flutter.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%ED%94%8C%EB%9F%AC%ED%84%B0+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    flutter
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%EC%84%A4%EC%B9%98%EB%90%9C-%EC%95%B1-%ED%99%95%EC%9D%B8" id="markdown-toc-2-설치된-앱-확인">2. 설치된 앱 확인</a>    <ul>
+      <li><a href="#%EA%B0%84%EB%8B%A8%ED%95%9C-dart-%EC%BD%94%EB%93%9C-%ED%99%95%EC%9D%B8" id="markdown-toc-간단한-dart-코드-확인">간단한 dart 코드 확인</a></li>
+      <li><a href="#flutter-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C-%ED%95%98%EA%B8%B0" id="markdown-toc-flutter-업그레이드-하기">flutter 업그레이드 하기</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#3-flutter-%EC%95%B1-%EA%B0%9C%EB%B0%9C-%EB%8B%A4%EC%8B%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" id="markdown-toc-3-flutter-앱-개발-다시-시작하기">3. Flutter 앱 개발 다시 시작하기</a>    <ul>
+      <li><a href="#quick-re-start" id="markdown-toc-quick-re-start">Quick Re-start</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#write-your-first-flutter-app-part-2" id="markdown-toc-write-your-first-flutter-app-part-2">Write Your First Flutter App, part 2</a>    <ul>
+      <li><a href="#4-add-icons-to-the-list" id="markdown-toc-4-add-icons-to-the-list">4. Add icons to the list</a></li>
+      <li><a href="#5-add-interactivity" id="markdown-toc-5-add-interactivity">5. Add interactivity</a></li>
+      <li><a href="#6-navigate-to-a-new-screen" id="markdown-toc-6-navigate-to-a-new-screen">6. Navigate to a new screen</a></li>
+      <li><a href="#7-change-the-ui-using-themes" id="markdown-toc-7-change-the-ui-using-themes">7. Change the UI using themes</a></li>
+      <li>
+<a href="#4-build-the-main-user-interface" id="markdown-toc-4-build-the-main-user-interface">4. Build the main user interface</a>        <ul>
+          <li><a href="#build-the-chat-screen" id="markdown-toc-build-the-chat-screen">Build the chat screen</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#5-add-a-ui-for-composing-messages" id="markdown-toc-5-add-a-ui-for-composing-messages">5. Add a UI for composing messages</a>        <ul>
+          <li><a href="#add-an-interactive-text-input-field" id="markdown-toc-add-an-interactive-text-input-field">Add an interactive text input field</a></li>
+          <li><a href="#add-a-text-composer-widget" id="markdown-toc-add-a-text-composer-widget">Add a text composer widget</a></li>
+          <li><a href="#add-a-responsive-send-button" id="markdown-toc-add-a-responsive-send-button">Add a responsive Send button</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#6-debug-your-app" id="markdown-toc-6-debug-your-app">6. Debug your app</a>        <ul>
+          <li><a href="#work-with-breakpoints" id="markdown-toc-work-with-breakpoints">Work with breakpoints</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#7-add-a-ui-for-displaying-messages" id="markdown-toc-7-add-a-ui-for-displaying-messages">7. Add a UI for displaying messages</a>        <ul>
+          <li><a href="#chat-message-%EB%AA%A9%EB%A1%9D%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%9C%EB%8B%A4" id="markdown-toc-chat-message-목록을-구현한다">chat message 목록을 구현한다</a></li>
+          <li><a href="#ui%EC%97%90-chat-message-%EB%AA%A9%EB%A1%9D%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%9C%EB%8B%A4" id="markdown-toc-ui에-chat-message-목록을-구현한다">UI에 chat message 목록을 구현한다</a></li>
+          <li><a href="#message-list%EB%A5%BC-%EC%9C%84%EC%B9%98-%EC%8B%9C%ED%82%A4%EB%8B%A4" id="markdown-toc-message-list를-위치-시키다">message list를 위치 시키다</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#8-animate-your-app" id="markdown-toc-8-animate-your-app">8. Animate your app</a>        <ul>
+          <li><a href="#%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-controller%EB%A5%BC-%EC%A7%80%EC%A0%95%ED%95%9C%EB%8B%A4" id="markdown-toc-애니메이션-controller를-지정한다">애니메이션 controller를 지정한다</a></li>
+          <li><a href="#size-transition-widget%EC%9D%84-%EC%B6%94%EA%B0%80%ED%95%9C%EB%8B%A4" id="markdown-toc-size-transition-widget을-추가한다">Size Transition widget을 추가한다</a></li>
+          <li><a href="#%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%9D%98-%ED%8F%90%EA%B8%B0" id="markdown-toc-애니메이션의-폐기">애니메이션의 폐기</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#9-apply-finishing-touches" id="markdown-toc-9-apply-finishing-touches">9. Apply finishing touches</a>        <ul>
+          <li><a href="#send-%EB%B2%84%ED%8A%BC%EC%9D%84-context-aware-%ED%95%98%EB%8F%84%EB%A1%9D-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-send-버튼을-context-aware-하도록-만들기">send 버튼을 context-aware 하도록 만들기</a></li>
+          <li><a href="#%EA%B8%B4-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%A4%84-%EB%B0%94%EA%BE%B8%EA%B8%B0-wrap" id="markdown-toc-긴-문자열-줄-바꾸기-wrap">긴 문자열 줄 바꾸기 (wrap)</a></li>
+          <li><a href="#android-%EC%99%80-ios-%EC%9A%A9%EC%9C%BC%EB%A1%9C-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A6%88" id="markdown-toc-android-와-ios-용으로-커스터마이즈">Android 와 iOS 용으로 커스터마이즈</a></li>
+        </ul>
+      </li>
+      <li><a href="#10-next-steps" id="markdown-toc-10-next-steps">10. Next steps</a></li>
+      <li><a href="#11-optional-get-the-sample-code" id="markdown-toc-11-optional-get-the-sample-code">11. Optional: Get the sample code</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#troubleshooting" id="markdown-toc-troubleshooting">TroubleShooting</a>    <ul>
+      <li>
+<a href="#flutter-doctor-fail" id="markdown-toc-flutter-doctor-fail">Flutter Doctor Fail</a>        <ul>
+          <li><a href="#%ED%95%B4%EA%B2%B0%EC%B1%85" id="markdown-toc-해결책">해결책</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>flutter 앱을 만들기 시작할 때 확인해야 하는 작업</li>
+</ul>
+
+<h1 id="2-설치된-앱-확인">2. 설치된 앱 확인</h1>
+
+<ul>
+  <li>안드로이드 스튜디오 설치</li>
+  <li>플러터 SDK 설치
+    <ul>
+      <li>내 메인 컴은 <code class="language-html highlighter-rouge">d:/App/flutter/</code>에 설치 ( 2021-07-07에 확인)</li>
+      <li>설치 여부 확인 방법 ( Powershell 환경 가정)
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nb">cd </span>d:/App/flutter/bin
+<span class="o">&gt;</span> flutter doctor
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>안드로이드 스튜디오에 플러터와 다트 플러그인 설치
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">[File ⇒ Setting ⇒ Plugins]</code>에서 <code class="language-html highlighter-rouge">Flutter</code>와 <code class="language-html highlighter-rouge">Dart</code> 플러그인이 설치되어있는지 확인</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="간단한-dart-코드-확인">간단한 dart 코드 확인</h2>
+
+<ul>
+  <li>간단한 dart 코드 실행 확인하는 사이트 : <a href="https://dartpad.dartlang.org/">dartpad</a>
+</li>
+</ul>
+
+<h2 id="flutter-업그레이드-하기">flutter 업그레이드 하기</h2>
+
+<ul>
+  <li>참조 링크: <a href="https://docs.flutter.dev/development/tools/sdk/upgrading">Upgrading Flutter, docs.flutter.dev</a>
+</li>
+  <li>선택된 채널에 따라 버전이 다름 (stable, beta, master)</li>
+  <li>
+<code class="language-html highlighter-rouge">flutter channel stable</code> : stable 채널로 선택하기
+    <ul>
+      <li>2022-05-18 현재 버전 3.0 배포중</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">flutter upgrade</code> : 업그레이드 실행</li>
+</ul>
+
+<h1 id="3-flutter-앱-개발-다시-시작하기">3. Flutter 앱 개발 다시 시작하기</h1>
+
+<ul>
+  <li>오랫만에 다시 개발을 재개할 경우 따라할 Step by Step</li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/install">이 곳</a> 에 있는 <code class="language-html highlighter-rouge">Get started</code> 를 기반으로 한다</li>
+</ul>
+
+<h2 id="quick-re-start">Quick Re-start</h2>
+
+<ul>
+  <li>Editor, SDK, AVD 등 필요한 패키지가 모두 설치된 초기상태에서 시작한다</li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/test-drive?tab=androidstudio#create-app">Create the app</a> : 신규 프로젝트 생성
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Run the app</code> : 앱 실행</li>
+      <li>환경이 준비되었는지 확인하는 의미</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/codelab#step-1-create-the-starter-flutter-app">Step 1: Create the starter Flutter app</a>
+    <ul>
+      <li>템플릿에서 <code class="language-html highlighter-rouge">main.dart</code>만 변경한 것</li>
+      <li>기본 구조를 파악한다</li>
+      <li>
+<a href="https://flutter.dev/docs/get-started/codelab#observations">Observations</a>
+        <ul>
+          <li>이 예제는 <code class="language-html highlighter-rouge">Material app</code>을 생성하는 것</li>
+          <li>root 폴더에서 <code class="language-html highlighter-rouge">pubspec.yaml</code> 파일에 <code class="language-html highlighter-rouge">uses-material-design: true</code>로 설정하면 Material 아이콘등을 사용할 수 있다</li>
+          <li>Javascript와 같이 method 생성시 arrow(=&gt;) notation을 사용할 수 있다</li>
+          <li>app이 StatelessWidget을 상속받는데 app 자체를 하나의 위젯으로 만든다</li>
+          <li>Scaffodle widget은 제목과 바디로 이루어진 간단한 앱의 빼대를 만드는 위젯이다
+            <ul>
+              <li>내부 subtree는 복잡해질 수 있다</li>
+            </ul>
+          </li>
+          <li>위젯의 주요 작업은 build() method를 호출하는 것으로
+            <ul>
+              <li>하위 수준 위젯의 측면에서 위젯을 어떻게 display할지 묘사하는 것이 주요 작업이다</li>
+            </ul>
+          </li>
+          <li>이 위젯의 body는 <code class="language-html highlighter-rouge">Center</code> 위젯으로 구성되는데
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">Center</code>는 <code class="language-html highlighter-rouge">Text</code> 자식 위젯을 포함한다.</li>
+              <li>
+<code class="language-html highlighter-rouge">Center</code>는 자신의 subtree를 center에 위치시킨다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/codelab#step-2-use-an-external-package">Step 2: Use an external package</a>
+    <ul>
+      <li>Step 1 에서 추가된 건 <code class="language-html highlighter-rouge">english_words</code> 라는 외부 패키지를 사용해보는 것
+        <ul>
+          <li>외부 패키지 사용을 위해…
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">import</code> 로 <a href="https://pub.dev/packages/english_words">pub.dev의 <code class="language-html highlighter-rouge">englisht_words</code> 패키지</a> 추가
+                <ol>
+                  <li>pubspec.yaml 의 <code class="language-html highlighter-rouge">dependencies</code> 섹션에 추가</li>
+                  <li>
+<code class="language-html highlighter-rouge">Pub get</code> 수행 : dependencies 설치</li>
+                  <li>
+<code class="language-html highlighter-rouge">lib/main.dart</code>에 import 추가
+                    <div class="language-dart highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="kn">import</span> <span class="s">'package:english_words/english_words.dart'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>                    </div>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/codelab#step-3-add-a-stateful-widget">Step 3: Add a Stateful widget</a>
+    <ul>
+      <li>State<em>less</em> widgets 과 State<em>ful</em> widgets 의 차이점 원문에서 읽어볼것</li>
+      <li>StatefulWidget 구현시에 필요한 두가지
+        <ol>
+          <li>
+<code class="language-html highlighter-rouge">StatefulWidget</code> class 는 그 자체는 변경불가(immutable)하고 버리고 새로 만들수 있지만,..</li>
+          <li>
+<code class="language-html highlighter-rouge">State</code> class 는 widget의 수명주기 동안 유지된다</li>
+        </ol>
+      </li>
+      <li>stateful widget의 boilerplate code를 자동 생성하는 keyword가 있다 (마치 emmet 처럼..)
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">stful</code>의 typing을 시작하면 물어보는 창이 뜨는데 <kbd>Return</kbd>을 쳐준다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">RandomWords</code>를 widget의 이름으로 입력 한다 (그냥 번역)
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">RandomWords</code> widget은 <code class="language-html highlighter-rouge">State</code> class를 생성하는 것 외에 몇가지를 더 수행한다</li>
+          <li>
+<code class="language-html highlighter-rouge">RandomWords</code>를 stateful widget의 이름으로 입력하면,
+            <ul>
+              <li>같이 따라가는 <code class="language-html highlighter-rouge">State</code> class에 <code class="language-html highlighter-rouge">_RandomWordsState</code>의 이름을 IDE가 자동적으로 넣어 완성해준다</li>
+              <li>기본적으로, <code class="language-html highlighter-rouge">State</code> class의 이름 앞에 underbar가 붙는다</li>
+              <li>이름 앞의 underscore 는 Dart 언어에서 private 속성을 적용 ( enforces privacy) 을 의미하며
+                <ul>
+                  <li>
+<code class="language-html highlighter-rouge">State</code> objects의 best practice 로 추천된다</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>또한, IDE는 state class를 <code class="language-html highlighter-rouge">State<span class="nt">&lt;RandowmWords&gt;</span></code>로 부터 자동적으로 확장하는데,
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">RandomWords</code> widget에 특화된 제네릭 <code class="language-html highlighter-rouge">State</code> class 를 사용한다는 것을 가리킨다</li>
+          <li>대부분의 앱의 logic은 이곳에 위치한다 - 그것은 <code class="language-html highlighter-rouge">RandomWords</code> widget의 state를 관리한다</li>
+          <li>이 class는 생성된 단어쌍들의 목록을 저장한다
+            <ul>
+              <li>이 단어쌍의 목록은 사용자가 스크롤 할수록 무한히 커진다</li>
+            </ul>
+          </li>
+          <li>그리고 이 codelab의 파트2에서는
+            <ul>
+              <li>사용자가 하트 아이콘을 토글해서 좋아하는 단어쌍을 추가하거나 제거합니다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://flutter.dev/docs/get-started/codelab#step-4-create-an-infinite-scrolling-listview">Step 4: Create an infinite scrolling ListView</a>
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">_RandomWordsState</code>를 확장하여 단어쌍을 생성하고 display할 것이다</li>
+      <li>사용자가 목록을 스크롤하면 ( <code class="language-html highlighter-rouge">ListView</code> widget 으로 보인다 )</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="write-your-first-flutter-app-part-2"><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2#0">Write Your First Flutter App, part 2</a></h1>
+
+<h2 id="4-add-icons-to-the-list"><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2#3">4. Add icons to the list</a></h2>
+
+<ul>
+  <li>part 1을 했으면 여기서 부터 다시 시작</li>
+  <li>
+<code class="language-html highlighter-rouge">Set</code> type 을 처음 써봄. 사용자가 하트 표시한 WordPair 를 저장할 예정
+    <ul>
+      <li>이 경우에는 <code class="language-html highlighter-rouge">List</code> 보다 <code class="language-html highlighter-rouge">Set</code> type 이 선호된다고 함
+        <ul>
+          <li>이유는 <code class="language-html highlighter-rouge">Set</code>이 중복을 허용하지 않기 때문임</li>
+          <li>별다른 index를 관리하지 않으므로 <code class="language-html highlighter-rouge">Set</code>에 저장하는 것만으로 중복금지가 구현되어 효율적인듯..</li>
+        </ul>
+      </li>
+      <li>ListTile 결과에 하트 아이콘 붙이기 - 아직 탭은 안됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="5-add-interactivity"><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2#4">5. Add interactivity</a></h2>
+
+<ul>
+  <li>여기서는 하트 아이콘을 tappable 하도록 할 것임</li>
+  <li>
+<code class="language-html highlighter-rouge">ListTitle</code> 에서 onTap 파라미터 활성화 ▶ setState()를 호출</li>
+  <li>Tip.
+    <ul>
+      <li>Flutter의 reactive style framework 에서</li>
+      <li>
+<code class="language-html highlighter-rouge">setState()</code>를 호출하는 것은, <code class="language-html highlighter-rouge">State</code> 객체에 대해 <code class="language-html highlighter-rouge">build()</code> method 를 trigger 하는 것으로…</li>
+      <li>결과적으로, UI를 업데이트 하도록 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-navigate-to-a-new-screen"><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2#5">6. Navigate to a new screen</a></h2>
+
+<ul>
+  <li>여기서는 (Flutter에서 <em>route</em> 라고 불리는) 새로운 페이지를 추가하여 하트 아이콘 설정한 것만 보여준다
+    <ul>
+      <li>더불어서, <em>home route</em>와 <em>new route</em> 간을 어떻게 오가는지 배운다</li>
+    </ul>
+  </li>
+  <li>Flutter 에서는, <code class="language-html highlighter-rouge">Navigator</code> 가 app의 route들을 보관하는 stack을 관리한다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Navigator</code>의 stack 위로 route을 pushing 하면 해당 route로 display를 업데이트 한다</li>
+      <li>
+<code class="language-html highlighter-rouge">Navigatoer</code>의 stack에서 route를 poping  하면 이전 route로 display가 전환 된다</li>
+    </ul>
+  </li>
+  <li>다음으로, <code class="language-html highlighter-rouge">_RamdomWordsState</code>의 <code class="language-html highlighter-rouge">build</code> method의 <code class="language-html highlighter-rouge">AppBar</code>에 list icon을 추가한다
+    <ul>
+      <li>사용자가 이 list icon을 click하면,</li>
+      <li>favorite 들이 저장된 새로운 route를 <code class="language-html highlighter-rouge">Naviagro</code>에 pushing 하고 , icon을 보여준다</li>
+    </ul>
+  </li>
+  <li>Tip :
+    <ul>
+      <li>어떤 widget 속성은 하나의 widget (child) 으로만 설정하지만</li>
+      <li>
+<code class="language-html highlighter-rouge">action</code> 갈은 속성은 widget 의 배열 (children)으로 설정된다</li>
+    </ul>
+  </li>
+  <li>다음으로, route를 하나만들어서 <code class="language-html highlighter-rouge">Navigator</code>의 stack으로 push한다
+    <ul>
+      <li>이 action은 스크린이 새로운 route를 display하도록 한다</li>
+      <li>새로운 페이지의 내용은 <code class="language-html highlighter-rouge">MaterialPageRoute</code>의 <code class="language-html highlighter-rouge">builder</code> property 안에서 anonymous function으로 구성된다</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">Navigator.of</code> call에서 <code class="language-html highlighter-rouge">context</code> argument란 무엇일까?
+    <ul>
+      <li>
+        <p>아래 <code class="language-html highlighter-rouge">BuildContext</code>에 대해 설명하는 video를 확인하라
+<iframe id="media-rIaaH87z1-g" class="media" src="https://www.youtube.com/embed/rIaaH87z1-g" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+
+        <ul>
+          <li>widget 의 constructor를 호출하면</li>
+          <li>Flutter Frameworkd이 “createElement()” method를 호출
+            <ul>
+              <li>이 method는 이 widget의 element를 frameworkd에 return</li>
+              <li>framework이 “build(context)” method를 호출하면, 이전에 생성돈 element가 context parameter의 argument로 전달됨</li>
+              <li>이렇게 build() method 안에서 context(element object’s) properties와 method를 사용할 수 있다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>다음으로, <code class="language-html highlighter-rouge">MaterialPageRoute</code>와 builder를 추가할 것이다.
+    <ul>
+      <li>일단 지금은, <code class="language-html highlighter-rouge">ListTiel</code> 행을 생성하는 code를 추가한다</li>
+      <li>
+<code class="language-html highlighter-rouge">ListTile</code>의 <code class="language-html highlighter-rouge">divideTiles()</code> method 는 각 <code class="language-html highlighter-rouge">ListTile</code>간에 수평 간격을 추가한다</li>
+      <li>
+<code class="language-html highlighter-rouge">devided</code> 변수는 convenience function <code class="language-html highlighter-rouge">toList()</code>를 이용해 list로 변환된 마지막 행을 hold한다.</li>
+      <li>(역자주) 여기에 추가된 코드를 나름대로 해석
+        <ul>
+          <li>_pushSaved()는 하트 아이콘 누를 때 동작하는 callback으로 설정됨
+            <ul>
+              <li>하트 아이콘 누를 때 해야할 동작 = _pushSaved()
+                <ul>
+                  <li>_saved set iterable 각각에 대해 Tile 생성</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Navigator 는 Route (별도 페이지)를 저장할 수 있는 stack
+            <ul>
+              <li>Navigator.push는 stack에 Route(페이지)를 push 한다는 의미</li>
+              <li>그럼 push 내부에서는 Route 를 빌드하는 코드가 들어가야함
+                <ul>
+                  <li>그게 MaterialPageRoute<vod>()
+</vod>                    <ul>
+                      <li>그 내부에서 Scaffold() 형식으로 반환 하는 builder를 파라메터로 넘겨줌</li>
+                    </ul>
+                  </li>
+                  <li>Scaffold 에서 파라미터로 사용하는 body를 ListView로 만들 때 list로 입력하므로
+                    <ul>
+                      <li>최종결과인 divided는 toList()로 형식을 변환함</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>코드상에 Navigator.pop 을 명시하지 않아도 back 버튼이 생김</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="7-change-the-ui-using-themes"><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2#6">7. Change the UI using themes</a></h2>
+
+<ul>
+  <li>앱의 look and feel을 바꾸기 위해 theme을 customize 할 수 있다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">ThemeData</code> class를 건드려서 , app 의 default theme중 primary color만 ‘white’로 바꿔본다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-build-the-main-user-interface"><a href="https://codelabs.developers.google.com/codelabs/flutter#3">4. Build the main user interface</a></h2>
+
+<ul>
+  <li>새로운 프로젝트 시작</li>
+  <li>👁‍🗨 시작코드 Observations
+    <ul>
+      <li>모든 Dart 프로그램은 <code class="language-html highlighter-rouge">main()</code>으로 시작한다
+        <ul>
+          <li>command-line app, AngularDart app, Flutter app 이건 상관없이…</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">main()</code> 과 <code class="language-html highlighter-rouge">runApp()</code> 함수 definitions은 자동 생성된 app에서와 동일함</li>
+      <li>
+<code class="language-html highlighter-rouge">runApp()</code> 함수는 <code class="language-html highlighter-rouge">Widget</code>을 argument로 취한다.</li>
+      <li>이 chat app은 UI에서 Material Design elements를 사용한다
+        <ul>
+          <li>그래서 <code class="language-html highlighter-rouge">MaterialApp</code> 객체를 생성하고 <code class="language-html highlighter-rouge">runApp()</code> 함수의 argument로 넘겨준다</li>
+          <li>
+<code class="language-html highlighter-rouge">MaterialApp</code> widget은 당신 app의 widget tree의 root가 된다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">home</code> argument는 당신의 app에서 사용자가 보는 default screen을 지정한다
+        <ul>
+          <li>이 경우에, 그것은 <code class="language-html highlighter-rouge">Scaffold</code> widget으로 구성되는데, (Scaffold는) child widget으로 간단한 <code class="language-html highlighter-rouge">AppBar</code>를 포함한다</li>
+          <li>이 것이 Materail app의 전형적인 모습이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">Run</code> icon으로 실행시키면, 처음에는 오래걸리지만 다음번 부터는 빨라질 것이다
+    <ul>
+      <li>Hot restart와 Full restart가 있다. 상세내용은 원문 확인</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="build-the-chat-screen">Build the chat screen</h3>
+
+<ul>
+  <li>interactive components의 기초를 다지기 위해, 앱을 두 개의 서로 다른 subclass로 분리한다
+    <ul>
+      <li>root-level <code class="language-html highlighter-rouge">FriendlyChatapp</code> widget : 절대 안바뀐다</li>
+      <li>a child <code class="language-html highlighter-rouge">ChatScreen</code> widget : 메시지가 전달되거나 내부 상태가 변하면 rebuild 된다</li>
+    </ul>
+  </li>
+  <li>지금은, 위 두 classes를 <code class="language-html highlighter-rouge">StatelessWidget</code>에서 확장해도 된다.
+    <ul>
+      <li>나중에, <code class="language-html highlighter-rouge">ChatScreen</code> 을 <em>stateful</em> widget으로 변경하게 된다.</li>
+      <li>이런식으로, 필요한 때에 widget의 state를 변경할 수 있다</li>
+    </ul>
+  </li>
+  <li>▶ 표시가 있는 직접 해보기에서 Android Studio Editor의 자동 제안 사용하는 방법 배움</li>
+  <li>Tip : 에서 코드 창 오른쪽 클릭하면 나오는 Context menu에서 <code class="language-html highlighter-rouge">Reformat with dartfmt</code> 사용법 배움</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>이번 step 는 Flutter framework의 몇가지 key concepts에 대해 소개함</li>
+      <li>
+<code class="language-html highlighter-rouge">build()</code> method에서 widget으로 표시되는 user interface의 일부를 describe 했다.
+        <ul>
+          <li>frameworkd은 <code class="language-html highlighter-rouge">FriendlyChatApp</code>왜 <code class="language-html highlighter-rouge">ChatScreen</code>의 <code class="language-html highlighter-rouge">build()</code> method를 호출하면서,</li>
+          <li>이 widget들을 widget hierarchy에 넣었고 그들의 dependencies가 변경되었다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">@override</code>는 Dart annotation 인데,
+        <ul>
+          <li>이것으로 tagging된 method가 superclass의 method를 override 한다는 의미이다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">Scaffold</code>나 <code class="language-html highlighter-rouge">AppBar</code> 같은 일부 widget들은, <code class="language-html highlighter-rouge">Material Design</code> apps에 specific 한 것들이다
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">Text</code>같은 다른 widgets은 일반적인 것들이며, 어느 app에서나 사용할 수 있다</li>
+          <li>Flutter frameworkd의 다른 library들로 부터온 widget들 도 한 개의 app에서 호환하여 쓸 수 있다</li>
+        </ul>
+      </li>
+      <li>hot reload가 <code class="language-html highlighter-rouge">main()</code>을 다시 실행하지 않기 때문에 , <code class="language-html highlighter-rouge">main()</code> method를 간소화하여 hot reload를 enable 시킨다</li>
+    </ul>
+  </li>
+  <li>hot reload ⚡버튼을 click하여 즉시 변화하는 것을 보자
+    <ul>
+      <li>UI를 class들로 분리한 후 root widget을 변경해도 UI에서는 visible change가 안보일 것이다</li>
+      <li>Tip:
+        <ul>
+          <li>hot reload이후 red screen을 보게 되면, hot restart를 시도하라</li>
+          <li>그래도 문제가 해결되지 않으면,
+            <ul>
+              <li>app을 멈추고, full restarte를 수행하라</li>
+            </ul>
+          </li>
+          <li>hot reload는 existing widgest들의 state를 변경한당
+            <ul>
+              <li>예를들어 hot reload전에 widget을 지운다면 , red screen이 발생할 수 있다</li>
+              <li>frameworkd이 그런 older widgets를 업데이트 하려고 시도할때 app이 fail 날 수 있다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="5-add-a-ui-for-composing-messages"><a href="https://codelabs.developers.google.com/codelabs/flutter#4">5. Add a UI for composing messages</a></h2>
+
+<ul>
+  <li>device에서 text field에 들어가면 soft keyboard가 뜬다
+    <ul>
+      <li>비어있지 않은 창에 chat messages type하고 Return key를 치거나</li>
+      <li>graphical Send button 으로</li>
+    </ul>
+  </li>
+  <li>chat screen을 일단 위쪽에 만들거지만, 나중에 아래쪽으로 옮길것이다</li>
+</ul>
+
+<h3 id="add-an-interactive-text-input-field">Add an interactive text input field</h3>
+
+<ul>
+  <li>Flutter framework 는 <code class="language-html highlighter-rouge">TextField</code>라고 불리는 *Material Design widget` 을 제공한다
+    <ul>
+      <li>이것은 mutable state를 갖는 <code class="language-html highlighter-rouge">StatefulWidget</code>으로 input field의 동작을 customizing하는 속성을 가진다</li>
+      <li>
+<code class="language-html highlighter-rouge">State</code>는 widget이 빌드될 때 synchronous하게 읽을 수 있고 widget의 수명중에 변경될 수 있는 정보이다</li>
+      <li>FriendlyChat app에 첫번째 stateful widget을 추가하기 위해 몇가지 modifications이 필요하다
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">ChatScreen</code> class 를 statefule하게 변경하기
+            <ul>
+              <li>선택후 <kbd>Alt</kbd>+<kbd>Enter</kbd>로 메뉴 불러와서 <code class="language-html highlighter-rouge">Convert to StatefulWidget</code>으로 선택하여 변경하기</li>
+              <li>Tip : identifier에 underscore(_)를 붙여서 library 상에서 identifier를 private 하게 만든다.
+                <ul>
+                  <li>Dart library는 일련의 calsses, constants, functions, typedefs, properties, exceptions를 one package에 담았다</li>
+                  <li>Dart compiler가 privacy를 강제한다.</li>
+                  <li>더 자세한 사항은 dart.dev 사이트의 <a href="https://dart.dev/guides/language/language-tour#libraries-and-visibility">Libraries and visibility</a>를 참고하자</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+<code class="language-html highlighter-rouge">_ChatScreenState</code>에 <code class="language-html highlighter-rouge">TextEditingController</code> 추가하기
+            <ul>
+              <li>Tip : Flutter framework API의 소스 코드 definition을 보는 것이 뒤편에서 무슨 일이 일어나는지 이해하는데 유용할것이다
+                <ul>
+                  <li>이것은 쉽게 할수있는데… 에디터 창에서 class나 method name 을 select하고..
+                    <ul>
+                      <li>오른쪽 클릭해서 <code class="language-html highlighter-rouge">Go to... Declaration</code>을 메뉴에서 선택한다</li>
+                      <li>OS에 따라, <code class="language-html highlighter-rouge">Command</code>키나 <code class="language-html highlighter-rouge">Control</code> 버튼을 클릭할수도 있다.</li>
+                      <li>
+<a href="https://flutter.dev/docs/development/tools/android-studio#keyboard-shortcuts">more options and keyboard shortcuts</a>를 참조하자</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>이제 app이 state를 관리할 수 있는 능력이 생겼기에, <code class="language-html highlighter-rouge">_ChatScreenState</code> class 에 input field 와 send button을 넣으면 된다
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">_ChatScreenState</code>에 <code class="language-html highlighter-rouge">_buildTextComposer</code> function 을 추가한다</li>
+          <li>👁‍🗨 Observations
+            <ul>
+              <li>Flutter에서는, widget의 stateful data는 <code class="language-html highlighter-rouge">State</code> 객체에 encapsulated 된다
+                <ul>
+                  <li>
+<code class="language-html highlighter-rouge">State</code> objects는 그리고 나서 <code class="language-html highlighter-rouge">StatefulWidget</code> class를 확장한 widget가 associated 된다</li>
+                </ul>
+              </li>
+              <li>위 코드는 <code class="language-html highlighter-rouge">_buildTextComposer()</code>라 불리는 private method를 정의하는데
+                <ul>
+                  <li>이 method는 설정이 적용된(configured) <code class="language-html highlighter-rouge">TextField</code> widget을 탑재한 <code class="language-html highlighter-rouge">Container</code> widget을 return 한다</li>
+                </ul>
+              </li>
+              <li>
+<code class="language-html highlighter-rouge">Container</code> widget에는 screen의 edge와 input field의 각 side간의 horizontal margin 설정이 추가된다</li>
+              <li>
+<code class="language-html highlighter-rouge">EdgeInsets.symmetric</code>에 전달된 단위(units)는 ,
+                <ul>
+                  <li>device의 pixel ratio에 의존적인, 특정 숫자의 physcical pixels로 번역된 logical pixels 이다</li>
+                  <li>당신은 아마도 Android 용어(density-independet pixels1)나 iOS의 용어(points)에 익숙할 것이다</li>
+                </ul>
+              </li>
+              <li>
+<code class="language-html highlighter-rouge">onSubmitted</code> 속성은 private callback method,<code class="language-html highlighter-rouge">_handleSubmitted()</code>를 제공한다.
+                <ul>
+                  <li>처음에 이 method는 단지 field 를 clear 하는 기능만 있지만,</li>
+                  <li>나중에 chat message를 send하는 기능을 추가할 것이다</li>
+                </ul>
+              </li>
+              <li>
+<code class="language-html highlighter-rouge">TextEditingController</code>의 <code class="language-html highlighter-rouge">TextField</code>는 text field에 대한 관리기능을 제공한다.
+                <ul>
+                  <li>이 controller는 field를 clear 하고 값을 읽어온다</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="add-a-text-composer-widget">Add a text composer widget</h3>
+
+<ul>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">_buildTextComposer</code> method는 text input field를 encapsulates 하는 widget을 return 한다</li>
+      <li>
+<code class="language-html highlighter-rouge">body</code> 속성에 <code class="language-html highlighter-rouge">_buildTextComposer</code>를 추가하여 app이 text input하는 user control을 보여주도록 한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="add-a-responsive-send-button">Add a responsive Send button</h3>
+
+<ul>
+  <li>코드작성&gt; <code class="language-html highlighter-rouge">_buildTextComposer</code> 함수 내에서, <code class="language-html highlighter-rouge">Row:</code> 내부에 <code class="language-html highlighter-rouge">TextField</code>를 넣는다</li>
+  <li>코드작성&gt; <code class="language-html highlighter-rouge">TextField</code>를 <code class="language-html highlighter-rouge">Flexible</code> widget으로 감싼다
+    <ul>
+      <li>여기서 <kbd>Alt</kbd>+<kbd>Enter</kbd>를 눌러 <strong>Wrap with widget</strong> 자동완성을 이용해본다</li>
+    </ul>
+  </li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Row</code>를 이용하여 <strong>Send</strong> 버튼을 input field에 가까이 둘 수 있게 한다</li>
+      <li>
+<code class="language-html highlighter-rouge">TextField</code>를 <code class="language-html highlighter-rouge">Flexible</code> widget으로 감싸는 것은
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">Row</code>가 text field의 size를 자동조절하여</li>
+          <li>버튼에 의해 사용되지 않는 남은 공간을 사용하도록 <code class="language-html highlighter-rouge">Row</code>에게 알려준다</li>
+        </ul>
+      </li>
+      <li>오른쪽 bracket 다음에 comma를 추가하여 fommatter가 어떻게 code를 format할 지 알려준다</li>
+    </ul>
+  </li>
+  <li>다음으로, <strong>Send</strong> 버튼을 추가한다.
+    <ul>
+      <li>이 것은 Material app이므로, 대응되는 Material icon ▶ 을 사용한다</li>
+      <li>Tip: 표준 Material Design icon의 목록은
+        <ul>
+          <li>
+<a href="https://fonts.google.com/icons?selected=Material+Icons">Material Icons</a> 사이트와 <a href="https://api.flutter.dev/flutter/material/Icons-class.html">Icons class</a> 의 상수값들을 참고한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>코드작성&gt; <code class="language-html highlighter-rouge">Row</code>에 <strong>Send</strong> 버튼을 추가한다
+    <ul>
+      <li>👁‍🗨 Observations
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">IconButton</code> 이 <strong>Send</strong> 버튼을 display 한다</li>
+          <li>
+<code class="language-html highlighter-rouge">icon</code> 속성이 Material library로 부터 <code class="language-html highlighter-rouge">Icons.send</code> 상수를 지정하여, 새로운 <code class="language-html highlighter-rouge">Icon</code> 인스턴스를 생성한다</li>
+          <li>
+<code class="language-html highlighter-rouge">Container</code> widget 안에 <code class="language-html highlighter-rouge">IconButton</code>을 위치시켜서 버튼의 margin spacing을 조절할수 있게 한다
+            <ul>
+              <li>이렇게 하면 당신의 input field 옆에서 좀더 visually fit 해보인다</li>
+            </ul>
+          </li>
+          <li>
+<code class="language-html highlighter-rouge">onPressed</code> 속성은 익명함수를 사용하여 <code class="language-html highlighter-rouge">_handleSubmitted()</code> method를 호출하공
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">_textController</code>를 이용하여 message 내용을 넘긴다</li>
+            </ul>
+          </li>
+          <li>Dart 에서, arrow 문법 ( =&gt; 표현식) 은 때때로 함수를 선언하는데 사용된다
+            <ul>
+              <li>이것은 <code class="language-html highlighter-rouge">{ return expression; }</code> 의 단축 표현으로 오직 one-line 함수에만 사용된다</li>
+              <li>익명과 중첩 함수를 포함하여 Dart 함수 지원에대한 개요를 보려면, <a href="https://dart.dev/guides/language/language-tour">Dart Langauge Tour</a>를 참고하라</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>버튼의 컬러는 black인데, 이것은 default Material esign theme에서 왔다.
+    <ul>
+      <li>app에 accent 컬러를 주기위해서, <code class="language-html highlighter-rouge">IconButton</code>에 color argument를 pass하거나, 다른 theme을 적용해라</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_buildTextComposer()</code>에서, <code class="language-html highlighter-rouge">Container</code>를 <code class="language-html highlighter-rouge">IconTheme</code>으로 감싸라
+    <ul>
+      <li>👁‍🗨 Observations
+        <ul>
+          <li>Icons는, <code class="language-html highlighter-rouge">IconTheme</code>으로부터 color,opacity,size를 상속받는데,
+            <ul>
+              <li>(IconTheme widget은) 이런 chracteristics를 정의하기 위해 <code class="language-html highlighter-rouge">IconThemeData</code> 객체를 이용한다</li>
+            </ul>
+          </li>
+          <li>
+<code class="language-html highlighter-rouge">IconThemes</code>의 <code class="language-html highlighter-rouge">data</code> 속성은 현재 them의 <code class="language-html highlighter-rouge">ThemeData</code> 객체를 지정한다
+            <ul>
+              <li>이것은 버튼(과 widget tree의 모든 다른 icon들)에 현재 theme의 accent color를 준다</li>
+            </ul>
+          </li>
+          <li>
+<code class="language-html highlighter-rouge">BuildContext</code> 객체는 app의 widget tree의 한 widget의 lcoation에 대한 handle 이다
+            <ul>
+              <li>각각의 widget은 자신만의  <code class="language-html highlighter-rouge">BuildContext</code>를 가지는데,
+                <ul>
+                  <li>(BuildContext 가) <code class="language-html highlighter-rouge">StatelessWidget.build</code>나 <code class="language-html highlighter-rouge">State.build</code> 에 의해 return된 widget의 parent가 된다</li>
+                </ul>
+              </li>
+              <li>이것은 <code class="language-html highlighter-rouge">_buildTextComposer()</code>가, 그것의 encapsulating <code class="language-html highlighter-rouge">state</code>로 부터 <code class="language-html highlighter-rouge">BuildContext</code> 객체에 access할 수 있다는 것을 의미한다</li>
+              <li>때문에, context 를 method에 명시적으로 넘겨줄 필요가 없다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-debug-your-app"><a href="https://codelabs.developers.google.com/codelabs/flutter#5">6. Debug your app</a></h2>
+
+<ul>
+  <li>app을 debug 하기 위한 몇가지 방법이 있다</li>
+  <li>IDE에서 바로 breakpoints를 설정할 수도 있지만,
+    <ul>
+      <li>
+<a href="https://flutter.dev/docs/development/tools/devtools/overview">Dart DevToos</a> 를 사용할 수도 있다 (Chrome DevTools과 헷갈리지 말자)</li>
+    </ul>
+  </li>
+  <li>이번 codelab은 Android Studio와 IntelliJ를 이용해 어떻게 breakpoint를 잡는지 보여준다</li>
+  <li>VS Code 같은 다른 editor를 사용한다면 DevTools로 debugging 해라</li>
+  <li>Dart DevTools에 대한 친절한 소개를 원한다면, <a href="https://flutter.dev/docs/get-started/codelab-web#step-25-launch-dart-devtools">Write your first Flutter app on the web의 Step 2.5</a>를 참조하라</li>
+  <li>Anddroid Studio와 IntelliJ IDE로 emulator, simulator, device 에서 실행중인 app을 디버깅할 수 있다</li>
+  <li>이 에디터로 아래 일들을 할수 있다:
+    <ul>
+      <li>앱을 디버깅할 device나 simulator 선택하기</li>
+      <li>console message 보기</li>
+      <li>breakpoint 설정하기</li>
+      <li>실행시간에 변수를 조사하거나 표현식을 평가하기(evaluate expressions)</li>
+    </ul>
+  </li>
+  <li>Tip: 디버깅을 좀더 공부하려면 <a href="https://flutter.dev/docs/testing/debugging">Debugging Flutter apps</a> 를 참조하라</li>
+  <li>Android Studio와 IntelliJ 에디터는 앱이 실행중일때 system log를 보여주고,
+    <ul>
+      <li>breakpoint를 설정하고 execution flow를 조정할 수 있도록 Debugger UI를 제공한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="work-with-breakpoints">Work with breakpoints</h3>
+
+<ul>
+  <li>코드작성 &gt; breakpoint로 Flutter app 디버깅하기
+    <ul>
+      <li>간단하게 breakpoint 잡고 멈춰보는 것 까지만 실습</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="7-add-a-ui-for-displaying-messages"><a href="https://codelabs.developers.google.com/codelabs/flutter#6">7. Add a UI for displaying messages</a></h2>
+
+<ul>
+  <li>기본 app scaffolding과 화면이 준비되었다. 이제 chat message를 보여줄 영역을 정의한다</li>
+</ul>
+
+<h3 id="chat-message-목록을-구현한다">chat message 목록을 구현한다</h3>
+
+<ul>
+  <li>이번 section에서는, (여러개의 작은 widget을 생성하고 조합하는 방식인) composition으로 chat message를 보여주는 widget을 만든다</li>
+  <li>한 개의 chat message를 보여주는 widget 부터 시작한다
+    <ul>
+      <li>그 다음, 이 widget을 중첩하여 부모 scrollable list로 넣는다</li>
+      <li>마지막으로, 이 scrollable list를 기본 app scaffold에 넣는다</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">ChatMessage</code> stateless widget을 추가한다:</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">Row</code>를 <code class="language-html highlighter-rouge">ChatMessage</code>의 <code class="language-html highlighter-rouge">build()</code> method에 추가 한다:
+    <ul>
+      <li>이 시점에서 분석기는 정의안된  <code class="language-html highlighter-rouge">_name</code>만 불평해야 한다. 바로 고쳐본다</li>
+      <li>코드작성 &gt; <code class="language-html highlighter-rouge">_name</code> 변수를 정의한다
+        <ul>
+          <li>각 chat message를 보낸이의 이름으로 label 하려는 목적이다</li>
+          <li>보통 사용자의 이름은 atehntication을 통해 가져오지만</li>
+          <li>간단한 테스트 앱 작성을 위해 hard-code한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">ChatMessage</code>의 <code class="language-html highlighter-rouge">build()</code> method는 <code class="language-html highlighter-rouge">Row</code> widget을 return 하는데
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">Row</code> widget은 간단한 graphical 아바타를 보여줘서 누가 chat message를 보냈는지 알려준다</li>
+          <li>
+<code class="language-html highlighter-rouge">Column</code> widget은 보낸사람 이름과, text message를 가진다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">CircleAvatar</code>는 사용자의 첫번째 이니셜로 구분이 되도록 한다
+        <ul>
+          <li>이를 위해, <code class="language-html highlighter-rouge">_name</code> 변수의 첫번째 character를 child <code class="language-html highlighter-rouge">Text</code> widget 으로 전달한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">crossAxisAlignment</code> 파라미터는 <code class="language-html highlighter-rouge">Row</code> constructor 안에서 <code class="language-html highlighter-rouge">CrossAxisAlignment.start</code>로 지정한다
+        <ul>
+          <li>아바타와 message를 부모 widget과 상대적인 위치에 놓기 위함이다</li>
+          <li>아바타의 부모 widget은 <code class="language-html highlighter-rouge">Row</code> 이고 main axis가 horizontal 이라서
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">CrossAxisAlignment.start</code>는 수직축을 따라 가장 높은 위치로 설정한다</li>
+            </ul>
+          </li>
+          <li>message의 경우 부모 widget은 <code class="language-html highlighter-rouge">Column</code> 이고 main axis가 vertical 인데
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">CrossAxisAlignment.start</code>는 수평축을 따라 가장 왼쪽 위치로 설정한다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>아바타 다음에, 두 개의 <code class="language-html highlighter-rouge">Text</code> widget이 수직으로 정렬되어 있어서
+        <ul>
+          <li>위쪽은 보낸사람 이름, 아랫쪽은 text message가 위치한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">Theme.of(context)</code> 는 해당 앱의 기본 flutter <code class="language-html highlighter-rouge">ThemeData</code>객체를 제공한다
+        <ul>
+          <li>나중에 나오는 step에서, Android 와 iOS에서 다르게 앱을 스타일링한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">ThemeData</code>의 <code class="language-html highlighter-rouge">textTheme</code> 속성은 <code class="language-html highlighter-rouge">headline4</code>와 같은, text를 위한 Material Design logical 스타일 에 대한 access를 제공한다
+        <ul>
+          <li>이 때문에, font size나 다른 text 속성을 hard-coding 하는 일을 피할 수 있다</li>
+          <li>이 예제에서는, 보낸사람 이름을 message text보다 크게 설정했다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ui에-chat-message-목록을-구현한다">UI에 chat message 목록을 구현한다</h3>
+
+<ul>
+  <li>다음 refinement는 chat messages의 목록으 가져와서 UI에 보여주는 것이다</li>
+  <li>사용자가 메세지 이력을 볼수 있도록 이 목록을 scrollable 하도록 만들고 싶을것이다</li>
+  <li>이 목록은 또한 메시지를 시간순으로 표시되어야 한다
+    <ul>
+      <li>또한 가장 최근 메시지가 보여지는 목록중 가장 아랫쪽에 배치되어야 한다</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_messages</code> list를 <code class="language-html highlighter-rouge">_ChatScreenState</code>에 추가한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_ChatScreenState</code>의 <code class="language-html highlighter-rouge">_handleSubmitted()</code> method를 변경한다</li>
+  <li>코드작성 &gt; 내용 전달이후 포커스를 text field로 다시 가져오기 구현</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>목록의 각 item은 <code class="language-html highlighter-rouge">ChatMessage</code> instance 이다</li>
+      <li>목록은 empty 상태로 초기화된다</li>
+      <li>
+<code class="language-html highlighter-rouge">_messages</code>를 변경하기 위해 <code class="language-html highlighter-rouge">setState()</code>를 호출하면, widget tree의 이 부분이 바뀌었다는 것을 framework가 알게된다
+        <ul>
+          <li>그래서 framework은 UI를 rebuild 할 필요가 있게된다</li>
+          <li>
+<code class="language-html highlighter-rouge">setState()</code>에서는 동기적인(synchronous) operations만 수행되어야 하는데,
+            <ul>
+              <li>그렇지않으면 framework이 operation이 끝나기전에 widget들을 rebuild할 수 있기 때문이다</li>
+            </ul>
+          </li>
+          <li>State 객체의 internal state에 많은 변경을 더할때,
+            <ul>
+              <li>모든 변경을 한 번의 <code class="language-html highlighter-rouge">setState()</code> 호출에 결합하는것이 좀더 일반적인 사용법이라 할 수있다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>일반적으로, <code class="language-html highlighter-rouge">setState()</code> 호출의 outside에서 일부 private data를 변경한 후에
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">setState()</code>를 empty closure와 함께 호출하는 것이 가능하다</li>
+          <li>하지만, <code class="language-html highlighter-rouge">setState</code>의 closure내부에서 데이타를 업데이트하는 것이 선호되는데,
+            <ul>
+              <li>이렇게 함으로써, 이후에 이것을 호출해야하는 것을 잊지 않을 것이다</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="message-list를-위치-시키다">message list를 위치 시키다</h3>
+
+<ul>
+  <li>당신은 이제 chat message 목록을 보여줄 준비가 다 되었다.</li>
+  <li>
+<code class="language-html highlighter-rouge">ChatMessage</code> widget에서 <code class="language-html highlighter-rouge">_messages</code> list를 가져와서, <code class="language-html highlighter-rouge">ListView</code> widget에 넣고 scrollable list로 만들자</li>
+  <li>코드작성 &gt;<code class="language-html highlighter-rouge">_ChatScreenState</code>의  <code class="language-html highlighter-rouge">build()</code> method 안에서, <code class="language-html highlighter-rouge">Column</code> 안에 <code class="language-html highlighter-rouge">ListView</code>를 추가하라</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">ListView.builder</code> factory method는, list의 item당 한 번식 호출되는 함수를 제공하여 on demand로 list를 빌드한다
+        <ul>
+          <li>그 함수는 호출때 마다 새로운 widget을 반환한다</li>
+          <li>builder 또한 자동으로 그 <code class="language-html highlighter-rouge">children</code> parameter의 mutation을 감지하고 rebuild를 시작한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">ListView.builder</code> 생성자로 넘어가는 parameter들은 list 내용과 외관을 customize한다</li>
+      <li>
+<code class="language-html highlighter-rouge">padding</code>은 message text 주변에 공백을 생성한다</li>
+      <li>
+<code class="language-html highlighter-rouge">itemCount</code>는 list내에서 메시지 숫자를 특정한다</li>
+      <li>
+<code class="language-html highlighter-rouge">itemBuilder</code>는 <code class="language-html highlighter-rouge">[index]</code>내의 각 widget을 build하는 함수를 제공한다.
+        <ul>
+          <li>현재의 build context가 필요하지는 않기 때문에, <code class="language-html highlighter-rouge">IndexedWidgetBuilder</code>의 첫번째 argument는 무시해도 된다</li>
+          <li>해당 argument를 underscore(_)만으로 naming하는 것은 해당 argument가 사용되지 않을것을 가리키는 convention이다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">Scaffold</code> widget의 <code class="language-html highlighter-rouge">body</code> 속성은 , 이제 input field와 <strong>Send</strong> 버튼 뿐만아니라 incoming 메시지의 목록또한 포함한다
+        <ul>
+          <li>layout은 아래의 widget들을 포함한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">Column</code> : 직계 childrent을 수직적으로 배치한다. <code class="language-html highlighter-rouge">Column</code> 위젯은 (<code class="language-html highlighter-rouge">Row</code>와 마찬가지로) child widgets의 목록을 가져오는데
+        <ul>
+          <li>(child widget)은 scrolling list와 input field의 한 줄이 된다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">ListView</code>의 부모로서의 <code class="language-html highlighter-rouge">Flexible</code> : framework에게 말해서, 받은 메시지들로 <code class="language-html highlighter-rouge">Column</code>을 채운다. 이때 <code class="language-html highlighter-rouge">TextField</code>는 고정 사이즈를 유지한다</li>
+      <li>
+<code class="language-html highlighter-rouge">Divider</code> : 메시지를 표시된 UI 와 메시지를 작성하는 text input들 사이에 수평선을 그린다</li>
+      <li>text composer의 부모로서의 <code class="language-html highlighter-rouge">Container</code> : 배경 이미지, padding, margins등 다른 여러 레이아웃을 정의한다</li>
+      <li>
+<code class="language-html highlighter-rouge">decoration</code> : 배경 color를 정의하는 새로운 <code class="language-html highlighter-rouge">BoxDecoration</code> 객체를 생성한다.
+        <ul>
+          <li>이 경우에는 기본 theme의 <code class="language-html highlighter-rouge">ThemeData</code> 객체에의해 정의되는 <code class="language-html highlighter-rouge">cardColor</code>를 사용했다</li>
+          <li>이것은 메시지를 작성하는 UI에 메시지 리스트와 다른 배경을 제공한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="8-animate-your-app"><a href="https://codelabs.developers.google.com/codelabs/flutter#7">8. Animate your app</a></h2>
+
+<ul>
+  <li>앱에 대한 사용자 경험이 유연하고 직관적으로 만들기 위해 widget에 애니메이션을 추가할 수 있다.
+    <ul>
+      <li>이 section에서 채팅 메시지 목록에 기본적인 애니메이션 효과를 추가하는 방법을 배운다</li>
+    </ul>
+  </li>
+  <li>새로운 chat 메시지를 보낼때 , 단순히 메시지를 보여주는 대신, 메시지목록을 바닥에서 위쪽으로 천천히 움직이도록 해보자</li>
+  <li>Flutter 에서의 애니메이션은, typed value와 status(예를 들면 다음과 같은 forward, reverse, cpmpleted, and dismissed) 포함한  <code class="language-html highlighter-rouge">Animation</code> 객체에 encapsulated 되어있다
+    <ul>
+      <li>당신은 widget에 애니메이션 객체를 붙이거나 애니메이션 객체에 대한 변경을 관찰할수도 있다</li>
+      <li>애니메이션 객체에 대한 변경을 기반하여, framework은 widget이 보이는 외관을 바꿀수있고 widget tree를 rebuild할 수 있다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="애니메이션-controller를-지정한다">애니메이션 controller를 지정한다</h3>
+
+<ul>
+  <li>애니메이션이 어떻게 동작해야하는지 지정하기 위해 <code class="language-html highlighter-rouge">AnimationController</code> class를 사용한다.</li>
+  <li>
+<code class="language-html highlighter-rouge">AnimationController</code>는 애니메이션의 중요한 특성, 플레이 시간이나 플레이 방향(forward 나 reverse0등을 정의할수 있도록 해준다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_ChatScreenSate</code> class 정의를 업데이트하여 <code class="language-html highlighter-rouge">TickerProviderStateMixin</code>을 포함시킨다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">ChatMessage</code> class 정의 안에 animation controller를 저장할 변수를 추가한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_handleSubmitted()</code> method에 animation controller를 추가한다</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">AnimationController</code>가 애니메이션의 runtime duration을 700 milliseconds로 지정했다
+        <ul>
+          <li>이렇게 긴 duration은 animation effect를 충분히 느리게 만들어서 애니메이션이 변화하는 과정을 관찰할수있게 해준다.</li>
+          <li>앱에 실제 적용할 때는 좀더 짧게 해야할 것이다</li>
+        </ul>
+      </li>
+      <li>animation controller가 새로운 <code class="language-html highlighter-rouge">ChatMessage</code> instance에 부착되어서, 메시지가 chat list에 추가될 때마다 <code class="language-html highlighter-rouge">play forward</code>로 동작하도록 설정되었다</li>
+      <li>
+<code class="language-html highlighter-rouge">AnimationController</code>를 생성할 때, <code class="language-html highlighter-rouge">vsync</code> argument를 넘겨줘야 한다.
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">vsync</code>는 애니메이션을 앞쪽으로 진행하도록하는 heartbeats( the <code class="language-html highlighter-rouge">Ticker</code>)의 소스이다</li>
+          <li>이 예제는 <code class="language-html highlighter-rouge">_ChatScreenState</code>를 <code class="language-html highlighter-rouge">vsync</code>로 사용해서, <code class="language-html highlighter-rouge">_ChatScreenState</code> class 정의에 <code class="language-html highlighter-rouge">TickerProviderStateMixin</code> 믹스인을 추가한다</li>
+        </ul>
+      </li>
+      <li>다트에서, mixin은 class body가 multiple class hierarchies에서 재사용되도록 허용한다.
+        <ul>
+          <li>더 자세한 정보는 <a href="https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins">Adding features to a class: mixins</a> 을 참고한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="size-transition-widget을-추가한다">Size Transition widget을 추가한다</h3>
+
+<ul>
+  <li>텍스트가 미끌어져 입력될 때 점차적으로 노출되도록하는 <code class="language-html highlighter-rouge">ClipRect</code>에 애니메이션 효과를 주도록  <code class="language-html highlighter-rouge">SizeTransition</code> widget을 추가한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">ChatMessage</code>의 <code class="language-html highlighter-rouge">build()</code> method에 <code class="language-html highlighter-rouge">SizeTransition</code> widget을 추가한다</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">SizeTransition</code> class와 합체된 <code class="language-html highlighter-rouge">CurvedAnimation</code> 객체는 ease-out(천천히 움직이는?) 애니메이션 효과를 나타낸다
+        <ul>
+          <li>ease-out 효과로 인해 메시지는 애니메이션 초기에 빠르게 slide up 되어다가 멈출때까지 slow down 된다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">SizeTransition</code> widget은 텍스트가 slide in 할때 좀 더 텍스트를 노출해주는 <code class="language-html highlighter-rouge">ClipRect</code> 애니메이팅하는 동작을 한다</li>
+    </ul>
+  </li>
+  <li>Tip
+    <ul>
+      <li>만약에 hot reload로 앱을 동작시키면 , red screen을 보게 될 것이다.</li>
+      <li>왜그럴까? hot reload는 당신의 앱의 state를 저장한다.</li>
+      <li>이 경우에 , 만약 당신이 기존 chat message 목록에 조금이라 메시지를 입력했다면, 이 메시지가 저장되었다는 것을 의미한다</li>
+      <li>hot reload가 앱을 업데이트 하려할 경우, 앞선 목록에 소급적으로 애니메이션을 콘트롤러가 적용되지 않기 때문에 , crash가 난 것이다</li>
+      <li>hot restart가 이 문제를 해결할 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="애니메이션의-폐기">애니메이션의 폐기</h3>
+
+<ul>
+  <li>애니메이션 controller를 폐기해보는 것은 , 사용하던 리소스를 더 이상 사용하지 않을때 놓아주는 , 좋은 연습이 된다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_ChatScreenState</code>에 <code class="language-html highlighter-rouge">dispose()</code> method를 추가한다</li>
+  <li>애니메이션으로 좀더 실험해보고 싶다면, 시도해볼 몇가지 아이디어를 추천한다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">_handleSubmitted()</code>의 <code class="language-html highlighter-rouge">duration</code> 값을 변경하여 애니메이션을 speed up 하거나 slow donw 해보라</li>
+      <li>
+<code class="language-html highlighter-rouge">Curves</code> class에 정의된 상수를 이용하여 다른 animation curve를 테스트 해봐라</li>
+      <li>
+<code class="language-html highlighter-rouge">SizeTransition</code> 대신 <code class="language-html highlighter-rouge">FadeTransition</code> widget으로 <code class="language-html highlighter-rouge">Container</code>에서 fade-in animation 효과를 테스트 해봐라</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="9-apply-finishing-touches"><a href="https://codelabs.developers.google.com/codelabs/flutter#8">9. Apply finishing touches</a></h2>
+
+<ul>
+  <li>이번 optional step에서는, 몇가지 복잡한 디테일을 추가한단</li>
+  <li>예를들면 보낼 텍스트가 있는 경우에만 <strong>Send</strong> 버튼을 enable하거나</li>
+  <li>긴 메시지를 wrapping 하거나</li>
+  <li>안드로이드나 iOS에 특화한 native-looking UI를 구현하는 것이다</li>
+</ul>
+
+<h3 id="send-버튼을-context-aware-하도록-만들기">send 버튼을 context-aware 하도록 만들기</h3>
+
+<ul>
+  <li>현재 보낼 텍스트가 없더라도 <strong>Send 버튼</strong> 이 enable 되어있다.</li>
+  <li>보낼 텍스트 존재하는지 여부에 따라 send 버튼의 모양이 바꾸고 싶을수 있다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_isComposing</code> private 변수를 추가하여 input field에서 사용자 타이핑할 때 true로 설정하도록 한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_ChatScreenState</code>에 <code class="language-html highlighter-rouge">onChanged()</code> 콜백 method를 추가한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_ChatScreenState</code>에서 <code class="language-html highlighter-rouge">onPressed()</code> 콜백 method를 업데이트한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">_handleSubmitted</code>를 수정하여 텍스트 필드가 비었을 경우 <code class="language-html highlighter-rouge">_isComposing</code>을 false로 설정한다</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">onChanged</code> 콜백이 <code class="language-html highlighter-rouge">TextField</code>에게 사용자가 텍스트를 수정했다가 알려준다.
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">TextField</code>는 필드의 현재 값에서 값이 변경될 때마다 이 method를 호출한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">onChanged</code> 콜백은 <code class="language-html highlighter-rouge">setState()</code>를 호출하여  필드에 텍스트가 존재한다면 <code class="language-html highlighter-rouge">_isComposing</code>을 true로 변경한다</li>
+      <li>
+<code class="language-html highlighter-rouge">_isComposing</code>이 false 일때, <code class="language-html highlighter-rouge">onPressed</code> 속성이 <code class="language-html highlighter-rouge">null</code>로 설정된다</li>
+      <li>
+<code class="language-html highlighter-rouge">onSubmitted</code> 속성 또한 메시지 리스트에 빈 문자열을 추가하지 않도록 수정된다</li>
+      <li>사용자가 텍스트 필드에 문자열을 입력하면 <code class="language-html highlighter-rouge">_isComposing</code>이 <code class="language-html highlighter-rouge">true</code>가 된다.
+        <ul>
+          <li>사용자가 <strong>Send</strong> 버튼을 누르면 framework이 <code class="language-html highlighter-rouge">_handleSubmitted()</code>를 invoke 한다</li>
+        </ul>
+      </li>
+      <li>사용자 텍스트 필드에 입력하지 않으면, <code class="language-html highlighter-rouge">_isComposing</code>은 <code class="language-html highlighter-rouge">false</code>이고
+        <ul>
+          <li>그 widget의 <code class="language-html highlighter-rouge">onPressed</code> 속성은 <code class="language-html highlighter-rouge">null</code>로 설정되어, <strong>Send</strong> 버튼은 비활성화된다.</li>
+          <li>frameworkd이 자동적으로 버튼 color를 <code class="language-html highlighter-rouge">Theme.of(context).disabledColor</code>로 변경한다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="긴-문자열-줄-바꾸기-wrap">긴 문자열 줄 바꾸기 (wrap)</h3>
+
+<ul>
+  <li>UI가 표현하기에는 긴 문자열을 사용자가 입력할 때, 모든 입력된 메시지를 보이기 위해 줄 바꿈이 필요하다</li>
+  <li>현재는 넘치는 문자열을 잘리면서, visual overflow 에러가 나타난다.</li>
+  <li>줄 바꿈이 되도록하는 간단한 방법은 문자열을 <code class="language-html highlighter-rouge">Expande</code> widget에 넣는 방법이다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">Column</code> widget은 <code class="language-html highlighter-rouge">Expanded</code> widget 으로 감싼다</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Expanded</code> widget은 자식 widget 에게 layout constraints를 가할 수 있는데…
+        <ul>
+          <li>이 경우에는 <code class="language-html highlighter-rouge">Column</code>의 width 에 제한을 가한다.</li>
+          <li>여기서, 보통 콘텐츠에 의해 결정되는  <code class="language-html highlighter-rouge">Text</code> widget의 width에 대해 제한하고 있다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="android-와-ios-용으로-커스터마이즈">Android 와 iOS 용으로 커스터마이즈</h3>
+
+<ul>
+  <li>당신의 앱에 자연스러운 look &amp; feel을 주기위해,
+    <ul>
+      <li>theme의 추가하고 <code class="language-html highlighter-rouge">FriendlyChatApp</code> class의 <code class="language-html highlighter-rouge">build()</code> method에 간단한 로직을 추가할 수 있다</li>
+    </ul>
+  </li>
+  <li>이번 step 에서, 다른 primary와 accent 컬러 세트를 적용하는 platform theme을 하나 정의한다</li>
+  <li>또한 <strong>Send</strong> 버튼에 대해서
+    <ul>
+      <li>안드로이드에서 Material Design의 <code class="language-html highlighter-rouge">IconButton</code>을,</li>
+      <li>iOS에서는 <code class="language-html highlighter-rouge">CupertinoButton</code> 을 사용한다</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; 아래 코드를 <code class="language-html highlighter-rouge">main.dart</code> 의 <code class="language-html highlighter-rouge">main()</code> method 아래에 추가한다</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">kDefaultTheme ThemeData</code> 객체는 안드로이드용 컬러(purple with orange accents) 를 지정한다</li>
+      <li>
+<code class="language-html highlighter-rouge">kIOSTheme ThemeData</code> 객체는 iOS용 컬러(light grey with orange accents) 를 지정한다</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">FriendlyChatApp</code> class 에서  <code class="language-html highlighter-rouge">MaterialApp</code> widget의 <code class="language-html highlighter-rouge">theme</code> 속성을 이용하여 theme을 변경한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">AppBar</code> widget 의 theme을 modify한다 ( 당신 app UI의 top에 있는 banner)</li>
+  <li>👁‍🗨 Observations
+    <ul>
+      <li>top-level <code class="language-html highlighter-rouge">defaultTargetPlatform</code> 속성과 <strong>conditional operatiors</strong> 가 theme 을 선택하기 위해 사용되었다</li>
+      <li>
+<code class="language-html highlighter-rouge">elevation</code> 속성은 <code class="language-html highlighter-rouge">AppBar</code>의 z-coordinate을 정의한다</li>
+      <li>
+<code class="language-html highlighter-rouge">4.0</code>의 z-coordinate 값은 정의된 shadow (Android) 를 가지며, <code class="language-html highlighter-rouge">0.0</code> 값(iOS)은 shadow가 없다</li>
+    </ul>
+  </li>
+  <li>코드작성 &gt; send icon을 Android와 iOS 용으로 customize 한다</li>
+  <li>코드작성 &gt; <code class="language-html highlighter-rouge">Container</code> widget내의 top-level <code class="language-html highlighter-rouge">Column</code>을 감싸고, 윗쪽 edge에 light grey border 효과를 준다
+    <ul>
+      <li>이 border는 iOS에서, app bar를 app과 비주얼적으로 구분하는데 도움을 준다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="10-next-steps"><a href="https://codelabs.developers.google.com/codelabs/flutter#9">10. Next steps</a></h2>
+
+<ul>
+  <li>
+<strong>Congratulations!</strong> 당신은 이제 Flutter framework으로 cross-platform mobile app을 구축하는 기본을 알게 되었다</li>
+  <li>
+<strong>What we covered</strong>
+    <ul>
+      <li>바닥에서 부터 Flutter app을 만드는 방법</li>
+      <li>Android Studio 와 IntelliJ 에서 사용할 수 있는 단축키 사용법</li>
+      <li>당신의 Flutter app을, 에뮬레이터, 시뮬레이터, 실제 디바이스에서 실행하고, hot reload하고, 디버그하는 방법</li>
+      <li>인터페이스를 widget과 animation으로 customize하는 방법</li>
+      <li>Android와 iOS에 대해 사용자 interface를 customize하는 방법</li>
+    </ul>
+  </li>
+  <li>
+<strong>What’s next</strong>
+    <ul>
+      <li>다른 <a href="https://docs.flutter.dev/codelabs">Flutter codelabs</a> 을 시도해봐라</li>
+      <li>Material compnents로 앱을 만드는 것에 대해 흥미가있나요?</li>
+      <li>5-part Material components(MDC) 코드랩 시리즈로 쇼핑앱을 만들면서 좀더 배워보세요
+        <ul>
+          <li>
+<a href="https://codelabs.developers.google.com/codelabs/mdc-101-flutter#0">MDC-101 Flutter: Material Components(MDC) Bascics</a> 로 시작하세요</li>
+        </ul>
+      </li>
+      <li>Flutter에 대해 계속 배우세요
+        <ul>
+          <li>
+<a href="https://flutter.dev/">flutter.dev</a> : Flutter project 문서 사이트</li>
+          <li>The <a href="https://docs.flutter.dev/cookbook">Flutter cookbook</a>
+</li>
+          <li>The <a href="https://api.flutter.dev/index.html">Flutter API reference</a> documentation</li>
+          <li>추가적인 <a href="https://flutter.github.io/samples/#">Flutter sample apps</a> 과 source code</li>
+        </ul>
+      </li>
+      <li>키보드 단축키에 대한 정보
+        <ul>
+          <li>
+<a href="https://medium.com/flutter-community/flutter-ide-shortcuts-for-faster-development-2ef45c51085b#df6e">Flutter - 빠른 개발위한 IDE 단축키</a>, Pooja Bhaumik 작성</li>
+          <li>
+<a href="https://medium.com/coding-with-flutter/flutter-my-favourite-keyboard-shortcuts-63f6474afc8c">Flutter: 내가 좋아하는 단축키</a>, Andrea Bizzotto 작성</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="11-optional-get-the-sample-code"><a href="https://codelabs.developers.google.com/codelabs/flutter#10">11. Optional: Get the sample code</a></h2>
+
+<ul>
+  <li>샘플을 레퍼런스로 보고거나 코드랩의 특정 section부터 시작하고 싶어서 샘플 코드를 다운로드 받고 싶을수 있다</li>
+  <li>코드랩의 샘플코드를 다운받으려면 터미널에서 아래 명령을 입력하라
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> git clone https://github.com/flutter/codelabs
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>이 코드랩의 샘플 코드는 <code class="language-html highlighter-rouge">friendly_chat</code> 폴더에 있다.
+    <ul>
+      <li>각각 번호가 붙혀진 단계별폴더에는 각 단계의 최종 코드를 볼 수있다.</li>
+      <li>각 단계별 어느 코드라도 <code class="language-html highlighter-rouge">lib/main.dart</code>에서 가져와서 <a href="https://dartpad.dev/?null_safety=true"><code class="language-html highlighter-rouge">DartPad instance</code></a>에 넣고 실행시켜볼 수있다</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="troubleshooting">TroubleShooting</h1>
+
+<h2 id="flutter-doctor-fail">Flutter Doctor Fail</h2>
+
+<ul>
+  <li>Android Studio를 Bumblebee로 업데이트 했더니 다음과 같이 에러가 날 경우
+    <ul>
+      <li>얼마전에 Windows 11으로 업데이트 했다가 다시 Windows 10으로 복구했을때 초기화 되었을 수 있다..</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre>&gt;flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel beta, 2.3.0-24.1.pre, on Microsoft Windows [Version 10.0.19044.1466], locale ko-KR)
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.0)
+    X cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    X Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+[√] Chrome - develop for the web
+[√] Android Studio (version 4.2.0)
+[√] Connected device (2 available)
+
+! Doctor found issues in 1 category.
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<h3 id="해결책">해결책</h3>
+
+<ul>
+  <li>안드로이드 스튜디오를 설치했을경우 , Tools ▶ (중간쯤) SDK Manager ▶ (대화창 가운데탭) SDK Tools ▶ (3번째쯤) Android SDK Command-line Tools (latest) 체크
+    <ul>
+      <li>그림 참조: <a href="https://www.androidhuman.com/2021-06-02-flutter_android_license_noclassdeffound">flutter doctor –android-licenses 문제 해결하기, 커니의 안드로이드 이야기</a>
+<img src="https://www.androidhuman.com/assets/posts/2021-06-02-flutter_android_license_noclassdeffound/sdk_manager.png" alt="cmd-line tools">
+</li>
+    </ul>
+  </li>
+  <li>Apply &amp; OK</li>
+  <li>이제 <code class="language-html highlighter-rouge">flutter doctor</code> 패스함
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre>╰─ flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel beta, 2.3.0-24.1.pre, on Microsoft Windows [Version 10.0.19044.1706], locale ko-KR)
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.0)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 4.2.0)
+[✓] Connected device (2 available)
+
+• No issues found!
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

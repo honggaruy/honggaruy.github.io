@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>29주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="7/13(월) ~ 7/19(일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/07/13/week-29th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="29주차 기록">
+    <meta property="og:description" content="7/13(월) ~ 7/19(일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/07/13/week-29th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/07/13/week-29th/">
+    <meta name="twitter:title" content="29주차 기록">
+    <meta name="twitter:description" content="7/13(월) ~ 7/19(일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/07/06/week-28th/">« 28주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2020/07/20/week-30th/">30주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">29주차 기록</h1>
+        <p class="created-date">
+            2020.07.13
+        </p>
+
+
+        <div class="post-tag">
+    google-apps-script clasp kite
+</div>
+
+        <h2>7/13(월) ~ 7/19(일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EC%98%88%EC%A0%84%EC%97%90-%EC%A7%84%ED%96%89%ED%95%98%EB%8D%98-%EA%B5%AC%EA%B8%80-%EC%8B%9C%ED%8A%B8-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9E%91%EC%97%85-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0--2020-07-15--%EC%88%98%EC%9A%94%EC%9D%BC" id="markdown-toc-예전에-진행하던-구글-시트-스크립트-작업-불러오기--2020-07-15--수요일">예전에 진행하던 구글 시트 스크립트 작업 불러오기 ( 2020-07-15 , 수요일)</a>    <ul>
+      <li><a href="#typescript-%EC%9E%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A4%80%EB%B9%84" id="markdown-toc-typescript-작업을-위한-준비">TypeScript 작업을 위한 준비</a></li>
+      <li><a href="#%EC%88%98%EC%A0%95%EC%9D%84-%EA%B0%90%EC%8B%9C%ED%95%98%EC%97%AC-%EB%81%8A%EA%B9%80%EC%97%86%EC%9D%B4-push%ED%95%98%EB%8A%94-%EA%B8%B0%EB%8A%A5" id="markdown-toc-수정을-감시하여-끊김없이-push하는-기능">수정을 감시하여 끊김없이 push하는 기능</a></li>
+    </ul>
+  </li>
+  <li><a href="#gvim%EC%97%90-kite-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EA%B9%94%EB%A0%A4%EC%9E%88%EB%84%A4-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-%EB%AF%B8%EC%A0%95" id="markdown-toc-gvim에-kite-플러그인-깔려있네-알아보기-미정">gvim에 kite 플러그인 깔려있네.. 알아보기 (미정)</a></li>
+</ul>
+
+<h1 id="예전에-진행하던-구글-시트-스크립트-작업-불러오기--2020-07-15--수요일">예전에 진행하던 구글 시트 스크립트 작업 불러오기 ( 2020-07-15 , 수요일)</h1>
+
+<ul>
+  <li>clasp_bankbook 프로젝트</li>
+  <li>작업 스케줄러에서 자동으로 하루에 한 번씩 실행되고는 있지만..</li>
+  <li>
+    <p>수동으로 할수있게 메뉴도 추가하려고 함.</p>
+  </li>
+  <li>참고 : <a href="https://github.com/google/clasp/blob/master/docs/run.md">git clasp 프로젝트, Run</a>
+</li>
+  <li>clasp 프로젝트를 down 받은 상태에서..</li>
+  <li>로그인이 안되어 있을 것이므로 로그인 – <code class="language-html highlighter-rouge">clasp login</code>
+</li>
+</ul>
+
+<h2 id="typescript-작업을-위한-준비">TypeScript 작업을 위한 준비</h2>
+
+<ul>
+  <li>npm 으로 clasp과 , type definitions for Apps Script 를 설치해야 한다.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>npm <span class="nb">install</span> <span class="nt">-g</span> @google/clasp
+npm i <span class="nt">-S</span> @types/google-apps-script
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>nodejs 설치는 choco로 가능한데 .. 이 부분의 설치도 dotfiles에 넣을수 있을지??</li>
+</ul>
+
+<h2 id="수정을-감시하여-끊김없이-push하는-기능">수정을 감시하여 끊김없이 push하는 기능</h2>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">clasp push --watch</code> 로 가능</li>
+</ul>
+
+<h1 id="gvim에-kite-플러그인-깔려있네-알아보기-미정">gvim에 kite 플러그인 깔려있네.. 알아보기 (미정)</h1>
+
+<ul>
+  <li>.vimrc 에는 kite 플러그인이 안보임.  어디 깔렸는지 알아낼것.</li>
+  <li>참고 사이트 : <a href="https://help.kite.com/article/73-using-the-vim-plugin">Using the Vim plugin for Python</a>
+</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

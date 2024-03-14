@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>String interpolation - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="템플릿 문자열, 백틱 문자열, f문자열">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/term-string-interpolation/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="String interpolation">
+    <meta property="og:description" content="템플릿 문자열, 백틱 문자열, f문자열">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/term-string-interpolation/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/term-string-interpolation/">
+    <meta name="twitter:title" content="String interpolation">
+    <meta name="twitter:description" content="템플릿 문자열, 백틱 문자열, f문자열">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="term-string-interpolation">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">String interpolation</h1>
+    
+        <p class="title-summary">템플릿 문자열, 백틱 문자열, f문자열</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/term-string-interpolation.md" target="_blank">created: 2020.06.05</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/term-string-interpolation.md" target="_blank">updated: 2021.03.12</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/term-string-interpolation.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=String+interpolation&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    terminology string-interpolation template-literals variable-expansion variable-substitution
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#string-interpolation" id="markdown-toc-string-interpolation">String interpolation</a>    <ul>
+      <li>
+<a href="#%ED%91%9C%EC%A4%80-%EC%9A%A9%EC%96%B4-%EC%97%AC%EB%B6%80-%ED%99%95%EC%9D%B8" id="markdown-toc-표준-용어-여부-확인">표준 용어 여부 확인</a>        <ul>
+          <li><a href="#%EC%9E%98-%EC%95%88%EC%93%B0%EC%9D%B4%EB%8A%94-%EC%9A%A9%EC%96%B4" id="markdown-toc-잘-안쓰이는-용어">잘 안쓰이는 용어?</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EB%B9%A0%EB%A5%B8-%EA%B0%9C%EB%85%90-%EC%84%A4%EB%AA%85" id="markdown-toc-빠른-개념-설명">빠른 개념 설명</a></li>
+      <li><a href="#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC-%EC%B1%85-%ED%8F%AC%ED%95%A8" id="markdown-toc-관련-링크-책-포함">관련 링크 (책 포함)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="string-interpolation">String interpolation</h1>
+
+<ul>
+  <li>개념은 알고 있었는데 정확한 명칭이 잘 생각나지 않아 기록함</li>
+</ul>
+
+<h2 id="표준-용어-여부-확인">표준 용어 여부 확인</h2>
+
+<ol>
+  <li>
+<strong>String interpolation</strong>
+    <ul>
+      <li>2020-06-05 현재, 760개 질문, <a href="https://stackoverflow.com/questions/tagged/string-interpolation">string-interpolation, stackoverflow 태그 여부 확인 완료</a>
+</li>
+      <li><a href="https://en.wikipedia.org/wiki/String_interpolation">string-interpolation, en.wikipedia  용어 등록 여부 확인 완료</a></li>
+    </ul>
+  </li>
+  <li>
+<strong>Template literals</strong>
+    <ul>
+      <li>Javascript에서 표준용어</li>
+      <li>2020-06-05 현재, 268개 질문, <a href="https://stackoverflow.com/questions/tagged/template-literals">template-literals, stackoverflow 태그 여부 확인 완료</a>
+</li>
+    </ul>
+  </li>
+  <li>Variable expansion
+    <ul>
+      <li>2020-06-05 현재, 191개 질문, <a href="https://stackoverflow.com/questions/tagged/variable-expansion">variable-expansion, stackoverflow 태그 여부 확인 완료</a>
+</li>
+    </ul>
+  </li>
+  <li>Variable substitution
+    <ul>
+      <li>2020-06-05 현재, 46개 질문, <a href="https://stackoverflow.com/questions/tagged/variable-substitution">variable-substitution, stackoverflow 태그 여부 확인 완료</a>
+</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="잘-안쓰이는-용어">잘 안쓰이는 용어?</h3>
+
+<p>위키피디아에서는 유사용어로 소개되어 있지만 잘 안쓰이는 용어</p>
+
+<ul>
+  <li>Variable interpolation
+    <ul>
+      <li>2020-06-05 현재, 태그 미등록 확인함. <a href="https://stackoverflow.com/questions/tagged/variable-interpolation">variable-interpolation, stackoverflow 태그 <strong>미등록</strong> 확인 완료</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="빠른-개념-설명">빠른 개념 설명</h2>
+
+<p>Javascript에서 값을 문자열안에 포함하는 2가지 방식</p>
+
+<p>ES6 이전 : string concaternation 방식</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">currentTemp</span> <span class="o">=</span> <span class="mf">19.5</span><span class="p">;</span>
+<span class="c1">// 00b0는 온도를 나타내는 유니코드 포인트</span>
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">The current temperature is </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">currentTemp</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\</span><span class="s2">u00b0C</span><span class="dl">"</span><span class="p">;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+<p>ES6 부터 : <strong>template literals</strong> 방식</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">currentTemp</span> <span class="o">=</span> <span class="mf">19.5</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">`The current temperature is $(currentTemp)\u00b0C`</span><span class="p">;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+<p>자바스크립트에서는 일반 문자열과 구분하기 위해 백틱(backtick)을 사용</p>
+
+<h2 id="관련-링크-책-포함">관련 링크 (책 포함)</h2>
+
+<ul>
+  <li>이선 브라운, 러닝 자바스크립트. 3rd Edition(2016). 번역판-한빛미디어(2017), p86. 3.8.1 템플릿 문자열</li>
+  <li><a href="https://css-tricks.com/template-literals/">Template Literals , CSS-Tricks</a></li>
+  <li><a href="https://realpython.com/python-string-formatting/">Python String Formatting Best Practices</a></li>
+  <li><a href="http://hacks.mozilla.or.kr/2015/08/es6-in-depth-template-strings-2/">ES6 In Depth: 템플릿 문자열 (Template string)</a></li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

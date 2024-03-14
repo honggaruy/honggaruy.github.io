@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>53주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="12/23 (월) ~ 12/31 (목)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/12/23/week-53th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="53주차 기록">
+    <meta property="og:description" content="12/23 (월) ~ 12/31 (목)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/12/23/week-53th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/12/23/week-53th/">
+    <meta name="twitter:title" content="53주차 기록">
+    <meta name="twitter:description" content="12/23 (월) ~ 12/31 (목)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/12/21/week-52th/">« 52주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2021/01/01/week-01th/">2021년 01주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">53주차 기록</h1>
+        <p class="created-date">
+            2020.12.23
+        </p>
+
+
+        <div class="post-tag">
+    google-apps-script markdown-css custom-css-in-markdown translation emoji jemoji jekyll-spaceship
+</div>
+
+        <h2>12/23 (월) ~ 12/31 (목)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#markdown-%EB%AC%B8%EC%84%9C%EC%97%90-custom-css-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0" id="markdown-toc-markdown-문서에-custom-css-적용하기">markdown 문서에 custom css 적용하기</a></li>
+  <li><a href="#markdown-%EB%AC%B8%EC%84%9C%EC%97%90-emoji-%EC%84%9C%ED%8F%AC%ED%8A%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0" id="markdown-toc-markdown-문서에-emoji-서포트-적용하기">markdown 문서에 emoji 서포트 적용하기</a></li>
+  <li>
+<a href="#google-apps-script-%EB%8B%A4%EB%A5%B8-%EC%82%AC%EB%9E%8C%EA%B3%BC-%ED%98%91%EC%97%85%ED%95%98%EA%B8%B0-%EB%AC%B8%EC%84%9C%EB%B2%88%EC%97%AD" id="markdown-toc-google-apps-script-다른-사람과-협업하기-문서번역">Google Apps Script 다른 사람과 협업하기 [문서번역]</a>    <ul>
+      <li><a href="#collaboration-basics" id="markdown-toc-collaboration-basics">Collaboration basics</a></li>
+      <li><a href="#collaboration-with-the-clasp-command-line-tool" id="markdown-toc-collaboration-with-the-clasp-command-line-tool">Collaboration with the <strong>clasp</strong> command line tool</a></li>
+      <li><a href="#collaborating-with-shared-drives" id="markdown-toc-collaborating-with-shared-drives">Collaborating with shared drives</a></li>
+      <li><a href="#collaborating-with-project-sharing" id="markdown-toc-collaborating-with-project-sharing">Collaborating with project sharing</a></li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+.note { color:#01579b; background:#e1f5fe;}
+.warning { color:#d50000; background:#fce8e6;}
+</style>
+
+<h1 id="markdown-문서에-custom-css-적용하기">markdown 문서에 custom css 적용하기</h1>
+
+<ul>
+  <li>참조 링크 : <a href="https://support.typora.io/HTML/">HTML Support in Typora</a>
+</li>
+  <li>아래 섹션이 custom css 적용해본 결과이다.</li>
+  <li>적용 절차
+    <ul>
+      <li>아래 Sytle을 문서 첫부분에 넣는다
+        <div class="language-css highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="nc">.note</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span><span class="m">#01579b</span><span class="p">;</span> <span class="nl">background</span><span class="p">:</span><span class="m">#e1f5fe</span><span class="p">;}</span>
+<span class="nc">.warning</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span><span class="m">#d50000</span><span class="p">;</span> <span class="nl">background</span><span class="p">:</span><span class="m">#fce8e6</span><span class="p">;}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>markdown 본문은 다음과 같이 처리한다</p>
+
+        <div class="language-markdown highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="p">*</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"note"</span><span class="nt">&gt;</span> 이곳엔 <span class="gs">**note 클래스**</span> 적용<span class="nt">&lt;/span&gt;</span>
+<span class="p">*</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span> 이곳엔 <span class="gs">**warning 클래스**</span> 적용<span class="nt">&lt;/span&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>결과는 다음과 같다
+        <ul>
+          <li><span class="note"> 이곳엔 <strong>note 클래스</strong> 적용</span></li>
+          <li><span class="warning"> 이곳엔 <strong>warning 클래스</strong> 적용</span></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="markdown-문서에-emoji-서포트-적용하기">markdown 문서에 emoji 서포트 적용하기</h1>
+
+<ul>
+  <li>위 섹션 작업을 하다보니 githbu commit 메시지 작성시 요즘 사용중인 emoji를 적용하고 싶어졌다</li>
+  <li>참조 링크 : <a href="https://github.com/jekyll/jemoji">Jemoji, Github-flavored Emoji plugin for Jekyll</a>
+</li>
+  <li>적용 방법
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">Gemfile</code>에 다음 추가
+        <pre><code class="language-gem">gem 'jemoji'
+</code></pre>
+      </li>
+      <li>
+        <p><code class="language-html highlighter-rouge">_config.yml</code>에 다음 추가</p>
+
+        <div class="language-yml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>jekyll serve를 그냥 껐다 켜보면 다음과 같은 에러가 보인다
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>ruby 2.7.1p83 <span class="o">(</span>2020-03-31 revision a0c7c23c9c<span class="o">)</span> <span class="o">[</span>x64-mingw32]
+Could not find gem <span class="s1">'jemoji x64-mingw32'</span> <span class="k">in </span>any of the gem sources listed <span class="k">in </span>your Gemfile.
+Run <span class="sb">`</span>bundle <span class="nb">install</span><span class="sb">`</span> to <span class="nb">install </span>missing gems.
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>위 지시사항대로 shell에서 <code class="language-html highlighter-rouge">bundel install</code>을 실행하여 <code class="language-html highlighter-rouge">jemoji</code>를 설치한다</li>
+      <li>이후 <code class="language-html highlighter-rouge">bundle exec jekyll serve</code>를 다시 실행</li>
+    </ul>
+  </li>
+  <li>테스트
+    <ul>
+      <li>
+        <p>markdown</p>
+
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>  * I give this plugin two :+1:!
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>실행결과
+        <ul>
+          <li>I give this plugin two <img class="emoji" title=":+1:" alt=":+1:" raw="👍" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">!</li>
+        </ul>
+      </li>
+      <li>윗 줄에 엄지 척 emoji가 적용되어 보인다면 성공 <img class="emoji" title=":tada:" alt=":tada:" raw="🎉" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> !!</li>
+    </ul>
+  </li>
+  <li>결국 jemoji 안쓰고 jekyll-spaceship으로 변경
+    <ul>
+      <li><a href="/wiki/wiki-jekyll-spaceship/#8-emoji-usage-1">관련 문서</a></li>
+      <li>
+<code class="language-html highlighter-rouge">jemoji</code>는 사이즈 고정이라 문맥에 따라 emoji 사이즈가 변경되지 않는 문제가 있었음</li>
+      <li>
+<code class="language-html highlighter-rouge">jekyll-spaceship</code> 부작용
+        <ul>
+          <li>위에서 code block에서 emoji 처리가 안되어야 하는데..emoji processor가 code block까지 침범하는 듯.</li>
+          <li>
+<code class="language-html highlighter-rouge">jemoji</code>는 이런 문제가 없었음.</li>
+          <li>관련하여 <code class="language-html highlighter-rouge">jekyll-spaceship</code>에 <a href="https://github.com/jeffreytse/jekyll-spaceship/issues/38#issue-777740135">이슈등록</a>
+            <ul>
+              <li>개발자가 버그임을 인정. 고치는중임 (2021-01-04, 22:57)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="google-apps-script-다른-사람과-협업하기-문서번역">Google Apps Script 다른 사람과 협업하기 [문서번역]</h1>
+
+<ul>
+  <li>원본 : <a href="https://developers.google.com/apps-script/guides/collaborating">Collaborating with Other Developers, GAS</a>
+</li>
+  <li>앱 스크립트는 당신과 다른 개발자가 add-on, 스크립트, webapp을 함께 빌드하고 유지하는데 도움을 주는 기능들 제공합니다.</li>
+  <li><span class="note">★ 이 가이드는 여러 개발자에 의한 active collaboration을 커버합니다. 만약 당신이 단순히 누군가와 코드를 공유해서 그들이 자신의 프로젝트에 포함하는 정도만을 원한다면 <a href="https://developers.google.com/apps-script/guides/libraries">Libraries</a> 가이드를 보세요.</span></li>
+</ul>
+
+<h2 id="collaboration-basics">Collaboration basics</h2>
+
+<ul>
+  <li>협업하기위해, 당신과 협력자는 모두 해당 Apps Script 프로젝트에 editor Access를 가져야 합니다.
+    <ul>
+      <li>그 프로젝트가 <a href="https://developers.google.com/apps-script/guides/bound">bound script</a>라면 container 또한 마찬가지입니다.</li>
+      <li>이것은 팀원 모두가 App Script Code를 보고 편집할 수 있도록 해줍니다</li>
+      <li>편집자들은 새로운 버전을 생성하고, add-on을 발행하고, Apps Script APi용 executables로 web apps을 게시할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>당신은 당신의 프로젝트, add-on, web ap을 어떻게 편집, 리뷰, versioning하고 (가능하다면) 발행하고 게시할 지 미리 계획하여 당신의 팀을 도울 수 있습니다.
+    <ul>
+      <li>
+<a href="https://developers.google.com/apps-script/guides/standalone">Standalone projects</a>는 가장 협업하기 쉽습니다.
+        <ul>
+          <li>이유는 Google Drive에서 바로 보이며,</li>
+          <li>add-on이나 web app 개발에서 추천되는 프로젝트 타입이기 때문입니다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>협업에서 흔한 문제는 스크립트 프로젝트 소유자 프로젝트의 소유권을 이전하지 않고 팀을 떠나버릴 때 발생합니다.
+    <ul>
+      <li>이 때문에 당신이 프로젝트를 유지보수하거나 업데이트하지 못할 수 있습니다.</li>
+      <li>이 문제를 방지하려면 스크립트 프로젝트를 <a href="https://developers.google.com/drive/api/v3/about-shareddrives">공유 드라이브</a>에 위치시키세요.
+        <ul>
+          <li>공유 드라이브는 특정 소유자가 존재하지 않습니다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="warning"><strong>항상 script 프로젝트의 소유권을 공유하세요</strong> 어떤 팀원이 조직을 떠나고 계정이 제거되면, 다른 소유자가 없는 스크립트의 접근권한은 사라집니다. <a href="https://support.google.com/drive/answer/2494822">드라이브에서 script의 소유권을 공유</a>하거나 <a href="https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives">공유 드라이브로 문서를 옮기세요</a></span></li>
+  <li>(역자주) 공유 드라이브는 Workspace 구독자만 가능한 듯..</li>
+</ul>
+
+<h2 id="collaboration-with-the-clasp-command-line-tool">Collaboration with the <strong>clasp</strong> command line tool</h2>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">clasp</code>은 <a href="https://script.google.com/">script.google.com</a>과 당신의 local 파일 시스템간에 프로젝트를 동기화 시켜줍니다.</li>
+  <li>당신과 당신의 협력자가 <code class="language-html highlighter-rouge">git</code>과 같은 소스코드 관리툴을 사용한다면 이것은 또한 개발과정을 간소화하고 자동화할 수 있습니다.</li>
+  <li>
+<a href="https://developers.google.com/apps-script/guides/clasp"><code class="language-html highlighter-rouge">clasp</code>을 이용한 명령행 인터페이스 가이드</a>를 참조하세요.</li>
+</ul>
+
+<h2 id="collaborating-with-shared-drives">Collaborating with shared drives</h2>
+
+<ul>
+  <li><span class="note">★ 공유 드라이브는 Google Workspace Business 나 Google Workspace Enterprise 고객만 이용가능합니다. </span></li>
+  <li>지금은 쓸 일이 없으므로 Pass</li>
+</ul>
+
+<h2 id="collaborating-with-project-sharing">Collaborating with project sharing</h2>
+
+<ul>
+  <li>당신은 프로젝트를 당신의 협력자와 직접 공유하여 협업을 진행할 수도 있습니다.
+    <ul>
+      <li>당신은 정규(regular) 구글 드라이브나 공유 드라이브에 있는 script project를 직접 공유할 수 있습니다.</li>
+      <li>이 방법을 사용한다면, 누가 계속해서 script를 소유하고 유지보수할 것인지 주의깊게 계획을 짜는게 좋습니다.</li>
+    </ul>
+  </li>
+  <li>
+  </li>
+<li><span class="note">★ 모든 container-bound srcipts는 해당 container에 정의된, 동일한 owner, viewer, editor 접근권한 목록을 사용합니다. container owner는 누가 만들었든지 상관없이 새로운 스크립트에 대한 소유권을 갖습니다. </span></li>
+</ul>
+
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

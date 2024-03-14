@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Puppeteer 시작하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="javascript로 브라우저 자동화">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/meet-puppeteer/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Puppeteer 시작하기">
+    <meta property="og:description" content="javascript로 브라우저 자동화">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/meet-puppeteer/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/meet-puppeteer/">
+    <meta name="twitter:title" content="Puppeteer 시작하기">
+    <meta name="twitter:description" content="javascript로 브라우저 자동화">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="meet-puppeteer">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Puppeteer 시작하기</h1>
+    
+        <p class="title-summary">javascript로 브라우저 자동화</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/meet-puppeteer.md" target="_blank">created: 2021.01.11</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/meet-puppeteer.md" target="_blank">updated: 2021.01.30</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/meet-puppeteer.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Puppeteer+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    puppeteer
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EC%B0%B8%EC%A1%B0-%EB%A7%81%ED%81%AC" id="markdown-toc-참조-링크">참조 링크</a></li>
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li><a href="#puppeteer%EB%9E%80-" id="markdown-toc-puppeteer란-">Puppeteer란 ?</a></li>
+      <li><a href="#%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5" id="markdown-toc-사전학습">사전학습</a></li>
+      <li>
+<a href="#%EC%98%88%EC%A0%9C--typescript%EB%A1%9C-puppeteer-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0" id="markdown-toc-예제--typescript로-puppeteer-사용해보기">예제 : Typescript로 puppeteer 사용해보기</a>        <ul>
+          <li>
+<a href="#%EC%98%88%EC%A0%9C%EC%97%90-%EC%82%AC%EC%9A%A9%EB%90%9C-%EB%8F%84%EA%B5%AC" id="markdown-toc-예제에-사용된-도구">예제에 사용된 도구</a>            <ul>
+              <li>
+<a href="#commanderjs" id="markdown-toc-commanderjs">Commander.js</a>                <ul>
+                  <li><a href="#creating-a-command-line-application-with-node-and-commanderjs" id="markdown-toc-creating-a-command-line-application-with-node-and-commanderjs">Creating a Command-line Application with Node and Commander.js</a></li>
+                </ul>
+              </li>
+              <li><a href="#typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" id="markdown-toc-typescript-시작하기">typescript 시작하기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="참조-링크">참조 링크</h1>
+
+<ul>
+  <li>처음 시작한 블로그 포스트 : <a href="/blog/2020/11/23/week-48th/#meet-puppeteer--2020-11-25">20년 48주차 블로그 포스팅#meet-puppeteer</a>
+</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" alt="Puppeteer 로고"></td>
+      <td>깃허브 링크 : <a href="https://github.com/puppeteer/puppeteer">https://github.com/puppeteer/puppeteer</a><br> 문서 페이지 : <a href="https://pptr.dev/">https://pptr.dev/</a> <br> API 문서 : <a href="https://github.com/puppeteer/puppeteer/blob/v5.5.0/docs/api.md">https://github.com/puppeteer/puppeteer/blob/v5.5.0/docs/api.md</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>Python + Selenium 조합으로 크롤링하는 프로젝트를 몇 개 만들어 봤는데..</li>
+  <li>Google Apps Script를 쓰다보니 Javascript로 할 수 없을지 찾아보게됨</li>
+  <li>puppeteer를 찾아냄</li>
+  <li>공부해보기로 함</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="puppeteer란-">Puppeteer란 ?</h2>
+
+<ul>
+  <li>Google Chrome DevTools 개발팀에서 만든 WebDriver 기능의 Node.js 라이브러리</li>
+  <li>단어의미 :  인형사 - 인형(puppet)을 부리는 사람</li>
+  <li>
+<a href="https://medium.com/@pks2974/puppeteer-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-a252bffbb2a8">Puppeteer 간단 정리하기 - 박성룡</a>
+    <ul>
+      <li>2017년 부터 나온듯하다.</li>
+    </ul>
+  </li>
+  <li>역할이 Selenium과 비슷한데 <a href="https://github.com/puppeteer/puppeteer#q-is-puppeteer-replacing-seleniumwebdriver">Selenium과의 차이에 대한 설명</a>을  puppeteer github 사이트에서 찾을 수 있다.
+    <ul>
+      <li>Selenium은 여러 브라우저에서 single API로 자동화 검증을 수행할수 있다</li>
+      <li>Puppeteer는 Chrome only지만 Chrome에 대해서는 더 다양한 옵션과 높은 신뢰성으로 자동화 검증을 수행할 수 있다.</li>
+    </ul>
+  </li>
+  <li>Python에서 Selenium으로 웹 스크레이핑 하듯이 Javascript로 Puppeteer를 써서 스크레이핑할 수 있다.</li>
+  <li><a href="https://stackshare.io/puppeteer/alternatives">Puppeteer의 alternatives, stackshare.io</a></li>
+</ul>
+
+<h2 id="사전학습">사전학습</h2>
+
+<ul>
+  <li>Javascript 비동기 개념 강의 시리즈
+    <ul>
+      <li><a href="https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/">1. 비동기 처리와 콜백함수</a></li>
+      <li><a href="https://joshua1988.github.io/web-development/javascript/promise-for-beginners/">2. Promise</a></li>
+      <li><a href="https://joshua1988.github.io/web-development/javascript/js-async-await/">3. asnyc와 await</a></li>
+      <li>콜백 대신</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="예제--typescript로-puppeteer-사용해보기">예제 : Typescript로 puppeteer 사용해보기</h2>
+
+<ul>
+  <li><a href="https://www.lewuathe.com/simple-crawling-with-puppeteer-in-typescript.html">원문: Simple web crawling with Puppeteer in TypeScript</a></li>
+</ul>
+
+<h3 id="예제에-사용된-도구">예제에 사용된 도구</h3>
+
+<h4 id="commanderjs"><a href="https://github.com/tj/commander.js/">Commander.js</a></h4>
+
+<ul>
+  <li>nodejs app을 command-line tool로 만드는 도구</li>
+</ul>
+
+<h5 id="creating-a-command-line-application-with-node-and-commanderjs"><a href="https://hackwild.com/article/creating-a-command-line-application-with-nodejs/">Creating a Command-line Application with Node and Commander.js</a></h5>
+
+<ul>
+  <li>본 내용은 linux 환경에서 진행한 것 같은데 windows 환경도 많이 다르지 않음</li>
+  <li>Project Setup
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">npm init</code> 으로 <code class="language-html highlighter-rouge">package.json</code> 만들고 시작</li>
+      <li>commander는 로컬로 설치</li>
+    </ul>
+  </li>
+  <li>Globally registering our application
+    <ul>
+      <li>이 설정을 하기 전에는 <code class="language-html highlighter-rouge">node /bin/index.js</code>로 실행해야하는데</li>
+      <li>
+<code class="language-html highlighter-rouge">notes</code>만 타이핑해서 실행하도록 할 수 있다.</li>
+      <li>우선, 어플리케이션의 <a href="https://nodejs.org/api/packages.html#packages_package_entry_points">entry point</a>의 시작 부분에 다음 주석을 설정해야한다.
+        <div class="language-js highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="cp">#!/usr/bin/env node
+</span></pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>위의 Comment는 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)"><code class="language-html highlighter-rouge">shebang</code></a>이라는 것으로 <a href="https://codechacha.com/ko/linux-shebang/">linux에서 shell script를 실행할 때 어떤 실행조건으로 실행할지</a> 알려주는 역할을 한다.
+        <ul>
+          <li>windows에서는 필요없어 보이지만 추가해주는 것이 좋을듯</li>
+          <li>참고자료 : <a href="https://alexewerlof.medium.com/node-shebang-e1d4b02f731d">node.js shebang, medium주의</a>
+</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">package.json</code>에 다음과 같이 추가한다. 콘솔 명령어와 실행파일을 연결해주는 속성이다
+        <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nl">"bin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./bin/index.js"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>프로젝트 root에서 <code class="language-html highlighter-rouge">npm link</code>를 실행한다.
+        <ul>
+          <li>global path에 symlink를 만드는데 windows에서는 <code class="language-html highlighter-rouge">c:\Users\<span class="nt">&lt;사용자&gt;</span>\AppData\Roaming\npm\notes.ps1, notes.cmd, notes</code> 파일이 생성된다.</li>
+          <li>즉 아무데서나 <code class="language-html highlighter-rouge">notes</code>를 type하면 실행된다</li>
+        </ul>
+      </li>
+      <li>일단 여기까지가 실행파일 환경 셋업. 이 이후는 기능을 추가하면된다.
+        <ul>
+          <li>기능 추가는 위의 링크 문서를 참조한다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="typescript-시작하기">typescript 시작하기</h4>
+
+<ul>
+  <li>
+<a href="https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html">타입스크립트 환경 구축하기, Typescript Tooling in 5 minutes</a> 발췌
+    <ul>
+      <li>npm을 이미 사용하고 있다면 , 혹시 typescript 컴파일러를 global로 설치했는지 확인해보자
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> tsc <span class="nt">-v</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>버전이 나온다면 이미 깔려있음. 혹시 <code class="language-html highlighter-rouge">tsc</code> 명령을 인식하지 못하면 다음과 같이 global로 설치
+        <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> npm <span class="nb">install</span> <span class="nt">-g</span> typescript
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>위 링크에서 간단한 .ts 파일로 컴파일, 실행을 테스트 해보자</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#using-tsconfigjson-or-jsconfigjson">tsconfig.json 사용하기, What is a tsconfig.json</a>
+    <ul>
+      <li>tsconfig.json 이 있으면 Typescript project의 루트임. jsconfig.json과 비슷한 역할</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

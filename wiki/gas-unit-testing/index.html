@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Google Apps Script에서 Unit Testing 하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="QUnitGS2, GatT 등등...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/gas-unit-testing/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Google Apps Script에서 Unit Testing 하기">
+    <meta property="og:description" content="QUnitGS2, GatT 등등...">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/gas-unit-testing/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/gas-unit-testing/">
+    <meta name="twitter:title" content="Google Apps Script에서 Unit Testing 하기">
+    <meta name="twitter:description" content="QUnitGS2, GatT 등등...">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="gas-unit-testing">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Google Apps Script에서 Unit Testing 하기</h1>
+    
+        <p class="title-summary">QUnitGS2, GatT 등등...</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/gas-unit-testing.md" target="_blank">created: 2021.09.03</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/gas-unit-testing.md" target="_blank">updated: 2021.09.06</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/gas-unit-testing.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Google+Apps+Script%EC%97%90%EC%84%9C+Unit+Testing+%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    google-apps-script unit-testing qunit tap
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EA%B0%9C%EC%9A%94" id="markdown-toc-1-개요">1. 개요</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#gast" id="markdown-toc-gast">GasT</a>        <ul>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D-%EB%AA%A8%EB%93%88-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" id="markdown-toc-테스트-프레임웍-모듈-가져오기">테스트 프레임웍 모듈 가져오기</a></li>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%A4%ED%96%89%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%ED%91%9C%ED%98%84" id="markdown-toc-테스트-실행및-결과-표현">테스트 실행및 결과 표현</a></li>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C" id="markdown-toc-테스트-작성-프로토콜">테스트 작성 프로토콜</a></li>
+          <li><a href="#%EC%A0%81%EC%9A%A9%EC%82%AC%EB%A1%80" id="markdown-toc-적용사례">적용사례</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#qunitgs2" id="markdown-toc-qunitgs2">QUnitGS2</a>        <ul>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D-%EB%AA%A8%EB%93%88-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0-1" id="markdown-toc-테스트-프레임웍-모듈-가져오기-1">테스트 프레임웍 모듈 가져오기</a></li>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%8B%A4%ED%96%89%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%ED%91%9C%ED%98%84-1" id="markdown-toc-테스트-실행및-결과-표현-1">테스트 실행및 결과 표현</a></li>
+          <li><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-1" id="markdown-toc-테스트-작성-프로토콜-1">테스트 작성 프로토콜</a></li>
+          <li><a href="#%EC%A0%81%EC%9A%A9%EC%82%AC%EB%A1%80-1" id="markdown-toc-적용사례-1">적용사례</a></li>
+        </ul>
+      </li>
+      <li><a href="#gas-local" id="markdown-toc-gas-local">gas-local</a></li>
+    </ul>
+  </li>
+  <li><a href="#%ED%95%B4%EB%8B%B9-%EC%A3%BC%EC%A0%9C%EC%99%80-%EA%B4%80%EB%A0%A8%EB%90%9C-%EA%B8%80" id="markdown-toc-해당-주제와-관련된-글">해당 주제와 관련된 글</a></li>
+</ul>
+
+<h1 id="1-개요">1. 개요</h1>
+
+<ul>
+  <li>
+<a href="https://www.hanbit.co.kr/store/books/look.php?p_code=B6952616555">책을</a> <a href="https://www.obeythetestinggoat.com/">좀</a> <a href="https://m.hanbit.co.kr/store/books/book_view.html?p_code=B9529701010">읽다보니</a>, 내가 개발하는 모든 프로젝트에 유닛 테스팅 환경이 필요하다는 생각이 든다</li>
+  <li>요즘 주로 사용하는 언어인 Python, Javascript는 완벽한 환경이 준비되어 있다
+    <ul>
+      <li>Python :
+        <ul>
+          <li>
+<a href="https://pyscaffold.org/en/latest/features.html?highlight=pytest#automation-tests-coverage">PyScaffold 에서 <code class="language-html highlighter-rouge">pytest</code>와 <code class="language-html highlighter-rouge">pytest-cov</code></a> 를 같이 써본 적이 있다</li>
+          <li>그 외에도 많은 것 같다
+            <ul>
+              <li><a href="https://www.softwaretestinghelp.com/python-testing-frameworks/#List_Of_Python_Testing_Frameworks">Top 6 BEST Python Testing Frameworks [Updated 2021 List]</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Javascript :
+        <ul>
+          <li>Refactorng 2nd 공부할 때 Mocha + chai 환경을 써본 적이 있다</li>
+          <li>역시 경쟁제품이 많다
+            <ul>
+              <li><a href="https://geekflare.com/javascript-unit-testing/">11 Best JavaScript Unit Testing Framework and Tools, 2021-03-26</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Google Apps Script 는 위와 같은 단일 개발환경이 아닌 특이한 개발환경이다.
+    <ul>
+      <li>Google Apps Script는 여러가지 방법으로 개발할 수 있지만,</li>
+      <li>현재 나는 아래 환경으로 개발중이다.
+        <ul>
+          <li>
+<code class="language-html highlighter-rouge">clasp(로컬,개발)</code> + <code class="language-html highlighter-rouge">Typescript(로컬,개발)</code> + <code class="language-html highlighter-rouge">GAS Online(온라인,실행)</code>
+</li>
+        </ul>
+      </li>
+      <li>어차피 Google Drive의 온라인 서비스를 이용하기 위해 GAS를 사용하는 것이므로
+        <ul>
+          <li>이중 <code class="language-html highlighter-rouge">GAS Online</code>은 필수이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>GAS는 Javascript base 이지만 위의 수많은 제품들이
+    <ul>
+      <li>터미널 실행환경인  <code class="language-html highlighter-rouge">node.js</code> 기반으로 하므로 그대로 적용하기는 어렵다</li>
+    </ul>
+  </li>
+  <li>별도의 방법을 찾아야 한다</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<ul>
+  <li>제목의 미션에는 다음과 같은 challenge들이 있다
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">node.js</code>를 사용하지 않고 <code class="language-html highlighter-rouge">GAS</code> 환경으로 unit-testing framework을 가져올 수 있는가 ?</li>
+      <li>
+<code class="language-html highlighter-rouge">GAS Online</code> 환경에서, 테스트를 어떻게 실행하고, 실행 결과를 어떻게 표현할 것인가 ?</li>
+      <li>지원하는 테스트가 <code class="language-html highlighter-rouge">GAS Online</code> 환경에서 테스트 용도로 사용하기 적합한가 ?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="gast">GasT</h2>
+
+<ul>
+  <li>관련링크
+    <ul>
+      <li>Original : <a href="https://github.com/huan/gast">GasT - Google Apps Script Testing-framework, github</a>
+</li>
+      <li>Typescript Conversion : <a href="https://github.com/kevincar/gast">GasT - Google Apps Script Testing-framework in TypeScript, github</a> - 현재 내가 쓰는 툴</li>
+    </ul>
+  </li>
+  <li>이름부터 Google Apps Script를 대상으로 개발된 것이라는 것을 알 수 있다</li>
+</ul>
+
+<h3 id="테스트-프레임웍-모듈-가져오기">테스트 프레임웍 모듈 가져오기</h3>
+
+<ul>
+  <li>테스트 프레임웍은 GAS의 <a href="https://developers.google.com/apps-script/reference/url-fetch?hl=en">URL Fetch Service</a> 를 이용하여 바로 가져온다.
+    <ul>
+      <li>이 feature는 node.js를 보완해서 나온 <a href="https://deno.land/manual#comparison-to-nodejs">deno</a> 와 비슷하다
+        <ul>
+          <li>디노도 <code class="language-html highlighter-rouge">npm</code>에서 다운로드 하는 대신 URL을 직접 참조한다는 것이 첫번째 feature 이다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Test 모듈을 별도 파일로 구성할 수 있다
+    <ul>
+      <li>위의 <code class="language-html highlighter-rouge">URL Fetch</code> 명령만 파일 상단에서 호출하면 된다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-실행및-결과-표현">테스트 실행및 결과 표현</h3>
+
+<ul>
+  <li>테스트를 하고자 할 경우 위에서 별도 파일로 구성한 테스트 모듈로 이동후 테스트 함수를 실행한다</li>
+  <li>
+<code class="language-html highlighter-rouge">GAS Online</code> 실행환경에서 <code class="language-html highlighter-rouge">실행로그</code>에 텍스트로 결과를 뿌린다</li>
+</ul>
+
+<h3 id="테스트-작성-프로토콜">테스트 작성 프로토콜</h3>
+
+<ul>
+  <li>테스트 작성 프로토콜은 <a href="http://testanything.org/">TAP</a>를 사용한다
+    <ul>
+      <li>
+<a href="http://testanything.org/history.html">TAP의 역사</a>를 보면 알겠지만 IT계의 짧은 수명을 극복하고 오랫동안 살아남았다</li>
+      <li>살아있다는 증거 : <a href="https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">이 링크</a> 는 JavaScript용 테스트 프레임워크 목록인데 <code class="language-html highlighter-rouge">TAP</code>의 지원 여부 항목이 있으며, 꽤많은 프레임웍이 지원중이다 ( 아직 살아있네..)</li>
+    </ul>
+  </li>
+  <li>테스트 작성 프로토콜이 아무래도 빈약한 것 같다
+    <ul>
+      <li>
+<a href="https://mochajs.org/#hooks">hook</a> 비슷한 것이 있는지 찾아봤는데 안보인다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="적용사례">적용사례</h3>
+
+<ul>
+  <li><a href="https://github.com/honggaruy/clasp_bankbook/commit/513b3b2f15eca07855d29a30abe05ef52d62c365">clasp_bankbook에 적용한 commit</a></li>
+  <li>실행방법 :
+    <ul>
+      <li>
+<a href="https://script.google.com/home/projects/1TqB5E0mnnRHTUTwhtv348HhfBkHV1PazjooPgLwE-gvLz1DCh3jf-1Mz/edit">통장모음 Apps Script</a>  에 진입해서</li>
+      <li>tests.gs로 이동후</li>
+      <li>
+<code class="language-html highlighter-rouge">gastTestRunner()</code>를 실행한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="qunitgs2">QUnitGS2</h2>
+
+<ul>
+  <li>관련링크
+    <ul>
+      <li><a href="http://qunitgs2.com/">QUnitGS2 homepage</a></li>
+      <li>
+<a href="https://github.com/artofthesmart/QUnitGS2">QunitGS2 github</a> : 2020년 8월 1일까지 마지막 업데이트 ( 2020-09-03일 확인)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-프레임웍-모듈-가져오기-1">테스트 프레임웍 모듈 가져오기</h3>
+
+<ul>
+  <li>두가지 방법이 있다
+    <ol>
+      <li>github에 등록된 QunitGS2 는 그대로 <code class="language-html highlighter-rouge">GAS Project</code>이다
+        <ul>
+          <li>즉, 그대로 내 Apps Script 코드의 일부로 복사하면 사용할수 있다</li>
+        </ul>
+      </li>
+      <li>아니면 라이브러리로 등록하는 방법이 있다.
+        <ul>
+          <li>저자가 공개 GAS 프로젝트로 등록한 ID로 등록할수도 있고</li>
+          <li>아니면 Github에서 다운로드받아 내 Apps Script 계정에 …</li>
+        </ul>
+        <ul>
+          <li>별도 프로젝트로 등록한 후 라이브러리로 만들어도 된다.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>테스트 작성 모듈만 별도로 분리 가능한 것을 확인했다</li>
+</ul>
+
+<h3 id="테스트-실행및-결과-표현-1">테스트 실행및 결과 표현</h3>
+
+<ul>
+  <li>테스트 실행 방법이 다소 복잡하다
+    <ol>
+      <li>일단 유닛 테스트를 적용하려는 프로젝트를 <code class="language-html highlighter-rouge">Web Apps</code>로 만든다
+        <ul>
+          <li>
+<a href="https://developers.google.com/apps-script/guides/web">Web Apps으로 만드는 방법</a> 을 보면 <code class="language-html highlighter-rouge">doGet(e)</code>함수를 추가하라고 나온다</li>
+          <li>해당 함수는 <code class="language-html highlighter-rouge">HtmlOutput</code> 객체를 반환해야 한다</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-html highlighter-rouge">doGet()</code> 함수 추가후 <code class="language-html highlighter-rouge">배포</code>를 해야 한다
+        <ul>
+          <li>
+<a href="http://qunitgs2.com/examples/step-by-step-tutorial">Step-by-Step 매뉴얼</a>에서는 테스트 코드로 배포하라고 나오지만 … 현재 테스트 코드로는 제대로 안된다 ( 내가 뭔가 잘못했을지도..?)</li>
+          <li>정식 배포를 하면 잘 나온다</li>
+        </ul>
+      </li>
+      <li>웹앱 배포 주소로 접속하면 아래와 유사하게 나온다
+  <img src="http://qunitgs2.com/user/pages/02.examples/03.step-by-step-tutorial/qunit-in-apps-script-tests-passing.png" alt="Qunit 결과">
+</li>
+    </ol>
+  </li>
+  <li>
+<a href="https://qunitjs.com/">Qunit 홈페이지</a> 에 가보면 <code class="language-html highlighter-rouge">Browser Result</code>와 <code class="language-html highlighter-rouge">CLI Result</code>가 있는데 ..
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">QUnitGS2</code>는 그 중 <code class="language-html highlighter-rouge">Browser Result</code>를 활용하여 결과를 보여주는 프로젝트이다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-작성-프로토콜-1">테스트 작성 프로토콜</h3>
+
+<ul>
+  <li>요즘은 <a href="https://bestofjs.org/projects?tags=test-framework">다른 도구들(Jest, Mocha)에 밀려 인기가 주춤하지만</a>  Qunit 도 한 때는 잘나가는 도구였다 (한 때 날렸던 JQuery의 일부 였음)
+    <ul>
+      <li>
+<a href="https://snyk.io/advisor/npm-package/qunit">qunit의 health score, snykAdvisor</a> : 2021-09-04 현재 98/100 점 이다. 아직 잘 유지보수중이다</li>
+    </ul>
+  </li>
+  <li><a href="https://api.qunitjs.com/QUnit/module/#example-organizing-tests">테스트 작성 방법은 문서화가 잘되어 있다</a></li>
+  <li>GasT에서는 안보이던 <a href="https://api.qunitjs.com/QUnit/module/#options-object">hook</a>도 보인다</li>
+  <li>
+<a href="https://www.google.com/search?q=qunit+bdd">Qunit bdd로 검색하면</a> 작성법 관련하여 읽어볼만한 글들이 있는데 읽어보고 뭔가 더 정리해보자</li>
+</ul>
+
+<h3 id="적용사례-1">적용사례</h3>
+
+<ul>
+  <li><a href="https://github.com/honggaruy/clasp_bankbook/commit/513b3b2f15eca07855d29a30abe05ef52d62c365">clasp_bankbook에 적용한 commit</a></li>
+  <li>실행방법 :
+    <ul>
+      <li>테스트관련해서 수정을 했으면</li>
+      <li>
+<a href="https://script.google.com/home/projects/1TqB5E0mnnRHTUTwhtv348HhfBkHV1PazjooPgLwE-gvLz1DCh3jf-1Mz/edit">통장모음 Apps Script</a>  에 진입해서</li>
+      <li>새로 <code class="language-html highlighter-rouge">배포관리</code> 를 업데이트 하고</li>
+      <li>새로운 <code class="language-html highlighter-rouge">배포버전</code> web app에 접속한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="gas-local">gas-local</h2>
+
+<h1 id="해당-주제와-관련된-글">해당 주제와 관련된 글</h1>
+
+<ul>
+  <li><a href="https://blog.ohheybrian.com/2019/11/unit-testing-gas-part-1-qunit-setup/">Unit Testing GAS ,시리즈글 5개, ohhey</a></li>
+  <li>
+<a href="https://medium.com/geekculture/taking-away-the-pain-from-unit-testing-in-google-apps-script-98f2feee281d">Taking Away the Pain From Unit Testing in Google Apps Script, medium</a> :  21년 35주차 블로그에 <a href="/blog/2021/08/30/week-35th/#taking-away">번역하다 중단한 글</a>이 있음</li>
+  <li>
+<a href="https://classroomtechtools.github.io/Utgs/#/">Unit Testing with Google appsScrips</a>
+    <ul>
+      <li><a href="https://github.com/classroomtechtools/Utgs">github</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

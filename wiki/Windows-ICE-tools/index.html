@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>윈도우즈 Image Composite Editor - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="사진의 중복 부분을 이용하여 Panorama 사진을 만듬">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/Windows-ICE-tools/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="윈도우즈 Image Composite Editor">
+    <meta property="og:description" content="사진의 중복 부분을 이용하여 Panorama 사진을 만듬">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/Windows-ICE-tools/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/Windows-ICE-tools/">
+    <meta name="twitter:title" content="윈도우즈 Image Composite Editor">
+    <meta name="twitter:description" content="사진의 중복 부분을 이용하여 Panorama 사진을 만듬">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="Windows-ICE-tools">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">윈도우즈 Image Composite Editor</h1>
+    
+        <p class="title-summary">사진의 중복 부분을 이용하여 Panorama 사진을 만듬</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/Windows-ICE-tools.md" target="_blank">created: 2020.10.30</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/Windows-ICE-tools.md" target="_blank">updated: 2021.11.22</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/Windows-ICE-tools.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%88%EB%8F%84%EC%9A%B0%EC%A6%88+Image+Composite+Editor&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    windows
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li><a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a></li>
+  <li><a href="#3-%EA%B2%B0%EB%A1%A0" id="markdown-toc-3-결론">3. 결론</a></li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<style>
+.img_container { display: flex; align-items: center; justify-content: space-around; }
+.ms-logo img { height: 1.5rem} 
+</style>
+
+<ul>
+  <li>크리스마스 트리를 당근 마켓에 팔고 싶었다
+    <ul>
+      <li>광고용 사진이 필요한데 이미 포장되어있어서 다시 풀고 싶지 않았다</li>
+      <li>과거에 찍은 사진이 있는데 딱히 트리를 대상으로 찍은게 아니라서..
+        <ul>
+          <li>
+            <p>crop 해서 모아 봤는데..이렇게 다 짤려서..한 번에 제대로 나온 사진이 없다!</p>
+
+            <div class="img_container">
+
+              <p><img src="/wiki-img/2021/windows-ice-tools_01.png" alt="tree01"></p>
+
+              <p><img src="/wiki-img/2021/windows-ice-tools_02.png" alt="tree02"></p>
+
+              <p><img src="/wiki-img/2021/windows-ice-tools_03.png" alt="tree03"></p>
+
+              <p><img src="/wiki-img/2021/windows-ice-tools_04.png" alt="tree04"></p>
+
+            </div>
+          </li>
+          <li>그런데 .. 부분 부분을 모으면 전체 사진이 나올것 같다..?</li>
+          <li>퍼뜩 스마트 폰에서 파노라마 사진 만들어주는게 생각났다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>음.. 데스크탑에서도 비슷한 물건이 있지 않을까?</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<ul>
+  <li>찾았다 <img class="emoji" title=":bangbang:" alt=":bangbang:" raw="‼️" src="https://github.githubassets.com/images/icons/emoji/unicode/203c.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">
+</li>
+</ul>
+
+<ul class="ms-logo">
+  <li>
+    <p><a href="https://www.microsoft.com/en-us/research/product/computational-photography-applications/image-composite-editor/">Image Composite Editor</a>, 무려 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft logo"> 가 제작 <img class="emoji" title=":bangbang:" alt=":bangbang:" raw="‼️" src="https://github.githubassets.com/images/icons/emoji/unicode/203c.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"></p>
+  </li>
+  <li>하지만 아쉽게도 …
+    <blockquote>
+      <p>… download is no longer available… This project has been retired.</p>
+    </blockquote>
+  </li>
+  <li>2015년에 폐점한 공식 포럼도 있다.
+    <ul>
+      <li><a href="https://social.microsoft.com/Forums/en-US/72d099a5-34d3-4d46-b43c-fb00cbcab159/release-notes-for-image-composite-editor?forum=ice">version 2.0.3이 마지막 버전이다, 2011년</a></li>
+    </ul>
+  </li>
+  <li>잘 설명해 놓은 국내 블로그 , <a href="https://burstwatermelon.tistory.com/entry/%ED%95%9C%EB%B2%88%EC%97%90-%ED%8C%8C%EB%85%B8%EB%9D%BC%EB%A7%88-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0-Image-Composite-Editor">클릭 한 번에 파노라마 이미지 만들기</a>
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1vNI7l8u3svnXUp9-u_MN6xB7RJ-0a3Du/view?usp=sharing">다운로드 링크</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3-결론">3. 결론</h1>
+
+<ul>
+  <li>
+    <p>이 프로그램으로 합성 사진을 잘 만듬</p>
+
+    <p><img src="/wiki-img/2021/windows-ice-tools_05.jpg" alt="tree05"></p>
+  </li>
+</ul>
+
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

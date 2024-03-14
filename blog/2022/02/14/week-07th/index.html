@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022년 07주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="02/14 (월) ~ 02/20 (일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2022/02/14/week-07th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2022년 07주차 기록">
+    <meta property="og:description" content="02/14 (월) ~ 02/20 (일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2022/02/14/week-07th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2022/02/14/week-07th/">
+    <meta name="twitter:title" content="2022년 07주차 기록">
+    <meta name="twitter:description" content="02/14 (월) ~ 02/20 (일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2022/02/07/week-06th/">« 2022년 06주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2022/02/21/week-08th/">2022년 08주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">2022년 07주차 기록</h1>
+        <p class="created-date">
+            2022.02.14
+        </p>
+
+
+        <div class="post-tag">
+    powershell backticks fenced-code-block webdev font
+</div>
+
+        <h2>02/14 (월) ~ 02/20 (일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#windows-path-%EB%8B%A4%EB%A3%A8%EA%B8%B0" id="markdown-toc-windows-path-다루기">Windows Path 다루기</a>    <ul>
+      <li>
+<a href="#powershell%EB%A1%9C-windows-path-%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0---%EB%B2%88%EC%97%AD" id="markdown-toc-powershell로-windows-path-환경-변수-관리하기---번역">PowerShell로 Windows PATH 환경 변수 관리하기 - 번역</a>        <ul>
+          <li><a href="#path-%EB%B3%80%EC%88%98%EC%97%90-%EA%B2%BD%EB%A1%9C-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0" id="markdown-toc-path-변수에-경로-추가하기">PATH 변수에 경로 추가하기</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#fenced-code-block%EB%82%B4%EC%97%90-double-backslash%EB%A5%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%84%A3%EB%8A%94%EA%B0%80" id="markdown-toc-fenced-code-block내에-double-backslash를-어떻게-넣는가">fenced code block내에 double backslash를 어떻게 넣는가?</a></li>
+  <li><a href="#minpac-%EC%82%AC%EC%9A%A9%EB%B2%95-2022-02-15" id="markdown-toc-minpac-사용법-2022-02-15">minpac 사용법 (2022-02-15)</a></li>
+  <li><a href="#%EB%8B%A4%ED%81%AC-%EB%AA%A8%EB%93%9C-ui-%EC%9E%90%EB%A3%8C" id="markdown-toc-다크-모드-ui-자료">다크 모드 UI 자료</a></li>
+  <li><a href="#%EA%B5%AC%EA%B8%80-%ED%8F%B0%ED%8A%B8%EC%9D%98-effect-2022-02-17" id="markdown-toc-구글-폰트의-effect-2022-02-17">구글 폰트의 Effect (2022-02-17)</a></li>
+</ul>
+
+<h1 id="windows-path-다루기">Windows Path 다루기</h1>
+
+<ul>
+  <li>#powershell</li>
+</ul>
+
+<h2 id="powershell로-windows-path-환경-변수-관리하기---번역">PowerShell로 Windows PATH 환경 변수 관리하기 - 번역</h2>
+
+<ul>
+  <li>원본 링크 : <a href="https://searchitoperations.techtarget.com/answer/Manage-the-Windows-PATH-environment-variable-with-PowerShell">Path 다루기, TechTarget</a>
+    <ul>
+      <li>콘텐츠 보는데 회사 이메일 넣으라고 나온다. 일단 번역해놓자</li>
+    </ul>
+  </li>
+  <li>Anthony Howell, 18 Oct 2019</li>
+  <li>Windows PATH 환경 변수는 application들이 실행파일을 찾을때 사용한다
+    <ul>
+      <li>system이나 utility의 설치를 되게할수도 깰수도 있다.</li>
+    </ul>
+  </li>
+  <li>관리자는 PowerShell을 이용해 문자열 조작을 포함하는 PATH 변수 관리를 할 수있다</li>
+  <li>PATH 변수 접근법
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nv">$env</span>:path
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>좀더 가독성을 높이려면..
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nv">$env</span>:path <span class="nt">-split</span> <span class="s1">';'</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="path-변수에-경로-추가하기">PATH 변수에 경로 추가하기</h3>
+
+<ul>
+  <li>PATH 변수에 추가하려면, 경로 맨 뒤에 semicolon과 신규 경로를 문자열로 붙이면 된다</li>
+  <li>PowerShell로 우리가 추가하려는 경로가 이미 PATH 상에 존재하는지 확인할 수있다</li>
+  <li>우선 추가하려는 경로를 pick한다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nv">$addPath</span> <span class="o">=</span> <span class="s1">'c:\TopSecret\Bin`
+</span></pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>경로 문자열은 맨 끝 slash가 있든 없든 상관없으며 경로는 정확하게 resolve 될것이다</li>
+  <li>PATH 변수에 신규 경로를 덧붙이기전에, 해당 경로가 이미 있는지 체크해야한다
+    <ul>
+      <li>이렇게 하기위해 마지막에 slash가 있을때 없을때 모두에 대해 경로 유무를 체크해야한다
+        <div class="language-powershell highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$regexAddpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">regex</span><span class="p">]::</span><span class="n">Escape</span><span class="p">(</span><span class="nv">$addPath</span><span class="p">)</span><span class="w">
+</span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s1">';'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-notMatch</span><span class="w"> </span><span class="s2">"^</span><span class="nv">$regexAddPath</span><span class="s2">\\​\\?"</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+        <p>Since we are using regular expressions to check for a trailing ‘', escape the $addPath, as it will likely have slashes in it.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>After we have our array of paths that doesn’t include our new one, we can add our path to it, join them with the semicolon and assign that to the PATH variable:</p>
+
+<div class="language-posh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$addPath</span><span class="p">)</span><span class="w"> </span><span class="o">-join</span><span class="w"> </span><span class="s1">';'</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Then, collect that array together as a single function:</p>
+
+<div class="language-posh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre><span class="kr">Function</span><span class="w"> </span><span class="nf">Add-PathVariable</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="kr">param</span><span class="w"> </span><span class="p">(</span><span class="w">
+        </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$addPath</span><span class="w">
+    </span><span class="p">)</span><span class="w">
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="n">Test-Path</span><span class="w"> </span><span class="nv">$addPath</span><span class="p">){</span><span class="w">
+        </span><span class="nv">$regexAddPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">regex</span><span class="p">]::</span><span class="n">Escape</span><span class="p">(</span><span class="nv">$addPath</span><span class="p">)</span><span class="w">
+        </span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s1">';'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-notMatch</span><span class="w"> </span><span class="s2">"^</span><span class="nv">$regexAddPath</span><span class="s2">\\​\\?"</span><span class="p">}</span><span class="w">
+        </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$addPath</span><span class="p">)</span><span class="w"> </span><span class="o">-join</span><span class="w"> </span><span class="s1">';'</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="kr">Throw</span><span class="w"> </span><span class="s2">"'</span><span class="nv">$addPath</span><span class="s2">' is not a valid path."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+<p><strong>How to remove a path</strong></p>
+
+<p>It’s just as simple to remove a path from the Windows PATH environment variable as it is to add one. For this example, circle back to Figure 2, which shows some of the paths on the computer, and remove Java:</p>
+
+<div class="language-posh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$removePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:\Program Files (x86)\Common
+Files\Oracle\Java\javapath'</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Again, split the PATH and only select the paths that don’t match the $removePath with a possible trailing slash. This time, however, we will simply assign that output back to the PATH variable:</p>
+
+<div class="language-posh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$regexRemovePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">regex</span><span class="p">]::</span><span class="n">Escape</span><span class="p">(</span><span class="nv">$removePath</span><span class="p">)</span><span class="w">
+</span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s1">';'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-notMatch</span><span class="w"> </span><span class="s2">"^</span><span class="nv">$regexRemovePath</span><span class="s2">\\?"</span><span class="p">}</span><span class="w">
+</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">-join</span><span class="w"> </span><span class="s1">';'</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Because this process is so similar to adding a path, we can combine these processes into one function rather than have two:</p>
+
+<div class="language-posh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre><span class="n">Set-PathVariable</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="kr">param</span><span class="w"> </span><span class="p">(</span><span class="w">
+        </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$AddPath</span><span class="p">,</span><span class="w">
+        </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="nv">$RemovePath</span><span class="w">
+    </span><span class="p">)</span><span class="w">
+    </span><span class="nv">$regexPaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@()</span><span class="w">
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="bp">$PSBoundParameters</span><span class="o">.</span><span class="nf">Keys</span><span class="w"> </span><span class="o">-contains</span><span class="w"> </span><span class="s1">'AddPath'</span><span class="p">){</span><span class="w">
+        </span><span class="nv">$regexPaths</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">[</span><span class="n">regex</span><span class="p">]::</span><span class="n">Escape</span><span class="p">(</span><span class="nv">$AddPath</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="bp">$PSBoundParameters</span><span class="o">.</span><span class="nf">Keys</span><span class="w"> </span><span class="o">-contains</span><span class="w"> </span><span class="s1">'RemovePath'</span><span class="p">){</span><span class="w">
+        </span><span class="nv">$regexPaths</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">[</span><span class="n">regex</span><span class="p">]::</span><span class="n">Escape</span><span class="p">(</span><span class="nv">$RemovePath</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    
+    </span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">-split</span><span class="w"> </span><span class="s1">';'</span><span class="w">
+    </span><span class="kr">foreach</span><span class="w"> </span><span class="p">(</span><span class="nv">$path</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$regexPaths</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-notMatch</span><span class="w"> </span><span class="s2">"^</span><span class="nv">$path</span><span class="s2">\\?"</span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nv">$arrPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$addPath</span><span class="p">)</span><span class="w"> </span><span class="o">-join</span><span class="w"> </span><span class="s1">';'</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>Editor’s note: This expert answer is the final part in a three-part series on PowerShell automation. See another expert answer on <a href="https://searchitoperations.techtarget.com/answer/How-do-I-manage-ACL-folder-permissions-with-a-PowerShell-script">ACL folder management</a>, and one on <a href="https://searchitoperations.techtarget.com/answer/Perform-a-Windows-event-log-search-with-PowerShell">Windows event log monitoring</a>.</p>
+
+<h1 id="fenced-code-block내에-double-backslash를-어떻게-넣는가">fenced code block내에 double backslash를 어떻게 넣는가?</h1>
+
+<ul>
+  <li>2022-02-15에 작성함. <a href="/wiki/wiki-update-guide/#double-backslash-in-fenced-code-block">위키 포스팅 참고</a>
+</li>
+</ul>
+
+<h1 id="minpac-사용법-2022-02-15">minpac 사용법 (2022-02-15)</h1>
+
+<h1 id="다크-모드-ui-자료">다크 모드 UI 자료</h1>
+
+<ul>
+  <li><a href="https://yozm.wishket.com/magazine/detail/619/">다크모드 UI 디자인의 원칙, wishket</a></li>
+</ul>
+
+<h1 id="구글-폰트의-effect-2022-02-17">구글 폰트의 Effect (2022-02-17)</h1>
+
+<ul>
+  <li>#animation #css #design #webdev</li>
+  <li><a href="https://dev.to/jh3y/animated-google-fonts-193d">CSS Animated Google Fonts, DEV.to</a></li>
+  <li>
+<a href="https://developers.google.com/fonts">Google fonts, developers.google.com/fonts</a>
+    <ul>
+      <li><a href="https://developers.google.com/fonts/docs/getting_started#a_quick_example">h1~h6 태그에 적용한 그림자 효과, developers.google.com/fonts</a></li>
+    </ul>
+  </li>
+  <li><a href="https://fonts.google.com/knowledge?subset=korean">fonts.google.com/knowledge</a></li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

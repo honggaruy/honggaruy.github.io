@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>28주차 기록 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="7/06(월) ~ 7/12(일)">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/blog/2020/07/06/week-28th/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="28주차 기록">
+    <meta property="og:description" content="7/06(월) ~ 7/12(일)">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/blog/2020/07/06/week-28th/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/blog/2020/07/06/week-28th/">
+    <meta name="twitter:title" content="28주차 기록">
+    <meta name="twitter:description" content="7/06(월) ~ 7/12(일)">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                <div class="post">
+    <header class="post-header">
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/blog/2020/06/22/week-26th/">« 26주차 기록</a>
+          
+          
+            <a class="next" href="/blog/2020/07/13/week-29th/">29주차 기록 »</a>
+          
+        </div>
+
+        <h1 class="post-title blog-only-title">28주차 기록</h1>
+        <p class="created-date">
+            2020.07.06
+        </p>
+
+
+        <div class="post-tag">
+    new-item recipe grep vim windows-terminal minpac powershell dotfile recipe ruby windows command-line 한글
+</div>
+
+        <h2>7/06(월) ~ 7/12(일)</h2>
+    </header>
+
+
+    <div class="toc">
+    </div>
+
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#%EB%8B%A4%EB%A4%84%EB%B3%BC-%EC%A3%BC%EC%A0%9C" id="markdown-toc-다뤄볼-주제">다뤄볼 주제</a>    <ul>
+      <li><a href="#vim" id="markdown-toc-vim">vim</a></li>
+      <li><a href="#windows-terminal-settings" id="markdown-toc-windows-terminal-settings">Windows Terminal settings</a></li>
+      <li><a href="#powershell-settings" id="markdown-toc-powershell-settings">PowerShell settings</a></li>
+      <li><a href="#powersheel-scripting-details" id="markdown-toc-powersheel-scripting-details">PowerSheel Scripting details</a></li>
+      <li><a href="#dotfiles" id="markdown-toc-dotfiles">dotfiles</a></li>
+      <li>
+<a href="#for-new-dotfiles-repository" id="markdown-toc-for-new-dotfiles-repository">for new dotfiles repository</a>        <ul>
+          <li><a href="#packages--minpac" id="markdown-toc-packages--minpac">packages &amp; minpac</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#%EA%B7%B8%EC%99%B8-%EC%A3%BC%EC%A0%9C" id="markdown-toc-그외-주제">그외 주제</a>    <ul>
+      <li><a href="#powershell-script%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EA%B9%A8%EC%A7%80%EB%8A%94-%EB%AC%B8%EC%A0%9C-%EC%88%98%EC%A0%95--2020-07-10-" id="markdown-toc-powershell-script에서-한글깨지는-문제-수정--2020-07-10-">PowerShell Script에서 한글깨지는 문제 수정 ( 2020-07-10 )</a></li>
+      <li><a href="#%EB%A0%88%EC%8B%9C%ED%94%BC-%EB%B0%80%EB%9D%BC%EB%85%B8%EC%8B%9D-%EC%95%84%EC%8A%A4%ED%8C%8C%EB%9D%BC%EA%B1%B0%EC%8A%A4-%EC%9A%94%EB%A6%AC" id="markdown-toc-레시피-밀라노식-아스파라거스-요리">레시피 <code class="language-html highlighter-rouge">밀라노식 아스파라거스 요리</code></a></li>
+      <li><a href="#ruby-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-bundle-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-bundle-install-%ED%96%88%EB%8D%94%EB%8B%88--octokit-4170-%EB%B2%84%EC%A0%84-%EC%97%90%EB%9F%AC--2020-07-11-" id="markdown-toc-ruby-설치하고-bundle-설치하고-bundle-install-했더니--octokit-4170-버전-에러--2020-07-11-">ruby 설치하고 bundle 설치하고 <code class="language-html highlighter-rouge">bundle install</code> 했더니  <code class="language-html highlighter-rouge">octokit 4.17.0</code> 버전 에러 ( 2020-07-11 )</a></li>
+      <li><a href="#windows-terminal%EC%9D%98-%EC%84%A4%EC%A0%95-editor-%EB%B3%80%EA%B2%BD-%EB%B0%A9%EB%B2%95" id="markdown-toc-windows-terminal의-설정-editor-변경-방법">windows terminal의 설정 editor 변경 방법</a></li>
+      <li>
+<a href="#windows-terminal%EC%97%90%EC%84%9C-%EB%91%90%EA%B0%9C-%EC%9D%B4%EC%83%81%EC%9D%98-cmd-%EC%84%A4%EC%A0%95-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-windows-terminal에서-두개-이상의-cmd-설정-만들기">windows terminal에서 두개 이상의 cmd 설정 만들기</a>        <ul>
+          <li><a href="#%EC%B0%B8%EA%B3%A0-%EB%B0%8F-to-dos" id="markdown-toc-참고-및-to-dos">참고 및 to-dos</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EC%83%88%EB%A1%9C-ruby-%EB%B0%8F-jekyll%EC%9D%84-%EC%84%A4%EC%B9%98%ED%95%9C-%EB%92%A4-bundle-exec-jekyll-serve-%EC%8B%A4%ED%96%89%EC%8B%9C-deprecation-warning-%EB%B0%9C%EC%83%9D" id="markdown-toc-새로-ruby-및-jekyll을-설치한-뒤-bundle-exec-jekyll-serve-실행시-deprecation-warning-발생">새로 ruby 및 jekyll을 설치한 뒤 <code class="language-html highlighter-rouge">bundle exec jekyll serve</code> 실행시 deprecation warning 발생</a></li>
+      <li><a href="#%EC%B0%B8%EA%B3%A0%EC%82%AC%EC%9D%B4%ED%8A%B8" id="markdown-toc-참고사이트">참고사이트</a></li>
+      <li><a href="#start-command-prompt-with-ruby%EB%A5%BC-windows-terminal%EB%A1%9C-%EC%9D%B4%EC%8B%9D%ED%95%98%EA%B8%B0" id="markdown-toc-start-command-prompt-with-ruby를-windows-terminal로-이식하기"><code class="language-html highlighter-rouge">Start command Prompt with Ruby</code>를 <code class="language-html highlighter-rouge">windows terminal</code>로 이식하기</a></li>
+      <li><a href="#windows-terminal%EC%9D%84-%EB%8B%A8%EC%B6%95%ED%82%A4%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B4%80%EB%A6%AC%EC%9E%90-%EB%AA%A8%EB%93%9C%EB%A1%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0" id="markdown-toc-windows-terminal을-단축키를-이용해-관리자-모드로-실행하기">windows terminal을 단축키를 이용해 관리자 모드로 실행하기</a></li>
+      <li>
+<a href="#control-panel-%EB%AA%85%EB%A0%B9%EC%9D%84-command-line%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0" id="markdown-toc-control-panel-명령을-command-line에서-실행하기">control panel 명령을 command line에서 실행하기</a>        <ul>
+          <li><a href="#todos" id="markdown-toc-todos">todos</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="다뤄볼-주제">다뤄볼 주제</h1>
+
+<h2 id="vim">vim</h2>
+
+<ul>
+  <li>.vim 설정중 ~/.vim/after/ftplugin/html.vim 에 autoloading 관련 언급이 되어있음. 적용사례 측면에서 다뤄볼것</li>
+  <li><a href="https://learnvimscriptthehardway.stevelosh.com/chapters/53.html">Learn Vimscript the Hard Way</a></li>
+  <li><a href="https://blog2.lucent.me/vim/neovim#c3a">Vim에서 NeoVim으로</a></li>
+</ul>
+
+<h2 id="windows-terminal-settings">Windows Terminal settings</h2>
+
+<ul>
+  <li><a href="https://www.thomasmaurer.ch/2020/04/my-customized-windows-terminal-settings-json/">My customized windows terminal settings.json</a></li>
+  <li>
+<a href="https://ezgif.com/">EZGIF.COM</a> : 온라인에서 gif 편집을 할수 있는 사이트. winodws terminal 배경화면으로 쓸 gif의 사이즈를 줄이는데 써봄</li>
+  <li><a href="https://gist.github.com/Bigous/6da7c4c581ad4c52106174a12b9d4b83">windows Terminal settings 예제</a></li>
+  <li><a href="https://docs.microsoft.com/ko-kr/windows/terminal/">windows Terminal 공식문서</a></li>
+  <li><a href="https://jussiroine.com/2019/08/getting-started-with-windows-terminal/">Getting started with Windows Terminal</a></li>
+  <li>
+<a href="https://github.com/microsoft/terminal/issues/3818#issuecomment-611692482">같은 guid의 별도 설정을 만드는 방법</a> : 답변</li>
+  <li>
+<a href="https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md#default-settings">참조</a> : 같은 guid의 별도 설정을 만드는 방법</li>
+  <li>
+<a href="https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md">Settings.json Documentatin</a> : 설정항목을 표로 나타냄.</li>
+  <li>
+<a href="https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md">Editing Windows Terminal JSON Settings</a> : json settings 기초</li>
+</ul>
+
+<h2 id="powershell-settings">PowerShell settings</h2>
+
+<ul>
+  <li>
+<a href="https://searchitoperations.techtarget.com/answer/Manage-the-Windows-PATH-environment-variable-with-PowerShell">Manage the Windows PATH environment variable with PowerShell</a> : Microsoft.PowerShell_profile.ps1 에 반영함.</li>
+  <li>
+<a href="https://improvescripting.com/how-to-create-powershell-profile-step-by-step-with-examples/#How_To_Choose_Which_Profile_File_To_Use">Improve Scripting 사이트</a> : powershell 설정관련 참고할것이 많은 사이트</li>
+  <li><a href="https://gist.github.com/Bigous/eca6f10e560403da6b4e9960d9a51f6d">powershell 프로파일 예제</a></li>
+  <li><a href="https://docs.microsoft.com/ko-kr/powershell/scripting/learn/ps101/03-discovering-objects?view=powershell-7">Microsoft PowerShell 공식 문서 사이트</a></li>
+  <li><a href="https://git-scm.com/book/ko/v2/Appendix-A%3A-%EB%8B%A4%EC%96%91%ED%95%9C-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-Git-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-Git-in-Powershell">Powershell로 git 사용하기 git 공식 문서 사이트</a></li>
+  <li>
+<a href="https://github.com/dahlbyk/posh-git">Posh-git</a> : powershell-git ?</li>
+  <li><a href="https://docs.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7#how-to-edit-a-profile">PowerShell의 프로파일에 대한 공식 문서</a></li>
+  <li><a href="https://github.com/JanDeDobbeleer/oh-my-posh">oh-my-posh</a></li>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/powershell/scripting/samples/working-with-files-and-folders?view=powershell-7">파일 및 폴더 작업</a> : 각 파일에 동일 작업을 하고 싶음</li>
+</ul>
+
+<h2 id="powersheel-scripting-details">PowerSheel Scripting details</h2>
+
+<ul>
+  <li>$_ 에 대해 조사</li>
+  <li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7">About Automatic Variables, 공식 문서</a></li>
+  <li>
+<a href="http://techgenix.com/dollar-sign-underscore-dot/">This is no oridinary variable</a> : $_ 에 대해서만 설명</li>
+  <li>PowerShell Operators</li>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7#special-operators">Special Operators</a> : PowerShell 스크립트에서 자주 나오는 ( ), $( ), @( ), 등등 설명</li>
+</ul>
+
+<h2 id="dotfiles">dotfiles</h2>
+
+<ul>
+  <li>
+<a href="https://www.freecodecamp.org/news/dive-into-dotfiles-part-2-6321b4a73608/">How to make your Dotfile management a painless affair</a> : dotfiles 의 시작</li>
+  <li><a href="https://github.com/ajmalsiddiqui/dotfiles">ajmalsiddiqui/dotfiles</a></li>
+  <li><a href="https://winaero.com/blog/create-symbolic-link-windows-10-powershell/">Create Symbolic Link in Windows 10 with PowerShell</a></li>
+  <li><a href="https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/">The Complete Guide to Creating Symbolic Links on Windwos</a></li>
+  <li><a href="https://github.com/spf13/spf13-vim/blob/3.0/.vimrc">os별로 다르게 동작하는 vimrc 파일을 만들기 위해 참조</a></li>
+  <li>
+<a href="https://github.com/jayharris/dotfiles-windows">Jay Harris’s dotfiles for windows</a> : 파워쉘 dotfiles 를 만들기 위해 참조</li>
+  <li><a href="https://stackoverflow.com/questions/15113413/how-do-i-concatenate-strings-and-variables-in-powershell">PowerShell에서 스트링 연결하는 법</a></li>
+  <li><a href="https://stackoverflow.com/questions/50861082/how-to-print-environment-variables-to-the-console-in-powershell">PowerShell에서 환경변수 프린트</a></li>
+  <li><a href="http://www.panozzaj.com/blog/2011/09/09/vim-directory-structure/">Vim Directory Structure</a></li>
+</ul>
+
+<h2 id="for-new-dotfiles-repository">for new dotfiles repository</h2>
+
+<ul>
+  <li>
+<a href="https://kbroman.org/github_tutorial/pages/init.html">Start a new git repository</a> : 새로운 git repository 만드는 절차를 루틴화 하기 위해 참조</li>
+  <li><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">Settings up a repository</a></li>
+</ul>
+
+<h3 id="packages--minpac">packages &amp; minpac</h3>
+
+<ul>
+  <li><a href="https://dgkim5360.tistory.com/entry/vim-8-native-package-support">vim 8의 native package support</a></li>
+  <li><a href="https://shapeshed.com/vim-packages/">Vim: So long Pathogen, hello, native package loading</a></li>
+  <li>
+<a href="http://vimcasts.org/episodes/packages/#stq=minpac&amp;stp=1">Installing plugins using packages, vim casts.org</a> : vim8에서 새로 지원하는 packages 기능 소개</li>
+  <li>
+<a href="http://vimcasts.org/episodes/minpac/">Meet minpac , vim casts.org</a>  : Drew Nail도 추천한 minpac</li>
+  <li><a href="https://leesmith.net/posts/migrating-to-minpac-for-vim/">Migrating to minpac for vim</a></li>
+  <li><a href="https://github.com/k-takata/minpac">minpac github</a></li>
+</ul>
+
+<h1 id="그외-주제">그외 주제</h1>
+
+<h2 id="powershell-script에서-한글깨지는-문제-수정--2020-07-10-">PowerShell Script에서 한글깨지는 문제 수정 ( 2020-07-10 )</h2>
+
+<ul>
+  <li>상황 : VS Code에서 작성한 스크립트에서 한글을 사용할 경우 깨지는 문제가 있었다.</li>
+  <li>원인 : UTF-8 형식으로 작성한 스크립트에서 한글을 사용할 경우 깨짐</li>
+  <li>해결 : UTF-8 with BOM 형식으로 작성하면 깨지지 않음.</li>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/powershell/scripting/dev-cross-plat/vscode/understanding-file-encoding?view=powershell-7#choosing-the-right-encoding">맞는 인코딩 선택, VS Code 및 PowerShell에서 파일 인코딩 이해</a> : 이곳에서 Windows에서 작업할 때는 BOM이 포함된 UTF-8 이나 UTF-16을 사용하라고 추천하고 있다.</li>
+  <li>참고 : <a href="https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support">VS Code에서 File encoding 변경방법</a>
+</li>
+  <li>또 하나 배운것은 .. echo 호출한 것과 같이 터미널상에 프린트할 경우, 꼭 Write-Output 을 호출할 필요 없음</li>
+  <li>그냥 “$var 변수 출력” 처럼 문자열만 적어주는 것으로도 됨</li>
+</ul>
+
+<h2 id="레시피-밀라노식-아스파라거스-요리">레시피 <code class="language-html highlighter-rouge">밀라노식 아스파라거스 요리</code>
+</h2>
+
+<ul>
+  <li>간단하고 맛있는 저탄고지 요리 ~~</li>
+  <li><a href="https://youtu.be/nfGpHHCEq0A">요리법</a></li>
+  <li><a href="https://video.gamberorosso.it/play/39135/asparagi-alla-milanese?options%5Brelated_list%5D%5Bfilter_request%5D%5Brelated_for_video_id%5D=39132&options%5Brelated_list%5D%5Bfilter_request%5D%5Bposition%5D=3">Asparagi alla milanese 발음 확인</a></li>
+</ul>
+
+<h2 id="ruby-설치하고-bundle-설치하고-bundle-install-했더니--octokit-4170-버전-에러--2020-07-11-">ruby 설치하고 bundle 설치하고 <code class="language-html highlighter-rouge">bundle install</code> 했더니  <code class="language-html highlighter-rouge">octokit 4.17.0</code> 버전 에러 ( 2020-07-11 )</h2>
+
+<ul>
+  <li>새 컴퓨터에 ruby 설치하고 jekyll을 로컬에서 확인할 수 있는 환경을 만들던 중 발생</li>
+  <li><a href="https://github.com/wemake-services/kira-dependencies/issues/152">관련자료 1</a></li>
+  <li>
+<a href="https://github.com/octokit/octokit.rb/releases/tag/v4.17.0">관련자료 2</a> : Octokit v4.17.0 버전 문제있어 내린듯.. v4.18.0로 변경요청하는 내용</li>
+  <li>
+<a href="https://github.com/rhurling/kira-dependencies/commit/d7ff5cb7810e9b72f58eb6644eab3c6cf9cdfaf7">관련자료 3</a> :  Gemfile.lock을 수정해야함. 수정방법</li>
+</ul>
+
+<h2 id="windows-terminal의-설정-editor-변경-방법">windows terminal의 설정 editor 변경 방법</h2>
+
+<ul>
+  <li>windows context 메뉴의  파일 연결프로그램에서 .json 파일의 기본 설정을 원하는 editor와 연결 시켜준다.</li>
+  <li>추천 : VS Code , 린팅 기능이 있는듯 (필수 멤버가 빠지면 경고 함)</li>
+</ul>
+
+<h2 id="windows-terminal에서-두개-이상의-cmd-설정-만들기">windows terminal에서 두개 이상의 cmd 설정 만들기</h2>
+
+<ul>
+  <li>windows terminal의 설정에 들어가면  “profiles” &gt; “list” [ ] 안에 shell 종류별로 설정을 할 수 있다.</li>
+  <li>각 설정별로 “guid”가 필수 설정인데 쉘을 구분하는데 사용하므로 리스트 내에서 unique 해야한다.</li>
+  <li>문제점 :  만약, 내가 일반 cmd 설정과  , ruby용 cmd 설정 두개를 만들고 싶다고 할 때 같은 guid가 두 개이면 에러가 생긴다.</li>
+  <li>해결과정 : 누가 질문을 했고 <a href="https://github.com/microsoft/terminal/issues/3818#issuecomment-611692482">답변</a> 을 달았다.</li>
+  <li>해결책 : <a href="https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md#default-settings">같은 guid의 별도 설정을 만드는 방법</a> 아랫쪽</li>
+</ul>
+
+<h3 id="참고-및-to-dos">참고 및 to-dos</h3>
+<ul>
+  <li>
+<a href="https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md">Settings.json Documentatin</a> : 설정항목을 표로 나타냄.</li>
+  <li>
+<a href="https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md">Editing Windows Terminal JSON Settings</a> : json settings 기초</li>
+  <li>guid는 어떻게 정해지는 거지? 같은 쉘이라도 컴퓨터 별로 틀려지는지? 아니면 쉘별로 고유한 값을 가지는 건지?
+    <ul>
+      <li>전자라면 dotfiles에 넣을때 알아내는 방법이 필요하고, 후자라면 dotfiles에 그대로 넣어도 될듯</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="새로-ruby-및-jekyll을-설치한-뒤-bundle-exec-jekyll-serve-실행시-deprecation-warning-발생">새로 ruby 및 jekyll을 설치한 뒤 <code class="language-html highlighter-rouge">bundle exec jekyll serve</code> 실행시 deprecation warning 발생</h2>
+
+<ul>
+  <li>대충 다음과 같은 워닝이 아주 많이 나옴.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>C:/tools/ruby27/lib/ruby/gems/2.7.0/gems/jekyll-3.6.3/lib/jekyll/convertible.rb:43: warning: Using the last argument as keyword parameters is deprecated
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+<a href="https://bloggie.io/@kinopyo/how-to-fix-ruby-2-7-warning-using-the-last-argument-as-keyword-parameters-is-deprecated">참고자료1, 워닝이 나오는 이유</a> : 새로 설치하면서 최신 ruby 2.7 버전을 설치했더니 나오는 듯함.</li>
+  <li>어차피 최신버전을 따라가야하니, 일단 jekyll도 신규 버전으로 변경해 보기로 함.</li>
+  <li>
+<a href="https://github.com/jekyll/jekyll/issues/7947">논의가 진행된 issue item</a> , <a href="https://github.com/jekyll/jekyll/pull/7948#issuecomment-584132037">반영되는 버전은 4.1.x 일듯</a>
+</li>
+  <li>
+<a href="https://jekyllrb.com/docs/upgrading/3-to-4/">참고자료2, Upgrading from 3.x to 4.x</a> : 현재 3.6.3인데 4.x 최신버전으로 변경하려함. 주의사항 잘 읽어볼것</li>
+  <li>
+<code class="language-html highlighter-rouge">gem dependency jekyll -v 3.6.3</code> 을 누르면 버전 의존성 정보가 나오는데 ..
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">gem dependency jekyll -v 4.0.0</code> 을 누르면 버전 의존성 정보가 안나옴</li>
+      <li>
+<a href="https://rubygems.org/gems/jekyll">요기</a>로 가면 jekyll 최신 버전 정보가 있는데..</li>
+      <li>
+<code class="language-html highlighter-rouge">gem dependency jekyll -v 4.1.1</code> 은 정보가 나오므로 이걸로 하기로 함</li>
+    </ul>
+  </li>
+  <li>일단 jekyll 버전을 바꾸려면 Gemfiles의 jekyll 버전을 수정하고, <a href="https://stackoverflow.com/a/58702978/9457247"><code class="language-html highlighter-rouge">Gemfiles.lock</code> 파일을 지워야</a> 한다.</li>
+  <li>그리고 <code class="language-html highlighter-rouge">bundle install</code>을 실행한다. 성공적으로 완료되면 Gemfile.lock이 다시 생성된다.</li>
+  <li>jekyll 4.1.1 로 업데이트 하고난 이후에는 워닝이 더이상 안나왔다.</li>
+</ul>
+
+<h2 id="참고사이트">참고사이트</h2>
+
+<ul>
+  <li><a href="https://recipes4dev.tistory.com/157">리눅스 grep 명령어 사용법</a></li>
+  <li><a href="https://wormwlrm.github.io/2018/07/13/How-to-set-Github-and-Jekyll-environment-on-Windows.html">ruby 설치시에 물어보는 <code class="language-html highlighter-rouge">ridk 설치</code> 설명</a></li>
+</ul>
+
+<h2 id="start-command-prompt-with-ruby를-windows-terminal로-이식하기">
+<code class="language-html highlighter-rouge">Start command Prompt with Ruby</code>를 <code class="language-html highlighter-rouge">windows terminal</code>로 이식하기</h2>
+
+<ul>
+  <li>windows용 루비를 설치하면 <code class="language-html highlighter-rouge">Start Command Prompt with Ruby</code>라는 옵션명령이 딸린 cmd.exe 바로가기가 같이 생성된다.</li>
+  <li>이것을 windows terminal 환경으로 이식하고 싶었다.</li>
+  <li>분석1 - <code class="language-html highlighter-rouge">Start Command Prompt with Ruby</code>의 commandline 명령
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>C:<span class="se">\\</span>Windows<span class="se">\\</span>System32<span class="se">\\</span>cmd.exe /E:ON /K C:<span class="se">\\</span>tools<span class="se">\\</span>ruby27<span class="se">\\</span>bin<span class="se">\\</span>setrbvars.cmd
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>분석2 - 시작 위치는 <code class="language-html highlighter-rouge">C:\Users\hongg</code>
+</li>
+  <li>위 <code class="language-html highlighter-rouge">분석1</code>, <code class="language-html highlighter-rouge">분석2</code> 내용을 모두 넣었으면 좋겠다.</li>
+  <li>windows terminal에서 <code class="language-html highlighter-rouge">commandline</code> 줄에 원래 쉘 명령이 가지고 있던 옵션들을 설정할 수 있다.</li>
+  <li>
+<a href="https://ss64.com/nt/syntax-redirection.html"> cmd.exe 에서 Redirection 방법</a> : 파이프라인만 있는게 아님. 난 그런줄 알았는데..
+    <ul>
+      <li><strong>위 사이트에서 command line reference를 너무나 잘 정리해놔서 복사해 놓아야 할 것 같음.</strong></li>
+    </ul>
+  </li>
+  <li>특히 <code class="language-html highlighter-rouge">commandA <span class="err">&amp;&amp;</span> commandB  : Run commandA, if it succeeds then run commandB</code> ,</li>
+  <li>위 방법으로 분석1 명령, 분석2 명령 동시 수행이 가능하다.</li>
+  <li>windows terminal settings.json 설정
+    <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"루비 실행환경"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"commandline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmd.exe /E:ON /K C:</span><span class="se">\\</span><span class="s2">tools</span><span class="se">\\</span><span class="s2">ruby27</span><span class="se">\\</span><span class="s2">bin</span><span class="se">\\</span><span class="s2">setrbvars.com&amp;&amp;d:&amp;&amp;cd d:</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">to</span><span class="se">\\</span><span class="s2">honggaruy.ghithub.io"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>위 코드에서는 3가지 명령을 연속 수행했다</li>
+  <li><a href="https://docs.microsoft.com/ko-kr/windows-server/administration/windows-commands/cmd">cmd 옵션, 공식 문서</a></li>
+</ul>
+
+<h2 id="windows-terminal을-단축키를-이용해-관리자-모드로-실행하기">windows terminal을 단축키를 이용해 관리자 모드로 실행하기</h2>
+
+<ul>
+  <li><a href="https://m.blog.naver.com/PostView.nhn?blogId=toruin84&logNo=220683272307&proxyReferer=https:%2F%2Fwww.google.com%2F">참고한 사이트</a></li>
+  <li>일단 <code class="language-html highlighter-rouge">작업표시줄</code>에 windows terminal을 등록한다</li>
+  <li>
+<code class="language-html highlighter-rouge">작업표시줄</code>에 등록된 프로그램은 …
+    <ul>
+      <li>
+<kbd>윈도우키</kbd> + <kbd>숫자</kbd> 로 프로그램을 실행할 수 있다.</li>
+      <li>
+<kbd>윈도우키</kbd> + <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>숫자</kbd> 로 프로그램을 <code class="language-html highlighter-rouge">관리자 권한</code> 으로 실행할 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="control-panel-명령을-command-line에서-실행하기">control panel 명령을 command line에서 실행하기</h2>
+
+<ul>
+  <li>powershell 에서 <code class="language-html highlighter-rouge">ls c:\windows\system32\*.cpl</code>을 실행</li>
+  <li>*.cpl이 20개 좀 안되게 나옴</li>
+  <li>하나씩 실행 시켜보면 콘트롤 패널이 바로 뜸.</li>
+</ul>
+
+<h3 id="todos">todos</h3>
+
+<ul>
+  <li>2벌식 - 3벌식 바꾸는 명령은 못찾겠음.</li>
+</ul>
+
+    </article>
+    <script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+</div>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

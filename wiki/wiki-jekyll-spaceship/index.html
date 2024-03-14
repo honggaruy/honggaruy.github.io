@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>위키에 jekyll-spaceship 적용 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="다양한 table 작성, emoji and more...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/wiki-jekyll-spaceship/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="위키에 jekyll-spaceship 적용">
+    <meta property="og:description" content="다양한 table 작성, emoji and more...">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/wiki-jekyll-spaceship/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/wiki-jekyll-spaceship/">
+    <meta name="twitter:title" content="위키에 jekyll-spaceship 적용">
+    <meta name="twitter:description" content="다양한 table 작성, emoji and more...">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="wiki-jekyll-spaceship">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">위키에 jekyll-spaceship 적용</h1>
+    
+        <p class="title-summary">다양한 table 작성, emoji and more...</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-jekyll-spaceship.md" target="_blank">created: 2021.01.02</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/wiki-jekyll-spaceship.md" target="_blank">updated: 2022.12.29</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/wiki-jekyll-spaceship.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=%EC%9C%84%ED%82%A4%EC%97%90+jekyll-spaceship+%EC%A0%81%EC%9A%A9&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    jekyll-spaceship markdown-table plantuml mermaid emoji thequeensgambit
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EC%82%AC%EC%A0%84-%EC%9E%91%EC%84%B1-%EB%AC%B8%EC%84%9C" id="markdown-toc-1-사전-작성-문서">1. 사전 작성 문서</a></li>
+  <li>
+<a href="#2-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81" id="markdown-toc-2-마크다운-테이블-스타일링">2. 마크다운 테이블 스타일링</a>    <ul>
+      <li>
+<a href="#markdown-table-%EC%9E%91%EC%84%B1%EC%8B%9C-table-%EC%85%80-styling-%ED%95%98%EA%B8%B0" id="markdown-toc-markdown-table-작성시-table-셀-styling-하기">Markdown table 작성시 table 셀 styling 하기</a>        <ul>
+          <li><a href="#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC" id="markdown-toc-관련-링크">관련 링크</a></li>
+        </ul>
+      </li>
+      <li><a href="#%EC%9C%84-%EB%A7%81%ED%81%AC-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%B0%B8%EC%A1%B0%ED%95%98%EC%97%AC-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81-%EC%98%88%EC%8B%9C" id="markdown-toc-위-링크-정보를-참조하여-테이블-스타일링-예시">위 링크 정보를 참조하여 테이블 스타일링 예시</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#3--jekyll-spaceship-%ED%85%8C%EC%8A%A4%ED%8A%B8" id="markdown-toc-3--jekyll-spaceship-테스트">3.  jekyll-spaceship 테스트</a>    <ul>
+      <li>
+<a href="#1-table-usage" id="markdown-toc-1-table-usage">1. Table Usage</a>        <ul>
+          <li><a href="#rowspan-and-colsapn" id="markdown-toc-rowspan-and-colsapn">Rowspan and Colsapn</a></li>
+          <li><a href="#multiline" id="markdown-toc-multiline">MultiLine</a></li>
+          <li><a href="#headerless" id="markdown-toc-headerless">Headerless</a></li>
+          <li><a href="#cell-alignment" id="markdown-toc-cell-alignment">Cell Alignment</a></li>
+          <li><a href="#cell-markdown" id="markdown-toc-cell-markdown">Cell Markdown</a></li>
+          <li><a href="#cell-inline-attributes" id="markdown-toc-cell-inline-attributes">Cell Inline Attributes</a></li>
+        </ul>
+      </li>
+      <li><a href="#2-mathjax-usage" id="markdown-toc-2-mathjax-usage">2. MathJax Usage</a></li>
+      <li><a href="#3-plantuml-usage" id="markdown-toc-3-plantuml-usage">3. PlantUML Usage</a></li>
+      <li><a href="#4-mermaid-usage" id="markdown-toc-4-mermaid-usage">4. Mermaid Usage</a></li>
+      <li><a href="#5-media-usage" id="markdown-toc-5-media-usage">5. Media Usage</a></li>
+      <li><a href="#6-hybrid-html-with-markdown" id="markdown-toc-6-hybrid-html-with-markdown">6. Hybrid HTML with Markdown</a></li>
+      <li>
+<a href="#7-markdown-polyfill" id="markdown-toc-7-markdown-polyfill">7. Markdown Polyfill</a>        <ul>
+          <li><a href="#71-escape-ordered-list" id="markdown-toc-71-escape-ordered-list">7.1 Escape Ordered List</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#8-emoji-usage-1" id="markdown-toc-8-emoji-usage-1">8. Emoji Usage <img class="emoji" title=":+1:" alt=":+1:" raw="👍" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"></a>        <ul>
+          <li><a href="#%EA%B7%B8%EC%99%B8-%EC%9D%B4%EB%AA%A8%EC%A7%80-%EA%B4%80%EB%A0%A8-%EC%B0%B8%EA%B3%A0%ED%95%A0-%EC%82%AC%EC%9D%B4%ED%8A%B8" id="markdown-toc-그외-이모지-관련-참고할-사이트">그외 이모지 관련 참고할 사이트</a></li>
+        </ul>
+      </li>
+      <li><a href="#9-modifying-element-usage" id="markdown-toc-9-modifying-element-usage">9. Modifying Element Usage</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#4-jekyll-spaceship%EC%9D%84-github%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0" id="markdown-toc-4-jekyll-spaceship을-github에-적용하기">4. jekyll-spaceship을 github에 적용하기</a>    <ul>
+      <li><a href="#jekyll-deploy-action" id="markdown-toc-jekyll-deploy-action">JEKYLL Deploy Action</a></li>
+      <li><a href="#%EC%A0%81%EC%9A%A9%EB%B0%A9%EB%B2%95" id="markdown-toc-적용방법">적용방법</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-사전-작성-문서">1. 사전 작성 문서</h1>
+
+<ul>
+  <li>
+<a href="/blog/2021/01/01/week-01th/#jekyll-spaceship-%ED%85%8C%EC%8A%A4%ED%8A%B8">2021년 1주차 블로그</a> 에서 위키문서로 빼기로 하고 넘어옴</li>
+  <li>
+<a href="/blog/2020/12/07/week-50th/#Markdown-table-%EC%9E%91%EC%84%B1%EC%8B%9C-table-%EC%85%80-styling-%ED%95%98%EA%B8%B0">2020년 50주차 블로그</a>에 적었던 테이블 스타일링 기법도 여기로 모아 정리하기로 했다.</li>
+</ul>
+
+<h1 id="2-마크다운-테이블-스타일링">2. 마크다운 테이블 스타일링</h1>
+
+<ul>
+  <li>이 부분은 <code class="language-html highlighter-rouge">jekyll-spaceship</code>과 상관없이 별도로 적용가능한 부분임</li>
+</ul>
+
+<h2 id="markdown-table-작성시-table-셀-styling-하기">Markdown table 작성시 table 셀 styling 하기</h2>
+
+<ul>
+  <li>위키에서 table 작성하다가 특정 셀을 강조하고 싶을 때가 있다.</li>
+  <li>inline으로 필요할 때만 하는 방법을 알아보자</li>
+</ul>
+
+<h3 id="관련-링크">관련 링크</h3>
+
+<ul>
+  <li>로컬 페이지에서 markdown table 바로 앞에서 임시로 style 옵션 주기
+    <ul>
+      <li><a href="https://stackoverflow.com/a/64420939/9457247">set background color for specific cell in markdown table, stackoverflow 답변</a></li>
+      <li>위에서는 div 태그를 사용했지만 kramdown에서는 별도 코드가 있다</li>
+    </ul>
+  </li>
+  <li>Jekyll에서 사용하는 Kramdown table에 속성(attribute) 주기
+    <ul>
+      <li><a href="https://stackoverflow.com/a/27501209/9457247">How to add multiple classes to MarkDown using Jekyll?, stackoverflow 답변</a></li>
+      <li><a href="https://kramdown.gettalong.org/syntax.html#attribute-list-definitions">Attirbute List Definitions, Kramdown Official 문서</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="위-링크-정보를-참조하여-테이블-스타일링-예시">위 링크 정보를 참조하여 테이블 스타일링 예시</h2>
+
+<style>
+.customtable tr:nth-child(1) { background: red; }
+.customtable td:nth-child(2) { color: white; background: blue; }
+.customtable tr:nth-child(3) td { color: black; background: yellow; }
+</style>
+
+<ul>
+  <li>아래 테이블의 markdown 작성예를 보고 싶으면
+    <ul>
+      <li>
+<a href="https://raw.githubusercontent.com/honggaruy/honggaruy.github.io/master/_wiki/wiki-jekyll-spaceship.md">현재 문서의 Raw 파일</a>을 참조</li>
+      <li>
+        <p>테이블 바로 위의 로컬 sytle 태그와 테이블 속성주는 명령어가 핵심</p>
+
+        <table class="customtable">
+          <thead>
+            <tr>
+              <th style="text-align: left">1열</th>
+              <th style="text-align: left">2열</th>
+              <th style="text-align: left">3열</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left">빨간줄</td>
+              <td style="text-align: left">파란열</td>
+              <td style="text-align: left">빨간줄</td>
+            </tr>
+            <tr>
+              <td style="text-align: left"> </td>
+              <td style="text-align: left">파란열</td>
+              <td style="text-align: left"> </td>
+            </tr>
+            <tr>
+              <td style="text-align: left">노란줄</td>
+              <td style="text-align: left">노란줄</td>
+              <td style="text-align: left">노란줄</td>
+            </tr>
+            <tr>
+              <td style="text-align: left"> </td>
+              <td style="text-align: left">파란열</td>
+              <td style="text-align: left"> </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3--jekyll-spaceship-테스트">3.  jekyll-spaceship 테스트</h1>
+
+<ul>
+  <li>github : <a href="https://github.com/jeffreytse/jekyll-spaceship">https://github.com/jeffreytse/jekyll-spaceship</a>
+</li>
+</ul>
+
+<h2 id="1-table-usage">1. Table Usage</h2>
+
+<h3 id="rowspan-and-colsapn">Rowspan and Colsapn</h3>
+
+<ul>
+  <li>
+    <p>예제</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: right">Stage</th>
+          <th style="text-align: right">Direct Products</th>
+          <th style="text-align: right">ATP Yields</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: right" rowspan="2">Glycolysis
+<br>
+</td>
+          <td style="text-align: right" colspan="2">2 ATP</td>
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: right">2 NADH</td>
+          <td style="text-align: right">3–5 ATP</td>
+        </tr>
+        <tr>
+          <td style="text-align: right">Pyruvagye oxidation</td>
+          <td style="text-align: right">2 NADH</td>
+          <td style="text-align: right">5 ATP</td>
+        </tr>
+        <tr>
+          <td style="text-align: right" rowspan="3">Citric acid cycle
+<br><br>
+</td>
+          <td style="text-align: right" colspan="2">2 ATP</td>
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: right">6 NADH</td>
+          <td style="text-align: right">15 ATP</td>
+        </tr>
+        <tr>
+          
+          <td style="text-align: right">2 FADH</td>
+          <td style="text-align: right">3 ATP</td>
+        </tr>
+        <tr>
+          <td style="text-align: right" colspan="3">30–32 ATP</td>
+          
+          
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>vimwiki 에서 테이블 자동 포맷팅을 해주기 때문에 주의해서 편집해야 한다.</p>
+    <ul>
+      <li>우선 vimwiki 포맷에 따라 편집한다 (모든 delimiter 줄이 맞도록 한다)</li>
+      <li>그다음 jekyll-spaceship 포맷에 따라 공백을 제거한다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="multiline">MultiLine</h3>
+
+<ul>
+  <li>
+    <p>줄 마지막의 backslash는 내용이 다음줄과 Join 한다는 표시이다</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3" style="text-align: center">Easy Multiline</th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple
+<br>
+Apple
+<br>
+Apple</td>
+          <td style="text-align: left">Banana
+<br>
+Banana
+<br>
+Banana</td>
+          <td style="text-align: left">Orange
+<br>
+Orange
+<br>
+Orange</td>
+        </tr>
+        
+        
+        <tr>
+          <td>Apple
+<br>
+Apple</td>
+          <td style="text-align: left">Banana
+<br>
+Banana</td>
+          <td style="text-align: left">Orange
+<br>
+Orange</td>
+        </tr>
+        
+        <tr>
+          <td>Apple</td>
+          <td style="text-align: left">Banana</td>
+          <td style="text-align: left">Orange</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h3 id="headerless">Headerless</h3>
+
+<style>
+.big-chess-table {font-size: 2.0rem; color: black}
+.big-chess-table tbody td {line-height: 1.32em; padding-top: 1px; padding-bottom: 1px;}
+.big-chess-table td:nth-child(9) {font-size: 1rem; color: white; background: black;}
+.big-chess-table tr:nth-child(9) {font-size: 1rem; color: white; background: black; text-align: center}
+.big-chess-table tr:nth-child(-2n+7) td:nth-child(-2n+8) {background: burlywood;} 
+.big-chess-table tr:nth-child(-2n+8) td:nth-child(-2n+7) {background: burlywood;}
+.big-chess-table tr:nth-child(-2n+7) td:nth-child(-2n+7) {background: blanchedalmond;}
+.big-chess-table tr:nth-child(-2n+8) td:nth-child(-2n+8) {background: blanchedalmond;}
+.chess-container {display: flex; align-items: center; justify-content: space-around;}
+</style>
+
+<ul>
+  <li>원래 위 링크에 있던 체스 보드는 이랬지만…
+    <ul>
+      <li>기물이 너무 작아 잘 안보이고 체스판이 너무 길쭉하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>♜</td>
+      <td>♞</td>
+      <td>♝</td>
+      <td>♛</td>
+      <td>♚</td>
+      <td>♝</td>
+      <td>♞</td>
+      <td>♜</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+      <td> </td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>♟</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>♟</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>♙</td>
+      <td>♙</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>♙</td>
+      <td>♙</td>
+      <td> </td>
+      <td> </td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>♙</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>♖</td>
+      <td>♘</td>
+      <td>♗</td>
+      <td>♕</td>
+      <td>♔</td>
+      <td>♗</td>
+      <td>♘</td>
+      <td>♖</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+      <td>d</td>
+      <td>e</td>
+      <td>f</td>
+      <td>g</td>
+      <td>h</td>
+      <td>x</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>custom table css 설정으로 확대한 체스보드 테이블을 그릴 수 있다.
+    <ul>
+      <li>위에서 소개했던 테이블 스타일링을 활용했다</li>
+    </ul>
+  </li>
+  <li>요즘 넷플릭스 영화로 유명한 <a href="https://en.wikipedia.org/wiki/Queen%27s_Gambit"><strong>퀸즈 갬빗</strong> 오프닝</a> 이다. #thequeensgambit</li>
+</ul>
+
+<div class="chess-container">
+
+  <table class="big-chess-table">
+    <tbody>
+      <tr>
+        <td>♜</td>
+        <td>♞</td>
+        <td>♝</td>
+        <td>♛</td>
+        <td>♚</td>
+        <td>♝</td>
+        <td>♞</td>
+        <td>♜</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>♟</td>
+        <td>♟</td>
+        <td>♟</td>
+        <td> </td>
+        <td>♟</td>
+        <td>♟</td>
+        <td>♟</td>
+        <td>♟</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>♟</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td>♙</td>
+        <td>♙</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>♙</td>
+        <td>♙</td>
+        <td> </td>
+        <td> </td>
+        <td>♙</td>
+        <td>♙</td>
+        <td>♙</td>
+        <td>♙</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>♖</td>
+        <td>♘</td>
+        <td>♗</td>
+        <td>♕</td>
+        <td>♔</td>
+        <td>♗</td>
+        <td>♘</td>
+        <td>♖</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>x</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><img src="https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png" alt="poster" title="The Queen's Gambit Poster"></p>
+
+</div>
+
+<ul>
+  <li>위의 표와 포스터 그림을 가로로 배열하는 방법
+    <ul>
+      <li>표에 오른쪽으로 column을 한개더 만드는 방법은 표가 아래위로 길어지는 경향이 있어 보기 싫음</li>
+      <li>Kramdown 문법 에서 <a href="https://kramdown.gettalong.org/syntax.html#html-blocks">HTML Blocks 문법</a>을 사용</li>
+      <li>아래와 같이 구성하면 markdown 문법과 HTML 문법을 동시에 사용하여 문서를 작성할 수 있다.
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;style&gt;</span>
+<span class="nc">.chess-container</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span> <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-around</span><span class="p">;}</span>
+<span class="nt">&lt;/style&gt;</span>
+    
+<span class="nt">&lt;div</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"chess-container"</span><span class="nt">&gt;</span>
+    
+some markdown table
+    
+some markdown image
+    
+<span class="nt">&lt;/div&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>위 코드에서 <code class="language-html highlighter-rouge">justify-content</code>를 <code class="language-html highlighter-rouge">center</code>로 설정하면 체스보드와 그림 사이에 여유가 없이 딱 붙게됨.</li>
+      <li>위에서 테이블과 포스터의 키를 맞추는 것은 <code class="language-html highlighter-rouge">td</code> 태그의 <code class="language-html highlighter-rouge">line-height</code> attr을 미세조정하여 맞춤.
+        <ul>
+          <li>line-height: 1.32em 으로 맞춤</li>
+        </ul>
+      </li>
+      <li>CSS flexbox 문법을 찾아볼 것</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="cell-alignment">Cell Alignment</h3>
+
+<ul>
+  <li>
+    <p>예제</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center" colspan="3">Fruits || Food</th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Apple
+<br>
+Banana
+<br>
+Orange</td>
+          <td style="text-align: center">Apple
+<br>
+Banana
+<br>
+Orange</td>
+          <td style="text-align: left">Apple
+<br>
+Banana
+<br>
+Orange</td>
+        </tr>
+        
+        
+        <tr>
+          <td style="text-align: center" colspan="2" rowspan="4">Rowspan is 4
+<br>
+A. Peach
+<br>
+B. Orange
+<br>
+C. Banana</td>
+          <td style="text-align: left">How’s It?</td>
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: right" rowspan="2">
+<ol>
+  <li>Fine
+<br>
+</li>
+  <li>Bad</li>
+</ol>
+</td>
+          
+        </tr>
+        <tr>
+          
+          
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: left">It’s OK!</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h3 id="cell-markdown">Cell Markdown</h3>
+
+<style>
+.td-img img { width: 138px; }
+</style>
+
+<ul>
+  <li>예제
+    <ul>
+      <li>아래 예제를 스타일링 하지 않고 그냥 작성하면 그림이 100% 크기로 꽉차게 된다</li>
+      <li>img 태그에 대해 height 속성을 정해줬다.
+        <ul>
+          <li>브라우저에 F12로 디버깅모드에서 그림의 원래 크기를 알수 있는데..</li>
+          <li>height을 원래 크기 (552)의  1/4값인 138px로 정해주었다.</li>
+        </ul>
+      </li>
+      <li>
+<a href="https://vim.fandom.com/wiki/Using_vim_as_calculator">vim에서 간단한 사칙연산을 하려면..</a>
+        <ul>
+          <li>step1: insert mode로 진입</li>
+          <li>step2: <kbd>Ctrl</kbd>+<kbd>r</kbd> 입력</li>
+          <li>step3: <code class="language-html highlighter-rouge">=552/4</code> 입력</li>
+          <li>step4: insert mode 시작한 자리에 138이 입력된다</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>예제</p>
+
+    <table class="td-img">
+      <thead>
+        <tr>
+          <th style="text-align: center" colspan="3">MathJax || Image</th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Apple
+<br>
+Banana
+<br>
+Orange</td>
+          <td style="text-align: center">Apple
+<br>
+Banana
+<br>
+Orange</td>
+          <td style="text-align: left">Apple
+<br>
+Banana
+<br>
+Orange</td>
+        </tr>
+        
+        
+        <tr>
+          <td style="text-align: center" colspan="2" rowspan="4">Rowspan is 4
+<br>
+A. Peach
+<br>
+B. Orange
+<br>
+C. Banana</td>
+          <td style="text-align: center">How’s it?</td>
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: left" rowspan="2">
+<ol>
+  <li>
+<img src="https://jekyllrb.com/img/octojekyll.png" alt="exmple">
+<br>
+</li>
+  <li>$I = \int \rho R^{2} dV$</li>
+</ol>
+</td>
+          
+        </tr>
+        <tr>
+          
+          
+          
+        </tr>
+        <tr>
+          
+          <td style="text-align: left"><strong>It’s OK!</strong></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>주의
+    <ul>
+      <li>Kramdown 설명에는 Reference Style IAL로 그림에 attribute을 설정할 수 있다고 하는데..
+        <ul>
+          <li>
+            <p><a href="https://kramdown.gettalong.org/syntax.html#images">kramdown syntax.html #images</a></p>
+
+            <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>1. ![cell-image]
+[cell-image]: ~.png
+{:height="138px"}
+</pre></td>
+</tr></tbody></table></code></pre></div>            </div>
+          </li>
+          <li>
+            <p>table 밖에서는 동작하지만 table 내부에서는 동작하지 않음 (아래는 Reference 스타일 적용)</p>
+
+            <p><img height="138px" src="https://jekyllrb.com/img/octojekyll.png" alt="cell-image"></p>
+          </li>
+          <li>
+            <p>위의 표에서는 Reference Style로 적용하지 않고 별도 style 태그를 사용함.</p>
+            <ul>
+              <li>일단 표안에서의 해결책은 style block으로 설정하는것</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="cell-inline-attributes">Cell Inline Attributes</h3>
+
+<ul>
+  <li>attribute definitions (ALDs) 를 사용하는 방법
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>{:ref-name: #id .cls1 .cls2}
+{:second: ref-name #id-of-other title="hallo you"}
+{:other: ref-name second}
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>ALD line 구조
+    <ul>
+      <li>왼쪽 brace로 시작, 공백 3개까지 허용</li>
+      <li>colon(:) 으로 이어짐, 아이디를 적고 다시 colon 으로 마무리</li>
+      <li>속성 정의가 이어짐 (허용되는 문자는 backslash로 escape된 closing brace 혹은 closing brace를 escape하지 않는 어떤 문자라도 허용)</li>
+      <li>오른쪽 brace로 마침, 줄 마지막까지 공백 허용함</li>
+    </ul>
+  </li>
+  <li>같은 reference 이름을 가진 ALD가 한개 이상이면 한 곳에서 모두 정의된 것처럼 간주된다.</li>
+  <li>다른 element에 속성을 붙이고자 할 때 inline attribute list (IAL)도 사용할 수 있다
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>{: #id .cls1 .cls2} <span class="c">&lt;!-- #id &lt;=&gt; id="id", .cls1 .cls2 &lt;=&gt; class="cls1 cls2" --&gt;</span>
+{: ref-name title="hallo you"} 
+{: ref-name class='.cls3' .cls4} 
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4" style="text-align: center">Here’s an Inline Attribute Lists example</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center" rowspan="5">
+<br><br>
+IALs
+<br><br>
+</td>
+      <td colspan="3" style="text-align: center">
+<div style="color: red;"> &lt; Normal HTML Block &gt; </div>
+</td>
+    </tr>
+    <tr>
+      
+      <td colspan="3" class="cls" style="background: orange">Red </td>
+    </tr>
+    <tr>
+      
+      <td colspan="3" id="id" style="background: green; color: white">Green </td>
+    </tr>
+    <tr>
+      
+      <td colspan="3" style="background: blue; color: white">Blue </td>
+    </tr>
+    <tr>
+      
+      <td colspan="3" style="background: black;color: white;font-weight: 800; text-decoration: underline;">Black </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+<a href="https://kramdown.gettalong.org/syntax.html#block-ials">Block Inline Attribute Lists</a> - 이곳에서 IAL에 대해 자세하게 배울 수 있다.</li>
+</ul>
+
+<h2 id="2-mathjax-usage">2. MathJax Usage</h2>
+
+<ul>
+  <li>예제</li>
+</ul>
+
+<p>$ a*b = c^b $</p>
+
+<p>$ 2^{\frac{n-1}{3}} $</p>
+
+<p>$ \int_a^b f(x)\,dx. $</p>
+
+<ul>
+  <li>
+<a href="https://johngrib.github.io/wiki/mathjax-latex/">원래 johngrib님 가이드</a>대로 <code class="language-html highlighter-rouge">$</code>를 두 개씩 써서 감쌌는데..</li>
+  <li>
+<code class="language-html highlighter-rouge">jekyll-spaceship</code>을 사용하면서 …
+    <ul>
+      <li>두개씩 쓰면 그 줄은 그 수식만 존재하게 되며</li>
+      <li>하나씩만 쓰면 다른 글자와도 어울릴수 있게됨.</li>
+      <li>원래부터 이런 것은 아니었음.
+        <ul>
+          <li>
+<a href="/wiki/re2-translation/#syntax">이 문서</a>에서 <code class="language-html highlighter-rouge">$</code>를 두 개써도 다른 글자와 어울릴 수 있었음</li>
+          <li>해당 문서 히스토리를 보면 알겠지만 jekyll-spaceship 적용이후 틀려져서 하나짜리로 변경하게 됨</li>
+          <li>왜 이렇게 되는지는 아직 알아보지 않음.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">$</code> 하나로 감싼 예제</li>
+</ul>
+
+<p>example 1) 이 수식 $ a*b = c^b $을 다른 문자열과 같이 써 본다.</p>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">$</code> 두 개로 감싼 예제</li>
+</ul>
+
+<p>example 2) 이 수식 $$ a*b = c^b $$을 다른 문자열과 같이 써 본다.</p>
+
+<h2 id="3-plantuml-usage">3. PlantUML Usage</h2>
+
+<ul>
+  <li>#platuml</li>
+  <li>
+    <p><a href="https://plantuml.com/">PlantUML 설명서</a></p>
+  </li>
+  <li>
+    <p>plantuml 예제</p>
+
+    <p><img class="plantuml" src="http://www.plantuml.com/plantuml/svg/~h407374617274756d6c0d0a2020426f62202d3e20416c696365203a2068656c6c6f20776f726c640d0a202040656e64756d6c"></p>
+  </li>
+  <li>
+    <p>startuml 예제</p>
+
+    <p><img class="plantuml" src="http://www.plantuml.com/plantuml/svg/~h407374617274756d6c0d0a2020426f62202d3e20416c696365203a2068656c6c6f20776f726c640d0a202040656e64756d6c"></p>
+  </li>
+</ul>
+
+<h2 id="4-mermaid-usage">4. Mermaid Usage</h2>
+
+<ul>
+  <li>#mermaid</li>
+  <li><a href="https://mermaid-js.github.io/mermaid/#/">mermaid-js 문서 홈페이지</a></li>
+  <li>
+    <p>mermaid 예제</p>
+
+    <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoicGllIHRpdGxlIFBldHMgYWRvcHRlZCBieSB2b2x1bnRlZXJzXG5cIkRvZ3NcIiA6IDM4NlxuXCJDYXRzXCIgOiA4NVxuXCJSYXRzXCIgOiAzNSIsIm1lcm1haWQiOm51bGx9"></p>
+  </li>
+  <li>
+    <p>startmermaid 예제</p>
+
+    <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoicGllIHRpdGxlIFBldHMgYWRvcHRlZCBieSB2b2x1bnRlZXJzXG5cIkRvZ3NcIiA6IDM4NlxuXCJDYXRzXCIgOiA4NVxuXCJSYXRzXCIgOiAzNSIsIm1lcm1haWQiOm51bGx9"></p>
+  </li>
+</ul>
+
+<h2 id="5-media-usage">5. Media Usage</h2>
+
+<ul>
+  <li>two ways to embed a video/audio in your jekyll blog page
+    <ul>
+      <li>inline-style
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>![]({media-link})
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>Reference-style
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>![][{reference}]
+[{reference}]: {media-link}
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>
+        <p>sample</p>
+
+        <p><iframe id="media-Ptk_1Dc2iPY" class="media" src="https://www.youtube.com/embed/Ptk_1Dc2iPY?v=Ptk_1Dc2iPY%3Fwidth%3D800&height=500" title="" width="100%" height="500" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+<iframe id="media-x7tfyq3" class="media" src="https://www.dailymotion.com/embed/video/x7tfyq3?width=100%25&height=400" title="" width="100%" height="400" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+        <ul>
+          <li>원래 위 영상은 autoplay 속성이 들어가 있었는데 빼버림.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Youtube Usage</p>
+
+    <p><iframe id="media-Ptk_1Dc2iPY" class="media" src="https://www.youtube.com/embed/Ptk_1Dc2iPY" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+<iframe id="media-Ptk_1Dc2iPY" class="media" src="https://www.youtube.com/embed/Ptk_1Dc2iPY?v=Ptk_1Dc2iPY%3Fwidth%3D800&height=500" title="" width="100%" height="500" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+  </li>
+  <li>
+    <p>Vimeo Usage</p>
+
+    <p><iframe id="media-263856289" class="media" src="https://player.vimeo.com/video/263856289" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+<iframe id="media-263856289" class="media" src="https://player.vimeo.com/video/263856289?width=500&height=320" title="" width="500" height="320" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+  </li>
+  <li>
+    <p>DailyMotion Usage</p>
+
+    <p><iframe id="media-x7tfyq3" class="media" src="https://www.dailymotion.com/embed/video/x7tfyq3" title="" width="100%" height="350" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+<iframe id="media-x7tgcev" class="media" src="https://www.dailymotion.com/embed/video/x7tgcev?width=100%25&height=400" title="" width="100%" height="400" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+  </li>
+  <li>
+    <p>Spotify Usage</p>
+
+    <p><iframe id="media-4Dg5moVCTqxAb7Wr8Dq2T5" class="media" src="https://open.spotify.com/embed/track/4Dg5moVCTqxAb7Wr8Dq2T5" title="" width="100%" height="80" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+  </li>
+  <li>
+    <p>SoundCloud Usage</p>
+
+    <p><iframe id="media-41395010" class="media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/41395010" title="" width="100%" height="125" style="max-width: 600px;outline: none" allow="encrypted-media; picture-in-picture" frameborder="0" allowfullscreen></iframe></p>
+  </li>
+  <li>
+    <p>General Video Usage</p>
+
+    <ul>
+      <li>이곳에 있던 usage는 다 잘되는데 비디오가 자동플레이 되어 제거함</li>
+    </ul>
+  </li>
+  <li>
+    <p>General Audio Usage</p>
+
+    <p><audio id="media-SoundHelix-Song-1.mp3" class="media" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" style="max-width: 600px;outline: none" controls> Your browser doesn't support HTML5 audio. Here is a <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">link to download the audio</a> instead.</audio></p>
+
+    <ul>
+      <li><span style="background:pink;">Audio는 안되는 듯.. 아직은 필요없어서 왜 안되는지는 확인안해봄.</span></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="6-hybrid-html-with-markdown">6. Hybrid HTML with Markdown</h2>
+
+<ul>
+  <li>script block은 무시되는 듯함 HTML로 렌더링 되지 않음</li>
+  <li>일단 Usage 예제는 삭제함</li>
+</ul>
+
+<h2 id="7-markdown-polyfill">7. Markdown Polyfill</h2>
+
+<h3 id="71-escape-ordered-list">7.1 Escape Ordered List</h3>
+
+<p>Normal:</p>
+
+<ol>
+  <li>List item Apple.</li>
+  <li>List item Banana.</li>
+  <li>List item Cafe.</li>
+</ol>
+
+<p>Escaped:</p>
+
+<p>⁣1. List item Apple.
+⁣3. List item Banana.
+⁣10. List item Cafe.</p>
+
+<ul>
+  <li><span style="background:pink;">이건 잘 안되고 있음</span></li>
+  <li>
+<code class="language-html highlighter-rouge"><span class="nt">&lt;li&gt;</span></code> tag 로 렌더링 되어야 하는데 그냥 <code class="language-html highlighter-rouge"><span class="nt">&lt;p&gt;</span></code> tag로 렌더링 됨</li>
+</ul>
+
+<h2 id="8-emoji-usage-1">8. Emoji Usage <img class="emoji" title=":+1:" alt=":+1:" raw="👍" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">
+</h2>
+
+<ul>
+  <li>#emoji
+    <ul>
+      <li>
+<a href="https://gist.github.com/rxaviers/7360908">Complete list of github markdown emoji markup</a> : github에서 사용하는 emoji 목록</li>
+      <li>
+<a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji-cheat-sheet</a> : 이모지 치트 시트</li>
+    </ul>
+  </li>
+  <li>I give this plugin two <img class="emoji" title=":+1:" alt=":+1:" raw="👍" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">!</li>
+</ul>
+
+<style>
+.emoji-size img { font-size: 4rem;}
+</style>
+
+<ul class="emoji-size">
+  <li>
+    <p>I give this plugin two <img class="emoji" title=":+1:" alt=":+1:" raw="👍" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">!</p>
+  </li>
+  <li>
+    <p>emoji size 조절건</p>
+    <ul>
+      <li>
+<a href="https://github.com/jekyll/jemoji">jekyll/jemoji</a>를 바로 사용했을 때는 height, width가 고정으로 20 이었음</li>
+      <li>jekyll-spaceship에 포함된 emoji는 문맥에 따라 emoji size가 변경됨
+        <ul>
+          <li>1단계 제목에서는 35x35 size, li 에서 사용하면 16x16으로 변경됨</li>
+          <li>일단 예전에 20으로 고정되었던 상황보다는 훨씬 나아짐</li>
+        </ul>
+      </li>
+      <li>max-width: 1em 으로 문맥에 따라 변경되는 가변크기
+        <ul>
+          <li>폰트 사이즈를 재 설정해주면 emoji size를 변경할 수 있음!!</li>
+          <li>
+<a href="https://stackoverflow.com/a/65550809/9457247">stackoverflow에 이 건으로 질문을 올리고 자문자답함</a>…<img class="emoji" title=":sweat_smile:" alt=":sweat_smile:" raw="😅" src="https://github.githubassets.com/images/icons/emoji/unicode/1f605.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="그외-이모지-관련-참고할-사이트">그외 이모지 관련 참고할 사이트</h3>
+
+<ul>
+  <li>
+<a href="https://emojipedia.org/">emojipedia.org</a>
+    <ul>
+      <li>emoji 백과사전같은 사이트</li>
+      <li>platform별 이모지를 비교할 수 있다</li>
+      <li>이모지 이름을 알수 있다 (예: <a href="https://emojipedia.org/otter/">Otter</a>, <a href="https://emojipedia.org/pinching-hand/">Pinching hand</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="9-modifying-element-usage">9. Modifying Element Usage</h2>
+
+<ul>
+  <li>_config.yml에 jekyll-spaceship 옵션을 설정하여 element 설정을 바꿀 수 있는건데.. 아직은 사용할 계획이 없어서 Pass.</li>
+</ul>
+
+<h1 id="4-jekyll-spaceship을-github에-적용하기">4. jekyll-spaceship을 github에 적용하기</h1>
+
+<ul>
+  <li>로컬 Ruby 환경에서 <code class="language-html highlighter-rouge">jekyll-spaceship</code>이 문제없이 적용되었기에 github에 그대로 올려서 잘될줄 알았다면 큰 오산이다.</li>
+  <li>
+<a href="https://github.com/jeffreytse/jekyll-spaceship#installation">Jekyll-spaceship Inatallation: github</a>의 <strong><img class="emoji" title=":bulb:" alt=":bulb:" raw="💡" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Tip</strong> 을 잘 읽어보자
+    <blockquote>
+      <p><strong><img class="emoji" title=":bulb:" alt=":bulb:" raw="💡" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Tip:</strong> Note that GiHub Pages runs in <code class="language-html highlighter-rouge">safe</code> mode and only allows <a href="https://pages.github.com/versions/">a set of whitelisted plugins</a>. To use the gem in GitHub Pages, you need to build locally or use CI (e.g. <a href="https://travis-ci.org/">travis</a>, <a href="https://docs.github.com/en/actions/learn-github-actions">github workflow</a> and delply to your <code class="language-html highlighter-rouge">gh-pages</code> branch.</p>
+    </blockquote>
+    <ul>
+      <li>즉, github whitelist에 없는 플러그인들을 사용하는 jekyll-spaceship이 그냥 순순히 실행되지는 않는다는 얘기.</li>
+      <li>위에서 CI 도구들 ( travis, Github workflow )을 언급했는데 이건 무슨 툴인가?
+        <ul>
+          <li><a href="https://ko.wikipedia.org/wiki/%EC%A7%80%EC%86%8D%EC%A0%81%20_%ED%86%B5%ED%95%A9">지속적 통합 : Continuous Integration</a></li>
+          <li>단순하게, 자동으로 배포하는 툴이다.</li>
+          <li>
+<a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins">Plugins &lt; About GitHub Pages and jekyll &lt; GitHub Pages Docs</a>
+            <ul>
+              <li>아래에는 위 링크에서 맨 마지막 Paragraph 번역</li>
+              <li>
+<code class="language-html highlighter-rouge">GitHub Pages</code>에서는 지원되지 않는 plugins으로 사이트를 만들 수 없다.</li>
+              <li>지원되지 않는 plugin을 꼭 사용하고 싶다면, 사이트를 로컬머신에서 빌드한 다음, 빌드된 static files들을 GitHub에 push하라.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="jekyll-deploy-action">JEKYLL Deploy Action</h2>
+
+<p><a href="https://github.com/jeffreytse/jekyll-deploy-action"><img src="https://user-images.githubusercontent.com/9413601/107134556-211ea280-692e-11eb-9d13-afb253db5c67.png" alt=""></a>
+A GitHub Action to deploy the jekyll site conveniently for GitHub Pages.</p>
+
+<ul>
+  <li>이 Tool은 <code class="language-html highlighter-rouge">jekyll-spaceship</code>을 만든 <code class="language-html highlighter-rouge">jeffreytse</code>가 만든 도구</li>
+  <li>위에서 로컬에서 미리 빌드해서 Push하는 것처럼 CI 도구를 이용하면 온라인상에서, 자동으로 빌드하고 Push할 수 있다.
+    <ul>
+      <li>즉, 환경만 만들어 놓으면 기존에 포스트 작성하고, git push 하듯이 할 수 있다.</li>
+      <li>honggaruy.github.io의 마스터가 기존에 소스코드와 사이트 static file을 모두 포함했다면..</li>
+      <li>이제 마스터는 소스파일만 관리하고 다른 git branch에서 사이트 정적파일을 관리한다고 보면된다</li>
+    </ul>
+  </li>
+  <li>Jekyll Deploy Action을 이용하면 GitHub Action (CI 도구)를 이용한다.</li>
+  <li>근데 <code class="language-html highlighter-rouge">jeffreytse</code>는 <a href="https://github.com/jeffreytse/jekyll-jeffreytse-blog">자신의 블로그</a>는 <code class="language-html highlighter-rouge">travis</code>를 이용한다.</li>
+</ul>
+
+<h2 id="적용방법">적용방법</h2>
+
+<p><a href="https://github.com/jeffreytse/jekyll-deploy-action#-usage">JEKYLL Delplay Action Usage 참조</a></p>
+
+<ol>
+  <li>github page repository의 master 브랜치에 github workflow file을 만든다. ( 예. <code class="language-html highlighter-rouge">.github/workflows/build-jekyll.yml</code>)
+    <ul>
+      <li>위의 <code class="language-html highlighter-rouge">Usage</code> example대로 설정하면 <code class="language-html highlighter-rouge">push</code>될 때마다 자동으로 빌드하고, 빌드된 static file들이 배포할 브랜치( 예: gh-pages)에 등록된다.</li>
+      <li><a href="https://github.com/honggaruy/honggaruy.github.io/commit/e9431282cbf0e8bcb56461ce6b4d81accc058e57">이 사항을 적용한 commit</a></li>
+      <li>로컬 사양과 맞춘다고 <code class="language-html highlighter-rouge">runs-on</code>을 <code class="language-html highlighter-rouge">windows-latest</code>로 바꾸지 말것. <code class="language-html highlighter-rouge">ubuntu-latest</code>에서만 실행됨</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/settings/tokens">Personal Token</a> 사이트에 접속하여 토큰을 만들어야 한다.
+    <ul>
+      <li>이건 일종의 인증키 같은 것인가?</li>
+      <li>GitHub Action은 GitHub 내부에 속하지 않고 외부에서 접속하는 느낌</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">Github Repository's Settings</code>에 가서 <code class="language-html highlighter-rouge">Secrets</code> tab으로 전환</li>
+  <li>거기서 <code class="language-html highlighter-rouge">GH_TOKEN</code> 이라는 이름으로 토큰을 만들것</li>
+  <li>마지막으로, <code class="language-html highlighter-rouge">Github Repository's Settings</code>로 가서 <code class="language-html highlighter-rouge">GitHub Pages section</code>까지 scroll down 하고 <code class="language-html highlighter-rouge">gh-pages</code> branch를 <code class="language-html highlighter-rouge">GitHub Pages</code> source로 선택하라.</li>
+</ol>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

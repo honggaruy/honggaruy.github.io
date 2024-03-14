@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>C++ 개발환경 구축하기 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="WSL 과 Windows Native 모두">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/cpp-environment/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="C++ 개발환경 구축하기">
+    <meta property="og:description" content="WSL 과 Windows Native 모두">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/cpp-environment/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/cpp-environment/">
+    <meta name="twitter:title" content="C++ 개발환경 구축하기">
+    <meta name="twitter:description" content="WSL 과 Windows Native 모두">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="cpp-environment">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">C++ 개발환경 구축하기</h1>
+    
+        <p class="title-summary">WSL 과 Windows Native 모두</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/cpp-environment.md" target="_blank">created: 2022.02.23</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/cpp-environment.md" target="_blank">updated: 2022.03.07</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/cpp-environment.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=C%2B%2B+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    c++
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li>
+<a href="#visual-studio-%EB%A1%9C-c-%EC%BD%98%EC%86%94-%EC%95%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2022-02-23" id="markdown-toc-visual-studio-로-c-콘솔-앱-프로젝트-만들기-2022-02-23">Visual Studio 로 C++ 콘솔 앱 프로젝트 만들기 (2022-02-23)</a>    <ul>
+      <li><a href="#%EC%BD%98%EC%86%94-%EC%95%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="markdown-toc-콘솔-앱-프로젝트-만들기">콘솔 앱 프로젝트 만들기</a></li>
+      <li><a href="#%EC%BD%98%EC%86%94-%EC%95%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B9%8C%EB%93%9C-%EB%B0%8F-%EC%8B%A4%ED%96%89" id="markdown-toc-콘솔-앱-프로젝트-빌드-및-실행">콘솔 앱 프로젝트 빌드 및 실행</a></li>
+      <li>
+<a href="#%EB%8D%94%EB%B3%B4%EA%B8%B0" id="markdown-toc-더보기">더보기</a>        <ul>
+          <li><a href="#visual-studio-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95" id="markdown-toc-visual-studio-환경설정">Visual Studio 환경설정</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#wsl-c-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-2022-03-07" id="markdown-toc-wsl-c-개발환경-2022-03-07">WSL C++ 개발환경 (2022-03-07)</a></li>
+</ul>
+
+<h1 id="visual-studio-로-c-콘솔-앱-프로젝트-만들기-2022-02-23">Visual Studio 로 C++ 콘솔 앱 프로젝트 만들기 (2022-02-23)</h1>
+
+<ul>
+  <li>발췌 원본
+    <ul>
+      <li><a href="https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-1-create?view=msvc-170">C++ 콘솔 앱 프로젝트 만들기</a></li>
+      <li><a href="https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-2-build?view=msvc-170">C++ 콘솔 앱 프로젝트 빌드 및 실행</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="콘솔-앱-프로젝트-만들기">콘솔 앱 프로젝트 만들기</h2>
+
+<ul>
+  <li>Visula Studio 파일 메뉴 ▶ 새로 만들기 ▶ 프로젝트.. ( <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> )
+    <ul>
+      <li>다음의 <code class="language-html highlighter-rouge">새 프로젝트 만들기</code> 다이얼로그 열기에서 <code class="language-html highlighter-rouge">콘솔 앱</code> 선택
+<img src="https://docs.microsoft.com/ko-kr/cpp/build/media/vs2019-choose-console-app.png?view=msvc-170" alt="새 프로젝트 만들기">
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">새 프로젝트 구성</code> 다이얼로그에서 <code class="language-html highlighter-rouge">프로젝트 이름</code>란에 <em>HelloWorld</em> 입력
+    <ul>
+      <li>솔루션 이름도 자동으로 동일하게 지정됨</li>
+      <li>솔루션과 프로젝트를 같은 directory 둘지 결정하는 옵션이 있음.</li>
+      <li>(궁금)솔루션은 프로젝트 메타데이터 인듯싶고 프로젝트에는 소스만 있는건가??
+<img src="https://docs.microsoft.com/ko-kr/cpp/build/media/vs2019-configure-new-project-hello-world.png?view=msvc-170" alt="새 프로젝트 구성">
+</li>
+    </ul>
+  </li>
+  <li>다음과 같이 새 프로젝트가 빌드및 실행할 준비가 됨
+    <ul>
+      <li>코멘트로 표시되는 내용은 다음과 같음
+        <div class="language-cpp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 프로그램 실행: &lt;Ctrl+F5&gt; 또는 [디버그] &gt; [디버깅하지 않고 시작] 메뉴</span>
+<span class="c1">// 프로그램 디버그: &lt;F5&gt; 키 또는 [디버그] &gt; [디버깅 시작] 메뉴</span>
+
+<span class="c1">// 시작을 위한 팁: </span>
+<span class="c1">//   1. [솔루션 탐색기] 창을 사용하여 파일을 추가/관리합니다.</span>
+<span class="c1">//   2. [팀 탐색기] 창을 사용하여 소스 제어에 연결합니다.</span>
+<span class="c1">//   3. [출력] 창을 사용하여 빌드 출력 및 기타 메시지를 확인합니다.</span>
+<span class="c1">//   4. [오류 목록] 창을 사용하여 오류를 봅니다.</span>
+<span class="c1">//   5. [프로젝트] &gt; [새 항목 추가]로 이동하여 새 코드 파일을 만들거나, [프로젝트] &gt; [기존 항목 추가]로 이동하여 기존 코드 파일을 프로젝트에 추가합니다.</span>
+<span class="c1">//   6. 나중에 이 프로젝트를 다시 열려면 [파일] &gt; [열기] &gt; [프로젝트]로 이동하고 .sln 파일을 선택합니다.</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>VS IDE가 준비된 모습은 다음과 같다 
+<img src="https://docs.microsoft.com/ko-kr/cpp/build/media/vs2019-hello-world-code.png?view=msvc-170" alt="VS Ready to build">
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="콘솔-앱-프로젝트-빌드-및-실행">콘솔 앱 프로젝트 빌드 및 실행</h2>
+
+<ul>
+  <li>
+<code class="language-html highlighter-rouge">빌드</code> 메뉴 ▶ <code class="language-html highlighter-rouge">솔루션 빌드</code> ( <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> )
+    <ul>
+      <li>출력창에서 빌드결과가 나옴 
+<img src="https://docs.microsoft.com/ko-kr/cpp/build/media/vscpp-build-solution.gif?view=msvc-170" alt="프로젝트 빌드하기">
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-html highlighter-rouge">디버그</code> 메뉴 ▶ <code class="language-html highlighter-rouge">디버그 하지 않고 시작</code> ( <kbd>Ctrl</kbd> + <kbd>F5</kbd> )
+<img src="https://docs.microsoft.com/ko-kr/cpp/build/media/vscpp-start-without-debugging.gif?view=msvc-170" alt="디버그 하지 않고 시작">
+</li>
+</ul>
+
+<h2 id="더보기">더보기</h2>
+
+<ul>
+  <li>
+<a href="https://docs.microsoft.com/ko-kr/cpp/get-started/tutorial-console-cpp?view=msvc-170">간단한 콘솔용 계산기 앱을 만들어 보며 VS 환경 익히기, microsoft</a>
+    <ul>
+      <li>프로젝트 만들기, 간단한 계산기 앱 코딩, 디버깅 테스트, git 올리가까지 경험할 수 있다</li>
+      <li>VS 편의 기능을 적극적으로 이용하도록 구성되었다</li>
+    </ul>
+  </li>
+  <li><a href="https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/">좀 더 복잡한 데모 프로젝트, microsoft</a></li>
+</ul>
+
+<h3 id="visual-studio-환경설정">Visual Studio 환경설정</h3>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/ko-kr/visualstudio/ide/personalizing-the-visual-studio-ide?view=vs-2022">Visual Studio IDE 개인 설정, microsoft</a></li>
+</ul>
+
+<h1 id="wsl-c-개발환경-2022-03-07">WSL C++ 개발환경 (2022-03-07)</h1>
+
+<ul>
+  <li>Linux 환경 : Ubuntu 20.04 LTS
+    <ul>
+      <li>Windows Terminal에서 Ubuntu-20.04 창 열기 ( <kbd>Ctrl</kbd>+<kbd>shift</kbd>+<kbd>6</kbd> )</li>
+      <li>cd ~/repository/CppProjects ( tab 자동완성을 활용하라 )</li>
+    </ul>
+  </li>
+  <li>에디터 : VSCode with Remote-WSL plugin
+    <ul>
+      <li>자세한 사항은 <a href="https://code.visualstudio.com/docs/cpp/config-wsl">Using C++ and WSL in VS Code</a> 를 참조하라</li>
+      <li>VS Code 환경을 구축하고</li>
+      <li>위의 <code class="language-html highlighter-rouge">cd</code> 명령으로 <code class="language-html highlighter-rouge">CppProjects</code>에 위치한 상태에서  <code class="language-html highlighter-rouge">code .</code>를 입력</li>
+    </ul>
+  </li>
+  <li>의존성 주입 방법은?</li>
+  <li>빌드 방법은?</li>
+  <li>실행 방법은?</li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>

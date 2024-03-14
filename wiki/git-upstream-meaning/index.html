@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Git에서 upstream의 의미 - 홍가뤼의 개인위키</title>
+
+    <meta name="description" content="매뉴얼 원본 해석에 중요함">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://honggaruy.github.io/wiki/git-upstream-meaning/">
+    <link rel="alternate" type="application/rss+xml" title="홍가뤼의 개인위키" href="https://honggaruy.github.io/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Git에서 upstream의 의미">
+    <meta property="og:description" content="매뉴얼 원본 해석에 중요함">
+    <meta property="og:image" content="https://honggaruy.github.io/resources/icon/apple-touch-icon.png">
+    <meta property="og:url" content="https://honggaruy.github.io/wiki/git-upstream-meaning/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="https://honggaruy.github.io/wiki/git-upstream-meaning/">
+    <meta name="twitter:title" content="Git에서 upstream의 의미">
+    <meta name="twitter:description" content="매뉴얼 원본 해석에 중요함">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resources/icon/site.webmanifest">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">홍가뤼의 개인위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/#random" onclick="if(typeof random === 'function')random()">random</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/blog/">blog</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">wiki</a>
+    </div>
+</header>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="git-upstream-meaning">
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">Git에서 upstream의 의미</h1>
+    
+        <p class="title-summary">매뉴얼 원본 해석에 중요함</p>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/git-upstream-meaning.md" target="_blank">created: 2020.12.26</a></p>
+            <p><a href="https://github.com/honggaruy/honggaruy.github.io/blame/master/_wiki/git-upstream-meaning.md" target="_blank">updated: 2020.12.26</a></p>
+            <p>
+                <a href="https://github.com/honggaruy/honggaruy.github.io/edit/master/_wiki/git-upstream-meaning.md">편집하기</a>
+                
+                /
+                <a href="https://github.com/honggaruy/honggaruy.github.io/issues/new?title=Git%EC%97%90%EC%84%9C+upstream%EC%9D%98+%EC%9D%98%EB%AF%B8&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+                
+            </p>
+        </div>
+        <div id="parent-list"></div>
+
+
+    <div class="post-tag">
+    git upstream
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#1-%EB%B0%9C%EB%8B%A8" id="markdown-toc-1-발단">1. 발단</a></li>
+  <li>
+<a href="#2-%EC%A0%84%EA%B0%9C" id="markdown-toc-2-전개">2. 전개</a>    <ul>
+      <li>
+<a href="#stackoverflow-%EC%A7%88%EB%AC%B8%EB%8B%B5%EB%B3%80-%EB%B6%84%EC%84%9D" id="markdown-toc-stackoverflow-질문답변-분석">stackoverflow 질문/답변 분석</a>        <ul>
+          <li><a href="#%EC%A7%88%EB%AC%B8%EC%9E%90%EA%B0%80-%EA%B3%A0%EB%A5%B8-%EB%8B%B5%EB%B3%80--734-star" id="markdown-toc-질문자가-고른-답변--734-star">질문자가 고른 답변 , 734 star</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-발단">1. 발단</h1>
+
+<ul>
+  <li>github에서 처음 리포지토리를 만들 때 다음과 같이 명령어를 추천한다
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="o">&gt;</span> git remote add origin &lt;github 프로젝트 url&gt;
+<span class="o">&gt;</span> git branch <span class="nt">-M</span> main
+<span class="o">&gt;</span> git push <span class="nt">-u</span> origin main
+</pre></td>
+</tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>세번째 push 할 때 <code class="language-html highlighter-rouge">-u</code> 옵션을 붙이는 것은 이후 명령어 수행시 보통 인자를 생략하기 위함으로 설명한다
+    <ul>
+      <li><a href="https://www.daleseo.com/git-push/#%EC%9D%B8%EC%9E%90-%EC%83%9D%EB%9E%B5-%ED%95%98%EA%B8%B0-1">git push 사용법팁 &gt; 인자 생략하기 1</a></li>
+    </ul>
+  </li>
+  <li>좀 더 자세히 설명한 내용도 있지만 …
+    <ul>
+      <li><a href="https://wotres.tistory.com/entry/git-push-u-%EC%98%B5%EC%85%98-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0">git push -u 옵션 사용 이유</a></li>
+    </ul>
+  </li>
+  <li>확실히 알아보기 위해 원본 매뉴얼을 찾아봤다
+    <ul>
+      <li>
+<a href="https://git-scm.com/docs/git-push#Documentation/git-push.txt--u">git push doc, git-scm.com</a>
+        <blockquote>
+          <p>-u <br> –set-<strong>upstream</strong><br> For every branch that is up to date or successfully pushed, add <strong>upstream</strong> (tracking) reference, used by argument-less git-pull[1]and other commands. For more information, see branch.<name>.merge in git-config[1].</name></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>… <strong>upstream</strong> 의 의미가 생소해 해석이 잘 안된다. 좀더 알아보자</li>
+</ul>
+
+<h1 id="2-전개">2. 전개</h1>
+
+<h2 id="stackoverflow-질문답변-분석">stackoverflow 질문/답변 분석</h2>
+
+<ul>
+  <li>
+<a href="https://stackoverflow.com/q/2739376/9457247">Definition of “downstream” and “upstrea”, stackoveflow</a> - 10년 8개월전에 물어본 질문이 있다. 정확히 내가 가려운 부분을 질문했다.</li>
+</ul>
+
+<h3 id="질문자가-고른-답변--734-star">질문자가 고른 답변 , 734 star</h3>
+
+<ul>
+  <li>source control 분야에서 “downstream”
+    <ul>
+      <li>repository로 부터 <code class="language-html highlighter-rouge">copy</code>를 할 때, 즉 clone, checkout 등등을 할 때를 의미</li>
+      <li>information이 “downstream”(하류 방향으로, 즉 나에게로) 흐른다는 의미</li>
+    </ul>
+  </li>
+  <li>당신이 소스코드를 변경한 후에는 “<strong>upstream</strong>“으로 다시 보낸다
+    <ul>
+      <li>다른 사람도 upstream으로 부터 당신의 변경사항을 받을 수 있도록..</li>
+    </ul>
+  </li>
+  <li>개발 업계에서 배포 담당자가 “upstream”으로 변경사항을 제출하라고 하는 것을 종종 들을 수 있다</li>
+  <li>답변자의 댓글중에 <code class="language-html highlighter-rouge">porcelain</code>이란 단어가 나온다. 사전상으로는 <code class="language-html highlighter-rouge">도자기</code>로 번역되는데..<code class="language-html highlighter-rouge">jargon</code>(은어)였다
+    <ul>
+      <li>
+<a href="https://stackoverflow.com/a/6976506/9457247">What does the term “porcelain” mean in Git 답변</a>
+        <ul>
+          <li>욕실에는 <code class="language-html highlighter-rouge">porcealain</code>(자기로 만든것, 세면대, 변기)과 <code class="language-html highlighter-rouge">plumbing</code> 배관시설이 있다.</li>
+          <li>사실 실제로 꼭 필요한 역할을 하는것은 배관이며</li>
+          <li>porcelain은 단지 사용자가 이용하기 편하게 해주는 인터페이스이다</li>
+          <li>즉, 배관시설은 꼭 있어야할 필수적인 요소이지만 …
+            <ul>
+              <li>
+<code class="language-html highlighter-rouge">porcelain</code>은 없더라도 배관시설로 잘 골인 시킬수 있게 기술?이 좋던지 다른 도구를 쓰든지 하면되는것이다</li>
+            </ul>
+          </li>
+          <li>추가적으로 이것까지 보면 이해가 갈것이다. <a href="https://ell.stackexchange.com/questions/212110/procelain-in-deserve-to-be-called-porcelains?newreg=880279904cdd4f72bfd4630917d24aef">Porcelain in “deserve to be called porcelain”</a>
+</li>
+          <li>git은 일반적인 사용자가 직접사용할 필요가 없는 <a href="http://schacon.github.io/git/git.html#_low_level_commands_plumbing"><code class="language-html highlighter-rouge">plumbing</code>에 해당하는 low-level 명령</a>과 ..
+            <ul>
+              <li>거의 변경되지 않고 안정적이라 scipting에 주로 사용되며</li>
+            </ul>
+          </li>
+          <li>일반적인 사용자가 주로 사용하는 <a href="http://schacon.github.io/git/git.html#_high_level_commands_porcelain"><code class="language-html highlighter-rouge">porcelain</code>에 해당하는 high-level 명령</a>이 있다
+            <ul>
+              <li>버전업에 따로 종종 변경되기 때문에 scripting 에 사용하기에 위험하다</li>
+            </ul>
+          </li>
+          <li>git의 명령어는 묘하게 화장실이 연상이 되는게 많다..(git flush, git push,… ). 위 질문 댓글로도 그렇게 연상하는 사람이 많은듯 하다..</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+    </article>
+
+
+    
+    <div class="post-comments">
+    
+    
+        <script src="https://utteranc.es/client.js" repo="honggaruy/honggaruy.github.io" issue-term="pathname" label="Comment" theme="github-light" crossorigin="anonymous" async>
+        </script>
+    
+    </div>
+
+
+
+
+</div>
+<script>
+    ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
+        var post = document.querySelector('article.post-content');
+
+        if(post == null) {
+            return;
+        }
+
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
+    })();
+</script>
+
+
+<script src="/js/axios.min.js"></script>
+<script async src="/js/parent.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+</footer>
+    
+</body>
+</html>
